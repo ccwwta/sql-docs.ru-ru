@@ -19,12 +19,12 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 4662b6e9bcea26bc93ab0d5bf07a767797a98d70
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: ee33e30ef69b0c4a464e91576dc33e6d15ca4890
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035942"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596974"
 ---
 # <a name="use-templates-in-sql-server-management-studio"></a>Использование шаблонов в SQL Server Management Studio
 
@@ -118,7 +118,7 @@ ms.locfileid: "92035942"
 
 Лучший способ познакомиться с SSMS — это поработать в среде самостоятельно. Эти *руководства* и *статьи* помогут вам ознакомиться с различными функциями SSMS.  С их помощью вы научитесь работать с компонентами SSMS и легко находить регулярно используемые функции.
 
-* [Подключение к экземпляру и отправка запросов к нему](../quickstarts/connect-query-sql-server.md)
+* [Подключение к экземпляру и отправка запросов к нему](../quickstarts/ssms-connect-query-sql-server.md)
 * [Создание скриптов](../tutorials/scripting-ssms.md)
 * [Конфигурация SSMS](../tutorials/ssms-configuration.md)
 * [Дополнительные советы и рекомендации по использованию SSMS](../tutorials/ssms-tricks.md)

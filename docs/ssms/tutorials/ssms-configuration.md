@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: sstein
 ms.date: 03/16/2018
-ms.openlocfilehash: 238df1200d88023abec54fdf3fa2c37df758f0f8
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 1688998d5a3f6b9033808701c33ff141cf8cc8c3
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038949"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597195"
 ---
 # <a name="sql-server-management-studio-components-and-configuration"></a>Компоненты и конфигурация SQL Server Management Studio
 
@@ -138,7 +138,7 @@ ms.locfileid: "92038949"
 
 Лучший способ познакомиться с SSMS — это поработать в среде самостоятельно. Эти *руководства* и *статьи* помогут вам ознакомиться с различными функциями SSMS.  С их помощью вы научитесь работать с компонентами SSMS и легко находить регулярно используемые функции.
 
-* [Подключение к экземпляру и отправка запросов к нему](../quickstarts/connect-query-sql-server.md)
+* [Подключение к экземпляру и отправка запросов к нему](../quickstarts/ssms-connect-query-sql-server.md)
 * [Создание скриптов](scripting-ssms.md)
 * [Использование шаблонов в SSMS](../template/templates-ssms.md)
 * [Дополнительные советы и рекомендации по использованию SSMS](ssms-tricks.md)

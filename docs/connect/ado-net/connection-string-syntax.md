@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 42b1f8704be721c0b52b3c42946c9abbf7efd7db
-ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
+ms.openlocfilehash: 6daf0dc719b284f753c6f089709ed6f0f51dfe2a
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2020
-ms.locfileid: "97771637"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596406"
 ---
 # <a name="connection-string-syntax"></a>Синтаксис строки подключения
 
@@ -123,7 +123,7 @@ ms.locfileid: "97771637"
 |Да|Да|Да|Нет (по умолчанию)|Шифрование применяется только при наличии подтверждаемого сертификата сервера, в противном случае попытка подключения завершается сбоем.|  
 |Да|Да|Да|Да|Шифрование производится всегда, однако при этом может использоваться самозаверяющий сертификат сервера.|  
 
-Дополнительные сведения см. в статье [Использование шифрования без проверки](/sql/relational-databases/native-client/features/using-encryption-without-validation).
+Дополнительные сведения см. в статье [Использование шифрования без проверки](../../relational-databases/native-client/features/using-encryption-without-validation.md).
 
 ## <a name="see-also"></a>См. также
 

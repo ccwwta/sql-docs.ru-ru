@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: a878d8250a3e402cd1043dc289eb1712af45f385
-ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
+ms.openlocfilehash: 9538368cdcc39d3a037c609fc79f65d5d3cb8e45
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2020
-ms.locfileid: "97771547"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596379"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Пул подключений к SQL Server (ADO.NET)
 
@@ -73,7 +73,7 @@ ms.locfileid: "97771547"
 > [!NOTE]
 > В методе `Close` вашего класса нельзя вызывать методы `Dispose` или `Connection` объектов `DataReader`, `Finalize` или любого другого управляемого объекта. В методе завершения следует только освобождать неуправляемые ресурсы, которыми ваш класс непосредственно владеет. Если класс не владеет какими-либо неуправляемыми ресурсами, не включайте в его определение метод `Finalize`. Дополнительные сведения см. в статье [Сборка мусора](/dotnet/standard/garbage-collection/index).
 
-Дополнительные сведения о событиях, связанных с открытием и закрытием подключений, вы найдете в разделах документации по SQL Server: [Audit Login, класс событий](/sql/relational-databases/event-classes/audit-login-event-class) и [Audit Logout, класс событий](/sql/relational-databases/event-classes/audit-logout-event-class).
+Дополнительные сведения о событиях, связанных с открытием и закрытием подключений, вы найдете в разделах документации по SQL Server: [Audit Login, класс событий](../../relational-databases/event-classes/audit-login-event-class.md) и [Audit Logout, класс событий](../../relational-databases/event-classes/audit-logout-event-class.md).
 
 ## <a name="remove-connections"></a>Удаление подключений
 

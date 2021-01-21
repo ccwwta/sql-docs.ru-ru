@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-jizho2
-ms.openlocfilehash: f522b856e759ec9821b5cc549ce3f801951b7283
-ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
+ms.openlocfilehash: e966e4f2f43ebe546d6baa0b757f682f3eca205b
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "95011829"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596364"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Введение в пространство имен Microsoft.Data.SqlClient
 
@@ -35,7 +35,7 @@ ms.locfileid: "95011829"
 | Да | Да | .NET Framework 4.6+ | 1.1.0 и выше | Windows |
 | Да | Да | .NET Core 2.1+ | 2.1.0 и выше<sup>1</sup> | Windows, Linux, macOS |
 | Да | Нет<sup>2</sup> | .NET Standard 2.0 | 2.1.0 и выше | Windows, Linux, macOS |
-| Да | Да | .NET Standard 2.1 и выше | 2.1.0 и выше | Windows, Linux, macOS |
+| Да | Да | .NET Standard 2.1 и выше | 2.1.0 и выше | Windows, Linux, macOS |
 
 > [!NOTE]
 > <sup>1</sup> В версиях Microsoft.Data.SqlClient ниже 2.1 функцию Always Encrypted поддерживает только Windows.
@@ -43,7 +43,7 @@ ms.locfileid: "95011829"
 
 ### <a name="azure-active-directory-device-code-flow-authentication"></a>Проверка подлинности в потоке кода устройства Azure Active Directory
 Microsoft.Data.SqlClient версии 2.1 поддерживает проверку подлинности "Поток кода устройства" с помощью MSAL.NET.
-Справочная документация: [Поток предоставления авторизации устройства OAuth 2.0](https://docs.microsoft.com/azure/active-directory/develop/v2-oauth2-device-code)
+Справочная документация: [Поток предоставления авторизации устройства OAuth 2.0](/azure/active-directory/develop/v2-oauth2-device-code)
 
 Пример строки подключения:
 
@@ -60,7 +60,7 @@ public class ActiveDirectoryAuthenticationProvider
 ```
 
 ### <a name="azure-active-directory-managed-identity-authentication"></a>Проверка подлинности Azure Active Directory с использованием управляемого удостоверения
-В Microsoft.Data.SqlClient версии 2.1 добавлена поддержка проверки подлинности Azure Active Directory с использованием [управляемых удостоверений](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview).
+В Microsoft.Data.SqlClient версии 2.1 добавлена поддержка проверки подлинности Azure Active Directory с использованием [управляемых удостоверений](/azure/active-directory/managed-identities-azure-resources/overview).
 
 Режим проверки подлинности поддерживает такие ключевые слова:
 - Active Directory Managed Identity (управляемое удостоверение Active Directory);

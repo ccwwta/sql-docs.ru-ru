@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 46be46e47b7e5a5028b639ecb0e74cbe19c8446a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 237d056f8b42570fcab375330a9eb3172eb11758
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80217010"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596962"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Создание компонента времени разработки пользовательского элемента отчета
   Компонент времени разработки пользовательского элемента отчета ― это элемент управления, который может быть использован в конструкторе отчетов среды Visual Studio. Компонент времени разработки пользовательского элемента отчета предоставляет активную область конструктора, поддерживающую операции перетаскивания, интеграцию с браузером свойств среды [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] и возможность использования пользовательских редакторов свойств.  
@@ -183,7 +183,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### <a name="using-adornments"></a>Использование крайних элементов  
- Классы пользовательского элемента отчета также могут реализовывать класс **Microsoft.ReportDesigner.Design.Adornment**. Крайний элемент позволяет элементу управления пользовательского элемента отчета иметь области за пределами основного прямоугольника области конструктора. Эти области могут обрабатывать события пользовательского интерфейса, такие как щелчки кнопкой мыши и операции перетаскивания. Класс **Adornment**, определенный в пространстве имен **Microsoft.ReportDesigner** служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], является транзитной реализацией класса <xref:System.Windows.Forms.Design.Behavior.Adorner>, используемого в Windows Forms. Полные сведения о классе **Adorner** см. в разделе [Общие сведения о службе расширения функциональности](https://go.microsoft.com/fwlink/?LinkId=116673) библиотеки MSDN. Образец кода, реализующего класс **Microsoft.ReportDesigner.Design.Adornment**, см. в разделе [Образцы продуктов служб SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
+ Классы пользовательского элемента отчета также могут реализовывать класс **Microsoft.ReportDesigner.Design.Adornment**. Крайний элемент позволяет элементу управления пользовательского элемента отчета иметь области за пределами основного прямоугольника области конструктора. Эти области могут обрабатывать события пользовательского интерфейса, такие как щелчки кнопкой мыши и операции перетаскивания. Класс **Adornment**, определенный в пространстве имен **Microsoft.ReportDesigner** служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], является транзитной реализацией класса <xref:System.Windows.Forms.Design.Behavior.Adorner>, используемого в Windows Forms. Полные сведения о классе **Adorner** см. в разделе [Общие сведения о службе расширения функциональности](/previous-versions/ms171826(v=vs.140)) библиотеки MSDN. Образец кода, реализующего класс **Microsoft.ReportDesigner.Design.Adornment**, см. в разделе [Образцы продуктов служб SQL Server Reporting Services](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
  Дополнительные сведения о программировании и использовании форм Windows Forms в среде [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] см. в следующих разделах библиотеки MSDN:  
   
@@ -198,5 +198,4 @@ private void OnProportionalScaling(object sender, EventArgs e)
  [Создание компонента времени выполнения пользовательского элемента отчета](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
  [Библиотеки классов пользовательских элементов отчета](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)   
  [Руководство. развернуть пользовательский элемент отчета](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
-  
   

@@ -10,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/05/2019
-ms.openlocfilehash: eaef4f651b65b2097aa4cfe0f41c97442469f193
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 67881fc6668aed8120feae0c10449652f8ea6d1c
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171446"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596583"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Новые возможности служб SQL Server Reporting Services (SSRS)
 
@@ -23,7 +23,7 @@ ms.locfileid: "98171446"
 
 Ознакомьтесь со сведениями о новых возможностях в различных версиях SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Эта статья охватывает основные функциональные аспекты и обновляется по мере выпуска новых элементов.
 
-Сведения о сервере отчетов Power BI см. в статье [Что такое сервер отчетов Power BI?](https://docs.microsoft.com/power-bi/report-server/get-started)
+Сведения о сервере отчетов Power BI см. в статье [Что такое сервер отчетов Power BI?](/power-bi/report-server/get-started)
 
 ::: moniker range=">=sql-server-ver15"
 
@@ -81,7 +81,7 @@ SQL Server 2019 теперь поддерживает прозрачное ши
 
 ### <a name="dax-queries-in-reporting-tools"></a>Запросы DAX в средствах создания отчетов
 
-В последних выпусках построителя отчетов и SQL Server Data Tools вы можете создавать собственные запросы DAX для табличных моделей данных SQL Server Analysis Services. Вы можете перетаскивать поля в конструкторах запросов. См. [блог по Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
+В последних выпусках построителя отчетов и SQL Server Data Tools вы можете создавать собственные запросы DAX для табличных моделей данных SQL Server Analysis Services. Вы можете перетаскивать поля в конструкторах запросов. См. [блог по Reporting Services](/archive/blogs/sqlrsteamblog/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools).
 
 ### <a name="rest-api-support"></a>Поддержка REST API
 
@@ -91,10 +91,10 @@ SQL Server 2019 теперь поддерживает прозрачное ши
 
 В построителе отчетов и SQL Server Data Tools вы можете создавать собственные запросы DAX для поддерживаемых табличных моделей данных SQL Server Analysis Services. Для перетаскивания нужных полей можно использовать конструктор запросов в обоих средствах. После этого будет создан запрос DAX.
 
-Подробнее см. в [блоге по службам Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/).
+Подробнее см. в [блоге по службам Reporting Services](/archive/blogs/sqlrsteamblog/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools).
 
 * Скачайте [построитель отчетов SQL Server](https://go.microsoft.com/fwlink/?LinkId=734968).
-* Скачайте [SQL Server Data Tools — релиз-кандидат](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate).
+* Скачайте [SQL Server Data Tools — релиз-кандидат](../ssdt/download-sql-server-data-tools-ssdt.md).
 
 > [!NOTE]
 > Конструктор запросов для DAX можно использовать только с табличными источниками данных SSAS, встроенными в SQL Server 2016 и более поздних версий.
@@ -123,7 +123,7 @@ SQL Server 2019 теперь поддерживает прозрачное ши
 
 С помощью пакета настройки фирменной символики можно настроить [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] , задав логотип и цвета организации.  
 
-Дополнительные сведения об индивидуальной фирменной символике см. в разделе [Фирменная символика на веб-портале](https://msdn.microsoft.com/6dac97f7-02a6-4711-81a3-e850a6b40bf1).
+Дополнительные сведения об индивидуальной фирменной символике см. в разделе [Фирменная символика на веб-портале](./branding-the-web-portal.md).
 
 #### <a name="key-performance-indicators-kpi-in-the-ssrswebportal-non-markdown"></a>Ключевые показатели эффективности (KPI) на веб-портале [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
 
@@ -131,7 +131,7 @@ SQL Server 2019 теперь поддерживает прозрачное ши
 
 ![Снимок экрана, показывающий ключевые показатели эффективности на портале SQL Server Reporting Services.](../reporting-services/media/ssrs-webportal-kpi.png)
 
-Дополнительные сведения см. в разделе [Работа с ключевыми показателями эффективности на веб-портале](https://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb).
+Дополнительные сведения см. в разделе [Работа с ключевыми показателями эффективности на веб-портале](./working-with-kpis-in-reporting-services.md).
 
 ### <a name="mobile-reports"></a>Мобильные отчеты
 
@@ -192,7 +192,7 @@ SQL Server 2019 теперь поддерживает прозрачное ши
 2. Выберите панель мониторинга, на которой требуется закрепить элемент.
 3. Выберите частоту обновления плитки на этой панели мониторинга.
 
-![Примечание.](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Примечание") Обновлением управляют подписки служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], а после закрепления элемента можно изменить подписку и настроить другое расписание обновления.
+![Примечание.](/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Примечание") Обновлением управляют подписки служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], а после закрепления элемента можно изменить подписку и настроить другое расписание обновления.
 
 ![Снимок экрана: диалоговое окно «Закрепить в Power BI панели мониторинга».](../reporting-services/media/ssrs-pin-to-powerbi.png) 
 
@@ -227,7 +227,7 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)
 
-Новая версия SSDT включает в себя шаблоны проектов для [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]: мастер проектов сервера отчетов и проект сервера отчетов. Сведения о загрузке SSDT см. в разделе [SQL Server Data Tools для Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=827542).  
+Новая версия SSDT включает в себя шаблоны проектов для [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]: мастер проектов сервера отчетов и проект сервера отчетов. Сведения о загрузке SSDT см. в разделе [SQL Server Data Tools для Visual Studio 2015](../ssdt/download-sql-server-data-tools-ssdt.md).  
 
 ### <a name="report-builder-improvements"></a>Усовершенствования построителя отчетов
 
@@ -245,11 +245,11 @@ https://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freport
 
 - [Windows 8.1 DPI Scaling Enhancements](https://blogs.windows.com/windowsexperience/2013/07/15/windows-8-1-dpi-scaling-enhancements/)  
 
-- [Высокое разрешение и Windows 8.1](https://technet.microsoft.com/library/dn528848.aspx)  
+- [Высокое разрешение и Windows 8.1](/previous-versions/windows/it-pro/windows-8.1-and-8/dn528848(v=win.10))  
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-[Новые возможности в службах Analysis Services](https://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
+[Новые возможности в службах Analysis Services](/analysis-services/what-s-new-in-sql-server-analysis-services?viewFallbackFrom=sql-server-ver15)  
 [Обратная совместимость](reporting-services-backward-compatibility.md)  
 [Возможности служб Reporting Services, поддерживаемые различными выпусками SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
 [Обновление и перенос служб Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  

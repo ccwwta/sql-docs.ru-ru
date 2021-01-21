@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: sstein, mikeray
 ms.custom: contperf-fy21q2
 ms.date: 12/15/2020
-ms.openlocfilehash: 29c39caf6885ee974c62ed153df982b435c72c95
-ms.sourcegitcommit: 8a8c89b0ff6d6dfb8554b92187aca1bf0f8bcc07
+ms.openlocfilehash: 1c3bf8f69678ecf291594991650c3bb4c21d4652
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97619326"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596754"
 ---
 # <a name="quickstart-connect-and-query-a-sql-server-instance-on-an-azure-virtual-machine-using-sql-server-management-studio-ssms"></a>Краткое руководство. Подключение к экземпляру SQL Server на виртуальной машине Azure и выполнение запросов с помощью SQL Server Management Studio (SSMS)
 
@@ -95,11 +95,11 @@ ms.locfileid: "97619326"
 
 | Требование | Описание |
 |---|---|
-| [Включите режим проверки подлинности SQL Server](/sql/database-engine/configure-windows/change-server-authentication-mode#use-ssms) | Для удаленного подключения к виртуальной машине требуется проверка подлинности SQL Server, если в виртуальной сети не настроена служба Active Directory. |
-| [Создайте имя входа SQL](/sql/relational-databases/security/authentication-access/create-a-login) | При использовании проверки подлинности SQL требуются учетные данные SQL с именем пользователя и паролем, у которых есть разрешения для доступа к целевой базе данных. |
+| [Включите режим проверки подлинности SQL Server](../../database-engine/configure-windows/change-server-authentication-mode.md#use-ssms) | Для удаленного подключения к виртуальной машине требуется проверка подлинности SQL Server, если в виртуальной сети не настроена служба Active Directory. |
+| [Создайте имя входа SQL](../../relational-databases/security/authentication-access/create-a-login.md) | При использовании проверки подлинности SQL требуются учетные данные SQL с именем пользователя и паролем, у которых есть разрешения для доступа к целевой базе данных. |
 | Включите протокол TCP/IP | SQL Server должен разрешать подключения по протоколу TCP. |
-| [Включите правило брандмауэра для порта SQL Server](/sql/database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access) | Брандмауэр на виртуальной машине должен разрешать входящий трафик на порту SQL Server (по умолчанию 1433). |
-| [Создайте правило группы безопасности сети для TCP 1433](https://docs.microsoft.com/azure/virtual-network/manage-network-security-group#create-a-security-rule) | Разрешите виртуальной машине получать трафик через порт SQL Server (по умолчанию 1433), если нужно выполнить подключение через Интернет. Для локальных подключений и подключений к виртуальным сетям это не требуется. На портале Azure больше не требуется никаких действий. |
+| [Включите правило брандмауэра для порта SQL Server](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md) | Брандмауэр на виртуальной машине должен разрешать входящий трафик на порту SQL Server (по умолчанию 1433). |
+| [Создайте правило группы безопасности сети для TCP 1433](/azure/virtual-network/manage-network-security-group#create-a-security-rule) | Разрешите виртуальной машине получать трафик через порт SQL Server (по умолчанию 1433), если нужно выполнить подключение через Интернет. Для локальных подключений и подключений к виртуальным сетям это не требуется. На портале Azure больше не требуется никаких действий. |
 
 > [!TIP]
 > Действия, описанные в предыдущей таблице, выполняются при настройке подключения на портале. Используйте их только для проверки конфигурации или настройки подключения к SQL Server вручную.

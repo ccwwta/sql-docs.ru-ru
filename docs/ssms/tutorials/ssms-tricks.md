@@ -19,12 +19,12 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 1f05ea22f092573364e663165559be73857ca320
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 9d480496cad6dafddc428c6049601521ebba88b8
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038921"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596453"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>Советы и рекомендации по использованию SQL Server Management Studio (SSMS)
 
@@ -286,7 +286,7 @@ ms.locfileid: "92038921"
 
 Лучший способ познакомиться с SSMS — это поработать в среде самостоятельно. Эти *руководства* и *статьи* помогут вам ознакомиться с различными функциями SSMS.  С их помощью вы научитесь работать с компонентами SSMS и легко находить регулярно используемые функции.
 
-* [Подключение к экземпляру и отправка запросов к нему](../quickstarts/connect-query-sql-server.md)
+* [Подключение к экземпляру и отправка запросов к нему](../quickstarts/ssms-connect-query-sql-server.md)
 * [Создание скриптов](scripting-ssms.md)
 * [Использование шаблонов в SSMS](../template/templates-ssms.md)
 * [Конфигурация SSMS](ssms-configuration.md)

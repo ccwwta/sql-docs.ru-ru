@@ -9,12 +9,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/25/2019
-ms.openlocfilehash: 22c9550044e5420426f6a423d340e3b32b7a77a4
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 7637c21ce048c4ffc0277a73c4403c5d16484a21
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92034848"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597183"
 ---
 # <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>Установка локализованных версий SQL Server Management Studio (SSMS)
 
@@ -53,4 +53,4 @@ ms.locfileid: "92034848"
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-- [Руководство. SQL Server Management Studio](./quickstarts/connect-query-sql-server.md)
+- [Руководство. SQL Server Management Studio](./quickstarts/ssms-connect-query-sql-server.md)

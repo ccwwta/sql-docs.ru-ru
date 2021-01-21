@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2016'
-ms.openlocfilehash: 35924e9e1f5a72533ef1b30d983b99493858274d
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a6c2dc6ae1a8711c3e78403b539a603c0cb36dcf
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97484236"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596987"
 ---
 # <a name="install-sql-server-reporting-services"></a>Установите службы SQL Server Reporting Services
 
@@ -137,6 +137,6 @@ ms.locfileid: "97484236"
 
 После установки сервера отчетов можно приступить к созданию отчетов и их развертыванию на сервере отчетов. Сведения о начале работы с построителем отчетов см. в разделе [Установка построителя отчетов](../../reporting-services/install-windows/install-report-builder.md).
 
-Чтобы создавать отчеты с помощью SQL Server Data Tools, [скачайте SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714).
+Чтобы создавать отчеты с помощью SQL Server Data Tools, [скачайте SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).
 
 Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

@@ -9,12 +9,12 @@ ms.date: 08/20/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4a55d7f6c9c55891f8d1a7bf97d8834c9df4a796
-ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
+ms.openlocfilehash: f83c3d1e1a5bf0c9b74d058f144c4d07025c8c05
+ms.sourcegitcommit: fc24f7ecc155d97e789676fffe55e45840fcb088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "89283123"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98620272"
 ---
 # <a name="deploy-bdc-in-azure-kubernetes-service-aks-private-cluster"></a>Развертывание BDC в частном кластере службы Azure Kubernetes (AKS)
 
@@ -36,7 +36,7 @@ ms.locfileid: "89283123"
 
 ## <a name="create-a-private-aks-cluster-with-advanced-networking"></a>Создание частного кластера AKS с расширенными сетевыми возможностями
 
-```console
+```bash
 
 export REGION_NAME=<your Azure region >
 export RESOURCE_GROUP=< your resource group name >
@@ -70,7 +70,7 @@ echo $SUBNET_ID
 
 Чтобы перейти к следующему шагу, необходимо подготовить к работе кластер AKS со стандартным средством балансировки нагрузки и включенной функцией частного кластера. Команда будет выглядеть следующим образом: 
 
-```console
+```bash
 az aks create \
     --resource-group $RESOURCE_GROUP \
     --name $AKS_NAME \
@@ -90,7 +90,7 @@ az aks create \
 
 ## <a name="connect-to-an-aks-cluster"></a>Подключение к кластеру AKS
 
-```console
+```azurecli
 az aks get-credentials -n $AKS_NAME -g $RESOURCE_GROUP
 ```
 
@@ -98,13 +98,13 @@ az aks get-credentials -n $AKS_NAME -g $RESOURCE_GROUP
 
 После подключения к кластеру AKS можно приступить к развертыванию BDC, а также подготовить переменную среды и запустить развертывание: 
 
-```console
+```azurecli
 azdata bdc config init --source aks-dev-test --target private-bdc-aks --force
 ```
 
 Создание и настройка настраиваемого профиля развертывания BDC:
 
-```console
+```azurecli
 azdata bdc config replace -c private-bdc-aks/control.json -j "$.spec.docker.imageTag=2019-CU6-ubuntu-16.04"
 azdata bdc config replace -c private-bdc-aks/control.json -j "$.spec.storage.data.className=default"
 azdata bdc config replace -c private-bdc-aks/control.json -j "$.spec.storage.logs.className=default"
@@ -123,13 +123,13 @@ azdata bdc config replace -c private-bdc-aks/bdc.json -j "$.spec.resources.apppr
 
 В следующем примере `ServiceType` задается как `NodePort`:
 
-```console
+```azurecli
 azdata bdc config replace -c private-bdc-aks /bdc.json -j "$.spec.resources.master.spec.endpoints[1].serviceType=NodePort"
 ```
 
 ## <a name="deploy-bdc-in-aks-private-cluster"></a>Развертывание BDC в частном кластере AKS
 
-```console
+```azurecli
 export AZDATA_USERNAME=<your bdcadmin username>
 export AZDATA_PASSWORD=< your bdcadmin password>
 

@@ -16,12 +16,12 @@ ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 author: cawrites
 ms.author: chadam
 robots: noindex,nofollow
-ms.openlocfilehash: 8a136b1158f31cf6369bb29f404f4f6f58d6901c
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 08b7d5d8c1680be42902fe287c14418b2732f7f9
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172416"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595439"
 ---
 # <a name="installation-wizard-help"></a>Справка по мастеру установки
 
@@ -119,11 +119,11 @@ ms.locfileid: "98172416"
 **Определить администраторов**. Для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо указать хотя бы одного администратора сервера. Указанные здесь пользователи или группы станут членами роли администратора сервера устанавливаемого экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Эти члены должны иметь учетные записи пользователей домена Windows в том же домене, где зарегистрирован компьютер, на который выполняется установка программного обеспечения.  
   
 > [!NOTE]  
-> Контроль учетных записей (UAC) представляет собой средство безопасности Windows, которое требует, чтобы администратор явно одобрил административные действия или приложения, прежде чем будет разрешено их выполнение. Поскольку контроль учетных записей включен по умолчанию, администратор получает запрос на разрешение определенных операций, требующих более высокого уровня привилегий. Вы можете настроить контроль учетных записей, изменив поведение по умолчанию, или задать определенную конфигурацию для конкретных программ. Дополнительные сведения о контроле учетных записей и его настройке см. на страницах [Пошаговое руководство по контролю учетных записей](https://go.microsoft.com/fwlink/?linkid=196350) и [User Account Control (Wikipedia)](https://go.microsoft.com/fwlink/?linkid=196351).  
+> Контроль учетных записей (UAC) представляет собой средство безопасности Windows, которое требует, чтобы администратор явно одобрил административные действия или приложения, прежде чем будет разрешено их выполнение. Поскольку контроль учетных записей включен по умолчанию, администратор получает запрос на разрешение определенных операций, требующих более высокого уровня привилегий. Вы можете настроить контроль учетных записей, изменив поведение по умолчанию, или задать определенную конфигурацию для конкретных программ. Дополнительные сведения о контроле учетных записей и его настройке см. на страницах [Пошаговое руководство по контролю учетных записей](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc709691(v=ws.10)) и [User Account Control (Wikipedia)](https://go.microsoft.com/fwlink/?linkid=196351).  
   
 ### <a name="see-also"></a>См. также раздел
   
-* [Настройка учетных записей служб (службы Analysis Services)](https://docs.microsoft.com/analysis-services/instances/configure-service-accounts-analysis-services)
+* [Настройка учетных записей служб (службы Analysis Services)](/analysis-services/instances/configure-service-accounts-analysis-services)
 * [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
 
 ## <a name="analysis-services-configuration---data-directories-page"></a>Настройка служб Analysis Services — страница каталогов данных
@@ -191,7 +191,7 @@ ms.locfileid: "98172416"
 #### <a name="see-also"></a>См. также раздел
 
 * Дополнительные сведения о каталогах, расположениях файлов и именовании идентификаторов экземпляров см. в статье [Расположение файлов для экземпляра по умолчанию и именованных экземпляров SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
-* [Разрешения общего доступа и NTFS на файловом сервере](https://docs.microsoft.com/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions)
+* [Разрешения общего доступа и NTFS на файловом сервере](/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions)
 
 ## <a name="database-engine-configuration---server-configuration-page"></a><a name="serverconfig"></a> Настройка ядра СУБД — страница конфигурации сервера
 
@@ -410,7 +410,7 @@ ms.locfileid: "98172416"
 ### <a name="see-also"></a>См. также раздел
 
 * [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)
-* [Разрешения общего доступа и NTFS на файловом сервере](https://docs.microsoft.com/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions)  
+* [Разрешения общего доступа и NTFS на файловом сервере](/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions)  
 
 <!--
 The MaxDOP setting applies only to SQL Server 2019 and later.

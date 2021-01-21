@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 4df1c5680f44d7585200e4db199b8e099d8fd355
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 7916bf0cf6b80df1bddcf25223c97593129d5dfc
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246471"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597116"
 ---
 # <a name="keyboard-shortcuts-for-sql-server-unit-test-designer"></a>Сочетания клавиш для конструктора модульных тестов SQL Server
 
@@ -30,7 +30,6 @@ ms.locfileid: "87246471"
   
 ## <a name="see-also"></a>См. также:  
 [Создание и определение модульных тестов SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-[Сочетания клавиш для редактора Transact-SQL (Visual Studio 2010)](https://go.microsoft.com/fwlink/?LinkId=160735)  
-[Функции специальных возможностей Visual Studio (Visual Studio 2010)](https://msdn.microsoft.com/library/y4b5z3y3(VS.90).aspx)  
-[Функции специальных возможностей Visual Studio (Visual Studio 2012)](https://msdn.microsoft.com/library/y4b5z3y3.aspx)  
-  
+[Сочетания клавиш для редактора Transact-SQL (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/aa833225(v=vs.100))  
+[Функции специальных возможностей Visual Studio (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2008/y4b5z3y3(v=vs.90))  
+[Функции специальных возможностей Visual Studio (Visual Studio 2012)](/previous-versions/visualstudio/visual-studio-2015/ide/reference/accessibility-features-of-visual-studio)  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ef8729d35598b59c33a827d77e5e7c5473ead049
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 7ce362356424cb0fdaf991faa27d90f10ef36899
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547866"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597129"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Включение событий служб Reporting Services для журнала трассировки SharePoint (ULS)
 
@@ -139,7 +139,7 @@ Get-SPDiagnosticConfig
 |Общая служба|Образцы записей:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> Доступ MediumGranting к базам данных содержимого.<br /><br /> Экземпляры MediumProvisioning для ReportingWebServiceApplication<br /><br /> Изменение учетной записи службы MediumProcessing для ReportingWebServiceApplication<br /><br /> Разрешения базы данных MediumSetting.|  
   
 ##  <a name="view-a-log-file-with-powershell"></a><a name="bkmk_powershell"></a> Просмотр файла журнала с помощью PowerShell  
- ![Содержимое, связанное с PowerShelll](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell")PowerShell можно использовать для возвращения списка связанных событий служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] из файла журнала ULS. Введите следующую команду в консоли управления SharePoint 2010, чтобы получить из файла журнала ULS UESQL11SPOINT-20110606-1530.log отфильтрованный список строк, содержащих подстроку **sql server reporting services**:  
+ ![Содержимое, связанное с PowerShelll](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell")PowerShell можно использовать для возвращения списка связанных событий служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] из файла журнала ULS. Введите следующую команду в консоли управления SharePoint 2010, чтобы получить из файла журнала ULS UESQL11SPOINT-20110606-1530.log отфильтрованный список строк, содержащих подстроку **sql server reporting services**:  
   
 ```  
 Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services"  
@@ -147,11 +147,11 @@ Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
   
  Также существуют средства, доступные для скачивания, которые позволяют читать журналы ULS. Например, это средство [SharePoint LogViewer](https://github.com/hasankhan/SharePointLogViewer), доступное в GitHub. 
   
- Дополнительные сведения о том, как использовать PowerShell для просмотра данных журнала, см. в разделе [Просмотр диагностического журнала (SharePoint Server 2010)](https://technet.microsoft.com/library/ff463595.aspx).  
+ Дополнительные сведения о том, как использовать PowerShell для просмотра данных журнала, см. в разделе [Просмотр диагностического журнала (SharePoint Server 2010)](/SharePoint/administration/view-diagnostic-logs).  
   
 ##  <a name="trace-log-location"></a><a name="bkmk_trace"></a> Расположение журнала трассировки  
  Файлы журнала трассировки обычно находятся в папке **c:\Program Files\Common files\Microsoft Shared\Web Server Extensions\14\logs** , но этот путь можно проверить или изменить на странице **Журнал диагностики** в центре администрирования SharePoint.  
   
- Дополнительные сведения и шаги настройки диагностической регистрации на сервере SharePoint в центре администрирования SharePoint 2010 см. в разделе [Настройка диагностической регистрации (службы Windows SharePoint Services)](https://go.microsoft.com/fwlink/?LinkID=114423).  
+ Дополнительные сведения и шаги настройки диагностической регистрации на сервере SharePoint в центре администрирования SharePoint 2010 см. в разделе [Настройка диагностической регистрации (службы Windows SharePoint Services)](/previous-versions/office/sharepoint-2007-products-and-technologies/cc288649(v=office.12)).  
 
 Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

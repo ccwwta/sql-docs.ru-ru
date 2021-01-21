@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: b2c69586-d98e-4933-827d-f5e6c15c5203
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 00ad35697044427b47a07cd9a3b44105ab1d5c8a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2ec7ca644642125280bdc2f6821faec2b511a45d
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915560"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596476"
 ---
 # <a name="new-shared-schedule-management-studio"></a>Создание общего расписания (среда Management Studio)
   Используйте эту страницу для создания общего расписания для выполнения опубликованных отчетов и подписок. Общие расписания могут использоваться вместо расписаний отчетов или подписок. Двумя основными особенностями, которые отличают общие расписания от расписаний, относящихся к конкретным элементам, являются централизация данных расписания и возможность приостанавливать и возобновлять запланированные операции.  
@@ -25,10 +25,10 @@ ms.locfileid: "86915560"
   
  Обработка по расписанию проводится на базе местного времени сервера отчетов, на котором размещается и обрабатывается расписание.  
   
- Чтобы открыть эту страницу, запустите среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], подключитесь к серверу отчетов, щелкните правой кнопкой мыши элемент **Общее расписание**и выберите **Создать расписание**. Сохранить расписание можно только при запущенной службе агента SQL Server.  
+ Чтобы открыть эту страницу, запустите среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], подключитесь к серверу отчетов, щелкните правой кнопкой мыши элемент **Общее расписание** и выберите **Создать расписание**. Сохранить расписание можно только при запущенной службе агента SQL Server.  
   
 > [!NOTE]  
->  Эта функция поддерживается не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения о функциях, поддерживаемых выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
+>  Эта функция поддерживается не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения о функциях, поддерживаемых выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2012](/previous-versions/sql/sql-server-2012/cc645993(v=sql.110)) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ## <a name="options"></a>Параметры  
  **Название**  
@@ -68,5 +68,4 @@ ms.locfileid: "86915560"
  [Создание, изменение и удаление расписаний](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
  [Расписания](../../reporting-services/subscriptions/schedules.md)   
  [Справка F1 по использованию сервера отчетов среде Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
-  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 196b326a9854242369efbdc6c697d292a1eb6e94
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bca083e29d0d03a5a5470f58b4e004d81cd27a36
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492627"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596632"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>Настройка нестандартной проверки подлинности или проверку подлинности с помощью форм на сервере отчетов
 
@@ -28,7 +28,7 @@ ms.locfileid: "88492627"
 > [!NOTE]
 >  Чтобы создать нестандартный модуль проверки подлинности, необходимо написать определенный код и хорошо разбираться в системе безопасности [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] . Если не нужно создавать нестандартный модуль проверки подлинности, можно использовать группы и учетные записи [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory, но это связано со значительным уменьшением области развертывания сервера отчетов. Дополнительные сведения о нестандартной проверке подлинности см. в разделе [Implementing a Security Extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md).
 
-Кроме того, если нужно использовать проверку подлинности с помощью форм или нестандартный модуль проверки подлинности в среде служб SQL Server Reporting Services, интегрированной с продуктом SharePoint, то необходимо настроить сайт SharePoint на использование выбранного метода проверки подлинности. Дополнительные сведения о настройке проверки подлинности в SharePoint см. в разделе [Authentication Samples](https://go.microsoft.com/fwlink/?LinkId=115575) в библиотеке MSDN [!INCLUDE[msCoName](../../includes/msconame-md.md)] .
+Кроме того, если нужно использовать проверку подлинности с помощью форм или нестандартный модуль проверки подлинности в среде служб SQL Server Reporting Services, интегрированной с продуктом SharePoint, то необходимо настроить сайт SharePoint на использование выбранного метода проверки подлинности. Дополнительные сведения о настройке проверки подлинности в SharePoint см. в разделе [Authentication Samples](/previous-versions/office/sharepoint-2007-products-and-technologies/cc262069(v=office.12)) в библиотеке MSDN [!INCLUDE[msCoName](../../includes/msconame-md.md)] .
 
 
 

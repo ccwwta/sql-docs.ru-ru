@@ -12,12 +12,12 @@ author: maggiesMSFT
 ms.author: maggies
 ms.topic: conceptual
 ms.date: 05/01/2020
-ms.openlocfilehash: f473590243956cd2fcba1961d3580fa052d6f4c1
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 2515a93b025392735135cd13cbd734975f8ed221
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "91934631"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596831"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
@@ -43,7 +43,7 @@ ms.locfileid: "91934631"
  Подробный список поддерживаемых версий и выпусков, которые можно обновить, см. в разделе [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
 > [!TIP]  
->  Последние сведения о проблемах, связанных с SQL Server, см. в [заметах о выпуске SQL Server 2016](https://go.microsoft.com/fwlink/?LinkID=398124).  
+>  Последние сведения о проблемах, связанных с SQL Server, см. в [заметах о выпуске SQL Server 2016](../../sql-server/sql-server-2016-release-notes.md).  
   
   
 ##  <a name="side-by-side-installations"></a><a name="bkmk_side_by_side"></a> Параллельная установка  
@@ -69,7 +69,7 @@ ms.locfileid: "91934631"
 
 * [Обновление до SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)
 * [Обновление до SQL Server 2016 с помощью мастера установки (программа установки)](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
-* [Установка SQL Server 2016 из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)
+* [Установка SQL Server 2016 из командной строки](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)
   
   
 ##  <a name="pre-upgrade-checklist"></a><a name="bkmk_upgrade_checklist"></a> Контрольный список действий перед обновлением  
@@ -123,9 +123,9 @@ ms.locfileid: "91934631"
   
     2.  К средствам настройки сервера отчетов и программам, обновляемым до уровня новой версии, относятся средство настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме, утилиты командной строки, такие как RS.exe, а также построитель отчетов.  
   
-    3.  Другие клиентские средства, такие как [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , скачиваются и обновляются отдельно. Дополнительные сведения см. в разделе [Скачивание SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx).
+    3.  Другие клиентские средства, такие как [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , скачиваются и обновляются отдельно. Дополнительные сведения см. в разделе [Скачивание SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
   
-    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] загружается отдельно. Дополнительные сведения см. в разделе [SQL Server Data Tools в Visual Studio 2015](https://msdn.microsoft.com/mt186501).  
+    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] загружается отдельно. Дополнительные сведения см. в разделе [SQL Server Data Tools в Visual Studio 2015](/previous-versions/mt186501(v=msdn.10)).  
   
 6.  Программа установки повторно использует запись службы в диспетчере управления службами для службы сервера отчетов служб SQL Server Reporting Services. Эта запись службы включает учетную запись службы Windows сервера отчетов.  
   
@@ -236,13 +236,13 @@ ms.locfileid: "91934631"
   
 -   [Общие сведения о процессе обновления до SharePoint 2016](https://technet.microsoft.com/library/cc262483\(v=office.16\)).
 
--   [Общие сведения о процессе обновления до SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256688).
+-   [Общие сведения о процессе обновления до SharePoint 2013](/SharePoint/upgrade-and-update/overview-of-the-upgrade-process-from-sharepoint-2010-to-sharepoint-2013).
   
--   [Подготовка с очисткой перед обновлением до SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256689).  
+-   [Подготовка с очисткой перед обновлением до SharePoint 2013](/SharePoint/upgrade-and-update/clean-up-an-environment-before-an-upgrade-to-sharepoint-2013).  
   
 -   [Обновление баз данных с SharePoint 2013 до SharePoint 2016](https://technet.microsoft.com/library/cc303436\(v=office.16\)).
 
--   [Обновление баз данных с SharePoint 2010 до SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690).  
+-   [Обновление баз данных с SharePoint 2010 до SharePoint 2013](/SharePoint/upgrade-and-update/upgrade-content-databases-from-sharepoint-2010-to-sharepoint-2013).  
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

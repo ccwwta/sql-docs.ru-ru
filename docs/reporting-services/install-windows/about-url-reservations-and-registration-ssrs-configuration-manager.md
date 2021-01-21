@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c705c0ea22b7fcd4a92c94493035764864d1a3f6
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 1203c1190b0c14a4d5d9c3f7218adc8d6ab5d57a
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935186"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595289"
 ---
 # <a name="about-url-reservations-and-registration--report-server-configuration-manager"></a>Сведения о резервировании и регистрации URL-адресов (диспетчер конфигурации сервера отчетов)
   URL-адреса для приложений служб Reporting Services определяются в качестве резервирований URL-адресов в компоненте HTTP.SYS. Резервирование URL-адресов определяет синтаксис конечной точки URL-адреса к веб-приложению. При настройке приложений на сервере отчетов резервирование URL-адресов задается как для веб-службы сервера отчетов, так и для веб-портала. Резервирование URL-адресов создается автоматически при настройке URL-адресов в программе установке или программе настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -30,7 +30,7 @@ ms.locfileid: "91935186"
  Программа установки и программа настройки предоставляют службе сервера отчетов разрешения на этот URL-адрес, проверяют повторяющиеся экземпляры и добавляют резервирование URL-адресов в компонент HTTP.SYS. Создание и изменение резервирования URL-адресов для служб Reporting Services никогда не следует производить напрямую с помощью HttpCfg.exe и других средств. Если пропустить этот шаг или указать недопустимое значение, это может привести к проблемам, которые будет трудно выявить и исправить.  
   
 > [!NOTE]  
-> Компонент HTTP.SYS — это компонент операционной системы, который прослушивает запросы из сети и маршрутизирует их в очередь запросов. В этой версии служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]компонент HTTP.SYS создает и обслуживает очередь запросов для веб-службы сервера отчетов и веб-портала. Службы IIS для размещения приложений служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и доступа к ним больше не используются. Дополнительные сведения о функциях компонента HTTP.SYS см. в статье [HTTP Server API](https://go.microsoft.com/fwlink/?LinkId=92652) (API HTTP-сервера).  
+> Компонент HTTP.SYS — это компонент операционной системы, который прослушивает запросы из сети и маршрутизирует их в очередь запросов. В этой версии служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]компонент HTTP.SYS создает и обслуживает очередь запросов для веб-службы сервера отчетов и веб-портала. Службы IIS для размещения приложений служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и доступа к ним больше не используются. Дополнительные сведения о функциях компонента HTTP.SYS см. в статье [HTTP Server API](/windows/win32/http/http-api-start-page) (API HTTP-сервера).  
   
 ##  <a name="urls-in-reporting-services"></a><a name="ReportingServicesURLs"></a> URL-адреса в службах Reporting Services  
  В установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с помощью URL-адресов можно получить доступ к следующим средствам, приложениям и элементам.  
@@ -47,7 +47,7 @@ ms.locfileid: "91935186"
 > В этой статье не описан доступ с помощью URL-адресов к конкретным отчетам, хранящимся на сервере отчетов. Дополнительные сведения см. в статье о [доступе к элементам сервера отчетов с использованием URL-адреса](../../reporting-services/access-report-server-items-using-url-access.md).  
   
 ##  <a name="url-reservation-and-registration"></a><a name="URLreservation"></a> Резервирование и регистрация URL-адресов  
- Резервирование URL-адресов определяет URL-адреса, которые могут использоваться для доступа к приложению служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] резервируют несколько URL-адресов для веб-службы сервера отчетов и [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] в HTTP.SYS, а затем регистрируют их, когда служба запускается. Добавляя параметры к URL-адресу, можно открывать отчеты через веб-службу. Сведения о резервировании и регистрации предоставляются компонентом HTTP.SYS. Дополнительные сведения см. в статье о [резервировании пространства имен, регистрации и маршрутизации](https://go.microsoft.com/fwlink/?LinkId=92653).  
+ Резервирование URL-адресов определяет URL-адреса, которые могут использоваться для доступа к приложению служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] резервируют несколько URL-адресов для веб-службы сервера отчетов и [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] в HTTP.SYS, а затем регистрируют их, когда служба запускается. Добавляя параметры к URL-адресу, можно открывать отчеты через веб-службу. Сведения о резервировании и регистрации предоставляются компонентом HTTP.SYS. Дополнительные сведения см. в статье о [резервировании пространства имен, регистрации и маршрутизации](/windows/win32/http/namespace-reservations-registrations-and-routing).  
   
  *Резервирование URL-адресов* — процедура, в результате которой конечная точка URL веб-приложения создается и сохраняется в компоненте HTTP.SYS. Этот компонент является общим репозиторием резервирования URL-адресов, определенных на компьютере, и он определяет набор общих правил, которые гарантируют уникальность резервирований URL-адресов.  
   
@@ -108,4 +108,3 @@ ms.locfileid: "91935186"
  [Настройка URL-адреса (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Синтаксис резервирования URL-адресов (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
 
-  

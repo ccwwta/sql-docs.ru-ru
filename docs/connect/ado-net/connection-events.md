@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-chmalh
-ms.openlocfilehash: 8151915dc6c16c6225fec9ab90cb5a88e86b992f
-ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
+ms.openlocfilehash: 3fb13f3cc163bb157f418d3bda99e0173d81b842
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2020
-ms.locfileid: "97771454"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596016"
 ---
 # <a name="connection-events"></a>События подключений
 
@@ -34,7 +34,7 @@ ms.locfileid: "97771454"
 
 ## <a name="work-with-the-infomessage-event"></a>Работа с событием InfoMessage
 
-При помощи события <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> объекта <xref:Microsoft.Data.SqlClient.SqlConnection> можно получать предупреждения и информационные сообщения из источника данных SQL Server. Ошибки со степенью серьезности от 11 до 16, возвращаемые из источника данных, вызывают формирование исключения. Однако событие <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> также можно использовать, чтобы получать сообщения из источника данных, которые не связаны с ошибками. В случае с Microsoft SQL Server любая ошибка с серьезностью 10 или меньше считается информационным сообщением, их можно отслеживать при помощи события <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage>. Дополнительные сведения см. в статье [Степени серьезности ошибок компонента Database Engine](/sql/relational-databases/errors-events/database-engine-error-severities).
+При помощи события <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> объекта <xref:Microsoft.Data.SqlClient.SqlConnection> можно получать предупреждения и информационные сообщения из источника данных SQL Server. Ошибки со степенью серьезности от 11 до 16, возвращаемые из источника данных, вызывают формирование исключения. Однако событие <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> также можно использовать, чтобы получать сообщения из источника данных, которые не связаны с ошибками. В случае с Microsoft SQL Server любая ошибка с серьезностью 10 или меньше считается информационным сообщением, их можно отслеживать при помощи события <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage>. Дополнительные сведения см. в статье [Степени серьезности ошибок компонента Database Engine](../../relational-databases/errors-events/database-engine-error-severities.md).
 
 Событие <xref:Microsoft.Data.SqlClient.SqlConnection.InfoMessage> принимает объект <xref:Microsoft.Data.SqlClient.SqlInfoMessageEventArgs>, в свойстве **Errors** которого содержится коллекция сообщений из источника данных. У объектов **Error** этой коллекции можно запрашивать номер ошибки и текст сообщения, а также сведения об источнике ошибки. Поставщик данных Microsoft SqlClient для SQL Server также включает сведения о базе данных, хранимой процедуре и номере строки, связанной с сообщением.
 

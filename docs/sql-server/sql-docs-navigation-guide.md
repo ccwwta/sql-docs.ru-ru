@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017'
-ms.openlocfilehash: 98fd46528437cd9a82ec7d47539db230b8be8eb8
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 4c8852c9b2ce3f7bce027632b741511a008cb646
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97409400"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595879"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>Руководство по навигации в документации по SQL Server
 
@@ -23,7 +23,7 @@ ms.locfileid: "97409400"
 
 ## <a name="hub-page"></a>Главная страница
 
-Главная страница документации по SQL Server находится по адресу [https://aka.ms/sqldocs](https://aka.ms/sqldocs) и является точкой входа для поиска соответствующего содержимого по SQL Server.
+Главная страница документации по SQL Server находится по адресу [https://aka.ms/sqldocs](../index.yml?WT.mc_id=akams) и является точкой входа для поиска соответствующего содержимого по SQL Server.
 
 Вы всегда можете вернуться на эту страницу, выбрав пункт **Документация по SQL** в заголовке в верхней части каждой страницы набора технической документации по SQL Server: 
 
@@ -31,7 +31,7 @@ ms.locfileid: "97409400"
 
 ## <a name="offline-documentation"></a>Документация в автономном режиме
 
-Если вам требуется просматривать документацию по SQL Server в системе, не подключенной к сети, это можно сделать двумя способами. Можно создать PDF-файл нужного раздела технической документации по SQL Server или скачать автономное содержимое с помощью [автономного средства просмотра справки SQL Server](sql-server-help-installation.md). 
+Если вам требуется просматривать документацию по SQL Server в системе, не подключенной к сети, это можно сделать двумя способами. Можно создать PDF-файл нужного раздела технической документации по SQL Server или скачать автономное содержимое с помощью [автономного средства просмотра справки SQL Server](./sql-server-offline-documentation.md). 
 
 Если вы хотите создать PDF-файл, щелкните ссылку **Скачать в формате PDF**, которая находится в нижней части каждого оглавления.
 

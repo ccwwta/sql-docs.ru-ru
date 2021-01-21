@@ -9,12 +9,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15'
-ms.openlocfilehash: b04cb475579c73a26ec5977ce52b9521ce69552a
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 749e13242c81e5a566ae13dfd66385194639db37
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642654"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596218"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Новые возможности [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -26,7 +26,7 @@ ms.locfileid: "97642654"
 
 Дополнительные сведения и известные проблемы см. в [заметках о выпуске [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](sql-server-version-15-release-notes.md).
 
-Для оптимальной работы с [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] используйте [новейшие средства](https://aka.ms/getazuredatastudio).
+Для оптимальной работы с [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] используйте [новейшие средства](../azure-data-studio/download-azure-data-studio.md).
 
 В [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] появились [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] для [!INCLUDE[sql-server](../includes/ssnoversion-md.md)]. В этой версии также представлены дополнительные возможности и улучшения для ядра СУБД SQL Server, SQL Server Analysis Services, Служб машинного обучения SQL Server, SQL Server на Linux и SQL Server Master Data Services.
 
@@ -76,7 +76,7 @@ ms.locfileid: "97642654"
 | &nbsp; | &nbsp; |
 
 ### <a name="intelligent-performance"></a>Интеллектуальная производительность
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] основан на нововведениях в области интеллектуальных баз данных предыдущих выпусков, чтобы он [просто работал быстрее](https://docs.microsoft.com/archive/blogs/bobsql/). Эти улучшения помогают преодолеть известные узкие места, связанные с нехваткой ресурсов, и предоставляют возможность настройки сервера базы данных для обеспечения прогнозируемой производительности во всех рабочих нагрузках.
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] основан на нововведениях в области интеллектуальных баз данных предыдущих выпусков, чтобы он [просто работал быстрее](/archive/blogs/bobsql/). Эти улучшения помогают преодолеть известные узкие места, связанные с нехваткой ресурсов, и предоставляют возможность настройки сервера базы данных для обеспечения прогнозируемой производительности во всех рабочих нагрузках.
 
 |Новые функции или обновления | Сведения |
 |:---|:---|
@@ -130,10 +130,10 @@ ms.locfileid: "97642654"
 |Новые функции или обновления | Сведения |
 |:---|:---|
 |Новый SDK для языка Java | Упрощает разработку приложений Java, которые могут выполняться из SQL Server. См. статью о [пакете SDK Майкрософт для расширения возможностей Java в SQL Server](../language-extensions/how-to/extensibility-sdk-java-sql-server.md). |
-|Пакет SDK для языка Java реализован с открытым кодом |[Пакет Microsoft SDK расширяемости для Java для Microsoft SQL Server](https://docs.microsoft.com/sql/language-extensions/how-to/extensibility-sdk-java-sql-server) теперь имеет открытый код и доступен [на GitHub](https://github.com/microsoft/sql-server-language-extensions).|
+|Пакет SDK для языка Java реализован с открытым кодом |[Пакет Microsoft SDK расширяемости для Java для Microsoft SQL Server](../language-extensions/how-to/extensibility-sdk-java-sql-server.md) теперь имеет открытый код и доступен [на GitHub](https://github.com/microsoft/sql-server-language-extensions).|
 |Поддержка типов данных Java|См. раздел [Типы данных Java](../language-extensions/how-to/java-to-sql-data-types.md).|
 |Новая среда выполнения Java по умолчанию | SQL Server теперь полностью поддерживает Zulu Embedded for Java от Azul Systems. См. статью [Теперь в SQL Server 2019 доступна бесплатная поддерживаемая версия Java](https://cloudblogs.microsoft.com/sqlserver/2019/07/24/free-supported-java-in-sql-server-2019-is-now-available/). |
-|Расширения языка для SQL Server| Выполнение внешнего кода с помощью платформы расширяемости. См. статью о [расширении языка для SQL Server](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview).
+|Расширения языка для SQL Server| Выполнение внешнего кода с помощью платформы расширяемости. См. статью о [расширении языка для SQL Server](../language-extensions/language-extensions-overview.md).
 |Регистрация внешних языков|Новый язык описания данных (DDL), `CREATE EXTERNAL LANGUAGE`, регистрирует в SQL Server внешние языки, такие как Java. См. раздел [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md). |
 | &nbsp; | &nbsp; |
 
@@ -213,7 +213,7 @@ ms.locfileid: "97642654"
 |Новые функции или обновления | Сведения |
 |:---|:---|
 | Реестр контейнеров Майкрософт | [Реестр контейнеров Майкрософт](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/) теперь заменяет Docker Hub в качестве источника новых официальных образов контейнеров Майкрософт, включая [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |
-| Непривилегированные контейнеры | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] предоставляет возможность создания более безопасных контейнеров путем запуска процесса [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] по умолчанию от имени пользователя, не являющегося привилегированным. См. раздел [Сборка и запуск контейнеров SQL Server от имени непривилегированного пользователя](../linux/sql-server-linux-configure-docker.md#buildnonrootcontainer). |
+| Непривилегированные контейнеры | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] предоставляет возможность создания более безопасных контейнеров путем запуска процесса [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] по умолчанию от имени пользователя, не являющегося привилегированным. См. раздел [Сборка и запуск контейнеров SQL Server от имени непривилегированного пользователя](../linux/sql-server-linux-docker-container-deployment.md). |
 | Сертифицированные образы контейнеров на основе Red Hat | Начиная с [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]можно запускать контейнеры SQL Server на Red Hat Enterprise Linux. |
 | Поддержка PolyBase и машинного обучения| В [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] появились новые способы работы с контейнерами SQL Server, такие как службы машинного обучения и PolyBase. Ознакомьтесь с примерами [контейнеров SQL Server в репозитории GitHub](https://github.com/microsoft/mssql-docker/tree/master/linux/preview/examples). |
 | &nbsp; | &nbsp; |

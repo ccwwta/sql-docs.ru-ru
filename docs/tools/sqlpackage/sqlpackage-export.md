@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 12/11/2020
-ms.openlocfilehash: c0c3b1462fe165678e3826585f5ce82d5945de56
-ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
+ms.openlocfilehash: 8b6293359306006d7ed6402bf630919a947c6e53
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97577924"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596390"
 ---
 # <a name="sqlpackage-export-parameters-and-properties"></a>Параметры и свойства экспорта SqlPackage
 Действие экспорта SqlPackage.exe экспортирует активную базу данных из SQL Server или Azure SQL в пакет BACPAC (BACPAC-файл). По умолчанию данные для всех таблиц будут включены в BACPAC-файл. При необходимости можно указать только подмножество таблиц, для которых следует выполнить экспорт данных. Проверка для действия Export обеспечивает совместимость базы данных SQL Azure со всей целевой базой данных, даже если для экспорта указано подмножество таблиц. 
@@ -61,8 +61,8 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|LongRunningCommandTimeout=(INT32)| Позволяет задать время ожидания в секундах для длительной команды при выполнении запросов к SQL Server. Для ожидания без ограничений используйте значение "0".|
 |**/p:**|Storage=({File&#124;Memory} 'File')|Указывает тип резервного хранилища для модели схемы, используемой во время извлечения.|
 |**/p:**|TableData=(STRING)|Указывает таблицу, из которой будут извлечены данные. Укажите имя таблицы со скобками или без скобок. Имя должно быть указано в формате: имя_схемы.идентификатор_таблицы. Этот параметр можно указывать несколько раз.|
-|**/p:**|TempDirectoryForTableData=(STRING)|Указывает временный каталог, используемый для буферизации табличных данных перед записью в файл пакета.|
 |**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|Указывает предполагаемую версию целевой подсистемы. Это влияет на разрешение объектов, поддерживаемых серверами базы данных SQL Azure с возможностями версии 12, например оптимизированные для памяти таблицы в созданном BACPAC-элементе.|
+|**/p:**|TempDirectoryForTableData=(STRING)|Указывает временный каталог, используемый для буферизации табличных данных перед записью в файл пакета.|
 |**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|Указывает, следует ли проверять поддерживаемые типы полнотекстовых документов для базы данных Microsoft Azure SQL версии 12.|
 
 ## <a name="next-steps"></a>Next Steps

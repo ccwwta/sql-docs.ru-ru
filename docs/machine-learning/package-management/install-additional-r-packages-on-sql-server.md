@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current'
-ms.openlocfilehash: 9db282708c8f2e9bbd4ee44d45bac0b0d25dc5b9
-ms.sourcegitcommit: 8a8c89b0ff6d6dfb8554b92187aca1bf0f8bcc07
+ms.openlocfilehash: bdd8189559bc3de1659e4874f80f8862dc341b1d
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97617563"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596279"
 ---
 # <a name="install-r-packages-with-sqlmlutils"></a>Установка пакетов R с помощью sqlmlutils
 
@@ -45,7 +45,7 @@ ms.locfileid: "97617563"
    , @script = N'print(R.version)'
   ```
 
-- Установите [Azure Data Studio](../../azure-data-studio/what-is.md) на клиентском компьютере, который используется для подключения к SQL Server. Вы можете использовать другие средства запросов и управления базами данных, но в этой статье рассматривается Azure Data Studio.
+- Установите [Azure Data Studio](../../azure-data-studio/what-is-azure-data-studio.md) на клиентском компьютере, который используется для подключения к SQL Server. Вы можете использовать другие средства запросов и управления базами данных, но в этой статье рассматривается Azure Data Studio.
 
 ### <a name="other-considerations"></a>Другие замечания
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 028ee19646716666314b0242e0ebe0e3c6551e95
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 4b376fddd69a44f9280d4c0aaec4f58880d9ff76
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457754"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596496"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>Тип соединения SAP NetWeaver BI (службы SSRS)
   Чтобы включить данные из внешнего источника данных SAP NetWeaver® Business Intelligence в отчет, необходимо иметь набор данных, основанный на источнике данных отчета типа [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]. Этот встроенный тип источника данных основан на модуле обработки данных для поставщика данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 1.0 для [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)].  
@@ -50,7 +50,7 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
  При построении запросов конструктор запросов автоматически добавляет к запросу многомерных выражений свойства по умолчанию. Чтобы помимо свойств по умолчанию включить другие свойства, запрос многомерных выражений нужно изменить вручную.  
   
- Дополнительные сведения о соответствующем конструкторе запросов см. в разделе [Пользовательский интерфейс конструктора запросов SAP NetWeaver BI (построитель отчетов)](https://msdn.microsoft.com/library/8edda06d-1608-498b-bd50-10905e54f6ce).  
+ Дополнительные сведения о соответствующем конструкторе запросов см. в разделе [Пользовательский интерфейс конструктора запросов SAP NetWeaver BI (построитель отчетов)](/previous-versions/sql/).  
   
   
 ##  <a name="extended-field-properties"></a><a name="Extended"></a> Расширенные свойства поля  
@@ -98,7 +98,7 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 ##  <a name="remarks"></a><a name="Remarks"></a> Замечания  
  Этот поставщик данных поддерживает не все режимы доставки отчетов. Доставка отчетов с помощью управляемых данными подписок для этого модуля обработки данных не предусмотрена. Дополнительные сведения см. в разделе [Использование внешнего источника данных для данных подписчика (управляемая данными подписка)](../../reporting-services/subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
   
- Дополнительные сведения см. в разделе [Использование служб SQL Server 2008 Reporting Services совместно с SAP NetWeaver Business Intelligence](https://go.microsoft.com/fwlink/?LinkId=167352).  
+ Дополнительные сведения см. в разделе [Использование служб SQL Server 2008 Reporting Services совместно с SAP NetWeaver Business Intelligence](/previous-versions/sql/sql-server-2008/cc974473(v=sql.100)).  
   
   
 ##  <a name="how-to-topics"></a><a name="HowTo"></a> Инструкции  
@@ -134,5 +134,4 @@ DataSource=https://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
   

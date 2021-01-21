@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b41e35d48f6add25f4ff8c535fb7e96ed7afe67f
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 53e005fcd5c4a11270a5bc2f7c307f521311c548
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91935426"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596655"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Настройка проверки подлинности Windows на сервере отчетов
   По умолчанию службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] принимают запросы, в которых определена проверка подлинности Negotiate или NTLM. Если в развертывание входят клиентские приложения и браузеры, в которых используются поставщики безопасности, то можно использовать значения по умолчанию без дополнительной настройки. Если нужно использовать другого поставщика безопасности для встроенной безопасности Windows (например, требуется применять протокол Kerberos напрямую) или если значения по умолчанию были изменены, и нужно восстановить первоначальные настройки, то можно использовать сведения данного раздела, чтобы указать настройки проверки подлинности на сервере отчетов.  
@@ -54,7 +54,7 @@ ms.locfileid: "91935426"
   
 2.  Найдите параметр \<**Authentication**>.  
   
-3.  Выберите и скопируйте наиболее подходящую из следующих XML-структур. **RSWindowsNegotiate**, **RSWindowsNTLM**и **RSWindowsKerberos** можно указывать в любом порядке. Включите сохраняемость проверки подлинности, если нужно проверить подлинность соединений, а не каждого отдельного запроса. При сохраняемости проверки подлинности все запросы, для которых требуется проверка подлинности, разрешены в продолжение существования соединения.  
+3.  Выберите и скопируйте наиболее подходящую из следующих XML-структур. **RSWindowsNegotiate**, **RSWindowsNTLM** и **RSWindowsKerberos** можно указывать в любом порядке. Включите сохраняемость проверки подлинности, если нужно проверить подлинность соединений, а не каждого отдельного запроса. При сохраняемости проверки подлинности все запросы, для которых требуется проверка подлинности, разрешены в продолжение существования соединения.  
   
      Первая XML-структура является настройкой по умолчанию, если учетной записью службы сервера отчетов является учетная запись NetworkService или LocalSystem:  
   
@@ -149,7 +149,7 @@ ms.locfileid: "91935426"
   
 -   Например, десятичное значение можно преобразовать в шестнадцатеричный формат с помощью калькулятора [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Калькулятор поддерживает несколько режимов, где имеются переключатели «Dec» и «Hex». Установите переключатель в положение «Dec», вставьте или введите десятичное значение из файла журнала и переведите переключатель в положение «Hex».  
   
--   Откройте раздел [Атрибут управления учетными записями](https://go.microsoft.com/fwlink/?LinkId=183366) , чтобы получить атрибут для учетной записи службы.  
+-   Откройте раздел [Атрибут управления учетными записями](/windows/win32/adschema/a-useraccountcontrol) , чтобы получить атрибут для учетной записи службы.  
   
 ##### <a name="spns-configured-in-active-directory-for-the-reporting-services-service-account"></a>Имена участников-служб, настроенные в Active Directory для учетной записи служб Reporting Services  
  Чтобы включить имя участника зеркального отображения в файл журнала трассировки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , можно временно включить функцию расширенной защиты [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -206,5 +206,4 @@ ms.locfileid: "91935426"
  [Настройка обычной проверки подлинности на сервере отчетов](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
  [Настройка нестандартной проверки подлинности или проверку подлинности с помощью форм на сервере отчетов](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)   
  [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
-  
   

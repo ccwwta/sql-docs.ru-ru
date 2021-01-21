@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 74a15489c057490ddf358860f8cd0f78eb79ba20
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: 0202703dec933871d6b6a611ff1139a68ee2c938
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255287"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595357"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Типы данных в выражениях (построитель отчетов и службы SSRS)
   Типы данных представляют разные виды данных, чтобы их можно было эффективно хранить и обрабатывать. Стандартные типы данных включают текст (строки), числа с десятичными разрядами или без них, даты и время, а также изображения. Значения в отчете должны быть представлены с помощью типов данных языка определения отчетов. При отображении значения в отчете его можно отформатировать в соответствии с конкретными предпочтениями. Например, поле, представляющее валюту, может храниться в определении отчета как число с плавающей запятой, но отображаться в различных форматах в зависимости от выбранного свойства формата.  
@@ -88,7 +88,7 @@ ms.locfileid: "84255287"
 |Только часть DateTime значения DateTimeOffset|`=Fields!MyDatetimeOffset.Value.DateTime`|  
 |Только часть Offset значения DateTimeOffset|`=Fields!MyDatetimeOffset.Value.Offset`|  
   
- Для управления отображаемым форматом значений можно также использовать функцию Format. Дополнительные сведения см. в разделе [Функции (Visual Basic)](https://go.microsoft.com/fwlink/?linkid=111483).  
+ Для управления отображаемым форматом значений можно также использовать функцию Format. Дополнительные сведения см. в разделе [Функции (Visual Basic)](/dotnet/visual-basic/language-reference/functions/).  
   
 ## <a name="advanced-examples"></a>Дополнительные примеры  
  При соединении с источником данных поставщика данных, не поддерживающим преобразование всех типов данных, типом данных по умолчанию для неподдерживаемых типов является String. В следующих примерах приводятся решения для конкретных типов данных, которые возвращаются как String.  
@@ -117,7 +117,7 @@ ms.locfileid: "84255287"
   
          Если строка `MyDateTime.Value` содержит значение смещения времени в формате UTC, то функция `DateTime.Parse` сначала изменит смещение времени в формате UTC (7:00 утра - [`+08:00`] относительно времени в формате UTC 23:00 предыдущего вечера). Затем функция `DateTime.Parse` применяет локальное смещение времени в формате UTC сервера отчетов и при необходимости настраивает переход на летнее время. Например, в Ричмонде, штат Вашингтон, смещение локального времени с переходом на летнее время составляет `[-07:00]`, или на 7 часов раньше 23:00. Результатом является следующее значение типа **DateTime**: `2007-07-06 04:07:07 PM` (6 июля 2007 г., 16:07).  
   
- Дополнительные сведения о преобразовании строк в типы данных **DateTime** см. в статьях [Parsing Date and Time Strings](https://go.microsoft.com/fwlink/?LinkId=89703)(Синтаксический анализ строк даты и времени), [Formatting Date and Time for a Specific Culture](https://go.microsoft.com/fwlink/?LinkId=89704)(Форматирование даты и времени для конкретной культуры) и [Choosing Between DateTime, DateTimeOffset, and TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) (Выбор типов данных DateTime, DateTimeOffset и TimeZoneInfo) на сайте MSDN.  
+ Дополнительные сведения о преобразовании строк в типы данных **DateTime** см. в статьях [Parsing Date and Time Strings](https://go.microsoft.com/fwlink/?LinkId=89703)(Синтаксический анализ строк даты и времени), [Formatting Date and Time for a Specific Culture](https://go.microsoft.com/fwlink/?LinkId=89704)(Форматирование даты и времени для конкретной культуры) и [Choosing Between DateTime, DateTimeOffset, and TimeZoneInfo](/dotnet/standard/datetime/choosing-between-datetime) (Выбор типов данных DateTime, DateTimeOffset и TimeZoneInfo) на сайте MSDN.  
   
 -   Добавление нового вычисляемого поля к набору данных отчета, который использует выражение для получения части строки. Дополнительные сведения см. в разделе [Добавление, изменение и обновление полей в области данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
@@ -139,9 +139,8 @@ ms.locfileid: "84255287"
   
  Дополнительные сведения о типах данных баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделах [Типы данных &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md) и [Типы данных и функции даты и времени &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
- Дополнительные сведения о типах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] см. в статье [Типы данных в службах Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services).  
+ Дополнительные сведения о типах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] см. в статье [Типы данных в службах Analysis Services](/analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services).  
   
 ## <a name="see-also"></a>См. также:  
  [Форматирование элементов отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
-  
   

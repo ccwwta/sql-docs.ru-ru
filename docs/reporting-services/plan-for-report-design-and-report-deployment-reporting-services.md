@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cdaaaa55756860e4b62f90cb7e01c88c63ad4b61
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ec946e008990e9cc4f75fc6a6eb0882756d25b8b
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477065"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596558"
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>Планирование создания и развертывания отчетов | Службы Reporting Services
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] предоставляет несколько способов для разработки и развертывания отчетов с разбивкой на страницы. Вы можете ознакомиться с дополнительными сведениями о планировании совместной работы функций создания отчетов и среды сервера отчетов.
@@ -38,11 +38,11 @@ ms.locfileid: "97477065"
   
 -   [Схемы XML Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=31850)  
   
--   [Спецификация языка определения отчетов](https://go.microsoft.com/fwlink/?linkid=116865)  
+-   [Спецификация языка определения отчетов](/openspecs/sql_server_protocols/ms-rdl/53287204-7cd0-4bc9-a5cd-d42a5925dca1)  
   
 -   [Язык определения отчетов (службы SSRS)](../reporting-services/reports/report-definition-language-ssrs.md)  
   
- Дополнительные сведения об элементах управления ReportViewer см. в разделе [Элементы управления ReportViewer (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx).  
+ Дополнительные сведения об элементах управления ReportViewer см. в разделе [Элементы управления ReportViewer (Visual Studio)](/previous-versions/ms251671(v=vs.140)).  
   
 ##  <a name="report-server-and-rdl-schema-support"></a><a name="bkmk_report_server_rdl_schema_support"></a> Сервер отчетов и поддержка RDL-схемы  
  Файл определения отчета можно развернуть на сервере отчетов [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] одним из следующих способов.  
@@ -112,15 +112,14 @@ ms.locfileid: "97477065"
   
  Дополнительные сведения см. в следующих разделах:  
   
--   [Преобразование RDLC-файлов в RDL-файлы](https://msdn.microsoft.com/library/ms252109.aspx)  
+-   [Преобразование RDLC-файлов в RDL-файлы](/previous-versions/ms252109(v=vs.140))  
   
--   [Элементы управления ReportViewer (Visual Studio)](https://msdn.microsoft.com/library/ms251671.aspx)  
+-   [Элементы управления ReportViewer (Visual Studio)](/previous-versions/ms251671(v=vs.140))  
   
--   [Добавление и настройка элементов управления ReportViewer](https://msdn.microsoft.com/library/ms252104.aspx)  
+-   [Добавление и настройка элементов управления ReportViewer](/previous-versions/ms252104(v=vs.140))  
   
 ## <a name="see-also"></a>См. также:  
  [Отчеты, элементы отчетов и определения отчетов (построитель отчетов и службы SSRS)](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Инструментальные средства служб Reporting Services](../reporting-services/tools/reporting-services-tools.md)   
  [Язык определения отчетов (службы SSRS)](../reporting-services/reports/report-definition-language-ssrs.md)  
-  
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c4bbc8f1c5b96f659936cb955c1f6f31bd0ef0da
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: b6ca1df39a5aeed8b57de5c6eff7ab66e725062d
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91933446"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596528"
 ---
 # <a name="xml-connection-type-ssrs"></a>Тип соединения XML (службы SSRS)
   Чтобы включить данные из источника XML-данных в отчет, необходим набор данных, основанный на источнике данных отчета типа XML. Этот встроенный тип источника данных основан на модуле обработки данных XML. Используйте этот тип источника данных для подключения и получения данных из внедренных в запрос XML-документов, веб-служб и данных XML.  
@@ -116,7 +116,7 @@ ms.locfileid: "91933446"
   
  Дополнительные сведения см. в статье [Синтаксис запроса XML для XML-данных отчета (SSRS)](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md).  
   
- Примеры можно найти в разделах [Службы Reporting Services: использование источников XML-данных и источников данных веб-служб](https://go.microsoft.com/fwlink/?LinkId=81654).  
+ Примеры можно найти в разделах [Службы Reporting Services: использование источников XML-данных и источников данных веб-служб](/previous-versions/sql/sql-server-2005/administrator/aa964129(v=sql.90)).  
   
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>Требования для получения XML-данных веб-службы  
  Модуль обработки XML-данных не обнаруживает схему самостоятельно. Поэтому необходимо определить, какой метод SOAP будет получать нужные данные. Необходимо также представлять себе схему адресации или пространство имен, которые веб-служба использует для своих данных.  
@@ -135,7 +135,7 @@ ms.locfileid: "91933446"
 ##  <a name="parameters"></a><a name="Parameters"></a> Параметры  
  Запрос не анализируется для определения параметров.  
   
- Чтобы добавить параметры необходимо создать их вручную на странице **Параметр** диалогового окна [Свойства набора данных](https://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda) .  
+ Чтобы добавить параметры необходимо создать их вручную на странице **Параметр** диалогового окна [Свойства набора данных](/previous-versions/sql/) .  
   
 ##  <a name="remarks"></a><a name="Remarks"></a> Замечания  
  Модуль обработки XML-данных поддерживает создание отчетов для XML-данных, имеющих табличную, а не иерархическую структуру. Дополнительные сведения см. в разделе [Добавление данных из внешних источников данных (службы SSRS)](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md).  
@@ -173,5 +173,4 @@ ms.locfileid: "91933446"
  [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
   

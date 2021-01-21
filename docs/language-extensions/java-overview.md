@@ -9,12 +9,12 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
-ms.openlocfilehash: f68821900b2e304028bccfd79e96f988f02267e9
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 4df5f2e96ff8795ac592c6aa61f7c79e03145c31
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471725"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596299"
 ---
 # <a name="what-is-java-language-extension"></a>Что представляет собой расширение языка Java?
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "97471725"
 
 Расширение языка Java использует платформу расширяемости для выполнения внешнего кода Java. Выполнение кода изолировано от процессов ядра, но полностью интегрировано с выполнением запросов SQL Server. Вы можете выполнять код Java в источнике данных, чтобы не передавать данные по сети.
 
-Внешний код Java определяется с помощью инструкции [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql). Системная хранимая процедура [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) используется в качестве интерфейса для выполнения кода Java.
+Внешний код Java определяется с помощью инструкции [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md). Системная хранимая процедура [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) используется в качестве интерфейса для выполнения кода Java.
 
 ## <a name="get-started-with-java-language-extension"></a>Начало работы с расширением языка Java
 
@@ -37,8 +37,8 @@ ms.locfileid: "97471725"
 
     + Используйте свою привычную интегрированную среду разработки для написания кода Java.
     + Установите [пакет Microsoft Extensibility SDK для Java](how-to/extensibility-sdk-java-sql-server.md) для выполнения кода Java на SQL Server.
-    + Используйте [Azure Data Studio](../azure-data-studio/what-is.md) для выполнения внешнего кода на SQL Server.
-    + Используйте системную хранимую процедуру [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) для выполнения кода Java на SQL Server.
+    + Используйте [Azure Data Studio](../azure-data-studio/what-is-azure-data-studio.md) для выполнения внешнего кода на SQL Server.
+    + Используйте системную хранимую процедуру [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) для выполнения кода Java на SQL Server.
 
 1. Напишите свой первый код Java.
 

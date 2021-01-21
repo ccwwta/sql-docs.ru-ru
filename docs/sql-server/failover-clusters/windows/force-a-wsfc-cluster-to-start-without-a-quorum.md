@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 908aa73d20ce939696124fee2f92eb87c9b8bec8
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: b2723cef9d005ea1f5e2db7e9e915762a7cd6a11
+ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642769"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98241869"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Принудительный запуск кластера WSFC без кворума
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "97642769"
   
 4.  Принудительный запуск службы кластеров с помощью `Start-ClusterNode` с `-FixQuorum` .  
   
-5.  С помощью `Get-ClusterNode` с `-Propery NodeWieght = 1` установите значение, которое гарантирует для узла право голоса в кворуме.  
+5.  С помощью `Get-ClusterNode` с `-Property NodeWieght = 1` установите значение, которое гарантирует для узла право голоса в кворуме.  
   
 6.  Выведите свойства узла кластера в удобном для чтения формате.  
   

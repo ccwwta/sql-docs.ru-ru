@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 12/9/2020
-ms.openlocfilehash: cd990278d7478c089df7b01fa4a3738ad36368c3
-ms.sourcegitcommit: d983ad60779d90bb1c89a34d7b3d6da18447fdd8
+ms.openlocfilehash: 796499f38c9af2d7b2f6af8f860bb945d14bdac2
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2020
-ms.locfileid: "96933850"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596512"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Заметки о выпуске для Azure Data Studio
 
@@ -50,7 +50,7 @@ ms.locfileid: "96933850"
 | Добавления | Сведения | Обходной путь |
 |----------|---------|------------|
 | Расширение Azure Arc | [Известная проблема.](https://github.com/microsoft/azuredatastudio/issues/13319) Кнопка "Сценарий для Notebook" для развертываний Arc MIAA и PG не выполняет проверку поля перед созданием скрипта для записной книжки. Это означает, что при вводе неправильного пароля в поле подтверждения пароля пользователь может получить записную книжку с неправильным значением пароля.| Кнопка "Развернуть" работает правильно, поэтому мы рекомендуем использовать именно ее. |
-| Обозреватель объектов | Выпуски ADS, предшествующие 1.24.0, имеют критически важное изменение в обозревателе объектов из-за изменений, связанных с [бессерверным пулом SQL для Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). | Чтобы продолжить использование обозревателя объектов в Azure Data Studio с бессерверным пулом SQL для Azure Synapse Analytics, требуется Azure Data Studio версии 1.24.0 или более поздней. |
+| Обозреватель объектов | Выпуски ADS, предшествующие 1.24.0, имеют критически важное изменение в обозревателе объектов из-за изменений, связанных с [бессерверным пулом SQL для Azure Synapse Analytics](/azure/synapse-analytics/sql/on-demand-workspace-overview). | Чтобы продолжить использование обозревателя объектов в Azure Data Studio с бессерверным пулом SQL для Azure Synapse Analytics, требуется Azure Data Studio версии 1.24.0 или более поздней. |
 
 На странице с [отзывами об Azure Data Studio](https://github.com/microsoft/azuredatastudio) представлены сведения о других известных проблемах. Там же можно отправить отзыв группе разработчиков.
 

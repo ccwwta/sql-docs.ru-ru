@@ -10,12 +10,12 @@ author: cawrites
 ms.author: chadam
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: 94939adb2934e16ed7d1c81c33ebab4631c4b114
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: aa8d71f36b4dbb0c8ddaaac3c47571d29c3896c0
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172516"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595472"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>Что такое дополнительные обновления системы безопасности SQL Server?
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -353,7 +353,7 @@ SalesServer\SQLProdSales,2008 R2,Developer,8,Azure Virtual Machine,61868ab8-16d4
 ## <a name="see-also"></a>См. также раздел
 
 - [Страница жизненного цикла SQL Server 2008 / 2008 R2](https://support.microsoft.com/lifecycle/search?alpha=sql%20server%202008)
-- [Страница поддержки SQL Server 2008 / 2008 R2](https://aka.ms/sqleos)
+- [Страница поддержки SQL Server 2008 / 2008 R2](./sql-server-end-of-life-overview.md?WT.mc_id=akamseos)
 - [Часто задаваемые вопросы о дополнительных обновлениях системы безопасности](https://aka.ms/sqleosfaq)
 - [Центр Microsoft Security Response Center (MSRC)](https://portal.msrc.microsoft.com/security-guidance/summary)
 - [Управление обновлениями Windows при помощи службы автоматизации Azure](/azure/automation/update-management/overview)
@@ -362,4 +362,3 @@ SalesServer\SQLProdSales,2008 R2,Developer,8,Azure Virtual Machine,61868ab8-16d4
 - [Миграция в Azure: параметры точности и сдвига для перемещения текущего экземпляра SQL Server 2008 / 2008 R2 в виртуальную машину Azure](https://azure.microsoft.com/services/azure-migrate/)
 - [Инфраструктура внедрения в облако для переноса SQL](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)
 - [Сценарии, связанные с ESU, на GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/manage/sql-server-extended-security-updates/scripts)
-

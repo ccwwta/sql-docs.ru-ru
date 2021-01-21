@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c5889a9411c54312dd52ee1a5e9f2b7917da6838
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 9f2a96afd598a4a16ad4683f6ed096032f9b8091
+ms.sourcegitcommit: fc24f7ecc155d97e789676fffe55e45840fcb088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97637551"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98620288"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-red-hat-openshift-aro"></a>Развертывание кластера больших данных SQL Server в Azure Red Hat OpenShift (ARO) с помощью скрипта Python
 
@@ -44,7 +44,7 @@ ms.locfileid: "97637551"
 
 Скрипт использует Azure CLI для автоматизации создания кластера ARO. Перед выполнением скрипта необходимо по крайней мере один раз войти в учетную запись Azure с помощью Azure CLI. В командной строке выполните следующую команду:
 
-```terminal
+```azurecli
 az login
 ```
 
@@ -58,7 +58,7 @@ az login
 
 1. Запустите скрипт с помощью следующей команды:
 
-```terminal
+```console
 python deploy-sql-big-data-aro.py
 ```
 
@@ -82,7 +82,7 @@ python deploy-sql-big-data-aro.py
 
 Выполните следующую команду в Azure CLI, чтобы удалить кластер больших данных и службу ARO в Azure (замените `<resource group name>` на **имя группы ресурсов Azure**, указанное в скрипте развертывания):
 
-```terminal
+```azurecli
 az group delete -n <resource group name>
 ```
 

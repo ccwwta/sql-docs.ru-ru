@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 04c220383ef14fe6bd05b690e5c27ae73b4289a4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3fd91a74fe64d055860c2382efeb16523685c2a3
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79510085"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596701"
 ---
 # <a name="report-definition-language-ssrs"></a>Язык определения отчетов (SSRS)
   Язык определения отчетов — это средство представления определений отчетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в формате XML. Определение отчета содержит сведения о получении данных и о макете для отчета. Язык определения отчетов состоит из элементов XML, которые соответствуют грамматике XML, созданной для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Предусмотрена возможность добавления пользовательских функций для управления значениями элементов отчета, стилями и форматированием путем обращения к сборкам кода в файлах определения отчета.  
@@ -37,12 +37,12 @@ ms.locfileid: "79510085"
 -   Расширяемую и открытую схему, поддерживающую дополнительные пространства имен и пользовательские элементы.  
   
 ##  <a name="rdl-specifications"></a><a name="bkmk_RDL_Specifications"></a> Спецификации RDL  
- Описание загрузки спецификаций для конкретных версий схемы см. в разделе [Спецификация языка определения отчетов](https://go.microsoft.com/fwlink/?linkid=116865).  
+ Описание загрузки спецификаций для конкретных версий схемы см. в разделе [Спецификация языка определения отчетов](/openspecs/sql_server_protocols/ms-rdl/53287204-7cd0-4bc9-a5cd-d42a5925dca1).  
   
 ##  <a name="rdl-xml-schema-definition"></a><a name="bkmk_RDL_XML_Schema_Definition"></a> Схема XML определения языка RDL  
  Файл [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в формате RDL (языка определения отчетов) проверяется с помощью файла определения схемы XML (XSD-файла). Схема определяет правила применения элементов языка определения отчетов в RDL-файле. Элемент содержит сведения о своем типе данных и количестве элементов, т. е. о допустимом количестве вхождений. Элементы бывают простыми и составными. Простой элемент не включает дочерних элементов и атрибутов. Составной элемент, напротив, содержит дочерние элементы и, возможно, атрибуты.  
   
- Например, следующая схема включает элемент **ReportParameters**на языке определения отчетов, имеющий сложный тип **ReportParametersType**. В соответствии с принятым соглашением обозначением сложного типа для элемента является имя элемента, за которым следует слово **Type**. Элемент **ReportParameters** может входить в элемент **Report** (сложного типа) и в свою очередь содержать элементы **ReportParameter** . **ReportParameterType** — это простой тип, который может принимать только одно из следующих значений: **Boolean**, **DateTime**, **Integer**, **Float** или **String**. Дополнительные сведения о типах данных схем XML см. в разделе [Схема XML. Часть 2. Типы данных, второе издание](https://go.microsoft.com/fwlink/?linkid=4871).  
+ Например, следующая схема включает элемент **ReportParameters** на языке определения отчетов, имеющий сложный тип **ReportParametersType**. В соответствии с принятым соглашением обозначением сложного типа для элемента является имя элемента, за которым следует слово **Type**. Элемент **ReportParameters** может входить в элемент **Report** (сложного типа) и в свою очередь содержать элементы **ReportParameter** . **ReportParameterType** — это простой тип, который может принимать только одно из следующих значений: **Boolean**, **DateTime**, **Integer**, **Float** или **String**. Дополнительные сведения о типах данных схем XML см. в разделе [Схема XML. Часть 2. Типы данных, второе издание](https://go.microsoft.com/fwlink/?linkid=4871).  
   
  Схема XSD для языка определения отчетов доступна в файле ReportDefinition.xsd, расположенном в папке Extras на компакт-диске продукта. Эта схема также доступна на сервере отчетов по следующему URL-адресу: `https://servername/reportserver/reportdefinition.xsd`.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "79510085"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляет несколько средств для создания RDL-файлов. Дополнительные сведения см. в разделе [Инструментальные средства служб Reporting Services](../../reporting-services/tools/reporting-services-tools.md).  
   
- Один из простейших способов создания кода на языке определения отчетов в приложении состоит в использовании классов [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] из пространств имен <xref:System.Xml> и <xref:System.Linq>. Особо следует отметить один из этих классов, **XmlTextWriter** , который может использоваться для написания кода на языке определения отчетов. Класс **XmlTextWriter**позволяет создать полное определение отчета от начала до конца в любом приложении [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Разработчикам предоставляется также возможность расширять язык определения отчетов, добавляя пользовательские элементы отчета с пользовательскими свойствами. Дополнительные сведения о классе **XmlTextWriter** и пространстве имен <xref:System.Xml> см. в руководстве разработчика [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Дополнительные сведения о запросах LINQ можно получить, выполнив поиск строки «LINQ to XML» на узле MSDN.  
+ Один из простейших способов создания кода на языке определения отчетов в приложении состоит в использовании классов [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] из пространств имен <xref:System.Xml> и <xref:System.Linq>. Особо следует отметить один из этих классов, **XmlTextWriter** , который может использоваться для написания кода на языке определения отчетов. Класс **XmlTextWriter** позволяет создать полное определение отчета от начала до конца в любом приложении [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Разработчикам предоставляется также возможность расширять язык определения отчетов, добавляя пользовательские элементы отчета с пользовательскими свойствами. Дополнительные сведения о классе **XmlTextWriter** и пространстве имен <xref:System.Xml> см. в руководстве разработчика [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Дополнительные сведения о запросах LINQ можно получить, выполнив поиск строки «LINQ to XML» на узле MSDN.  
   
  Для файлов определения отчета стандартным расширением файла является RDL. Предусмотрена также возможность разрабатывать файлы определения клиентских отчетов, которые имеют расширения RDLC. Типом MIME для обоих расширений является text/xml. Дополнительные сведения об отчетах см. в разделе [Reporting Services (SSRS), отчеты служб](../../reporting-services/reports/reporting-services-reports-ssrs.md).  
   
@@ -89,5 +89,4 @@ ms.locfileid: "79510085"
  [Определение версии схемы определения отчета (SSRS)](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)   
  [Использование пользовательских сборок с отчетами](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
  [Пользовательские элементы отчета](../../reporting-services/custom-report-items/custom-report-items.md)  
-  
   

@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 12/17/2020
-ms.openlocfilehash: 98211695d60592c8178c4b60e45f2105c3b86db4
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 2e1d3faf6d17417ea1f4a134778ddd9342441231
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98102693"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596866"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Заметки о выпуске SQL Server Management Studio (SSMS)
 
@@ -46,7 +46,7 @@ SSMS 18.8 является самым современным общедосту
 |----------|---------|
 | Интеграция установки Azure Data Studio | При установке SSMS также устанавливается Azure Data Studio 1.25.1. |
 | Службы Analysis Services | Добавлена поддержка рабочих областей Power BI Premium 2-го поколения. |
-| Аудит | Добавлена поддержка EXTERNAL_MONITOR и "operator audit".  Дополнительные сведения см. в [документации](https://docs.microsoft.com/azure/azure-sql/managed-instance/auditing-configure) по конфигурации. |
+| Аудит | Добавлена поддержка EXTERNAL_MONITOR и "operator audit".  Дополнительные сведения см. в [документации](/azure/azure-sql/managed-instance/auditing-configure) по конфигурации. |
 | Службы Integration Services | Улучшенный мастер создания IR, для которого создание SSISDB не является обязательным при создании SSIS IR |
 
 #### <a name="bug-fixes-in-188"></a>Исправления ошибок в версии 18.8
@@ -142,7 +142,7 @@ SSMS 18.7 является самым современным общедосту
 | Мастер создания скриптов | Сбой мастера при попытке выполнить перечисление объектов базы данных в SQL Server 2014 и более поздних версий. См. статью [Отзывы пользователей SQL Server](https://feedback.azure.com/forums/908035-sql-server/suggestions/41885587). | Используйте SSMS 18.6 для выбора объектов в мастере создания скриптов для SQL 2014 и более ранних версий. |
 | Службы Integration Services | При импорте пакетов в Integration Services или экспорте из Integration Services, а также при экспорте пакетов из Azure-SSIS Integration Runtime утрачиваются скрипты пакетов, содержащих задачи или компоненты скрипта. | Удалите папку C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild. |
 | Службы Integration Services | Удаленные подключения к службам интеграции могут завершаться ошибкой "Указанная служба не существует как установленная служба" в более новой операционной системе. | В разделах Computer\HKEY_CLASSES_ROOT\AppID и Computer\HKEY_CLASSES_ROOT\WOW6432Node\AppID найдите записи, связанные со службами интеграции, и в этих кустах переименуйте раздел реестра с именем "LocalService" на "LocalService_A" для конкретной версии служб интеграции, которую нужно подключить. |
-| Обозреватель объектов | В выпуски SSMS до 18.7 внесено критическое изменение в обозревателе объектов из-за изменений, связанных с [бессерверным пулом SQL для Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql/on-demand-workspace-overview). | Чтобы и дальше использовать обозреватель объектов в SSMS с бессерверным пулом SQL для Azure Synapse Analytics, требуется SSMS 18.7 или более поздней версии. |
+| Обозреватель объектов | В выпуски SSMS до 18.7 внесено критическое изменение в обозревателе объектов из-за изменений, связанных с [бессерверным пулом SQL для Azure Synapse Analytics](/azure/synapse-analytics/sql/on-demand-workspace-overview). | Чтобы и дальше использовать обозреватель объектов в SSMS с бессерверным пулом SQL для Azure Synapse Analytics, требуется SSMS 18.7 или более поздней версии. |
 
 ### <a name="187"></a>18,7
 

@@ -34,12 +34,12 @@ f1_keywords:
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c28f2c267c49f2a31fd07eecdbb9e593237a1835
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
+ms.openlocfilehash: f9276557c2c2d5d3f733d6f37d243eaee0eec68a
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84778076"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534297"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>Таблицы, матрицы и списки (построитель отчетов и службы SSRS)
  В [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]таблицы, матрицы и списки — это *области данных* , где данные отчета с разбиением на страницы отображаются в ячейках, распределенных по строкам и столбцам. Ячейки, как правило, содержат текстовые данные, например текст, даты и числа, но могут также содержать датчики, диаграммы или элементы отчетов, такие как изображения. К таблицам, матрицам и спискам часто применяется общее название — области данных *табликса* .  
@@ -88,7 +88,7 @@ ms.locfileid: "84778076"
   
  ![Элемент "Новый список", добавленный из инструментария, с выделением](../../reporting-services/report-design/media/rs-listtemplatenewselected.gif "Элемент "Новый список", добавленный из инструментария, с выделением")  
   
- Дополнительные сведения см. в разделе [Создание счета-фактуры и формы со списками].  
+ Дополнительные сведения см. в разделе [Создание счета-фактуры и формы со списками](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
 ##  <a name="preparing-data"></a><a name="PreparingData"></a> Подготовка данных  
  Такие области данных, как таблица, матрица и список, отображают данные из набора данных. Можно подготовить данные в запросе, который получает данные для набора данных, либо указать свойства в таблице, матрице или списке.  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - GetSensitivityClassification method
 author: bazizi
 ms.author: v-beaziz
-ms.openlocfilehash: 04877e626b57022d0110501b7da6145b2c4997d2
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+ms.openlocfilehash: 94bda63675db2c73acef4c13c00feab90ae7f337
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96506673"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596465"
 ---
 # <a name="issdataclassificationgetsensitivityclassification"></a>ISSDataClassification::GetSensitivityClassification
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../../includes/applies-to-version/sql-asdb-asa.md)]
@@ -52,7 +52,7 @@ HRESULT GetSensitivityClassification(
 
   
 ## <a name="remarks"></a>Remarks  
-OLE DB Driver for SQL Server выделяет блок памяти для хранения структуры SENSITIVITYCLASSIFICATION и данных, на которые ссылается эта структура. Когда объекту-получателю больше не нужен доступ к данным классификации, он должен освободить эту память, вызвав метод [IMalloc::Free](https://docs.microsoft.com/windows/win32/api/objidl/nf-objidl-imalloc-free).  
+OLE DB Driver for SQL Server выделяет блок памяти для хранения структуры SENSITIVITYCLASSIFICATION и данных, на которые ссылается эта структура. Когда объекту-получателю больше не нужен доступ к данным классификации, он должен освободить эту память, вызвав метод [IMalloc::Free](/windows/win32/api/objidl/nf-objidl-imalloc-free).  
   
  Структура SENSITIVITYCLASSIFICATION определяется следующим образом:
   
@@ -153,4 +153,3 @@ typedef struct tagSENSITIVITYPROPERTY
 ## <a name="see-also"></a>См. также  
  [ISSDataClassification](../../oledb/ole-db-interfaces/issdataclassification-ole-db.md)  
  [Наборы строк](../ole-db-rowsets/rowsets.md)  
-  

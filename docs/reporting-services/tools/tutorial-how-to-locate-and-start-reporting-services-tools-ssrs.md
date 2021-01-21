@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 22f5064c4d861c3f10f88ce4ff1a5727f545fb72
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 60d621e9bb833615aaed5e6f622afb9591916037
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934965"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597066"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Руководство по Инструкции по поиску и запуску средств служб Reporting Services (SSRS)
 
@@ -55,7 +55,7 @@ ms.locfileid: "91934965"
 
     Появится диалоговое окно **Выбор экземпляра установки сервера отчетов** , в котором можно выбрать настраиваемый экземпляр сервера отчетов.
 
-2. В поле **Имя сервера**укажите имя компьютера, на котором установлен экземпляр сервера отчетов. По умолчанию указывается имя локального компьютера, но можно ввести имя удаленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
+2. В поле **Имя сервера** укажите имя компьютера, на котором установлен экземпляр сервера отчетов. По умолчанию указывается имя локального компьютера, но можно ввести имя удаленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 
     Если указан удаленный компьютер, для установления соединения нажмите кнопку **Найти** . Сервер отчетов должен быть заранее настроен для удаленного администрирования. Дополнительные сведения о подготовке сервера отчетов для удаленного администрирования см. в разделе [Настройка сервера отчетов для удаленного администрирования](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).
 
@@ -89,7 +89,7 @@ ms.locfileid: "91934965"
 
 ## <a name="management-studio"></a><a name="bkmk_managements_studio"></a> Среда Management Studio
 
-Администраторы сервера отчетов могут использовать среду [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] для управления сервером отчетов наряду с другими серверными компонентами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в учебнике по [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/tutorial-sql-server-management-studio).
+Администраторы сервера отчетов могут использовать среду [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] для управления сервером отчетов наряду с другими серверными компонентами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в учебнике по [SQL Server Management Studio](../../ssms/quickstarts/ssms-connect-query-sql-server.md).
 
 ### <a name="to-start-sql-server-management-studio"></a>Начало работы в среде SQL Server Management Studio
 
@@ -101,7 +101,7 @@ ms.locfileid: "91934965"
 
     Нажмите кнопку **Пуск**, а затем последовательно выберите **Все программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]и **SQL Server Management Studio**. Откроется диалоговое окно **Соединение с сервером** .
 
-2. Если диалоговое окно **Соединение с сервером** отсутствует, то в **обозревателе объектов**нажмите **Подключиться** и выберите **службы Reporting Services**.
+2. Если диалоговое окно **Соединение с сервером** отсутствует, то в **обозревателе объектов** нажмите **Подключиться** и выберите **службы Reporting Services**.
 
 3. В раскрывающемся списке **Тип сервера** выберите **Службы Reporting Services**. Если службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не находятся на списке, значит, они не установлены.
 
@@ -115,7 +115,7 @@ ms.locfileid: "91934965"
 
 Конструктор отчетов доступен в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] в среде Visual Studio. Рабочая область конструирования в конструкторе отчетов содержит окна, мастера и меню на вкладках, используемые для доступа к функциям создания отчетов. Средство конструктора отчетов становится доступным при выборе шаблона проекта сервера отчетов или мастера сервера отчетов в средствах [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Дополнительные сведения см. в разделе [Службы Reporting Services в SQL Server Data Tools (SSDT)](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md).
 
-Скачать [SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714).
+Скачать [SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md).
 
 ### <a name="to-start-report-designer"></a>Запуск конструктора отчетов
 
@@ -139,7 +139,7 @@ ms.locfileid: "91934965"
 
 [Построитель отчетов в SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) — это автономное приложение, с помощью которого можно создавать отчеты с разбиением на страницы вне [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Существующие отчеты можно настраивать и обновлять независимо от того, были ли они созданы в конструкторе отчетов или в предыдущих версиях [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Его можно установить с веб-портала [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или из Центра загрузки Майкрософт.
 
-Когда отчет с разбивкой на страницы будет готов, опубликуйте его на сервере отчетов или [сохраните его в службе Power BI](https://docs.microsoft.com/power-bi/paginated-reports-save-to-power-bi-service).
+Когда отчет с разбивкой на страницы будет готов, опубликуйте его на сервере отчетов или [сохраните его в службе Power BI](/power-bi/paginated-reports-save-to-power-bi-service).
 [Построитель отчетов можно скачать](https://go.microsoft.com/fwlink/?LinkID=219138) из Центра загрузки Майкрософт.
 
 ### <a name="to-start-ssrbnoversion"></a>Запуск [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]
@@ -181,7 +181,7 @@ ms.locfileid: "91934965"
 
 [Издатель мобильных отчетов для SQL Server можно скачать](https://go.microsoft.com/fwlink/?LinkID=733527)  
 [Построитель отчетов можно скачать](https://go.microsoft.com/fwlink/?LinkID=219138)  
-[Скачивание SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714)  
+[Скачивание SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md)  
 [Установка режима интеграции с SharePoint для служб Reporting Services](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)  
 [Сервер отчетов служб Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
 [Средства проектирования запросов](../../reporting-services/report-data/query-design-tools-ssrs.md)  

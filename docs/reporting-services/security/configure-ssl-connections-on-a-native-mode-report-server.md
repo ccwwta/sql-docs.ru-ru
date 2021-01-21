@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 15f8fddb50f1cc814c88cc721fd46ceba1581faf
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 6d76229a17951c4b0bad35ee78e95a903bb590e3
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934767"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98594958"
 ---
 # <a name="configure-tls-connections-on-a-native-mode-report-server"></a>Настройка TLS-соединений на сервере отчетов, работающем в собственном режиме
 
@@ -25,7 +25,7 @@ ms.locfileid: "91934767"
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] В собственном режиме используется HTTP-служба протокола SSL для установления зашифрованного соединения с сервером отчетов. Протокол TLS ранее назывался SSL. Если в локальном хранилище сертификатов на компьютере сервера отчетов установлен CER-файл сертификата, можно связать его с резервированием URL-адресов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для поддержки соединений сервера отчетов через зашифрованный канал.  
   
 > [!TIP]  
->  Если используется режим интеграции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с SharePoint, см. дополнительные сведения в документации по SharePoint. Например, руководство по [включению TLS в веб-приложении SharePoint 2010](https://docs.microsoft.com/archive/blogs/sowmyancs/how-to-enable-ssl-on-a-sharepoint-2010-web-application).  
+>  Если используется режим интеграции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с SharePoint, см. дополнительные сведения в документации по SharePoint. Например, руководство по [включению TLS в веб-приложении SharePoint 2010](/archive/blogs/sowmyancs/how-to-enable-ssl-on-a-sharepoint-2010-web-application).  
   
  Поскольку службы IIS также используют HTTP-службу SSL, возникает ряд важных проблем взаимодействия, которые необходимо учитывать при запуске служб IIS и служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на одном компьютере. Ознакомьтесь с разделом «Проблемы взаимодействия со службами IIS», где приводятся рекомендации по решению данных проблем.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "91934767"
   
  Для тестовых целей можно сформировать локальный сертификат. Если используется программа **MakeCert** и пример команды в качестве шаблона, то перед выполнением команды задайте в качестве узла имя сервера и удалите все разрывы строки. Если команда выполняется в DOS-окне, то может понадобиться увеличить размер оконного буфера, чтобы в него вошла вся команда.  
   
- Если службы IIS и [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] работают вместе на одном компьютере, для установки сертификата на компьютер можно использовать консольное приложение "Диспетчер IIS". Оно включает возможности создания и упаковки запроса файла сертификата (CRT) для последующей обработки надежным центром сертификации. Центр сертификации создаст файл сертификата (CER) и вышлет его обратно. Установку файла сертификата в локальное хранилище можно выполнить при помощи консоли управления службами IIS. Дополнительные сведения см. в разделе [Использование SSL для шифрования конфиденциальных данных](https://go.microsoft.com/fwlink/?LinkId=71123) на веб-узле TechNet.  
+ Если службы IIS и [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] работают вместе на одном компьютере, для установки сертификата на компьютер можно использовать консольное приложение "Диспетчер IIS". Оно включает возможности создания и упаковки запроса файла сертификата (CRT) для последующей обработки надежным центром сертификации. Центр сертификации создаст файл сертификата (CER) и вышлет его обратно. Установку файла сертификата в локальное хранилище можно выполнить при помощи консоли управления службами IIS. Дополнительные сведения см. в разделе [Использование SSL для шифрования конфиденциальных данных](/previous-versions/windows/it-pro/windows-server-2003/cc738495(v=ws.10)) на веб-узле TechNet.  
   
 ## <a name="interoperability-issues-with-iis"></a>Проблемы взаимодействия со службами IIS  
  Присутствие на одном компьютере служб IIS и служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] оказывает значительное влияние на TLS-соединения с сервером отчетов:  
@@ -93,5 +93,4 @@ ms.locfileid: "91934767"
  [Настройка и администрирование сервера отчетов (службы Reporting Services в собственном режиме)](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Настройка URL-адресов сервера отчетов (диспетчер конфигурации сервера отчетов)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
-  
   

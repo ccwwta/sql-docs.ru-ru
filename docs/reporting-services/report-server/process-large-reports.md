@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9b263aa61d02c20f55933744449151fa7676bad1
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 022751a3ec4b47a8e7a3a5f5295306265f659512
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84544516"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98594977"
 ---
 # <a name="process-large-reports"></a>Обработка больших отчетов
   Обработка больших отчетов связана с определенными проблемами, и для правильного ее выполнения необходимы специальные настройки. Большие отчеты не должны выполняться по требованию, если только для них не настроена поддержка разбивки на страницы.  
@@ -32,7 +32,7 @@ ms.locfileid: "84544516"
   
  Размер отчетов, содержащих изменчивые данные, может претерпевать значительные изменения от одного выполнения к другому. В этом случае необходимо выполнить мониторинг источника данных для определения того, как изменчивость данных влияет на отчет, и нужно ли предпринять меры, предписанные в этом разделе.  
   
- Дополнительные сведения и рекомендации по диагностике ошибок, связанных с превышением времени ожидания соединения, и ошибок нехватки памяти см. в статье [Диагностика неполадок при выполнении отчетов на сервере отчетов](https://go.microsoft.com/fwlink/?LinkId=85634) на веб-сайте blogs.msdn.microsoft.com.  
+ Дополнительные сведения и рекомендации по диагностике ошибок, связанных с превышением времени ожидания соединения, и ошибок нехватки памяти см. в статье [Диагностика неполадок при выполнении отчетов на сервере отчетов](/archive/blogs/lukaszp/) на веб-сайте blogs.msdn.microsoft.com.  
   
 ## <a name="configuration-recommendations"></a>Рекомендации по настройке  
  Рекомендации по выполнению и подготовке к просмотру отчетов, а также по доступу к ним включают следующее:  
@@ -72,4 +72,4 @@ ms.locfileid: "84544516"
  [Установка свойств обработки отчетов](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Задание учетных данных и сведениях о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Управление содержимым сервера отчетов (службы Reporting Services в основном режиме)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Предварительная загрузка кэша (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
+ [Предварительная загрузка кэша (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md)

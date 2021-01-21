@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fba193af6ef9f76c50f33ffa45a7bc668a0edead
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+ms.openlocfilehash: 77a96c10d94bb27d52f8527e6822ff036e4a214e
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364666"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596758"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Добавление каскадных параметров в отчет (построитель отчетов и службы SSRS)
   Каскадирование параметров предоставляет способ управления большими объемами данных отчета. Можно определить набор связанных параметров таким образом, чтобы список значений для одного параметра зависел от значения, выбранного в другом параметре. Например, первый параметр является независимым и может представлять список категорий продуктов. При выборе пользователем категории второй параметр зависит от значения первого параметра. Эти значения обновляются списком подкатегорий выбранной категории. При просмотре пользователем отчета значения параметров категорий и подкатегорий используются для фильтрации данных отчета.  
@@ -26,7 +26,7 @@ ms.locfileid: "93364666"
   
  Для каскадирования параметров важен порядок следования, поскольку запрос набора данных для параметра, расположенного дальше в списке, включает ссылки на каждый параметр, находящийся в списке раньше его. Во время выполнения порядок параметров в области данных отчета определяет порядок появления запросов параметров в отчете и, таким образом, порядок выбора пользователем каждого последующего значения параметра.  
   
- Сведения о создании каскадных параметров с несколькими значениями и о включении функции «Выделить все» см. на странице [How to have a Select All Multivalue Cascading Parameter](https://go.microsoft.com/fwlink/?LinkId=184757).  
+ Сведения о создании каскадных параметров с несколькими значениями и о включении функции «Выделить все» см. на странице [How to have a Select All Multivalue Cascading Parameter](/archive/blogs/psssql/).  
   
 ## <a name="to-create-the-main-dataset-with-a-query-that-includes-multiple-related-parameters"></a>Создание основного набора данных с запросом, включающим несколько связанных параметров  
   
@@ -159,5 +159,4 @@ ms.locfileid: "93364666"
  [Учебники по построителю отчетов](../../reporting-services/report-builder-tutorials.md)   
  [Добавление фильтров набора данных, фильтров области данных и групповых фильтров (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
-  
   

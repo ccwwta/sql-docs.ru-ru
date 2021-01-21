@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b6c33eaeda2a7600039b80c49e1ba3c0fa9e36b5
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 08f9271c7b42e7db3d42ffadc111e9b86dd38e68
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97439369"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596190"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>Что такое службы SQL Server Reporting Services (SSRS)?
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-Ищете сервер отчетов Power BI? См. статью [Что такое сервер отчетов Power BI?](https://docs.microsoft.com/power-bi/report-server/get-started)
+Ищете сервер отчетов Power BI? См. статью [Что такое сервер отчетов Power BI?](/power-bi/report-server/get-started)
 
 Службы SQL Server Reporting Services (SSRS) предоставляют набор локальных средств и служб для создания и развертывания мобильных отчетов и отчетов с разбиением на страницы, а также управления ими.
 
@@ -49,7 +49,7 @@ SQL Server Reporting Services предлагает обновленный наб
 Эти источники предоставят вам актуальные сведения о новых возможностях SQL Server Reporting Services.
 
 * [Новые возможности служб Reporting Services](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)
-* [Блог команды разработки служб SQL Server Reporting Services](https://blogs.msdn.microsoft.com/sqlrsteamblog/)
+* [Блог команды разработки служб SQL Server Reporting Services](/archive/blogs/sqlrsteamblog/)
 * [Канал Guy in a Cube на YouTube](https://www.youtube.com/channel/UCFp1vaKzpfvoGai0vE5VJ0w)
 
 ## <a name="paginated-reports"></a>Отчеты с разбиением на страницы
@@ -119,7 +119,7 @@ SQL Server Reporting Services предлагает обновленный наб
 ## <a name="next-steps"></a>Дальнейшие действия
 
 * [Установка служб Reporting Services](../reporting-services/install-windows/install-reporting-services.md)
-* [Скачать SQL Server Data Tools (SSDT)](https://go.microsoft.com/fwlink/?LinkID=616714)
+* [Скачать SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
 * [Установка построителя отчетов](../reporting-services/install-windows/install-report-builder.md)
 
 * Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

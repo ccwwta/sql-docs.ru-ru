@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: sstein, mikeray
 ms.custom: contperf-fy21q2
 ms.date: 12/15/2020
-ms.openlocfilehash: c3745ac4aacbc76ae1c308f44214c1bdc3927857
-ms.sourcegitcommit: 8a8c89b0ff6d6dfb8554b92187aca1bf0f8bcc07
+ms.openlocfilehash: bb1eeea5d336ccba441cea5c6089d326c33dbdaf
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97619329"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597344"
 ---
 # <a name="quickstart-connect-and-query-an-azure-sql-database-or-an-azure-managed-instance-using-sql-server-management-studio-ssms"></a>Краткое руководство. Подключение и запрос к базе данных SQL Azure или управляемому экземпляру Azure с помощью SQL Server Management Studio (SSMS)
 
@@ -73,9 +73,9 @@ ms.locfileid: "97619329"
 
 ## <a name="troubleshoot-connectivity-issues"></a>Устранение проблем подключения
 
-Вы можете столкнуться с проблемами при подключении к Azure Synapse Analytics. Дополнительные сведения об устранении неполадок с подключением см. в [этой статье](https://docs.microsoft.com/azure/azure-sql/database/troubleshoot-common-errors-issues).
+Вы можете столкнуться с проблемами при подключении к Azure Synapse Analytics. Дополнительные сведения об устранении неполадок с подключением см. в [этой статье](/azure/azure-sql/database/troubleshoot-common-errors-issues).
 
-Возможны предотвращение, диагностика и устранение ошибок подключения и временных ошибок, которые возникают в клиентском приложении во время взаимодействия с базой данных SQL Azure или управляемым экземпляром SQL Azure. Дополнительные сведения см. в статье [Устранение временных ошибок подключения](https://docs.microsoft.com/azure/azure-sql/database/troubleshoot-common-connectivity-issues).
+Возможны предотвращение, диагностика и устранение ошибок подключения и временных ошибок, которые возникают в клиентском приложении во время взаимодействия с базой данных SQL Azure или управляемым экземпляром SQL Azure. Дополнительные сведения см. в статье [Устранение временных ошибок подключения](/azure/azure-sql/database/troubleshoot-common-connectivity-issues).
 
 ## <a name="create-a-database"></a>Создание базы данных
 

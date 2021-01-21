@@ -28,12 +28,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: cc07f6b544740972223a632441973bce155b5f17
-ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
+ms.openlocfilehash: 6ae9da5c98d625843bc01bba5d12276098e3e3f1
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "92358882"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98594453"
 ---
 # <a name="transact-sql-editor-options"></a>Параметры редактора Transact-SQL
 
@@ -51,25 +51,25 @@ ms.locfileid: "92358882"
 |**SET TEXTSIZE**|Значение по умолчанию, равное 2 147 483 647 байт, указывает на то, что SQL Server предоставит содержимое поля полностью вплоть до пределов для полей данных text, ntext, nvarchar(max) и varchar(max). Этот параметр не влияет на тип данных xml. Задав меньшее число, можно ограничить вывод результатов в случае больших значений. Содержимое столбцов большего размера, чем заданное число, будет усекаться.|  
 |**Время ожидания выполнения**|Указывает число секунд ожидания перед отменой запроса. Значение, равное 0, указывает на неограниченное время ожидания или отсутствие времени ожидания.|  
 |**По умолчанию открывать новые запросы в режиме SQLCMD**|При установке этого флажка новые запросы будут открываться в режиме SQLCMD. Этот флажок становится видимым только в случае, если диалоговое окно открыто из меню Средства.<br /><br />При выборе этого параметра следует учитывать следующие ограничения.<br /><br />– Технология IntelliSense в редакторе запросов ядра СУБД отключена.<br />– Так как редактор запросов не запускается из командной строки, невозможно передать ему такие параметры командной строки, как переменные.<br />– Так как редактор запросов не может отвечать на приглашения операционной системы, будьте внимательны и не запускайте интерактивные инструкции.|  
-|**SET NOCOUNT**|Останавливает сообщение, указывающее количество строк, затронутых инструкцией Transact-SQL, из возвращаемых в составе результата. Дополнительные сведения см. в разделе [SET NOCOUNT](https://go.microsoft.com/fwlink/?LinkID=238731).|  
-|**SET NOEXEC**|При значении **ON** инструктирует Microsoft® SQL Server™ компилировать все пакеты инструкций Transact-SQL, но не выполнять их. При значении **OFF** инструктирует Microsoft® SQL Server™ выполнять все пакеты после компиляции. Дополнительные сведения см. в разделе [SET NOEXEC (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=238770).|  
-|**SET PARSEONLY**|Проверяет синтаксис каждой инструкции Transact-SQL и возвращает сообщения об ошибках без компиляции или выполнения инструкции. Дополнительные сведения см. в разделе [SET PARSEONLY](https://go.microsoft.com/fwlink/?LinkId=238734).|  
-|**SET CONCAT_NULL_YIELDS_NULL**|Управляет тем, как будут обрабатываться результаты объединения: как значения NULL или как пустые строковые значения. Дополнительные сведения см. в разделе [SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=238733).|  
+|**SET NOCOUNT**|Останавливает сообщение, указывающее количество строк, затронутых инструкцией Transact-SQL, из возвращаемых в составе результата. Дополнительные сведения см. в разделе [SET NOCOUNT](../t-sql/statements/set-nocount-transact-sql.md).|  
+|**SET NOEXEC**|При значении **ON** инструктирует Microsoft® SQL Server™ компилировать все пакеты инструкций Transact-SQL, но не выполнять их. При значении **OFF** инструктирует Microsoft® SQL Server™ выполнять все пакеты после компиляции. Дополнительные сведения см. в разделе [SET NOEXEC (Transact-SQL)](../t-sql/statements/set-noexec-transact-sql.md).|  
+|**SET PARSEONLY**|Проверяет синтаксис каждой инструкции Transact-SQL и возвращает сообщения об ошибках без компиляции или выполнения инструкции. Дополнительные сведения см. в разделе [SET PARSEONLY](../t-sql/statements/set-parseonly-transact-sql.md).|  
+|**SET CONCAT_NULL_YIELDS_NULL**|Управляет тем, как будут обрабатываться результаты объединения: как значения NULL или как пустые строковые значения. Дополнительные сведения см. в разделе [SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)](../t-sql/statements/set-concat-null-yields-null-transact-sql.md).|  
 |**SET ARITHABORT**|Завершает запрос, если во время выполнения запроса возникает ошибка переполнения или деления на нуль. Дополнительные сведения см. в разделе [SET ARITHABORT](https://msdn.microsoft.com/library/aa259212(v=SQL.80).aspx).|  
-|**SET SHOWPLAN_TEXT**|Предписывает Microsoft® SQL Server™ не выполнять инструкции Transact-SQL. Вместо этого SQL Server возвращает подробные сведения о ходе выполнения инструкций. Дополнительные сведения см. в разделе [SET SHOWPLAN_TEXT (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkID=238737).|  
+|**SET SHOWPLAN_TEXT**|Предписывает Microsoft® SQL Server™ не выполнять инструкции Transact-SQL. Вместо этого SQL Server возвращает подробные сведения о ходе выполнения инструкций. Дополнительные сведения см. в разделе [SET SHOWPLAN_TEXT (Transact-SQL)](../t-sql/statements/set-showplan-text-transact-sql.md).|  
 |**SET STATISTICS TIME**|Отображает время в миллисекундах, необходимое для синтаксического анализа, компиляции и выполнения каждой инструкции.|  
 |**SET STATISTICS IO**|Предписывает Microsoft® SQL Server™ отображать сведения об объеме дисковой активности, создаваемой инструкциями Transact-SQL.|  
-|**SET TRANSACTION ISOLATION LEVEL**|Управляет режимом блокировки транзакций по умолчанию для всех инструкций Microsoft® SQL Server™ **SELECT** , выдаваемых соединением. Дополнительные сведения см. в разделе  [SET TRANSACTION ISOLATION LEVEL](https://go.microsoft.com/fwlink/?LinkId=238730).|  
-|**SET LOCK_TIMEOUT**|Указывает количество миллисекунд, в течение которых инструкция ожидает снятия блокировки. Дополнительные сведения см. в разделе [SET LOCK_TIMEOUT (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=238747).|  
-|**SET QUERY_GOVERNOR_COST_LIMIT**|Переопределяет текущее настроенное значение для текущего соединения. Дополнительные сведения см. в разделе [SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=238749).|  
-|**SET ANSI_DEFAULTS**|Управляет группой параметров Microsoft® SQL Server™, которая задает определенное поведение стандарта SQL-92. Дополнительные сведения см. в разделе [SET ANSI_DEFAULTS (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=238750).|  
-|**SET QUOTED_IDENTIFIER**|Предписывает Microsoft® SQL Server™ следовать правилам SQL-92 относительно разделения кавычками идентификаторов и строк-литералов. Идентификаторы, разделенные двойными кавычками, могут либо быть зарезервированными ключевыми словами Transact-SQL, либо содержать символы, которые обычно не допускаются правилами синтаксиса языка Transact-SQL для идентификаторов. Дополнительные сведения см. в разделе [SET QUOTED_IDENTIFIER (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=238751).|  
-|**SET ANSI_NULL_DFLT_ON**|Изменяет поведение сеанса, чтобы переопределить допустимость значений NULL по умолчанию в новых столбцах, если параметр ANSI null базы данных по умолчанию имеет значение false. Дополнительные сведения см. в описании [SET ANSI_NULL_DFLT_ON](https://go.microsoft.com/fwlink/?LinkID=238752).|  
-|**SET IMPLICIT_TRANSACTIONS**|При значении **ON**задается соединение в режиме неявных транзакций. При значении **OFF**возвращается соединение в режим с автоматической фиксацией транзакций. Дополнительные сведения см. в разделе [SET IMPLICIT_TRANSACTIONS (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=238753).|  
-|**SET CURSOR_CLOSE_ON_COMMIT**|Управляет тем, закрывается ли курсор при фиксации транзакции. Дополнительные сведения см. в описании [SET CURSOR_CLOSE_ON_COMMIT](https://go.microsoft.com/fwlink/?LinkId=238754).|  
-|**SET ANSI_PADDING**|Управляет способом хранения в столбце значений короче, чем определенный размер столбца, и способом хранения в столбце значений, имеющих замыкающие пробелы, в данных **char**, **varchar**, **binary**и **varbinary** . Дополнительные сведения см. в описании [SET ANSI_PADDING](https://go.microsoft.com/fwlink/?LinkId=238755).|  
-|**SET ANSI_WARNINGS**|Указывает поведение стандарта SQL-92 при некоторых ошибках. Дополнительные сведения см. в разделе [SET ANSI_WARNINGS (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=238758).|  
-|**SET ANSI_NULLS**|Задает совместимое со стандартом SQL-92 поведение операторов сравнения "равно" ( **=** ) и "не равно" ( **<>** ) при использовании со значениями NULL. Дополнительные сведения см. в разделе [SET ANSI_NULLS (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=238759).|  
+|**SET TRANSACTION ISOLATION LEVEL**|Управляет режимом блокировки транзакций по умолчанию для всех инструкций Microsoft® SQL Server™ **SELECT** , выдаваемых соединением. Дополнительные сведения см. в разделе  [SET TRANSACTION ISOLATION LEVEL](../t-sql/statements/set-transaction-isolation-level-transact-sql.md).|  
+|**SET LOCK_TIMEOUT**|Указывает количество миллисекунд, в течение которых инструкция ожидает снятия блокировки. Дополнительные сведения см. в разделе [SET LOCK_TIMEOUT (Transact-SQL)](../t-sql/statements/set-lock-timeout-transact-sql.md).|  
+|**SET QUERY_GOVERNOR_COST_LIMIT**|Переопределяет текущее настроенное значение для текущего соединения. Дополнительные сведения см. в разделе [SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)](../t-sql/statements/set-query-governor-cost-limit-transact-sql.md).|  
+|**SET ANSI_DEFAULTS**|Управляет группой параметров Microsoft® SQL Server™, которая задает определенное поведение стандарта SQL-92. Дополнительные сведения см. в разделе [SET ANSI_DEFAULTS (Transact-SQL)](../t-sql/statements/set-ansi-defaults-transact-sql.md).|  
+|**SET QUOTED_IDENTIFIER**|Предписывает Microsoft® SQL Server™ следовать правилам SQL-92 относительно разделения кавычками идентификаторов и строк-литералов. Идентификаторы, разделенные двойными кавычками, могут либо быть зарезервированными ключевыми словами Transact-SQL, либо содержать символы, которые обычно не допускаются правилами синтаксиса языка Transact-SQL для идентификаторов. Дополнительные сведения см. в разделе [SET QUOTED_IDENTIFIER (Transact-SQL)](../t-sql/statements/set-quoted-identifier-transact-sql.md).|  
+|**SET ANSI_NULL_DFLT_ON**|Изменяет поведение сеанса, чтобы переопределить допустимость значений NULL по умолчанию в новых столбцах, если параметр ANSI null базы данных по умолчанию имеет значение false. Дополнительные сведения см. в описании [SET ANSI_NULL_DFLT_ON](../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md).|  
+|**SET IMPLICIT_TRANSACTIONS**|При значении **ON** задается соединение в режиме неявных транзакций. При значении **OFF** возвращается соединение в режим с автоматической фиксацией транзакций. Дополнительные сведения см. в разделе [SET IMPLICIT_TRANSACTIONS (Transact-SQL)](../t-sql/statements/set-implicit-transactions-transact-sql.md).|  
+|**SET CURSOR_CLOSE_ON_COMMIT**|Управляет тем, закрывается ли курсор при фиксации транзакции. Дополнительные сведения см. в описании [SET CURSOR_CLOSE_ON_COMMIT](../t-sql/statements/set-cursor-close-on-commit-transact-sql.md).|  
+|**SET ANSI_PADDING**|Управляет способом хранения в столбце значений короче, чем определенный размер столбца, и способом хранения в столбце значений, имеющих замыкающие пробелы, в данных **char**, **varchar**, **binary** и **varbinary** . Дополнительные сведения см. в описании [SET ANSI_PADDING](../t-sql/statements/set-ansi-padding-transact-sql.md).|  
+|**SET ANSI_WARNINGS**|Указывает поведение стандарта SQL-92 при некоторых ошибках. Дополнительные сведения см. в разделе [SET ANSI_WARNINGS (Transact-SQL)](../t-sql/statements/set-ansi-warnings-transact-sql.md).|  
+|**SET ANSI_NULLS**|Задает совместимое со стандартом SQL-92 поведение операторов сравнения "равно" ( **=** ) и "не равно" ( **<>** ) при использовании со значениями NULL. Дополнительные сведения см. в разделе [SET ANSI_NULLS (Transact-SQL)](../t-sql/statements/set-ansi-nulls-transact-sql.md).|  
   
 ## <a name="query-results"></a><a name="QueryResults"></a>Результаты запроса  
   
@@ -91,4 +91,3 @@ ms.locfileid: "92358882"
 |**Переключение на вкладку результатов после выполнения запроса**|Нажмите, чтобы автоматически сфокусировать экран на результирующем наборе.|  
 |**Максимальное число символов, отображаемых в каждом столбце**|По умолчанию это значение равно 256. Увеличьте это значение для вывода результирующих наборов большего размера без усечения.|  
 |**Сброс до значений по умолчанию**|Позволяет вернуть исходные значения по умолчанию для всех параметров на данной странице.|  
-  

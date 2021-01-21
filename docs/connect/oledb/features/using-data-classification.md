@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: bazizi
 ms.author: v-beaziz
 manager: kenvh
-ms.openlocfilehash: 2a46b952815fa707b03889d3f9aa6480e6e13d32
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+ms.openlocfilehash: a833e256272a012cfccbbe018cf4ad275f08db80
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96506683"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596798"
 ---
 # <a name="using-data-classification"></a>Использование классификации данных
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../../includes/applies-to-version/sql-asdb-asa.md)]
@@ -26,9 +26,9 @@ ms.locfileid: "96506683"
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
 ## <a name="overview"></a>Обзор
-Набор дополнительных служб для [обнаружения и классификации данных SQL](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification) служит для обнаружения конфиденциальных данных в базах данных, их классификации, назначения им меток и создания отчетов. В Microsoft OLE DB Driver for SQL Server версии [18.5.0](../release-notes-for-oledb-driver-for-sql-server.md#1850) добавлена поддержка получения метаданных классификации для случаев, когда базовый источник данных поддерживает эту функцию. Для доступа к этим сведениям используется интерфейс [ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md).
+Набор дополнительных служб для [обнаружения и классификации данных SQL](../../../relational-databases/security/sql-data-discovery-and-classification.md) служит для обнаружения конфиденциальных данных в базах данных, их классификации, назначения им меток и создания отчетов. В Microsoft OLE DB Driver for SQL Server версии [18.5.0](../release-notes-for-oledb-driver-for-sql-server.md#1850) добавлена поддержка получения метаданных классификации для случаев, когда базовый источник данных поддерживает эту функцию. Для доступа к этим сведениям используется интерфейс [ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md).
 
-Дополнительные сведения о назначении классификации столбцам см. в статье [Обнаружение и классификация данных SQL](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification).
+Дополнительные сведения о назначении классификации столбцам см. в статье [Обнаружение и классификация данных SQL](../../../relational-databases/security/sql-data-discovery-and-classification.md).
 
 ## <a name="code-samples"></a>Примеры кода
 
@@ -231,5 +231,4 @@ void PrintSensitivityClassificationInfo(SENSITIVITYCLASSIFICATION* pSensitivityC
 
 ## <a name="see-also"></a>См. также
  [Интерфейсы (OLE DB)](../ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
- [ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md)  
-
+ [ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md)

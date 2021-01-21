@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b139dc1b0aaa0b2d1477d182cf128d0f93795ca3
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: b307966577cfd30197963263597aee7a9d06e018
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85048327"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597333"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Мастер карт и мастер слоев карт (построитель отчетов и службы SSRS)
  В отчетах [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы мастер карт и мастер слоев карт автоматизируют задачи создания карты, добавления слоя карты или изменения параметров слоя карты применительно к существующему слою.  
@@ -184,7 +184,7 @@ ms.locfileid: "85048327"
   
 -   **Гибридная среда**. Отображает сочетание представлений **Дорожный** и **Воздушный** .  
   
- Дополнительные сведения о мозаичных элементах см. в разделе [Мозаичная система Bing Maps](https://go.microsoft.com/fwlink/?LinkId=147315). Дополнительные сведения об использовании в отчете мозаичных элементов Bing Map см. в разделах [Дополнительные условия использования](https://go.microsoft.com/fwlink/?LinkId=151371).  
+ Дополнительные сведения о мозаичных элементах см. в разделе [Мозаичная система Bing Maps](/bingmaps/articles/bing-maps-tile-system). Дополнительные сведения об использовании в отчете мозаичных элементов Bing Map см. в разделах [Дополнительные условия использования](https://go.microsoft.com/fwlink/?LinkId=151371).  
   
  Для просмотра мозаичного фона в режиме конструктора необходим доступ к Интернету. Чтобы отображать мозаичный фон при предварительном просмотре отчета на сервере отчетов, сервер отчета должен быть настроен для поддержки мозаичного фона Bing Map. Дополнительные сведения см. в статье [Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) и [Планирование отчета-карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
   
@@ -252,5 +252,4 @@ ms.locfileid: "85048327"
  [Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [Планирование отчета-карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
  [Карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
-  
   

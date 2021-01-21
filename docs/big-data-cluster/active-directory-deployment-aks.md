@@ -9,16 +9,16 @@ ms.date: 11/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3f6b3ce5f6a594e5be385ee1f7ea7d1c03c1f92a
-ms.sourcegitcommit: 0f484f32709a414f05562bbaafeca9a9fc57c9ed
+ms.openlocfilehash: 4b11cef91203a9c7939d4d044220283db378e296
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2020
-ms.locfileid: "94632968"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98595635"
 ---
 # <a name="deploy-sql-server-big-data-clusters-in-ad-mode-on-azure-kubernetes-services-aks"></a>Развертывание кластеров больших данных SQL Server в режиме AD в службах Azure Kubernetes (AKS)
 
-Кластеры больших данных SQL Server поддерживают [режим развертывания Active Directory (AD)](deploy-active-directory.md) для **системы управления удостоверениями и доступом (IAM)** . Управление удостоверениями и доступом для **служб Azure Kubernetes (AKS)** было сопряжено с определенными проблемами, поскольку SQL Server не поддерживает стандартные отраслевые протоколы, такие как OAuth 2.0 и OpenID Connect, которые широко используются на платформе управления удостоверениями Майкрософт.  
+Кластеры больших данных SQL Server поддерживают [режим развертывания Active Directory (AD)](./active-directory-prerequisites.md) для **системы управления удостоверениями и доступом (IAM)** . Управление удостоверениями и доступом для **служб Azure Kubernetes (AKS)** было сопряжено с определенными проблемами, поскольку SQL Server не поддерживает стандартные отраслевые протоколы, такие как OAuth 2.0 и OpenID Connect, которые широко используются на платформе управления удостоверениями Майкрософт.  
 
 В этой статье объясняется, как развернуть кластер больших данных SQL Server в режиме AD при развертывании в [службах Azure Kubernetes (AKS)](/azure/aks/intro-kubernetes). 
 

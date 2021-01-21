@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4013c119093adda0fbb721c376eef502a7b05a38
-ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
+ms.openlocfilehash: df09e4168790a4607de19348f50e76a4fbd0f383
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2020
-ms.locfileid: "92907252"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596546"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Мобильные отчеты SQL Server: руководство по использованию
 Используйте пошаговые инструкции по созданию мобильных отчетов для экрана любого размера с помощью [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] на веб-портале [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] и по просмотру отчетов в мобильных приложениях Power BI.
@@ -34,12 +34,12 @@ ms.locfileid: "92907252"
   
 * Для создания источников данных и ключевых показателей эффективности, а также для публикации наборов данных и мобильных отчетов нужен доступ к [серверу отчетов Reporting Services в собственном режиме](../install-windows/install-reporting-services-native-mode-report-server.md).  
 * Для создания общих наборов данных нужно [установить построитель отчетов](../install-windows/install-report-builder.md).  
-* Для создания мобильных отчетов [установите издатель мобильных отчетов для Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=717766).  
+* Для создания мобильных отчетов [установите издатель мобильных отчетов для Microsoft SQL Server](../reporting-services-features-and-tasks-ssrs.md).  
 * [Образцы баз данных AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
-*  ИЛИ образец базы данных World Wide Importers, доступный на странице [Образцы Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md).
+*  ИЛИ образец базы данных World Wide Importers, доступный на странице [Образцы Microsoft SQL Server](../../samples/sql-samples-where-are.md).
 * Для просмотра результата: 
   *   [зарегистрируйтесь в службе Power BI](https://go.microsoft.com/fwlink/?LinkID=513879) и
-  *  [скачайте мобильное приложение Power BI](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) на устройство под управлением iOS, Windows 10 или телефон с Android.  
+  *  [скачайте мобильное приложение Power BI](/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) на устройство под управлением iOS, Windows 10 или телефон с Android.  
 
   
 ## <a name="create-a-shared-data-source"></a>Создание общего источника данных  
@@ -78,7 +78,7 @@ ms.locfileid: "92907252"
    
 4. В поле "Имя" введите имя сервера, на котором сохранен источник данных в таком формате:   
    
-   Имя: https:// *localhost* /ReportServer  
+   Имя: https://*localhost*/ReportServer  
    Элементы типа: источники данных (*.rsds)  
    
 5. Нажмите кнопку **Открыть** и перейдите к источнику данных, созданному на этом сервере.  
@@ -135,7 +135,7 @@ ms.locfileid: "92907252"
     
 ## <a name=""></a><a name="create-mobile-report">Создание мобильных отчетов служб Reporting Services</a>  
    
-Для создания мобильных отчетов служб Reporting Services [установите издатель мобильных отчетов для Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=717766)или запустите его на веб-портале [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . 
+Для создания мобильных отчетов служб Reporting Services [установите издатель мобильных отчетов для Microsoft SQL Server](../reporting-services-features-and-tasks-ssrs.md)или запустите его на веб-портале [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . 
 
 При первом открытии [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]отобразится пустой холст, на котором можно создать мобильный отчет. Начните с создания визуальных элементов или выполните запуск с помощью ваших данных. Если сначала создать визуальные элементы, [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] автоматически создает смоделированные данные, привязанные к отчету, и динамически изменяется по мере изменения выбранных визуальных элементов. Попробуйте сделать это сами.   
   
@@ -183,9 +183,9 @@ ms.locfileid: "92907252"
   
 4. Выберите сервер, а затем выберите созданный вами набор данных.  
    
-3. Вернитесь на вкладку **Данные** , а затем на панели **Свойства данных** измените свойства **Представления размера** , **Представления цветов** и другие свойства полей ваших данных. 
+3. Вернитесь на вкладку **Данные** , а затем на панели **Свойства данных** измените свойства **Представления размера**, **Представления цветов** и другие свойства полей ваших данных. 
    
-   *  Поля **Представления размера** , **Представления цветов** и **Пользовательское значение центра** должны содержать цифровые значения. 
+   *  Поля **Представления размера**, **Представления цветов** и **Пользовательское значение центра** должны содержать цифровые значения. 
    *  В поле **Группировать по** отображается категория, поэтому это текстовое поле.
    
    ![Снимок экрана: раздел "Свойства данных".](../../reporting-services/mobile-reports/media/ssrs-mobile-report-data-properties.png)
@@ -200,7 +200,7 @@ ms.locfileid: "92907252"
 
 2. И снова процесс начинается с моделирования данных. 
 
-   Обратите внимание, что в разделе **Свойства визуальных элементов** по умолчанию указано свойство **Предпочтение более высоким значениям** , а для свойства **Разностная метка** задано значение **Процент целевого**. **Остановки диапазона** заданы по умолчанию: вы можете их изменить, но пока можно использовать и их.
+   Обратите внимание, что в разделе **Свойства визуальных элементов** по умолчанию указано свойство **Предпочтение более высоким значениям**, а для свойства **Разностная метка** задано значение **Процент целевого**. **Остановки диапазона** заданы по умолчанию: вы можете их изменить, но пока можно использовать и их.
 
    ![Снимок экрана: раздел "Заданные диапазоны" в свойствах визуального элемента "Кольцевая диаграмма" мобильного отчета.](../../reporting-services/mobile-reports/media/ssrs-mobile-report-donut-visual-properties.png)
    
@@ -232,7 +232,7 @@ ms.locfileid: "92907252"
   
 1. В правом верхнем углу щелкните значок холста, а затем элемент **Телефон**.  
   
-2. На вкладке "Макет" в разделе **Control Instances** (Управление экземплярами) отображаются две созданные вами диаграммы.   
+2. На вкладке "Макет" в разделе **Control Instances**(Управление экземплярами) отображаются две созданные вами диаграммы.   
   
 3. Перетащите карту дерева на полотно телефона и разверните его на четыре столбца в ширину и три строки в высоту.  
   
@@ -303,8 +303,6 @@ ms.locfileid: "92907252"
   
 ## <a name="see-also"></a>См. также раздел  
  
--  Просмотр [локальных отчетов мобильных отчетов и ключевых показателей эффективности в мобильном приложении Power BI](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-app-ssrs-kpis-mobile-on-premises-reports) для устройств с iOS и Android
+-  Просмотр [локальных отчетов мобильных отчетов и ключевых показателей эффективности в мобильном приложении Power BI](/power-bi/consumer/mobile/mobile-app-ssrs-kpis-mobile-on-premises-reports) для устройств с iOS и Android
 -  Просмотр [локальных отчетов мобильных отчетов и ключевых показателей эффективности в мобильном приложении Power BI для устройств с Windows 10](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
   
-   
-
