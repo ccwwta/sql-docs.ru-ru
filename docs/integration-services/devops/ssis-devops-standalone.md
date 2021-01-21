@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 52578422cc9f68c728c901cf39bf05425576133b
-ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
+ms.openlocfilehash: 65712139819c65c2fe8804cc8e0f6768025b322a
+ms.sourcegitcommit: e3ab17fe9822629eda4df5fb4550df5d495f3134
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94521098"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "98207863"
 ---
 # <a name="standalone-sql-server-integration-service-ssis-devops-tools-preview"></a>Изолированные средства DevOps для служб SQL Server Integration Services (SSIS) (предварительная версия)
 
@@ -128,6 +128,13 @@ SSISDeploy.exe -source|-s:<source path> -destination|-d:<type>;<path>[;server] [
     ```
 
 ## <a name="release-notes"></a>заметки о выпуске;
+
+### <a name="version-012-preview"></a>Версия 0.1.2 — предварительная версия
+
+Дата выпуска: 14 января 2021 г.
+
+- Исправлена проблема сбоя SSISBuild.exe при построении проекта с вызовом исключения NullReference, когда метаданные параметров пакета в файле проекта SSIS и пакет SSIS не совпадают.
+- Исправлена проблема, из-за которой не удавалось выполнить пакет с возникновением ошибки "Не удалось расшифровать защищенный XML-узел", хотя пакет успешно развернут в SSISDB с помощью SSISDeploy.exe, когда проект SSIS, содержащий пакет, зашифрован с помощью EncryptSensitiveWithUserKey, а пакет содержит CM с конфиденциальными данными.
 
 ### <a name="version-011-preview"></a>Предварительная версия 0.1.1
 

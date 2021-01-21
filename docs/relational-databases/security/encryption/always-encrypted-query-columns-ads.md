@@ -2,7 +2,7 @@
 description: Выполнение запросов к столбцам, использующим Always Encrypted, с помощью Azure Data Studio
 title: Выполнение запросов к столбцам, использующим Always Encrypted, с помощью Azure Data Studio | Документация Майкрософт
 ms.custom: ''
-ms.date: 5/19/2020
+ms.date: 01/15/2021
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0a61514ff76bbae9e403683529d017f6fcb1c079
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 93bb5c30eeb9cdc6f10c3b71d0e4f70f3f8c6477
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101886"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534423"
 ---
 # <a name="query-columns-using-always-encrypted-with-azure-data-studio"></a>Выполнение запросов к столбцам, использующим Always Encrypted, с помощью Azure Data Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -85,6 +85,7 @@ ms.locfileid: "98101886"
 Дополнительные сведения см. в разделе [Create and Store Column Master Keys (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)(Создание и хранение главных ключей столбцов (постоянное шифрование)).
 
 ## <a name="enabling-and-disabling-always-encrypted-for-a-database-connection"></a>Включение и отключение функции Always Encrypted, применяемой для подключения к базе данных   
+
 При подключении к базе данных в Azure Data Studio можно включить или отключить функцию Always Encrypted, применяемую для подключения к базе данных. По умолчанию функция Always Encrypted отключена. 
 
 После включения функции Always Encrypted, применяемой для подключения к базе данных, [поставщик данных Microsoft .NET для SQL Server](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md), используемый в Azure Data Studio, получает установку на прозрачное выполнение следующих действий:   
@@ -100,10 +101,11 @@ ms.locfileid: "98101886"
 Чтобы включить или отключить Always Encrypted, выполните следующие действия.
 1. В диалоговом окне **Подключения** нажмите кнопку **Дополнительно...** .
 2. Чтобы включить Always Encrypted для подключения, задайте для поля **Always Encrypted** значение **Включено**. Чтобы отключить Always Encrypted, оставьте значение поля **Always Encrypted** пустым или задайте для него значение **Отключено**.
-3. Если вы используете [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] и для экземпляра SQL Server настроен безопасный анклав, можно указать протокол анклава и URL-адрес аттестации анклава. Если ваш экземпляр SQL Server не использует безопасный анклав, поля **Протокол аттестации** и **URL-адрес аттестации анклава** следует оставить пустыми. Дополнительные сведения см. в статье [Always Encrypted с безопасными анклавами](always-encrypted-enclaves.md).
-4. Нажмите кнопку **OK**, чтобы закрыть **Расширенные свойства**.
+3. Нажмите кнопку **OK**, чтобы закрыть **Расширенные свойства**.
 
 ![Короткое видео с инструкциями по включению Always Encrypted для подключения.](../../../relational-databases/security/encryption/media/always-encrypted-ads-connect.gif)
+
+Если для выполнения инструкций, использующих безопасные анклавы на стороне сервера, применяется [Always Encrypted с безопасными анклавами](always-encrypted-enclaves.md), помимо включения Always Encrypted для подключения, необходимо указать протокол аттестации анклава и URL-адрес аттестации анклава. Дополнительные сведения см. в разделе [Необходимые условия для выполнения инструкций T-SQL, использующих анклавы, в Azure Data Studio](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-t-sql-statements-using-enclaves-in-azure-data-studio).
 
 > [!TIP]
 > Чтобы переключиться между включением и отключением Always Encrypted для существующего окна запроса, щелкните **Отключить**, а затем щелкните **Подключиться** и выполните описанные выше действия, чтобы повторно подключиться к базе данных с нужными значениями поля **Always Encrypted**. 

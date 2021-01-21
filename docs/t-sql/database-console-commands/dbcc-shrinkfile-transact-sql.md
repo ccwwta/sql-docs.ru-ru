@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 7d7d3c9e8fa3e67a4ee6ba5c2eb2590ee65c18b2
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 478c7c784c25b1b71bcafd2279ac93bc7545c188
+ms.sourcegitcommit: e40e75055c1435c5e3f9b6e3246be55526807b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96119562"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98151318"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -67,7 +67,7 @@ DBCC SHRINKFILE
 Идентификационный номер (идентификатор) файла, предназначенного для сжатия. Чтобы получить идентификатор файла, используйте системную функцию [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) или выполните запрос к представлению каталога [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) в текущей базе данных.
   
 *target_size*  
-Целое число, которое обозначает новый размер файла в мегабайтах. Если значение не указано, инструкция DBCC SHRINKFILE уменьшает файл до его размера при создании.
+Целое число, которое обозначает новый размер файла в мегабайтах. Если значение не указано или указан 0, инструкция DBCC SHRINKFILE уменьшает файл до его размера при создании.
   
 > [!NOTE]  
 >  Размер пустого файла по умолчанию можно уменьшить с помощью инструкции DBCC SHRINKFILE *target_size*. Например, при создании файла с размером 5 МБ и последующем уменьшении размера до 3 МБ, в то время как файл остается пустым, размер файла по умолчанию задается равным 3 МБ. Это правило применимо только к пустым файлам, в которых никогда не содержались данные.  

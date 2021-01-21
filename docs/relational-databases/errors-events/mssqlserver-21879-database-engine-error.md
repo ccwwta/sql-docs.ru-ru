@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fcfab735-05ca-423a-89f1-fdee7e2ed8c0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d543c3bd25fb8a4eec99c4c5cd3e1b11fbae5a90
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c6b6b15e6a9224306bea073e38b9ef808edfddc
+ms.sourcegitcommit: 7791bd2ba339edc5cd2078a6537c8f6bfe72a19b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88332480"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98564439"
 ---
 # <a name="mssqlserver_21879"></a>MSSQLSERVER_21879
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88332480"
   
     -   Если хранимая процедура **sp_validate_redirected_publisher** явно вызывается пользователем, то для соединения используется имя входа Windows, с помощью которого пользователь вошел в систему.  
   
-    -   Если издатель хранимой процедуры **sp_validate_redirected_** вызывается агентом репликации из **sp_get_redirected_publisher**, то используется связанное с агентом имя входа Windows.  
+    -   Если **sp_validate_redirected_publisher** вызывается агентом репликации из **sp_get_redirected_publisher**, то используется связанное с агентом имя входа Windows.  
   
 Ошибка 21879 может указывать, что хранимая процедура **sp_validate_redirected_publisher** была вызвана с именем входа, неизвестным на перенаправленном целевом издателе.  
   

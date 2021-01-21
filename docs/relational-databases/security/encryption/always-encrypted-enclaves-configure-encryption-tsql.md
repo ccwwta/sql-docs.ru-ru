@@ -2,7 +2,7 @@
 description: Настройка шифрования столбцов на месте с помощью Transact-SQL
 title: Настройка шифрования столбцов на месте с помощью Transact-SQL | Документация Майкрософт
 ms.custom: ''
-ms.date: 10/10/2019
+ms.date: 01/15/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -11,15 +11,16 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: e1e72a9e06c2012390a88243c3ef865ac222564b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ab59eec637bd5afc127227b09445417ffa1fe4eb
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477695"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534853"
 ---
 # <a name="configure-column-encryption-in-place-with-transact-sql"></a>Настройка шифрования столбцов на месте с помощью Transact-SQL
-[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
+
+[!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
 В этой статье описывается использование Always Encrypted с безопасными анклавами для выполнения криптографических операций на месте в столбцах с помощью инструкции [ALTER TABLE](../../../odbc/microsoft/alter-table-statement.md)/`ALTER COLUMN`. Основные сведения о шифровании на месте и общие предварительные требованиях см. в статье [Настройка шифрования столбцов на месте с помощью Always Encrypted с безопасными анклавами](always-encrypted-enclaves-configure-encryption.md).
 
@@ -33,19 +34,20 @@ ms.locfileid: "97477695"
 
 Как и любой запрос, использующий защищенный анклава на стороне сервера, инструкция `ALTER TABLE`/`ALTER COLUMN`, которая инициирует шифрование на месте, должна отправляться через подключение с включенной функцией Always Encrypted и вычислениями анклава. 
 
-В оставшейся части этой статьи описывается запуск шифрования на месте с помощью инструкции `ALTER TABLE`/`ALTER COLUMN` из SQL Server Management Studio. Кроме того, можно выполнить `ALTER TABLE`/`ALTER COLUMN` из приложения. 
+В оставшейся части этой статьи описывается запуск шифрования на месте с помощью инструкции `ALTER TABLE`/`ALTER COLUMN` из SQL Server Management Studio. Кроме того, можно выполнить `ALTER TABLE`/`ALTER COLUMN` из Azure Data Studio или из приложения. 
 
 > [!NOTE]
-> В настоящее время средства, отличные от SSMS, включая командлет [Invoke-Sqlcmd](/powershell/module/sqlserver/invoke-sqlcmd) в модуле SqlServer PowerShell и [sqlcmd](../../../tools/sqlcmd-utility.md), не поддерживают использование `ALTER TABLE`/`ALTER COLUMN` для криптографических операций на месте.
+> В настоящее время командлет [Invoke-Sqlcmd](/powershell/module/sqlserver/invoke-sqlcmd) в модуле SqlServer PowerShell и [sqlcmd](../../../tools/sqlcmd-utility.md), не поддерживают использование `ALTER TABLE`/`ALTER COLUMN` для криптографических операций на месте.
 
 ## <a name="perform-in-place-encryption-with-transact-sql-in-ssms"></a>Выполнение шифрования на месте с помощью Transact-SQL в среде SSMS
 ### <a name="pre-requisites"></a>Предварительные требования
 - Предварительные требования см. в статье [Настройка шифрования столбцов на месте с помощью Always Encrypted с защищенными анклавами](always-encrypted-enclaves-configure-encryption.md).
-- SQL Server Management Studio 18.3 или более поздние версии.
+- SQL Server Management Studio 18.3 или более поздние версии при использовании [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
+- SQL Server Management Studio 18.8 или более поздние версии при использовании [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
 
 ### <a name="steps"></a>Шаги
 1. Откройте окно запроса с поддержкой вычислений в анклаве и Always Encrypted для подключения к базе данных. Дополнительные сведения см. в разделе [Включение и отключение функции Always Encrypted, применяемой для подключения к базе данных ](always-encrypted-query-columns-ssms.md#en-dis).
-2. В окне запроса выполните инструкцию `ALTER TABLE`/`ALTER COLUMN`, указав в предложении `ENCRYPTED WITH` ключ шифрования столбца с поддержкой анклава. Если столбец является строковым столбцом (например, `char`, `varchar`, `nchar`, `nvarchar`), также может потребоваться изменить тип сортировки на BIN2. 
+2. В окне запроса выполните инструкцию `ALTER TABLE`/`ALTER COLUMN`, указав целевую конфигурацию шифрования для столбца, который необходимо зашифровать, расшифровать или зашифровать повторно. При шифровании или повторном шифровании столбца с помощью предложения `ENCRYPTED WITH`. Если столбец является строковым столбцом (например, `char`, `varchar`, `nchar`, `nvarchar`), также может потребоваться изменить тип сортировки на BIN2. 
     
     > [!NOTE]
     > Если главный ключ столбца хранится в Azure Key Vault, вам может быть предложено выполнить вход в Azure.
@@ -67,7 +69,7 @@ ms.locfileid: "97477695"
 #### <a name="encrypting-a-column-in-place"></a>Шифрование столбца на месте
 В приведенном ниже примере предполагается:
 - `CEK1` — это ключ шифрования столбцов с поддержкой анклава.
-- Столбец `SSN` содержит открытый текст и в настоящее время использует сортировку базы данных по умолчанию Latin1, и параметры сортировки, отличные от BIN2 (например, `Latin1_General_CI_AI_KS_WS`).
+- Столбец `SSN` содержит открытый текст и в настоящее время использует сортировку базы данных по умолчанию, такую как Latin1, а не параметры сортировки BIN2 (например, `Latin1_General_CI_AI_KS_WS`).
 
 Инструкция шифрует столбец `SSN`, используя случайное шифрование и ключ шифрования столбцов с поддержкой анклава на месте. Она также перезаписывает сортировку базы данных по умолчанию соответствующими (в той же кодовой странице) параметрами сортировки BIN2.
 
@@ -125,7 +127,7 @@ GO
 - `SSN` столбец зашифрован с помощью ключа шифрования столбца с поддержкой анклава.
 - Текущие параметры сортировки, установленные на уровне столбца, имеют тип `Latin1_General_BIN2`.
 
-Приведенная ниже инструкция расшифровывает столбец (и сохраняет неизмененные параметры сортировки). Кроме того, в той же инструкции можно изменить параметры сортировки, например на параметры сортировки, отличные от BIN2.
+Приведенная ниже инструкция расшифровывает столбец и оставляет без изменений параметры сортировки. При необходимости можно изменить параметры сортировки. Например, изменить параметры сортировки на отличные от BIN2, в той же инструкции.
 
 ```sql
 ALTER TABLE [dbo].[Employees]
@@ -137,11 +139,13 @@ GO
 ```
 
 ## <a name="next-steps"></a>Next Steps
-- [Выполнение запросов к столбцам с помощью Always Encrypted с безопасными анклавами](always-encrypted-enclaves-query-columns.md)
+- [Выполнение инструкций Transact-SQL с помощью безопасных анклавов](always-encrypted-enclaves-query-columns.md)
 - [Создание и использование индексов в столбцах с помощью Always Encrypted с безопасными анклавами](always-encrypted-enclaves-create-use-indexes.md)
 - [Разработка приложений с помощью Always Encrypted с безопасными анклавами](always-encrypted-enclaves-client-development.md)
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
+- [Устранение распространенных неполадок Always Encrypted с безопасными анклавами](always-encrypted-enclaves-troubleshooting.md)
 - [Настройка шифрования столбцов на месте с помощью Always Encrypted с безопасными анклавами](always-encrypted-enclaves-configure-encryption.md)
 - [Включение Always Encrypted с безопасными анклавами для существующих зашифрованных столбцов](always-encrypted-enclaves-enable-for-encrypted-columns.md)
-- [Руководство. Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [Учебник. Начало работы с Always Encrypted и безопасными анклавами в SQL Server](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [Учебник. Начало работы с Always Encrypted и безопасными анклавами в Базе данных SQL Azure](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)

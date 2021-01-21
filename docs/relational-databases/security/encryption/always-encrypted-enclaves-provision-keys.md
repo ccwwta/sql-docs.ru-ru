@@ -2,7 +2,7 @@
 description: Подготовка ключей с поддержкой анклава
 title: Подготовка ключей с поддержкой анклава | Документация Майкрософт
 ms.custom: ''
-ms.date: 10/01/2019
+ms.date: 01/15/2021
 ms.prod: sql
 ms.reviewer: vanto
 ms.prod_service: database-engine, sql-database
@@ -11,15 +11,16 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: 02d4b833b45393c6d830048c3e761cd7abac99e7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e28b6d18b5fe466aa239164b18ebdfe5fef0895c
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477625"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534763"
 ---
 # <a name="provision-enclave-enabled-keys"></a>Подготовка ключей с поддержкой анклава
-[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
+
+[!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
 В этой статье описывается подготовка ключей с поддержкой анклава, которые поддерживают вычисления в безопасных анклавах на стороне сервера, используемых для [Always Encrypted с безопасными анклавами](always-encrypted-enclaves.md). 
 
@@ -39,12 +40,17 @@ ms.locfileid: "97477625"
 В следующих разделах содержатся более подробные сведения о подготовке ключей с поддержкой анклава с помощью SSMS и PowerShell.
 
 ## <a name="provision-enclave-enabled-keys-using-sql-server-management-studio"></a>Подготовка ключей с поддержкой анклава с помощью SQL Server Management Studio
-В SQL Server Management Studio 18.3 или более поздних версий можно подготовить следующие ключи.
+В SQL Server Management Studio можно подготовить следующие ключи.
 - Главный ключ столбца с поддержкой анклава — в диалоговом окне **Новый главный ключ столбца**.
 - Ключ шифрования столбца с поддержкой анклава — в диалоговом окне **Новый ключ шифрования столбца**.
 
 > [!NOTE]
 > В настоящее время [мастер Always Encrypted](always-encrypted-wizard.md) не поддерживает создание ключей с поддержкой анклава. Однако сначала можно создать ключи с поддержкой анклава, используя приведенные выше диалоговые окна, а затем во время работы мастера выбрать уже существующее шифрование столбца с поддержкой анклава для столбцов, которые требуется зашифровать.
+
+Требования к минимальной версии SSMS.
+
+- SSMS 18.3 при использовании [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
+- SSMS 18.8 при использовании [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
 
 ### <a name="provision-enclave-enabled-column-master-keys-with-the-new-column-master-key-dialog"></a>Подготовка главных ключей столбцов с поддержкой анклава с помощью диалогового окна "Новый главный ключ столбца"
 Чтобы подготовить главный ключ столбца с поддержкой анклава, выполните действия, описанные в разделе [Подготовка главных ключей столбцов с помощью диалогового окна "Новый главный ключ столбца"](configure-always-encrypted-keys-using-ssms.md#provision-column-master-keys-with-the-new-column-master-key-dialog). Установите флажок **Разрешить вычисления анклава**. См. снимок экрана ниже.
@@ -52,7 +58,7 @@ ms.locfileid: "97477625"
 ![Разрешение вычислений анклава](./media/always-encrypted-enclaves/allow-enclave-computations.png)
 
 > [!NOTE]
-> Флажок **Разрешить вычисления анклава** отображается только в том случае, если экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] содержит правильно инициализированный безопасный анклав. Дополнительные сведения см. в статье [Настройка типа анклава для Always Encrypted](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md).
+> Флажок **Разрешение вычислений анклава** отображается только если для базы данных настроен безопасный анклав. При использовании [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] см. статью [Настройка безопасного анклава в SQL Server](always-encrypted-enclaves-configure-enclave-type.md). При использовании [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] см. статью [Включение Intel SGX для базы данных SQL Azure](/azure/azure-sql/database/always-encrypted-enclaves-enable-sgx).
 
 > [!TIP]
 > Чтобы проверить, поддерживает ли главный ключ столбца анклав, щелкните его правой кнопкой мыши в обозревателе объектов и выберите пункт **Свойства**. Если ключ поддерживает анклав, в окне свойств ключа отображается **Вычисления анклава: разрешены**. Или можно использовать представление [sys.column_master_keys (Transact-SQL)](../../system-catalog-views/sys-column-master-keys-transact-sql.md).
@@ -148,12 +154,13 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 ```
 
 ## <a name="next-steps"></a>Next Steps
-- [Выполнение запросов к столбцам с помощью Always Encrypted с безопасными анклавами](always-encrypted-enclaves-query-columns.md)
+- [Выполнение инструкций Transact-SQL с помощью безопасных анклавов](always-encrypted-enclaves-query-columns.md)
 - [Настройка шифрования столбцов на месте с помощью Always Encrypted с безопасными анклавами](always-encrypted-enclaves-configure-encryption.md)
 - [Включение Always Encrypted с безопасными анклавами для существующих зашифрованных столбцов](always-encrypted-enclaves-enable-for-encrypted-columns.md)
 - [Разработка приложений с помощью Always Encrypted с безопасными анклавами](always-encrypted-enclaves-client-development.md) 
 
 ## <a name="see-also"></a>См. также:  
-- [Руководство. Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [Учебник. Начало работы с Always Encrypted и безопасными анклавами в SQL Server](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [Учебник. Начало работы с Always Encrypted и безопасными анклавами в Базе данных SQL Azure](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
 - [Управление ключами для Always Encrypted с безопасными анклавами](always-encrypted-enclaves-manage-keys.md)
 - [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)

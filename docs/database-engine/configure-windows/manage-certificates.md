@@ -1,11 +1,8 @@
 ---
-title: Управление сертификатами (диспетчер конфигурации SQL Server) | Документация Майкрософт
+title: Управление сертификатами (диспетчер конфигурации SQL Server)
 description: Узнайте, как устанавливать сертификаты в различных конфигурациях SQL Server. Примеры включают в себя отдельные экземпляры, отказоустойчивые кластеры и группы доступности Always On.
-ms.custom: ''
-ms.date: 01/16/2019
 ms.prod: sql
 ms.prod_service: high-availability
-ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,12 +18,15 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 835d0b1da11ba014b14ede9637117357e84dc208
-ms.sourcegitcommit: d498110ec0c7c62782fb694d14436f06681f2c30
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 01/12/2021
+ms.openlocfilehash: e4f0c17e7502a0c1fa75c6459fae77683d0c3cbd
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/22/2020
-ms.locfileid: "85196051"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170926"
 ---
 # <a name="certificate-management-sql-server-configuration-manager"></a>Управление сертификатами (диспетчер конфигурации SQL Server)
 
@@ -43,18 +43,29 @@ ms.locfileid: "85196051"
 > Функции управления сертификатами в диспетчере конфигурации SQL Server можно использовать с более ранними версиями SQL Server, начиная с SQL Server 2008.
 
 ##  <a name="to-install-a-certificate-for-a-single-sql-server-instance"></a><a name="provision-single-server-cert"></a> Установка сертификата для одного экземпляра SQL Server  
-  
+
+::: moniker range=">=sql-server-ver15"
 1. В диспетчере конфигурации SQL Server в области консоли разверните раздел **Сетевая конфигурация SQL Server**.  
-  
+
 2. Щелкните правой кнопкой мыши элемент **Протоколы для** *&lt;имя экземпляра&gt;* и выберите пункт **Свойства**.  
-  
+
 3. Перейдите на вкладку **Сертификат** и выберите команду **Импорт**.  
-  
+
 4. Нажмите кнопку **Обзор** и выберите файл сертификата.  
-  
+
 5. Нажмите кнопку **Далее**, чтобы проверить сертификат. Если ошибок нет, нажмите кнопку **Далее**, чтобы импортировать сертификат в локальный экземпляр.  
-  
- 
+::: moniker-end
+
+::: moniker range="<= sql-server-2017"
+1. В диспетчере конфигурации SQL Server в области консоли разверните раздел **Сетевая конфигурация SQL Server**.  
+
+2. Щелкните правой кнопкой мыши элемент **Протоколы для** *&lt;имя экземпляра&gt;* и выберите пункт **Свойства**.  
+
+3. Выберите сертификат в раскрывающемся меню **Сертификат**, а затем щелкните **Применить**.  
+
+4. Щелкните **ОК**. 
+::: moniker-end
+
 ##  <a name="to-install-a-certificate-in-a-failover-cluster-instance-configuration"></a><a name="provision-failover-cluster-cert"></a> Установка сертификата в конфигурации экземпляра отказоустойчивого кластера  
   
 1. В диспетчере конфигурации SQL Server в области консоли разверните раздел **Сетевая конфигурация SQL Server**.

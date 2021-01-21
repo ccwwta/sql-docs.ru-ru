@@ -2,7 +2,7 @@
 title: Выполнение запросов к столбцам с помощью Always Encrypted с использованием SQL Server Management Studio | Документация Майкрософт
 description: Узнайте, как запрашивать столбцы в Always Encrypted с использованием SQL Server Management Studio. Извлечение зашифрованных данных или текстовых значений, хранящихся в зашифрованных столбцах.
 ms.custom: ''
-ms.date: 10/31/2019
+ms.date: 01/15/2021
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1406b28cae6d73228d54059cf7463b8eaa578385
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 475cda1238efc6a7c4b630d4458c719dc1b9adbd
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97406070"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534604"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>Выполнение запросов к столбцам с помощью Always Encrypted с использованием SQL Server Management Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -95,11 +95,12 @@ Always Encrypted можно включить или отключить при с
 1. Если используется SSMS 18 или более поздние версии:
     1. Выберите вкладку **Always Encrypted**.
     1. Чтобы включить Always Encrypted, щелкните **Включить Always Encrypted (шифрование столбца)** . Чтобы отключить Always Encrypted, снимите флажок **Включить Always Encrypted (шифрование столбца)** .
-    1. Если вы используете [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] и для экземпляра SQL Server настроен безопасный анклав, можно указать URL-адрес аттестации анклава. Если ваш экземпляр SQL Server не использует безопасный анклав, поле **URL-адрес аттестации анклава** следует оставить пустым. Дополнительные сведения см. в статье [Always Encrypted с безопасными анклавами](always-encrypted-enclaves.md).
 1. Если используется SSMS 17 или более ранние версии:
     1. Выберите вкладку **Дополнительные свойства**.
     1. Чтобы включить Always Encrypted, введите `Column Encryption Setting = Enabled`. Чтобы отключить Always Encrypted, укажите `Column Encryption Setting = Disabled` или удалите **параметр шифрования столбца** на вкладке **Дополнительные свойства** (значение по умолчанию — **Отключено**).   
  1. Нажмите кнопку **Соединить**.
+
+Если для выполнения инструкций, использующих безопасные анклавы на стороне сервера, применяется [Always Encrypted с безопасными анклавами](always-encrypted-enclaves.md), помимо включения Always Encrypted, для подключения необходимо указать URL-адрес аттестации анклава. Дополнительные сведения см. в разделе [Необходимые условия для выполнения инструкций T-SQL, использующих анклавы, в SSMS](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-t-sql-statements-using-enclaves-in-ssms).
 
 > [!TIP]
 > Чтобы включить или отключить функцию Always Encrypted в текущем окне редактора запросов, сделайте следующее:   

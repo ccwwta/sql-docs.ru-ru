@@ -2,7 +2,7 @@
 title: Регистрация компьютера в службе защиты узла
 description: Регистрация компьютера SQL Server в службе защиты узла для Always Encrypted с безопасными анклавами.
 ms.custom: ''
-ms.date: 11/15/2019
+ms.date: 01/15/2021
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d1b2a7209de25b1ce5c988ec9a46b77369dcf70
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 5864ec2b5bda5febc27bbb15606452befe7e293f
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101836"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534783"
 ---
 # <a name="register-computer-with-host-guardian-service"></a>Регистрация компьютера в службе защиты узла
 
@@ -23,10 +23,16 @@ ms.locfileid: "98101836"
 
 В этой статье описывается, как зарегистрировать компьютеры [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] для прохождения аттестации с помощью службы защиты узла (HGS).
 
-Перед началом работы нужно развернуть по крайней мере один компьютер HGS и настроить службу аттестации.
+> [!NOTE]
+> Процесс регистрации [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] в HGS требует совместных усилий администратора HGS и администратора компьютера c [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. См. радел о [ролях и обязанностях при настройке аттестации с помощью HGS](always-encrypted-enclaves-host-guardian-service-plan.md#roles-and-responsibilities-when-configuring-attestation-with-hgs).
+
+Перед началом работы нужно развернуть по крайней мере один компьютер HGS и настроить службу аттестации HGS.
 Дополнительные сведения см. в статье [Развертывание службы защиты узла для [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]](./always-encrypted-enclaves-host-guardian-service-deploy.md).
 
 ## <a name="step-1-install-the-attestation-client-components"></a>Шаг 1. Установка клиентских компонентов для аттестации
+
+> [!NOTE]
+> Этот шаг должен выполняться администратором компьютера с [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)].
 
 Чтобы клиент SQL мог убедиться в том, что он взаимодействует с надежным компьютером [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], компьютер [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] должен успешно пройти аттестацию в службе защиты узла.
 Процесс аттестации управляется дополнительным компонентом Windows, который называется "клиент HGS".
@@ -43,6 +49,9 @@ ms.locfileid: "98101836"
 3. Чтобы завершить установку, перезагрузите компьютер.
 
 ## <a name="step-2-verify-virtualization-based-security-is-running"></a>Шаг 2. Проверка выполнения функции безопасности на основе виртуализации
+
+> [!NOTE]
+> Этот шаг должен выполняться администратором компьютера с [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)].
 
 При установке компонента "Служба защиты узла — поддержка Hyper-V" автоматически настраивается и включается функция безопасности на основе виртуализации (VBS).
 Анклавы для [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] Always Encrypted защищаются средой VBS и выполняются в ней.
@@ -80,12 +89,15 @@ Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name 
 
 После изменения реестра перезагрузите компьютер [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] и проверьте, запустилась ли функция VBS снова.
 
-Если компьютер управляется вашей компанией, групповая политика или Microsoft Endpoint Manager могут переопределить изменения, внесенные в эти разделы реестра, после перезагрузки.
+Если компьютер управляется вашей компанией, групповая политика или диспетчер конечных точек (Майкрософт) могут переопределить изменения, внесенные в эти разделы реестра, после перезагрузки.
 Чтобы узнать, развернуты ли политики, управляющие конфигурацией VBS, обратитесь в свою службу технической ИТ-поддержки.
 
 ## <a name="step-3-configure-the-attestation-url"></a>Шаг 3. Настройка URL-адреса аттестации
 
-Далее вы настроите для компьютера [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] URL-адрес службы аттестации HGS.
+> [!NOTE]
+> Этот шаг должен выполняться администратором компьютера с [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)].
+
+Далее вы настроите на компьютере с [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] URL-адрес службы аттестации HGS, полученный от администратора HGS.
 
 В консоли Windows PowerShell с повышенными привилегиями выполните приведенную ниже команду, чтобы настроить URL-адрес аттестации, изменив ее нужным образом.
 
@@ -105,6 +117,14 @@ Set-HgsClientConfiguration -AttestationServerUrl "https://hgs.bastion.local/Atte
 Перейдите к [шагу 4А](#step-4a-register-a-computer-in-tpm-mode), чтобы зарегистрировать компьютер в режиме TPM, или [шагу 4Б](#step-4b-register-a-computer-in-host-key-mode), чтобы зарегистрировать компьютер в режиме ключа узла.
 
 ## <a name="step-4a-register-a-computer-in-tpm-mode"></a>Шаг 4А. Регистрация компьютера в режиме TPM
+
+> [!NOTE]
+> Этот шаг выполняется совместно администратором компьютера с [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] и администратором HGS. Дополнительные сведения см. в примечаниях ниже.
+
+### <a name="prepare"></a>Подготовка
+
+> [!NOTE]
+> Это действие должно выполняться администратором компьютера с [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)].
 
 На этом шаге вы собираете сведения о состоянии модуля TPM компьютера и регистрируете их в службе HGS.
 
@@ -128,10 +148,13 @@ Set-HgsClientConfiguration -AttestationServerUrl "https://hgs.bastion.local/Atte
 
 ### <a name="configure-a-code-integrity-policy"></a>Настройка политики целостности кода
 
+> [!NOTE]
+> Следующие действия должны выполняться администратором компьютера с [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)].
+
 Служба HGS требует, чтобы к каждому компьютеру, проходящему аттестацию в режиме TPM, применялась политика управления приложениями в Защитнике Windows (WDAC).
 Политики целостности кода WDAC ограничивают программное обеспечение, которое может выполняться на компьютере, проверяя каждый процесс, пытающийся выполнить код, по списку доверенных издателей и хэшей файлов.
 В варианте использования [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] анклавы защищены функцией безопасности на основе виртуализации и не могут изменяться из операционной системы узла, поэтому строгость политики WDAC не влияет на безопасность зашифрованных запросов.
-По этой причине с целью удовлетворения требований для аттестации на компьютерах [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] рекомендуется развернуть простую политику с режимом аудита, не налагая дополнительные ограничения на систему.
+По этой причине с целью удовлетворения требований для аттестации на компьютерах с [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] рекомендуется развернуть политику с режимом аудита, не налагая дополнительные ограничения на систему.
 
 Если вы уже используете настраиваемую политику целостности кода WDAC на компьютерах для защиты конфигурации ОС, можно перейти к разделу [Получение сведений для аттестации TPM](#collect-tpm-attestation-information).
 
@@ -153,6 +176,9 @@ Set-HgsClientConfiguration -AttestationServerUrl "https://hgs.bastion.local/Atte
 
 ### <a name="collect-tpm-attestation-information"></a>Сбор сведений для аттестации TPM
 
+> [!NOTE]
+> Следующие действия должны выполняться администратором компьютера с [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)].
+
 Выполните указанные ниже действия для каждого компьютера [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], который будет проходить аттестацию с помощью HGS.
 
 1. На компьютере, который находится в достоверно хорошем состоянии, выполните следующие команды в PowerShell, чтобы собрать сведения для аттестации TPM:
@@ -170,9 +196,17 @@ Set-HgsClientConfiguration -AttestationServerUrl "https://hgs.bastion.local/Atte
     Copy-Item -Path "$env:SystemRoot\System32\CodeIntegrity\SIPolicy.p7b" -Destination "$path\$name-CIpolicy.bin"
     ```
 
-2. Скопируйте три файла аттестации на сервер HGS.
+2. Передайте три файла аттестации администратору HGS. 
 
-3. На сервере HGS в консоли PowerShell с повышенными привилегиями выполните следующие команды для регистрации компьютера [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]:
+### <a name="register-the-sql-server-computer-with-hgs"></a>Регистрация компьютера с SQL Server в HGS
+
+> [!NOTE]
+> Следующие шаги должны выполняться администратором HGS.
+
+Выполните указанные ниже действия для каждого компьютера [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], который будет проходить аттестацию с помощью HGS.
+
+1. Скопируйте файлы аттестации, полученные от администратора компьютера с [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], на сервер HGS. 
+2. На сервере HGS в консоли PowerShell с повышенными привилегиями выполните следующие команды для регистрации компьютера [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]:
 
     ```powershell
     # TIP: REMEMBER TO CHANGE THE FILENAMES
@@ -212,38 +246,61 @@ Get-HgsAttestationTpmPolicy
 
 ## <a name="step-4b-register-a-computer-in-host-key-mode"></a>Шаг 4Б. Регистрация компьютера в режиме ключа узла
 
+> [!NOTE]
+> Этот шаг выполняется совместно администратором компьютера с [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] и администратором HGS. Дополнительные сведения см. в примечаниях ниже.
+
 В этом разделе приводятся пошаговые инструкции по созданию уникального ключа для узла и его регистрации в службе HGS.
 Если для службы аттестации HGS настроен режим TPM, вместо этого выполните инструкции в [шаге 4А](#step-4a-register-a-computer-in-tpm-mode).
 
+### <a name="generate-a-key-for-a-ssnoversion-md-computer"></a>Создание ключа для компьютера с [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]
+
+> [!NOTE]
+> Эта часть должна выполняться совместно с администратором компьютера с [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)].
+
 Для аттестации ключа узла на компьютере [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] создается пара асимметричных ключей, и службе HGS предоставляется ее открытая половина.
-Чтобы создать пару ключей, в консоли PowerShell с повышенными привилегиями выполните следующую команду:
 
-```powershell
-Set-HgsClientHostKey
-Get-HgsClientHostKey -Path "$HOME\Desktop\$env:computername-key.cer"
-```
+Выполните указанные ниже действия для каждого компьютера [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], который будет проходить аттестацию с помощью HGS.
 
-Если вы уже создали ключ узла и хотите создать новую пару ключей, вместо этого используйте следующие команды:
+1. Чтобы создать пару ключей, в консоли PowerShell с повышенными привилегиями выполните следующую команду:
 
-```powershell
-Remove-HgsClientHostKey
-Set-HgsClientHostKey
-Get-HgsClientHostKey -Path "$HOME\Desktop\$env:computername-key.cer"
-```
+    ```powershell
+    Set-HgsClientHostKey
+    Get-HgsClientHostKey -Path "$HOME\Desktop\$env:computername-key.cer"
+    ```
 
-После создания ключа узла скопируйте файл сертификата на сервер HGS и выполните следующую команду в консоли PowerShell с повышенными привилегиями, чтобы зарегистрировать компьютер [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]:
+    Если вы уже создали ключ узла и хотите создать новую пару ключей, вместо этого используйте следующие команды:
 
-```powershell
-Add-HgsAttestationHostKey -Name "YourComputerName" -Path "C:\temp\yourcomputername.cer"
-```
+    ```powershell
+    Remove-HgsClientHostKey
+    Set-HgsClientHostKey
+    Get-HgsClientHostKey -Path "$HOME\Desktop\$env:computername-key.cer"
+    ```
 
-Повторите шаг 4Б для каждого компьютера [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], который будет проходить аттестацию в службе HGS.
+2. Передайте файл сертификата администратору HGS.
+
+### <a name="register-the-sql-server-computer-with-hgs"></a>Регистрация компьютера с SQL Server в HGS
+
+> [!NOTE]
+> Следующие шаги должны выполняться администратором HGS.
+
+Выполните указанные ниже действия для каждого компьютера [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], который будет проходить аттестацию с помощью HGS.
+
+1. Скопируйте файл сертификата, полученный от администратора компьютера с [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)], на сервер HGS.
+2. В консоли PowerShell с повышенными привилегиями выполните следующие команды для регистрации компьютера с [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]:
+
+    ```powershell
+    Add-HgsAttestationHostKey -Name "YourComputerName" -Path "C:\temp\yourcomputername.cer"
+   ```
 
 ## <a name="step-5-confirm-the-host-can-attest-successfully"></a>Шаг 5. Проверка успешной аттестации узла
 
+> [!NOTE]
+> Этот шаг должен выполняться администратором компьютера с [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)].
+
 После регистрации компьютера [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] в службе HGS ([шаг 4А](#step-4a-register-a-computer-in-tpm-mode) для режима TPM или [шаг 4Б](#step-4b-register-a-computer-in-host-key-mode) для режима ключа узла) необходимо проверить возможность его успешной аттестации.
 
-Вы можете проверить конфигурацию клиента аттестации HGS и выполнить попытку аттестации в любое время с помощью командлета [Get-HgsClientConfiguration](/powershell/module/hgsclient/get-hgsclientconfiguration).
+Вы можете проверить конфигурацию клиента аттестации HGS и выполнить попытку аттестации в любое время с помощью командлета [Get-HgsClientConfiguration](/powershell/module/hgsclient/get-hgsclientconfiguration?view=win10-ps&preserve-view=true).
+
 Выходные данные команды будут выглядеть следующим образом:
 
 ```
@@ -269,8 +326,8 @@ IsFallbackInUse                : False
 | `AttestationStatus` | Объяснение |
 | ----------------- | ----------- |
 | Срок действия истек | Узел проходил аттестацию ранее, но истек срок действия выданного ему сертификата работоспособности. Проверьте, синхронизировано ли время узла и службы HGS. |
-| `InsecureHostConfiguration` | Компьютер не соответствует одной или нескольким политикам аттестации, настроенным на сервере HGS. Дополнительные сведения см. в разделе `AttestationSubStatus`. |
-| NotConfigured | На компьютере не настроен URL-адрес аттестации. [Настройте URL-адрес](#step-3-configure-the-attestation-url). |
+| `InsecureHostConfiguration` | Компьютер не соответствует одной или нескольким политикам аттестации, настроенным на сервере HGS. Для получения дополнительной информации см. `AttestationSubStatus`. |
+| NotConfigured | На компьютере не настроен URL-адрес аттестации. [Настройка URL-адреса аттестации](#step-3-configure-the-attestation-url) |
 | Passed | Компьютер прошел аттестацию и является доверенным для выполнения анклавов [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. |
 | `TransientError` | Попытка аттестации завершилась сбоем из-за временной ошибки. Эта ошибка обычно означает, что возникла проблема при обращении к службе HGS по сети. Проверьте сетевое подключение и возможность разрешения имени службы HGS и маршрутизации к нему. |
 | `TpmError` | Устройство TPM компьютера сообщило об ошибке во время попытки аттестации. Дополнительные сведения см. в журналах TPM. Очистка модуля TPM может помочь устранить эту проблему, но перед этим не забудьте приостановить работу BitLocker и других служб, использующих модуль TPM. |
@@ -289,3 +346,7 @@ IsFallbackInUse                : False
 | Iommu | На этом компьютере не включено устройство IOMMU. Если это физический компьютер, включите IOMMU в меню конфигурации UEFI. Если это виртуальная машина и блок IOMMU недоступен, выполните команду `Disable-HgsAttestationPolicy Hgs_IommuEnabled` на сервере HGS. |
 | SecureBoot | На этом компьютере не включена безопасная загрузка. Чтобы устранить эту ошибку, включите безопасную загрузку в меню конфигурации UEFI. |
 | VirtualSecureMode | На этом компьютере не запущена функция безопасности на основе виртуализации. Следуйте инструкциям в разделе [Шаг 2. Проверка выполнения функции безопасности на основе виртуализации](#step-2-verify-virtualization-based-security-is-running). |
+
+## <a name="next-steps"></a>Дальнейшие действия
+
+- [Настройка безопасного анклава в SQL Server](always-encrypted-enclaves-configure-enclave-type.md)

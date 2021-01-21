@@ -2,7 +2,7 @@
 title: Настройка типа анклава для параметра конфигурации сервера Always Encrypted | Документация Майкрософт
 description: Узнайте, как включить или отключить безопасный анклав для Always Encrypted. Узнайте, как проверить правильность инициализации анклава.
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 01/15/2021
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
@@ -11,18 +11,18 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: 45f6bdca2602a9a85cf9fc193269b445599c78ad
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 19e7349c3b8bb9ef104f95ef0963b6d7982a3669
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480335"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534753"
 ---
 # <a name="configure-the-enclave-type-for-always-encrypted-server-configuration-option"></a>Настройка типа анклава для параметра конфигурации сервера Always Encrypted
 
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
-В этой статье описывается, как включить или отключить безопасный анклав для Always Encrypted с безопасными анклавами. Дополнительные сведения см. в статье [Always Encrypted с безопасными анклавами](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+В этой статье описывается, как включить или отключить безопасный анклав для Always Encrypted с безопасными анклавами. Дополнительные сведения см. в статьях [Always Encrypted с безопасными анклавами](../../relational-databases/security/encryption/always-encrypted-enclaves.md) и [Настройка безопасного анклава в SQL Server](../../relational-databases/security/encryption/always-encrypted-enclaves-configure-enclave-type.md).
 
 Параметр конфигурации сервера **тип анклава для шифрования столбцов** определяет тип безопасного анклава, используемого для Always Encrypted. Параметр может принимать одно из следующих значений:  
   

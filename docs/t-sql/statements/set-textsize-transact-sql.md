@@ -25,17 +25,17 @@ ms.assetid: 787154a6-39a6-4dd6-a6d0-67b4364f95d5
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a959ad6d9a3908d0017b40a8936ccdbe79d8cd83
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 0d7800e643010a9a4064ca1b113e7c7b84e12742
+ms.sourcegitcommit: e40e75055c1435c5e3f9b6e3246be55526807b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98080177"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98151330"
 ---
 # <a name="set-textsize-transact-sql"></a>SET TEXTSIZE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Указывает размер данных типа **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **text**, **ntext** и **image**, возвращаемых инструкцией SELECT.  
+  Указывает размер (в байтах) данных типа **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **text**, **ntext** и **image**, возвращаемых клиенту инструкцией SELECT.  
   
 > [!IMPORTANT]
 >  Типы данных **ntext**, **text** и **image** будут исключены в следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Следует избегать использования этих типов данных при новой разработке и запланировать изменение приложений, использующих их в настоящий момент. Вместо них следует использовать типы данных **nvarchar(max)**, **varchar(max)** и **varbinary(max)** .  

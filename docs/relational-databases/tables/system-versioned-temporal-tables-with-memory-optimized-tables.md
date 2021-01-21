@@ -12,12 +12,12 @@ ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b93b419e4678b84684c524011ed4df4feb6fcb14
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 05ed5ec0d34d2a1a612b76c0117d0bf66675ad7a
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97474575"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98171896"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>темпоральные таблицы с системным управлением версиями и таблицы с оптимизацией памяти
 
@@ -70,7 +70,7 @@ ms.locfileid: "97474575"
 
 При сбросе данных удаляются все записи из внутреннего буфера в памяти, которые старше самой старой выполняемой в текущий момент транзакции, чтобы переместить эти записи в таблицу журнала на диске.
 
-Можно принудительно выполнить сброс данных, вызвав [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md) и указав схему и имя таблицы: **sys.sp_xtp_flush_temporal_history @schema_name, @object_name** . При выполнении этой команды пользователем происходит тот же процесс перемещения данных, что и при вызове сброса данных по внутреннему расписанию системы.
+Можно принудительно выполнить сброс данных, вызвав [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md) и указав схему и имя таблицы: **sys.sp_xtp_flush_temporal_history \@schema_name, \@object_name**. При выполнении этой команды пользователем происходит тот же процесс перемещения данных, что и при вызове сброса данных по внутреннему расписанию системы.
 
 ## <a name="see-also"></a>См. также:
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 4c8a74d33e75ab19b283f3b9d1bfdaf47dc69240
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: fa78eb8ef2da01514e161c58b05146b1699c93f7
+ms.sourcegitcommit: e40e75055c1435c5e3f9b6e3246be55526807b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91869266"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98151270"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>Соединитель SQL Server, приложение
 
@@ -139,7 +139,7 @@ ms.locfileid: "91869266"
 
 ### <a name="rolling-the-ssnoversion-service-principal"></a>Смена субъекта-службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
 
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использует субъекты-службы, созданные в Azure Active Directory, в качестве учетных данных для доступа к хранилищу ключей. Субъект-служба имеет идентификатор клиента и ключ проверки подлинности. Учетные данные [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] настраиваются с использованием параметра **VaultName**, **идентификатора клиента**и **ключа проверки подлинности**. **Ключ проверки подлинности** действителен в течение определенного периода времени (1–2 года). До истечения этого периода времени в Azure AD должен быть создан новый ключ для субъекта-службы. Затем учетные данные необходимо изменить в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] поддерживает кэш учетных данных в текущем сеансе, поэтому при изменении учетных данных [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] следует перезапустить.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использует субъекты-службы, созданные в Azure Active Directory, в качестве учетных данных для доступа к хранилищу ключей. Субъект-служба имеет идентификатор клиента и ключ проверки подлинности. Учетные данные [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] настраиваются с использованием параметра **VaultName**, **идентификатора клиента** и **ключа проверки подлинности**. **Ключ проверки подлинности** действителен в течение определенного периода времени (1–2 года). До истечения этого периода времени в Azure AD должен быть создан новый ключ для субъекта-службы. Затем учетные данные необходимо изменить в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] поддерживает кэш учетных данных в текущем сеансе, поэтому при изменении учетных данных [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] следует перезапустить.  
   
 ### <a name="key-backup-and-recovery"></a>Резервное копирование и восстановление ключей
 
@@ -227,6 +227,7 @@ ms.locfileid: "91869266"
 2051 | scp_err_OutOfMemory | В ядре SQL возникла нехватка памяти, и не удалось выделить память для поставщика расширенного управления ключами.
 2052 | scp_err_ConvertKeyNameToThumbprint | Не удалось преобразовать имя ключа в отпечаток.
 2053 | scp_err_ConvertThumbprintToKeyName|  Не удалось преобразовать отпечаток в имя ключа.
+2058 | scp_err_FailureInRegistry|  Не удалось выполнить операцию в реестре. Учетная запись службы SQL Server не имеет разрешения на создание раздела реестра.
 3000 | ErrorSuccess | Операция с хранилищем ключей Azure завершилась успешно.
 3001 | ErrorUnknown | Сбой операции с хранилищем ключей Azure из-за неизвестной ошибки.
 3002 | ErrorHttpCreateHttpClientOutOfMemory | Не удается создать HttpClient для операции с Azure Key Vault из-за нехватки памяти.

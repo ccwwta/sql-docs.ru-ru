@@ -1,11 +1,8 @@
 ---
+title: DATEDIFF_BIG (Transact-SQL)
 description: DATEDIFF_BIG (Transact-SQL)
-title: DATEDIFF_BIG (Transact-SQL) | Документы Майкрософт
-ms.custom: ''
-ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
@@ -21,12 +18,15 @@ helpviewer_keywords:
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: ea087da6532c43493fd10f647788297d98f35f72
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 01/12/2021
+ms.openlocfilehash: 8f6078aebab5456b8867aca1b7f6987d8a1eb6fd
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093670"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98168293"
 ---
 # <a name="datediff_big-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
 
@@ -92,11 +92,11 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 ## <a name="return-value"></a>Возвращаемое значение  
 Значение типа **bigint**, представляющее разницу между аргументами *startdate* и *enddate* в границах, определяемых аргументом *datepart*.
   
-В качестве возвращаемого значения вне диапазона для **bigint** (от –9 223 372 036 854 775 808 до 9 223 372 036 854 775 807) `DATEDIFF_BIG` возвращает сообщение об ошибке. В отличие от функции `DATEDIFF`, которая возвращает значение типа **int** и поэтому может переполняться с точностью до **минуты** или более высокой точностью, `DATEDIFF_BIG` может переполняться только при использовании точности до **наносекунды**, если разница между *enddate* и *startdate* больше 292 лет, 3 месяцев, 10 дней, 23 часов, 47 минут и 16,8547758 секунд.
+В качестве возвращаемого значения вне диапазона для **bigint** (от –9 223 372 036 854 775 808 до 9 223 372 036 854 775 807) `DATEDIFF_BIG` возвращает сообщение об ошибке. В отличие от функции, которая возвращает значение типа **int** и поэтому может переполняться с точностью до **минуты** или более высокой точностью, `DATEDIFF_BIG` может переполняться только при использовании точности до **наносекунды**, если разница между *enddate* и *startdate* больше 292 лет, 3 месяцев, 10 дней, 23 часов, 47 минут и 16,8547758 секунд.
   
 Если обоим аргументам, *startdate* и *enddate*, присвоено только значение времени, а аргумент *datepart* не содержит значения времени *datepart*, то `DATEDIFF_BIG` возвращает значение 0.
   
-При вычислении возвращаемого значения `DATEDIFF_BIG` не учитывает компонент смещения часовых поясов для аргументов *startdate* или *enddate*.
+При вычислении возвращаемого значения `DATEDIFF_BIG` учитывает компонент смещения часовых поясов для аргументов *startdate* или *enddate*.
   
 Так как значение типа **smalldatetime** имеет точность до минуты, то при использовании в аргументах *startdate* или *enddate*`DATEDIFF_BIG` всегда задает 0 в качестве возвращаемого значения [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) секунд и миллисекунд.
   

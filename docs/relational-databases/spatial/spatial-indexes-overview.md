@@ -13,12 +13,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9d004ce88bba442dc17ff17c3d8a26e75bffd1a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: bedf575888445fb0e14684d4e325b60eb8547a79
+ms.sourcegitcommit: 7791bd2ba339edc5cd2078a6537c8f6bfe72a19b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97473145"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98564456"
 ---
 # <a name="spatial-indexes-overview"></a>Общие сведения о пространственных индексах
 [!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "97473145"
   
  Например, рассмотрим предыдущий рисунок, где восьмиугольник полностью помещается в ячейку 15 сетки уровня 1. На этом рисунке для ячейки 15 была проведена тесселяция, которая разбила восьмиугольник на девять ячеек уровня 2. На рисунке предполагается, что ограничение ячеек на объект равно 9 или больше. Однако, если бы ограничение ячеек на объект равнялось 8 или меньше, то для ячейки 15 тесселяция бы не проводилась и для объекта считалась бы только ячейка 15.  
   
- По умолчанию ограничение ячеек на объект равно 16, что обеспечивает разумный компромисс между охватом и точностью для большинства пространственных индексов. Однако инструкция [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] поддерживает предложение CELLS_PER_OBJECT **=** _n_ , которое позволяет ограничить количество ячеек на объект (от 1 до 8192 включительно).  
+ По умолчанию ограничение ячеек на объект равно 16, что обеспечивает разумный компромисс между охватом и точностью для большинства пространственных индексов. Однако инструкция [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] поддерживает предложение CELLS_PER_OBJECT **=** _n_, которое позволяет ограничить количество ячеек на объект (от 1 до 8192 включительно).  
   
 > [!NOTE]  
 >  Параметр **cells_per_object** пространственного индекса можно найти в представлении каталога [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) .  

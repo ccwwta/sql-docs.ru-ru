@@ -18,12 +18,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016
-ms.openlocfilehash: 843ce787a060481f933376470ef431c6c8e8df08
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 4eb7b7530c498a6ce590584aa83b3f38684960a7
+ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97479745"
+ms.lasthandoff: 01/13/2021
+ms.locfileid: "98170776"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Просмотр и изменение параметров безопасности репликации
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -105,7 +105,7 @@ ms.locfileid: "97479745"
     -   Введите новый надежный пароль в текстовые поля **Пароль** и **Подтверждение пароля** .  
   
     > [!NOTE]  
-    >  Если издатель является издателем Oracle, то в диалоговом окне **Свойства распространителя —\<Distributor>** задается контекст соединения. Процедура изменения контекста приведена ниже.  
+    >  Если издатель является издателем Oracle, то в диалоговом окне **Свойства распространителя — \<Distributor>** задается контекст соединения. Процедура изменения контекста приведена ниже.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -126,7 +126,7 @@ ms.locfileid: "97479745"
     -   Введите новый надежный пароль в текстовые поля **Пароль** и **Подтверждение пароля** .  
   
     > [!NOTE]  
-    >  Если издатель является издателем Oracle, то в диалоговом окне **Свойства распространителя —\<Distributor>** задается контекст соединения. Измените контекст с использованием следующей процедуры.  
+    >  Если издатель является издателем Oracle, то в диалоговом окне **Свойства распространителя — \<Distributor>** задается контекст соединения. Измените контекст с использованием следующей процедуры.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

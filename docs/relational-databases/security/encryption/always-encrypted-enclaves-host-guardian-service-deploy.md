@@ -2,7 +2,7 @@
 title: Развертывание службы защиты узла
 description: Разверните службу защиты узла для Always Encrypted с безопасными анклавами.
 ms.custom: ''
-ms.date: 11/15/2019
+ms.date: 01/15/2021
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ce744de4f70e30a10fad36eef6c1f28f4d8e8d4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 88e79166a8b44139f58192feece211bc3b3d2db3
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477685"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534793"
 ---
 # <a name="deploy-the-host-guardian-service-for-ssnoversion-md"></a>Развертывание службы защиты узла для [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]
 
@@ -23,6 +23,9 @@ ms.locfileid: "97477685"
 
 В этой статье описывается, как развернуть службу защиты узла (HGS) в качестве службы аттестации для [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)].
 Прежде чем начать, ознакомьтесь с полным списком предварительных требований и рекомендаций по архитектуре в статье [Планирование аттестации службы защиты узла](./always-encrypted-enclaves-host-guardian-service-plan.md).
+
+> [!NOTE]
+> Администратор HGS несет ответственность за выполнение всех действий, описанных в этой статье. См. радел о [ролях и обязанностях при настройке аттестации с помощью HGS](always-encrypted-enclaves-host-guardian-service-plan.md#roles-and-responsibilities-when-configuring-attestation-with-hgs).
 
 ## <a name="step-1-set-up-the-first-hgs-computer"></a>Шаг 1. Настройка первого компьютера HGS
 
@@ -233,6 +236,27 @@ Set-HgsServer -TrustHostKey
     ```
 
 3. Повторите шаги 1 и 2 для каждого компьютера HGS в кластере. Сертификаты TLS не реплицируются автоматически между узлами HGS. Кроме того, каждый компьютер HGS может иметь собственный уникальный сертификат TLS, если имя субъекта совпадает с именем службы HGS.
+
+## <a name="step-6-determine-and-share-the-hgs-attestation-url"></a>Шаг 6. Определение и предоставление URL-адреса аттестации HGS
+
+Администратору HGS необходимо передать URL-адрес аттестации HGS администраторам компьютеров с SQL Server и администраторам приложений в вашей организации. Администраторам компьютеров с SQL Server потребуется URL-адрес аттестации для проверки того, что компьютеры с SQL Server могут выполнять аттестацию с помощью HGS. Администраторам приложений URL-адрес аттестации потребуется для настройки подключения приложений к SQL Server.
+
+Чтобы определить URL-адрес аттестации, выполните следующий командлет.
+
+```powershell
+Get-HGSServer
+```
+Выходные данные команды будут выглядеть следующим образом:
+
+```
+Name                           Value                                                                         
+----                           -----                                                                         
+AttestationOperationMode       HostKey                                                                       
+AttestationUrl                 {http://hgs.bastion.local/Attestation}                                        
+KeyProtectionUrl               {}         
+```
+
+URL-адрес аттестации для HGS является значением свойства AttestationUrl.
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

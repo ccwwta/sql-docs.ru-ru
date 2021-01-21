@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e8e1fd0c8e43000573d030a80ce52145bd0c8669
-ms.sourcegitcommit: 49ee3d388ddb52ed9cf78d42cff7797ad6d668f2
+ms.openlocfilehash: ac65acde470d75c616e77d21f6e62ab8d1f5e4e4
+ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "94384883"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "98241862"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>Общие сведения о консоли конструктора CDC
 
@@ -43,9 +43,11 @@ ms.locfileid: "94384883"
   
 ### <a name="source-oracle-database"></a>Исходная база данных Oracle
   
--   База данных Oracle 10g, выпуск 2
--   База данных Oracle 11g, выпуск 1 и 2
--   База данных Oracle 12c в классической установке. (Многоклиентская установка не поддерживается.)  
+- База данных Oracle 10g, выпуск 2
+- База данных Oracle 11g, выпуск 1 и 2
+- Oracle Database 12c, классическая установка (многоклиентская установка не поддерживается).  
+- Oracle Database 18c, классическая установка (многоклиентская установка не поддерживается).
+- Oracle Database 19c, классическая установка (многоклиентская установка не поддерживается).
 
 ### <a name="target-sql-server-database"></a>Целевая база данных SQL Server
   
