@@ -37,7 +37,7 @@ ms.locfileid: "98534853"
 В оставшейся части этой статьи описывается запуск шифрования на месте с помощью инструкции `ALTER TABLE`/`ALTER COLUMN` из SQL Server Management Studio. Кроме того, можно выполнить `ALTER TABLE`/`ALTER COLUMN` из Azure Data Studio или из приложения. 
 
 > [!NOTE]
-> В настоящее время командлет [Invoke-Sqlcmd](/powershell/module/sqlserver/invoke-sqlcmd) в модуле SqlServer PowerShell и [sqlcmd](../../../tools/sqlcmd-utility.md), не поддерживают использование `ALTER TABLE`/`ALTER COLUMN` для криптографических операций на месте.
+> В настоящее время командлет [Invoke-Sqlcmd](/powershell/module/sqlserver/invoke-sqlcmd) в модуле SqlServer PowerShell и [sqlcmd](../../../tools/sqlcmd-utility.md) не поддерживают использование `ALTER TABLE`/`ALTER COLUMN` для криптографических операций на месте.
 
 ## <a name="perform-in-place-encryption-with-transact-sql-in-ssms"></a>Выполнение шифрования на месте с помощью Transact-SQL в среде SSMS
 ### <a name="pre-requisites"></a>Предварительные требования
@@ -147,5 +147,5 @@ GO
 - [Устранение распространенных неполадок Always Encrypted с безопасными анклавами](always-encrypted-enclaves-troubleshooting.md)
 - [Настройка шифрования столбцов на месте с помощью Always Encrypted с безопасными анклавами](always-encrypted-enclaves-configure-encryption.md)
 - [Включение Always Encrypted с безопасными анклавами для существующих зашифрованных столбцов](always-encrypted-enclaves-enable-for-encrypted-columns.md)
-- [Учебник. Начало работы с Always Encrypted и безопасными анклавами в SQL Server](../tutorial-getting-started-with-always-encrypted-enclaves.md)
-- [Учебник. Начало работы с Always Encrypted и безопасными анклавами в Базе данных SQL Azure](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
+- [Учебник. Начало работы с Always Encrypted и безопасными анклавами в SQL Server](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [Учебник. Начало работы с Always Encrypted и безопасными анклавами в Базе данных SQL Azure](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)

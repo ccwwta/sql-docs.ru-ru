@@ -58,7 +58,7 @@ ms.locfileid: "98534763"
 ![Разрешение вычислений анклава](./media/always-encrypted-enclaves/allow-enclave-computations.png)
 
 > [!NOTE]
-> Флажок **Разрешение вычислений анклава** отображается только если для базы данных настроен безопасный анклав. При использовании [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] см. статью [Настройка безопасного анклава в SQL Server](always-encrypted-enclaves-configure-enclave-type.md). При использовании [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] см. статью [Включение Intel SGX для базы данных SQL Azure](/azure/azure-sql/database/always-encrypted-enclaves-enable-sgx).
+> Флажок **Разрешение вычислений анклава** отображается только если для базы данных настроен безопасный анклав. При использовании [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] см. статью [Настройка безопасного анклава в SQL Server](always-encrypted-enclaves-configure-enclave-type.md). При использовании [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] см. статью [Включение Intel SGX для базы данных SQL Azure](/azure/azure-sql/database/always-encrypted-enclaves-enable-sgx).
 
 > [!TIP]
 > Чтобы проверить, поддерживает ли главный ключ столбца анклав, щелкните его правой кнопкой мыши в обозревателе объектов и выберите пункт **Свойства**. Если ключ поддерживает анклав, в окне свойств ключа отображается **Вычисления анклава: разрешены**. Или можно использовать представление [sys.column_master_keys (Transact-SQL)](../../system-catalog-views/sys-column-master-keys-transact-sql.md).
@@ -160,7 +160,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 - [Разработка приложений с помощью Always Encrypted с безопасными анклавами](always-encrypted-enclaves-client-development.md) 
 
 ## <a name="see-also"></a>См. также:  
-- [Учебник. Начало работы с Always Encrypted и безопасными анклавами в SQL Server](../tutorial-getting-started-with-always-encrypted-enclaves.md)
-- [Учебник. Начало работы с Always Encrypted и безопасными анклавами в Базе данных SQL Azure](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
+- [Учебник. Начало работы с Always Encrypted и безопасными анклавами в SQL Server](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [Учебник. Начало работы с Always Encrypted и безопасными анклавами в Базе данных SQL Azure](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
 - [Управление ключами для Always Encrypted с безопасными анклавами](always-encrypted-enclaves-manage-keys.md)
 - [CREATE COLUMN MASTER KEY (Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md)

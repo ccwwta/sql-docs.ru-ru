@@ -2,7 +2,7 @@
 title: Always Encrypted с поставщиком данных .NET Framework
 description: Узнайте, как разрабатывать приложения .NET с помощью функции Always Encrypted для SQL Server.
 ms.custom: seo-lt-2019
-ms.date: 10/31/2019
+ms.date: 01/15/2021
 ms.prod: sql
 ms.prod_service: security, sql-database
 ms.reviewer: vanto
@@ -12,23 +12,24 @@ ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4e3bd7a6481f677de9355a892eb78b3b5aeaaa15
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 02c99d9cee2eb257c0254c15bd92a0e2812ccc54
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477585"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534773"
 ---
 # <a name="using-always-encrypted-with-the-net-framework-data-provider-for-sql-server"></a>Using Always Encrypted with the .NET Framework Data Provider for SQL Server (Использование Always Encrypted с поставщиком данных .NET Framework для SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 В этой статье содержатся сведения о разработке приложений .NET с помощью [Always Encrypted](always-encrypted-database-engine.md) или [Always Encrypted с безопасными анклавами](always-encrypted-enclaves.md) и [Поставщика данных .NET Framework для SQL Server](/dotnet/framework/data/adonet/sql/).
 
-Функция Always Encrypted позволяет шифровать конфиденциальные данные в клиентских приложениях, не раскрывая данные или ключи шифрования для SQL Server или Базы данных SQL Azure. Драйвер с поддержкой постоянного шифрования, такой как поставщик данных .NET Framework для SQL Server, реализует это за счет прозрачного шифрования и расшифровки конфиденциальных данных в клиентском приложении SQL Server. Драйвер автоматически определяет, какие параметры запроса соответствуют важным столбцам базы данных (защищенным с помощью Always Encrypted), и шифрует значения этих параметров перед передачей данных в SQL Server или Базу данных SQL Azure. Аналогичным образом драйвер прозрачно расшифровывает данные, полученные из зашифрованных столбцов базы в результатах запроса. Дополнительные сведения см. в разделе [Разработка приложений с помощью Always Encrypted](always-encrypted-client-development.md) и [Разработка приложений с помощью Always Encrypted с безопасными анклавами](always-encrypted-enclaves-client-development.md).
+Функция Always Encrypted позволяет шифровать конфиденциальные данные в клиентских приложениях, не раскрывая данные или ключи шифрования для SQL Server или Базы данных SQL Azure. Драйвер с поддержкой постоянного шифрования, такой как поставщик данных .NET Framework для SQL Server, реализует это за счет прозрачного шифрования и расшифровки конфиденциальных данных в клиентском приложении SQL Server. Драйвер автоматически определяет, какие параметры запроса соответствуют важным столбцам базы данных (защищенным с помощью Always Encrypted), и шифрует значения этих параметров перед передачей данных в SQL Server или Базу данных SQL Azure. Аналогичным образом драйвер прозрачно расшифровывает данные, полученные из зашифрованных столбцов базы в результатах запроса. Дополнительные сведения см. в статье [Разработка приложений с помощью Always Encrypted с безопасными анклавами](always-encrypted-enclaves-client-development.md).
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-- Настройте функцию постоянного шифрования в базе данных. В процесс настройки входят действия по подготовке ключей постоянного шифрования и настройке шифрования для выбранных столбцов базы данных. Если в базе данных Always Encrypted еще не настроен, следуйте инструкциям в разделе [Начало работы с Always Encrypted](always-encrypted-database-engine.md#getting-started-with-always-encrypted).
+- Настройте функцию постоянного шифрования в базе данных. В процесс настройки входят действия по подготовке ключей постоянного шифрования и настройке шифрования для выбранных столбцов базы данных. Если в базе данных Always Encrypted еще не настроен, следуйте инструкциям в разделе [Начало работы с Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted).
+- Если вы используете Always Encrypted с безопасными анклавами, см. статью [Разработка приложений с помощью Always Encrypted с безопасными анклавами](always-encrypted-enclaves-client-development.md) для получения дополнительных предварительных требований.
 - Убедитесь, что на компьютере, предназначенном для разработки, установлена платформа .NET Framework 4.6.1 или более поздней версии. Дополнительные сведения см. в разделе [.NET Framework 4.6](/dotnet/framework/). Также необходимо убедиться, что в среде разработки в качестве целевой версии платформы установлена платформа .NET Framework 4.6 или более поздней версии. Если вы используете Visual Studio, обратитесь к разделу [Руководство. Определение целевой версии платформы .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework). 
 
 > [!NOTE]
@@ -64,15 +65,21 @@ SqlConnection connection = new SqlConnection(strbldr.ConnectionString);
 
 Начиная с версии .NET Framework 4.7.2 драйвер поддерживает [Always Encrypted с безопасными анклавами](always-encrypted-enclaves.md). 
 
-Чтобы включить использование анклава при подключении к [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] или более поздней версии, необходимо настроить приложение и поставщик данных .NET Framework для SQL Server, чтобы включить вычисления анклава и аттестацию анклава. 
-
 Общие сведения о роли клиентского драйвера в вычислениях анклава и аттестации анклава см. в статье [Разработка приложений с помощью Always Encrypted с безопасными анклавами](always-encrypted-enclaves-client-development.md). 
 
 Настройка приложения:
 
-1. Интегрируйте пакет NuGet [Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders) в приложение. NuGet — это библиотека поставщиков анклавов, которая реализует логику на стороне клиента для протокола аттестации, а также для установки безопасного канала с безопасным анклавом внутри SQL Server.  
-2. Обновите конфигурацию приложения (например, в файле web.config или app.config), чтобы определить сопоставление для типа анклава, с которым был настроен ваш экземпляр [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] (см. раздел [Настройка типа анклава для параметра конфигурации сервера Always Encrypted](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)). [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] поддерживает анклавы VBS и службу защитника узлов для аттестации. Поэтому необходимо соотнести тип анклава VBS с классом Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.HostGuardianServiceEnclaveProvider из пакета NuGet. 
-3. Включите вычисления анклава для подключения из приложения к базе данных, задав ключевое слово URL-адреса аттестации анклава в строке подключения к конечной точке аттестации. В качестве значения ключевого слова следует задать конечную точку аттестации сервера HGS, настроенную в вашей среде. 
+1. Включите Always Encrypted для запросов приложения, как описано в предыдущем разделе.
+2. Интегрируйте пакет NuGet [Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders) в приложение. NuGet — это библиотека поставщиков анклавов, которая реализует логику на стороне клиента для протокола аттестации, а также для установки безопасного канала с безопасным анклавом.  
+3. Измените конфигурацию приложения (например, в файле web.config или app.config), чтобы определить сопоставление типа анклава, настроенного для базы данных, и поставщика анклава. 
+    1. При использовании [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] и службы защиты узла (HGS) необходимо соотнести тип анклава VBS с классом Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.HostGuardianServiceEnclaveProvider из пакета NuGet.
+    2. При использовании [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] и службы "Аттестация Microsoft Azure" необходимо соотнести тип анклава SGX с классом Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.AzureAttestationEnclaveProvider из пакета NuGet.
+
+    Подробные инструкции по изменению конфигурации приложения см. в разделе [Учебник. Разработка приложения .NET Framework с помощью Always Encrypted с безопасными анклавами](../tutorial-always-encrypted-enclaves-develop-net-framework-apps.md).
+
+4. В строке подключения к базе данных задайте для ключевого слова `Enclave Attestation URL` URL-адрес аттестации (конечная точка службы аттестации). Необходимо получить URL-адрес аттестации для имеющейся среды у администратора службы аттестации.
+   1. Если вы используете [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] и службу защитника узлов (HGS), см. сведения в разделе об [определении и совместном использовании URL-адреса аттестации HGS](always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
+   2. Если вы используете [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] и Аттестацию Microsoft Azure, см. сведения об [определении URL-адреса аттестации для политики аттестации](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy).
 
 Пошаговое руководство см. в статье [Учебник. Разработка приложения .NET Framework с помощью Always Encrypted с безопасными анклавами](../tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 
@@ -295,7 +302,7 @@ cmd.ExecuteNonQuery();
 В состав поставщика данных .NET Framework для SQL Server входят следующие встроенные поставщики хранилища главных ключей столбцов, которые предварительно зарегистрированы с конкретными именами поставщиков (используемыми для поиска поставщика).
 
 
-| Class | Описание | Имя поставщика |
+| Класс | Описание | Имя поставщика |
 |:---|:---|:---|
 |Класс SqlColumnEncryptionCertificateStoreProvider| Поставщик для хранилища сертификатов Windows. | MSSQL_CERTIFICATE_STORE |
 |[Класс SqlColumnEncryptionCngProvider](/dotnet/api/system.data.sqlclient.sqlcolumnencryptioncngprovider) <br><br>**Примечание.** Этот поставщик доступен в .NET Framework 4.6.1 или более поздней версии. |Поставщик хранилища ключей, поддерживающий [Microsoft Cryptography API: Next Generation (CNG) API](/windows/win32/seccng/cng-portal). Как правило, такое хранилище представляет собой аппаратный модуль безопасности — физическое устройство, которое защищает цифровые ключи и управляет ими, а также обеспечивает обработку шифрования.  | MSSQL_CNG_STORE|
@@ -308,7 +315,7 @@ cmd.ExecuteNonQuery();
 
 ### <a name="using-azure-key-vault-provider"></a>Использование поставщика хранилища ключей Azure
 
-Хранилище ключей Azure удобно для хранения главных ключей столбцов для постоянного шифрования, особенно в том случае, если приложения размещены в Azure. Поставщик данных .NET Framework для SQL Server не содержит встроенный поставщик хранилища главных ключей столбцов для хранилища ключей Azure, но он доступен как пакет Nuget, который можно легко интегрировать в приложение. Дополнительные сведения см. в статье [Постоянное шифрование: защита конфиденциальных данных в базе данных SQL с помощью шифрования базы данных и хранение ключей шифрования в хранилище ключей Azure](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure).
+Хранилище ключей Azure удобно для хранения главных ключей столбцов для постоянного шифрования, особенно в том случае, если приложения размещены в Azure. Поставщик данных .NET Framework для SQL Server не содержит встроенный поставщик хранилища главных ключей столбцов для хранилища Azure Key Vault, но он доступен как пакет NuGet, который можно легко интегрировать в приложение. Дополнительные сведения см. в статье [Постоянное шифрование: защита конфиденциальных данных в базе данных SQL с помощью шифрования базы данных и хранение ключей шифрования в хранилище ключей Azure](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure).
 
 ### <a name="implementing-a-custom-column-master-key-store-provider"></a>Реализация настраиваемого поставщика хранилища главных ключей столбцов
 
@@ -527,7 +534,7 @@ SqlConnection.ColumnEncryptionTrustedMasterKeyPaths.Add(serverName, trustedKeyPa
 
 - Убедитесь, что конфигурация шифрования целевой таблицы идентична конфигурации исходной таблицы. В частности, обе таблицы должны иметь одинаковые зашифрованные столбцы, которые должны быть зашифрованы с помощью одних и тех же типов шифрования и ключей шифрования. Примечание. Если способ шифрования какого-либо целевого столбца отличается от способа шифрования соответствующего исходного столбца, вы не сможете расшифровать данные в целевой таблице после операции копирования. Данные будут повреждены.
 - Настройте подключения базы данных к исходной и целевой таблицам без включения постоянного шифрования. 
-- Задайте параметр AllowEncryptedValueModifications (см. раздел [SqlBulkCopyOptions](/dotnet/api/system.data.sqlclient.sqlbulkcopyoptions)). Примечание. Будьте внимательны при указании параметра AllowEncryptedValueModifications, так как это может привести к повреждению базы данных, поскольку поставщик данных .NET Framework для SQL Server не проверяет необходимость шифрования данных или правильность их шифрования с помощью того же типа шифрования, алгоритма и ключа, как для целевого столбца.
+- Задайте параметр AllowEncryptedValueModifications (см. раздел [SqlBulkCopyOptions](/dotnet/api/system.data.sqlclient.sqlbulkcopyoptions)). Примечание. Будьте внимательны при указании параметра AllowEncryptedValueModifications, так как это может привести к повреждению базы данных, поскольку поставщик данных .NET Framework для SQL Server не проверяет необходимость шифрования данных или правильность их шифрования с помощью того же типа шифрования, алгоритма и ключа, как для целевого столбца.
 
 Параметр AllowEncryptedValueModifications доступен в .NET Framework 4.6.1 и более поздних версиях.
 
@@ -560,7 +567,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 **Пространство имен:** [System.Data.SqlClient](/dotnet/api/system.data.sqlclient)
 
-**Сборка**: System.Data (в System.Data.dll)
+**Сборка:** System.Data (в System.Data.dll)
 
 
 
@@ -576,7 +583,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 | [Свойство SqlConnectionStringBuilder.ColumnEncryptionSetting](/dotnet/api/system.data.sqlclient.sqlconnectionstringbuilder.columnencryptionsetting)|Возвращает и задает постоянное шифрование в строке подключения.|4.6|
 | [SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled свойство](/dotnet/api/system.data.sqlclient.sqlconnection.columnencryptionquerymetadatacacheenabled) | Включает и отключает кэширование метаданных для запроса шифрования. | 4.6.2
 | [свойства SqlConnection.ColumnEncryptionKeyCacheTtl](/dotnet/api/system.data.sqlclient.sqlconnection.columnencryptionkeycachettl) | Возвращает и задает срок жизни для записей в кэше ключа шифрования столбца. | 4.6.2
-|[свойства SqlConnection.ColumnEncryptionTrustedMasterKeyPaths](/dotnet/api/system.data.sqlclient.sqlconnection.columnencryptiontrustedmasterkeypaths)|Позволяет задать список доверенных путей ключа для сервера базы данных. Если при обработке запроса приложения драйвер получает путь ключа, которого нет в списке, запрос завершается с ошибкой. Это свойство обеспечивает дополнительную защиту от атак на систему безопасности, включающих предоставление скомпрометированным SQL Server фиктивных путей ключа, что может привести к утечке учетных данных хранилища ключей.|  4.6
+|[свойства SqlConnection.ColumnEncryptionTrustedMasterKeyPaths](/dotnet/api/system.data.sqlclient.sqlconnection.columnencryptiontrustedmasterkeypaths)|Позволяет задать список доверенных путей ключа для сервера базы данных. Если при обработке запроса приложения драйвер получает путь к разделу, которого нет в списке, запрос завершится ошибкой. Это свойство обеспечивает дополнительную защиту от атак на систему безопасности, включающих предоставление скомпрометированным SQL Server фиктивных путей ключа, что может привести к утечке учетных данных хранилища ключей.|  4.6
 |[Метод SqlConnection.RegisterColumnEncryptionKeyStoreProviders](/dotnet/api/system.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreproviders)|Позволяет регистрировать пользовательские поставщики хранилища ключей. Это словарь, сопоставляющий имена поставщиков хранилища ключей с реализациями поставщиков хранилища ключей.|  4.6
 |[Конструктор SqlCommand (String, SqlConnection, SqlTransaction, SqlCommandColumnEncryptionSetting)](https://msdn.microsoft.com/library/dn956511\(v=vs.110\).aspx)|Позволяет управлять поведением постоянного шифрования для отдельных запросов.|  4.6
 |[свойству SqlParameter.ForceColumnEncryption](/dotnet/api/system.data.sqlclient.sqlparameter.forcecolumnencryption)|Принудительно шифрует параметр. Если SQL Server сообщает драйверу, что параметр не должен быть зашифрован, запрос, использующий параметр, завершится ошибкой. Это свойство обеспечивает дополнительную защиту от атак на систему безопасности, включающих предоставление клиенту скомпрометированным SQL Server неверных метаданных шифрования, что может привести к раскрытию данных.|4.6  

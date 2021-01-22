@@ -66,8 +66,8 @@ ms.locfileid: "98534693"
 - Экземпляр [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] или база данных и сервер в [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] должны быть правильно настроены для поддержки анклавов и аттестации. Дополнительные сведения см. в статье [Настройка безопасного анклава и аттестации](configure-always-encrypted-enclaves.md#set-up-the-secure-enclave-and-attestation).
 - Необходимо получить URL-адрес аттестации для имеющейся среды у администратора службы аттестации.
 
-  - Если вы используете [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] и службу защиты узла (HGS), см. сведения в разделе об [определении и совместном использовании URL-адреса аттестации HGS](always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
-  - Если вы используете [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] и Аттестацию Microsoft Azure, см. сведения об [определении URL-адреса аттестации для политики аттестации](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy).
+  - Если вы используете [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] и службу защитника узлов (HGS), см. сведения в разделе об [определении и совместном использовании URL-адреса аттестации HGS](always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
+  - Если вы используете [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] и Аттестацию Microsoft Azure, см. сведения об [определении URL-адреса аттестации для политики аттестации](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy).
 
 - Если подключение к базе данных осуществляется с помощью приложения, необходимо использовать драйвер клиента, который поддерживает Always Encrypted с безопасными анклавами. Приложение должно подключаться к базе данных с включенной функцией Always Encrypted для подключения к базе данных и использовать правильно настроенные протокол аттестации и URL-адрес аттестации. Подробные сведения см. в статье [Разработка приложений с помощью Always Encrypted с безопасными анклавами](always-encrypted-enclaves-client-development.md).
 - Если вы используете SQL Server Management Studio (SSMS) или Azure SQL Data Studio, при подключении к базе данных необходимо включить Always Encrypted и настроить протокол аттестации и URL-адрес аттестации. Дополнительные сведения см. в следующих разделах.
@@ -82,7 +82,7 @@ ms.locfileid: "98534693"
 - SSMS 18.3 при использовании [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 - SSMS 18.8 при использовании [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
 
-Выполнять инструкции необходимо в окне запросов, использующем подключение с Always Encrypted и правильно настроенный URL-адрес аттестации.
+Выполнять инструкции необходимо в окне запросов, использующем подключение с Always Encrypted и правильно настроенный URL-адрес аттестации.
 
 1. В диалоговом окне **Соединение с сервером** укажите имя сервера, выберите метод аутентификации и введите учетные данные.
 2. Нажмите кнопку **Параметры >>** и выберите вкладку **Always Encrypted**.
@@ -206,7 +206,7 @@ GO
 ## <a name="see-also"></a>См. также раздел
 
 - [Устранение распространенных неполадок Always Encrypted с безопасными анклавами](always-encrypted-enclaves-troubleshooting.md)
-- [Учебник. Начало работы с Always Encrypted и безопасными анклавами в SQL Server](../tutorial-getting-started-with-always-encrypted-enclaves.md)
-- [Учебник. Начало работы с Always Encrypted и безопасными анклавами в Базе данных SQL Azure](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
+- [Учебник. Начало работы с Always Encrypted и безопасными анклавами в SQL Server](../tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [Учебник. Начало работы с Always Encrypted и безопасными анклавами в Базе данных SQL Azure](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
 - [Настройка шифрования столбцов на месте с помощью Always Encrypted с безопасными анклавами](always-encrypted-enclaves-configure-encryption.md)
 - [Создание и использование индексов в столбцах с помощью Always Encrypted с безопасными анклавами](always-encrypted-enclaves-create-use-indexes.md)

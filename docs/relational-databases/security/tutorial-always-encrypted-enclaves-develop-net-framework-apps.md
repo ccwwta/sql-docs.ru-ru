@@ -29,8 +29,8 @@ ms.locfileid: "98534743"
 ## <a name="prerequisites"></a>Предварительные требования
 Перед выполнением действий, описанных в этом руководстве, убедитесь, что вы изучили одно из следующих руководств.
 
-- [Учебник. Начало работы с Always Encrypted и безопасными анклавами в SQL Server](tutorial-getting-started-with-always-encrypted-enclaves.md)
-- [Учебник. Начало работы с Always Encrypted и безопасными анклавами в Базе данных SQL Azure](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
+- [Учебник. Начало работы с Always Encrypted и безопасными анклавами в SQL Server](tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [Учебник. Начало работы с Always Encrypted и безопасными анклавами в Базе данных SQL Azure](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
 
 Кроме того, вам потребуется среда Visual Studio (рекомендуется версия 2019), которую можно скачать на странице [https://visualstudio.microsoft.com/](https://visualstudio.microsoft.com). На компьютере для разработки приложений должна быть установлена платформа .NET Framework 4.7.2 или более поздней версии.
 
@@ -77,7 +77,7 @@ ms.locfileid: "98534743"
 
 8. В разделе `<configuration>` ниже `</configSections>` добавьте новый раздел, в котором указан поставщик анклава, который будет использоваться для подтверждения анклавов на стороне сервера и взаимодействия с ними.
 
-   1. Если вы используете [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] и службу защиты узлов (HGS) (используете базу данных из раздела [Учебник. Начало работы с Always Encrypted и безопасными анклавами в SQL Server](tutorial-getting-started-with-always-encrypted-enclaves.md)), добавьте следующий раздел.
+   1. Если вы используете [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] и службу защиты узлов (HGS) (используете базу данных из раздела [Учебник. Начало работы с Always Encrypted и безопасными анклавами в SQL Server](tutorial-getting-started-with-always-encrypted-enclaves.md)), добавьте следующий раздел.
 
       ```xml
       <SqlColumnEncryptionEnclaveProviders>
@@ -106,7 +106,7 @@ ms.locfileid: "98534743"
       </configuration>
       ```
 
-   1. Если вы используете [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и Аттестацию Microsoft Azure (используете базу данных из раздела [Учебник. Начало работы с Always Encrypted и безопасными анклавами в Базе данных SQL Azure](/azure/azure-sql/database/always-encrypted-enclaves-getting-started), добавьте следующий раздел.
+   1. Если вы используете [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и Аттестацию Microsoft Azure (используете базу данных из раздела [Учебник. Начало работы с Always Encrypted и безопасными анклавами в Базе данных SQL Azure](/azure/azure-sql/database/always-encrypted-enclaves-getting-started), добавьте следующий раздел.
 
       ```xml
       <SqlColumnEncryptionEnclaveProviders>
@@ -137,7 +137,7 @@ ms.locfileid: "98534743"
 
 ## <a name="step-2-implement-your-application-logic"></a>Шаг 2. Реализация логики приложения
 
-Приложение подключится к базе данных **ContosoHR** из статьи [Руководство. Начало работы с Always Encrypted и безопасными анклавами в SQL Server](tutorial-getting-started-with-always-encrypted-enclaves.md) или [Учебник. Начало работы с Always Encrypted с безопасными анклавами в Базе данных SQL Azure](/azure/azure-sql/database/always-encrypted-enclaves-getting-started) и выполнит запрос, содержащий предикат `LIKE` в столбце **SSN**, а также проведет сравнение диапазонов в столбце **Salary**.
+Приложение подключится к базе данных **ContosoHR** из статьи [Руководство. Начало работы с Always Encrypted и безопасными анклавами в SQL Server](tutorial-getting-started-with-always-encrypted-enclaves.md) или [Учебник. Начало работы с Always Encrypted с безопасными анклавами в Базе данных SQL Azure](/azure/azure-sql/database/always-encrypted-enclaves-getting-started) и выполнит запрос, содержащий предикат `LIKE` в столбце **SSN**, а также проведет сравнение диапазонов в столбце **Salary**.
 
 1. Замените содержимое файла Program.cs (созданного в Visual Studio) на приведенный ниже код. Обновите строку подключения к базе данных, указав имя сервера, параметры проверки подлинности и URL-адрес аттестации анклава для своей среды.
 

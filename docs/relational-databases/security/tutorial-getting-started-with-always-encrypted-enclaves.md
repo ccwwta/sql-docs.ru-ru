@@ -1,8 +1,8 @@
 ---
-title: Руководство по Always Encrypted с безопасными анклавами в SSMS
-description: В этом руководстве вы узнаете, как создать базовую среду Always Encrypted с безопасными анклавами, шифровать данные на месте и выдавать полнофункциональные запросы к зашифрованным столбцам с помощью SQL Server Management Studio (SSMS).
+title: Руководство по Начало работы с Always Encrypted и безопасными анклавами в SQL Server
+description: В этом учебнике описано, как создать базовую среду для Always Encrypted с безопасными анклавами в SQL Server, используя анклавы с безопасностью на основе виртуализации (VBS) и службу защиты узлов (HGS) для аттестации. Вы также узнаете, как шифровать данные на месте и выдавать полнофункциональные конфиденциальные запросы к зашифрованным столбцам с помощью SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
-ms.date: 04/10/2020
+ms.date: 01/15/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -13,25 +13,27 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: 99b04548244da3bda45346e7aa4a7c4d72481789
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 08e7674819e4dc52a8613e39d1f8ec82a42abc05
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97463095"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534723"
 ---
-# <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>Руководство по Always Encrypted с безопасными анклавами в SSMS
+# <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-in-sql-server"></a>Руководство по Начало работы с Always Encrypted и безопасными анклавами в SQL Server
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
-В этом руководстве показывается, как приступить к работе с [Always Encrypted с безопасными анклавами](encryption/always-encrypted-enclaves.md). Буду рассмотрены следующие темы.
-- Создание простой среды для тестирования и оценки Always Encrypted с безопасными анклавами.
-- Шифрование данных на месте и выдача полнофункциональных запросов к зашифрованным столбцам с помощью SQL Server Management Studio (SSMS).
+В этом руководстве показывается, как приступить к работе с [Always Encrypted с безопасными анклавами](encryption/always-encrypted-enclaves.md) в [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]. Буду рассмотрены следующие темы.
+
+> [!div class="checklist"]
+> - Создание простой среды для тестирования и оценки Always Encrypted с безопасными анклавами.
+> - Шифрование данных на месте и выдача полнофункциональных конфиденциальных запросов к зашифрованным столбцам с помощью SQL Server Management Studio (SSMS).
 
 ## <a name="prerequisites"></a>Предварительные требования
 
 Чтобы начать работу с Always Encrypted с безопасными анклавами, потребуется по крайней мере два компьютера (это могут быть виртуальные машины):
 
-- компьютер SQL Server для размещения SQL Server и SSMS;
+- Компьютер с [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] для размещения [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] и SSMS.
 - компьютер HGS для запуска службы защиты узла, необходимой для аттестации анклава.
 
 ### <a name="sql-server-computer-requirements"></a>Требования к компьютеру с SQL Server
@@ -44,7 +46,7 @@ ms.locfileid: "97463095"
   - Если [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] работает на виртуальной машине, низкоуровневая оболочка и физический ЦП должны предоставлять возможности вложенной виртуализации. 
     - В Hyper-V 2016 или более поздней версии [включите расширения вложенной виртуализации на процессоре виртуальной машины](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
     - В Azure выберите размер виртуальной машины, поддерживающий вложенную виртуализацию. Это все виртуальные машины серии v3, например Dv3 и Ev3. См. раздел [Create a nesting capable Azure VM](/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm) (Создание виртуальной машины Azure с поддержкой вложения).
-    - В VMWare vSphere 6.7 или более поздней версии включите для виртуальной машины поддержку технологии Virtualization Based Security (VBS), как описано в [документации VMware](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
+    - В VMware vSphere 6.7 или более поздней версии включите для виртуальной машины поддержку безопасности на основе виртуализации, как описано в [документации VMware](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
     - Другие низкоуровневые оболочки и общедоступные облака могут поддерживать возможности вложенной виртуализации, позволяющие использовать Always Encrypted с анклавами VBS. Просмотрите сведения о совместимости и инструкции по настройке в документации по своему решению для виртуализации.
 - [SQL Server Management Studio (SSMS) версии не ниже 18.3](../../ssms/download-sql-server-management-studio-ssms.md).
 
@@ -167,6 +169,9 @@ ms.locfileid: "97463095"
     1. В диалоговом окне **Соединение с сервером** укажите имя сервера, выберите метод аутентификации и введите учетные данные.
     1. Нажмите кнопку **Параметры >>** и выберите вкладку **Always Encrypted**.
     1. Убедитесь, что флажок **Включить Always Encrypted (шифрование столбцов)** **не** установлен.
+
+          ![Подключение к серверу без Always Encrypted](./encryption/media/always-encrypted-enclaves/connect-without-always-encrypted-ssms.png)
+
     1. Выберите **Подключиться**.
 
 2. Откройте новое окно запроса и выполните инструкции ниже, чтобы задать для типа безопасного анклава значение "Безопасность на базе виртуализации (VBS)".
@@ -191,15 +196,6 @@ ms.locfileid: "97463095"
     | ------------------------------ | ----- | -------------- |
     | column encryption enclave type (тип анклава для шифрования столбцов) | 1     | 1              |
 
-5. Чтобы активировать полнофункциональные вычисления в зашифрованных столбцах, выполните следующий запрос:
-
-   ```sql
-   DBCC traceon(127,-1);
-   ```
-
-    > [!NOTE]
-    > Полнофункциональные вычисления в [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] по умолчанию отключены. Их необходимо включить с помощью вышеуказанной инструкции после каждой перезагрузки экземпляра SQL Server.
-
 ## <a name="step-4-create-a-sample-database"></a>Шаг 4. Создание образца базы данных
 На этом шаге создается база данных с демонстрационными данными, которые далее будут шифроваться.
 
@@ -215,7 +211,10 @@ ms.locfileid: "97463095"
     USE [ContosoHR];
     GO
 
-    CREATE TABLE [dbo].[Employees]
+    CREATE SCHEMA [HR];
+    GO
+    
+    CREATE TABLE [HR].[Employees]
     (
         [EmployeeID] [int] IDENTITY(1,1) NOT NULL,
         [SSN] [char](11) NOT NULL,
@@ -231,7 +230,7 @@ ms.locfileid: "97463095"
     USE [ContosoHR];
     GO
 
-    INSERT INTO [dbo].[Employees]
+    INSERT INTO [HR].[Employees]
             ([SSN]
             ,[FirstName]
             ,[LastName]
@@ -242,7 +241,7 @@ ms.locfileid: "97463095"
             , N'Abel'
             , $31692);
 
-    INSERT INTO [dbo].[Employees]
+    INSERT INTO [HR].[Employees]
             ([SSN]
             ,[FirstName]
             ,[LastName]
@@ -286,6 +285,9 @@ ms.locfileid: "97463095"
     1. В диалоговом окне **Соединение с сервером** укажите имя сервера, выберите метод аутентификации и введите учетные данные.
     1. Нажмите кнопку **Параметры >>** и выберите вкладку **Always Encrypted**.
     1. Установите флажок **Включить Always Encrypted (шифрование столбцов)** и укажите URL-адрес аттестации анклава (например, ht <span>tp://</span>hgs.bastion.local/Attestation).
+
+          ![Подключение к серверу с аттестацией с помощью SSMS](./encryption/media/always-encrypted-enclaves/column-encryption-setting.png)
+
     1. Выберите **Подключиться**.
     1. Если отобразится запрос на включение параметризации для запросов Always Encrypted, нажмите кнопку **Включить**.
 
@@ -295,13 +297,13 @@ ms.locfileid: "97463095"
     USE [ContosoHR];
     GO
 
-    ALTER TABLE [dbo].[Employees]
+    ALTER TABLE [HR].[Employees]
     ALTER COLUMN [SSN] [char] (11) COLLATE Latin1_General_BIN2
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
     (ONLINE = ON);
 
-    ALTER TABLE [dbo].[Employees]
+    ALTER TABLE [HR].[Employees]
     ALTER COLUMN [Salary] [money]
     ENCRYPTED WITH (COLUMN_ENCRYPTION_KEY = [CEK1], ENCRYPTION_TYPE = Randomized, ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL
     WITH
@@ -316,7 +318,7 @@ ms.locfileid: "97463095"
 1. Чтобы убедиться в том, что столбцы **SSN** и **Salary** зашифрованы, откройте новое окно запроса в экземпляре SSMS **без** включенной функции Always Encrypted для подключения к базе данных и выполните приведенную ниже инструкцию. Окно запроса должно возвратить зашифрованные значения столбцов **SSN** и **Salary**. Если вы выполните тот же запрос с помощью экземпляра SSMS с включенной функцией Always Encrypted, данные будут расшифрованы.
 
     ```sql
-    SELECT * FROM [dbo].[Employees];
+    SELECT * FROM [HR].[Employees];
     ```
 
 ## <a name="step-7-run-rich-queries-against-encrypted-columns"></a>Шаг 7. Выполнение полнофункциональных запросов к зашифрованным столбцам
@@ -334,19 +336,21 @@ ms.locfileid: "97463095"
     ```sql
     DECLARE @SSNPattern [char](11) = '%6818';
     DECLARE @MinSalary [money] = $1000;
-    SELECT * FROM [dbo].[Employees]
+    SELECT * FROM [HR].[Employees]
     WHERE SSN LIKE @SSNPattern AND [Salary] >= @MinSalary;
     ```
 
 3. Попробуйте выполнить тот же запрос еще раз в экземпляре SSMS с отключенной функцией Always Encrypted и запишите код возникшей ошибки.
 
 ## <a name="next-steps"></a>Next Steps
+
 После завершения работы с этим учебником вы можете обратиться к одному из следующих учебников:
+
+- [Руководство. Разработка приложения .NET с помощью Always Encrypted с безопасными анклавами](../../connect/ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md)
 - [Руководство. Разработка приложения .NET Framework с помощью Always Encrypted с безопасными анклавами](tutorial-always-encrypted-enclaves-develop-net-framework-apps.md)
 - [Руководство. Создание и использование индексов в столбцах с поддержкой анклава с помощью случайного шифрования](./tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)
 
 ## <a name="see-also"></a>См. также:
-- [Настройка типа анклава для параметра конфигурации сервера Always Encrypted](../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)
-- [Подготовка ключей с поддержкой анклава](encryption/always-encrypted-enclaves-provision-keys.md)
-- [Настройка шифрования столбцов на месте с помощью Transact-SQL](encryption/always-encrypted-enclaves-configure-encryption-tsql.md)
-- [Выполнение запросов к столбцам с помощью Always Encrypted с безопасными анклавами](encryption/always-encrypted-enclaves-query-columns.md)
+
+- [Настройка и использование Always Encrypted с безопасными анклавами](encryption/configure-always-encrypted-enclaves.md)
+- [Учебник. Always Encrypted с безопасными анклавами в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)

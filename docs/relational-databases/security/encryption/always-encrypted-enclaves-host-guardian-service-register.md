@@ -24,7 +24,7 @@ ms.locfileid: "98534783"
 В этой статье описывается, как зарегистрировать компьютеры [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] для прохождения аттестации с помощью службы защиты узла (HGS).
 
 > [!NOTE]
-> Процесс регистрации [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] в HGS требует совместных усилий администратора HGS и администратора компьютера c [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. См. радел о [ролях и обязанностях при настройке аттестации с помощью HGS](always-encrypted-enclaves-host-guardian-service-plan.md#roles-and-responsibilities-when-configuring-attestation-with-hgs).
+> Процесс регистрации [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] в HGS требует совместных усилий администратора HGS и администратора компьютера c [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. См. раздел о [ролях и обязанностях при настройке аттестации с помощью HGS](always-encrypted-enclaves-host-guardian-service-plan.md#roles-and-responsibilities-when-configuring-attestation-with-hgs).
 
 Перед началом работы нужно развернуть по крайней мере один компьютер HGS и настроить службу аттестации HGS.
 Дополнительные сведения см. в статье [Развертывание службы защиты узла для [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]](./always-encrypted-enclaves-host-guardian-service-deploy.md).
