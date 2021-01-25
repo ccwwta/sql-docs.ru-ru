@@ -2,7 +2,7 @@
 description: Руководство по Разработка приложения .NET с помощью Always Encrypted с безопасными анклавами
 title: Руководство по Разработка приложения .NET с помощью Always Encrypted с безопасными анклавами | Документация Майкрософт
 ms.custom: ''
-ms.date: 07/09/2020
+ms.date: 01/15/2021
 ms.reviewer: v-kaywon
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,27 +11,30 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: karinazhou
 ms.author: v-jizho2
-ms.openlocfilehash: 59c377d5055e8eb3858e1005c50d9c4dfb8334ab
-ms.sourcegitcommit: c938c12cf157962a5541347fcfae57588b90d929
+ms.openlocfilehash: 177737bd2927583bdfda1c9b36904faf4ed6023d
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2020
-ms.locfileid: "97771572"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534703"
 ---
 # <a name="tutorial-develop-a-net-application-using-always-encrypted-with-secure-enclaves"></a>Руководство по Разработка приложения .NET с помощью Always Encrypted с безопасными анклавами
 
-[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
+[!INCLUDE [sqlserver2019-windows-only-asdb](../../../includes/applies-to-version/sqlserver2019-windows-only-asdb.md)]
 
 [!INCLUDE [appliesto-netfx-netcore-xxxx-md](../../../includes/appliesto-netfx-netcore-xxxx-md.md)]
 
-В этом руководстве содержатся сведения о разработке простого приложения, которое выполняет запросы к базе данных, использующие безопасный анклав на стороне сервера для [Always Encrypted с защищенными анклавами](../../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+В этом руководстве содержатся сведения о разработке приложения, которое выполняет запросы к базе данных, использующие безопасный анклав на стороне сервера для [Always Encrypted с защищенными анклавами](../../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 > [!NOTE]
 > Always Encrypted с безопасными анклавами поддерживается только в Windows.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-Это руководство представляет собой продолжение статьи [Руководство. Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS](../../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md). Убедитесь, что вы полностью изучили его, прежде чем выполнять действия ниже.
+Перед выполнением действий, описанных в этом руководстве, убедитесь, что вы изучили одно из следующих руководств.
+
+- [Учебник. Начало работы с Always Encrypted и безопасными анклавами в SQL Server](../../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md)
+- [Учебник. Начало работы с Always Encrypted и безопасными анклавами в Базе данных SQL Azure](/azure/azure-sql/database/always-encrypted-enclaves-getting-started)
 
 Кроме того, требуется среда Visual Studio (рекомендуется версия 2019), которую можно скачать на странице [https://visualstudio.microsoft.com/](https://visualstudio.microsoft.com). Среда разработки приложений должна использовать .NET Framework 4.6 или более поздней версии или .NET Core 2.1 или более поздней версии.
 
@@ -45,7 +48,7 @@ ms.locfileid: "97771572"
 
 2. Создайте проект консольного приложения C\# (.NET Framework или Core).
 
-3. Убедитесь, что в проекте настроена по крайней мере платформа .NET Framework 4.6. или .NET Core 2.1. Щелкните правой кнопкой мыши проект в обозревателе решений, выберите "Свойства" и установите целевую платформу.
+3. Убедитесь, что в проекте настроена по крайней мере платформа .NET Framework 4.6. или .NET Core 2.1. Щелкните правой кнопкой мыши проект в Обозревателе решений, выберите **Свойства** и укажите целевую платформу.
 
 4. Установите следующий пакет NuGet. Щелкните **Инструменты** (главное меню) > **Диспетчер пакетов NuGet** > **Консоль диспетчера пакетов**. Выполните следующий код в консоли диспетчера пакетов.
 
@@ -60,17 +63,11 @@ ms.locfileid: "97771572"
    Install-Package Microsoft.IdentityModel.Clients.ActiveDirectory
    ```
 
-6. Укажите `Attestation Protocol` и `Enclave Attestation Url` в строке подключения, которые будут использоваться в приложении для взаимодействия с SQL Server.
-
-  ```cs
-   Attestation Protocol = HGS; Enclave Attestation Url = http://hgs.bastion.local/Attestation; Column Encryption Setting = Enabled
-   ```
-
 ## <a name="step-2-implement-your-application-logic"></a>Шаг 2. Реализация логики приложения
 
-Приложение подключится к базе данных **ContosoHR** из статьи [Руководство. Always Encrypted с безопасными анклавами в SSMS](../../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md) и выполнит запрос, содержащий предикат `LIKE` в столбце **SSN**, а также проведет сравнение диапазонов в столбце **Salary**.
+Приложение подключится к базе данных **ContosoHR** из статьи [Руководство. Начало работы с Always Encrypted с безопасными анклавами с использованием SSMS](../../../relational-databases/security/tutorial-getting-started-with-always-encrypted-enclaves.md) или [Руководство. Начало работы с Always Encrypted с безопасными анклавами в Базе данных SQL Azure](/azure/azure-sql/database/always-encrypted-enclaves-getting-started) и выполнит запрос, содержащий предикат `LIKE` в столбце **SSN**, а также проведет сравнение диапазонов в столбце **Salary**.
 
-1. Замените содержимое файла Program.cs (созданного в Visual Studio) на приведенный ниже код. Обновите строку подключения к базе данных, указав имя сервера и URL-адрес аттестации анклава для своей среды. Можно также изменить параметры проверки подлинности базы данных.
+1. Замените содержимое файла Program.cs (созданного в Visual Studio) на приведенный ниже код. 
 
     ```cs
     using System;
@@ -84,21 +81,25 @@ ms.locfileid: "97771572"
             static void Main(string[] args)
             {
 
+                // Connection string for SQL Server
                 string connectionString = "Data Source = myserver; Initial Catalog = ContosoHR; Column Encryption Setting = Enabled;Attestation Protocol = HGS; Enclave Attestation Url = http://hgs.bastion.local/Attestation; Integrated Security = true";
+
+                // Connection string for Azure SQL Database
+                //string connectionString = "Data Source = myserver.database.windows.net; Initial Catalog = ContosoHR; Column Encryption Setting = Enabled;Attestation Protocol = AAS; Enclave Attestation Url = https://myattestationprovider.uks.attest.azure.net/attest/SgxEnclave; User ID=user; Password=password";
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
 
                     SqlCommand cmd = connection.CreateCommand();
-                    cmd.CommandText = @"SELECT [SSN], [FirstName], [LastName], [Salary] FROM [dbo].[Employees] WHERE [SSN] LIKE @SSNPattern AND [Salary] > @MinSalary;";
+                    cmd.CommandText = @"SELECT [SSN], [FirstName], [LastName], [Salary] FROM [HR].[Employees] WHERE [SSN] LIKE @SSNPattern AND [Salary] > @MinSalary;";
 
                     SqlParameter paramSSNPattern = cmd.CreateParameter();
 
                     paramSSNPattern.ParameterName = @"@SSNPattern";
                     paramSSNPattern.DbType = DbType.AnsiStringFixedLength;
                     paramSSNPattern.Direction = ParameterDirection.Input;
-                    paramSSNPattern.Value = "%1111";
+                    paramSSNPattern.Value = "%9838";
                     paramSSNPattern.Size = 11;
 
                     cmd.Parameters.Add(paramSSNPattern);
@@ -108,7 +109,7 @@ ms.locfileid: "97771572"
                     MinSalary.ParameterName = @"@MinSalary";
                     MinSalary.DbType = DbType.Currency;
                     MinSalary.Direction = ParameterDirection.Input;
-                    MinSalary.Value = 900;
+                    MinSalary.Value = 20000;
 
                     cmd.Parameters.Add(MinSalary);
                     cmd.ExecuteNonQuery();
@@ -117,7 +118,6 @@ ms.locfileid: "97771572"
                     while (reader.Read())
 
                     {
-                        Console.WriteLine(reader);
                         Console.WriteLine(reader[0] + ", " + reader[1] + ", " + reader[2] + ", " + reader[3]);
                     }
                     Console.ReadKey();
@@ -127,7 +127,14 @@ ms.locfileid: "97771572"
     }
     ```
 
-2. Выполните сборку и запустите приложение.
+2. Обновите строку подключения к базе данных.
+    1. Укажите допустимое имя сервера и параметры аутентификации базы данных.
+    2. Задайте для ключевого слова `Attestation Protocol` значение:
+       - `HGS` — если вы используете [!INCLUDE[ssnoversion-md](../../../includes/ssnoversion-md.md)] и службу защиты узла (HGS);
+       - `AAS` — если вы используете [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] и Аттестацию Microsoft Azure.
+    3. Укажите `Enclave Attestation URL` URL-адрес аттестации для своей среды.
+
+3. Выполните сборку и запустите приложение.
 
 ## <a name="see-also"></a>См. также раздел
 

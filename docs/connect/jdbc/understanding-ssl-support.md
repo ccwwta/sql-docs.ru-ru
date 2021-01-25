@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: aa20ac9d4118e5fec4dbaf225d27c9db8257a88f
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 62cf191ec41e71084dbe3ca85230108f9fc712b0
+ms.sourcegitcommit: 0576ce6d7c9c5514306a90e27fa621ef25825186
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393122"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98575716"
 ---
 # <a name="understanding-encryption-support"></a>Основные сведения о поддержке шифрования
 
@@ -79,7 +79,7 @@ ms.locfileid: "86393122"
   
 - Общее имя (CN) в субъекте или DNS-имя в альтернативном имени субъекта (SAN) сертификата точно соответствует значению **serverName**, указанному в строке подключения, или значению свойства **hostNameInCertificate**, если оно задано.  
   
-- DNS-имя может содержать подстановочные знаки. Однако [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] не поддерживает сопоставление с подстановочными знаками. Это значит, что abc.com не будет соответствовать \*.com, но \*.com будет соответствовать \*.com.  
+- DNS-имя может содержать подстановочные знаки. В предыдущей версии 7.2 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] не поддерживает подстановочные знаки. Это значит, что abc.com не будет соответствовать \*.com, но \*.com будет соответствовать \*.com. В версии 7.2 и выше поддерживается сопоставление с подстановочными знаками стандартного сертификата.  
   
 ## <a name="see-also"></a>См. также раздел
 

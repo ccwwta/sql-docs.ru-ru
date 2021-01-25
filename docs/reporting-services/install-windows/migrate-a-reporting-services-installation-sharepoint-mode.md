@@ -9,12 +9,12 @@ ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016
-ms.openlocfilehash: 894dfe8b6b3c4832a687cd10b2ed21644d1f7227
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9281c38d56b85cda96b9a5f9888ff707bc4e139a
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97439349"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596209"
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>Перенос установки служб Reporting Services (режим интеграции с SharePoint)
 
@@ -30,17 +30,17 @@ ms.locfileid: "97439349"
 
 -   [Общие сведения о процессе обновления до SharePoint 2016](https://technet.microsoft.com/library/cc262483\(v=office.16\)).
 
--   [Общие сведения о процессе обновления до SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256688).
+-   [Общие сведения о процессе обновления до SharePoint 2013](/SharePoint/upgrade-and-update/overview-of-the-upgrade-process-from-sharepoint-2010-to-sharepoint-2013).
   
--   [Подготовка с очисткой перед обновлением до SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256689).  
+-   [Подготовка с очисткой перед обновлением до SharePoint 2013](/SharePoint/upgrade-and-update/clean-up-an-environment-before-an-upgrade-to-sharepoint-2013).  
   
 -   [Обновление баз данных с SharePoint 2013 до SharePoint 2016](https://technet.microsoft.com/library/cc303436\(v=office.16\)).
 
--   [Обновление баз данных с SharePoint 2010 до SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690).
+-   [Обновление баз данных с SharePoint 2010 до SharePoint 2013](/SharePoint/upgrade-and-update/upgrade-content-databases-from-sharepoint-2010-to-sharepoint-2013).
   
 -   [Перемещение баз данных содержимого в SharePoint 2016](https://technet.microsoft.com/library/cc262792\(v=office.16\).aspx).
 
--   [Перемещение баз данных содержимого в SharePoint 2013](https://technet.microsoft.com/library/cc262792.aspx).
+-   [Перемещение баз данных содержимого в SharePoint 2013](/SharePoint/administration/move-content-databases).
   
 ##  <a name="migrate-from-reporting-services-sharepoint-mode-versions-prior-to-sql-server-2012"></a><a name="bkmk_prior_versions"></a> Перенос из версий служб Reporting Services в режиме интеграции SharePoint, предшествующих SQL Server 2012  
  Архитектура служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint изменилась в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], включая схему базы данных приложения службы. Если нужно перенести систему в [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] в режиме интеграции с SharePoint с версий, предшествующих [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], сначала создайте новую среду SharePoint, установив SharePoint и службы SQL Server 2016 Reporting Services в режиме интеграции с SharePoint. Дополнительные сведения см. в разделе [Установка служб Reporting Services в режиме SharePoint](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
@@ -76,7 +76,7 @@ ms.locfileid: "97439349"
 |Элемент|Объекты|Метод|Примечания|  
 |-|-------------|------------|-----------|  
 |**1**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|**Rskeymgmt.exe** или диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . См. статью [Резервное копирование и восстановление ключей шифрования служб Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).|Указанные инструменты можно использовать для резервного копирования. Для восстановления используйте страницы управления приложением служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или PowerShell.|  
-|**2**|База данных содержимого SharePoint.||Создайте резервную копию базы данных и отсоедините базу данных.<br /><br /> Дополнительные сведения см. в разделе об обновлении присоединения баз данных в статье [Определение стратегии обновления до SharePoint 2010 (https://technet.microsoft.com/library/cc263447.aspx)](https://technet.microsoft.com/library/cc263447.aspx)).|  
+|**2**|База данных содержимого SharePoint.||Создайте резервную копию базы данных и отсоедините базу данных.<br /><br /> Дополнительные сведения см. в разделе об обновлении присоединения баз данных в статьях [Определение стратегии обновления до SharePoint 2013](/SharePoint/upgrade-and-update/determine-strategy-for-upgrade-to-sharepoint-2013).|  
 |**3**|База данных SQL Server, которая используется в качестве базы данных каталогов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|Резервное копирование и восстановление баз данных SQL Server<br /><br /> или<br /><br /> Присоединение и отсоединение баз данных SQL Server||  
 |**4**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|Простая копия файла.|Если выполнена настройка файла, то необходимо скопировать только rsreportserver.config. Пример расположения файлов по умолчанию: C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting\\*:<br /><br /> <br /><br /> RSReportServer.config<br /><br /> Rssvrpolicy.config<br /><br /> Web.config для приложения ASP.NET сервера отчетов.<br /><br /> Machine.config для ASP.NET.|  
   
@@ -87,7 +87,7 @@ ms.locfileid: "97439349"
   
 |Элемент|Объекты|Метод|Примечания|  
 |-|-------------|------------|-----------|  
-|**1**|Восстановите базы данных содержимого SharePoint в новую ферму.|Метод "Обновление присоединения базы данных" SharePoint.|Основные шаги:<br /><br /> 1) Восстановите базу данных на новом сервере.<br /><br /> 2) Подключите базу данных содержимого к веб-приложению, указав URL-адрес.<br /><br /> 3) Используйте Get-SPWebapplication для вывода списка всех веб-приложений и URL-адресов.<br /><br /> <br /><br /> Дополнительные сведения см. в разделе об обновлении присоединения баз данных в статьях [Определение стратегии обновления до SharePoint 2010 (https://technet.microsoft.com/library/cc263447.aspx)](https://technet.microsoft.com/library/cc263447.aspx)) и [Присоединение баз данных и обновление до SharePoint Server 2010 (https://technet.microsoft.com/library/cc263299.aspx)](https://technet.microsoft.com/library/cc263299.aspx)).|  
+|**1**|Восстановите базы данных содержимого SharePoint в новую ферму.|Метод "Обновление присоединения базы данных" SharePoint.|Основные шаги:<br /><br /> 1) Восстановите базу данных на новом сервере.<br /><br /> 2) Подключите базу данных содержимого к веб-приложению, указав URL-адрес.<br /><br /> 3) Используйте Get-SPWebapplication для вывода списка всех веб-приложений и URL-адресов.<br /><br /> <br /><br /> Дополнительные сведения см. в разделе об обновлении присоединения баз данных в статьях [Определение стратегии обновления до SharePoint 2013](/SharePoint/upgrade-and-update/determine-strategy-for-upgrade-to-sharepoint-2013) и [Определение стратегии обновления до SharePoint 2010](/SharePoint/upgrade-and-update/upgrade-content-databases).|  
 |**2**|Восстановите базу данных SQL Server, которая является базой данных каталогов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (ReportServer).|Резервное копирование и восстановление баз данных SQL.<br /><br /> **или диспетчер конфигурации служб**<br /><br /> Присоединение и отсоединение баз данных SQL Server.|При первом использовании базы данных службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] обновляют схему баз данных, которая требуется для работы со средой SQL Server 2016.|  
 |**3**|Создайте новое приложение службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|Создайте новое приложение службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|При создании нового приложения службы настройте его для использования скопированной базы данных сервера отчетов.<br /><br /> Дополнительные сведения об использовании центра администрирования SharePoint см. в разделе "Шаг 3. Создание приложения служб Reporting Services" статьи [Установка первого сервера отчетов в режиме интеграции с SharePoint](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md).<br /><br /> Примеры использования PowerShell см. в разделе "Создание приложения службы Reporting Services с помощью PowerShell" в статье [Служба и приложения службы Reporting Services в SharePoint](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).|  
 |**4**|Восстановите файлы конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|Простая копия файла.|Пример расположения файлов по умолчанию: C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting\.|  
@@ -104,7 +104,7 @@ ms.locfileid: "97439349"
   
 3.  При наличии учетной записи автоматического выполнения и использовании проверки подлинности Windows запишите учетные данные, чтобы их можно было использовать в процессе восстановления.  
   
-4.  Дополнительные сведения см. в разделе [Резервное копирование приложений службы в SharePoint 2013](https://technet.microsoft.com/library/ee428318.aspx).  
+4.  Дополнительные сведения см. в разделе [Резервное копирование приложений службы в SharePoint 2013](/SharePoint/administration/back-up-a-service-application).  
   
 ### <a name="restore-operations"></a>Операции восстановления  
   
@@ -116,13 +116,13 @@ ms.locfileid: "97439349"
   
 3.  Настройте учетную запись автоматического выполнения и учетные данные Windows для приложения служб.  
   
-4.  Дополнительные сведения см. в разделе [Восстановление приложений службы в SharePoint 2013](https://technet.microsoft.com/library/ee428305.aspx).  
+4.  Дополнительные сведения см. в разделе [Восстановление приложений службы в SharePoint 2013](/SharePoint/administration/restore-a-service-application).  
   
 ##  <a name="additional-resources"></a><a name="bkmk_additional_resources"></a> Дополнительные ресурсы  
   
--   [Обновление до SharePoint 2013 (https://technet.microsoft.com/library/ee833948.aspx)](https://technet.microsoft.com/library/ee833948.aspx).  
+-   [Начало работы с обновлениями до SharePoint 2013](/SharePoint/upgrade-and-update/get-started-with-upgrade).  
   
--   [Общие сведения об обновлении до SharePoint 2013 (https://technet.microsoft.com/library/cc262483.aspx)](https://technet.microsoft.com/library/cc262483.aspx).  
+-   [Общие сведения об обновлении до SharePoint Server 2016](/SharePoint/upgrade-and-update/overview-of-the-upgrade-process).  
 
 ## <a name="next-steps"></a>Дальнейшие шаги
 

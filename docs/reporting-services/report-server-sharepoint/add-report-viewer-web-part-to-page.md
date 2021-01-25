@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8a70d7619f878b7091e7a49e05caf93dd814e3a0
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: b0fa25f3951ab33001f84f7f44bd4617659a81ae
+ms.sourcegitcommit: 7791bd2ba339edc5cd2078a6537c8f6bfe72a19b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767408"
+ms.lasthandoff: 01/19/2021
+ms.locfileid: "98564428"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Добавление веб-части "Средство просмотра отчетов" служб SQL Server Reporting Services на страницу SharePoint
 
@@ -43,7 +43,7 @@ ms.locfileid: "83767408"
 
     ![Вставьте веб-часть с ленты Office.](media/sharepoint-insert-web-part.png)
 
-4. В разделе **Категории** выберите **SQL Server Reporting Services (собственный режим). В разделе **Части** выберите **Средство просмотра отчетов**. Нажмите кнопку **Добавить**.
+4. В разделе **Категории** выберите **SQL Server Reporting Services (собственный режим)** . В разделе **Части** выберите **Средство просмотра отчетов**. Нажмите кнопку **Добавить**.
 
     ![Добавьте веб-часть "Средство просмотра отчетов".](media/sharepoint-report-viewer-web-part.png)
 

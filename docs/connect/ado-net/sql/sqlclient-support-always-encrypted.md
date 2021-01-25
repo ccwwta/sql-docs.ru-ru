@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: cheenamalhotra
 ms.author: v-chmalh
 ms.reviewer: v-kaywon
-ms.openlocfilehash: bb971ed9fdc24491babf1ce9fe777210778037de
-ms.sourcegitcommit: 4c3949f620d09529658a2172d00bfe37aeb1a387
+ms.openlocfilehash: 12b25a6e8d7b9a5ac77a198ab047150c94b745df
+ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2020
-ms.locfileid: "96123905"
+ms.lasthandoff: 01/16/2021
+ms.locfileid: "98534504"
 ---
 # <a name="using-always-encrypted-with-the-microsoft-net-data-provider-for-sql-server"></a>Использование Always Encrypted с поставщиком данных Microsoft .NET для SQL Server
 
@@ -28,6 +28,7 @@ ms.locfileid: "96123905"
 ## <a name="prerequisites"></a>Предварительные требования
 
 - Настройте функцию постоянного шифрования в базе данных. В процесс настройки входят действия по подготовке ключей постоянного шифрования и настройке шифрования для выбранных столбцов базы данных. Если в базе данных Always Encrypted еще не настроен, следуйте инструкциям в разделе [Начало работы с Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted).
+- Если вы используете Always Encrypted с безопасными анклавами, см. статью [Разработка приложений с помощью Always Encrypted с безопасными анклавами](../../../relational-databases/security/encryption/always-encrypted-enclaves-client-development.md) для получения дополнительных предварительных требований.
 - Убедитесь, что на компьютере разработки установлена требуемая платформа .NET. В [Microsoft.Data.SqlClient](../microsoft-ado-net-sql-server.md) функция Always Encrypted поддерживается как для .NET Framework, так и для .NET Core. Убедитесь, что в среде разработки в качестве целевой версии платформы установлена платформа [.NET Framework 4.6](/dotnet/framework/) или более поздней версии, или [.NET Core 2.1](/dotnet/core/). Начиная с Microsoft.Data.SqlClient версии 2.1.0, функция Always Encrypted также поддерживается для [.NET Standard 2.0](/dotnet/standard/net-standard). Чтобы использовать Always Encrypted с безопасными анклавами, требуется версия [.NET Standard 2.1](/dotnet/standard/net-standard). Если вы используете Visual Studio, см. статью [Общие сведения о настройке целевой платформы](/visualstudio/ide/visual-studio-multi-targeting-overview).
 
 В следующей таблице перечислены необходимые платформы .NET для использования функции Always Encrypted с **Microsoft.Data.SqlClient**.
@@ -75,18 +76,20 @@ connection.Open();
 
 Начиная с Microsoft.Data.SqlClient версии 1.1.0 драйвер поддерживает [Always Encrypted с безопасными анклавами](../../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
-Чтобы включить использование анклава при подключении к [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] или более поздней версии, необходимо настроить приложение для включения вычисления и аттестации анклава.
+Дополнительные сведения см. в статье [Разработка приложений с помощью Always Encrypted с безопасными анклавами](../../../relational-databases/security/encryption/always-encrypted-enclaves-client-development.md).
 
-Общие сведения о роли клиентского драйвера в вычислениях анклава и аттестации анклава см. в статье [Разработка приложений с помощью Always Encrypted с безопасными анклавами](../../../relational-databases/security/encryption/always-encrypted-enclaves-client-development.md).
+Чтобы включить вычисления анклава для подключения к базе данных, необходимо не только включить Always Encrypted, но и задать следующие ключевые слова строки подключения (как описано в предыдущем разделе):
 
-Настройка приложения:
+- `Attestation Protocol` — определяет протокол аттестации. 
+  - Если вы используете [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] и службу защиты узла (HGS), значение этого ключевого слова должно быть `HGS`.
+  - Если вы используете [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] и Аттестацию Microsoft Azure, значение этого ключевого слова должно быть `AAS`.
 
-1. Убедитесь, что для экземпляра [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] настроен тип анклава (см. сведения в статье [Настройка типа анклава для параметра конфигурации сервера Always Encrypted](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md)). [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] поддерживает тип анклава VBS и [службу защитника узлов](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-setting-up-the-host-guardian-service-hgs) для аттестации.
-2. Включите вычисления анклава для подключения из приложения к базе данных, задав ключевое слово `Enclave Attestation URL` в строке подключения к конечной точке аттестации. В качестве значения ключевого слова следует задать конечную точку аттестации сервера HGS, настроенную в вашей среде.
-3. Укажите используемый протокол аттестации, задав ключевое слово `Attestation Protocol` в строке подключения. Этому ключевому слову должно быть присвоено значение HGS.
+- `Enclave Attestation URL` — определяет URL-адрес аттестации (конечная точка службы аттестации). Необходимо получить URL-адрес аттестации для имеющейся среды у администратора службы аттестации.
+
+  - Если вы используете [!INCLUDE[ssnoversion-md](../../../includes/ssnoversion-md.md)] и службу защитника узлов (HGS), см. сведения в разделе об [определении и совместном использовании URL-адреса аттестации HGS](../../../relational-databases/security/encryption/always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
+  - Если вы используете [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] и Аттестацию Microsoft Azure, см. сведения об [определении URL-адреса аттестации для политики аттестации](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy).
 
 Пошаговое руководство см. в статье [Учебник. Develop a .NET application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-apps.md) (Разработка приложения NET с помощью Always Encrypted с безопасными анклавами).
-
 
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Получение и изменение данных в зашифрованных столбцах
 
