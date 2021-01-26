@@ -25,12 +25,12 @@ ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
-ms.openlocfilehash: 88307a27daf1bd601c24e318817f41426c9035f3
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: b98affdc431a7e13f83ed152248e3abc1300bf76
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97464135"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98688816"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 
@@ -146,7 +146,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 
 ### <a name="d-creating-a-credential-using-a-sas-token"></a>Г. Создание учетных данных с помощью токена SAS
 
-**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] по [текущую версию](https://go.microsoft.com/fwlink/p/?LinkId=299658) и в Управляемом экземпляре SQL Azure.
+**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] по [текущую версию](../../sql-server/what-s-new-in-sql-server-2016.md) и в Управляемом экземпляре SQL Azure.
 
 В приведенном ниже примере создаются учетные данные с подписанным URL-адресом с использованием токена SAS. См. дополнительные сведения о создании хранимой политики доступа и подписанного URL-адреса в контейнере Azure с последующим созданием учетных данных с помощью подписанного URL-адреса в [руководстве по использованию службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).
 
@@ -181,5 +181,5 @@ GO
 - [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)
 - [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)
 - [sys.credentials (Transact-SQL)](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)
-- [Занятие 2. Создание учетных данных SQL Server с помощью подписанного URL-адреса](../../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)
-- [Подписанные URL-адреса](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)
+- [Занятие 2. Создание учетных данных SQL Server с помощью подписанного URL-адреса](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#2---create-a-sql-server-credential-using-a-shared-access-signature)
+- [Подписанные URL-адреса](/azure/storage/common/storage-sas-overview)

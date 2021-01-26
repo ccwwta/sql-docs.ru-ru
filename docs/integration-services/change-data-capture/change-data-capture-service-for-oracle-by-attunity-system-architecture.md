@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 1db6c737-3c60-4066-a0a3-3611e1c83e4e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d5fa150f7477449c644c554b68c7703be8e44df1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a8d184639991b7e7a0d5e837fabe95535fdc08fa
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88351550"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765677"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-system-architecture"></a>Архитектура службы системы отслеживания измененных данных для Oracle компании Attunity
 
@@ -33,7 +33,7 @@ ms.locfileid: "88351550"
   
 -   База данных Oracle. Это может быть любой компьютер, на котором работает поддерживаемая версия базы данных Oracle. Сюда входят любые компьютеры, работающие под управлением ОС Windows, Linux или любой другой операционной системы, поддерживаемой версией установленной базы данных Oracle. Следует отметить, что на диаграмме показано несколько таких платформ, поскольку одна служба Oracle CDC Service может отслеживать изменения в нескольких исходных базах данных Oracle.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: это может быть любой компьютер, на котором работает база данных-получатель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (поддерживаемый номер SKU [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). Служба Oracle CDC Service поддерживает один целевой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , где хранятся таблицы изменений и конфигурация службы. Платформа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может также представлять собой кластеризованный экземпляр [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] или зеркалированный экземпляр [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с функцией **AlwaysOn** .  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: это может быть любой компьютер, на котором работает база данных-получатель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (поддерживаемый номер SKU [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]). Служба Oracle CDC Service поддерживает один целевой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , где хранятся таблицы изменений и конфигурация службы. Платформа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может также представлять собой кластеризованный экземпляр [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] или зеркалированный экземпляр [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] с функцией **AlwaysOn** .  
   
 -   Конструктор Oracle CDC. Это может быть любой поддерживаемый компьютер с ОС Windows, который может осуществлять доступ к базе данных-источнику Oracle и базе данных-получателю [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -45,7 +45,7 @@ ms.locfileid: "88351550"
 ||Средство чтения журнала Oracle. Читает журналы транзакций Oracle с помощью клиента Oracle.|  
 ||Клиент Oracle. Клиент Oracle Instant Client, используемый для связи с Oracle. Это обязательный компонент, который нужно получить у Oracle и установить до установки службы Oracle CDC Service.|  
 ||[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Записывает зафиксированные изменения, внесенные в отслеживаемые таблицы Oracle, в таблицы изменений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот компонент также поддерживает состояние отслеживания в целевой базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-||[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Клиент ODBC. Собственный клиент Microsoft Native Client для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Это обязательный компонент, который нужно получить у Microsoft и установить до установки службы Oracle CDC Service.|  
+||[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Клиент ODBC. Собственный клиент Microsoft Native Client для [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Это обязательный компонент, который нужно получить у Microsoft и установить до установки службы Oracle CDC Service.|  
 |Конфигурация службы Oracle CDC Service. Это оснастка консоли управления (MMC), которая создает службу Windows и настраивает ее конфигурацию.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Клиент SQL ADO.NET, который поставляется с платформой .NET Framework версии 4.|  
 |База данных Oracle. База данных-источник Oracle, в которой отслеживаются изменения выбранных таблиц.|Средство анализа журналов. Компонент Oracle, с помощью которого читаются журналы транзакций Oracle.|  
 ||Журнал транзакций. Активные и архивированные журналы операций повтора Oracle, используемые Oracle для отката транзакций и восстановления после сбоев (в этом случае база данных Oracle должна работать в режиме ARCHIVELOG).|  

@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: bab0801b0193d9f675ef69e566eef375f0930e5b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: ce637e88679747faf40ec7f262ceaea3c0f01f5f
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170866"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98688893"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -184,13 +184,13 @@ VERBOSE LOGGING = { 'logging_detail' | DEFAULT }
 В сценариях отработки отказа ресурсов библиотека DLL ресурсов SQL Server может получить файл дампа, прежде чем произойдет отработка отказа. Это относится к технологиям FCI и групп доступности. Когда библиотека DLL ресурсов SQL Server определяет, что ресурс SQL Server завершился сбоем, она использует служебную программу Sqldumper.exe для получения файла дампа процесса SQL Server. Чтобы убедиться, что служебная программа Sqldumper.exe успешно создает файл дампа при отработке отказа ресурса, необходимо задать следующие три свойства в качестве необходимых компонентов: SqlDumperDumpTimeOut, SqlDumperDumpPath, SqlDumperDumpFlags.
 
 SQLDUMPEREDUMPFLAGS  
-Определяет тип файлов дампа, создаваемых служебной программой SQLDumper в SQL Server. Значение по умолчанию — 0. Для этого параметра используются десятичные, а не шестнадцатеричные значения. Для мини-дампа используйте 288, для мини-дампа с косвенным использованием памяти — 296, для фильтрованного дампа используйте 33024. Для получения дополнительных сведений см. [статью базы знаний о служебной программе Dumper сервера SQL Server](https://go.microsoft.com/fwlink/?LinkId=206173).  
+Определяет тип файлов дампа, создаваемых служебной программой SQLDumper в SQL Server. Значение по умолчанию — 0. Для этого параметра используются десятичные, а не шестнадцатеричные значения. Для мини-дампа используйте 288, для мини-дампа с косвенным использованием памяти — 296, для фильтрованного дампа используйте 33024. Для получения дополнительных сведений см. [статью базы знаний о служебной программе Dumper сервера SQL Server](/troubleshoot/sql/tools/use-sqldumper-generate-dump-file).  
   
 SQLDUMPERDUMPPATH = { 'os_file_path' | DEFAULT }  
-Место, где служебная программа SQLDumper сохраняет файлы дампов. Для получения дополнительных сведений см. [статью базы знаний о служебной программе Dumper сервера SQL Server](https://go.microsoft.com/fwlink/?LinkId=206173).  
+Место, где служебная программа SQLDumper сохраняет файлы дампов. Для получения дополнительных сведений см. [статью базы знаний о служебной программе Dumper сервера SQL Server](/troubleshoot/sql/tools/use-sqldumper-generate-dump-file).  
   
 SQLDUMPERDUMPTIMEOUT = { 'dump_time-out' | DEFAULT }  
-Максимальное время создания дампа программой SQLDumper в случае сбоя SQL Server (в миллисекундах). Значение по умолчанию равно 0, то есть время создания дампа неограниченно. Для получения дополнительных сведений см. [статью базы знаний о служебной программе Dumper сервера SQL Server](https://go.microsoft.com/fwlink/?LinkId=206173).  
+Максимальное время создания дампа программой SQLDumper в случае сбоя SQL Server (в миллисекундах). Значение по умолчанию равно 0, то есть время создания дампа неограниченно. Для получения дополнительных сведений см. [статью базы знаний о служебной программе Dumper сервера SQL Server](/troubleshoot/sql/tools/use-sqldumper-generate-dump-file).  
   
  FAILURECONDITIONLEVEL = { 'failure_condition_level' | DEFAULT }  
  Условия, при которых должно произойти переключение при сбое или перезапуск экземпляра отказоустойчивого кластера SQL Server. Значение по умолчанию, равное 3, означает, что ресурс SQL Server будет переключаться на резервный ресурс или перезапускаться в случае критической ошибки сервера. Дополнительные сведения об этом и других уровнях условий ошибки см. в разделе [Настройка параметров свойства FailureConditionLevel](../../sql-server/failover-clusters/windows/configure-failureconditionlevel-property-settings.md).  
@@ -484,4 +484,3 @@ GO
 [sys.dm_os_memory_nodes (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-nodes-transact-sql.md)   
 [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)   
 [Расширение буферного пула](../../database-engine/configure-windows/buffer-pool-extension.md)  
-  

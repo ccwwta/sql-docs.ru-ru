@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: suresh-kandoth
 ms.author: ramakoni
-ms.openlocfilehash: f1221474d86d95400ca955d64b4a0812cffe1c0d
-ms.sourcegitcommit: f87f2f0f1edc91fe400040d8e3a5810347aa8d70
+ms.openlocfilehash: 018252ff40ebf2ea7bd52b34f03ed25ef124a8d7
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96868918"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596310"
 ---
 # <a name="mssqlserver_15581"></a>MSSQLSERVER_15581
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ go
 alter master key drop encryption by service master key
 ```
 
-Главный ключ службы применяется для шифрования сертификата, используемого главным ключом базы данных. Для использования базы данных с включенным шифрованием TDE требуется доступ к главному ключу базы данных в базе данных master. Главный ключ, который не зашифрован с помощью главного ключа службы, следует открывать с помощью инструкции [OPEN MASTER KEY (Transact-SQL)](/sql/t-sql/statements/open-master-key-transact-sql) и пароля в каждом сеансе, требующем доступа к главному ключу. Так как эта команда не может выполняться в системных сеансах, восстановление баз данных с включенным шифрованием TDE невозможно.
+Главный ключ службы применяется для шифрования сертификата, используемого главным ключом базы данных. Для использования базы данных с включенным шифрованием TDE требуется доступ к главному ключу базы данных в базе данных master. Главный ключ, который не зашифрован с помощью главного ключа службы, следует открывать с помощью инструкции [OPEN MASTER KEY (Transact-SQL)](../../t-sql/statements/open-master-key-transact-sql.md) и пароля в каждом сеансе, требующем доступа к главному ключу. Так как эта команда не может выполняться в системных сеансах, восстановление баз данных с включенным шифрованием TDE невозможно.
 
 ## <a name="user-action"></a>Рекомендуемые действия
 

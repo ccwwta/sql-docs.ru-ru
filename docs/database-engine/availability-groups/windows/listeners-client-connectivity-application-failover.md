@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: c0578d5522ca998e7243fd20b77daf8d3705bd85
-ms.sourcegitcommit: cb8e2ce950d8199470ff1259c9430f0560f0dc1d
+ms.openlocfilehash: 145f061ff1926bc9a93244226dbd36b6ffaf9de8
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97878927"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765918"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Подключение к прослушивателю группы доступности Always On 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -121,7 +121,7 @@ Server=tcp:AGListener,1445;Database=AdventureWorks;Integrated Security=SSPI
 > [!NOTE]  
 >  Этим параметром рекомендуется пользоваться для соединения с прослушивателем группы доступности как с одной, так и с несколькими подсетями, а также для имени экземпляра отказоустойчивого кластера SQL Server.  При использовании этого параметра задействуется дополнительная оптимизация, даже при работе с одной подсетью.  
   
- Параметр подключения **MultiSubnetFailover** работает только с сетевым протоколом TCP и поддерживается только при подключении к прослушивателю группы доступности, а также для любого имени виртуальной сети, связанного с [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+ Параметр подключения **MultiSubnetFailover** работает только с сетевым протоколом TCP и поддерживается только при подключении к прослушивателю группы доступности, а также для любого имени виртуальной сети, связанного с [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)].  
   
  Вот пример подобной строки подключения (позволяющей выполнять отработку отказа в нескольких подсетях) для поставщика данных ADO.NET (System.Data.SqlClient):  
   

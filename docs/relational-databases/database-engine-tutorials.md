@@ -12,12 +12,12 @@ ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1fa0db66c75fd0fc45f02dd768f69659c96d739b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 891abb94a3f9ac00edf910d5e8a830c7adee0b0f
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440208"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597232"
 ---
 # <a name="database-engine-tutorials"></a>Учебники по компоненту ядра СУБД
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "97440208"
 [Руководство. Начало работы с ядром СУБД](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
 В этом учебнике описывается установление подключения к экземпляру [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
-[Руководство. SQL Server Management Studio](../ssms/quickstarts/connect-query-sql-server.md)  
+[Руководство. SQL Server Management Studio](../ssms/quickstarts/ssms-connect-query-sql-server.md)  
 В этом учебнике описывается интегрированная среда для управления инфраструктурой [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] представляет собой графический интерфейс для настройки экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], наблюдения за ними и управления ими. Такая среда также позволяет развертывать, наблюдать и обновлять компоненты уровня данных, используемых приложениями, например базами и хранилищами данных. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] также предоставляет редакторы [!INCLUDE[tsql](../includes/tsql-md.md)], языка многомерных выражений, расширений интеллектуального анализа данных и XML для изменения и отладки скриптов.  
   
 [Руководство. Составление инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
@@ -56,5 +56,4 @@ ms.locfileid: "97440208"
 ## <a name="see-also"></a>См. также:  
 [Учебные материалы по SQL Server 2016](../sql-server/tutorials-for-sql-server-2016.md)  
 [TechNet WIKI: образцы SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)  
-  
   

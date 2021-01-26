@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 6b5f22541039f781e49615b5e8916d138a5c375b
-ms.sourcegitcommit: bb54e4c9dd8c97365b7a96dfcd557b8b86d06978
+ms.openlocfilehash: fea1ba3712f07548d259867f931188d9e5798802
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "97736892"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596413"
 ---
 # <a name="resource-governor"></a>Resource Governor
 [!INCLUDE [SQL Server SQL MI](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor — это компонент, предназначенный для управления рабочей нагрузкой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и использованием системных ресурсов. Resource Governor позволяет задать ограничения на объем ресурсов ЦП, памяти и количество физических операций ввода-вывода, которые могут использоваться для входящих запросов приложений.  
   
 > [!NOTE]
-> Хотя [База данных SQL Azure использует Resource Governor](https://azure.microsoft.com/blog/resource-governance-in-azure-sql-database/) (помимо других методик) для управления ресурсами, пользовательская конфигурация настраиваемых пулов ресурсов и групп рабочих нагрузок в Базе данных SQL Azure не поддерживается. В Azure Synapse Analytics используется другая реализация аналогичного поведения Resource Governor с [функцией классификации рабочих нагрузок](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-workload-classification).
+> Хотя [База данных SQL Azure использует Resource Governor](https://azure.microsoft.com/blog/resource-governance-in-azure-sql-database/) (помимо других методик) для управления ресурсами, пользовательская конфигурация настраиваемых пулов ресурсов и групп рабочих нагрузок в Базе данных SQL Azure не поддерживается. В Azure Synapse Analytics используется другая реализация аналогичного поведения Resource Governor с [функцией классификации рабочих нагрузок](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-workload-classification).
 
 ## <a name="benefits-of-resource-governor"></a>Преимущества регулятора ресурсов  
  Регулятор ресурсов позволяет управлять рабочими нагрузками и ресурсами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] путем задания лимитов на потребление ресурсов входящими запросами. В контексте регулятора ресурсов рабочая нагрузка представляет собой набор запросов приблизительно одинакового размера, которые могут и должны обрабатываться как единая сущность. Это не жесткое требование, но чем однообразнее выглядит шаблон использования ресурсов рабочей нагрузки, тем больше преимуществ можно извлечь из регулятора ресурсов. Ограничения на ресурсы можно перенастроить в режиме реального времени, при этом воздействие на выполняемую рабочую нагрузку остается минимальным.  
@@ -95,5 +95,4 @@ ms.locfileid: "97736892"
   
 ## <a name="see-also"></a>См. также:  
  [Экземпляры компонента Database Engine (SQL Server)](../../database-engine/configure-windows/database-engine-instances-sql-server.md)  
-  
   

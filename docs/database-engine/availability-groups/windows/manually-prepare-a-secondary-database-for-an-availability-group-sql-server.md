@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 5a23a2b4e5af84f74010d00c0d9e24c23d02146c
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 3a87c7b4dc37a7b1a70b31b9d7b9191a3570db98
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97644202"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98764754"
 ---
 # <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>Подготовка базы данных-получателя для присоединения к группе доступности Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -180,7 +180,7 @@ ms.locfileid: "97644202"
         > [!IMPORTANT]  
         >  Если пути к базе данных-источнику и базе данных-получателю отличаются, то добавлять файлы нельзя. Обусловлено это тем, что при получении журнала для выполнения операции добавления файла экземпляр сервера, на котором размещена вторичная реплика, пытается поместить новый файл в местоположение, указанное для базы данных-источника.  
   
-         Например, следующая команда восстанавливает базу данных-источник из резервной копии, размещенной в каталоге данных экземпляра [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]по умолчанию, C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA. Операция восстановления базы данных должна переместить базы данных в каталог удаленного экземпляра [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с именем (*AlwaysOn1*), на котором размещается вторичная реплика на другом узле кластера. Там файлы данных и журнала восстанавливаются в каталог *C:\Program Files\Microsoft SQL Server\MSSQL13.On1\MSSQL\DATA* . Операция восстановления использует параметр WITH NORECOVERY, чтобы оставить базу данных-получатель в восстанавливающейся базе данных.  
+         Например, следующая команда восстанавливает базу данных-источник из резервной копии, размещенной в каталоге данных экземпляра [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]по умолчанию, C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA. Операция восстановления базы данных должна переместить базы данных в каталог удаленного экземпляра [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] с именем (*AlwaysOn1*), на котором размещается вторичная реплика на другом узле кластера. Там файлы данных и журнала восстанавливаются в каталог *C:\Program Files\Microsoft SQL Server\MSSQL13.On1\MSSQL\DATA* . Операция восстановления использует параметр WITH NORECOVERY, чтобы оставить базу данных-получатель в восстанавливающейся базе данных.  
   
         ```  
         RESTORE DATABASE MyDB1  

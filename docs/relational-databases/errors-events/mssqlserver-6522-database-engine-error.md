@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: suresh-kandoth
 ms.author: ramakoni
-ms.openlocfilehash: 836ad79e049d7c5613755e64ca441f9ed5d73048
-ms.sourcegitcommit: d819173fb91af6f20ca6ee59686c35c71b060fbc
+ms.openlocfilehash: f48534e104139ee7cbd4eb7602fce2a8e51eeb73
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/28/2020
-ms.locfileid: "97797821"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98597145"
 ---
 # <a name="mssqlserver_6522"></a>MSSQLSERVER_6522
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -205,7 +205,7 @@ ms.locfileid: "97797821"
 ## <a name="references"></a>Ссылки
 
 - Дополнительные сведения о версиях сборки см. в [документации по Visual Studio 2005](https://www.microsoft.com/download/details.aspx?id=55984).
-- Дополнительные сведения об обновлении сборки см. в статье [ALTER ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/alter-assembly-transact-sql).
-- Дополнительные сведения об удалении сборки см. в статье [DROP ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/drop-assembly-transact-sql).
-- Дополнительные сведения о регистрации сборки в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в статье [CREATE ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/create-assembly-transact-sql).
-- Дополнительные сведения о служебной программе Bcp.exe см. по ссылке [https://msdn2.microsoft.com/library/ms162802.aspx](/sql/tools/bcp-utility).
+- Дополнительные сведения об обновлении сборки см. в статье [ALTER ASSEMBLY (Transact-SQL)](../../t-sql/statements/alter-assembly-transact-sql.md).
+- Дополнительные сведения об удалении сборки см. в статье [DROP ASSEMBLY (Transact-SQL)](../../t-sql/statements/drop-assembly-transact-sql.md).
+- Дополнительные сведения о регистрации сборки в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в статье [CREATE ASSEMBLY (Transact-SQL)](../../t-sql/statements/create-assembly-transact-sql.md).
+- Дополнительные сведения о служебной программе Bcp.exe см. по ссылке [https://msdn2.microsoft.com/library/ms162802.aspx](../../tools/bcp-utility.md).

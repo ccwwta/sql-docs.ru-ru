@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 93fed90647a3a6e86e3f2cfa2fe2016727b481e2
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 405ed385004aa0ad23d93ef4dbbf2dbd3c2c5726
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094761"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98689180"
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (Transact-SQL) SET HADR 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +69,7 @@ ALTER DATABASE database_name
   
 -   База данных должна быть уже добавлена в группу доступности на основной реплике.  
   
--   Основная реплика должна быть активной. Сведения о том, как разрешать проблемы в неактивной основной реплике, см. в разделе [Разрешение проблем с конфигурацией групп доступности AlwaysOn (SQL Server)](https://go.microsoft.com/fwlink/?LinkId=225834).  
+-   Основная реплика должна быть активной. Сведения о том, как разрешать проблемы в неактивной основной реплике, см. в разделе [Разрешение проблем с конфигурацией групп доступности AlwaysOn (SQL Server)](/previous-versions/sql/sql-server-2012/ff878308(v=sql.110)).  
   
 -   Основная реплика должна находиться в интерактивном режиме, а дополнительная реплика должна быть подключена к основной реплике.  
   
@@ -148,5 +148,4 @@ ALTER DATABASE AccountsDb1 SET HADR AVAILABILITY GROUP = AccountsAG;
  [ALTER AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [CREATE AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [Обзор групп доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) [Поиск и устранение неисправностей групп доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md) 
-  
   

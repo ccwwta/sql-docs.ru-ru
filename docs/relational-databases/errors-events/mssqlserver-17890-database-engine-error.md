@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: suresh-kandoth
 ms.author: ramakoni
-ms.openlocfilehash: 6a854486d1867e84bcd9b13cb148d3026a41d51f
-ms.sourcegitcommit: d819173fb91af6f20ca6ee59686c35c71b060fbc
+ms.openlocfilehash: c6611fcc392d37545f50e12fa8007923d8bc5846
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/28/2020
-ms.locfileid: "97797790"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596347"
 ---
 # <a name="mssqlserver_17890"></a>MSSQLSERVER_17890
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -154,7 +154,7 @@ ms.locfileid: "97797790"
 
 - Прежде чем настраивать параметры максимального и минимального объема памяти сервера для нескольких экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], изучите требования к памяти небуферного пула для каждого экземпляра SQL Server. Затем настройте эти параметры для каждого экземпляра SQL Server.
 
-В идеале базовые сведения следует собирать во время пиковых нагрузок. Это позволит определить требования к памяти для различных приложений и компонентов, соответствующую максимальной загрузке системы. Требования к памяти могут быть разными для разных систем в зависимости от выполняемых действий и приложений. Вы можете запросить сведения, предоставленные в динамическом административном представлении sys.dm_os_process_memory, чтобы определить, сталкивается ли система с нехваткой памяти. Дополнительные сведения см. в статье [sys.dm_os_process_memory (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-process-memory-transact-sql).
+В идеале базовые сведения следует собирать во время пиковых нагрузок. Это позволит определить требования к памяти для различных приложений и компонентов, соответствующую максимальной загрузке системы. Требования к памяти могут быть разными для разных систем в зависимости от выполняемых действий и приложений. Вы можете запросить сведения, предоставленные в динамическом административном представлении sys.dm_os_process_memory, чтобы определить, сталкивается ли система с нехваткой памяти. Дополнительные сведения см. в статье [sys.dm_os_process_memory (Transact-SQL)](../system-dynamic-management-views/sys-dm-os-process-memory-transact-sql.md).
 
 ## <a name="improvements-added-in-windows-server-2008-and-r2-version"></a>Улучшения, добавленные в версии Windows Server 2008 и R2
 

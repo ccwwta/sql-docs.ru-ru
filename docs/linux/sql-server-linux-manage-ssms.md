@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.openlocfilehash: 0b118b1daa1b8b825d4b68ff1e436fd2f0b624f2
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: f5ba3ea9260da9e278273ef39d0f5893b67c120e
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115625"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596430"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Использование SQL Server Management Studio в Windows для управления SQL Server на базе Linux
 
@@ -143,6 +143,6 @@ SSMS предлагает широкий набор возможностей р�
 ## <a name="see-also"></a>См. также раздел
 - [Что такое SSMS?](../ssms/sql-server-management-studio-ssms.md)
 - [Экспорт и импорт базы данных с помощью SSMS](sql-server-linux-migrate-ssms.md)
-- [Руководство. SQL Server Management Studio](../ssms/quickstarts/connect-query-sql-server.md)
+- [Руководство. SQL Server Management Studio](../ssms/quickstarts/ssms-connect-query-sql-server.md)
 - [Руководство. Составление инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)
 - [Мониторинг производительности и действий сервера](../relational-databases/performance/server-performance-and-activity-monitoring.md)

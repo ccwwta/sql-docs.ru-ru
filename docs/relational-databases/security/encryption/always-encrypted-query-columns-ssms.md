@@ -13,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 475cda1238efc6a7c4b630d4458c719dc1b9adbd
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: 4bdf43c821bd278e6080e6f9244f3bb169388653
+ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534604"
+ms.lasthandoff: 01/20/2021
+ms.locfileid: "98596252"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>Выполнение запросов к столбцам с помощью Always Encrypted с использованием SQL Server Management Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -90,7 +90,7 @@ ms.locfileid: "98534604"
 Always Encrypted можно включить или отключить при создании подключения или изменении существующего подключения в диалоговом окне **Соединение с сервером**. 
 
 Чтобы включить или отключить Always Encrypted, выполните следующие действия.
-1. Откройте диалоговое окно **Соединение с сервером** (см. статью [Подключение к экземпляру SQL Server](../../../ssms/quickstarts/connect-query-sql-server.md#connect-to-a-sql-server-instance)).
+1. Откройте диалоговое окно **Соединение с сервером** (см. статью [Подключение к экземпляру SQL Server](../../../ssms/quickstarts/ssms-connect-query-sql-server.md#connect-to-a-sql-server-instance)).
 1. Щелкните **Параметры >>** .
 1. Если используется SSMS 18 или более поздние версии:
     1. Выберите вкладку **Always Encrypted**.

@@ -25,12 +25,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f62ced8657ee943a947e26c5a2a2ed65a9d78b9
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: d16763f2bd009b411952c20cfb1115cf1c977d85
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171916"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98689193"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)
 
@@ -142,7 +142,7 @@ SELECT name, compatibility_level FROM sys.databases;
 > **Нерекомендуемые** функциональные возможности, представленные в определенной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **не** защищены уровнем совместимости. Это относится к возможностям, удаленным из [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].
 > Например, указание `FASTFIRSTROW` больше не поддерживается в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и заменено на указание `OPTION (FAST n )`. Если задать уровень совместимости базы данных 110, нерекомендуемое указание не будет восстановлено.  
 >  
-> Дополнительные сведения о нерекомендуемых функциях см. в разделах [Нерекомендуемые функции ядра СУБД в SQL Server](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md), [Нерекомендуемые функции ядра СУБД в SQL Server 2014](https://docs.microsoft.com/previous-versions/sql/2014/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014&preserve-view=true).
+> Дополнительные сведения о нерекомендуемых функциях см. в разделах [Нерекомендуемые функции ядра СУБД в SQL Server](../../database-engine/discontinued-database-engine-functionality-in-sql-server.md), [Нерекомендуемые функции ядра СУБД в SQL Server 2014](/previous-versions/sql/2014/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?preserve-view=true&view=sql-server-2014).
 
 > [!IMPORTANT]
 > **Критические изменения**, введенные в определенной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **могут не** защищаться уровнем совместимости. Это относится к изменениям в поведении между версиями [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Поведение [!INCLUDE[tsql](../../includes/tsql-md.md)] обычно защищено уровнем совместимости. Однако измененные или удаленные системные объекты **не** защищены уровнем совместимости.
@@ -154,7 +154,7 @@ SELECT name, compatibility_level FROM sys.databases;
 > - Изменение имен столбцов в системных объектах. В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] столбец *single_pages_kb* в представлении sys.dm_os_sys_info был переименован в *pages_kb*. Независимо от уровня совместимости запрос `SELECT single_pages_kb FROM sys.dm_os_sys_info` вызывает ошибку 207 (Недопустимое имя столбца).
 > - Удаление системных объектов. В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] столбец `sp_dboption` был удален. Независимо от уровня совместимости инструкция `EXEC sp_dboption 'AdventureWorks2016', 'autoshrink', 'FALSE';` вызовет ошибку 2812 (Не удалось найти хранимую процедуру 'sp_dboption').
 >
-> Подробные сведения о критических изменениях см. в статьях [Критические изменения в ядре СУБД в SQL Server 2019 (15.x)](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15.md), [Критические изменения в функциях ядра СУБД в SQL Server 2017 (14.x)](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Критические изменения в функциях ядра СУБД в SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md) и [Критические изменения в функциях ядра СУБД в SQL Server 2014](https://docs.microsoft.com/previous-versions/sql/2014/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016?view=sql-server-2014&preserve-view=true).
+> Подробные сведения о критических изменениях см. в статьях [Критические изменения в ядре СУБД в SQL Server 2019 (15.x)](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15.md), [Критические изменения в функциях ядра СУБД в SQL Server 2017 (14.x)](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Критические изменения в функциях ядра СУБД в SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md) и [Критические изменения в функциях ядра СУБД в SQL Server 2014](/previous-versions/sql/2014/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016?preserve-view=true&view=sql-server-2014).
 
 ## <a name="differences-between-compatibility-levels"></a>Различия между уровнями совместимости
 Для всех установок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] уровень совместимости по умолчанию установлен в зависимости от версии [!INCLUDE[ssDE](../../includes/ssde-md.md)], как указано в [этой таблице](#supported-dbcompats). Для новых задач разработки всегда планируйте сертификацию приложений на базе новейшего уровня совместимости базы данных.

@@ -26,12 +26,12 @@ ms.assetid: 11855b56-c554-495d-aad4-ba446990153b
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 021c8e18b0767fcd844a92f598b4fbcb434740a4
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: f9279883c9f032574e32056b2360a5947ffba022
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097287"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766201"
 ---
 # <a name="datename-transact-sql"></a>DATENAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -135,7 +135,7 @@ SELECT DATENAME(year, @t);
 + SELECT \<list>
 + WHERE
   
-В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] функция DATENAME неявно приводит строковые литералы к типу **datetime2**. Иными словами, `DATENAME` не поддерживает формат ГЧМ (год, число, месяц) при передаче даты в виде строки. Для использования формата ГЧМ (год, число, месяц) необходимо явно привести строку к типу **datetime** или **smalldatetime**.
+В [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] функция DATENAME неявно приводит строковые литералы к типу **datetime2**. Иными словами, `DATENAME` не поддерживает формат ГЧМ (год, число, месяц) при передаче даты в виде строки. Для использования формата ГЧМ (год, число, месяц) необходимо явно привести строку к типу **datetime** или **smalldatetime**.
   
 ## <a name="examples"></a>Примеры  
 В приведенном ниже примере возвращаются компоненты указанной даты. Подставьте значение *datepart* из таблицы для аргумента `datepart` в инструкции SELECT:
