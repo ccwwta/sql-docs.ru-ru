@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: ed5b6449ea470a63e27a1d23a057ed6507c2ed2e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f83334dbbcc50642c463681614db5f23e10f6807
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466680"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765643"
 ---
 # <a name="run-the-data-quality-client-application"></a>Запуск клиентского приложения DQS
 
@@ -39,7 +39,7 @@ ms.locfileid: "88466680"
 ##  <a name="run-data-quality-client"></a><a name="Run"></a> Запустить Data Quality Client  
  Чтобы запустить [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] на компьютере, где он установлен, выполните следующие действия:  
   
-1.  Нажмите кнопку **Пуск**, выберите **Все программы**, затем **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**, затем **Службы Data Quality Services**, затем **Data Quality Client**.  
+1.  В меню **Пуск** выберите **[!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]** **Data Quality Client**.  
   
 2.  В диалоговом окне **Подключение к серверу** выполните указанные ниже действия.  
   

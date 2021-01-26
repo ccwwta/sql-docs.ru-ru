@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: bea20a1eb563df3d2af9cddf640359673b05dc57
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 12e37d3119341ebef2c3592581fd0fada018210e
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725397"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765811"
 ---
 # <a name="data-quality-services"></a>Data Quality Services
 
@@ -23,9 +23,9 @@ ms.locfileid: "91725397"
 
 [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) — это продукт, предназначенный для повышения качества данных на основе знаний. DQS позволяет построить базу знаний и использовать ее для выполнения разнообразных важных задач по обеспечению качества данных, включая исправление, дополнение, стандартизацию и устранение дубликатов данных. DQS позволяет выполнять очистку данных с использованием служб эталонных данных, расположенных в облаке и предоставляемых поставщиками эталонных данных. DQS также предоставляет функции профилирования, встроенные в задачи по обеспечению качества данных, что позволяет анализировать целостность данных.  
   
- DQS состоит из [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] и [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], которые устанавливаются в составе [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] — это компонент экземпляра SQL Server, состоящий из трех каталогов SQL Server с функциями обеспечения качества данных и хранения. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] — это общий компонент SQL Server, который используется бизнес-пользователями, информационными работниками и ИТ-специалистами для выполнения автоматизированного анализа качества данных и интерактивного управления качеством данных. Также вы можете выполнять процессы обеспечения качества данных с помощью функций, доступных в [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] и службах Master Data Services (MDS), которые основаны на DQS.  
+ DQS состоит из [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] и [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], которые устанавливаются в составе [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] — это компонент экземпляра SQL Server, состоящий из трех каталогов SQL Server с функциями обеспечения качества данных и хранения. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] — это общий компонент SQL Server, который используется бизнес-пользователями, информационными работниками и ИТ-специалистами для выполнения автоматизированного анализа качества данных и интерактивного управления качеством данных. Также вы можете выполнять процессы обеспечения качества данных с помощью функций, доступных в [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] и службах Master Data Services (MDS), которые основаны на DQS.  
   
- Подробные сведения об установке DQS см. в разделе [Install Data Quality Services](../data-quality-services/install-windows/install-data-quality-services.md). Если нужно обновить существующая версия служб DQS в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], см. в разделе [Upgrade Data Quality Services](../database-engine/install-windows/upgrade-data-quality-services.md).  
+ Подробные сведения об установке DQS см. в разделе [Install Data Quality Services](../data-quality-services/install-windows/install-data-quality-services.md). Если вы хотите обновить существующую версию служб DQS до последней версии [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] , см. статью [Обновление служб Data Quality Services](../database-engine/install-windows/upgrade-data-quality-services.md).  
   
  **Просмотр содержимого по областям**  
  ![Маленький значок папки с файлами](/analysis-services/analysis-services/media/filefolder-small.png "Маленький значок папки") [Data Quality Client приложение](../data-quality-services/data-quality-client-application.md)  
@@ -46,7 +46,7 @@ ms.locfileid: "91725397"
   
  ![Маленький значок папки](/analysis-services/analysis-services/media/filefolder-small.png "Маленький значок папки") [Безопасность DQS](../data-quality-services/dqs-security.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Общие сведения о службах Data Quality Services](../data-quality-services/introduction-to-data-quality-services.md)   
  [Основные понятия служб Data Quality Services](../data-quality-services/data-quality-services-concepts.md)   
  [Ресурсы DQS](../sql-server/index.yml)   

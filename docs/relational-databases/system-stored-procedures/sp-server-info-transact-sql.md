@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5936e83d902926ad1cab22c7046693aab47cd97e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b8460daf65826290942f28fe65af6e5fa9f9b416
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547500"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765777"
 ---
 # <a name="sp_server_info-transact-sql"></a>sp_server_info (Transact-SQL)
 
@@ -41,7 +41,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @attribute_id = ] 'attribute_id'` Целочисленный идентификатор атрибута. *attribute_id* имеет **тип int**и значение по умолчанию NULL.  
+`[ @attribute_id = ] 'attribute_id'` Целочисленный идентификатор атрибута. *attribute_id* имеет **тип int** и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  Нет  
@@ -54,14 +54,14 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**ATTRIBUTE_NAME**|**varchar (** 60 **)**|Имя атрибута.|  
 |**ATTRIBUTE_VALUE**|**varchar (** 255 **)**|Текущее значение атрибута.|  
   
- В следующей таблице перечислены атрибуты. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Клиентские библиотеки ODBC в настоящий момент используют атрибуты **1**, **2**, **18**, **22**и **500** во время подключения.  
+ В следующей таблице перечислены атрибуты. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Клиентские библиотеки ODBC в настоящий момент используют атрибуты **1**, **2**, **18**, **22** и **500** во время подключения.  
   
 |ATTRIBUTE_ID|ATTRIBUTE_NAME, описание|ATTRIBUTE_VALUE|  
 |-------------------|---------------------------------|----------------------|  
 |**1**|DBMS_NAME|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|**2**|DBMS_VER|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] - *x. XX. xxxx*|  
+|**2**|DBMS_VER|Microsoft [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] *XXXX*  -  *x. XX. xxxx*<br/><br> Например: `Microsoft SQL Server 2017 - 14.0.3257.3`|  
 |**10**|OWNER_TERM|владелец|  
-|**11**|TABLE_TERM|table|  
+|**11**|TABLE_TERM|таблица|  
 |**12**|MAX_OWNER_NAME_LENGTH|128|  
 |**13**|TABLE_LENGTH<br /><br /> Указывает максимальное количество символов в имени таблицы.|128|  
 |**14**|MAX_QUAL_LENGTH<br /><br /> Указывает максимальную длину имени квалификатора таблицы (первой части трехкомпонентного имени таблицы).|128|  
@@ -71,7 +71,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**стр**|COLLATION_SEQ<br /><br /> Определяет упорядочивание кодировок на данном сервере.|charset=iso_1 sort_order=dictionary_iso charset_num=1 sort_order_num=51|  
 |**стр**|SAVEPOINT_SUPPORT<br /><br /> Определяет, поддерживает ли базовая СУБД именованные точки сохранения.|Y|  
 |**20**|MULTI_RESULT_SETS<br /><br /> Определяет, поддерживает ли базовая база данных или сам шлюз множественные результирующие наборы (т.е. могут ли несколько инструкций отправляться через шлюз, возвращая клиенту несколько результирующих наборов).|Y|  
-|**22**|ACCESSIBLE_TABLES<br /><br /> Указывает, будет ли в **sp_tables**шлюз возвращать только таблицы, представления и т. д., доступные текущему пользователю (то есть пользователю, у которого есть по крайней мере разрешения SELECT для таблицы).|Y|  
+|**22**|ACCESSIBLE_TABLES<br /><br /> Указывает, будет ли в **sp_tables** шлюз возвращать только таблицы, представления и т. д., доступные текущему пользователю (то есть пользователю, у которого есть по крайней мере разрешения SELECT для таблицы).|Y|  
 |**100**|USERID_LENGTH<br /><br /> Указывает максимальное количество символов в имени пользователя.|128|  
 |**101**|QUALIFIER_TERM<br /><br /> Указывает термин поставщика СУБД для квалификатора таблицы (первой части трехкомпонентного имени таблицы).|База данных|  
 |**102**|NAMED_TRANSACTIONS<br /><br /> Определяет, поддерживает ли базовая СУБД именованные транзакции.|Y|  
@@ -88,7 +88,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**113**|REMOTE_SPROC<br /><br /> Определяет, возможно ли выполнение хранимых процедур через функции работы с удаленными хранимыми процедурами из DB-Library.|Y|  
 |**500**|SYS_SPROC_VERSION<br /><br /> Определяет версию хранимых процедур каталога, реализованных на данный момент.|Номер текущей версии|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  **sp_server_info** возвращает подмножество сведений, предоставляемых **SQLGetInfo** в ODBC.  
   
 ## <a name="permissions"></a>Разрешения  
