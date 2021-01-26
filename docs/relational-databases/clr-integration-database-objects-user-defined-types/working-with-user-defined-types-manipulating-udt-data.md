@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 17913dab743f1aaaa7672ce855aa85ce8434f3c0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d23880a7ea6a1e8f4c1beccc5ec82f40303b9b76
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727755"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783652"
 ---
 # <a name="working-with-user-defined-types---manipulating-udt-data"></a>Работа с определяемыми пользователем типами — обработка данных определяемого пользователем типа
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -130,7 +130,7 @@ SELECT @PointValue.ToString() AS PointValue;
  Различие между использованием инструкций SELECT и SET для присваиваний значений переменных состоит в том, что SELECT позволяет присваивать значения нескольких переменных в одной инструкции SELECT, в то время как синтаксис SET требует для каждого присваивания переменной отдельной инструкции SET.  
   
 ## <a name="comparing-data"></a>Сравнение данных  
- Операторы сравнения можно использовать для сравнения значений в определяемом пользователем типе, если для свойства **IsByteOrdered** задано **значение true** при определении класса. Дополнительные сведения см. [в разделе Создание определяемого пользователем типа](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md).  
+ Операторы сравнения можно использовать для сравнения значений в определяемом пользователем типе, если для свойства **IsByteOrdered** задано **значение true** при определении класса. Дополнительные сведения см. [в разделе Создание типа User-Defined](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md).  
   
 ```sql  
 SELECT ID, PointValue.ToString() AS Points   
@@ -157,7 +157,7 @@ WHERE PointValue = @ComparePoint;
 ```  
   
 ## <a name="invoking-udt-methods"></a>Вызов методов определяемого пользователем типа  
- Можно также вызывать методы, которые определены в определяемом пользователем типе [!INCLUDE[tsql](../../includes/tsql-md.md)]. Класс **Point** содержит три метода, **Distance**, **дистанцефром**и **дистанцефромкси**. Примеры кода, определяющие эти три метода, см. в разделе [программирование определяемых пользователем типов](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
+ Можно также вызывать методы, которые определены в определяемом пользователем типе [!INCLUDE[tsql](../../includes/tsql-md.md)]. Класс **Point** содержит три метода, **Distance**, **дистанцефром** и **дистанцефромкси**. Примеры кода, определяющие эти три метода, см. в разделе [кодирование User-Defined типов](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
   
  Следующая [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкция вызывает метод **PointValue. Distance** :  
   
@@ -232,7 +232,7 @@ WHERE PointValue = '3,4';
 ```  
   
 ### <a name="updating-limitations"></a>Ограничения обновлений  
- Нельзя обновить несколько свойств за раз с помощью инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)]. Например, следующая инструкция UPDATE выполняется с ошибкой, так как нельзя использовать одно и то же имя столбца дважды в одной инструкции UDATE.  
+ Нельзя обновить несколько свойств за раз с помощью инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)]. Например, следующая инструкция UPDATE завершается ошибкой, поскольку одно и то же имя столбца нельзя использовать дважды в одной инструкции UPDATE.  
   
 ```sql  
 UPDATE dbo.Points  
@@ -264,7 +264,7 @@ SET PointValue = null
 WHERE ID = 2  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Работа с определяемыми пользователем типами в SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)  
   
   
