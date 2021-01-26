@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: abab816f9248d1981d62bfeb313130a8b71c4256
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 6f29575ba7d133ddbfb30ef470238b5991162a7d
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641761"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783374"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>Используйте диалоговое окно «Создание группы доступности» (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Данный раздел содержит сведения об использовании диалогового окна **Новая группа доступности** в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] для создания группы доступности AlwaysOn в экземплярах [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , которые включены для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. *Группа доступности* определяет набор пользовательских баз данных, которые будут действовать при сбое как единое целое, и набор партнеров по обеспечению отработки отказа, называемых *репликами доступности* и поддерживающих отработку отказа.  
+  Данный раздел содержит сведения об использовании диалогового окна **Новая группа доступности** в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] для создания группы доступности AlwaysOn в экземплярах [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] , которые включены для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. *Группа доступности* определяет набор пользовательских баз данных, которые будут действовать при сбое как единое целое, и набор партнеров по обеспечению отработки отказа, называемых *репликами доступности* и поддерживающих отработку отказа.  
   
 > [!NOTE]  
 >  Базовые сведения о группах доступности см. в разделе [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  

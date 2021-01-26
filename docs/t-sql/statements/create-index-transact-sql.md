@@ -55,12 +55,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c472b3996683512fb6ac7cd3f001d53ca1fd73ae
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 3f1322f21ed7ad3f09f30a0f5a5e71e5614a8d47
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170686"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766238"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -642,7 +642,7 @@ REBUILD WITH
 
 Индексированные представления могут создаваться для секционированных таблиц таким же образом, как и индексы для таблиц. Дополнительные сведения о секционированных индексах см. в статьях [Секционированные таблицы и индексы](../../relational-databases/partitions/partitioned-tables-and-indexes.md) и [Руководство по архитектуре и разработке индексов SQL Server](../../relational-databases/sql-server-index-design-guide.md).
 
-Статистические данные в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] не создаются путем сканирования всех строк таблицы при создании или перестроении секционированного индекса. Вместо этого оптимизатор запросов использует для создания статистики алгоритм выборки по умолчанию. Для получения статистики по секционированным индексам путем сканирования всех строк таблицы используйте инструкции `CREATE STATISTICS` или `UPDATE STATISTICS` с предложением `FULLSCAN`.
+Статистические данные в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] не создаются путем сканирования всех строк таблицы при создании или перестроении секционированного индекса. Вместо этого оптимизатор запросов использует для создания статистики алгоритм выборки по умолчанию. Для получения статистики по секционированным индексам путем сканирования всех строк таблицы используйте инструкции `CREATE STATISTICS` или `UPDATE STATISTICS` с предложением `FULLSCAN`.
 
 ## <a name="filtered-indexes"></a>Отфильтрованные индексы
 Отфильтрованный индекс является оптимизированным некластеризованным индексом, предназначенным для запросов, выбирающих небольшой процент строк таблицы. Чтобы проиндексировать часть данных таблицы, в нем используется предикат фильтра. Правильно составленный отфильтрованный индекс может увеличить скорость выполнения запроса, уменьшить стоимость хранения и обслуживания.

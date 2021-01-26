@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 59b0e82558e14e29e4fad69ddc86b76d982a634a
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 44571469d7b684437dbcbd836080e2cc9a80ef56
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171106"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783061"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>Использование мастера групп доступности (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  В этом разделе описывается использование **мастера создания групп доступности** (в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]) для создания и настройки группы доступности AlwaysOn в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. *Группа доступности* определяет набор пользовательских баз данных, которые будут действовать при сбое как единое целое, и набор партнеров по обеспечению отработки отказа, называемых *репликами доступности* и поддерживающих отработку отказа.  
+  В этом разделе описывается использование **мастера создания групп доступности** (в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]) для создания и настройки группы доступности AlwaysOn в [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. *Группа доступности* определяет набор пользовательских баз данных, которые будут действовать при сбое как единое целое, и набор партнеров по обеспечению отработки отказа, называемых *репликами доступности* и поддерживающих отработку отказа.  
   
 > [!NOTE]  
 >  Базовые сведения о группах доступности см. в разделе [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  

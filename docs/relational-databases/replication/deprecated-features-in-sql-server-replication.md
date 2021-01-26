@@ -14,16 +14,16 @@ ms.assetid: 46bd3edd-d6de-40a6-a015-21cce8321feb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016
-ms.openlocfilehash: 347400c7cf0064015ad5a593edec478f2114906c
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 0ae8ef705174512111e30223a68c824daa42ffce
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170266"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766454"
 ---
 # <a name="deprecated-features-in-sql-server-replication"></a>Устаревшие функции репликации SQL Server
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  В этом разделе описаны устаревшие компоненты репликации, по-прежнему доступные в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Эти функции будут удалены в следующем выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Не следует использовать устаревшие функции в новых приложениях.  
+  В этом разделе описаны устаревшие компоненты репликации, по-прежнему доступные в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Эти функции будут удалены в следующем выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Не следует использовать устаревшие функции в новых приложениях.  
   
 ## <a name="items-deprecated-in-sssql15"></a>Элементы, нерекомендуемые в [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]  
   

@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 8fdc782ce65464c490305291b426fe82a972cd5c
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: b30a3004ccf0d5bafa94ae9c601db287a5eef288
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643520"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783321"
 ---
 # <a name="what-is-an-always-on-availability-group"></a>Что такое группа доступности Always On?
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
- В этом разделе рассматриваются основные понятия [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , которые имеют большое значение для настройки групп доступности и управления группами доступности в среде [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Сводное описание преимуществ групп доступности и общие сведения по терминологии [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в разделе [Группы доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
+ В этом разделе рассматриваются основные понятия [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , которые имеют большое значение для настройки групп доступности и управления группами доступности в среде [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. Сводное описание преимуществ групп доступности и общие сведения по терминологии [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в разделе [Группы доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
  *Группа доступности* поддерживает реплицированную среду для дискретного набора пользовательских баз данных, известных как *базы данных доступности*. Можно создать группу доступности для обеспечения высокой доступности (HA) или для чтения и масштабирования. Группа доступности HA — это группа баз данных, для которых отработка отказа выполняется одновременно. Группа доступности для чтения и масштабирования — это группа баз данных, которые копируются на другие экземпляры SQL Server для рабочей нагрузки только для чтения. Группа доступности поддерживает один набор баз данных-источников и до восьми наборов соответствующих баз данных-получателей. Базы данных-получатели *не являются* резервными копиями. Продолжайте регулярно создавать резервные копии баз данных и их журналов транзакций.  
   

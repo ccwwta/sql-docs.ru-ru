@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 077adebe-0e3f-42a5-a75e-5e6d04847e2b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ad4989bc64fa9460a97a0e4363deddb74605e9e1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ffc46323f8f3fb783b4a06836f66c535e145a04e
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785694"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783127"
 ---
 # <a name="configure-the-remote-login-timeout-server-configuration-option"></a>Настройка параметра конфигурации сервера remote login timeout
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  В этом разделе описываются способы настройки параметра конфигурации сервера **remote login timeout** в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Параметр **remote login timeout** указывает время ожидания в секундах до возврата после неуспешной попытки входа на удаленный сервер. Например, при попытке входа на удаленный сервер, который вышел из строя, не придется ждать неопределенно долго, пока компьютер не прекратит попытки войти на сервер. Это обеспечивается заданием параметра **remote login timeout** . Значение по умолчанию для данного параметра равно 10 секунд. Значение 0 означает бесконечное ожидание.  
+  В этом разделе описываются способы настройки параметра конфигурации сервера **remote login timeout** в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Параметр **remote login timeout** указывает время ожидания в секундах до возврата после неуспешной попытки входа на удаленный сервер. Например, при попытке входа на удаленный сервер, который вышел из строя, не придется ждать неопределенно долго, пока компьютер не прекратит попытки войти на сервер. Это обеспечивается заданием параметра **remote login timeout** . Значение по умолчанию для данного параметра равно 10 секунд. Значение 0 означает бесконечное ожидание.  
   
 > [!NOTE]  
 >  В [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]значение по умолчанию для данного параметра составляет 20 секунд.  
@@ -63,7 +63,7 @@ ms.locfileid: "85785694"
   
 2.  Щелкните узел **Дополнительно** .  
   
-3.  В разделе **Сеть**выберите значение для поля **Время ожидания удаленного входа** .  
+3.  В разделе **Сеть** выберите значение для поля **Время ожидания удаленного входа** .  
   
      Используйте параметр **remote login timeout** , чтобы указать количество секунд ожидания перед возвратом сообщения о неудачной попытке входа на удаленный сервер.  
   

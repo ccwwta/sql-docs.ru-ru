@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: b0cf0f86-7652-4574-a9fb-908e10d03973
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 98c7ad618b3691912b183d19a9a62dea1548071e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a30c2cb2955ef82380bde00714098afec153ed95
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85697130"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783698"
 ---
 # <a name="configure-the-locks-server-configuration-option"></a>Настройка параметра конфигурации сервера locks
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  В этом разделе описывается настройка параметра конфигурации сервера **locks** в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Параметр **locks** устанавливает максимальное число доступных блокировок, ограничивая таким образом объем памяти, используемый для них в компоненте [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Значение 0 (по умолчанию) позволяет компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)] динамически выделять и освобождать структуры блокировок в зависимости от изменяющихся системных требований.  
+  В этом разделе описывается настройка параметра конфигурации сервера **locks** в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Параметр **locks** устанавливает максимальное число доступных блокировок, ограничивая таким образом объем памяти, используемый для них в компоненте [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Значение 0 (по умолчанию) позволяет компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)] динамически выделять и освобождать структуры блокировок в зависимости от изменяющихся системных требований.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
@@ -71,7 +71,7 @@ ms.locfileid: "85697130"
   
 2.  Щелкните узел **Дополнительно** .  
   
-3.  В разделе **Параллелизм**введите нужное значение параметра **locks** .  
+3.  В разделе **Параллелизм** введите нужное значение параметра **locks** .  
   
      Используйте параметр **locks** для указания максимального числа доступных блокировок и, соответственно, для ограничения объема памяти, которую им выделяет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

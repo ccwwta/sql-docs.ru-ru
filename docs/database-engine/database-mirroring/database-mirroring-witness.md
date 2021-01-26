@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b2fe841ef1b914f275878fa61ad40fe2a016a4a5
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: d3585a187d11ee97e409d196c81ddb00643bb3ac
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97644084"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98782976"
 ---
 # <a name="database-mirroring-witness"></a>Database Mirroring Witness
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "97644084"
   
  ![Экземпляр следящего сервера для двух баз данных](../../database-engine/database-mirroring/media/dbm-witness-in-2-sessions.gif "Экземпляр следящего сервера для двух баз данных")  
   
- Кроме того, один и тот же экземпляр сервера может одновременно выступать в качестве следящего сервера в одних сеансах и в качестве участника зеркального отображения в других. Однако на практике экземпляр сервера обычно выступает либо в качестве следящего сервера, либо в качестве участника зеркального отображения, так как для обслуживания производственной базы данных участники требуют мощных и сложных систем с серьезными требованиями к оборудованию, в то время как следящий сервер может работать на любой доступной системе Windows, обеспечивающей работу [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Кроме того, один и тот же экземпляр сервера может одновременно выступать в качестве следящего сервера в одних сеансах и в качестве участника зеркального отображения в других. Однако на практике экземпляр сервера обычно выступает либо в качестве следящего сервера, либо в качестве участника зеркального отображения, так как для обслуживания производственной базы данных участники требуют мощных и сложных систем с серьезными требованиями к оборудованию, в то время как следящий сервер может работать на любой доступной системе Windows, обеспечивающей работу [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 ##  <a name="software-and-hardware-recommendations"></a><a name="SwHwRecommendations"></a> Рекомендации к выбору оборудования и программного обеспечения  
  Рекомендуется располагать следящий сервер на отдельном компьютере, который не используется участниками зеркального отображения. Участники зеркального отображения баз данных поддерживаются только выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. Однако следящие серверы поддерживаются также в выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Workgroup и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Кроме как во время обновления предыдущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на всех экземплярах серверов в сеансе зеркального отображения должна работать одна и та же версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Например, в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] следящий сервер при обновлении от конфигурации зеркального отображения [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] поддерживается, но не может быть добавлен в существующую или новую конфигурацию зеркального отображения [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или более поздних версий.  

@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e4a2ca1eea0ec4b42bba65b62525bb6d86e52c88
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b178e38f6e59499ddf74e9a8aaec037bbaa4d442
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85651350"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783452"
 ---
 # <a name="scm-services---connect-to-another-computer"></a>Службы SCM. Подключение к другому компьютеру
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-В этом разделе описывается подключение к другому компьютеру в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Выполните первую процедуру, чтобы открыть консоль управления [!INCLUDE[msCoName](../../includes/msconame-md.md)] «Управление компьютером», подключитесь к компьютеру и разверните дерево «Службы и приложения». Выполните вторую процедуру для создания файла с ссылкой на диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на удаленном компьютере.
+В этом разделе описывается подключение к другому компьютеру в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Выполните первую процедуру, чтобы открыть консоль управления [!INCLUDE[msCoName](../../includes/msconame-md.md)] «Управление компьютером», подключитесь к компьютеру и разверните дерево «Службы и приложения». Выполните вторую процедуру для создания файла с ссылкой на диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на удаленном компьютере.
 
 > [!NOTE]
 > Некоторые действия не могут выполняться с помощью Configuration Manager при удаленном подключении.
@@ -57,7 +57,7 @@ ms.locfileid: "85651350"
 9. Раскройте узел **Управление компьютером (** _\<computer name>_ **)** , а затем папку **Службы и приложения**.
 10. Щелкните правой кнопкой мыши **Диспетчер конфигурации SQL Server**, затем щелкните **Новое окно отсюда**.
 11. В меню **Окно** выберите **Корень консоли**, чтобы вернуться в первое окно, и удалите его.
-12. В меню **Файл** выберите **Сохранить как**и сохраните этот файл в нужной папке с соответствующим именем, с расширением **.msc** . Закройте консоль управления (MMC) [!INCLUDE[msCoName](../../includes/msconame-md.md)] .
+12. В меню **Файл** выберите **Сохранить как** и сохраните этот файл в нужной папке с соответствующим именем, с расширением **.msc** . Закройте консоль управления (MMC) [!INCLUDE[msCoName](../../includes/msconame-md.md)] .
 13. Чтобы открыть диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на целевом компьютере, дважды щелкните этот файл. При желании сохраните ссылку на этот файл на рабочем столе или в меню **Пуск** .
 
 > [!CAUTION]

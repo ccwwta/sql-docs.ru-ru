@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1fa476693286b32cb2910526bb0ea7431faa5120
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 1996d9610067e7db52c538b20df0680fbc741548
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642168"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766389"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>Подготовка зеркальной базы данных к зеркальному отображению (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Перед началом сеанса зеркального отображения базы данных ее владелец или системный администратор должен убедиться, что зеркальная база данных создана и готова к работе. Чтобы создать новую зеркальную базу данных, требуется как минимум наличие полной резервной копии основной базы данных и последующих резервных копий журналов. Они восстанавливаются на экземпляре зеркального сервера с параметром WITH NORECOVERY.  
   
- В этом разделе описано, как подготовить зеркальную базу данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ В этом разделе описано, как подготовить зеркальную базу данных в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 -   **Перед началом работы**  
   
@@ -52,7 +52,7 @@ ms.locfileid: "97642168"
   
 -   На основном сервере и на экземплярах зеркального сервера должна работать одна и та же версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для зеркального сервера возможна более поздняя версия SQL Server, но эта конфигурация рекомендуется только во время процесса тщательно спланированного обновления. В такой конфигурации есть риск автоматического перехода на другой ресурс, в котором движение данных автоматически приостанавливается, так как данные нельзя переместить на более раннюю версию SQL Server. Дополнительные сведения см. в статье [Upgrading Mirrored Instances](../../database-engine/database-mirroring/upgrading-mirrored-instances.md).  
   
--   На основном сервере и на экземплярах зеркального сервера должен работать один и тот же выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о поддержке зеркального отображения базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md).  
+-   На основном сервере и на экземплярах зеркального сервера должен работать один и тот же выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о поддержке зеркального отображения базы данных в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md).  
   
 -   База данных должна использовать модель полного восстановления.  
   

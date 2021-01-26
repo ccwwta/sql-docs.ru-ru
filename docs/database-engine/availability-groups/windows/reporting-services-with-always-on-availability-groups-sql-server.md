@@ -14,24 +14,24 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: cawrites
 ms.author: chadam
 manager: erikre
-ms.openlocfilehash: 306a200cadc535ea9da3d5d21dcd74fb15cf278c
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: cf6d3f8e77591e9791fe2e8dc57175f1393716ff
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641531"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783271"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Службы Reporting Services с группами доступности AlwaysOn (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-  В этом разделе содержатся сведения о настройке компонента [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] для работы с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (группами доступности) в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Существует три варианта использования служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] и [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] : базы данных для источников данных отчетов, базы данных сервера отчетов и конструирование отчетов. Поддерживаемые функции и необходимая конфигурация для разных вариантов использования будут различными.  
+  В этом разделе содержатся сведения о настройке компонента [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] для работы с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (группами доступности) в [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. Существует три варианта использования служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] и [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] : базы данных для источников данных отчетов, базы данных сервера отчетов и конструирование отчетов. Поддерживаемые функции и необходимая конфигурация для разных вариантов использования будут различными.  
   
  Основное преимущество применения [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] с источниками данных служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] заключается в возможности использования доступных для чтения вторичных реплик в качестве источников данных для отчетов, при этом вторичные реплики продолжают обеспечивать отработку отказа для базы данных-источника.  
   
  Общие сведения о [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в разделе [Вопросы и ответы по группам доступности AlwaysOn для SQL Server 2012 (../../../sql-server/index.yml)](../../../sql-server/index.yml).  
 
 ##  <a name="requirements-for-using-reporting-services-and-always-on-availability-groups"></a><a name="bkmk_requirements"></a> Требования, которые необходимо выполнить для использования служб Reporting Services и групп доступности AlwaysOn  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] и Сервер отчетов Microsoft Power BI использует .NET Framework 4.0 и поддерживает свойства строки соединения [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] при работе с источниками данных.  
+ [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] и Сервер отчетов Microsoft Power BI использует .NET Framework 4.0 и поддерживает свойства строки соединения [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] при работе с источниками данных.  
   
  Чтобы использовать [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] в связке с  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 или более ранней версии, следует загрузить и установить исправление для .Net 3.5 SP1. Это исправление добавляет в клиент SQL Server поддержку компонентов групп доступности, а также поддержку свойств строки подключения **ApplicationIntent** и **MultiSubnetFailover**. Если не установить это исправление на все компьютеры, на которых размещен сервер отчетов, то пользователи, пытающиеся просмотреть отчеты, будут видеть сообщение об ошибке примерно следующего содержания, которое также будет записываться в журнал трассировки сервера отчетов.  
   

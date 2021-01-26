@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 680273a6bab1283be56d130c84b4c156d8fcd280
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: c34c9359534b3ec59aba824dccb649a9168fe725
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97644345"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783618"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Подключение клиентов к сеансу зеркального отображения базы данных (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Чтобы подключиться к сеансу зеркального отображения базы данных, клиент может использовать либо программу собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , либо поставщика данных .NET Framework для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если эти поставщики доступа к данным настроены для использования базы данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , то они поддерживают зеркальное отображение базы данных. Дополнительные сведения о замечаниях по программированию при использовании зеркальной базы данных см. в разделе [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). Кроме того, текущий экземпляр основного сервера должен быть доступен, и имя входа клиента должно быть создано на экземпляре сервера. Дополнительные сведения см. в статье [Диагностика пользователей, утративших связь с учетной записью (SQL Server)](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Клиентские соединения с сеансом зеркального отображения базы данных не задействуют экземпляр следящего сервера, если он существует.  
+  Чтобы подключиться к сеансу зеркального отображения базы данных, клиент может использовать либо программу собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , либо поставщика данных .NET Framework для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если эти поставщики доступа к данным настроены для использования базы данных [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] , то они поддерживают зеркальное отображение базы данных. Дополнительные сведения о замечаниях по программированию при использовании зеркальной базы данных см. в разделе [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). Кроме того, текущий экземпляр основного сервера должен быть доступен, и имя входа клиента должно быть создано на экземпляре сервера. Дополнительные сведения см. в статье [Диагностика пользователей, утративших связь с учетной записью (SQL Server)](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Клиентские соединения с сеансом зеркального отображения базы данных не задействуют экземпляр следящего сервера, если он существует.  
   
   
 ##  <a name="making-the-initial-connection-to-a-database-mirroring-session"></a><a name="InitialConnection"></a> Установка первоначального соединения с сеансом зеркального отображения базы данных  

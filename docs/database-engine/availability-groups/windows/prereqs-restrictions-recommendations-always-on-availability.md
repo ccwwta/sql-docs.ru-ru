@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: ec3a84dc54dcaf373f8fd817c259602c7901410d
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: e1a2fe365ff2cf40e1dd7e08e113a586e7c2b666
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642542"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783524"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Предварительные требования, ограничения и рекомендации для групп доступности Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "97642542"
 >  Перед началом развертывания [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]настоятельно рекомендуется ознакомиться со всеми подразделами данного раздела.  
     
 ##  <a name="net-hotfixes-that-support-availability-groups"></a><a name="DotNetHotfixes"></a> Исправления .NET, поддерживающие группы доступности  
- Возможно, потребуется установка дополнительных исправлений .NET, в зависимости от того, какие компоненты и возможности [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] будут использоваться вместе с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Исправления приведены в следующей таблице. Исправления можно устанавливать в любом порядке.  
+ Возможно, потребуется установка дополнительных исправлений .NET, в зависимости от того, какие компоненты и возможности [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] будут использоваться вместе с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Исправления приведены в следующей таблице. Исправления можно устанавливать в любом порядке.  
   
 |Зависимый компонент|Исправление|Ссылка|  
 |-----------------------|------------|----------|  

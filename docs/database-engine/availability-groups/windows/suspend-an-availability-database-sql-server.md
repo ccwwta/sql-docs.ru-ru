@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: f918daa031b25ba8f1110dc9f2aaeaebef0a9361
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 4b8b491d5f5caf743ab94367eaaacfe3de4864ad
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643007"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783721"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Приостановка базы данных доступности (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  В [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] можно приостановить базу данных доступности с помощью [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Обратите внимание, что команда приостановки должна выполняться на экземпляре сервера, содержащем базу данных, которая приостанавливается или возобновляется.  
+  В [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] можно приостановить базу данных доступности с помощью [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. Обратите внимание, что команда приостановки должна выполняться на экземпляре сервера, содержащем базу данных, которая приостанавливается или возобновляется.  
   
  Результат выполнения команды приостановки зависит от того, над какой базой данных выполняется команда: над базой данных-получателем или источником.  
   

@@ -15,19 +15,19 @@ f1_keywords:
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 7d7b758b1d1ee8fba24a6f4e23568f8fdc6f060c
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 48a70988539ee9a35cd8dbd933ee7c6f6f752609
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642967"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783741"
 ---
 # <a name="summary-page-always-on-availability-group-wizards"></a>Страница "Сводка" (мастера групп доступности AlwaysOn)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 <a name="Top"></a>  
   
-  В этом разделе описываются параметры, приведенные на странице **Сводка** . Эта тема относится к [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] и [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. На этой странице приведены заданные пользователем параметры новой группы доступности. Чтобы внести одно или несколько изменений, нажмите кнопку **Назад** , чтобы вернуться на нужную страницу или страницы. После внесения необходимых изменений нажмите кнопку **Далее** , чтобы вернуться на страницу **Сводка** . После проверки выбранных параметров нажмите кнопку **Готово**.  
+  В этом разделе описываются параметры, приведенные на странице **Сводка** . Эта тема относится к [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] и [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] в [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]. На этой странице приведены заданные пользователем параметры новой группы доступности. Чтобы внести одно или несколько изменений, нажмите кнопку **Назад** , чтобы вернуться на нужную страницу или страницы. После внесения необходимых изменений нажмите кнопку **Далее** , чтобы вернуться на страницу **Сводка** . После проверки выбранных параметров нажмите кнопку **Готово**.  
   
 ##  <a name="summary-page-options"></a><a name="PageOptions"></a> Параметры страницы «Сводка»  
  **Скрипт**  
