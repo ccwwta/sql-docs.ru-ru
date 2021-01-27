@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1f17681ffbb922b25cffc6b21ecf2f6317d400db
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: f0a05127f4f6ddcd70fbb00cc5ae3bd2d22fe152
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753798"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813311"
 ---
 # <a name="sp_addumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [текущей версии](../../sql-server/what-s-new-in-sql-server-2016.md)).  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [текущей версии](/troubleshoot/sql/general/determine-version-edition-update-level)).  
 
 Добавляет в экземпляр компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устройство резервного копирования.  
   
@@ -61,7 +61,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
  При создании устройства резервного копирования в удаленном сетевом каталоге убедитесь, что имя входа, под которым запущен компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)], имеет на удаленном компьютере необходимые права на запись.  
   
- При добавлении ленточного устройства этот параметр должен быть физическим именем, назначенным локальному ленточному устройству системой Windows. Например, ** \\ \\ .\TAPE0** для первого ленточного устройства на компьютере. Ленточное устройство должно быть подключено к серверному компьютеру и его нельзя использовать удаленно. Имена команд, содержащие символы, отличные от алфавитно-цифровых, следует заключать в кавычки.  
+ При добавлении ленточного устройства этот параметр должен быть физическим именем, назначенным локальному ленточному устройству системой Windows. Например, **\\ \\ .\TAPE0** для первого ленточного устройства на компьютере. Ленточное устройство должно быть подключено к серверному компьютеру и его нельзя использовать удаленно. Имена команд, содержащие символы, отличные от алфавитно-цифровых, следует заключать в кавычки.  
   
 > [!NOTE]  
 >  Эта процедура вносит указанное физическое имя в каталог. Она не пытается создать это устройство или произвести доступ к нему.  

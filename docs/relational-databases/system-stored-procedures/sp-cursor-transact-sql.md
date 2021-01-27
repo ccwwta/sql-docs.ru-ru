@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 62a4904a608ccfd5ed02cbf21c3342619ea32e8f
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 07dcf9bfc42705f2ad49e3ce476ffcd8ad70f052
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810170"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813280"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "91810170"
   
 ||  
 |-|  
-|**Применимо к**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [текущей версии](../../sql-server/what-s-new-in-sql-server-2016.md)).|  
+|**Применимо к**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [текущей версии](/troubleshoot/sql/general/determine-version-edition-update-level)).|  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -99,7 +99,7 @@ sp_cursor  cursor, optype, rownum, table
 ## <a name="return-code-values"></a>Значения кода возврата  
  При использовании RPC операция позиционированного удаления или обновления с буфером номер 0 будет возвращать ЗАВЕРШЕНное сообщение с количеством строк *0* (сбой) или 1 (успешно) для каждой строки в буфере выборки.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="optype-parameter"></a>Параметр optype  
  За исключением сочетаний SETPOSITION с UPDATE, DELETE, REFRESH или LOCK; или АБСОЛЮТная с помощью UPDATE или DELETE, значения *optype* являются взаимоисключающими.  
