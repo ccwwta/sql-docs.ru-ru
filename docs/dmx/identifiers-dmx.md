@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3a779e16b06b00cb925f28e8da34ce3959d7dc7e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d802cb37a972eb498b485d7253a82b8445f4566d
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88352890"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813480"
 ---
 # <a name="identifiers-dmx"></a>Идентификаторы (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -76,7 +76,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
   
 -   При использовании зарезервированных слов для имен объектов или их частей.  
   
-     Не рекомендуется использование зарезервированных ключевых слов в качестве имен объектов. Базы данных, которые можно обновить с предыдущих версий, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] могут содержать идентификаторы, содержащие слова, которые не были зарезервированы в более ранней версии [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , но являются зарезервированными словами для [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Идентификатор с разделителем может использоваться для ссылки на подобный объект до изменения его имени.  
+     Не рекомендуется использование зарезервированных ключевых слов в качестве имен объектов. Базы данных, которые можно обновить с предыдущих версий, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] могут содержать идентификаторы, содержащие слова, которые не были зарезервированы в более ранней версии [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , но являются зарезервированными словами для [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Идентификатор с разделителем может использоваться для ссылки на подобный объект до изменения его имени.  
   
 -   Использование символов, которые не указаны в качестве сложных идентификаторов.  
   

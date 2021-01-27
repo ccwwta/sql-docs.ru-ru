@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_index_operational_stats (Transact-SQL)
-title: sys.dm_db_index_operational_stats (Transact-SQL) | Документация Майкрософт
+title: sys.dm_db_index_operational_stats (Transact-SQL)
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,16 +17,15 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.dm_db_index_operational_stats dynamic management function
-ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 819d0388ca7b358bb9b6cf455cfb061a1a38fd9a
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 2d8213f841a04342bad282d170ec76c13c120386
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172176"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813588"
 ---
 # <a name="sysdm_db_index_operational_stats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -91,7 +90,7 @@ sys.dm_db_index_operational_stats (
 |**object_id**|**int**|Идентификатор таблицы или представления.|    
 |**index_id**|**int**|Идентификатор индекса или кучи.<br /><br /> 0 = куча;| 
 |**partition_number**|**int**|Номер секции внутри индекса или кучи (нумерация начинается с 1).| 
-|**hobt_id**|**bigint**|**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] до [текущей версии](../../sql-server/what-s-new-in-sql-server-2016.md)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> Идентификатор набора строк куча или сбалансированное дерево данных, который отслеживает внутренние данные для индекса columnstore.<br /><br /> NULL — это не внутренний набор строк columnstore.<br /><br /> Дополнительные сведения см. в разделе [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
+|**hobt_id**|**bigint**|[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Идентификатор набора строк куча или сбалансированное дерево данных, который отслеживает внутренние данные для индекса columnstore.<br /><br /> NULL — это не внутренний набор строк columnstore.<br /><br /> Дополнительные сведения см. в разделе [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
 |**leaf_insert_count**|**bigint**|Совокупное количество вставок конечного уровня.|    
 |**leaf_delete_count**|**bigint**|Совокупное количество удалений конечного уровня. leaf_delete_count увеличивается только для удаленных записей, которые сначала не помечены как фантомные. Для удаленных записей, которые сначала являются фантомными, **leaf_ghost_count** увеличивается.|    
 |**leaf_update_count**|**bigint**|Совокупное количество обновлений конечного уровня.|    
@@ -133,7 +132,7 @@ sys.dm_db_index_operational_stats (
 |**page_compression_attempt_count**|**bigint**|Количество страниц, которые были оценены как пригодные для сжатия на уровне страницы для конкретных секций таблицы, индекса или индексированного представления. Включает несжатые страницы, поскольку это не привело бы к значительной экономии. Всегда 0 для индекса columnstore.|    
 |**page_compression_success_count**|**bigint**|Количество страниц данных, которые были сжаты с помощью сжатия PAGE для конкретной секции таблицы, индекса или индексированного представления. Всегда 0 для индекса columnstore.|    
     
-## <a name="remarks"></a>Примечания    
+## <a name="remarks"></a>Remarks    
  Этот объект динамического управления не принимает Коррелированные параметры от `CROSS APPLY` и `OUTER APPLY` .    
     
  Для отслеживания продолжительности ожидания пользователями считывания из таблицы, индекса или секции и записи в таблицу, индекс или секцию, а также для определения таблиц или индексов, в которых наблюдается значительная интенсивность операций ввода-вывода или присутствуют перегруженные участки, можно использовать представление **sys.dm_db_index_operational_stats**.    
