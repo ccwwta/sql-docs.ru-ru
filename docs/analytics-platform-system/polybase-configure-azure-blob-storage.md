@@ -9,16 +9,16 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 52ad8a4e8c335eea412264b69d87453a5ce84104
-ms.sourcegitcommit: 36fe62a3ccf34979bfde3e192cfa778505add465
+ms.openlocfilehash: 59f9e29940947c1afcf3321fe138030a3fb0d5f1
+ms.sourcegitcommit: 76c5e10704e3624b538b653cf0352e606b6346d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "94520979"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98924705"
 ---
-# <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Настройка Polybase для доступа к внешним данным в хранилище BLOB-объектов Azure
+# <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Настройка PolyBase для доступа к внешним данным в хранилище BLOB-объектов Azure
 
-В этой статье объясняется, как использовать Polybase на экземпляре SQL Server для запроса внешних данных в хранилище BLOB-объектов Azure.
+В этой статье описывается использование PolyBase в экземпляре SQL Server для запроса внешних данных в хранилище BLOB-объектов Azure.
 
 > [!NOTE]
 > В настоящее время APS поддерживает только стандартное локально избыточное хранилище BLOB-объектов (LRS) общего назначения версии 1.
@@ -32,12 +32,12 @@ ms.locfileid: "94520979"
 
 Во-первых, настройте ТД для использования хранилища BLOB-объектов Azure.
 
-1. Запустите [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) с параметром "подключение Hadoop", установленным в поставщик хранилища BLOB-объектов Azure. Значение для поставщика см. в статье [Конфигурация подключения к PolyBase (Transact-SQL)](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
+1. Запустите [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md), задав для параметра hadoop connectivity значение поставщика хранилища BLOB-объектов Azure. Значение для поставщика см. в статье [Конфигурация подключения к PolyBase (Transact-SQL)](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
 
    ```sql  
    -- Values map to various external data sources.  
    -- Example: value 7 stands for Hortonworks HDP 2.1 to 2.6 on Linux,
-   -- 2.1 to 2.3 on Windows Server, and Azure Blob storage  
+   -- 2.1 to 2.3 on Windows Server, and Azure Blob Storage  
    sp_configure @configname = 'hadoop connectivity', @configvalue = 7;
    GO
 
@@ -66,7 +66,7 @@ ms.locfileid: "94520979"
    WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';
    ```
 
-1. Создайте внешний источник данных с параметром [создать внешний источник данных](../t-sql/statements/create-external-data-source-transact-sql.md).
+1. Создайте внешний источник данных с помощью инструкции [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
 
    ```sql
    -- LOCATION:  Azure account storage account name and blob container name.  
@@ -81,7 +81,7 @@ ms.locfileid: "94520979"
 1. Создайте формат внешнего файла с помощью инструкции [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md).
 
    ```sql
-   -- FORMAT TYPE: Type of format in Azure Blob storage (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).
+   -- FORMAT TYPE: Type of format in Azure Blob Storage (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).
    -- In this example, the files are pipe (|) delimited
    CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (  
          FORMAT_TYPE = DELIMITEDTEXT,
@@ -116,7 +116,7 @@ ms.locfileid: "94520979"
 
 Есть три функции, которые выполняет PolyBase:  
   
-- Нерегламентированные запросы к внешним таблицам.  
+- отправка нерегламентированных запросов к внешним таблицам;  
 - импорт данных;  
 - экспорт данных.  
 
@@ -158,7 +158,7 @@ ON Insured_Customers.CustomerKey = SensorD.CustomerKey
 Следующий запрос экспортирует данные из ТД в хранилище BLOB-объектов Azure. Его можно использовать для архивации реляционных данных в хранилище BLOB-объектов Azure, в то же время сохраняя их возможность запрашивать.
 
 ```sql
--- Export data: Move old data to Azure Blob storage while keeping it query-able via an external table.  
+-- Export data: Move old data to Azure Blob Storage while keeping it query-able via an external table.  
 CREATE EXTERNAL TABLE [dbo].[FastCustomers2009] 
 WITH (  
       LOCATION='/archive/customer/2009',  
