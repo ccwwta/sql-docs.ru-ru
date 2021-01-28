@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9ac1ddf48ec23f72fcfd500988c9eb05ce0b94ab
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 8d1f8288a0e09c3382c9c31420fb1da6083292f8
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688099"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783503"
 ---
 # <a name="create-database-audit-specification-transact-sql"></a>CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -91,7 +91,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
 ## <a name="permissions"></a>Разрешения  
  Пользователи, имеющие разрешение `ALTER ANY DATABASE AUDIT`, могут создавать спецификации аудита базы данных и привязывать их к любому аудиту.  
   
- После создания спецификации аудита базы данных ее могут просматривать участники с разрешениями `CONTROL SERVER`, `ALTER ANY DATABASE AUDIT` или с учетной записью `sysadmin`.  
+ После создания спецификации аудита базы данных ее могут просматривать пользователи с разрешением `CONTROL SERVER` или с учетной записью `sysadmin`.  
   
 ## <a name="examples"></a>Примеры
 

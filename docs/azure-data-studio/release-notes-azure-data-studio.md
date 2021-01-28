@@ -8,17 +8,25 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 12/9/2020
-ms.openlocfilehash: 796499f38c9af2d7b2f6af8f860bb945d14bdac2
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.date: 1/22/2020
+ms.openlocfilehash: b0455de16e6808f4d2e67113976ae754830881ee
+ms.sourcegitcommit: 2bdf1f1ee88f4fe3e872227d025e965e95d1b2b4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596512"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98711950"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Заметки о выпуске для Azure Data Studio
 
 **[Скачайте и установите последний выпуск.](./download-azure-data-studio.md)**
+
+## <a name="december-2020-hotfix"></a>Декабрь 2020 г. (исправление)
+
+22 января 2020 г. &nbsp; / &nbsp;, версия: 1.25.2
+
+| Изменение | Сведения |
+| ------ | ------- |
+| Исправление ошибки [#13899](https://github.com/microsoft/azuredatastudio/issues/13899)| Прокрутка к соответствующим перекрестным ссылкам в Записных книжках |
 
 ## <a name="december-2020"></a>Декабрь 2020 г.
 

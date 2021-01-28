@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: e109b68dbf9b2e2b1d119f2f676896f5fe682aaf
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: b542b33ee1dc4bf849131f90be0316c32b386879
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172706"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765871"
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>Расположение файлов для экземпляра по умолчанию и именованных экземпляров SQL Server
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -59,14 +59,14 @@ ms.locfileid: "98172706"
   
  Ниже приведены примеры идентификаторов экземпляров по умолчанию для данной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   MSSQL\{nn}.MSSQLSERVER — экземпляр [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] по умолчанию.  
+-   MSSQL\{nn}.MSSQLSERVER — экземпляр [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] по умолчанию.  
   
 -   MSAS\{nn}.MSSQLSERVER — экземпляр по умолчанию служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services.  
   
--   MSSQL\{nn}.MyInstance — именованный экземпляр [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с именем "MyInstance".  
+-   MSSQL\{nn}.MyInstance — именованный экземпляр [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] с именем "MyInstance".  
   
 
- Именованный экземпляр [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , в состав которого входит компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] и службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], имеет имя «MyInstance» и устанавливается каталоге по умолчанию, имеет следующую структуру каталогов.  
+ Именованный экземпляр [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] , в состав которого входит компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] и службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], имеет имя «MyInstance» и устанавливается каталоге по умолчанию, имеет следующую структуру каталогов.  
   
 -   C:\Program Files\Microsoft SQL Server\MSSQL\{nn}.MyInstance\  
   

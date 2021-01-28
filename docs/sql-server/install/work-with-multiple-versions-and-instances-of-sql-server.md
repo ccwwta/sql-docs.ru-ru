@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: eea074af5270046bae6bb153cfb6fe79053335a4
-ms.sourcegitcommit: 3ec49252e82590de0fe559a8574606ae213f6f3b
+ms.openlocfilehash: ce7c337ccd2899afedbc28781c1ed822f04b8202
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97975511"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765665"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>Работа с несколькими версиями и экземплярами SQL Server
 
@@ -108,7 +108,7 @@ ms.locfileid: "97975511"
 
   
 > [!CAUTION]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep не поддерживает параллельную установку подготовленных экземпляров [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с выпущенными ранее версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на том же компьютере. Например, возможность подготавливать экземпляр [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] параллельно с подготовленным экземпляром [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]отсутствует. Однако можно установить несколько подготовленных экземпляров одной и той же основной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параллельно на одном компьютере. Дополнительные сведения см. в разделе [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep не поддерживает параллельную установку подготовленных экземпляров [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] с выпущенными ранее версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на том же компьютере. Однако можно установить несколько подготовленных экземпляров одной и той же основной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параллельно на одном компьютере. Дополнительные сведения см. в разделе [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
 >
 > SQL Server 2016 и более поздних версий нельзя установить параллельно с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на компьютере с Windows Server 2008 R2 Server Core с пакетом обновления 1 (SP1). Дополнительные сведения об установке SQL Server см. в разделе [Установка SQL Server 2016 на Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
   

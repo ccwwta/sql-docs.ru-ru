@@ -40,12 +40,12 @@ ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12bb0423ad450ef94df8767ba8aae10a5c47cade
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a7903d3a208bd08c9ba22d251a0e4124e81725ea
+ms.sourcegitcommit: 2bdf1f1ee88f4fe3e872227d025e965e95d1b2b4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97439089"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98711990"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT — предложение ORDER BY (Transact-SQL)
 
@@ -146,7 +146,7 @@ ORDER BY SchemaName + ''; -- wrong
  В инструкции SELECT TOP (*N*) всегда указывайте предложение ORDER BY. Это единственный способ предсказуемым образом отметить строки, которые были обработаны предложением TOP. Дополнительные сведения см. в разделе [TOP (Transact-SQL)](../../t-sql/queries/top-transact-sql.md).  
   
 ## <a name="interoperability"></a>Совместимость  
- При использовании в инструкции SELECT...INTO предложения ORDER BY для вставки строк из другого источника вставка строк в указанном порядке не гарантируется.  
+ При использовании в инструкции SELECT...INTO или INSERT...SELECT предложения ORDER BY для вставки строк из другого источника вставка строк в указанном порядке не гарантируется.  
   
  Использование OFFSET и FETCH в представлении не приведет к изменению его свойства Updateability.  
   

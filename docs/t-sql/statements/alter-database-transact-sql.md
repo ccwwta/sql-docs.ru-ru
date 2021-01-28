@@ -27,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016'
-ms.openlocfilehash: 9086c0e4dcda0a98daad3e372e719bde7fc628d7
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: a5b5a4174a8faae5c57ed6844e96f52b8f271311
+ms.sourcegitcommit: 2bdf1f1ee88f4fe3e872227d025e965e95d1b2b4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099512"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98712000"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -168,7 +168,7 @@ COLLATE *collation_name*
 **\<delayed_durability_option> ::=**    
 **Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.
 
-Дополнительные сведения см. в статьях [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md) и [Управление устойчивостью транзакций](../../relational-databases/logs/control-transaction-durability.md).
+Дополнительные сведения см. в статьях [Параметры ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) и [Управление устойчивостью транзакций](../../relational-databases/logs/control-transaction-durability.md).
 
 **\<file_and_filegroup_options>::=**    
 Дополнительные сведения см. в статье [Параметры инструкции ALTER DATABASE для файлов и файловых групп (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).
@@ -868,15 +868,33 @@ CURRENT
 
 ## <a name="remarks"></a>Remarks
 
-Чтобы удалить базу данных, используйте инструкцию [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
-Чтобы уменьшить размер базы данных, используйте предложение [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
+- Чтобы удалить базу данных, используйте инструкцию [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).
 
-Инструкция `ALTER DATABASE` должна выполняться в режиме автоматической фиксации (режим управления транзакциями по умолчанию). Инструкция не разрешена в явной или неявной транзакции.
+- Чтобы уменьшить размер базы данных, используйте предложение [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).
 
-Очистка кэша планов становится причиной перекомпиляции всех последующих планов выполнения и приводит к непредвиденному временному снижению производительности обработки запросов. Для каждого удаленного хранилища кэша в кэше планов журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит следующее информационное сообщение: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обнаружил %d экземпляров, записанных на диск хранилищ кэша для хранилища кэша "%s" (части кэша планов) в результате операций по обслуживанию или изменению конфигурации базы данных". Это сообщение добавляется в журнал каждые пять минут при сбросе кэша в течение этого интервала времени.
+- Инструкция `ALTER DATABASE` должна выполняться в режиме автоматической фиксации (режим управления транзакциями по умолчанию). Инструкция не разрешена в явной или неявной транзакции.
 
+- Кэш планов для управляемого экземпляра очищается при установке одного из следующих параметров.
+    - COLLATE
+    - MODIFY FILEGROUP DEFAULT
+    - MODIFY FILEGROUP READ_ONLY
+    - MODIFY FILEGROUP READ_WRITE
+    - MODIFY NAME
+
+    Очистка кэша планов становится причиной перекомпиляции всех последующих планов выполнения и приводит к непредвиденному временному снижению производительности обработки запросов. Для каждого удаленного хранилища кэша в кэше планов журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит следующее информационное сообщение: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обнаружил %d экземпляров, записанных на диск хранилищ кэша для хранилища кэша "%s" (части кэша планов) в результате операций по обслуживанию или изменению конфигурации базы данных". Это сообщение добавляется в журнал каждые пять минут при сбросе кэша в течение этого интервала времени.
 Кроме того, кэш планов сбрасывается, когда выполняется несколько запросов к базе данных с параметрами по умолчанию. Затем база данных уничтожается.
 
+- Для выполнения некоторых инструкций `ALTER DATABASE` требуется монопольная блокировка базы данных. Именно поэтому они могут завершаться сбоем, если другой активный процесс удерживает блокировку базы данных. В подобном случае возвращается ошибка `Msg 5061, Level 16, State 1, Line 38` с сообщением `ALTER DATABASE failed because a lock could not be placed on database '<database name>'. Try again later`. Обычно это временный сбой. Чтобы устранить его после снятия всех блокировок с базы данных, повторно выполните инструкцию ALTER DATABASE, которая завершилась ошибкой. Системное представление `sys.dm_tran_locks` содержит сведения об активных блокировках. Для проверки наличия в базе данных общих или монопольных блокировок используйте приведенный ниже запрос.
+  
+    ```sql
+    SELECT
+        resource_type, resource_database_id, request_mode, request_type, request_status, request_session_id 
+    FROM 
+        sys.dm_tran_locks
+    WHERE
+        resource_database_id = DB_ID('testdb')
+    ```
+  
 ## <a name="viewing-database-information"></a>Просмотр сведений о базе данных
 
 Для возврата сведений о базах данных, файлах и файловых группах можно использовать представления каталогов, системные функции и системные хранимые процедуры.

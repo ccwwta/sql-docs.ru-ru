@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: db77fa77-fedb-40ac-83e6-06343063e518
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ddd4bb610c9ed7d9a5da70c9633c31a86cc5b034
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 66dd3b3b036bdbebcbd19dd52a65d2bf4ac45d1e
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96131286"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783553"
 ---
 # <a name="create-server-audit-specification-transact-sql"></a>CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -66,7 +66,7 @@ FOR SERVER AUDIT audit_name
 ## <a name="permissions"></a>Разрешения  
  Пользователи с разрешением ALTER ANY SERVER AUDIT могут создавать спецификации аудита сервера и привязывать их к любому аудиту.  
   
- После того как создана спецификация аудита сервера, ее могут просмотреть участники с разрешениями CONTROL SERVER или ALTER ANY SERVER AUDIT, учетная запись sysadmin или участники, имеющие явный доступ к аудиту.  
+ После ее создания спецификацию аудита сервера могут просматривать пользователи учетной записи sysadmin, пользователи с разрешением CONTROL SERVER и участники, имеющие явный доступ к аудиту.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается спецификация аудита сервера, называемая `HIPAA_Audit_Specification`, которая выполняет аудит неудачных попыток входа для аудита [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], называемого `HIPAA_Audit`.  

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 44903475ed2202ba3cc40de388ccc00511075dac
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 2d4848a8fa3661abd94ef63f3289261142998409
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088914"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766329"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Шифрование соединений с SQL Server на Linux
 
@@ -42,13 +42,16 @@ ms.locfileid: "88088914"
 - **Создание сертификата** (значение /CN должно соответствовать полному доменному имени вашего узла SQL Server)
 
 > [!NOTE]
-> В этом примере используется самозаверяющий сертификат, который не следует использовать в рабочих сценариях. Нужно использовать сертификаты ЦС. 
+> В этом примере используется самозаверяющий сертификат, который не следует использовать в рабочих сценариях. Нужно использовать сертификаты ЦС.<br>
+> Убедитесь в том, что папки, в которых сохраняются сертификаты и закрытые ключи, доступны для пользователя или группы mssql и для них задано разрешение 700 (drwx-----). Вы можете создать папки вручную с разрешением 700 (drwx------) и пользователем или группой mssql в качестве владельца либо с разрешением 755 (drwxr-xr-x) и другим пользователем в качестве владельца, но с сохранением доступа для группы пользователей mssql. Например, можно создать папку с именем sslcert по пути /var/opt/mssql/, а затем сохранить сертификат и закрытый ключ с разрешением 600 для файлов, как показано ниже. 
 
 ```bash
 openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
 sudo chown mssql:mssql mssql.pem mssql.key 
-sudo chmod 600 mssql.pem mssql.key   
-sudo mv mssql.pem /etc/ssl/certs/ 
+sudo chmod 600 mssql.pem mssql.key 
+# in this case we are saving the certificate to the certs folder under /etc/ssl/ which has the following permission 755(drwxr-xr-x)
+sudo mv mssql.pem /etc/ssl/certs/ drwxr-xr-x 
+# in this case we are saving the private key to the private folder under /etc/ssl/ with permissions set to 755(drwxr-xr-x)
 sudo mv mssql.key /etc/ssl/private/ 
 ```
 

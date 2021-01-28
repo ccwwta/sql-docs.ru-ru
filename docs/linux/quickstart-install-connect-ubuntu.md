@@ -9,12 +9,12 @@ ms.prod: sql
 ms.custom: seo-lt-2019
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: fd314ea1723786e514b6eb8320b373216de70aa8
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 109de9dabe9a0fb4d169d7be64448c51d9ec7384
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471665"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98689129"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Краткое руководство. Установка SQL Server и создание базы данных в Ubuntu
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "97471665"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-В этом кратком руководстве вы установите SQL Server 2017 в Ubuntu 18.04. Затем вы подключитесь с помощью **sqlcmd** для создания первой базы данных и выполнения запросов.
+В этом кратком руководстве вы установите SQL Server 2017 в Ubuntu 16.04/18.04. Затем вы подключитесь с помощью **sqlcmd** для создания первой базы данных и выполнения запросов.
 
 > [!TIP]
 > Для выполнения этого руководства требуется ввод данных пользователем и подключение к Интернету. Если вас интересуют процедуры автоматической или автономной установки, см. [руководство по установке SQL Server на Linux](sql-server-linux-setup.md). Список поддерживаемых платформ см. в [заметках о выпуске](sql-server-linux-release-notes.md).
@@ -33,7 +33,7 @@ ms.locfileid: "97471665"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-В этом кратком руководстве вы установите SQL Server 2019 в Ubuntu 18.04. Затем вы подключитесь с помощью **sqlcmd** для создания первой базы данных и выполнения запросов.
+В этом кратком руководстве вы установите SQL Server 2019 в Ubuntu 16.04/18.04. Затем вы подключитесь с помощью **sqlcmd** для создания первой базы данных и выполнения запросов.
 
 > [!TIP]
 > Для выполнения этого руководства требуется ввод данных пользователем и подключение к Интернету. Если вас интересуют процедуры автоматической или автономной установки, см. [руководство по установке SQL Server на Linux](sql-server-linux-setup.md). Список поддерживаемых платформ см. в [заметках о выпуске](sql-server-linux-release-notes-2019.md).
@@ -92,13 +92,29 @@ ms.locfileid: "97471665"
    ```
 
 2. Зарегистрируйте репозиторий Ubuntu для Microsoft SQL Server:
-
+   
+   Для Ubuntu 16.04:
+   
+   ```bash
+   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"
+   ```
+   
+   Для Ubuntu 18.04:
+   
    ```bash
    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2017.list)"
    ```
 
    > [!TIP]
    > Если вы хотите установить SQL Server 2019, необходимо зарегистрировать вместо этого репозиторий SQL Server 2019. Используйте следующую команду для установки SQL Server 2019:
+   >
+   > Для Ubuntu 16.04:
+   >
+   > ```bash
+   > sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
+   > ```
+   >
+   > Для Ubuntu 18.04:
    >
    > ```bash
    > sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"
@@ -152,7 +168,15 @@ ms.locfileid: "97471665"
    ```
 
 2. Зарегистрируйте репозиторий Microsoft SQL Server Ubuntu для SQL Server 2019:
-
+   
+   Для Ubuntu 16.04:
+   
+   ```bash
+   sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2019.list)"
+   ```
+   
+   Для Ubuntu 18.04:
+   
    ```bash
    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/18.04/mssql-server-2019.list)"
    ```
@@ -198,7 +222,15 @@ ms.locfileid: "97471665"
    ```
 
 1. Зарегистрируйте репозиторий Ubuntu для Майкрософт.
+   
+   Для Ubuntu 16.04:
+   
+   ```bash
+   curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
+   ```
 
+   Для Ubuntu 18.04:
+   
    ```bash
    curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
    ```
@@ -212,10 +244,11 @@ ms.locfileid: "97471665"
 
    > [!Note] 
    > Чтобы произвести обновление до последней версии **mssql-tools**, выполните следующие команды:
-   >    ```bash
-   >   sudo apt-get update 
-   >   sudo apt-get install mssql-tools 
-   >   ```
+   >
+   > ```bash
+   > sudo apt-get update 
+   > sudo apt-get install mssql-tools 
+   > ```
 
 1. **Необязательно**: Добавьте путь `/opt/mssql-tools/bin/` в переменную среды **PATH** в оболочке bash.
 

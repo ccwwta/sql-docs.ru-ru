@@ -11,12 +11,12 @@ ms.author: maghan
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 12/15/2019
-ms.openlocfilehash: e99362bd36d99aeeb2b44d3947454f198d29be7c
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 3afde284deb138b23392eaf4632af22f52ae9b7e
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642455"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98689170"
 ---
 # <a name="download-sql-server-extended-features-and-tools"></a>Скачивание расширенных компонентов и средств SQL Server
 
@@ -28,7 +28,7 @@ ms.locfileid: "97642455"
 
 | Компонент | Description |
 |----|-----|
-| [Клиентские библиотеки служб Analysis Services](https://go.microsoft.com/fwlink/?LinkID=853574) |Клиентские библиотеки служб Microsoft Analysis Services включают программные интерфейсы (API) для проверки подлинности и обмена запросами и ответами с Microsoft SQL Server Analysis Services 2005 или более поздней версии, Microsoft Azure Analysis Services и Microsoft Power BI.<br><br> Клиентские библиотеки Microsoft Analysis Services включают следующие пакеты установки. </br> ADOMD.NET для Microsoft Analysis Services </br> Поставщик OLE DB служб Microsoft Analysis Services (MSOLAP) </br> Объекты AMO (Майкрософт) |
+| [Клиентские библиотеки служб Analysis Services](/analysis-services/client-libraries) |Клиентские библиотеки служб Microsoft Analysis Services включают программные интерфейсы (API) для проверки подлинности и обмена запросами и ответами с Microsoft SQL Server Analysis Services 2005 или более поздней версии, Microsoft Azure Analysis Services и Microsoft Power BI.<br><br> Клиентские библиотеки Microsoft Analysis Services включают следующие пакеты установки. </br> ADOMD.NET для Microsoft Analysis Services </br> Поставщик OLE DB служб Microsoft Analysis Services (MSOLAP) </br> Объекты AMO (Майкрософт) |
 | [NuGetAnalysisSrvs](https://www.nuget.org/profiles/NuGetAnalysisSrvs) | NuGet для Analysis Services |
 |||
 
@@ -44,8 +44,8 @@ ms.locfileid: "97642455"
 | Компонент | Description |
 |----|-----|
 | [Служебные программы командной строки для SQL Server](https://www.microsoft.com/download/details.aspx?id=52680) | Программа SQLCMD позволяет пользователям подключаться к экземплярам SQL Server, отправлять пакеты Transact-SQL, а также выводить информацию о наборах строк с этих экземпляров. |
-| [Драйверы для PHP для SQL Server](https://aka.ms/downloadmsphpsql) | Драйверы Microsoft для PHP для SQL Server — это расширения для PHP, позволяющие считывать и записывать данные SQL Server из скриптов PHP. |
-| [Драйвер JDBC для SQL Server](https://aka.ms/downloadmssqljdbc) | Драйвер Microsoft JDBC Driver для SQL Server предоставляет доступ к SQL Server из любого приложения Java, сервера приложений Java или приложения с поддержкой Java.|
+| [Драйверы для PHP для SQL Server](../connect/php/download-drivers-php-sql-server.md) | Драйверы Microsoft для PHP для SQL Server — это расширения для PHP, позволяющие считывать и записывать данные SQL Server из скриптов PHP. |
+| [Драйвер JDBC для SQL Server](../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md) | Драйвер Microsoft JDBC Driver для SQL Server предоставляет доступ к SQL Server из любого приложения Java, сервера приложений Java или приложения с поддержкой Java.|
 | [Платформа приложения уровня данных SQL Server](https://www.microsoft.com/download/details.aspx?id=56508) | Платформа приложения уровня данных (DAC) SQL Server — это компонент на базе платформы .NET Framework, предоставляющий службы жизненного цикла приложений для разработки баз данных и управления ими. |
 | [Семантическая статистика языка SQL Server](../relational-databases/search/install-and-configure-semantic-search.md) | База данных семантической статистики языка — это необходимый компонент для функции статистического семантического поиска в Microsoft SQL Server. |
 | [Общие управляющие объекты SQL Server](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | Управляющие объекты SQL Server (SMO) представляют собой объектную модель платформы .NET Framework, позволяющую разработчикам программного обеспечения создавать клиентские приложения для управления объектами и службами SQL Server, а также для их администрирования. |

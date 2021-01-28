@@ -12,16 +12,16 @@ ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: d623bd63cfb9d2d72f41bf498259b1d13fe651b8
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8890ede78dbc42a885e1d994fe3aee42100085dd
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478425"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766444"
 ---
 # <a name="sql-server-properties-always-on-high-availability-tab"></a>Свойства SQL Server (вкладка "Высокий уровень доступности AlwaysOn")
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
-  На вкладке **Высокий уровень доступности AlwaysOn** в диалоговом окне **Свойства SQL Server** в диспетчере конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно включить или отключить функцию "Группы доступности AlwaysOn" в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Включение функции "Группы доступности AlwaysOn" является предварительным требованием для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы группы доступности использовались в качестве решения высокого уровня доступности и аварийного восстановления.  
+  На вкладке **Высокий уровень доступности AlwaysOn** в диалоговом окне **Свойства SQL Server** в диспетчере конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно включить или отключить функцию "Группы доступности AlwaysOn" в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Включение функции "Группы доступности AlwaysOn" является предварительным требованием для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы группы доступности использовались в качестве решения высокого уровня доступности и аварийного восстановления.  
   
 ##  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
  Для включения функции "Группы доступности AlwaysOn" экземпляр должен соответствовать следующим предварительным условиям.  
@@ -35,7 +35,7 @@ ms.locfileid: "97478425"
 -   Включайте функцию "Группы доступности AlwaysOn" только для одного экземпляра сервера в один момент времени. После включения функции "Группы доступности AlwaysOn" дождитесь, пока служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перезапустится, и только после этого включайте следующий экземпляр.  
   
 > [!NOTE]  
->  Сведения о поддержке компонентов и о других предварительных условиях, ограничениях и рекомендациях по [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]см. в электронной документации по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+>  Сведения о поддержке компонентов и о других предварительных условиях, ограничениях и рекомендациях по [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]см. в электронной документации по [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="dialog-options"></a>Параметры диалогового окна  
  **Имя отказоустойчивого кластера Windows**  
@@ -54,6 +54,6 @@ ms.locfileid: "97478425"
 ## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
   
 > [!NOTE]  
->  Дополнительные сведения о действиях после отключения функции "Группы доступности AlwaysOn" и о том, как создать и настроить группы доступности, см. в электронной документации по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+>  Дополнительные сведения о действиях после отключения функции "Группы доступности AlwaysOn" и о том, как создать и настроить группы доступности, см. в электронной документации по [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] .  
   
   

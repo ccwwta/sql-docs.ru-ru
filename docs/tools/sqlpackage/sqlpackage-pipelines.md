@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 11/4/2020
-ms.openlocfilehash: 002d145328ca101fee467428e5b7c8b0ff1fdd95
-ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
+ms.openlocfilehash: a6fc94cf9c692753ef2dc8d93068bda2be8f1bf0
+ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97577927"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98689029"
 ---
 # <a name="sqlpackage-in-development-pipelines"></a>SqlPackage в конвейерах разработки
 
@@ -31,7 +31,7 @@ ms.locfileid: "97577927"
 
 ### <a name="azure-pipelines"></a>Azure Pipelines
 
-Ключевое слово [script](https://docs.microsoft.com/azure/devops/pipelines/yaml-schema#script) в конвейере Azure Pipelines позволяет добавить шаг для вывода номера версии SqlPackage.
+Ключевое слово [script](/azure/devops/pipelines/yaml-schema#script) в конвейере Azure Pipelines позволяет добавить шаг для вывода номера версии SqlPackage.
 
 ```yaml
 - script: sqlpackage.exe /version

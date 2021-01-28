@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: d3663fb72891f31cdd710fefebaef906c5b14762
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: cb266632fccaceb4639c7fdf0cfbf5368aad2c80
+ms.sourcegitcommit: 2bdf1f1ee88f4fe3e872227d025e965e95d1b2b4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471675"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "98711980"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Краткое руководство. Установка SQL Server и создание базы данных в Red Hat
 
@@ -30,7 +30,7 @@ ms.locfileid: "97471675"
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 "
 
-В этом кратком руководстве вы установите SQL Server 2019 в Red Hat Enterprise Linux (RHEL) 8. Затем вы подключитесь с помощью **sqlcmd** для создания первой базы данных и выполнения запросов.
+В этом кратком руководстве вы установите SQL Server 2019 в Red Hat Enterprise Linux (RHEL) 7/8. Затем вы подключитесь с помощью **sqlcmd** для создания первой базы данных и выполнения запросов.
 
 ::: moniker-end
 
@@ -77,18 +77,33 @@ ms.locfileid: "97471675"
 > ```
 > Дополнительные сведения см. в статье по установке компонента python2 и настройке его как интерпретатора по умолчанию в следующем блоге: https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta.
 >
-> Если вы используете RHEL 7, в приведенном ниже пути измените `/rhel/8` на `/rhel/7`.
 
 Чтобы настроить SQL Server в RHEL, выполните следующие команды в терминале для установки пакета **mssql-server**.
 
 1. Скачайте файл конфигурации репозитория Microsoft SQL Server 2017 Red Hat.
 
+   Для RHEL7:
+   
+   ```bash
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
+   ```
+   
+   Для RHEL8:
+   
    ```bash
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2017.repo
    ```
 
    > [!TIP]
    > Если вы хотите установить SQL Server 2019, необходимо зарегистрировать вместо этого репозиторий SQL Server 2019. Используйте следующую команду для установки SQL Server 2019:
+   >
+   > Для RHEL7:
+   >
+   > ```bash
+   > sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
+   > ```
+   >
+   > Для RHEL8:
    >
    > ```bash
    > sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo
@@ -144,14 +159,22 @@ ms.locfileid: "97471675"
 > # Configure python2 as the default interpreter using this command: 
 > sudo alternatives --config python
 > ``` 
+> 
 > Дополнительные сведения об этих действиях см. в статье по установке компонента python2 и настройке его как интерпретатора по умолчанию в следующем блоге: https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta.
 > 
-> Если вы используете RHEL 7, в приведенном ниже пути измените `/rhel/8` на `/rhel/7`.
 
 Чтобы настроить SQL Server в RHEL, выполните следующие команды в терминале для установки пакета **mssql-server**.
 
 1. Скачайте файл конфигурации репозитория Microsoft SQL Server 2019 Red Hat:
-
+   
+   Для RHEL7:
+   
+   ```bash
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
+   ```
+   
+   Для RHEL8:
+   
    ```bash
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2019.repo
    ```
@@ -194,6 +217,14 @@ ms.locfileid: "97471675"
 
 1. Скачайте файл конфигурации репозитория Microsoft Red Hat.
 
+   Для RHEL7:
+   
+   ```bash
+   sudo curl -o /etc/yum.repos.d/msprod.repo https://packages.microsoft.com/config/rhel/7/prod.repo
+   ```
+   
+   Для RHEL8:
+   
    ```bash
    sudo curl -o /etc/yum.repos.d/msprod.repo https://packages.microsoft.com/config/rhel/8/prod.repo
    ```

@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: e6255f8e-a25e-4b3d-9310-c5da2f9c9333
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 4aaec761c13af9419c58d7a0baeb4ffd414ea716
-ms.sourcegitcommit: 3ec49252e82590de0fe559a8574606ae213f6f3b
+ms.openlocfilehash: fb0c63107430db5a1a7fa74276c6440e7212db2b
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "97975492"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766348"
 ---
 # <a name="uninstall-sql-server"></a>Удаление SQL Server 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  Выполните инструкции из приведенных ниже статей, чтобы полностью удалить существующий экземпляр [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и подготовить систему к повторной установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Выполните инструкции из приведенных ниже статей, чтобы полностью удалить существующий экземпляр [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] и подготовить систему к повторной установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>в этом разделе  
  [Удаление существующего экземпляра SQL Server (программа установки)](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)  

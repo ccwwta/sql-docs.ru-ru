@@ -13,12 +13,12 @@ ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016
-ms.openlocfilehash: f183c3d44525d85c26a6ba36345eb347ba1c38d3
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: fff3b6de7e2e83c535997194ca2622d9cd9e9595
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98594844"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766179"
 ---
 # <a name="sql-server-2012-release-notes"></a>Заметки о выпуске SQL Server 2012
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "98594844"
 Дополнительные сведения о том, как приступить к установке SQL Server 2012, см. в файле сведений для SQL Server 2012. Файл сведений доступен на установочном носителе, а также на странице скачивания [файла сведений](https://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) . Дополнительные сведения также можно найти в [электронной документации по SQL Server](/previous-versions/sql/sql-server-2012/ms130214(v=sql.110)) и на [форумах по SQL Server](https://go.microsoft.com/fwlink/?LinkId=213599).  
   
 ## <a name="10-before-you-install"></a><a name="Install"></a>1.0. Перед началом установки  
-Прежде чем приступать к установке [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], необходимо учесть следующее.  
+Прежде чем приступать к установке [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)], необходимо учесть следующее.  
   
 ### <a name="11-rules-documentation-for-sql-server-2012-setup"></a>1.1. Документация по правилам установки SQL Server 2012  
 **Проблема**. программа установки SQL Server проверяет конфигурацию компьютера перед началом установки. В ходе установки SQL Server отслеживаются различные правила в отчете средства проверки конфигурации системы (SCC). Документация об этих правилах установки больше не доступна в библиотеке MSDN.  

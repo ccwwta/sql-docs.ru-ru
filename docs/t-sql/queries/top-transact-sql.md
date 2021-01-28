@@ -22,12 +22,12 @@ ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 295e21500b51bed644807c2cbbab03515fb7e7d9
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: eb6024d0ad3ef6f34d170201c0fbacc3447dab26
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97484006"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783602"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -80,7 +80,7 @@ WITH TIES
 -   Являясь частью инструкции SELECT, оптимизатор запросов может принимать значение *expression* в предложениях TOP или FETCH во время оптимизации запроса. Так как SET ROWCOUNT используется вне инструкции, выполняющей запрос, значение не может быть учтено в плане запроса.  
   
 ## <a name="compatibility-support"></a>Поддержка совместимости  
-В целях обратной совместимости скобки в инструкции SELECT необязательны. Мы рекомендуем всегда использовать круглые скобки для аргумента TOP в инструкциях SELECT. Такой подход обеспечивает согласованность с синтаксисом инструкций INSERT, UPDATE, MERGE и DELETE. 
+В целях обратной совместимости скобки в инструкции SELECT необязательны, если выражение является целочисленной константой. Мы рекомендуем всегда использовать круглые скобки для аргумента TOP в инструкциях SELECT. Такой подход обеспечивает согласованность с синтаксисом инструкций INSERT, UPDATE, MERGE и DELETE. 
   
 ## <a name="interoperability"></a>Совместимость  
 Выражение TOP не влияет на другие выражения, которые могут быть запущены триггером. Таблицы **inserted** и **deleted** в триггерах всегда возвращают только те строки, которые реально затронуты инструкциями INSERT, UPDATE, MERGE или DELETE. Например, если INSERT TRIGGER срабатывает в результате выполнения инструкции INSERT с предложением TOP,  

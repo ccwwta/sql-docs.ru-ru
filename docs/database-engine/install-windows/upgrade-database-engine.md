@@ -15,24 +15,24 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: dd6c78880419b2330e109d4e1f1416c99f84963d
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c855e1a72e1cbd0f6012e4af19701fbaf6c71e68
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460707"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765521"
 ---
 # <a name="upgrade-database-engine"></a>Обновление [компонент ядра СУБД]
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
-  Статьи в этом разделе помогут вам обновить ядро СУБД [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предыдущего выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  Статьи в этом разделе помогут вам обновить ядро СУБД [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предыдущего выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)].  
   
 1.  [Выбор метода обновления ядра СУБД](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md). Прежде всего вам необходимо понять различные методы обновления. В этой статье рассматриваются различные методы обновления и действия, связанные с каждым из них.  
   
 2.  [Составление и тестирование плана обновления ядра СУБД](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md). Ознакомившись с методами обновления, вы будете готовы разработать соответствующий метод обновления для используемой среды разработки, а затем проверить его перед обновлением существующей среды. В этой статье рассматривается разработка плана обновления и его тестирование.  
   
-3.  [Завершение обновления ядра СУБД](../../database-engine/install-windows/complete-the-database-engine-upgrade.md). После обновления ядра СУБД до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и перевода баз данных в режим "в сети" необходимо выполнить дополнительные действия, включая создание резервной копии, обновление баз данных для включения новых функций и повторное заполнение полнотекстовых каталогов. Эти действия рассматриваются в данной статье.  
+3.  [Завершение обновления ядра СУБД](../../database-engine/install-windows/complete-the-database-engine-upgrade.md). После обновления ядра СУБД и перевода баз данных в режим "в сети" необходимо выполнить дополнительные действия, включая создание резервной копии, обновление баз данных для включения новых функций и повторное заполнение полнотекстовых каталогов. Эти действия рассматриваются в данной статье.  
   
 4.  Обновите [уровень совместимости базы данных](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades) (**применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). Одним из действий, выполняемых после перевода баз данных в режим "в сети" в новой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], может быть обновление функционального режима баз данных для включения новых функций путем изменения уровня совместимости базы данных. Это можно сделать вручную или посредством Помощника по настройке запросов. 
 

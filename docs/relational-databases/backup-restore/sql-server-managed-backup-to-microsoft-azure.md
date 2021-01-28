@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: ce723dfbf0171d3c1885c1574bf681fbb2c8e714
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: fa041d70aa80d44194859c92ad58f518cfa14c45
+ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172566"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98783380"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Управляемое резервное копирование SQL Server в Microsoft Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -121,7 +121,7 @@ ms.locfileid: "98172566"
   
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] поддерживает только полные резервные копии базы данных и резервные копии журналов. Автоматическое резервное копирование файлов не поддерживается.  
   
--   Хранилище BLOB-объектов Microsoft Azure — единственное поддерживаемое хранилище резервных копий. Резервные копии на диски или ленточные накопители не поддерживаются.  
+-   Хранилище BLOB-объектов Microsoft Azure — единственное поддерживаемое хранилище резервных копий. Резервные копии на диски или ленточные накопители не поддерживаются.  
   
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] использует функцию резервного копирования в блочные BLOB-объекты. Максимальный размер блочного BLOB-объекта составляет 200 ГБ. За счет чередования максимальный размер отдельной резервной копии можно увеличить до 12 ТБ. Если вам нужен больший размер, рекомендуется использовать сжатие и проверить размер файла резервной копии до настройки [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Проверку можно выполнить, создав резервную копию на локальном диске или создав ее вручную в службе хранилища Microsoft Azure с использованием инструкции Transact-SQL **BACKUP TO URL** . Дополнительные сведения см. в разделе [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
