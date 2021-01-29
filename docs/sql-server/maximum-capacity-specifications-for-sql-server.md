@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 126ac3c36d7e72205c4e0268fcd4b1cedf993169
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: b4f0e4ed75e992095cff1f9ae315e3036ba7ef90
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172386"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766222"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Спецификации максимальной емкости для SQL Server
 
@@ -122,7 +122,7 @@ ms.locfileid: "98172386"
 |Файлов журналов на одну базу данных|1|
 |Томов на компьютер|3|
 
-<sup>*</sup> Максимальное число управляемых экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], поддерживаемых служебной программой [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], может меняться в зависимости от конфигурации оборудования сервера. Дополнительные сведения о начале работы см. в разделе [Функции и задачи служебной программы SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] доступна не во всех выпусках [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](./editions-and-components-of-sql-server-2016.md).
+<sup>*</sup> Максимальное число управляемых экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], поддерживаемых служебной программой [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], может меняться в зависимости от конфигурации оборудования сервера. Дополнительные сведения о начале работы см. в разделе [Функции и задачи служебной программы SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] доступна не во всех выпусках [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]. Список функций, поддерживаемых в выпусках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], см. в разделах [Функции, поддерживаемые выпусками SQL Server 2019](./editions-and-components-of-sql-server-version-15.md), [Функции, поддерживаемые выпусками SQL Server 2017](./editions-and-components-of-sql-server-2017.md) и [Функции, поддерживаемые выпусками SQL Server 2016](./editions-and-components-of-sql-server-2016.md).
 
 ## <a name="ssnoversion-data-tier-application-objects"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Объекты приложений уровня данных
 

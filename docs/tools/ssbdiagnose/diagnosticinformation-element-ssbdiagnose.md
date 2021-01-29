@@ -9,18 +9,17 @@ helpviewer_keywords:
 - XML output file format [ssbdiagnose], diagnosticinformation element
 - diagnosticinformation element
 - ssbdiagnose
-ms.assetid: 0cfda544-542c-4cf4-86d2-8031c91b10f6
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: a61891dd3873d43be9f92173839e437e26b16a92
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2824c25e2dcf04d3982332e22ef436b6757497ce
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726807"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813105"
 ---
 # <a name="diagnosticinformation-element-ssbdiagnose"></a>Элемент DiagnosticInformation (программа ssbdiagnose)
 
@@ -59,9 +58,8 @@ ms.locfileid: "85726807"
 |**Дочерние элементы**|[Элемент Banner (программа ssbdiagnose)](../../tools/ssbdiagnose/banner-element-ssbdiagnose.md)<br /><br /> [Элемент Issue (программа ssbdiagnose)](../../tools/ssbdiagnose/issue-element-ssbdiagnose.md)|  
   
 ## <a name="remarks"></a>Remarks  
- Дополнительные сведения о пространствах имен XML см. в статье [Пространства имен в XML-документе](https://go.microsoft.com/fwlink/?LinkId=7341) в библиотеке [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN.  
+ Дополнительные сведения о пространствах имен XML см. в статье [Управление пространствами имен в XML-документе](/dotnet/standard/data/xml/managing-namespaces-in-an-xml-document).  
   
 ## <a name="see-also"></a>См. также:  
  [Программа ssbdiagnose (компонент Service Broker)](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
-  
   

@@ -13,12 +13,12 @@ ms.assetid: 8cf27be1-e66d-4735-a428-9ab4b33af4f5
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 8cc13808b01f33c623304f46efcde3e7e063f713
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 444691b0ec7196c2dcb09426b7e7cb3063445826
+ms.sourcegitcommit: 0bee2b4392d50151c3839a937371588cc2ce2d3e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88369370"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "98667739"
 ---
 # <a name="tables-and-columns-dialog-box-visual-database-tools"></a>Диалоговое окно «Таблицы и столбцы» (визуальные инструменты для баз данных)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,5 +47,5 @@ ms.locfileid: "88369370"
 > Столбцы, выбранные для внешнего ключа, должны иметь одинаковый тип данных с первичными столбцами, которым они соответствуют. Каждый ключ должен включать одинаковое число столбцов. Например, если первичный ключ на первичной стороне связи состоит из двух столбцов, необходимо сопоставить каждому из этих столбцов столбец таблицы на стороне внешнего ключа связи.  
   
 ## <a name="see-also"></a>См. также:  
-[Руководство. Создание связей между таблицами(https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c)  
+[Руководство. Создание связей между таблицами](https://msdn.microsoft.com/867a54b8-5be4-46e6-9702-49ae6dabf67c)  
   

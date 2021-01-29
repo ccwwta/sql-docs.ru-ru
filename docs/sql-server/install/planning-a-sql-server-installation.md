@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: dbacb44550622f3c61a3cd58281619bb74652af7
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 62b5e5e18743d7425a011e00787ca374e8f90507
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96120813"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98765869"
 ---
 # <a name="planning-a-sql-server-installation"></a>Планирование установки SQL Server
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -66,7 +66,7 @@ ms.locfileid: "96120813"
  В этом разделе документации по программе установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] описывается процедура установки функций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые входят в состав платформы бизнес-аналитики Майкрософт.  
   
  [Обновление SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
- В данном разделе представлена общая информация по обновлению экземпляров предыдущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ В данном разделе представлена общая информация по обновлению с предыдущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [Удаление SQL Server](../../sql-server/install/uninstall-sql-server.md)  
  В этом разделе описано, как полностью удалить существующий экземпляр [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] и подготовить систему к повторной установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

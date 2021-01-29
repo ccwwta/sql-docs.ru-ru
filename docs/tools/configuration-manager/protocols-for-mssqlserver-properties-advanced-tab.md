@@ -2,22 +2,21 @@
 title: Протоколы для свойств MSSQLSERVER (вкладка «Дополнительно»)
 description: Сведения о преимуществах и требованиях расширенной защиты для проверки подлинности для ядра СУБД SQL Server. Сведения о том, как включить и настроить эту функцию.
 ms.custom: seo-lt-2019
-ms.date: 01/24/2019
+ms.date: 01/22/2021
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
-ms.assetid: abd5ca68-825f-4c07-b27c-3b3a79d03d74
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: eabb3e524e052823d4ea7b04348a58ccaf24fb64
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ff312fefc29021a28df51ed4a845067d54024d6a
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478415"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813218"
 ---
 # <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>Протоколы для свойств MSSQLSERVER (вкладка «Дополнительно»)
 
@@ -30,7 +29,7 @@ ms.locfileid: "97478415"
 > - [Расширенная защита Windows \<extendedProtection\>](/iis/configuration/system.webserver/security/authentication/windowsauthentication/extendedprotection/)
 > - [Общие сведения о расширенной защите для проверки подлинности](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview)
 
-Дополнительные сведения о настройке других служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и полное описание функции **Расширенная защита** см. на сайте [Microsoft.com](https://go.microsoft.com/fwlink/?LinkId=177752).
+Дополнительные сведения о настройке других служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Manage the Database Engine Services](../../database-engine/configure-windows/manage-the-database-engine-services.md). Полное описание расширенной защиты см. в разделе [Соединение с компонентом Database Engine с использованием расширенной защиты](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md).
 
 **Расширенная защита** полностью поддерживается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, начиная с [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. Поддержка **расширенной защиты** для других поставщиков клиентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в настоящее время отсутствует.
 

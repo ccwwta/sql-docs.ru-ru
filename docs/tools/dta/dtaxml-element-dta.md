@@ -9,18 +9,17 @@ dev_langs:
 - XML
 helpviewer_keywords:
 - DTAXML element
-ms.assetid: 3d9942ed-8a27-40db-a7c9-808984d914a2
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 9dd7f40c3cfbac8739caacc10eb821fcd8b8845b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8d82b1d9198946d9ef7c14e80d443d151a7154d3
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85785995"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98812922"
 ---
 # <a name="dtaxml-element-dta"></a>Элемент DTAXML (DTA)
 
@@ -62,7 +61,7 @@ ms.locfileid: "85785995"
 |**Дочерние элементы**|[Элемент DTAInput (DTA)](../../tools/dta/dtainput-element-dta.md)<br /><br /> Элемент **DTAOutput** (см. раздел [XML-схема помощника по настройке ядра СУБД](https://schemas.microsoft.com/sqlserver/))|  
   
 ## <a name="remarks"></a>Remarks  
- Дополнительные сведения о пространствах имен XML см. в статье [Пространства имен в XML-документе](https://go.microsoft.com/fwlink/?LinkId=7341) в библиотеке [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN.  
+ Дополнительные сведения о пространствах имен XML см. в статье [Управление пространствами имен в XML-документе](/dotnet/standard/data/xml/managing-namespaces-in-an-xml-document). 
   
 ## <a name="example"></a>Пример  
  Примеры типичных элементов **DTAXML** см. в разделе [Образцы входных XML-файлов (DTA)](../../tools/dta/xml-input-file-samples-dta.md).  
@@ -70,5 +69,4 @@ ms.locfileid: "85785995"
 ## <a name="see-also"></a>См. также:  
  [Справочник по входным XML-файлам (помощник по настройке ядра СУБД)](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)   
  [Запуск и использование помощника по настройке ядра СУБД](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)  
-  
   

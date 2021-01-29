@@ -8,13 +8,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 11/04/2019
-ms.openlocfilehash: a778fd92a44a229ae6806cef31a10b728f241865
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.date: 1/25/2021
+ms.openlocfilehash: 39c48fc84047deea9c2bf49751c9bc3a491023b7
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87987731"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766396"
 ---
 # <a name="sql-assessment-api"></a>API Оценки SQL
 
@@ -22,23 +22,45 @@ ms.locfileid: "87987731"
 
 Оценка SQL API полезна, если вы хотите убедиться в том, что конфигурация SQL Server согласуется с рекомендуемыми лучшими методиками. После первоначальной оценки стабильность конфигурации отслеживается при помощи регулярных запланированных оценок.
 
-Этот API-интерфейс можно использовать для оценки Управляемого экземпляра SQL Azure и SQL Server версии 2012 и выше. Поддерживается SQL в Linux.
+API можно использовать для оценки:
+ 
+* Управляемого экземпляра Базы данных SQL Azure и SQL Server версии 2012 и выше;
+
+* SQL в системах на базе Linux;
+
+API также используется расширением Оценки SQL Server для Azure Data Studio (ADS).
 
 ## <a name="rules"></a>Правила
 
-Правила, иногда называемые проверками, определяются в файлах в формате JSON. Для набора правил требуется указать имя и версию набора правил. Таким образом, при использовании пользовательских наборов правил можно легко узнать, какие рекомендации из какого набора правил исходят.
+Правила, иногда называемые проверками, определяются в файлах в формате JSON. Для набора правил требуется указать имя и версию набора правил. При использовании пользовательских наборов правил можно легко узнать, какие рекомендации исходят из какого набора правил.
 
 Поставляемый Майкрософт набор правил доступен на сайте GitHub. Дополнительные сведения можно найти в [репозитории примеров](https://aka.ms/sql-assessment-api).
 
-## <a name="sql-assessment-cmdlets-and-smo-extension"></a>Командлеты оценки SQL и расширение SMO
+## <a name="sql-assessment-cmdlets-and-associated-extensions"></a>Командлеты Оценки SQL и связанные расширения
 
-API оценки SQL входит в [управляющие объекты SQL Server (SMO)](../../relational-databases/server-management-objects-smo/installing-smo.md) выпуска июля 2019 г. и позднее, а также [модуль SQL Server PowerShell](../../powershell/download-sql-server-ps-module.md) выпуска июля 2019 г. и позднее.
+API Оценки SQL является частью:
+
+* [Azure Data Studio (ADS)](../../azure-data-studio/what-is-azure-data-studio.md)
+
+    версии выпуска от июня 2020 г. и выше;
+
+* [Управляющие объекты SQL Server (SMO)](../../relational-databases/server-management-objects-smo/installing-smo.md)
+
+    версии выпуска от июля 2019 г. и выше;
+
+* [модуля SQL Server PowerShell](../../powershell/download-sql-server-ps-module.md);
+
+    версии выпуска от июля 2019 г. и выше.
+
+Прежде чем приступить к работе с API Оценки SQL, убедитесь в том, что выполнено следующее:
+
+* [Установка ADS](https://techcommunity.microsoft.com/t5/sql-server/released-sql-server-assessment-extension-for-azure-data-studio/ba-p/1470603)
 
 * [Установка объектов SMO](../../relational-databases/server-management-objects-smo/installing-smo.md)
 
 * [Установка модуля SQL Server PowerShell](../../powershell/download-sql-server-ps-module.md)
 
-Модуль SqlServer получил два новых командлета для работы с API оценки SQL:
+Модуль SqlServer получил два новых командлета для работы с API Оценки SQL:
 
 * **Get-SqlAssessmentItem** — предоставляет список доступных проверок оценки для объекта SQL Server;
 
@@ -46,11 +68,11 @@ API оценки SQL входит в [управляющие объекты SQL 
 
 Платформа SMO дополняется расширением для API оценки SQL, которое предоставляет следующие методы:
 
-* **GetAssessmentItems**  — возвращает доступные проверки для конкретного объекта SQL (IEnumerable<…>);
+* **GetAssessmentItems** — возвращает доступные проверки для конкретного объекта SQL (IEnumerable<…>);
 
-* **GetAssessmentResults**  — синхронно оценивает оценку и возвращает результаты и ошибки, если таковые имеются (IEnumerable<…>);
+* **GetAssessmentResults** — синхронно оценивает оценку и возвращает результаты и ошибки, если таковые имеются (IEnumerable<…>);
 
-* **GetAssessmentResultsList**  — асинхронно оценивает оценку и возвращает результаты и ошибки, если таковые имеются (Task<…>).
+* **GetAssessmentResultsList** — асинхронно оценивает оценку и возвращает результаты и ошибки, если таковые имеются (Task<…>).
 
 ## <a name="get-started-using-sql-assessment-cmdlets"></a>Начало работы с командлетами оценки SQL
 

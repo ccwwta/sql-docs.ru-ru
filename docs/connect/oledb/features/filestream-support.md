@@ -13,12 +13,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server [FILESTREAM support]
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c197dadade12e189e2914d01a19975d9d03b7de4
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: d1fcc048d51186289d13cbe8918b5328f8c604f8
+ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861486"
+ms.lasthandoff: 01/25/2021
+ms.locfileid: "98766131"
 ---
 # <a name="filestream-support-in-ole-db-driver-for-sql-server"></a>Поддержка FILESTREAM в драйвере OLE DB для SQL Server
 [!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
@@ -54,7 +54,7 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>Совместимость на низком уровне  
-Если ваш клиент скомпилирован с помощью OLE DB Driver for SQL Server, и приложение подключается к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] через [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]), тогда поведение **varbinary(max)** будет совместимо с поведением, введенным [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Это означает, что максимальный размер возвращаемых данных будет ограничен 2 ГБ. Для результирующих значений больше 2 ГБ произойдет усечение, и будет возвращено сообщение "Усечение строковых данных справа". 
+Если ваш клиент скомпилирован с помощью OLE DB Driver for SQL Server, и приложение подключается к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] или выше), тогда поведение **varbinary(max)** будет совместимо с поведением, введенным [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Это означает, что максимальный размер возвращаемых данных будет ограничен 2 ГБ. Для результирующих значений больше 2 ГБ произойдет усечение, и будет возвращено сообщение "Усечение строковых данных справа". 
   
 Если уровень совместимости типов данных установлен равным «80», то поведение клиента будет согласовано с поведением клиента низкого уровня.  
   
