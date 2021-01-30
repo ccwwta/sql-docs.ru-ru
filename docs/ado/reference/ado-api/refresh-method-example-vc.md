@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3dc3443b-a1b0-4fbd-908a-6e274dec981c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 540c30018ed9b9c7d8d08239d4c93cf7a146b23e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1f35815aeddb607a976f823bc0a438c28fa5e492
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989575"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170392"
 ---
 # <a name="refresh-method-example-vc"></a>Пример метода Refresh (Visual C++)
 В этом примере демонстрируется использование метода [Refresh](./refresh-method-ado.md) для обновления коллекции [Parameters](./parameters-collection-ado.md) для объекта [команды](./command-object-ado.md) хранимой процедуры.  
@@ -234,7 +234,7 @@ Authors with 25 percent royalty
   899-46-2035, Anne Ringer  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Command (ADO)](./command-object-ado.md)   
  [Коллекция Parameters (ADO)](./parameters-collection-ado.md)   
  [Метод Refresh (ADO)](./refresh-method-ado.md)

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset21::Index
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 44dab27756e71142b59ae27b2d8499e1dd2f639a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9e8c346ac48092d7a5dcaf09068bb64d63316a38
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990815"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170962"
 ---
 # <a name="index-property"></a>Свойство Index
 Указывает имя индекса, действующего в настоящий момент для объекта [Recordset](./recordset-object-ado.md) .  
@@ -29,7 +29,7 @@ ms.locfileid: "88990815"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает **строковое** значение, представляющее собой имя индекса.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Индекс, указанный в свойстве **index** , должен быть ранее объявлен в базовой таблице базового объекта **Recordset** . Это означает, что индекс должен быть объявлен программным образом как объект [индекса](../adox-api/index-object-adox.md) ADOX или при создании базовой таблицы.  
   
  Если индекс не может быть установлен, возникнет ошибка времени выполнения. Свойство **index** не может быть задано при следующих условиях:  
@@ -53,7 +53,7 @@ ms.locfileid: "88990815"
 ## <a name="applies-to"></a>Применение  
  [Объект Recordset (ADO)](./recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример метода Seek и свойства Index (Visual Basic)](./seek-method-and-index-property-example-vb.md)   
  [Объект index (ADOX)](../adox-api/index-object-adox.md)   
  [Метод Seek](./seek-method.md)

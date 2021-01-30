@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::Bookmark
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 755397c0cf1b16243cdfa2d7777af487b7629b6e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: dd484230ba2801abcb553fa8f9013dce53799b09
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975775"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171553"
 ---
 # <a name="bookmark-property-ado"></a>Свойство Bookmark (ADO)
 Указывает закладку, которая уникально идентифицирует текущую запись в объекте [набора записей](./recordset-object-ado.md) или устанавливает текущую запись в объекте **набора записей** в запись, определяемую допустимой закладкой.  
@@ -29,7 +29,7 @@ ms.locfileid: "88975775"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает выражение **типа Variant** , результатом которого является допустимая закладка.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Свойство **Bookmark** используется для сохранения позиции текущей записи и возврата к этой записи в любое время. Закладки доступны только в объектах **набора записей** , поддерживающих функциональность закладок.  
   
  При открытии объекта **набора записей** каждая из его записей имеет уникальную закладку. Чтобы сохранить закладку для текущей записи, присвойте переменной значение свойства **Bookmark** . Чтобы быстро вернуться к этой записи в любое время после перехода на другую запись, задайте для свойства **Bookmark** объекта **Recordset** значение этой переменной.  
@@ -44,7 +44,7 @@ ms.locfileid: "88975775"
 ## <a name="applies-to"></a>Применение  
  [Объект Recordset (ADO)](./recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойств BOF, EOF и Bookmark (Visual Basic)](./bof-eof-and-bookmark-properties-example-vb.md)   
  [Пример свойств BOF, EOF и Bookmark (Visual c++)](./bof-eof-and-bookmark-properties-example-vc.md)   
  [Метод Supports](./supports-method.md)

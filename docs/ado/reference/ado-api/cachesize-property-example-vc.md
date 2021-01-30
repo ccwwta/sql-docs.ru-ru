@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e0e7b7ba-3943-43cb-a2cd-0e4667187973
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2fb692aa0f4b6703b20ba019832ad01cc90865b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b933428723b08bbbf4144a14591ed3e52f334398
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975685"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171534"
 ---
 # <a name="cachesize-property-example-vc"></a>Пример свойства CacheSize (Visual C++)
 В этом примере используется свойство [CacheSize](./cachesize-property-ado.md) , чтобы продемонстрировать разницу в производительности для операции, выполняемой с 30-записывающим кэшем и без него.  
@@ -161,6 +161,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство CacheSize (ADO)](./cachesize-property-ado.md)   
  [Объект Recordset (ADO)](./recordset-object-ado.md)

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 dev_langs:
 - C++
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ccb6ffbc-7303-4124-8a0c-f6356f2c82d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4ef0aaa3819f60a2dd0488ce57868db09c8b1f1d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 3749d117adc930b02f022b4238bfcf94bfbee787
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975215"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171476"
 ---
 # <a name="command-visual-c-syntax-index-with-import"></a>Команда (Visual C++ индекс синтаксиса с #import)
 ## <a name="methods"></a>Методы  
@@ -60,5 +60,5 @@ long GetState( );
 __declspec(property(get=GetState)) long State;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Command (ADO)](./command-object-ado.md)

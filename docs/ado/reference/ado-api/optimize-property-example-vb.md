@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eeb075e3ad722fa7d449833a6be9b1acaa481eab
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 183d57a53063a4fc72d5218a2fd061a9913ce5c5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990275"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170669"
 ---
 # <a name="optimize-property-example-vb"></a>Пример свойства Optimize (Visual Basic)
-В этом примере демонстрируется динамическое свойство **optimize** объекта [field](./field-object.md) . Поле ***ZIP*** таблицы ***authors*** в базе данных ***pubs*** не индексируется. Присвоение свойству [optimize](./optimize-property-dynamic-ado.md) значения **true** в поле ***ZIP*** разрешает ADO создавать индексы, повышающие производительность метода [Find](./find-method-ado.md) .  
+В этом примере демонстрируется динамическое свойство **optimize** объекта [field](./field-object.md) . Поле **_ZIP_*_* в таблице _ _authors_*_ в**базе данных _ Pubs _ не индексируется. Присвоение свойству [optimize](./optimize-property-dynamic-ado.md) значения _* true** в поле **_ZIP_* _ разрешает ADO создавать индексы, повышающие производительность метода [Find](./find-method-ado.md) .  
   
 ```  
 'BeginOptimizeVB  
@@ -49,7 +49,7 @@ Public Sub Main()
      ' open recordset client-side to enable index creation.  
     Set rstAuthors = New ADODB.Recordset  
     rstAuthors.CursorLocation = adUseClient  
-    strSQLAuthors = "SELECT * FROM Authors"  
+    strSQLAuthors = "SELECT _ FROM Authors"  
     rstAuthors.Open strSQLAuthors, Cnxn, adOpenStatic, adLockReadOnly, adCmdText  
      ' Create the index.  
     rstAuthors!zip.Properties("Optimize") = True  
@@ -87,6 +87,6 @@ End Sub
 'EndOptimizeVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Field](./field-object.md)   
  [Свойство Optimize (динамическое) (ADO)](./optimize-property-dynamic-ado.md)

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_update_proxy
 - sp_update_proxy_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 052f78652c02b7486d930dbb7071a6b2a981074b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f12d4666ed97033b19d7a0d4e39b17806e4d0953
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473504"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171719"
 ---
 # <a name="sp_update_proxy-transact-sql"></a>sp_update_proxy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,27 +48,27 @@ sp_update_proxy
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @proxy_id = ] id` Идентификационный номер прокси-сервера, который необходимо изменить. *Proxy_id* имеет **тип int**и значение по умолчанию NULL.  
+`[ @proxy_id = ] id` Идентификационный номер прокси-сервера, который необходимо изменить. *Proxy_id* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @proxy_name = ] 'proxy_name'` Имя изменяемого прокси-сервера. Аргумент *proxy_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @proxy_name = ] 'proxy_name'` Имя изменяемого прокси-сервера. Аргумент *proxy_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @credential_name = ] 'credential_name'` Имя новых учетных данных для учетной записи-посредника. Аргумент *credential_name* имеет тип **sysname**и значение по умолчанию NULL. Можно указать либо *credential_name* , либо *credential_id* .  
+`[ @credential_name = ] 'credential_name'` Имя новых учетных данных для учетной записи-посредника. Аргумент *credential_name* имеет тип **sysname** и значение по умолчанию NULL. Можно указать либо *credential_name* , либо *credential_id* .  
   
-`[ @credential_id = ] credential_id` Идентификационный номер новых учетных данных для учетной записи-посредника. *Credential_id* имеет **тип int**и значение по умолчанию NULL. Можно указать либо *credential_name* , либо *credential_id* .  
+`[ @credential_id = ] credential_id` Идентификационный номер новых учетных данных для учетной записи-посредника. *Credential_id* имеет **тип int** и значение по умолчанию NULL. Можно указать либо *credential_name* , либо *credential_id* .  
   
-`[ @new_name = ] 'new_name'` Новое имя учетной записи-посредника. Аргумент *new_name* имеет тип **sysname**и значение по умолчанию NULL. При указании процедура изменяет имя прокси-сервера на *new_name*. Если этот аргумент равен NULL, имя учетной записи-посредника остается неизменным.  
+`[ @new_name = ] 'new_name'` Новое имя учетной записи-посредника. Аргумент *new_name* имеет тип **sysname** и значение по умолчанию NULL. При указании процедура изменяет имя прокси-сервера на *new_name*. Если этот аргумент равен NULL, имя учетной записи-посредника остается неизменным.  
   
-`[ @enabled = ] is_enabled` Указывает, включен ли прокси-сервер. Флаг *is_enabled* имеет тип **tinyint**и значение по умолчанию NULL. Если значение *is_enabled* равно **0**, то прокси-сервер не включен и не может использоваться шагом задания. Если этот аргумент равен NULL, состояние учетной записи-посредника остается неизменным.  
+`[ @enabled = ] is_enabled` Указывает, включен ли прокси-сервер. Флаг *is_enabled* имеет тип **tinyint** и значение по умолчанию NULL. Если значение *is_enabled* равно **0**, то прокси-сервер не включен и не может использоваться шагом задания. Если этот аргумент равен NULL, состояние учетной записи-посредника остается неизменным.  
   
 `[ @description = ] 'description'` Новое описание прокси-сервера. *Описание* имеет тип **nvarchar (512)** и значение по умолчанию NULL. Если этот аргумент равен NULL, описание учетной записи-посредника остается неизменным.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
- Необходимо указать либо ** \@ proxy_name** , либо ** \@ proxy_id** . Если указаны оба аргумента, они должны ссылаться на одну и ту же учетную запись-посредник, в противном случае хранимая процедура завершается ошибкой.  
+## <a name="remarks"></a>Замечания  
+ Необходимо указать либо **\@ proxy_name** , либо **\@ proxy_id** . Если указаны оба аргумента, они должны ссылаться на одну и ту же учетную запись-посредник, в противном случае хранимая процедура завершается ошибкой.  
   
- Для изменения учетных данных прокси-сервера необходимо указать либо ** \@ credential_name** , либо ** \@ credential_id** . Если указаны оба аргумента, они должны ссылаться на одни и те же учетные данные, в противном случае хранимая процедура завершается ошибкой.  
+ Для изменения учетных данных прокси-сервера необходимо указать либо **\@ credential_name** , либо **\@ credential_id** . Если указаны оба аргумента, они должны ссылаться на одни и те же учетные данные, в противном случае хранимая процедура завершается ошибкой.  
   
  Эта процедура вносит изменения в учетную запись-посредник, но не меняет порядок доступа к нему. Чтобы изменить доступ к учетной записи-посреднику, используйте **sp_grant_login_to_proxy** и **sp_revoke_login_from_proxy**.  
   
@@ -88,7 +88,7 @@ EXEC dbo.sp_update_proxy
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Агент SQL Server хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [Реализация агент SQL Server безопасности](../../ssms/agent/implement-sql-server-agent-security.md)   
  [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 547916d25655a34883072f39701f3ac9b1a5df45
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0c39faffc0626cf5cec3837368b13b3df6f5a2a3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989355"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170331"
 ---
 # <a name="save-and-open-methods-example-vc"></a>Пример методов Save и Open (Visual c++)
 В этих трех примерах показано, как можно совместно использовать методы [Save](./save-method.md) и **Open** .  
@@ -261,7 +261,7 @@ bool FileExists() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Open (набор записей ADO)](./open-method-ado-recordset.md)   
  [Объект Recordset (ADO)](./recordset-object-ado.md)   
  [Метод Save](./save-method.md)

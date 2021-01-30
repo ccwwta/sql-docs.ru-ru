@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Command
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a02c22fb-542d-465e-a629-30fd59dcbebf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 252a59f63c4ce782a915a1e1cf11af58fd2f233b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b8926e551f97d60256758b7df6c9dabca5584123
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975235"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171485"
 ---
 # <a name="command-object-ado"></a>Объект Command (ADO)
 Определяет конкретную команду, которую необходимо выполнить для источника данных.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Используйте объект **Command** , чтобы запрашивать базу данных и возвращать записи в объекте [набора записей](./recordset-object-ado.md) , выполнять групповые операции или управлять структурой базы данных. В зависимости от функциональных возможностей поставщика некоторые коллекции **команд** , методы или свойства могут вызвать ошибку при ссылке.  
   
  С помощью коллекций, методов и свойств объекта **Command** можно выполнять следующие действия.  
@@ -77,7 +77,7 @@ objCmd(0)
   
 -   [Свойства, методы и события объекта Command](./command-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Connection (ADO)](./connection-object-ado.md)   
  [Коллекция Parameters (ADO)](./parameters-collection-ado.md)   
  [Коллекция Properties (ADO)](./properties-collection-ado.md)   

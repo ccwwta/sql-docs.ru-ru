@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset::ExecuteComplete
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a28d3858-566c-468d-b070-d1de4339fbea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ef8df9f6d4ea113d5cca9ad9ffba9c4888776d8
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 261a3a39486dc73e95a7339906a49657a0d04634
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973355"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171117"
 ---
 # <a name="fetchcomplete-event-ado"></a>Событие FetchComplete (ADO)
 Событие **фетчкомплете** вызывается после того, как все записи в длинной асинхронной операции были извлечены в [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -46,9 +46,9 @@ FetchComplete pError, adStatus, pRecordset
  *предшнур*  
  Объект **Recordset** . Объект, для которого были получены записи.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Чтобы использовать **фетчкомплете** с Microsoft Visual Basic, требуется Visual Basic 6,0 или более поздней версии.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример модели событий ADO (Visual c++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [Общие сведения об обработчике событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5c0530ad-68d0-4cba-b1af-9386d566c7c5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3ca981db6a75beb2c4c4c04c03386f8e8b82920f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 821b4bd876319306f184fe095f7a45c1a0c3629a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975635"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171524"
 ---
 # <a name="cancel-method-example-vb"></a>Пример метода Cancel (Visual Basic)
 В этом примере метод [Cancel](./cancel-method-ado.md) используется для отмены команды, выполняющейся на объекте [соединения](./connection-object-ado.md) , если соединение занято.  
@@ -103,6 +103,6 @@ End Sub
 'EndCancelVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Cancel (ADO)](./cancel-method-ado.md)   
  [Объект Connection (ADO)](./connection-object-ado.md)

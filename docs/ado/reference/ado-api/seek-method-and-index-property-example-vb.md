@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 337c9eda-9ddf-49ac-94d3-b33114ba6224
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9eb5e6136be37e120ae9570db661ff75f02d05c5
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 7710357ccb84d096aefcc1cca20bd87056326a5c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989205"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170295"
 ---
 # <a name="seek-method-and-index-property-example-vb"></a>Пример метода Seek и свойства Index (Visual Basic)
-В этом примере используется метод [Seek](./seek-method.md) объекта [Recordset](./recordset-object-ado.md) и свойство [index](./index-property.md) в сочетании с данным ***идентификатором сотрудника***, чтобы найти имя сотрудника в таблице ***Employees*** базы данных Nwind. mdb.  
+В этом примере используется метод [Seek](./seek-method.md) объекта [Recordset](./recordset-object-ado.md) и свойство [index](./index-property.md) в сочетании с заданным ***идентификатором сотрудника** _, чтобы найти имя сотрудника в таблице _ *_Employees_** базы данных Nwind. mdb.  
   
 ```  
 'BeginSeekVB  
@@ -116,7 +116,7 @@ End Sub
 'EndSeekVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство index](./index-property.md)   
  [Объект Recordset (ADO)](./recordset-object-ado.md)   
  [Метод Seek](./seek-method.md)

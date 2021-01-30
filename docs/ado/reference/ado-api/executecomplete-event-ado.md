@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Connection::ExecuteComplete
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 62470d42-e511-494c-bec4-ad4591734b7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 36e27f8a86fce348dbf2061a1c7be91f43be9adc
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c64856ccbd3cdada037ffd77a9ac3b0e74add570
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973395"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171123"
 ---
 # <a name="executecomplete-event-ado"></a>Событие ExecuteComplete (ADO)
 Событие **ексекутекомплете** вызывается после завершения выполнения команды.  
@@ -55,9 +55,9 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
  *пконнектион*  
  Объект [соединения](../../../ado/reference/ado-api/connection-object-ado.md) . Соединение, для которого была выполнена операция.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Событие **ексекутекомплете** может возникать из-за **соединения.** [Выполните](../../../ado/reference/ado-api/execute-method-ado-connection.md) **команду.** [EXECUTE](../../../ado/reference/ado-api/execute-method-ado-command.md), **набор записей.** [Открыть](../../../ado/reference/ado-api/open-method-ado-recordset.md), **набор записей.** [Requery](../../../ado/reference/ado-api/requery-method.md)или **Recordset.** Методы [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример модели событий ADO (Visual c++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [Общие сведения об обработчике событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)

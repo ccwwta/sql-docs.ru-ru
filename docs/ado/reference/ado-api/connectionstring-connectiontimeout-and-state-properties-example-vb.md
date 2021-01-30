@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4de7336a-b5ea-43f1-b750-5fa302b5b756
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6154dd6f741383dfbb2c86db95e766fc9903e3d5
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 51f92f1bef619dca21947fd5fae030f2618e4e7c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974795"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171439"
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>Пример свойств ConnectionString, ConnectionTimeout и State (Visual Basic)
 В этом примере демонстрируются различные способы использования свойства [ConnectionString](./connectionstring-property-ado.md) для открытия объекта [соединения](./connection-object-ado.md) . Он также использует свойство [ConnectionTimeout](./connectiontimeout-property-ado.md) для установки времени ожидания соединения, а свойство [State](./state-property-ado.md) — для проверки состояния соединений. Для выполнения этой процедуры требуется функция-состояние.  
@@ -127,7 +127,7 @@ End Function
 'EndConnectionStringVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Connection (ADO)](./connection-object-ado.md)   
  [Свойство ConnectionString (ADO)](./connectionstring-property-ado.md)   
  [Свойство ConnectionTimeout (ADO)](./connectiontimeout-property-ado.md)   

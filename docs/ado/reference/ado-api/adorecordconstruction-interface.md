@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - ADORecordConstruction
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4e56c1ed6339c7b0baf50abfc6308a2dc2be741a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 45cf9d5bc72178e5ab56264e9f5ec3475f00eef1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976235"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171594"
 ---
 # <a name="adorecordconstruction-interface"></a>Интерфейс ADORecordConstruction
-Интерфейс **адорекордконструктион**используется для создания объекта **записи** ADO из объекта **строки** OLE DB в приложении C/C++.  
+Интерфейс **адорекордконструктион** используется для создания объекта **записи** ADO из объекта **строки** OLE DB в приложении C/C++.  
   
  Этот интерфейс поддерживает следующие свойства:  
   
@@ -33,7 +33,7 @@ ms.locfileid: "88976235"
 |Свойство|Описание|  
 |-|-|  
 |[ParentRow](./parentrow-property-ado.md)|Доступный только на запись.<br />Задает контейнер объекта OLE DB **строки** для этого объекта **записи** ADO.|  
-|[Строки](./row-property-ado.md)|Чтение и запись.<br />Возвращает или задает OLE DB объект **строки** от или в этом объекте ADO **Record** .|  
+|[Строка](./row-property-ado.md)|Чтение и запись.<br />Возвращает или задает OLE DB объект **строки** от или в этом объекте ADO **Record** .|  
   
 ## <a name="methods"></a>Методы  
  Нет.  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 455a02f0-8143-4562-8648-8fb45ffd334c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e3b6b02449fdfebf20469bf859beb500146df0cb
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e8ac6ec9cb5b32a7c0494a1955b4115d72f959d0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990305"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170689"
 ---
 # <a name="openschema-method-example-vb"></a>Пример метода OpenSchema (Visual Basic)
-В этом примере используется метод [OpenSchema](./openschema-method.md) для вывода имени и типа каждой таблицы в базе данных ***pubs*** .  
+В этом примере используется метод [OpenSchema](./openschema-method.md) для вывода имени и типа каждой таблицы в базе данных ***pubs** _.  
   
 ```  
 'BeginOpenSchemaVB  
@@ -79,12 +79,12 @@ End Sub
 'EndOpenSchemaVB  
 ```  
   
- В этом примере задается TABLE_TYPE ограничение запроса в аргументе ***критериев*** метода **OpenSchema** . В результате возвращаются только данные схемы для представлений, указанных в базе данных ***pubs*** . Затем в примере выводятся имена и типы для каждой таблицы.  
+ В этом примере задается TABLE_TYPE ограничение запроса в аргументе _*OpenSchema** Method **_условия_отбора_*_ . В результате возвращаются только данные схемы для представлений, указанных в базе данных _ *_pubs_**. Затем в примере выводятся имена и типы для каждой таблицы.  
   
 ```  
 Attribute VB_Name = "OpenSchema"  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод OpenSchema](./openschema-method.md)   
  [Объект Recordset (ADO)](./recordset-object-ado.md)

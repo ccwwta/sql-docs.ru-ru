@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_audit_write
 - sp_audit_write_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 56795d7ed3da83dff9f50d70f639300dae0da3a1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0ac793b35f5e72b93a27369bf00327a969059b0d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536724"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171754"
 ---
 # <a name="sp_audit_write-transact-sql"></a>sp_audit_write (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
 ## <a name="arguments"></a>Аргументы  
  `[ @user_defined_event_id = ] user_defined_event_id`  
- Параметр, определяемый пользователем и записываемый в столбец **user_defined_event_id** журнала аудита. * \@ user_defined_event_id* имеет тип **smallint**.  
+ Параметр, определяемый пользователем и записываемый в столбец **user_defined_event_id** журнала аудита. *\@ user_defined_event_id* имеет тип **smallint**.  
   
  `[ @succeeded = ] succeeded`  
  Параметр, переданный пользователем с целью указания, было ли событие успешным или нет. Содержится в столбце успеха журнала аудита. `@succeeded`**бит**.  
@@ -56,7 +56,7 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
  Ошибки вызваны неверными входными параметрами или ошибкой записи в целевой журнал аудита.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Когда **USER_DEFINED_AUDIT_GROUP** добавляется в спецификацию аудита сервера или в спецификацию аудита базы данных, событие, запускаемое **sp_audit_write** , будет включено в журнал аудита.  
   
 ## <a name="permissions"></a>Разрешения  

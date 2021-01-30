@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Parameter
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 123ca1553ede61735565a6f82cb36b0035c56dcb
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d3922289548cbc3cb2e694399ac9f09e13d73985
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990175"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170615"
 ---
 # <a name="parameter-object"></a>Объект Parameter
 Представляет параметр или аргумент, связанный с объектом [Command](./command-object-ado.md) на основе параметризованного запроса или хранимой процедуры.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Многие поставщики поддерживают параметризованные команды. Это команды, в которых нужное действие определено один раз, но переменные (или параметры) используются для изменения некоторых сведений о команде. Например, инструкция SQL SELECT может использовать параметр для определения критерия сопоставления предложения WHERE, а другой — для определения имени столбца для предложения сортировки по.  
   
  Объекты **параметров** представляют параметры, связанные с параметризованными запросами, а также входные и выходные аргументы и возвращаемые значения хранимых процедур. В зависимости от функциональных возможностей поставщика некоторые коллекции, методы или свойства объекта **параметров** могут быть недоступны.  
@@ -51,7 +51,7 @@ ms.locfileid: "88990175"
   
 -   [Свойства, методы и события объекта Parameter](./parameter-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Command (ADO)](./command-object-ado.md)   
  [Метод CreateParameter (ADO)](./createparameter-method-ado.md)   
  [Коллекция Parameters (ADO)](./parameters-collection-ado.md)   

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Connection15::IsolationLevel
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ea84e4b2-fbf2-4eef-b9ce-796b22e21800
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 91945d36801005fb7f7c4dbcc9df5a464c6e4fa4
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: dc9f116c565321051184d16fa0cdf963cc4bfe0e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990775"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170929"
 ---
 # <a name="isolationlevel-property"></a>Свойство IsolationLevel
 Указывает уровень изоляции для объекта [соединения](./connection-object-ado.md) .  
@@ -29,7 +29,7 @@ ms.locfileid: "88990775"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает значение [исолатионлевеленум](./isolationlevelenum.md) . Значение по умолчанию — **adXactReadCommitted**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Используйте свойство **IsolationLevel** , чтобы установить уровень изоляции объекта **Connection** . Параметр не вступит в силу до следующего вызова метода [примеры BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) . Если запрошенный уровень изоляции недоступен, поставщик может вернуть следующий более высокий уровень изоляции, не обновляя свойство **IsolationLevel** .  
   
  Свойство **IsolationLevel** доступно для чтения и записи.  
@@ -40,6 +40,6 @@ ms.locfileid: "88990775"
 ## <a name="applies-to"></a>Применение  
  [Объект Connection (ADO)](./connection-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойств IsolationLevel и Mode (Visual Basic)](./isolationlevel-and-mode-properties-example-vb.md)   
  [Пример свойств IsolationLevel и Mode (Visual c++)](./isolationlevel-and-mode-properties-example-vc.md)

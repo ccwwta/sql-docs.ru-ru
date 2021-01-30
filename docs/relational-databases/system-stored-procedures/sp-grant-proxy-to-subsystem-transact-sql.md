@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_grant_login_to_subsystem_TSQL
 - sp_grant_login_to_subsystem
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 964bab1ac95d80d05f16fa8b538f1ecd5f15352c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 41cbd629572229b4a21c17aca989bc3ab25d5413
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469407"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171745"
 ---
 # <a name="sp_grant_proxy_to_subsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
 
@@ -42,15 +42,15 @@ sp_grant_proxy_to_subsystem
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @proxy_id = ] id` Идентификационный номер прокси-сервера, для которого предоставляется доступ. *Proxy_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать либо *proxy_id* , либо *proxy_name* , но нельзя указать оба значения.  
+`[ @proxy_id = ] id` Идентификационный номер прокси-сервера, для которого предоставляется доступ. *Proxy_id* имеет **тип int** и значение по умолчанию NULL. Необходимо указать либо *proxy_id* , либо *proxy_name* , но нельзя указать оба значения.  
   
-`[ @proxy_name = ] 'proxy_name'` Имя учетной записи-посредника, для которой предоставляется доступ. Аргумент *proxy_name* имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *proxy_id* , либо *proxy_name* , но нельзя указать оба значения.  
+`[ @proxy_name = ] 'proxy_name'` Имя учетной записи-посредника, для которой предоставляется доступ. Аргумент *proxy_name* имеет тип **sysname** и значение по умолчанию NULL. Необходимо указать либо *proxy_id* , либо *proxy_name* , но нельзя указать оба значения.  
   
-`[ @subsystem_id = ] id` Идентификационный номер подсистемы, к которой предоставляется доступ. *Subsystem_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать либо *subsystem_id* , либо *subsystem_name* , но нельзя указать оба значения. В следующей таблице показаны значения для каждой подсистемы.  
+`[ @subsystem_id = ] id` Идентификационный номер подсистемы, к которой предоставляется доступ. *Subsystem_id* имеет **тип int** и значение по умолчанию NULL. Необходимо указать либо *subsystem_id* , либо *subsystem_name* , но нельзя указать оба значения. В следующей таблице показаны значения для каждой подсистемы.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**2**|Скрипт [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX<br /><br /> ** \* \* Важно \* ! \* ** подсистема сценариев ActiveX будет удалена из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента в следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.|  
+|**2**|Скрипт [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX<br /><br /> **\* \* Важно \* ! \*** подсистема сценариев ActiveX будет удалена из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента в следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.|  
 |**3**|Операционная система (**CmdExec**)|  
 |**4**|Агент моментальных снимков репликации|  
 |**5**|Агент чтения журнала репликации|  
@@ -63,7 +63,7 @@ sp_grant_proxy_to_subsystem
 |**12**|Скрипт PowerShell|  
 | &nbsp; | &nbsp; |
   
-`[ @subsystem_name = ] 'subsystem_name'` Имя подсистемы, к которой предоставляется доступ. Аргумент **subsystem_name** имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *subsystem_id* , либо *subsystem_name* , но нельзя указать оба значения. В следующей таблице показаны значения для каждой подсистемы.  
+`[ @subsystem_name = ] 'subsystem_name'` Имя подсистемы, к которой предоставляется доступ. Аргумент **subsystem_name** имеет тип **sysname** и значение по умолчанию NULL. Необходимо указать либо *subsystem_id* , либо *subsystem_name* , но нельзя указать оба значения. В следующей таблице показаны значения для каждой подсистемы.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -80,7 +80,7 @@ sp_grant_proxy_to_subsystem
 |**PowerShell**|Скрипт PowerShell|  
 | &nbsp; | &nbsp; |
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Предоставление подсистеме доступа к учетной записи-посреднику не изменяет разрешений, предоставленных участнику, указанному в учетной записи-посреднике.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -114,7 +114,7 @@ EXEC dbo.sp_grant_proxy_to_subsystem
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Реализация агент SQL Server безопасности](../../ssms/agent/implement-sql-server-agent-security.md)   
  [sp_revoke_proxy_from_subsystem &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-proxy-from-subsystem-transact-sql.md)   
  [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   

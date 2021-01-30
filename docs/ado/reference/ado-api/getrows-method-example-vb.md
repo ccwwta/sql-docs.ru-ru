@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f7c78bb-7bb8-4c4f-8e5a-4d3bfc8a208f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1958a0e962cd69ff3aacb95f65e965e346afc4f3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 19192cdf3d85e2b25297f59d91e64be4653441ac
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990895"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170986"
 ---
 # <a name="getrows-method-example-vb"></a>Пример метода GetRows (Visual Basic)
 В этом примере метод [GetRows](./getrows-method-ado.md) используется для получения указанного числа строк из [набора записей](./recordset-object-ado.md) и для заполнения массива результирующими данными. Метод **GetRows** возвращает меньше требуемого числа строк в двух случаях: или, если был достигнут [конец файла](./bof-eof-properties-ado.md) , или если **GetRows** попытался получить запись, удаленную другим пользователем. Функция возвращает **значение false** только в том случае, если происходит второй вариант. Для выполнения этой процедуры требуется функция Жетровсок.  
@@ -113,6 +113,6 @@ End Sub
 'EndGetRowsVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод GetRows (ADO)](./getrows-method-ado.md)   
  [Объект Recordset (ADO)](./recordset-object-ado.md)

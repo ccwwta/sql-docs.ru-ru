@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - SchemaEnum
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bcbe9bd3c3f4408be7d228c9edae4da20929f69
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 55a55d39117f2367b1b13c1a25b3785fe2d9cacc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989265"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170310"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 Указывает тип **набора записей** схемы, извлекаемый методом [OpenSchema](./openschema-method.md) .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Дополнительные сведения о функции и столбцах, возвращаемых для каждой константы ADO, можно найти в подразделах [приложения б: наборы строк схемы](/previous-versions/windows/desktop/ms712921(v=vs.85)) справочника по OLE DB программисту. Имя каждого раздела указано в скобках в разделе Описание следующей таблицы.  
   
  Дополнительные сведения о функции и столбцах, возвращаемых для каждой объекты данных ActiveX (MD)ной константы, можно найти в разделах [OLE DB для объектов OLAP и наборов строк схемы](/previous-versions/windows/desktop/ms723056(v=vs.85)) в OLE DB документации по аналитической обработке в Интернете (OLAP). Имя каждого раздела указано в скобках в столбце Описание следующей таблицы.  

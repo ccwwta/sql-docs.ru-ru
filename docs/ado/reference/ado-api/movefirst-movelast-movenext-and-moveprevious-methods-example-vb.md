@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 31d3b083-c677-423e-8d26-a212eaeea281
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a38a79354ad90faff75ed92c96310df838784a0d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ecba366a7af218e6478b531e07250ff257482db4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990545"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170812"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vb"></a>Примеры методов MoveFirst, MoveLast, MoveNext и MovePrevious (Visual Basic)
 В этом примере используются методы [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)и [MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) для перемещения указателя записи [набора записей](./recordset-object-ado.md) на основе указанной команды. Для выполнения этой процедуры требуется процедура Мовеани.  
@@ -124,6 +124,6 @@ End Sub
 'EndMoveFirstVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы MoveFirst, MoveLast, MoveNext и MovePrevious (ADO)](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [Объект Recordset (ADO)](./recordset-object-ado.md)

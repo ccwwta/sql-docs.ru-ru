@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::RecordCount
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c2fbd70c1195d0fedf5041a672b704f4bf482d3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 76f3911ccc240a29829efcd5aa301ff5dfb8cbd5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989835"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170462"
 ---
 # <a name="recordcount-property-ado"></a>Свойство RecordCount (ADO)
 
@@ -33,7 +33,7 @@ ms.locfileid: "88989835"
 
 Возвращает значение **типа Long** , указывающее количество записей в **наборе записей**.
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Замечания
 
 Используйте свойство **RecordCount** , чтобы узнать, сколько записей находится в объекте **набора записей** . Свойство возвращает значение-1, если ADO не удается определить количество записей или тип поставщика или курсора не поддерживает **RecordCount**. Чтение свойства **RecordCount** в закрытом **наборе записей** вызывает ошибку.
 
@@ -55,7 +55,7 @@ ms.locfileid: "88989835"
 
 [Объект Recordset (ADO)](./recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Пример свойств Filter и RecordCount (Visual Basic)](./filter-and-recordcount-properties-example-vb.md)   
 [Пример свойств Filter и RecordCount (Visual c++)](./filter-and-recordcount-properties-example-vc.md)   

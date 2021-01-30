@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - NextRecordset
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b73779dbca82df1d672a57aae667bc5a666a4945
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: acf9105b6d28e34de0351002063251d49196829a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990465"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170769"
 ---
 # <a name="nextrecordset-method-ado"></a>Метод NextRecordset (ADO)
 Очищает текущий объект [набора записей](./recordset-object-ado.md) и возвращает следующий **набор записей** путем перемещения по ряду команд.  
@@ -40,12 +40,12 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
   
 #### <a name="parameters"></a>Параметры  
  *RecordsAffected*  
- Необязательный элемент. **Длинная** переменная, к которой поставщик возвращает количество записей, затронутых текущей операцией.  
+ Необязательный параметр. **Длинная** переменная, к которой поставщик возвращает количество записей, затронутых текущей операцией.  
   
 > [!NOTE]
 >  Этот параметр возвращает только число записей, затронутых операцией. Он не возвращает число записей из инструкции SELECT, используемой для создания **набора записей**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Используйте метод **NextRecordset** для возврата результатов следующей команды в составной инструкции Command или хранимой процедуры, возвращающей несколько результатов. При открытии объекта **набора записей** на основе составного оператора Command (например, SELECT \* from Table1; SELECT \* from Table2 ") с помощью метода [EXECUTE](./execute-method-ado-command.md) в [команде](./command-object-ado.md) или метода [Open](./open-method-ado-recordset.md) в **наборе записей**, ADO выполняет только первую команду и возвращает результаты в *набор записей*. Чтобы получить доступ к результатам последующих команд в инструкции, вызовите метод **NextRecordset** .  
   
  Пока имеются дополнительные результаты, а **набор записей** , содержащий составные инструкции, не отсоединен или не маршалируется через границы процесса, метод **NextRecordset** будет продолжать возвращать объекты **Recordset** . Если команда, возвращающая строку, выполняется успешно, но не возвращает никаких записей, возвращенный объект **набора записей** будет открыт, но пуст. Протестируйте этот случай, убедившись, что для свойств [BOF](./bof-eof-properties-ado.md) и [EOF](./bof-eof-properties-ado.md) задано **значение true**. Если команда, не возвращающая строки, выполняется успешно, возвращаемый объект **набора записей** будет закрыт, что можно проверить путем проверки свойства [State](./state-property-ado.md) в **наборе записей**. Если больше нет результатов, набору *записей* будет присвоено значение *Nothing*.  
@@ -63,6 +63,6 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
 ## <a name="applies-to"></a>Применение  
  [Объект Recordset (ADO)](./recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример метода NextRecordset (Visual Basic)](./nextrecordset-method-example-vb.md)   
  [Пример метода NextRecordset (Visual C++)](./nextrecordset-method-example-vc.md)

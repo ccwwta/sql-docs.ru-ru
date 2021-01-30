@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Property
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: b2a4767c-03c7-4935-a3bc-df3e1a38a009
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7edc57495968cb94dbf8714e3b519acac578775f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a24503889e8bd7deab3bca6072da9114f0a0efdd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989985"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170532"
 ---
 # <a name="property-object-ado"></a>Объект Property (ADO)
 Представляет динамическую характеристику объекта ADO, определяемого поставщиком.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Объекты ADO имеют два типа свойств: встроенные и динамические.  
   
  Встроенные свойства — это свойства, реализованные в ADO и немедленно доступные для любого нового объекта с использованием `MyObject.Property` синтаксиса. Они не отображаются как объекты **свойств** в коллекции [свойств](./properties-collection-ado.md) объекта, поэтому, хотя их значения можно изменять, их характеристики изменить нельзя.  
@@ -49,7 +49,7 @@ ms.locfileid: "88989985"
   
 -   [Свойства, методы и события объекта Property](./property-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Command (ADO)](./command-object-ado.md)   
  [Объект Connection (ADO)](./connection-object-ado.md)   
  [Объект Field](./field-object.md)   

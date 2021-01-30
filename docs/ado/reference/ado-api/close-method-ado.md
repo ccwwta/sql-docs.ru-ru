@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::Close
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7843642c38a30d854cb6729fd5a418de8c91f2c7
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9a7c0ea176f203bd9b7b2febc17475e6af385d7f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975395"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171520"
 ---
 # <a name="close-method-ado"></a>Метод Close (ADO)
 Закрывает открытый объект и все зависимые объекты.  
@@ -46,7 +46,7 @@ object.Close
  Закрытие объекта **соединения** при наличии открытых объектов **Recordset** в соединении откатывает все ожидающие изменения во всех объектах **набора записей** . Явное закрытие объекта **соединения** (вызов метода **Close** ) во время выполнения транзакции приводит к ошибке. Если объект **соединения** выходит за пределы области действия во время выполнения транзакции, ADO автоматически выполняет откат транзакции.  
   
 ## <a name="recordset-record-stream"></a>Набор записей, запись, поток  
- Использование метода **Close** для закрытия объекта **Recordset**, **записи**или **потока** освобождает связанные данные и любой монопольный доступ, который мог быть связан с данными через этот конкретный объект. Позже можно вызвать метод [Open](./open-method-ado-recordset.md) , чтобы повторно открыть объект с теми же или измененными атрибутами.  
+ Использование метода **Close** для закрытия объекта **Recordset**, **записи** или **потока** освобождает связанные данные и любой монопольный доступ, который мог быть связан с данными через этот конкретный объект. Позже можно вызвать метод [Open](./open-method-ado-recordset.md) , чтобы повторно открыть объект с теми же или измененными атрибутами.  
   
  При закрытии объекта **набора записей** вызов всех методов, требующих активного курсора, приводит к ошибке.  
   
@@ -67,7 +67,7 @@ object.Close
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Примеры методов Open и Close (Visual Basic)](./open-and-close-methods-example-vb.md)   
  [Пример методов Open и Close (VBScript)](./open-and-close-methods-example-vbscript.md)   
  [Пример методов Open и Close (Visual c++)](./open-and-close-methods-example-vc.md)   

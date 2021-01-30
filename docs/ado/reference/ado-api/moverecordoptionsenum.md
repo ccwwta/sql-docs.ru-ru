@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - MoveRecordOptionsEnum
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f53c2ce4-1021-4a45-92b8-775e8bebad99
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1fd6f68364f284e974d3564c8df3da5808683c3e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 8a6556944a56cd695fe4b336f7080c9ea79f0f4c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990505"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170781"
 ---
 # <a name="moverecordoptionsenum"></a>MoveRecordOptionsEnum
 Задает поведение метода [MoveRecord](./moverecord-method-ado.md) объекта [записи](./record-object-ado.md) .  
