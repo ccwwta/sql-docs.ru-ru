@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - xp_cmdshell
 - xp_cmdshell_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7f545d556069e31e349c0a8badf0fd9d95e6dcef
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: 73bea06c7919c40b1080458f3e6982d2c10ebe47
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257611"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99125005"
 ---
 # <a name="xp_cmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +63,7 @@ GO
 The command(s) completed successfully.  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Процесс Windows, порожденный **xp_cmdshell** , имеет те же права безопасности, что и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетная запись службы.  
  
 > [!IMPORTANT]
@@ -90,7 +90,7 @@ EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0';
   
  При первом включении **xp_cmdshell** требуется разрешение CONTROL Server для выполнения, а процесс Windows, созданный **xp_cmdshell** , имеет тот же контекст безопасности, что и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетная запись службы. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Учетная запись службы часто имеет больше разрешений, чем требуется для работы, выполняемой процессом, созданным **xp_cmdshell**. Для повышения безопасности доступ к **xp_cmdshell** должен быть ограничен пользователями с высоким уровнем привилегий.  
   
- Чтобы разрешить Неадминистраторам использовать **xp_cmdshell**и разрешить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создавать дочерние процессы с маркером безопасности учетной записи с меньшими привилегиями, выполните следующие действия.  
+ Чтобы разрешить Неадминистраторам использовать **xp_cmdshell** и разрешить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создавать дочерние процессы с маркером безопасности учетной записи с меньшими привилегиями, выполните следующие действия.  
   
 1.  Создайте и настройте локальную учетную запись Windows или учетную запись домена с меньшими правами доступа, чем требуется процессу.  
   
@@ -99,7 +99,7 @@ EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0';
     > [!NOTE]  
     >  Можно также настроить эту учетную запись-посредник [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , щелкнув правой кнопкой мыши **свойства** имени сервера в обозревателе объектов и перейдя на вкладку **Безопасность** раздела **учетная запись-посредник сервера** .  
   
-3.  В [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] с помощью базы данных master выполните `GRANT exec ON xp_cmdshell TO N'<some_user>';` инструкцию, чтобы предоставить отдельным пользователям, не являющимся системными**администраторами** , возможность выполнять **xp_cmdshell**. Указанный пользователь должен существовать в базе данных master.  
+3.  В [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] с помощью базы данных master выполните `GRANT exec ON xp_cmdshell TO N'<some_user>';` инструкцию, чтобы предоставить отдельным пользователям, не являющимся системными **администраторами** , возможность выполнять **xp_cmdshell**. Указанный пользователь должен существовать в базе данных master.  
   
  Теперь пользователи, не являющиеся администраторами, могут запускать процессы операционной системы с **xp_cmdshell** , а эти процессы выполняются с разрешениями настроенной учетной записи-посредника. Пользователи с разрешением CONTROL SERVER (члены предопределенной роли сервера **sysadmin** ) будут по-прежнему принимать разрешения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетной записи службы для дочерних процессов, запускаемых **xp_cmdshell**.  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - xp_enumgroups_TSQL
 - xp_enumgroups
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0bd3ed36-e260-469c-a5ff-b033fb9ea59d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 59535a5dd2d5df7b5d165e58a30358001378d360
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a0319158b7e2627bac7cd67a8f15e10dc4694b51
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551099"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99124073"
 ---
 # <a name="xp_enumgroups-transact-sql"></a>xp_enumgroups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ xp_enumgroups [ 'domain_name' ]
   
 ## <a name="arguments"></a>Аргументы  
  **"** *domain_name* **"**  
- Имя домена Windows, для которого перечисляется список глобальных групп. Аргумент *domain_name* имеет тип **sysname**и значение по умолчанию NULL.  
+ Имя домена Windows, для которого перечисляется список глобальных групп. Аргумент *domain_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -53,7 +53,7 @@ xp_enumgroups [ 'domain_name' ]
 |**group**|**sysname**|Имя группы Windows|  
 |**comment**|**sysname**|Описание группы Windows, предоставленное Windows|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Если *domain_name* — имя компьютера под управлением Windows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на котором выполняется экземпляр, или не указано имя домена, **xp_enumgroups** перечисляет локальные группы на компьютере, где работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **xp_enumgroups** нельзя использовать, если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает под Windows 98.  

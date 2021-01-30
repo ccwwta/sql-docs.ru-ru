@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - xp_logevent
 - xp_logevent_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7b379ad0-5b12-4d2e-9c52-62465df1fdbd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7001b9d29a96dd192e044ddfe779b8f39a581a94
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2a3a1aa4f71f05860975e9eadc60fa49c65a1951
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419278"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99124620"
 ---
 # <a name="xp_logevent-transact-sql"></a>xp_logevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +57,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
   
  `The command(s) completed successfully.`  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  При отправке сообщений из [!INCLUDE[tsql](../../includes/tsql-md.md)] процедур, триггеров, пакетов и т. д. Используйте инструкцию RAISERROR вместо xp_logevent. xp_logevent не вызывает обработчик сообщений клиента или Set @ @ERROR . Чтобы записывать сообщения в средство просмотра событий Windows и в файл журнала ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] внутри экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], следует выполнить инструкцию RAISERROR.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -80,7 +80,7 @@ EXEC xp_logevent 60000, @@MESSAGE, informational;
 ## <a name="see-also"></a>См. также:  
  [PRINT (Transact-SQL)](../../t-sql/language-elements/print-transact-sql.md)   
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Общие расширенные хранимые процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   
   

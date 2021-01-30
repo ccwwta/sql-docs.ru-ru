@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - xp_loginconfig_TSQL
 - xp_loginconfig
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d380e799-2857-408a-bcbf-5e73a8e6aa5a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9e86352f992698387334531398bafc5bdfdc2d61
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: da53f9c3666a4d4d1e75136dd81caa45c9aaee81
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419258"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99124416"
 ---
 # <a name="xp_loginconfig-transact-sql"></a>xp_loginconfig (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,14 +48,14 @@ xp_loginconfig ['config_name']
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**login mode**|Режим безопасности имени входа в систему. Возможные значения: **Mixed** и **Windows Authentication**.<br /><br /> Заменяется на:<br /><br /> `SELECT SERVERPROPERTY('IsIntegratedSecurityOnly'); GO`|  
+|**режим входа**|Режим безопасности имени входа в систему. Возможные значения: **Mixed** и **Windows Authentication**.<br /><br /> Заменяется на:<br /><br /> `SELECT SERVERPROPERTY('IsIntegratedSecurityOnly'); GO`|  
 |**default login**|Имя идентификатора входа сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию для авторизованных пользователей доверенных подключений (для пользователей без соответствующего имени входа). Имя входа по умолчанию — **Guest**. Данное значение предоставляется для обеспечения обратной совместимости.|  
 |**Домен по умолчанию**|Имя домена Windows по умолчанию для сетевых пользователей доверенных подключений. Доменом по умолчанию является домен компьютера Windows, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Данное значение предоставляется для обеспечения обратной совместимости.|  
-|**уровень аудита**|Уровень аудита. Возможные значения: **None**, **Success**, **Failure**и **ALL**. Результаты аудита записываются в журнал ошибок и в окно просмотра событий Windows.|  
+|**уровень аудита**|Уровень аудита. Возможные значения: **None**, **Success**, **Failure** и **ALL**. Результаты аудита записываются в журнал ошибок и в окно просмотра событий Windows.|  
 |**set hostname**|Указывает, заменяется ли имя узла из учетной записи клиента на сетевое имя пользователя Windows. Возможными значениями являются **true** или **false**. Если этот параметр задан, имя пользователя сети отображается в выходных данных **sp_who**.|  
-|**map _**|Сообщает, какие специальные символы Windows поставлены в соответствие допустимому символу подчеркивания (_) сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Возможные значения: **Разделитель домена** (по умолчанию), **пробел**, **null**или любой отдельный символ. Данное значение предоставляется для обеспечения обратной совместимости.|  
-|**Map $**|Сообщает, какие специальные символы Windows поставлены в соответствие допустимому символу знака доллара ($) сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Возможные значения: **Разделитель домена**, **пробел**, **значение NULL**или любой отдельный символ. Значение по умолчанию — **Space**. Данное значение предоставляется для обеспечения обратной совместимости.|  
-|**Таблица #**|Сообщает, какие специальные символы Windows поставлены в соответствие допустимому символу знака «решетка» (#) сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Возможные значения: **Разделитель домена**, **пробел**, **значение NULL**или любой отдельный символ. Значение по умолчанию — дефис (-). Данное значение предоставляется для обеспечения обратной совместимости.|  
+|**map _**|Сообщает, какие специальные символы Windows поставлены в соответствие допустимому символу подчеркивания (_) сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Возможные значения: **Разделитель домена** (по умолчанию), **пробел**, **null** или любой отдельный символ. Данное значение предоставляется для обеспечения обратной совместимости.|  
+|**Map $**|Сообщает, какие специальные символы Windows поставлены в соответствие допустимому символу знака доллара ($) сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Возможные значения: **Разделитель домена**, **пробел**, **значение NULL** или любой отдельный символ. Значение по умолчанию — **Space**. Данное значение предоставляется для обеспечения обратной совместимости.|  
+|**Таблица #**|Сообщает, какие специальные символы Windows поставлены в соответствие допустимому символу знака «решетка» (#) сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Возможные значения: **Разделитель домена**, **пробел**, **значение NULL** или любой отдельный символ. Значение по умолчанию — дефис (-). Данное значение предоставляется для обеспечения обратной совместимости.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -67,7 +67,7 @@ xp_loginconfig ['config_name']
 |**name**|**sysname**|Параметр конфигурации|  
 |**config value**|**sysname**|Значение параметра конфигурации|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **xp_loginconfig** нельзя использовать для установки значений конфигурации.  
   
  Определение режима входа и уровня аудита производится в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -94,10 +94,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [sp_denylogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
- [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
+ [Хранимая процедура sp_denylogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
+ [Хранимая процедура sp_grantlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Хранимая процедура sp_revokelogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [xp_logininfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
   
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - xp_logininfo_TSQL
 - xp_logininfo
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 44b76081c7ec5fdd3496b670b1884347d1a84d1f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6df69edd25c5c2f451e8a4aa657caf99a4c8103d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419218"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99124100"
 ---
 # <a name="xp_logininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,12 +42,12 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @acctname = ] 'account_name'` Имя пользователя или группы Windows, которым предоставлен доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *account_name* имеет тип **sysname**и значение по умолчанию NULL. Если *account_name* не указан, то выводятся все группы Windows и пользователи Windows, которым было явно предоставлено разрешение на вход. *account_name* должны быть полными. Например, 'ADVWKS4\macraes' или 'BUILTIN\Administrators'.  
+`[ @acctname = ] 'account_name'` Имя пользователя или группы Windows, которым предоставлен доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *account_name* имеет тип **sysname** и значение по умолчанию NULL. Если *account_name* не указан, то выводятся все группы Windows и пользователи Windows, которым было явно предоставлено разрешение на вход. *account_name* должны быть полными. Например, 'ADVWKS4\macraes' или 'BUILTIN\Administrators'.  
   
  **"все"**  |  **"Members"**  
- Указывает, следует ли доставлять данные обо всех путях разрешений для данной учетной записи или только сведения о членах группы Windows. ** \@ параметр имеет тип** **varchar (10)** и значение по умолчанию NULL. Если не указано значение **ALL** , то отображается только первый путь разрешения.  
+ Указывает, следует ли доставлять данные обо всех путях разрешений для данной учетной записи или только сведения о членах группы Windows. **\@ параметр имеет тип** **varchar (10)** и значение по умолчанию NULL. Если не указано значение **ALL** , то отображается только первый путь разрешения.  
   
-`[ @privilege = ] variable_name` Выходной параметр, возвращающий уровень привилегий указанной учетной записи Windows. *variable_name* имеет тип **varchar (10)** и значение по умолчанию "не требуется". Возвращенный уровень привилегий — **User**, **Admin**или **null**.  
+`[ @privilege = ] variable_name` Выходной параметр, возвращающий уровень привилегий указанной учетной записи Windows. *variable_name* имеет тип **varchar (10)** и значение по умолчанию "не требуется". Возвращенный уровень привилегий — **User**, **Admin** или **null**.  
   
  OUTPUT  
  Если указан, помещает *variable_name* в выходной параметр.  
@@ -61,11 +61,11 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 |-----------------|---------------|-----------------|  
 |**имя учетной записи**|**sysname**|Полностью уточненное имя учетной записи Windows.|  
 |**type**|**char (8)**|Тип учетной записи Windows. Допустимые значения: **User** или **Group**.|  
-|**правом**|**char(9)**|Права доступа к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Допустимые значения: **Admin**, **User**или **null**.|  
+|**правом**|**char(9)**|Права доступа к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Допустимые значения: **Admin**, **User** или **null**.|  
 |**mapped login name**|**sysname**|Для учетных записей пользователей, имеющих привилегии пользователя, **сопоставленное имя входа** показывает сопоставленное имя входа, которое [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается использовать при входе с помощью этой учетной записи, используя сопоставленные правила с именем домена, добавленным перед ним.|  
 |**путь разрешения**|**sysname**|Членство в группе, разрешающее доступ к учетной записи.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Если указано *account_name* , **xp_logininfo** сообщает наивысший уровень прав доступа для указанного пользователя или группы Windows. Если пользователь Windows имеет права системного администратора и пользователя домена, он будет выступать в качестве системного администратора. Если пользователь является членом нескольких групп Windows одного уровня прав доступа, группа, которая первой предоставила доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], будет отражена.  
   
  Если *account_name* является допустимым пользователем или группой Windows, не связанными с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] именем входа, возвращается пустой результирующий набор. Если *account_name* не может быть идентифицирован как допустимый пользователь или группа Windows, возвращается сообщение об ошибке.  
@@ -87,10 +87,10 @@ EXEC xp_logininfo 'BUILTIN\Administrators';
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [sp_denylogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
- [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Хранимая процедура sp_denylogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
+ [Хранимая процедура sp_grantlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [Хранимая процедура sp_revokelogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Общие расширенные хранимые процедуры &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   
   
