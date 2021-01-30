@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_jobserver
 - sp_delete_jobserver_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4db36a6fbcf09ca6758fd3838ab489bc6aa23cb2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b53fecfb2d8fa27476db16039471dffb4efbad54
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546155"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195478"
 ---
 # <a name="sp_delete_jobserver-transact-sql"></a>sp_delete_jobserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +41,9 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_id = ] job_id` Идентификационный номер задания, из которого будет удален указанный целевой сервер. *job_id* имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
+`[ @job_id = ] job_id` Идентификационный номер задания, из которого будет удален указанный целевой сервер. *job_id* имеет тип **uniqueidentifier** и значение по умолчанию NULL.  
   
-`[ @job_name = ] 'job_name'` Имя задания, из которого будет удален указанный целевой сервер. Аргумент *job_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` Имя задания, из которого будет удален указанный целевой сервер. Аргумент *job_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Необходимо указать либо *job_id* , либо *job_name* . нельзя указывать оба значения.  
@@ -75,7 +75,7 @@ EXEC sp_delete_jobserver
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
  [sp_help_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobserver-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

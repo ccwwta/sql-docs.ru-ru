@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replmonitorhelpmergesessiondetail
 - sp_replmonitorhelpmergesessiondetail_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c09007256e5c336ecfa2ad62c45623fe2c0e5ff
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ba050d49579e217fa5be5a2dedcd7aa21cf0c99d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543242"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204373"
 ---
 # <a name="sp_replmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,7 +61,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_replmonitorhelpmergesessiondetail** используется для наблюдения за репликацией слиянием.  
   
  При выполнении на подписчике **sp_replmonitorhelpmergesessiondetail** возвращает только подробные сведения о последних 5 сеансах агент слияния.  
@@ -69,7 +69,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли базы данных **db_owner** или **replmonitor** в базе данных распространителя на распространителе или в базе данных подписки на подписчике могут выполнять **sp_replmonitorhelpmergesessiondetail**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Наблюдение за репликацией программным образом](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

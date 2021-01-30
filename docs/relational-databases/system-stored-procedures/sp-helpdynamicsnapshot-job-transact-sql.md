@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpdynamicsnapshot_TSQL
 - sp_helpdynamicsnapshot_job_TSQL
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b11598fc8dacc27f88856e2afdc3adced41470f7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: faf8fcfe5636dc588b111701c5b2cf0668feed78
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549694"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204436"
 ---
 # <a name="sp_helpdynamicsnapshot_job-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,15 +46,15 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает сведения обо всех заданиях моментальных снимков отфильтрованных данных, соответствующих указанному *dynamic_snapshot_jobid*и *dynamic_snapshot_jobname*для всех публикаций.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname** и значение по умолчанию **%** , которое возвращает сведения обо всех заданиях моментальных снимков отфильтрованных данных, соответствующих указанному *dynamic_snapshot_jobid* и *dynamic_snapshot_jobname* для всех публикаций.  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` Имя задания моментального снимка отфильтрованных данных. Аргумент *dynamic_snapshot_jobname*имеет тип **sysname**и значение по умолчанию **%** ", возвращающее все динамические задания для публикации с указанным *dynamic_snapshot_jobid*. Если имя задания было задано явно во время создания задания, оно будет в следующем формате:  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` Имя задания моментального снимка отфильтрованных данных. Аргумент *dynamic_snapshot_jobname* имеет тип **sysname** и значение по умолчанию **%** ", возвращающее все динамические задания для публикации с указанным *dynamic_snapshot_jobid*. Если имя задания было задано явно во время создания задания, оно будет в следующем формате:  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
 ```  
   
-`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` Идентификатор для задания моментального снимка отфильтрованных данных. *dynamic_snapshot_jobid*имеет тип **uniqueidentifier**и значение по умолчанию NULL, которое возвращает все задания моментального снимка, соответствующие заданному *dynamic_snapshot_jobname*.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` Идентификатор для задания моментального снимка отфильтрованных данных. *dynamic_snapshot_jobid* имеет тип **uniqueidentifier** и значение по умолчанию NULL, которое возвращает все задания моментального снимка, соответствующие заданному *dynamic_snapshot_jobname*.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -80,7 +80,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_helpdynamicsnapshot_job** используется в репликации слиянием.  
   
  Если для всех аргументов используются значения по умолчанию, возвращаются сведения по всем заданиям моментального снимка секционных данных для всей базы данных публикации.  
@@ -88,7 +88,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** , предопределенной роли базы данных **db_owner** и списка доступа к публикации для публикации могут выполнять **sp_helpdynamicsnapshot_job**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

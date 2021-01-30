@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - index command [ODBC]
 ms.assetid: 694e8cf5-2f69-4001-9c1e-b735a4da3aff
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ec9ed3c0ec0e91f3c4fd3a0019c8ac463a8620c2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5ac225132e2d89f1edd4baab012b2383cd508588
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449526"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183396"
 ---
 # <a name="index-command"></a>Команда INDEX
 Создает индексный файл для просмотра записей таблицы и доступа к ним в логическом порядке.  
@@ -91,7 +91,7 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
  АДДИТИВНЫЕ  
  Сохраняет открытые ранее открытые файлы индекса. Если опустить предложение сложения при создании файла индекса или файлов для таблицы с ИНДЕКСом, все ранее открытые файлы индекса (за исключением структурного составного индекса) будут закрыты.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Записи в таблице с файлом индекса отображаются и доступны в порядке, указанном выражением индекса. Физический порядок записей в таблице не изменяется файлом индекса.  
   
 ## <a name="index-types"></a>Типы индексов  

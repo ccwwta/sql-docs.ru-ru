@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLCancel
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ac0b5972-627f-4440-8c5a-0e8da728726d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 040cd9034a8f754a26f577b7efd6e1307e4c90c5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c1d630af340bf676deda8c18f415b85aba15403c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448876"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185800"
 ---
 # <a name="sqlcancel-function"></a>Функция SQLCancel
 **Соответствия**  
@@ -41,7 +41,7 @@ ms.locfileid: "88448876"
 ```cpp  
   
 SQLRETURN SQLCancel(  
-     SQLHSTMT     StatementHandle);  
+     SQLHSTMT     StatementHandle);  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
@@ -57,7 +57,7 @@ SQLRETURN SQLCancel(
 |SQLSTATE|Ошибка|Описание|  
 |--------------|-----------|-----------------|  
 |01000|Общее предупреждение|Информационное сообщение для конкретного драйвера. (Функция возвращает SQL_SUCCESS_WITH_INFO.)|  
-|HY000|Общая ошибка|Произошла ошибка, для которой нет определенного SQLSTATE и для которого не определен SQLSTATE для конкретной реализации. Сообщение об ошибке, возвращенное функцией [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) в буфере * \* MessageText* , описывает ошибку и ее причину.|  
+|HY000|Общая ошибка|Произошла ошибка, для которой нет определенного SQLSTATE и для которого не определен SQLSTATE для конкретной реализации. Сообщение об ошибке, возвращенное функцией [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) в буфере *\* MessageText* , описывает ошибку и ее причину.|  
 |HY001|Ошибка выделения памяти|Драйверу не удалось выделить память, необходимую для поддержки выполнения или завершения функции.|  
 |HY010|Ошибка последовательности функций|(DM) вызвана асинхронно исполняемая функция для маркера соединения, связанного с *статеменсандле*. Эта асинхронная функция все еще выполнялась при вызове функции **SQLCancel** .<br /><br /> Не удалось выполнить операцию отмены (DM), так как выполняется асинхронная операция над маркером соединения, связанным с *статеменсандле*.|  
 |HY013|Ошибка управления памятью|Не удалось обработать вызов функции, так как не удалось получить доступ к базовым объектам памяти, возможно, из-за нехватки памяти.|  
@@ -114,9 +114,9 @@ SQLRETURN SQLCancel(
 |Получение поля диагностической записи или поля заголовка диагностики|[Функция SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)|  
 |Получение нескольких полей структуры диагностических данных|[Функция SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|  
 |Возврат следующего параметра для отправки данных|[Функция SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md)|  
-|Отправка данных параметров во время выполнения|[Функция SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)|  
+|Отправка данных параметров во время выполнения|[SQLPutData, функция](../../../odbc/reference/syntax/sqlputdata-function.md)|  
 |Размещение курсора в наборе строк, обновление данных в наборе строк, обновление или удаление данных в результирующем наборе|[Функция SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)

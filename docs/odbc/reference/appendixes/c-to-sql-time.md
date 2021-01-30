@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - data conversions from C to SQL types [ODBC], time
 - time data type [ODBC]
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8da43c9-d9a5-45e5-bd9a-1dd633db2ee0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e1711d6a5acffa73a640a0e25f647c53b3daa868
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b53505a9f10d6f7039e0811e5f9fda8674092be1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449046"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195065"
 ---
 # <a name="c-to-sql-time"></a>Преобразование из C в SQL: время
 Идентификатор для типа данных time ODBC C:  
@@ -31,10 +31,10 @@ ms.locfileid: "88449046"
   
 |Идентификатор типа SQL|Тест|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Длина байта столбца >= 8<br /><br /> Длина байта столбца < 8<br /><br /> Значение данных не является допустимым временем|Недоступно<br /><br /> 22001<br /><br /> 22008|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Длина символа столбца >= 8<br /><br /> Длина символа столбца < 8<br /><br /> Значение данных не является допустимым временем|Недоступно<br /><br /> 22001<br /><br /> 22008|  
-|SQL_TYPE_TIME|Значение данных является допустимым временем<br /><br /> Значение данных не является допустимым временем|Недоступно<br /><br /> 22007|  
-|SQL_TYPE_TIMESTAMP|Значение данных является допустимым временем [a]<br /><br /> Значение данных не является допустимым временем|Недоступно<br /><br /> 22007|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Длина байта столбца >= 8<br /><br /> Длина байта столбца < 8<br /><br /> Значение данных не является допустимым временем|н/д<br /><br /> 22001<br /><br /> 22008|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Длина символа столбца >= 8<br /><br /> Длина символа столбца < 8<br /><br /> Значение данных не является допустимым временем|н/д<br /><br /> 22001<br /><br /> 22008|  
+|SQL_TYPE_TIME|Значение данных является допустимым временем<br /><br /> Значение данных не является допустимым временем|н/д<br /><br /> 22007|  
+|SQL_TYPE_TIMESTAMP|Значение данных является допустимым временем [a]<br /><br /> Значение данных не является допустимым временем|н/д<br /><br /> 22007|  
   
  [a] для даты в метке времени задана текущая дата, а часть метки времени в долях секунды имеет значение 0.  
   

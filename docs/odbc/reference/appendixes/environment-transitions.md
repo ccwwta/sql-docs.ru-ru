@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - environment transitions [ODBC]
 - transitioning states [ODBC], environment
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9d11b1ab-f4c8-48ca-9812-8c04303f939d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4cb4366a044f42440eb70934b9f853947e4f3224
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: daef0bc276831358cd3d82dd10a1dd44082214af
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466234"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194834"
 ---
 # <a name="environment-transitions"></a>Переходы среды
 Среды ODBC имеют следующие три состояния.  
@@ -35,7 +35,7 @@ ms.locfileid: "88466234"
   
 ## <a name="sqlallochandle"></a>Функцию SQLAllocHandle  
   
-|E0<br /><br /> Не выделено|E1<br /><br /> Allocated|E2<br /><br /> Соединение|  
+|E0<br /><br /> Не выделено|E1<br /><br /> Allocated|E2<br /><br /> Подключение|  
 |------------------------|----------------------|-----------------------|  
 |E1 [1]|--[4]|--[4]|  
 |IH открыт|E2 [5]<br />(HY010) 1-6|--[4]|  
@@ -55,7 +55,7 @@ ms.locfileid: "88466234"
   
 ## <a name="sqldatasources-and-sqldrivers"></a>SQLDataSources и SQLDrivers  
   
-|E0<br /><br /> Не выделено|E1<br /><br /> Allocated|E2<br /><br /> Соединение|  
+|E0<br /><br /> Не выделено|E1<br /><br /> Allocated|E2<br /><br /> Подключение|  
 |------------------------|----------------------|-----------------------|  
 |IH|--[1]<br />(HY010) открыт|--[1]<br />(HY010) открыт|  
   
@@ -65,7 +65,7 @@ ms.locfileid: "88466234"
   
 ## <a name="sqlendtran"></a>SQLEndTran  
   
-|E0<br /><br /> Не выделено|E1<br /><br /> Allocated|E2<br /><br /> Соединение|  
+|E0<br /><br /> Не выделено|E1<br /><br /> Allocated|E2<br /><br /> Подключение|  
 |------------------------|----------------------|-----------------------|  
 |IH одного|--[3]<br />(HY010) четырех|--[3]<br />(HY010) четырех|  
 |IH открыт|IH|--|  
@@ -80,7 +80,7 @@ ms.locfileid: "88466234"
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
   
-|E0<br /><br /> Не выделено|E1<br /><br /> Allocated|E2<br /><br /> Соединение|  
+|E0<br /><br /> Не выделено|E1<br /><br /> Allocated|E2<br /><br /> Подключение|  
 |------------------------|----------------------|-----------------------|  
 |IH одного|E0|(HY010)|  
 |IH открыт|IH|--[4]<br />E1 [5]|  
@@ -98,7 +98,7 @@ ms.locfileid: "88466234"
   
 ## <a name="sqlgetdiagfield-and-sqlgetdiagrec"></a>SQLGetDiagField и SQLGetDiagRec  
   
-|E0<br /><br /> Не выделено|E1<br /><br /> Allocated|E2<br /><br /> Соединение|  
+|E0<br /><br /> Не выделено|E1<br /><br /> Allocated|E2<br /><br /> Подключение|  
 |------------------------|----------------------|-----------------------|  
 |IH одного|--|--|  
 |IH открыт|IH|--|  
@@ -109,7 +109,7 @@ ms.locfileid: "88466234"
   
 ## <a name="sqlgetenvattr"></a>SQLGetEnvAttr  
   
-|E0<br /><br /> Не выделено|E1<br /><br /> Allocated|E2<br /><br /> Соединение|  
+|E0<br /><br /> Не выделено|E1<br /><br /> Allocated|E2<br /><br /> Подключение|  
 |------------------------|----------------------|-----------------------|  
 |IH|--[1]<br />(HY010) открыт|--|  
   
@@ -119,7 +119,7 @@ ms.locfileid: "88466234"
   
 ## <a name="sqlsetenvattr"></a>SQLSetEnvAttr  
   
-|E0<br /><br /> Не выделено|E1<br /><br /> Allocated|E2<br /><br /> Соединение|  
+|E0<br /><br /> Не выделено|E1<br /><br /> Allocated|E2<br /><br /> Подключение|  
 |------------------------|----------------------|-----------------------|  
 |IH|--[1]<br />(HY010) открыт|(HY011)|  
   
@@ -129,6 +129,6 @@ ms.locfileid: "88466234"
   
 ## <a name="all-other-odbc-functions"></a>Все остальные функции ODBC  
   
-|E0<br /><br /> Не выделено|E1<br /><br /> Allocated|E2<br /><br /> Соединение|  
+|E0<br /><br /> Не выделено|E1<br /><br /> Allocated|E2<br /><br /> Подключение|  
 |------------------------|----------------------|-----------------------|  
 |IH|IH|--|

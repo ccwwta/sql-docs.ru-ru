@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Collection::Count
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: da9ccd1f-d402-41a2-940c-45556fc5340d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b478a9f88d33503c5eda98bda11cfe0e0fcc8d6b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9a99489ca105a3661fb17c7ea8a62ee831e899ca
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974525"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167666"
 ---
 # <a name="count-property-ado"></a>Свойство Count (ADO)
 Указывает количество объектов в коллекции.  
@@ -29,7 +29,7 @@ ms.locfileid: "88974525"
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение **типа Long** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Для определения количества объектов в заданной коллекции используется свойство **Count** .  
   
  Поскольку нумерация элементов коллекции начинается с нуля, всегда следует создавать циклы кода, начиная с нуля и заканчивая значением свойства **Count** минус 1. Если вы используете Microsoft Visual Basic и хотите перебрать элементы коллекции, не проверяя свойство **Count** , используйте оператор **For Each... Следующая** команда.  
@@ -66,7 +66,7 @@ ms.locfileid: "88974525"
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойства Count (Visual Basic)](./count-property-example-vb.md)   
  [Пример свойства Count (Visual c++)](./count-property-example-vc.md)   
  [Метод Refresh (ADO)](./refresh-method-ado.md)

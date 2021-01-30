@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_depends
 - sp_depends_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 64bbce5c077d6752c97fd5791d5820e9cc4a2857
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6251c556475165504075ae60a84b6d4f28766aef
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539080"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206027"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "89539080"
   Отображает сведения о зависимостях объектов базы данных, таких как представления и процедуры, зависящие от таблицы или представления, а также таблицы и представления, зависящие от представления или процедуры. О ссылках на объекты вне текущей базы данных не сообщается.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте представление [sys. dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md) и [sys. dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md) и [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,7 +56,7 @@ sp_depends [ @objname = ] '<object>'
  Имя схемы, которой принадлежит объект.  
   
  *object_name*  
- Имя объекта базы данных, который проверяется на зависимости. Объект может быть таблицей, представлением, хранимой процедурой, определяемой пользователем функцией или триггером. o*bject_name* имеет тип **nvarchar (776)** и не имеет значения по умолчанию.  
+ Имя объекта базы данных, который проверяется на зависимости. Объект может быть таблицей, представлением, хранимой процедурой, определяемой пользователем функцией или триггером. o *bject_name* имеет тип **nvarchar (776)** и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -102,11 +102,11 @@ EXEC sp_depends @objname = N'Sales.Customer' ;
 EXEC sp_depends @objname = N'AdventureWorks2012.Production.iWorkOrder' ;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)   
  [sp_help (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys. sql_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
+ [sys.sql_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
   
   

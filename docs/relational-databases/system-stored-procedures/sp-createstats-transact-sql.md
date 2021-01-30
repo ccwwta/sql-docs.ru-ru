@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_createstats_TSQL
 - sp_createstats
@@ -19,12 +19,12 @@ ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7af34bd1bbe065012b18826f7edaec31940d1e50
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a0fb35bd43125370dc4123425cc919be3033951f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466875"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205205"
 ---
 # <a name="sp_createstats-transact-sql"></a>Хранимая процедура sp_createstats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -63,7 +63,7 @@ sp_createstats
 ## <a name="result-sets"></a>Результирующие наборы  
  Каждая новая статистика имеет имя, совпадающее со столбцом, по которому она создается.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  sp_createstats не создает или не обновляет статистику по столбцам, которые являются первым столбцом в существующем объекте статистики;  Сюда входит первый столбец статистики, созданный для индексов, столбцы с статистикой по отдельным столбцам, созданные с помощью AUTO_CREATE_STATISTICS параметр, и первый столбец статистики, созданный с помощью инструкции CREATE STATISTICS. sp_createstats не создает статистику по первым столбцам отключенных индексов, если этот столбец не используется в другом включенном индексе. sp_createstats не создает статистику по таблицам с отключенным кластеризованным индексом.  
   
  Если таблица содержит набор столбцов, то хранимая процедура sp_createstats не создает статистику по разреженным столбцам. Дополнительные сведения о наборах столбцов и разреженных столбцах см. в разделе [Использование наборов столбцов](../../relational-databases/tables/use-column-sets.md) и [Использование разреженных столбцов](../../relational-databases/tables/use-sparse-columns.md).  

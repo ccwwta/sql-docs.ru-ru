@@ -6,7 +6,7 @@ ms.date: 01/28/2019
 ms.service: sql-database
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - event_log
 - sys.event_log_TSQL
@@ -21,12 +21,12 @@ ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: c3a358e23d9428440166dd98a0f29ca8e4ea11c5
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: ae823cddc60a82c343bc949515493f9405a51a9a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093105"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203855"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (база данных SQL Azure)
 
@@ -42,13 +42,13 @@ ms.locfileid: "98093105"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Имя базы данных. Если подключение завершилось ошибкой и пользователь не указал имя базы данных, то этот столбец остается пустым.|  
-|**start_time**|**datetime2**|Дата и время начала интервала статистической обработки в формате UTC. Для статистических событий время всегда кратно 5 минутам. Пример:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
+|**start_time**|**datetime2**|Дата и время начала интервала статистической обработки в формате UTC. Для статистических событий время всегда кратно 5 минутам. Например:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|Дата и время окончания интервала статистической обработки в формате UTC. Для агрегированных событий **End_time** всегда находится в течение 5 минут позже, чем соответствующее **start_time** в той же строке. Для событий, которые не являются статистическими, **start_time** и **end_time** равны фактической дате и времени события в формате UTC.|  
 |**event_category**|**nvarchar (64)**|Высокоуровневый компонент, вызвавший данное событие.<br /><br /> Список возможных значений см. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) .|  
 |**event_type**|**nvarchar (64)**|Тип события.<br /><br /> Список возможных значений см. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) .|  
 |**event_subtype**|**int**|Подтип произошедшего события.<br /><br /> Список возможных значений см. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) .|  
 |**event_subtype_desc**|**nvarchar (64)**|Описание подтипа события.<br /><br /> Список возможных значений см. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) .|  
-|**severity**|**int**|Степень серьезности ошибки. Возможны следующие значения:<br /><br /> 0 = информационные<br />1 = предупреждение<br />2 = ошибка|  
+|**severity**|**int**|Степень серьезности ошибки. Доступны следующие значения:<br /><br /> 0 = информационные<br />1 = предупреждение<br />2 = ошибка|  
 |**event_count**|**int**|Количество раз, которое произошло это событие для указанной базы данных в течение указанного интервала времени (**start_time** и **end_time**).|  
 |**description**|**nvarchar(max)**|Подробное описание события.<br /><br /> Список возможных значений см. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) .|  
 |**additional_data**|**XML**|*Примечание. это значение всегда равно NULL для базы данных SQL Azure версии 12. Дополнительные сведения о получении событий взаимоблокировок для версии 12 см. в разделе " [примеры](#Deadlock) ".*<br /><br /> Для событий **взаимоблокировок** этот столбец содержит граф взаимоблокировок. Этот столбец содержит значение NULL для других типов событий. |  
@@ -89,7 +89,7 @@ ms.locfileid: "98093105"
 
  Пользователи с разрешением на доступ к базе данных **master** имеют доступ только для чтения к этому представлению.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
   
 ### <a name="event-aggregation"></a>Статистическая обработка событий
 

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_indexoption
 - sp_indexoption_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aaaf9863e6226de5aa30d553bfa4c7766588524b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d8f7011bc4ce2120164683009676953ec44d58c3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547909"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205532"
 ---
 # <a name="sp_indexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,7 +63,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или больше чем 0 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  XML-индексы не поддерживаются. Если указаны XML-индексы, или имя таблицы указано без имени индекса, и таблица содержит XML-индекс, то инструкция завершается ошибкой. Чтобы задать эти параметры, используйте [инструкцию ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) .  
   
  Чтобы отобразить текущие свойства блокировки строк и страниц, используйте [INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md) или представление каталога [sys. indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) .  
@@ -139,7 +139,7 @@ WHERE OBJECT_NAME (object_id) = N'DatabaseLog';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [INDEXPROPERTY (Transact-SQL)](../../t-sql/functions/indexproperty-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  

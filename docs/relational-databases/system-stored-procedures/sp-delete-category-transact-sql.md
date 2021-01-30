@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_category_TSQL
 - sp_delete_category
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cdeb258bf7a61e5cfa4bafe796729f7c445e8cde
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 69befe88ea56ea64e6d6be33a96174d5bd8bb805
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541838"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195540"
 ---
 # <a name="sp_delete_category-transact-sql"></a>sp_delete_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 |**ПОЛУЧАЕТЕ**|Удаляет категорию предупреждения.|  
 |**СТАНЦИИ**|Удаляет категорию оператора.|  
   
-`[ @name = ] 'name'` Имя удаляемой категории. Аргумент *Name* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @name = ] 'name'` Имя удаляемой категории. Аргумент *Name* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQLPoolConnect function [ODBC]
 ms.assetid: 41322737-890d-4a81-aed2-06cc3d546962
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 30e2ce61baf861551e51773aea7ce6dcaf020cf6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8317e159a5a438bb22e8077f3a6635a79f9baefd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487223"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204560"
 ---
 # <a name="sqlpoolconnect-function"></a>Функция SQLPoolConnect
 **Соответствия**  
@@ -63,7 +63,7 @@ SQLRETURN  SQLPoolConnect(
 ## <a name="diagnostics"></a>Диагностика  
  Аналогично [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) для любой ошибки проверки ввода, за исключением того, что диспетчер драйверов будет использовать **параметром handletype** SQL_HANDLE_DBC_INFO_TOKEN и **маркер** *хдбЦинфотокен*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Диспетчер драйверов гарантирует, что родительский дескриптор ХЕНВ *хдбк* и *хдбЦинфотокен* одинаков.  
   
  В отличие от [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md), отсутствует аргумент *DriverCompletion* , предлагающий пользователям вводить сведения о подключении. Диалоговое окно с приглашением не разрешено в сценарии объединения в пул.  
@@ -72,7 +72,7 @@ SQLRETURN  SQLPoolConnect(
   
  Всякий раз, когда драйвер возвращает SQL_ERROR или SQL_INVALID_HANDLE, диспетчер драйверов возвращает ошибку приложению (в [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) или [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
   
- Всякий раз, когда драйвер возвращает SQL_SUCCESS_WITH_INFO, диспетчер драйверов получает диагностические сведения от *хдбЦинфотокен*и возвращает SQL_SUCCESS_WITH_INFO приложению в [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) и [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
+ Всякий раз, когда драйвер возвращает SQL_SUCCESS_WITH_INFO, диспетчер драйверов получает диагностические сведения от *хдбЦинфотокен* и возвращает SQL_SUCCESS_WITH_INFO приложению в [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) и [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
  Если приложение использует [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md), *всзаутконнектстринг* будет пустым буфером (последние три параметра будут установлены в NULL, 0, null). В противном случае драйвер должен вернуть выходную строку подключения, которая будет возвращена в вызов [функции SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) приложения.  
   

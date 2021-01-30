@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9664f9a6-65fc-4e7f-be3d-3e4b501b558a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 56227da17b5c302a6682db905fe3f397c5e9e3fd
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: d4d97d9aae8117ac7d10362da0ab5f666fc329f9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722154"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168931"
 ---
 # <a name="handler-property-example-vb"></a>Пример свойства Handler (Visual Basic)
 > [!IMPORTANT]
@@ -31,14 +31,14 @@ ms.locfileid: "91722154"
  Предположим, что следующие разделы в файле параметров, Msdfmap.ini, расположены на сервере:  
   
 ```  
-[connect AuthorDataBase]  
+[connect AuthorDataBase]  
 Access=ReadWrite  
 Connect="DSN=Pubs"  
-[sql AuthorById]  
-SQL="SELECT * FROM Authors WHERE au_id = ?"  
+[sql AuthorById]  
+SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- Код выглядит следующим образом. Команда, назначенная свойству [SQL](./sql-property.md) , будет соответствовать идентификатору ***аусорбид*** и будет получать строку для автора Ивана о'леари. Свойство **Recordset** объекта **элемента управления** данных назначается несвязанному объекту [Recordset](../ado-api/recordset-object-ado.md) исключительно в качестве удобства для написания кода.  
+ Код выглядит следующим образом. Команда, назначенная свойству [SQL](./sql-property.md) , будет соответствовать идентификатору ***аусорбид** _ и будет получать строку для автора Ивана о'леари. Свойство **набора записей** «_ *элемент* данных *» назначается несвязанному объекту [Recordset](../ado-api/recordset-object-ado.md) исключительно в качестве удобства программирования.  
   
 ```  
 'BeginHandlerVB  
@@ -79,6 +79,6 @@ End Sub
 'EndHandlerVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект элемента управления (RDS)](./datacontrol-object-rds.md)   
  [Свойство Handler (служба удаленных рабочих столов)](./handler-property-rds.md)

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_defaultlanguage
 - sp_defaultlanguage_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5eb94ea64b22f233d1c7c1e5d508fc0704f931ab
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9c382a442e6b87220f2650e65adc03089f2014b3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549880"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195559"
 ---
 # <a name="sp_defaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,14 +44,14 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @loginame = ] 'login'` Имя входа. Аргумент *Login* имеет тип **sysname**и не имеет значения по умолчанию. *именем входа* может быть существующее [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа или пользователь или группа Windows.  
+`[ @loginame = ] 'login'` Имя входа. Аргумент *Login* имеет тип **sysname** и не имеет значения по умолчанию. *именем входа* может быть существующее [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа или пользователь или группа Windows.  
   
-`[ @language = ] 'language'` Язык по умолчанию для имени входа. *Language* имеет тип **sysname**и значение по умолчанию NULL. *язык* должен быть допустимым языком на сервере. Если *язык* не указан, для параметра *Language* задан язык сервера по умолчанию; язык по умолчанию определяется языком **sp_configure** переменной конфигурации **по умолчанию**. Изменение заданного по умолчанию языка сервера не изменяет язык, заданный по умолчанию для существующих имен входа.  
+`[ @language = ] 'language'` Язык по умолчанию для имени входа. *Language* имеет тип **sysname** и значение по умолчанию NULL. *язык* должен быть допустимым языком на сервере. Если *язык* не указан, для параметра *Language* задан язык сервера по умолчанию; язык по умолчанию определяется языком **sp_configure** переменной конфигурации **по умолчанию**. Изменение заданного по умолчанию языка сервера не изменяет язык, заданный по умолчанию для существующих имен входа.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_defaultlanguage** вызывает инструкцию ALTER LOGIN, которая поддерживает дополнительные параметры. Дополнительные сведения об изменении других значений по умолчанию для входа см. в разделе [ALTER login &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md).  
   
  Для изменения языка текущего сеанса воспользуйтесь инструкцией SET LANGUAGE. Используйте функцию @ @LANGUAGE для отображения текущего языкового параметра.  

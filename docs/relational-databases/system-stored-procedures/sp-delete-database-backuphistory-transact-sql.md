@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_database_backuphistory
 - sp_delete_database_backuphistory_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4c237944-453d-49fb-8d0e-4596945ac147
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 10e229d2924f6cff10d1056db568a1550c1987bc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ea419cb3ed3cc4d056068596e122abc7b98f4496
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539084"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195524"
 ---
 # <a name="sp_delete_database_backuphistory-transact-sql"></a>sp_delete_database_backuphistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @database_name = ] database_name` Указывает имя базы данных, участвующей в операциях резервного копирования и восстановления. Аргумент *database_name* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @database_name = ] database_name` Указывает имя базы данных, участвующей в операциях резервного копирования и восстановления. Аргумент *database_name* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -82,7 +82,7 @@ EXEC sp_delete_database_backuphistory @database_name = 'AdventureWorks2012';
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_delete_backuphistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)   
  [Журнал и сведения о заголовке резервной копии (SQL Server)](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   

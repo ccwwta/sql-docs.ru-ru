@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_reinitsubscription
 - sp_reinitsubscription_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 68761baaf874d4900a7914753a37e1f465ff757e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0d8c12b3ca1b27f7560aeff466e51b7f43a9a42e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538690"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185660"
 ---
 # <a name="sp_reinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,29 +45,29 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию ALL.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname** и значение по умолчанию ALL.  
   
-`[ @article = ] 'article'` Имя статьи. Аргумент *article* имеет тип **sysname**и значение по умолчанию ALL. Для немедленно обновляемой публикации *статья* должна быть **все**. в противном случае хранимая процедура пропускает публикацию и сообщает об ошибке.  
+`[ @article = ] 'article'` Имя статьи. Аргумент *article* имеет тип **sysname** и значение по умолчанию ALL. Для немедленно обновляемой публикации *статья* должна быть **все**. в противном случае хранимая процедура пропускает публикацию и сообщает об ошибке.  
   
-`[ @subscriber = ] 'subscriber'` Имя подписчика. Аргумент *Subscriber* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @subscriber = ] 'subscriber'` Имя подписчика. Аргумент *Subscriber* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @destination_db = ] 'destination_db'` Имя целевой базы данных. Аргумент *destination_db* имеет тип **sysname**и значение по умолчанию ALL.  
+`[ @destination_db = ] 'destination_db'` Имя целевой базы данных. Аргумент *destination_db* имеет тип **sysname** и значение по умолчанию ALL.  
   
-`[ @for_schema_change = ] 'for_schema_change'` Указывает, происходит ли повторная инициализация в результате изменения схемы в базе данных публикации. *for_schema_change* имеет **бит**и значение по умолчанию 0. Если значение **равно 0**, активные подписки для публикаций, которые разрешают немедленное обновление, повторно активируются, пока вся публикация, а не только часть ее статьи, повторно инициализируется. Это означает, что повторная инициализация инициируется в результате изменения схемы. Если значение равно **1**, активные подписки не будут повторно активированы до тех пор, пока не будет запущен агент моментальных снимков.  
+`[ @for_schema_change = ] 'for_schema_change'` Указывает, происходит ли повторная инициализация в результате изменения схемы в базе данных публикации. *for_schema_change* имеет **бит** и значение по умолчанию 0. Если значение **равно 0**, активные подписки для публикаций, которые разрешают немедленное обновление, повторно активируются, пока вся публикация, а не только часть ее статьи, повторно инициализируется. Это означает, что повторная инициализация инициируется в результате изменения схемы. Если значение равно **1**, активные подписки не будут повторно активированы до тех пор, пока не будет запущен агент моментальных снимков.  
   
-`[ @publisher = ] 'publisher'` Указывает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'` Указывает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname** и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  *Издатель* не должен использоваться для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей.  
   
-`[ @ignore_distributor_failure = ] ignore_distributor_failure` Разрешает повторную инициализацию, даже если распространитель не существует или находится вне сети. *ignore_distributor_failure* имеет **бит**и значение по умолчанию 0. Если значение **равно 0**, повторная инициализация завершается неудачей, если распространитель не существует или находится в автономном режиме.  
+`[ @ignore_distributor_failure = ] ignore_distributor_failure` Разрешает повторную инициализацию, даже если распространитель не существует или находится вне сети. *ignore_distributor_failure* имеет **бит** и значение по умолчанию 0. Если значение **равно 0**, повторная инициализация завершается неудачей, если распространитель не существует или находится в автономном режиме.  
   
-`[ @invalidate_snapshot = ] invalidate_snapshot` Делает недействительным существующий моментальный снимок публикации. *invalidate_snapshot* имеет **бит**и значение по умолчанию 0. Если значение равно **1**, для публикации создается новый моментальный снимок.  
+`[ @invalidate_snapshot = ] invalidate_snapshot` Делает недействительным существующий моментальный снимок публикации. *invalidate_snapshot* имеет **бит** и значение по умолчанию 0. Если значение равно **1**, для публикации создается новый моментальный снимок.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_reinitsubscription** используется в репликации транзакций.  
   
  **sp_reinitsubscription** не поддерживается для одноранговой репликации транзакций.  
@@ -92,7 +92,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** , члены предопределенной роли базы данных **db_owner** или создатель подписки могут выполнять **sp_reinitsubscription**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Повторная инициализация подписки](../../relational-databases/replication/reinitialize-a-subscription.md)   
  [Повторная инициализация подписок](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

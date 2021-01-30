@@ -1,13 +1,13 @@
 ---
 description: sys.sp_cdc_enable_table (Transact-SQL)
-title: sys. sp_cdc_enable_table (Transact-SQL) | Документация Майкрософт
+title: sys.sp_cdc_enable_table (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sp_cdc_enable_table_TSQL
 - sp_cdc_enable_table_TSQL
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5832381bab59aff32c039d4f26b648c62802d5d1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fe8e347cb82fa1b89ad03ebb152a8d0257f0985b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541103"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205984"
 ---
 # <a name="syssp_cdc_enable_table-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +69,7 @@ sys.sp_cdc_enable_table
   
  Если этот параметр не указан, имя берется из исходной схемы и имени исходной таблицы в формате *schemaname_sourcename*. Длина *capture_instance* не может превышать 100 символов и должна быть уникальной в пределах базы данных. Указывает, *capture_instance* обрезает пробелы справа от строки.  
   
- Исходная таблица не может иметь более двух экземпляров системы отслеживания. Дополнительные сведения см. в разделе [sys. sp_cdc_help_change_data_capture &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md).  
+ Исходная таблица не может иметь более двух экземпляров системы отслеживания. Дополнительные сведения см. в разделе [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md).  
   
 `[ @supports_net_changes = ] supports_net_changes` Указывает, следует ли включить поддержку запросов для суммарных изменений для этого экземпляра системы отслеживания. *supports_net_changes* имеет **бит** со значением по умолчанию 1, если таблица имеет первичный ключ или таблица имеет уникальный индекс, идентифицируемый с помощью @index_name параметра. В противном случае данный параметр по умолчанию принимает значение 0.  
   
@@ -87,13 +87,13 @@ sys.sp_cdc_enable_table
   
  *captured_column_list* представляет собой список имен столбцов с разделителями-запятыми. Отдельные имена столбцов могут быть заключены в двойные кавычки ("") или квадратные скобки ([]). Если имя столбца содержит внедренную запятую, то его необходимо заключать в кавычки.  
   
- *captured_column_list* не может содержать следующие зарезервированные имена столбцов: **__ $ start_lsn**, **__ $ end_lsn**, **__ $ seqval**, **__ $ operation**и **__ $ update_mask**.  
+ *captured_column_list* не может содержать следующие зарезервированные имена столбцов: **__ $ start_lsn**, **__ $ end_lsn**, **__ $ seqval**, **__ $ operation** и **__ $ update_mask**.  
   
 `[ @filegroup_name = ] 'filegroup_name'` Файловая группа, используемая для таблицы изменений, созданной для экземпляра системы отслеживания. *filegroup_name* имеет тип **sysname** и может иметь значение null. Если указано, для текущей базы данных необходимо определить *filegroup_name* . Если значение равно NULL, то используется файловая группа, заданная по умолчанию.  
   
  Для хранения системы отслеживания информации об изменениях рекомендуется создать отдельную файловую группу.  
   
-`[ @allow_partition_switch = ] 'allow_partition_switch'` Указывает, может ли команда переключения СЕКЦИй инструкции ALTER TABLE выполняться для таблицы, для которой включена система отслеживания измененных данных. *allow_partition_switch* имеет **бит**и значение по умолчанию 1.  
+`[ @allow_partition_switch = ] 'allow_partition_switch'` Указывает, может ли команда переключения СЕКЦИй инструкции ALTER TABLE выполняться для таблицы, для которой включена система отслеживания измененных данных. *allow_partition_switch* имеет **бит** и значение по умолчанию 1.  
   
  Для несекционированных таблиц параметр переключателя всегда равен 1, а указанный параметр не учитывается. Если переключателю явно присваивается значение 0 для несекционированной таблицы, то выдается предупреждение 22857, показывающее, что параметр переключателя пропущен. Если переключателю явно присваивается значение 0 для секционированной таблицы, то выдается предупреждение 22356, показывающее, что операции переключения секций исходной таблицы будут запрещены. Помимо этого, если параметру переключателя явно или по умолчанию присвоено значение 1 и активизированная таблица секционирована, то выдается предупреждение 22855, показывающее, что переключатели секций не будут заблокированы. При любом переключении секций система отслеживания информации об изменениях не будет отслеживать изменения, являющиеся результатом переключения. При обработке изменений это приведет к несогласованности информации об изменениях.  
   
@@ -107,15 +107,15 @@ sys.sp_cdc_enable_table
  None  
   
 ## <a name="remarks"></a>Remarks  
- Прежде чем включить для таблицы системы отслеживания измененных данных, необходимо активизировать саму таблицу. Чтобы определить, включена ли для базы данных система отслеживания измененных данных, запросите столбец **is_cdc_enabled** в представлении каталога [sys. databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) . Чтобы включить базу данных, используйте хранимую процедуру [sys. sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) .  
+ Прежде чем включить для таблицы системы отслеживания измененных данных, необходимо активизировать саму таблицу. Чтобы определить, включена ли для базы данных система отслеживания измененных данных, запросите столбец **is_cdc_enabled** в представлении каталога [sys. databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) . Чтобы включить базу данных, используйте хранимую процедуру [sys.sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) .  
   
  Когда система отслеживания информации об изменениях включена для таблицы, создается таблица изменений и одна или две функции запроса. Таблица изменений выступает в качестве репозитория для изменений исходной таблицы, извлеченных из журнала транзакций процессом отслеживания. Функции запроса используются для извлечения данных из таблицы изменений. Имена этих функций являются производными от параметра *capture_instance* следующими способами.  
   
--   Все изменения функция: **CDC. fn_cdc_get_all_changes_<capture_instance>**  
+-   Все изменения, функция: **cdc.fn_cdc_get_all_changes_<capture_instance>**  
   
--   Функция net changes: **CDC. fn_cdc_get_net_changes_<capture_instance>**  
+-   Функция net changes: **cdc.fn_cdc_get_net_changes_<capture_instance>**  
   
- **sys. sp_cdc_enable_table** также создает задания записи и очистки для базы данных, если исходная таблица является первой таблицей в базе данных, для которой должна быть включена система отслеживания измененных данных и не существует публикаций транзакций для базы данных. Он задает для столбца **is_tracked_by_cdc** в представлении каталога [sys. Tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) значение 1.  
+ **sys.sp_cdc_enable_table** также создает задания записи и очистки для базы данных, если исходная таблица является первой таблицей в базе данных, для которой должна быть включена система отслеживания измененных данных и не существует публикаций транзакций для базы данных. Он задает для столбца **is_tracked_by_cdc** в представлении каталога [sys. Tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) значение 1.  
   
 > [!NOTE]  
 >  При включении системы отслеживания информации об изменениях для таблицы агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не должен быть запущен. Однако процесс отслеживания не является процессом журнала транзакций и сохраняет записи в таблицу изменений, если агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не запущен.  
@@ -156,11 +156,11 @@ EXEC sys.sp_cdc_enable_table
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [sys. sp_cdc_disable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)   
- [sys. sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
- [CDC. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- [CDC. fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
- [sys. sp_cdc_help_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [sys.sp_cdc_disable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)   
+ [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
+ [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
+ [sys.sp_cdc_help_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)  
   
   

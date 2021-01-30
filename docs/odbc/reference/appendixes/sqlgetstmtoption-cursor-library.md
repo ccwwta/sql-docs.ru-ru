@@ -7,24 +7,24 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQLGetStmtOption function [ODBC], Cursor Library
 ms.assetid: 986170b3-fba8-4323-9224-60b381c7effb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 93a1e34648d1cef320ca7385eb24215701ed9dd3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 38755e654e089dd764796a65b34ebc1fdbe8c701
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88411110"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202728"
 ---
 # <a name="sqlgetstmtoption-cursor-library"></a>SQLGetStmtOption (библиотека курсоров)
 > [!IMPORTANT]  
 >  Эта функция будет удалена в следующей версии Windows. Избегайте использования этой функции в новых разработках и запланируйте изменение приложений, которые в настоящее время используют эту функцию. Корпорация Майкрософт рекомендует использовать функцию курсора драйвера.  
   
- В этом разделе обсуждается использование функции **SQLGetStmtOption** в библиотеке курсоров. Общие сведения о **SQLGetStmtOption**см. в разделе [функция SQLGetStmtOption](../../../odbc/reference/syntax/sqlgetstmtoption-function.md).  
+ В этом разделе обсуждается использование функции **SQLGetStmtOption** в библиотеке курсоров. Общие сведения о **SQLGetStmtOption** см. в разделе [функция SQLGetStmtOption](../../../odbc/reference/syntax/sqlgetstmtoption-function.md).  
   
  Библиотека курсоров поддерживает следующие параметры инструкции с **SQLGetStmtOption**:  
 

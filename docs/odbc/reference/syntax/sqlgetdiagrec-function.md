@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLGetDiagRec
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7f141891292fb80d53ba06e03329b66cbc8b826e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 93b5b85d6c20a58d314dcb7f7c53f391c15a1491
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461017"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194174"
 ---
 # <a name="sqlgetdiagrec-function"></a>Функция SQLGetDiagRec
 **Соответствия**  
@@ -63,7 +63,7 @@ SQLRETURN SQLGetDiagRec(
   
 -   SQL_HANDLE_STMT  
   
- SQL_HANDLE_DBC_INFO_TOKENный обработчик используется только диспетчером драйверов и драйвером. Приложения не должны использовать этот тип обработчика. Дополнительные сведения о SQL_HANDLE_DBC_INFO_TOKEN см. [в разделе Разработка осведомленности о пуле подключений в драйвере ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
+ SQL_HANDLE_DBC_INFO_TOKENный обработчик используется только диспетчером драйверов и драйвером. Приложения не должны использовать этот тип обработчика. Дополнительные сведения о SQL_HANDLE_DBC_INFO_TOKEN см. [в разделе Разработка осведомленности Connection-Pool в драйвере ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
   
  *Дескриптор*  
  Входной Маркер для структуры диагностических данных типа, указанного параметром *параметром handletype*. Если *параметром handletype* имеет SQL_HANDLE_ENV, то *Handle* может быть либо общим, либо несовместно используемым обработчиком среды.  
@@ -86,7 +86,7 @@ SQLRETURN SQLGetDiagRec(
  Входной Длина буфера **MessageText* в символах. Отсутствует максимальная длина текста диагностического сообщения.  
   
  *текстленгсптр*  
- Проверки Указатель на буфер, в котором возвращается общее число символов (за исключением числа символов, необходимых для завершающего символа null), доступных для возврата в * \* MessageText*. Если число возвращаемых символов больше *BufferLength*, текст диагностического сообщения в * \* MessageText* усекается до *BufferLength* минус длину символа завершения null.  
+ Проверки Указатель на буфер, в котором возвращается общее число символов (за исключением числа символов, необходимых для завершающего символа null), доступных для возврата в *\* MessageText*. Если число возвращаемых символов больше *BufferLength*, текст диагностического сообщения в *\* MessageText* усекается до *BufferLength* минус длину символа завершения null.  
   
 ## <a name="returns"></a>Возвращаемое значение  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR или SQL_INVALID_HANDLE.  
@@ -115,9 +115,9 @@ SQLRETURN SQLGetDiagRec(
   
  **SQLGetDiagRec** нельзя использовать для возврата полей из заголовка структуры диагностических данных. (Аргумент *рекнумбер* должен быть больше 0.) Для этой цели приложение должно вызывать **SQLGetDiagField** .  
   
- **SQLGetDiagRec** извлекает только диагностические сведения, которые недавно связаны с маркером, указанным в аргументе *Handle* . Если приложение вызывает другую функцию ODBC, за исключением **SQLGetDiagRec**, **SQLGetDiagField**или **SqlError**, то теряются все диагностические данные из предыдущих вызовов одного и того же обработчика.  
+ **SQLGetDiagRec** извлекает только диагностические сведения, которые недавно связаны с маркером, указанным в аргументе *Handle* . Если приложение вызывает другую функцию ODBC, за исключением **SQLGetDiagRec**, **SQLGetDiagField** или **SqlError**, то теряются все диагностические данные из предыдущих вызовов одного и того же обработчика.  
   
- Приложение может сканировать все диагностические записи путем циклов, увеличивая *рекнумбер*, пока **SQLGetDiagRec** возвращает SQL_SUCCESS. Вызовы **SQLGetDiagRec** являются необратимыми для полей заголовков и записей. Приложение может снова вызвать **SQLGetDiagRec** в дальнейшем для получения поля из записи, если в промежуточной версии не была вызвана никакая другая функция, кроме **SQLGetDiagRec**, **SQLGetDiagField**или **SqlError**. Приложение также может получить количество диагностических записей, доступных с помощью вызова **SQLGetDiagField** , чтобы получить значение поля SQL_DIAG_NUMBER, а затем вызвать **SQLGetDiagRec** , который встречается много раз.  
+ Приложение может сканировать все диагностические записи путем циклов, увеличивая *рекнумбер*, пока **SQLGetDiagRec** возвращает SQL_SUCCESS. Вызовы **SQLGetDiagRec** являются необратимыми для полей заголовков и записей. Приложение может снова вызвать **SQLGetDiagRec** в дальнейшем для получения поля из записи, если в промежуточной версии не была вызвана никакая другая функция, кроме **SQLGetDiagRec**, **SQLGetDiagField** или **SqlError**. Приложение также может получить количество диагностических записей, доступных с помощью вызова **SQLGetDiagField** , чтобы получить значение поля SQL_DIAG_NUMBER, а затем вызвать **SQLGetDiagRec** , который встречается много раз.  
   
  Описание полей структуры диагностических данных см. в разделе [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md). Дополнительные сведения см. в статьях [Использование SQLGetDiagRec и SQLGetDiagField](../../../odbc/reference/develop-app/using-sqlgetdiagrec-and-sqlgetdiagfield.md) и [Реализация SQLGetDiagRec и SQLGetDiagField](../../../odbc/reference/develop-app/implementing-sqlgetdiagrec-and-sqlgetdiagfield.md).  
   
@@ -136,7 +136,7 @@ SQLRETURN SQLGetDiagRec(
 |---------------------------|---------|  
 |Получение поля диагностической записи или поля заголовка диагностики|[Функция SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Файлы заголовков ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Образец программы ODBC](../../../odbc/reference/sample-odbc-program.md)

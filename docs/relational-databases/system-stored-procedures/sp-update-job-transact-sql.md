@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_update_job
 - sp_update_job_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 494e284bb9df06094116d075979673bf2b033dea
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e559c50589681f7d00b1bd6048b1e23579213bee
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551204"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184704"
 ---
 # <a name="sp_update_job-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +57,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_id = ] job_id` Идентификационный номер обновляемого задания. *job_id*имеет тип **uniqueidentifier**.  
+`[ @job_id = ] job_id` Идентификационный номер обновляемого задания. *job_id* имеет тип **uniqueidentifier**.  
   
 `[ @job_name = ] 'job_name'` Имя задания. *job_name* имеет тип **nvarchar (128)**.  
   
@@ -75,7 +75,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
 `[ @owner_login_name = ] 'login'` Имя входа, владеющего заданием. *имя для входа* — **nvarchar (128)** . только члены предопределенной роли сервера **sysadmin** могут изменять владельца задания.  
   
-`[ @notify_level_eventlog = ] eventlog_level` Указывает, когда следует поместить запись в журнал приложений Microsoft Windows для этого задания. *eventlog_level*имеет **тип int**и может принимать одно из следующих значений.  
+`[ @notify_level_eventlog = ] eventlog_level` Указывает, когда следует поместить запись в журнал приложений Microsoft Windows для этого задания. *eventlog_level* имеет **тип int** и может принимать одно из следующих значений.  
   
 |Значение|Описание (действие)|  
 |-----------|----------------------------|  
@@ -84,11 +84,11 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 |**2**|При сбое|  
 |**3**|Всегда|  
   
-`[ @notify_level_email = ] email_level` Указывает, когда следует отправить сообщение по электронной почте после завершения этого задания. *email_level*имеет **тип int**. *email_level*использует те же значения, что и *eventlog_level*.  
+`[ @notify_level_email = ] email_level` Указывает, когда следует отправить сообщение по электронной почте после завершения этого задания. *email_level* имеет **тип int**. *email_level* использует те же значения, что и *eventlog_level*.  
   
-`[ @notify_level_netsend = ] netsend_level` Указывает, когда следует отправить сетевое сообщение после завершения этого задания. *netsend_level*имеет **тип int**. *netsend_level*использует те же значения, что и *eventlog_level*.  
+`[ @notify_level_netsend = ] netsend_level` Указывает, когда следует отправить сетевое сообщение после завершения этого задания. *netsend_level* имеет **тип int**. *netsend_level* использует те же значения, что и *eventlog_level*.  
   
-`[ @notify_level_page = ] page_level` Указывает, когда следует отправить страницу после завершения этого задания. *page_level* имеет **тип int**. *page_level*использует те же значения, что и *eventlog_level*.  
+`[ @notify_level_page = ] page_level` Указывает, когда следует отправить страницу после завершения этого задания. *page_level* имеет **тип int**. *page_level* использует те же значения, что и *eventlog_level*.  
   
 `[ @notify_email_operator_name = ] 'operator_name'` Имя оператора, которому отправляется сообщение электронной почты при достижении *email_level* . *email_name* имеет тип **nvarchar (128)**.  
   
@@ -96,14 +96,14 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
 `[ @notify_page_operator_name = ] 'page_operator'` Имя оператора, которому отправляется страница. *page_operator* имеет тип **nvarchar (128)**.  
   
-`[ @delete_level = ] delete_level` Указывает, когда следует удалять задание. *delete_value*имеет **тип int**. *delete_level*использует те же значения, что и *eventlog_level*.  
+`[ @delete_level = ] delete_level` Указывает, когда следует удалять задание. *delete_value* имеет **тип int**. *delete_level* использует те же значения, что и *eventlog_level*.  
   
 `[ @automatic_post = ] automatic_post` Процессу.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_update_job** должны запускаться из базы данных **msdb** .  
   
  **sp_update_job** изменяет только те параметры, для которых указаны значения параметров. Если параметр пропущен, сохраняется текущая настройка.  

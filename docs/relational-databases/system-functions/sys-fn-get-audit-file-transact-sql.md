@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - fn_get_audit_file_TSQL
 - sys.fn_get_audit_file_TSQL
@@ -22,12 +22,12 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 701740849d7b1ec8a946fa8f26bcd25568f2e62e
-ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
+ms.openlocfilehash: e0e6692a24371b91b57ad2269ec48c43db1e1a8c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98812943"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206082"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]    
@@ -50,7 +50,7 @@ fn_get_audit_file ( file_pattern,
  
  - **SQL Server**:
     
-    Этот аргумент должен содержать как путь (букву диска или сетевой ресурс), так и имя файла, которое может включать символ-шаблон. Для получения нескольких файлов из набора файлов аудита можно использовать одну звездочку (*). Пример:  
+    Этот аргумент должен содержать как путь (букву диска или сетевой ресурс), так и имя файла, которое может включать символ-шаблон. Для получения нескольких файлов из набора файлов аудита можно использовать одну звездочку (*). Например:  
   
     -   **\<path>\\\** _ — Получение всех файлов аудита в указанном расположении.  
   
@@ -60,7 +60,7 @@ fn_get_audit_file ( file_pattern,
   
  - **База данных SQL Azure**:
  
-    Этот аргумент используется для указания URL-адреса большого двоичного объекта (включая конечную точку хранилища и контейнер). Хотя она не поддерживает подстановочные знаки, можно использовать префикс имени файла (BLOB) (вместо полного имени большого двоичного объекта) для получения нескольких файлов (больших двоичных объектов), начинающихся с этого префикса. Пример:
+    Этот аргумент используется для указания URL-адреса большого двоичного объекта (включая конечную точку хранилища и контейнер). Хотя она не поддерживает подстановочные знаки, можно использовать префикс имени файла (BLOB) (вместо полного имени большого двоичного объекта) для получения нескольких файлов (больших двоичных объектов), начинающихся с этого префикса. Например:
  
       - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/** — собирает все файлы аудита (BLOB-объекты) для конкретной базы данных.    
       
@@ -128,7 +128,7 @@ fn_get_audit_file ( file_pattern,
 | user_defined_information | **nvarchar(4000)** | Область **применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздние версии, база данных SQL Azure и SQL управляемый экземпляр<br /><br /> Используется для записи дополнительных сведений, которые пользователь хочет записать в журнал аудита с помощью хранимой процедуры **sp_audit_write** . |  
 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
 - Если аргумент *file_pattern* , передаваемый в **fn_get_audit_file** , ссылается на несуществующий путь или файл, или если файл не является файлом аудита, возвращается сообщение об ошибке **MSG_INVALID_AUDIT_FILE** .  
 - **fn_get_audit_file** нельзя использовать при создании аудита с параметрами **APPLICATION_LOG**, **SECURITY_LOG** или **EXTERNAL_MONITOR** .
 
@@ -180,7 +180,7 @@ fn_get_audit_file ( file_pattern,
 
 Сведения о настройке аудита базы данных SQL Azure см. в разделе Начало [работы с аудитом базы данных](/azure/sql-database/sql-database-auditing)SQL.
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [CREATE SERVER AUDIT (Transact-SQL)](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT (Transact-SQL)](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT (Transact-SQL)](../../t-sql/statements/drop-server-audit-transact-sql.md)   

@@ -7,19 +7,19 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - ReadyState property [ADO]
 ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cdc3f2109d1938d7388454dcd1054deba341ed44
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: ce3cc80262b44ed824b61ddcd56631d15c5cfc65
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724335"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168815"
 ---
 # <a name="readystate-property-rds"></a>Свойство ReadyState (служба удаленных рабочих столов)
 Указывает ход выполнения объекта " [элемент управления](./datacontrol-object-rds.md) данными" при извлечении данных в объект [набора записей](../ado-api/recordset-object-ado.md) .  
@@ -39,7 +39,7 @@ ms.locfileid: "91724335"
 > [!NOTE]
 >  Каждый исполняемый файл на стороне клиента, использующий эти константы, должен предоставлять объявления для них. Вы можете вырезать и вставить объявления констант из файла Адквбс. Inc, расположенного в папке установки по умолчанию для библиотеки RDS.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Используйте событие [onReadyStateChange](./onreadystatechange-event-rds.md) для отслеживания изменений в свойстве **ReadyState** во время асинхронной операции запроса. Это более эффективно, чем периодическая проверка значения свойства.  
   
  Если во время асинхронной операции возникает ошибка, свойство **ReadyState** меняется на **Адкреадистатекомплете**, свойство [State](../ado-api/state-property-ado.md) изменяется с **адстатиксекутинг** на **адстатеклосед**, а свойство [value](../ado-api/value-property-ado.md) объекта **Recordset** остается *пустым*.  
@@ -47,7 +47,7 @@ ms.locfileid: "91724335"
 ## <a name="applies-to"></a>Применение  
  [Объект DataControl (служба удаленных рабочих столов)](./datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойства ReadyState (VBScript)](./readystate-property-example-vbscript.md)   
  [Метод Cancel (RDS)](./cancel-method-rds.md)   
  [Свойство ExecuteOptions (служба удаленных рабочих столов)](./executeoptions-property-rds.md)

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_create_plan_guide_from_handle_TSQL
 - sp_create_plan_guide_from_handle
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ddb185ca0a5cf0e7abe0e51992d3e607555a9ea1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2020abc49ccd29491f99adc77910868071e16e00
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543625"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186225"
 ---
 # <a name="sp_create_plan_guide_from_handle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,20 +45,20 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
  Имя структуры плана. Имена структур планов ограничены областью текущей базы данных. *plan_guide_name* должны соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md) и не может начинаться со знака решетки (#). Максимальная длина *plan_guide_name* — 124 символов.  
   
  [ @plan_handle =] *plan_handle*  
- Определяет пакет в кэше планов. *plan_handle* имеет тип **varbinary (64)**. *plan_handle* можно получить из динамического административного представления [sys. dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) .  
+ Определяет пакет в кэше планов. *plan_handle* имеет тип **varbinary (64)**. *plan_handle* можно получить из динамического административного представления [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) .  
   
  [ @statement_start_offset =] { *statement_start_offset* | NULL}]  
- Определяет начальную точку инструкции в пакете указанного *plan_handle*. *statement_start_offset* имеет **тип int**и значение по умолчанию NULL.  
+ Определяет начальную точку инструкции в пакете указанного *plan_handle*. *statement_start_offset* имеет **тип int** и значение по умолчанию NULL.  
   
- Смещение инструкции соответствует столбцу statement_start_offset в динамическом административном представлении [sys. dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) .  
+ Смещение инструкции соответствует столбцу statement_start_offset в динамическом административном представлении [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) .  
   
  Если указано значение NULL или смещение инструкции не задано, структура плана создается для каждой инструкции в пакете с помощью плана запроса для указанного дескриптора плана. Полученные в результате структуры планов эквивалентны структурам планов, применяющим указание запроса USE PLAN для принудительного использования определенного плана.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Структура плана не может быть создана для всех типов инструкций. Если структура плана не может быть создана для какой-либо инструкции в пакете, хранимая процедура пропускает эту инструкцию и переходит к следующей инструкции в пакете. Если инструкция повторяется в одном и том же пакете несколько раз, активируется план для последнего вхождения, а предыдущие планы для инструкции отключаются. Если ни одна из инструкций в пакете не может быть использована в структуре плана, выдается сообщение об ошибке 1053, а данная инструкция завершается неудачно. Рекомендуется всегда получать дескриптор плана из динамического административного представления sys.dm_exec_query_stats для снижения вероятности возникновения этой ошибки.  
   
 > [!IMPORTANT]  
->  Процедура sp_create_plan_guide_from_handle создает структуры планов на основе планов в том виде, в каком они находятся в кэше планов. Это означает, что текст пакета, инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] и XML Showplan извлекаются посимвольно (включая любые литеральные значения, переданные запросу) из кэша планов в результирующую структуру плана. Эти текстовые строки могут содержать конфиденциальные сведения, которые затем сохраняются в метаданных базы данных. Пользователи с соответствующими разрешениями могут просматривать эти сведения с помощью представления каталога sys. plan_guides и диалогового окна **Свойства структуры плана** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Чтобы не допустить раскрытия конфиденциальных сведений через руководство плана, рекомендуется проверять руководства плана, созданные из кэша планов, на их наличие.  
+>  Процедура sp_create_plan_guide_from_handle создает структуры планов на основе планов в том виде, в каком они находятся в кэше планов. Это означает, что текст пакета, инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] и XML Showplan извлекаются посимвольно (включая любые литеральные значения, переданные запросу) из кэша планов в результирующую структуру плана. Эти текстовые строки могут содержать конфиденциальные сведения, которые затем сохраняются в метаданных базы данных. Пользователи с соответствующими разрешениями могут просматривать эти сведения с помощью представления каталога sys.plan_guides и диалогового окна **Свойства структуры плана** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Чтобы не допустить раскрытия конфиденциальных сведений через руководство плана, рекомендуется проверять руководства плана, созданные из кэша планов, на их наличие.  
   
 ## <a name="creating-plan-guides-for-multiple-statements-within-a-query-plan"></a>Создание руководств планов для нескольких инструкций в рамках плана запроса  
  Как и sp_create_plan_guide, процедура sp_create_plan_guide_from_handle удаляет план запроса для целевого пакета или модуля из кэша планов. Таким образом обеспечивается использование всеми пользователями новой структуры плана. При создании структуры плана для нескольких инструкций в рамках одного плана запроса можно отложить удаление плана из кэша с помощью создания всех структур плана в явной транзакции. Этот метод позволяет сохранить план в кэше до завершения транзакции и создания структуры плана для каждой указанной инструкции. См. пример Б.  
@@ -122,11 +122,11 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sys. dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
+ [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [Структуры планов](../../relational-databases/performance/plan-guides.md)   
  [sp_create_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
- [sys. dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [sys. dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)   
+ [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+ [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)   
  [sp_control_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
   
   

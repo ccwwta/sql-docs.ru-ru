@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helptracertokens
 - sp_helptracertokens_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 61f27234-531d-4b37-8fa3-fe4c32e6f521
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 190e1471760fdda69acfa18075ac14833b57cc42
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 504f45e1f4f993b03d7117df6e073c7cd8115b26
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547939"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192866"
 ---
 # <a name="sp_helptracertokens-transact-sql"></a>sp_helptracertokens (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,14 +40,14 @@ sp_helptracertokens [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` Имя публикации, в которой вставляются трассировочные токены. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации, в которой вставляются трассировочные токены. Аргумент *publication* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @publisher = ] 'publisher'` Имя издателя. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'` Имя издателя. Аргумент *Publisher* имеет тип **sysname** и значение по умолчанию NULL.  
   
 > [!NOTE]
 >  Этот параметр следует указывать только для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, не являющихся.  
   
-`[ @publisher_db = ] 'publisher_db'` Имя базы данных публикации. Аргумент *publisher_db* имеет тип **sysname**и значение по умолчанию NULL. Этот параметр не учитывается, если хранимая процедура выполняется на издателе.  
+`[ @publisher_db = ] 'publisher_db'` Имя базы данных публикации. Аргумент *publisher_db* имеет тип **sysname** и значение по умолчанию NULL. Этот параметр не учитывается, если хранимая процедура выполняется на издателе.  
   
 ## <a name="result-set"></a>Результирующий набор  
   
@@ -59,10 +59,10 @@ sp_helptracertokens [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_helptracertokens** используется в репликации транзакций.  
   
- **sp_helptracertokens** используется для получения идентификаторов трассировочных маркеров при выполнении [Sp_helptracertokenhistory &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md).  
+ **sp_helptracertokens** используется для получения идентификаторов трассировочных маркеров при выполнении [Sp_helptracertokenhistory &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md).  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_tracertokens](../../relational-databases/replication/codesnippet/tsql/sp-helptracertokens-tran_1.sql)]  
@@ -70,7 +70,7 @@ sp_helptracertokens [ @publication = ] 'publication'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** , **db_owner** предопределенной роли базы данных в базе данных публикации или **db_owner** фиксированной базы данных или ролей **replmonitor** в базе данных распространителя могут выполнять **sp_helptracertokenhistory**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Измерение задержки и проверка соединений для репликации транзакций](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
  [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cursor_TSQL
 - sp_cursor
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 07dcf9bfc42705f2ad49e3ce476ffcd8ad70f052
-ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
+ms.openlocfilehash: 530093d48d1fa811231a5883b1b2b7e0f3922bf8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98813280"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205180"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_cursor  cursor, optype, rownum, table
  *optype*  
  Обязательный параметр, назначающий операцию, которую будет выполнять курсор. для *optype* требуется одно из следующих входных значений **int** .  
   
-|Значение|Имя|Описание|  
+|Значение|Название|Описание|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|Используется для обновления одной или более строк в буфере выборки.  К строкам, указанным в *rownum* , осуществляется повторный доступ и обновление.|  
 |0x0002|DELETE|Используется для удаления одной или более строк в буфере выборки. Строки, указанные в *rownum* , будут доступны и удалены.|  
@@ -99,7 +99,7 @@ sp_cursor  cursor, optype, rownum, table
 ## <a name="return-code-values"></a>Значения кода возврата  
  При использовании RPC операция позиционированного удаления или обновления с буфером номер 0 будет возвращать ЗАВЕРШЕНное сообщение с количеством строк *0* (сбой) или 1 (успешно) для каждой строки в буфере выборки.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
   
 ## <a name="optype-parameter"></a>Параметр optype  
  За исключением сочетаний SETPOSITION с UPDATE, DELETE, REFRESH или LOCK; или АБСОЛЮТная с помощью UPDATE или DELETE, значения *optype* являются взаимоисключающими.  

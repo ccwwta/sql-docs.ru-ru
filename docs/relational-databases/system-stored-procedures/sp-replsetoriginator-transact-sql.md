@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replsetoriginator
 - sp_replsetoriginator_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bdb29bc47aebdf92589f9782bf63f424dd1995e6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c26248551ad949bcf27433d28898ba4ec98dc68b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534888"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211634"
 ---
 # <a name="sp_replsetoriginator-transact-sql"></a>sp_replsetoriginator (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,20 +39,20 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @server_name = ] 'server_name'` Имя сервера, к которому применяется транзакция. Аргумент *originating_server* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @server_name = ] 'server_name'` Имя сервера, к которому применяется транзакция. Аргумент *originating_server* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @database_name = ] 'database_name'` Имя базы данных, к которой применяется транзакция. Аргумент *originating_db* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @database_name = ] 'database_name'` Имя базы данных, к которой применяется транзакция. Аргумент *originating_db* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_replsetoriginator** выполняется агент распространения для записи источника транзакций, применяемых репликацией. Данные сведения используются для запуска механизма распознавания замыкания на себя для двунаправленных транзакционных подписок, которые имеют набор свойств обратной связи.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** на издателе, члены предопределенной роли базы данных **db_owner** в базе данных публикации или пользователи из списка доступа к публикации (PAL) могут выполнять **sp_replsetoriginator**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

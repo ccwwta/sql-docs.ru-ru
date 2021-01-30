@@ -1,11 +1,11 @@
 ---
 description: sys.dm_fts_parser (Transact-SQL)
-title: sys. dm_fts_parser (Transact-SQL) | Документация Майкрософт
+title: sys.dm_fts_parser (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_fts_parser_TSQL
 - dm_fts_parser
@@ -20,12 +20,12 @@ ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 3005c1d843796bfa9206750134d7be1c4f4546fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ff5dac01f1fa48db60a384b8cc8bfb2216a5bab5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454963"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184320"
 ---
 # <a name="sysdm_fts_parser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 
@@ -51,10 +51,10 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  *stoplist_id*  
  Идентификатор списка стоп-слов (при его наличии), который будет использоваться средством разбиения по словам, идентифицируемым по *LCID*. *stoplist_id* имеет **тип int**. Если указано значение NULL, список стоп-слов не используется. Если указано значение 0, используется системный список стоп-слов.  
   
- Идентификатор списка стоп-слов уникален в пределах базы данных. Чтобы получить идентификатор списка стоп-слов для полнотекстового индекса в данной таблице, используйте представление каталога [sys. fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) .  
+ Идентификатор списка стоп-слов уникален в пределах базы данных. Чтобы получить идентификатор списка стоп-слов для полнотекстового индекса в заданной таблице, используйте представление каталога [sys.fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) .  
   
  *accent_sensitivity*  
- Логическое значение, управляющее полнотекстовым поиском с учетом или без учета диакритических знаков. *accent_sensitivity* имеет **бит**и имеет одно из следующих значений:  
+ Логическое значение, управляющее полнотекстовым поиском с учетом или без учета диакритических знаков. *accent_sensitivity* имеет **бит** и имеет одно из следующих значений:  
   
 |Значение|Учитывать диакритические знаки:...|  
 |-----------|----------------------------|  
@@ -68,7 +68,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|ключевое слово|**varbinary(128)**|Шестнадцатеричное представление данного ключевого слова, возвращенное средством разбиения по словам. Это представление используется для хранения ключевых слов в полнотекстовом индексе. Это значение не читается человеком, но оно полезно для связи заданного ключевого слова с выходными данными, возвращаемыми другими динамическими административными представлениями, возвращающими содержимое полнотекстового индекса, например [sys. dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) и [sys. dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Примечание.** Оксфф представляет специальный символ, указывающий на конец файла или набора данных.|  
+|ключевое слово|**varbinary(128)**|Шестнадцатеричное представление данного ключевого слова, возвращенное средством разбиения по словам. Это представление используется для хранения ключевых слов в полнотекстовом индексе. Это значение не читается человеком, но оно полезно для связи заданного ключевого слова с выходными данными, возвращаемыми другими динамическими административными представлениями, возвращающими содержимое полнотекстового индекса, например [sys.dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) и [sys.dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Примечание.** Оксфф представляет специальный символ, указывающий на конец файла или набора данных.|  
 |group_id|**int**|Содержит целочисленное значение, помогающее различить логическую группу, из которой был сформирован данный термин. Например, выражение `Server AND DB OR FORMSOF(THESAURUS, DB)"` формирует следующие значения group_id для английского языка.<br /><br /> 1: сервер<br />2: БАЗА ДАННЫХ<br />3: БАЗА ДАННЫХ|  
 |phrase_id|**int**|Содержит целочисленное значение, помогающее различать варианты альтернативных форм составных слов, формируемые средством разбиения по словам, таким средствам, как полнотекстовой поиск. Иногда составные слова (например, «multi-million») определяются средством разбиения по словам в нескольких альтернативных формах. Эти альтернативные формы (фразы) необходимо как-то различать.<br /><br /> Например, строка `multi-million` формирует следующие значения phrase_id для английского языка.<br /><br /> 1 для `multi`<br />1 для `million`<br />2 для `multimillion`|  
 |occurrence|**int**|Указывает расположение каждого термина в результате анализа. Например, для фразы `SQL Server query processor` вхождение будет содержать следующие значения вхождения терминов из фразы для английского языка.<br /><br /> 1 для `SQL`<br />2 для `Server`<br />3 для `query`<br />4 для `processor`|  
@@ -77,16 +77,16 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 |expansion_type|**int**|Содержит сведения о природе расширения данного термина, в том числе:<br /><br /> 0 — отдельное слово;<br /><br /> 2 — расширение-словоформа;<br /><br /> 4 — расширение/замена тезауруса.<br /><br /> Например, предположим, что тезаурус определяет слово run как расширение слова `jog`:<br /><br /> `<expansion>`<br /><br /> `<sub>run</sub>`<br /><br /> `<sub>jog</sub>`<br /><br /> `</expansion>`<br /><br /> Термин `FORMSOF (FREETEXT, run)` формирует следующие выходные данные:<br /><br /> `run` со значением expansion_type=0;<br /><br /> `runs` со значением expansion_type=2;<br /><br /> `running` со значением expansion_type=2;<br /><br /> `ran` со значением expansion_type=2;<br /><br /> `jog` со значением expansion_type=4.|  
 |source_term|**nvarchar(4000)**|Термин или фраза, из которой сформирован или создан в результате анализа данный термин. Например, запрос для `word breakers" AND stemmers'` выдает следующие значения source_term для английского языка.<br /><br /> `word breakers` для display_term`word`<br />`word breakers` для display_term`breakers`<br />`stemmers` для display_term`stemmers`|  
   
-## <a name="remarks"></a>Комментарии  
- **sys. dm_fts_parser** поддерживает синтаксис и функции полнотекстовых предикатов, таких как [Contains](../../t-sql/queries/contains-transact-sql.md) и [FREETEXT](../../t-sql/queries/freetext-transact-sql.md), и функций, таких как [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) и [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md).  
+## <a name="remarks"></a>Замечания  
+ **sys.dm_fts_parser** поддерживает синтаксис и функции полнотекстовых предикатов, таких как [Contains](../../t-sql/queries/contains-transact-sql.md) и [FREETEXT](../../t-sql/queries/freetext-transact-sql.md), а также функций, таких как [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) и [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md).  
   
 ## <a name="using-unicode-for-parsing-special-characters"></a>Использование формата Юникода для синтаксического анализа специальных символов  
- При синтаксическом анализе строки запроса **sys. dm_fts_parser** использует параметры сортировки базы данных, к которой вы подключаетесь, если строка запроса не указана как Юникод. Следовательно, для строки не в формате Юникод, которая содержит специальные символы, такие как u или c, выходные данные могут оказаться непредвиденными, поскольку зависят от параметров сортировки базы данных. Чтобы обработать строку запроса независимо от параметров сортировки базы данных, добавьте перед строкой строку с параметром `N` , т `N'` *query_string* `'` . е. QUERY_STRING.  
+ При синтаксическом анализе строки запроса **sys.dm_fts_parser** использует параметры сортировки базы данных, к которой вы подключаетесь, если не указать строку запроса в формате Юникод. Следовательно, для строки не в формате Юникод, которая содержит специальные символы, такие как u или c, выходные данные могут оказаться непредвиденными, поскольку зависят от параметров сортировки базы данных. Чтобы обработать строку запроса независимо от параметров сортировки базы данных, добавьте перед строкой строку с параметром `N` , т `N'`  `'` . е. QUERY_STRING.  
   
  Дополнительные сведения см. в подразделе «C. Отображение выходных данных строки, которая содержит специальные символы» далее в этом разделе.  
   
 ## <a name="when-to-use-sysdm_fts_parser"></a>Использование sys.dm_fts_parser  
- представление **sys. dm_fts_parser** может быть очень мощным для отладки. Некоторые важные варианты использования.  
+ в целях отладки **sys.dm_fts_parser** могут быть очень мощными. Некоторые важные варианты использования.  
   
 -   Понять, как данное средство разбиения по словам рассматривает указанные входные данные.  
   
@@ -162,12 +162,12 @@ SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis"  OR " MS re
 SELECT * FROM sys.dm_fts_parser(N'français', 1036, 5, 1);  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции полнотекстового поиска и семантического поиска &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [Компонент Full-text Search](../../relational-databases/search/full-text-search.md)   
- [Настройка средств разбиения по словам и парадигматические модули для поиска и управление ими](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
- [Настройка файлов тезауруса для полнотекстового поиска и управление ими](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
- [Настройка стоп-слова и списков для полнотекстового поиска и управление ими](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [Настройка и управление средством разбиения на слова и парадигматические модули для поиска](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
+ [Настройка файлов тезауруса для поиска Full-Text и управление ими](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
+ [Настройка стоп-слов, списков стоп-слов и управление ими для полнотекстового поиска](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
  [Запрос с полнотекстовым поиском](../../relational-databases/search/query-with-full-text-search.md)   
  [Запрос с полнотекстовым поиском](../../relational-databases/search/query-with-full-text-search.md)   
  [Защищаемые объекты](../../relational-databases/security/securables.md)  

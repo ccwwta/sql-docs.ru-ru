@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_remove_job_from_targets_TSQL
 - sp_remove_job_from_targets
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b8171fb1-c11d-4244-8618-a12e28a150ce
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 035f22dadcd1180117b2573c4874a7c20a7f1520
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b55575c5e57a72cb5a1d0b3260550cf9e14bc21a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538616"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185630"
 ---
 # <a name="sp_remove_job_from_targets-transact-sql"></a>sp_remove_job_from_targets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,9 @@ sp_remove_job_from_targets [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_id = ] job_id` Идентификационный номер задания, из которого удаляются указанные целевые серверы или группы целевых серверов. Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения. *job_id* имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
+`[ @job_id = ] job_id` Идентификационный номер задания, из которого удаляются указанные целевые серверы или группы целевых серверов. Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения. *job_id* имеет тип **uniqueidentifier** и значение по умолчанию NULL.  
   
-`[ @job_name = ] 'job_name'` Имя задания, из которого необходимо удалить указанные целевые серверы или группы целевых серверов. Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения. Аргумент *job_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` Имя задания, из которого необходимо удалить указанные целевые серверы или группы целевых серверов. Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения. Аргумент *job_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
 `[ @target_server_groups = ] 'target_server_groups'` Разделенный запятыми список групп целевых серверов, которые будут удалены из указанного задания. *target_server_groups* имеет тип **nvarchar (1024)** и значение по умолчанию NULL.  
   
@@ -71,7 +71,7 @@ EXEC dbo.sp_remove_job_from_targets
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_apply_job_to_targets &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
  [sp_delete_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

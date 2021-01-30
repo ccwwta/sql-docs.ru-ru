@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpmergepartition
 - sp_helpmergepartition_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 79e4d1ea4ea226706aa34db3121b2a4469a330b9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 06994bb4f0e606f0d67e797603e6f4a23899076b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546078"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185732"
 ---
 # <a name="sp_helpmergepartition-transact-sql"></a>sp_helpmergepartition (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,14 +40,14 @@ sp_helpmergepartition [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @suser_sname = ] 'suser_sname'` Значение SUSER_SNAME, используемое для определения секции. Аргумент *SUSER_SNAME* имеет тип **sysname**и значение по умолчанию NULL. Введите этот аргумент для ограничения результирующего набора. При этом будут отображаться только те секции, в которых SUSER_SNAME разрешается в указанное значение.  
+`[ @suser_sname = ] 'suser_sname'` Значение SUSER_SNAME, используемое для определения секции. Аргумент *SUSER_SNAME* имеет тип **sysname** и значение по умолчанию NULL. Введите этот аргумент для ограничения результирующего набора. При этом будут отображаться только те секции, в которых SUSER_SNAME разрешается в указанное значение.  
   
 > [!NOTE]  
 >  При указании *suser_sname* *HOST_NAME* должен иметь значение null.  
   
-`[ @host_name = ] 'host_name'` Значение HOST_NAME, используемое для определения секции. Аргумент *HOST_NAME* имеет тип **sysname**и значение по умолчанию NULL. Введите этот аргумент для ограничения результирующего набора. При этом будут отображаться только те секции, в которых HOST_NAME разрешается в указанное значение.  
+`[ @host_name = ] 'host_name'` Значение HOST_NAME, используемое для определения секции. Аргумент *HOST_NAME* имеет тип **sysname** и значение по умолчанию NULL. Введите этот аргумент для ограничения результирующего набора. При этом будут отображаться только те секции, в которых HOST_NAME разрешается в указанное значение.  
   
 > [!NOTE]  
 >  При указании *suser_sname* *HOST_NAME* должен иметь значение null.  
@@ -66,13 +66,13 @@ sp_helpmergepartition [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_helpmergepartition** используется в репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** и **db_owner** предопределенной роли базы данных могут выполнять **sp_helpmergepartition**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_addmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
  [sp_dropmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md)  
   

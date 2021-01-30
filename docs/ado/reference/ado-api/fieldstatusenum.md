@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - FieldStatusEnum
@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d30c0bc3508c364b7a0d52f23ccb52d11e06f8d5
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 968a4205a12e9f6ff36c3bff512cf41ae60ca469
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973095"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167352"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 Указывает [состояние](./status-property-ado-field.md) [объекта поля](./field-object.md).  
   
- Значения **адфиелдпендинг \* ** указывают на операцию, которая привела к установке состояния, и может сочетаться с другими значениями состояния.  
+ Значения **адфиелдпендинг \** _ указывают на операцию, вызвавшую Задание состояния, и могут сочетаться с другими значениями состояния.  
   
 |Константа|Значение|Описание|  
 |--------------|-----------|-----------------|  
-|**адфиелдалреадексистс**|26|Указывает, что указанное поле уже существует.|  
+|_ *адфиелдалреадексистс**|26|Указывает, что указанное поле уже существует.|  
 |**адфиелдбадстатус**|12|Указывает, что из ADO поставщику OLE DB было отправлено недопустимое значение состояния. Возможные причины: поставщик OLE DB 1,0 или 1,1 или неправильное сочетание [значения](./value-property-ado.md) и [состояния](./status-property-ado-field.md).|  
 |**адфиелдканноткомплете**|20|Указывает, что сервер URL-адреса, указанного в параметре [Source](./source-property-ado-record.md) , не может завершить операцию.|  
 |**adFieldCannotDeleteSource**|23|Указывает, что во время операции перемещения дерево или поддерево перемещается в новое расположение, но источник не может быть удален.|  

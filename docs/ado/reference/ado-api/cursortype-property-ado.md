@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::CursorType
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5401b5b5b9e91b6b851f70d2d3a7e19f5e5d7a82
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 703c89fb8f5e1479e09162429ac93fa43c66e0be
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974325"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167619"
 ---
 # <a name="cursortype-property-ado"></a>Свойство CursorType (ADO)
 Указывает тип курсора, используемого в объекте [набора записей](./recordset-object-ado.md) .  
@@ -29,12 +29,12 @@ ms.locfileid: "88974325"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает значение [курсортипинум](./cursortypeenum.md) . Значение по умолчанию — **адопенфорвардонли**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Используйте свойство **примеры CursorType** , чтобы указать тип курсора, который должен использоваться при открытии объекта **Recordset** .  
   
  Если свойство [CursorLocation](./cursorlocation-property-ado.md) имеет значение **адусеклиент**, то поддерживается только параметр **адопенстатик** . Если задано неподдерживаемое значение, то ошибка не будет возникать. Вместо этого будет использоваться ближайший поддерживаемый **примеры CursorType** .  
   
- Если поставщик не поддерживает запрошенный тип курсора, он может вернуть другой тип курсора. Свойство **примеры CursorType** изменится в соответствии с фактическим типом курсора, который используется при открытом объекте [набора записей](./recordset-object-ado.md) . Чтобы проверить конкретную функциональность возвращаемого курсора, используйте метод [поддерживает](./supports-method.md) . После закрытия **набора записей**свойство **примеры CursorType** возвращается к исходному значению.  
+ Если поставщик не поддерживает запрошенный тип курсора, он может вернуть другой тип курсора. Свойство **примеры CursorType** изменится в соответствии с фактическим типом курсора, который используется при открытом объекте [набора записей](./recordset-object-ado.md) . Чтобы проверить конкретную функциональность возвращаемого курсора, используйте метод [поддерживает](./supports-method.md) . После закрытия **набора записей** свойство **примеры CursorType** возвращается к исходному значению.  
   
  На следующей диаграмме показаны функциональные возможности поставщика **(определяемые с помощью** констант методов), необходимые для каждого типа курсора.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "88974325"
 ## <a name="applies-to"></a>Применение  
  [Объект Recordset (ADO)](./recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Примеры свойств примеры CursorType, LockType и EditMode (Visual Basic)](./cursortype-locktype-and-editmode-properties-example-vb.md)   
  [Пример свойств примеры CursorType, LockType и EditMode (Visual c++)](./cursortype-locktype-and-editmode-properties-example-vc.md)   
  [Метод Supports](./supports-method.md)

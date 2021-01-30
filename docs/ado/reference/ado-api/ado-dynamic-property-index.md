@@ -6,18 +6,18 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - dynamic properties [ADO], index
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bbf4cdae12da71f5fc4d3b8fbc11b7ca64c46c5b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4d3d765cbeba49a5c34bbc5529d833cefc5bb1ab
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976495"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167905"
 ---
 # <a name="ado-dynamic-property-index"></a>Индекс динамических свойств ADO
 Поставщики данных, поставщики служб и компоненты служб могут добавлять динамические свойства в коллекции **свойств** неоткрытых [соединений](./connection-object-ado.md) и объектов [набора записей](./recordset-object-ado.md) . Данный поставщик может также вставлять дополнительные свойства при открытии этих объектов. Некоторые из этих свойств перечислены в разделе [динамические свойства ADO](./ado-dynamic-properties.md) . Дополнительные сведения см. в разделе "конкретные поставщики" раздела [приложение A: поставщики](../../guide/appendixes/appendix-a-providers.md) .  
@@ -48,7 +48,7 @@ ms.locfileid: "88976495"
 |ГРУППИРОВКа по поддержке|DBPROP_GROUPBY|  
 |Поддержка разнородных таблиц|DBPROP_HETEROGENEOUSTABLES|  
 |Чувствительность идентификатора к регистру|DBPROP_IDENTIFIERCASE|  
-|Исходный каталог|DBPROP_INIT_CATALOG|  
+|Initial Catalog|DBPROP_INIT_CATALOG|  
 |Уровни изоляции|DBPROP_SUPPORTEDTXNISOLEVELS|  
 |Хранение изоляции|DBPROP_SUPPORTEDTXNISORETAIN|  
 |Идентификатор локали|DBPROP_INIT_LCID|  
@@ -72,16 +72,16 @@ ms.locfileid: "88976495"
 |Доступность выходного параметра|DBPROP_OUTPUTPARAMETERAVAILABILITY|  
 |Методы доступа для передачи по ссылке|DBPROP_BYREFACCESSORS|  
 |Пароль|DBPROP_AUTH_PASSWORD|  
-|Сохранять сведения о безопасности|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|  
+|Persist Security Info|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|  
 |Тип постоянного идентификатора|DBPROP_PERSISTENTIDTYPE|  
 |Поведение при подготовке к прерыванию|DBPROP_PREPAREABORTBEHAVIOR|  
 |Действие подготовки к фиксации|DBPROP_PREPARECOMMITBEHAVIOR|  
 |Условие процедуры|DBPROP_PROCEDURETERM|  
-|prompt|DBPROP_INIT_PROMPT|  
+|Запрос|DBPROP_INIT_PROMPT|  
 |Понятное имя поставщика|DBPROP_PROVIDERFRIENDLYNAME|  
 |Provider Name|DBPROP_PROVIDERFILENAME|  
 |Версия поставщика|DBPROP_PROVIDERVER|  
-|Источник данных только для чтения|DBPROP_DATASOURCEREADONLY|  
+|Источник данных Read-Only|DBPROP_DATASOURCEREADONLY|  
 |Преобразования наборов строк для команды|DBPROP_ROWSETCONVERSIONSONCOMMAND|  
 |Термин схемы|DBPROP_SCHEMATERM|  
 |Использование схемы|DBPROP_SCHEMAUSAGE|  
@@ -126,7 +126,7 @@ ms.locfileid: "88976495"
 |IStream|DBPROP_ISTREAM|  
 |ISupportErrorInfo|DBPROP_ISUPPORTERRORINFO|  
 |Порядок доступа|DBPROP_ACCESSORDER|  
-|Набор строк только для добавления|DBPROP_APPENDONLY|  
+|Append-Only набор строк|DBPROP_APPENDONLY|  
 |Асинхронная обработка наборов строк|DBPROP_ROWSET_ASYNCH|  
 |Автоматическое повторное вычисление|DBPROP_ADC_AUTORECALC|  
 |Размер фоновой выборки|DBPROP_ASYNCHFETCHSIZE|  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_releaseapplock_TSQL
 - sp_releaseapplock
@@ -19,12 +19,12 @@ ms.assetid: 51b03c2f-0d54-40f5-9172-e747942d4a46
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b74d54cbf87c6749248376a21ae55362c93314d
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 020a2964a4f73872669a4f9623a8c24aa2a88fd5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97410463"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185657"
 ---
 # <a name="sp_releaseapplock-transact-sql"></a>sp_releaseapplock (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -61,7 +61,7 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
 |0|Блокировка успешно снята.|  
 |— 999|Сигнализирует об ошибке проверки параметра или о другой ошибке вызова процедуры.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Если приложение вызывает процедуру sp_getapplock несколько раз для одного и того же ресурса блокировки, то процедура sp_releaseapplock должна вызываться такое же количество раз для снятия блокировки.  
   
  При отключении сервера вне зависимости от причины отключения освобождаются все блокировки.  

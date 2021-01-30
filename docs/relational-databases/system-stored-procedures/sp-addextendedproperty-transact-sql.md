@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addextendedproperty
 - sp_addextendedproperty_TSQL
@@ -19,12 +19,12 @@ ms.assetid: 565483ea-875b-4133-b327-d0006d2d7b4c
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 184328e9b6d5c197b06f89f151942535a90f7f91
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 448f2c67d7e7c09f0e2768cc0d6c359224d15b45
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97474655"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182770"
 ---
 # <a name="sp_addextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -85,7 +85,7 @@ sp_addextendedproperty
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Чтобы указывать расширенные свойства, объекты в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] классифицируются по трем уровням: 0, 1 и 2. Уровень 0 является самым высоким и определен как «объекты, содержащиеся в области базы данных». Объекты уровня 1 содержатся в схеме и в пользовательской области, а объекты уровня 2 содержатся в объектах уровня 1. Расширенные свойства могут быть определены для объектов на любом из этих уровней.  
   
  Ссылки на объект определенного уровня должны быть уточнены именами объектов более высокого уровня, в которых они содержатся или которым они принадлежат. Например, при добавлении расширенного свойства к столбцу таблицы (уровень 2) необходимо также задать имя таблицы (уровень 1), содержащей этот столбец, а также схему (уровень 0), содержащую таблицу.  

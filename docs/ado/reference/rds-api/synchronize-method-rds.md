@@ -7,19 +7,19 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Synchronize method [ADO]
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e903d5a3d80af26e9fd1ca36920e5b91adb06b1f
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 455628537f876b1500f0d53f29d4869da9b48d1d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724168"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168737"
 ---
 # <a name="synchronize-method-rds"></a>Метод Synchronize (служба удаленных рабочих столов)
 Синхронизирует заданный набор записей с базой данных, указанной в строке подключения для использования в ADO 2,5 и более поздних версиях.  
@@ -64,7 +64,7 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
  *пинформатион*  
  Указатель на информационную ошибку, возвращенную **инструкцией EXECUTE**. Если значение равно NULL, сведения об ошибке не возвращаются.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Параметр *хандлерстринг* может иметь значение null. Что происходит в этом случае, зависит от настройки сервера RDS. Строка обработчика "МСДФМАП. Handler" указывает, что следует использовать предоставляемый корпорацией Майкрософт обработчик (Msdfmap.dll). Строка обработчика "МАСДФМАП. Handler sample.ini" указывает, что следует использовать обработчик Msdfmap.dll и что аргумент "sample.ini" должен передаваться в обработчик. Msdfmap.dll будет интерпретировать аргумент как направление использования sample.ini для проверки соединения и строк запроса.  
   
 ## <a name="applies-to"></a>Применение  

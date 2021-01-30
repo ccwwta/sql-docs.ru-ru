@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_resetstatus
 - sp_resetstatus_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b892727f-ea3b-4b94-88d9-f2386ad4962c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f76738491704d04b033126f88750670eec230a38
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7ca7fa3d697fe5714066d677ba04b666817c597d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541558"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194387"
 ---
 # <a name="sp_resetstatus-transact-sql"></a>sp_resetstatus (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,12 +44,12 @@ sp_resetstatus [ @dbname = ] 'database'
   
 ## <a name="arguments"></a>Аргументы  
  [ @dbname =] "*база данных*"  
- Имя базы данных, состояние которой сбрасывается. Аргумент *Database* имеет тип **sysname**и не имеет значения по умолчанию.  
+ Имя базы данных, состояние которой сбрасывается. Аргумент *Database* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Процедура sp_resetstatus сбрасывает флаг SUSPECT в базе данных. Эта процедура обновляет столбцы режима и состояния названной базы данных в представлении каталога sys.databases. Перед выполнением этой процедуры в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо просмотреть журнал ошибок и устранить все проблемы. После выполнения процедуры sp_resetstatus следует остановить и перезапустить экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  База данных может перейти в состояние SUSPECT по нескольким причинам. Среди вероятных причин — отказ в доступе к ресурсам базы данных операционной системе и недоступность или повреждение одного или нескольких файлов базы данных.  
@@ -64,7 +64,7 @@ sp_resetstatus [ @dbname = ] 'database'
 EXEC sp_resetstatus 'AdventureWorks2012';  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
