@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpmergesubscription
 - sp_helpmergesubscription_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 48d40b3209311968443a6c6d2b713b4aa1e3d43a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 274048dcfcd76e815d3f4ec159dded0571f66e43
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535203"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210889"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,17 +44,17 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию **%** . Публикация уже должна существовать и соответствовать правилам идентификаторов. Если значение равно NULL или **%** , возвращаются сведения обо всех публикациях слиянием и подписках в текущей базе данных.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname** и значение по умолчанию **%** . Публикация уже должна существовать и соответствовать правилам идентификаторов. Если значение равно NULL или **%** , возвращаются сведения обо всех публикациях слиянием и подписках в текущей базе данных.  
   
-`[ @subscriber = ] 'subscriber'` Имя подписчика. Аргумент *Subscriber* имеет тип **sysname**и значение по умолчанию **%** . Если этот аргумент равен NULL или %, возвращаются сведения обо всех подписках данной публикации.  
+`[ @subscriber = ] 'subscriber'` Имя подписчика. Аргумент *Subscriber* имеет тип **sysname** и значение по умолчанию **%** . Если этот аргумент равен NULL или %, возвращаются сведения обо всех подписках данной публикации.  
   
-`[ @subscriber_db = ] 'subscriber_db'` Имя базы данных подписки. Аргумент *subscriber_db*имеет тип **sysname**и значение по умолчанию **%** , которое возвращает сведения обо всех базах данных подписки.  
+`[ @subscriber_db = ] 'subscriber_db'` Имя базы данных подписки. Аргумент *subscriber_db* имеет тип **sysname** и значение по умолчанию **%** , которое возвращает сведения обо всех базах данных подписки.  
   
-`[ @publisher = ] 'publisher'` Имя издателя. Издатель должен быть действительным сервером. Аргумент *Publisher*имеет тип **sysname**и значение по умолчанию **%** , которое возвращает сведения обо всех издателях.  
+`[ @publisher = ] 'publisher'` Имя издателя. Издатель должен быть действительным сервером. Аргумент *Publisher* имеет тип **sysname** и значение по умолчанию **%** , которое возвращает сведения обо всех издателях.  
   
-`[ @publisher_db = ] 'publisher_db'` Имя базы данных издателя. Аргумент *publisher_db*имеет тип **sysname**и значение по умолчанию **%** , которое возвращает сведения обо всех базах данных издателя.  
+`[ @publisher_db = ] 'publisher_db'` Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname** и значение по умолчанию **%** , которое возвращает сведения обо всех базах данных издателя.  
   
-`[ @subscription_type = ] 'subscription_type'` Тип подписки. *subscription_type*имеет тип **nvarchar (15)** и может принимать одно из следующих значений.  
+`[ @subscription_type = ] 'subscription_type'` Тип подписки. *subscription_type* имеет тип **nvarchar (15)** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -62,7 +62,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**собирает**|Подписка по запросу|  
 |**как**|Обе подписки: по запросу и принудительная подписка|  
   
-`[ @found = ] 'found'OUTPUT` Флаг, указывающий возвращаемые строки. Аргумент *Found*имеет **тип int** и параметр OUTPUT и значение по умолчанию NULL. **1** указывает, что публикация найдена. значение **0** указывает, что публикация не найдена.  
+`[ @found = ] 'found'OUTPUT` Флаг, указывающий возвращаемые строки. Аргумент *Found* имеет **тип int** и параметр OUTPUT и значение по умолчанию NULL. **1** указывает, что публикация найдена. значение **0** указывает, что публикация не найдена.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -93,15 +93,15 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_helpmergesubscription** используется в репликации слиянием для возврата сведений о подписке, хранящихся на издателе, или при повторной публикации подписчика.  
   
- Для анонимных подписок значение *subscription_type*всегда равно **1** (Pull). Однако для получения сведений о анонимных подписках необходимо выполнить [sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md) на подписчике.  
+ Для анонимных подписок значение *subscription_type* всегда равно **1** (Pull). Однако для получения сведений о анонимных подписках необходимо выполнить [sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md) на подписчике.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** , **db_owner** предопределенной роли базы данных или списка доступа к публикации для публикации, которой принадлежит подписка, могут выполнять **sp_helpmergesubscription**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
  [sp_changemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
  [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   

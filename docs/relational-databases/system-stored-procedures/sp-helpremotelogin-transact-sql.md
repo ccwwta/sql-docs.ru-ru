@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpremotelogin_TSQL
 - sp_helpremotelogin
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4b35458a0c99eb14db60a058ef72e98df529c217
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ff291542fee3d10fe94e9ccd628e05c8f9e77f7b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547995"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210818"
 ---
 # <a name="sp_helpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,11 +44,11 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @remoteserver **=** ] **\ "***remoteserver***\"**  
- Удаленный сервер, об удаленном имени входа которого возвращаются сведения. Аргумент *remoteserver* имеет тип **sysname**и значение по умолчанию NULL. Если параметр *remoteserver* не указан, возвращаются сведения обо всех удаленных серверах, определенных на локальном сервере.  
+ [ @remoteserver **=** ] **\**"_remoteserver_*_\"_*  
+ Удаленный сервер, об удаленном имени входа которого возвращаются сведения. Аргумент *remoteserver* имеет тип **sysname** и значение по умолчанию NULL. Если параметр *remoteserver* не указан, возвращаются сведения обо всех удаленных серверах, определенных на локальном сервере.  
   
- [ @remotename **=** ] **"***remote_name***"**  
- Конкретное удаленное имя входа на удаленном сервере. Аргумент *remote_name* имеет тип **sysname**и значение по умолчанию NULL. Если параметр *remote_name* не указан, возвращаются сведения обо всех удаленных пользователях, определенных для *remoteserver* .  
+ [ @remotename **=** ] **"**_remote_name_*_"_*  
+ Конкретное удаленное имя входа на удаленном сервере. Аргумент *remote_name* имеет тип **sysname** и значение по умолчанию NULL. Если параметр *remote_name* не указан, возвращаются сведения обо всех удаленных пользователях, определенных для *remoteserver* .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -60,9 +60,9 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 |server|**sysname**|Имя удаленного сервера, определенного на локальном сервере.|  
 |local_user_name|**sysname**|Имя входа на локальном сервере, с которым сопоставлены удаленные имена входа.|  
 |remote_user_name|**sysname**|Имя входа на удаленном сервере, сопоставленное с local_user_name.|  
-|параметры|**sysname**|Доверенное = Удаленное имя входа не нуждается в подтверждении паролем при установке соединения с локальным сервером из удаленного сервера.<br /><br /> Не доверенное (или пустое) = Для подтверждения удаленного имени входа запрашивается пароль при установке соединения с локальным сервером из удаленного сервера.|  
+|options|**sysname**|Доверенное = Удаленное имя входа не нуждается в подтверждении паролем при установке соединения с локальным сервером из удаленного сервера.<br /><br /> Не доверенное (или пустое) = Для подтверждения удаленного имени входа запрашивается пароль при установке соединения с локальным сервером из удаленного сервера.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Используйте sp_helpserver, чтобы получить список имен удаленных серверов, определенных на локальном сервере.  
   
 ## <a name="permissions"></a>Разрешения  

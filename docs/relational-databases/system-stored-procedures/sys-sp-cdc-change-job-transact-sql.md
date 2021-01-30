@@ -1,13 +1,13 @@
 ---
 description: sys.sp_cdc_change_job (Transact-SQL)
-title: sys. sp_cdc_change_job (Transact-SQL) | Документация Майкрософт
+title: sys.sp_cdc_change_job (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sp_cdc_change_job_TSQL
 - sys.sp_cdc_change_job
@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bf81cfb8cbd06602252e62b3c72bafe694c14ed8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0dcc3a8b69e6cf8e65f96b239dd7699f796246ba
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545880"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210755"
 ---
 # <a name="syssp_cdc_change_job-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Изменяет конфигурацию задания очистки системы отслеживания измененных данных или задания записи в текущей базе данных. Чтобы просмотреть текущую конфигурацию задания, выполните запрос к таблице [dbo. cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) или используйте [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md).  
+  Изменяет конфигурацию задания очистки системы отслеживания измененных данных или задания записи в текущей базе данных. Чтобы просмотреть текущую конфигурацию задания, выполните запрос к [dbo.cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) таблице или используйте [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,9 +64,9 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  Если *Continuous* = 0, **sp_cdc_scan** задание выполняется до *max_scans* просмотров журнала, обработки до *max_trans* транзакций во время каждого сканирования, а затем завершает работу.  
   
- Если значение параметра ** \@ Continuous** изменяется с 1 на 0, ** \@ PollingInterval** автоматически устанавливается в значение 0. Значение, указанное для ** \@ PollingInterval** , отличное от 0, игнорируется.  
+ Если значение параметра **\@ Continuous** изменяется с 1 на 0, **\@ PollingInterval** автоматически устанавливается в значение 0. Значение, указанное для **\@ PollingInterval** , отличное от 0, игнорируется.  
   
- Если параметр ** \@ Continuous** опущен или явно ЗАДАНо значение null, а ** \@ PollingInterval** явно задано в значении больше 0, ** \@ непрерывный** параметр автоматически устанавливается в 1.  
+ Если параметр **\@ Continuous** опущен или явно ЗАДАНо значение null, а **\@ PollingInterval** явно задано в значении больше 0, **\@ непрерывный** параметр автоматически устанавливается в 1.  
   
  *Непрерывная* допустима только для заданий отслеживания.  
   
@@ -87,7 +87,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
  None  
   
 ## <a name="remarks"></a>Remarks  
- Если параметр не указан, связанное значение в таблице [dbo. cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) не обновляется. Явное присвоение параметру значения NULL эквивалентно его пропусканию.  
+ Если параметр не указан, связанное значение в [dbo.cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) таблице не обновляется. Явное присвоение параметру значения NULL эквивалентно его пропусканию.  
   
  Указание недопустимого для типа задания параметра приведет к ошибке при выполнении инструкции.  
   
@@ -112,7 +112,7 @@ GO
 ```  
   
 ### <a name="b-changing-a-cleanup-job"></a>Б. Изменение задания очистки  
- В следующем примере обновляется задание очистки базы данных `AdventureWorks2012`. Указаны все допустимые параметры для этого типа задания, кроме ** \@ порогового значения**. Значение ** \@ порога** не изменяется.  
+ В следующем примере обновляется задание очистки базы данных `AdventureWorks2012`. Указаны все допустимые параметры для этого типа задания, кроме **\@ порогового значения**. Значение **\@ порога** не изменяется.  
   
 ```  
 USE AdventureWorks2012;  
@@ -123,9 +123,9 @@ EXECUTE sys.sp_cdc_change_job
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [dbo. cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [sys. sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [dbo.cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [sys.sp_cdc_add_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   
   

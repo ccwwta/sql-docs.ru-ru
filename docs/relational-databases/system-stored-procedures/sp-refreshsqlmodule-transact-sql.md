@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_refreshsqlmodule_TSQL
 - sp_refreshsqlmodule
@@ -27,12 +27,12 @@ ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dc3be80416180b8e87cacc848a4322e013ce368a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: aee058df3a328c6e580f2a90f4bca5cc243e9a67
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97410542"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210490"
 ---
 # <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -68,7 +68,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или ненулевое значение (неуспешное завершение)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  **sp_refreshsqlmodule** должны выполняться при внесении изменений в объекты, лежащие в основе модуля, который влияет на его определение. В противном случае при обращении к модулю или при его вызове могут быть получены непредвиденные результаты. Чтобы обновить представление, можно использовать либо **sp_refreshsqlmodule** , либо **sp_refreshview** с теми же результатами.  
   
  **sp_refreshsqlmodule** не влияет на разрешения, расширенные свойства или параметры SET, связанные с объектом.  

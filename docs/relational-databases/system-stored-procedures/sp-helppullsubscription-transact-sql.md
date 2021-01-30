@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helppullsubscription_TSQL
 - sp_helppullsubscription
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: abad011197d58876915ce242c4c38198b13105ab
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3e7711e7034190f5862d512c3da02df685c3aaf5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535195"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210848"
 ---
 # <a name="sp_helppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,13 +41,13 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'` Имя удаленного сервера. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает сведения для всех издателей.  
+`[ @publisher = ] 'publisher'` Имя удаленного сервера. Аргумент *Publisher* имеет тип **sysname** и значение по умолчанию **%** , которое возвращает сведения для всех издателей.  
   
-`[ @publisher_db = ] 'publisher_db'` Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает все базы данных издателя.  
+`[ @publisher_db = ] 'publisher_db'` Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname** и значение по умолчанию **%** , которое возвращает все базы данных издателя.  
   
-`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает все публикации. Если этот параметр равен ALL, возвращаются только подписки по запросу с independent_agent = **0** .  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname** и значение по умолчанию **%** , которое возвращает все публикации. Если этот параметр равен ALL, возвращаются только подписки по запросу с independent_agent = **0** .  
   
-`[ @show_push = ] 'show_push'` Указывает, должны ли возвращаться все принудительные подписки. *show_push*имеет тип **nvarchar (5)** и значение по умолчанию false, которое не возвращает принудительные подписки.  
+`[ @show_push = ] 'show_push'` Указывает, должны ли возвращаться все принудительные подписки. *show_push* имеет тип **nvarchar (5)** и значение по умолчанию false, которое не возвращает принудительные подписки.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -97,13 +97,13 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_helppullsubscription** используется в моментальных снимках и репликации транзакций.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_helppullsubscription** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
  [sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

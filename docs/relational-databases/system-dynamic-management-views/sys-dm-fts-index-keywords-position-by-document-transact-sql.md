@@ -1,12 +1,12 @@
 ---
-description: sys. dm_fts_index_keywords_position_by_document (Transact-SQL)
-title: sys. dm_fts_index_keywords_position_by_document (Transact-SQL) | Документация Майкрософт
+description: sys.dm_fts_index_keywords_position_by_document (Transact-SQL)
+title: sys.dm_fts_index_keywords_position_by_document (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_fts_index_keywords_position_by_document_TSQL
 - dm_fts_index_keywords_position_by_document_TSQL
@@ -19,14 +19,14 @@ helpviewer_keywords:
 ms.assetid: 0d70184f-baa2-411b-a32d-a4c5af890edd
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 0b14ccbe7643ed56e18dc79b2a72e27867d63454
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 099574becb70e3812864c4acc7dc0a395f3169b9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474966"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211224"
 ---
-# <a name="sysdm_fts_index_keywords_position_by_document-transact-sql"></a>sys. dm_fts_index_keywords_position_by_document (Transact-SQL)
+# <a name="sysdm_fts_index_keywords_position_by_document-transact-sql"></a>sys.dm_fts_index_keywords_position_by_document (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает сведения о положении ключевого слова в индексируемых документах.  
@@ -43,7 +43,7 @@ OBJECT_ID('table_name')
   
 ## <a name="arguments"></a>Аргументы  
  db_id ("*database_name*")  
- Вызов функции [DB_ID ()](../../t-sql/functions/db-id-transact-sql.md) . Эта функция принимает имя базы данных и возвращает идентификатор базы данных, который sys. dm_fts_index_keywords_position_by_document использует для поиска указанной базы данных.  
+ Вызов функции [DB_ID ()](../../t-sql/functions/db-id-transact-sql.md) . Эта функция принимает имя базы данных и возвращает идентификатор базы данных, который sys.dm_fts_index_keywords_position_by_document использует для поиска указанной базы данных.  
   
  object_id ("*table_name*")  
  Вызов функции [object_id ()](../../t-sql/functions/object-id-transact-sql.md) . Эта функция принимает имя таблицы и возвращает идентификатор таблицы, содержащей полнотекстовый индекс для проверки.  
@@ -58,8 +58,8 @@ OBJECT_ID('table_name')
 |document_id|**bigint**|Идентификатор документа или строки, содержащей текущий термин, индексированный полнотекстовым индексом. Данный идентификатор соответствует значению полнотекстового ключа этого документа или строки.|  
 |position|**int**|Расположение ключевого слова в документе.|  
   
-## <a name="remarks"></a>Комментарии  
- Используйте динамическое административное представление для определения расположения индексированных слов в индексированных документах. Это динамическое административное представление можно использовать для устранения проблем, когда **sys. dm_fts_index_keywords_by_document** указывает, что слова находятся в полнотекстовом индексе, но при выполнении запроса с использованием этих слов документ не возвращается.  
+## <a name="remarks"></a>Замечания  
+ Используйте динамическое административное представление для определения расположения индексированных слов в индексированных документах. Это динамическое административное представление можно использовать для устранения проблем, когда **sys.dm_fts_index_keywords_by_document** указывает, что слова находятся в полнотекстовом индексе, но при выполнении запроса с использованием этих слов документ не возвращается.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение CREATE FULLTEXT CATALOG, а также разрешение SELECT на столбцы, включенные в полнотекстовый индекс.  
@@ -92,11 +92,11 @@ WHERE document_id = 7 AND display_term = 'performance';
   
 ## <a name="see-also"></a>См. также:  
  [Компонент Full-text Search](../../relational-databases/search/full-text-search.md)   
- [Повышение производительности полнотекстовых индексов](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)   
+ [Повышение производительности индексов Full-Text](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)   
  [Функции полнотекстового поиска и семантического поиска &#40;языке Transact-SQL&#41;](../../relational-databases/system-functions/full-text-search-and-semantic-search-functions-transact-sql.md)   
  [Динамические административные представления и функции полнотекстового поиска и семантического поиска &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [Хранимые процедуры полнотекстового поиска и семантического поиска &#40;языке Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
- [Поиск свойств документа с помощью списков свойств поиска](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
+ [Поиск свойств документа с использованием списков свойств поиска](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [sys.dm_fts_index_keywords_by_document (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)  
   
   

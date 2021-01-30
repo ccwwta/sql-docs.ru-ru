@@ -5,7 +5,7 @@ titleSuffix: Azure SQL Database
 ms.date: 01/28/2019
 ms.service: sql-database
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.database_connection_stats
 - database_connection_stats
@@ -21,12 +21,12 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: b5d01ec490009c2c3b26dd888bd6050b0638e952
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 948a45e2f9d2dca95bca1c3afbaed419030f47df
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98102826"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210362"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (база данных SQL Azure)
 
@@ -34,10 +34,10 @@ ms.locfileid: "98102826"
 
   Содержит статистику для [!INCLUDE[ssSDS](../../includes/sssds-md.md)] событий **подключения к** базе данных, предоставляя обзор успешных и неудачных попыток подключения к базе данных. Дополнительные сведения о событиях подключения см. в разделе Типы событий в [sys.event_log &#40;базе данных SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
-|Статистика|Type|Описание|  
+|Статистика|Тип|Описание|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|Имя базы данных.|  
-|**start_time**|**datetime2**|Дата и время начала интервала статистической обработки в формате UTC. Время всегда кратно 5 минутам. Пример:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
+|**start_time**|**datetime2**|Дата и время начала интервала статистической обработки в формате UTC. Время всегда кратно 5 минутам. Например:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|Дата и время окончания интервала статистической обработки в формате UTC. **End_time** всегда находится в течение 5 минут позже, чем соответствующая **start_time** в той же строке.|  
 |**success_count**|**int**|Число успешных соединений.|  
 |**total_failure_count**|**int**|Общее число неудачных попыток соединения. Это сумма **connection_failure_count**, **terminated_connection_count** и **throttled_connection_count** и не включает события взаимоблокировки.|  
@@ -45,7 +45,7 @@ ms.locfileid: "98102826"
 |**terminated_connection_count**|**int**|**_Применимо только для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] версии 11._**<br /><br /> Число прерванных соединений.|  
 |**throttled_connection_count**|**int**|**_Применимо только для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] версии 11._**<br /><br /> Число регулируемых соединений.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
   
 ### <a name="event-aggregation"></a>Статистическая обработка событий
 

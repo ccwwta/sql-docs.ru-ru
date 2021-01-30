@@ -1,13 +1,13 @@
 ---
 description: core.sp_create_snapshot (Transact-SQL)
-title: Core. sp_create_snapshot (Transact-SQL) | Документация Майкрософт
+title: core.sp_create_snapshot (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_create_snapshot
 - sp_create_snapshot_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 719167961eb9c716266e1a96a17c31ea82367cbc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 737739cfa627e6668d95e6453d66ed1bad4ad637
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550139"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210511"
 ---
 # <a name="coresp_create_snapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,10 +55,10 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
  Идентификатор GUID для типа сборщика. *collector_type_uid* имеет тип **uniqueidentifier** и не имеет значения по умолчанию. Чтобы получить идентификатор GUID, запросите представление dbo.syscollector_collector_types в базе данных msdb.  
   
  [ @machine_name =] "*machine_name*"  
- Имя сервера, на котором находится набор элементов сбора. Аргумент *machine_name* имеет тип **sysname**и не имеет значения по умолчанию.  
+ Имя сервера, на котором находится набор элементов сбора. Аргумент *machine_name* имеет тип **sysname** и не имеет значения по умолчанию.  
   
  [ @named_instance =] "*named_instance*"  
- Имя экземпляра набора элементов сбора. Аргумент *named_instance* имеет тип **sysname**и не имеет значения по умолчанию.  
+ Имя экземпляра набора элементов сбора. Аргумент *named_instance* имеет тип **sysname** и не имеет значения по умолчанию.  
   
  [ @log_id =] *log_id*  
  Уникальный идентификатор, соответствующий журналу событий набора элементов сбора на сервере, который собирал данные. *log_id* имеет тип **bigint** и не имеет значения по умолчанию. Чтобы получить значение для *log_id*, запросите представление collector_execution_log dbo.sysв базе данных msdb.  
@@ -69,7 +69,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Каждый раз, когда пакет передачи начинает загружать данные в хранилище управляющих данных, исполняемый компонент сборщика данных вызывает функцию core.sp_create_snapshot.  
   
  Эта процедура проверяет следующее:  

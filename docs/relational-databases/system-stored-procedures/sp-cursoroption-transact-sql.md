@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cursoroption_TSQL
 - sp_cursoroption
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bb85ff45fcb9ebe35920ca858cc9dc6336475cb8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 787c54be4c1030f9c091dbfead90c569a63bb270
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543584"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210482"
 ---
 # <a name="sp_cursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ sp_cursoroption cursor, code, value
  *code*  
  Служит для указания различных коэффициентов возвращаемых значений курсора. для *кода* требуется одно из следующих входных значений **int** :  
   
-|Значение|Имя|Описание|  
+|Значение|Название|Описание|  
 |-----------|----------|-----------------|  
 |0x0001|TEXTPTR_ONLY|Возвращает не фактические данные, а текстовый указатель для определенных назначенных столбцов типа text или image.<br /><br /> TEXTPTR_ONLY позволяет использовать текстовые указатели в качестве *дескрипторов* объектов BLOB, которые впоследствии могут быть выборочно извлечены или обновлены с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] или DBLIB средств (например, [!INCLUDE[tsql](../../includes/tsql-md.md)] READTEXT или DBLIB DBWRITETEXT).<br /><br /> Если присвоено значение «0», то все столбцы типа text или image из выбранного списка будут возвращать вместо данных текстовые указатели.|  
 |0x0002|CURSOR_NAME|Присваивает имя, указанное в поле *значение* , курсору. Это, в свою очередь, позволяет ODBC использовать [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции позиционированного обновления или удаления для курсоров, открытых с помощью sp_cursoropen.<br /><br /> Строка может иметь любой символьный тип данных или UNICODE.<br /><br /> Так как [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции позиционированного обновления и удаления работают по умолчанию в первой строке курсора FAT, SP_CURSOR SETPOSITION следует использовать для позиционирования курсора перед выполнением инструкции позиционированного обновления и удаления.|  

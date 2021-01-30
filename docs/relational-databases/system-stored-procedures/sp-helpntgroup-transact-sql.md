@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpntgroup
 - sp_helpntgroup_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1a88caee8d332a4802f4281360f93392ae29aa2c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dc378f5c07c4aa24c37c0212fd9f84fb6ef39f41
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535175"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210875"
 ---
 # <a name="sp_helpntgroup-transact-sql"></a>sp_helpntgroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @ntname = ] 'name'` — Имя группы Windows. Аргумент *Name* имеет тип **sysname**и значение по умолчанию NULL. *имя* должно быть допустимой группой Windows с доступом к текущей базе данных. Если параметр *Name* не указан, в выходные данные включаются все группы Windows с доступом к текущей базе данных.  
+`[ @ntname = ] 'name'` — Имя группы Windows. Аргумент *Name* имеет тип **sysname** и значение по умолчанию NULL. *имя* должно быть допустимой группой Windows с доступом к текущей базе данных. Если параметр *Name* не указан, в выходные данные включаются все группы Windows с доступом к текущей базе данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -54,7 +54,7 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 |**SID**|**varbinary(85)**|Идентификатор безопасности (SID) **нтграупнаме**.|  
 |**хасдбакцесс**|**int**|1 = группа Windows имеет разрешение на доступ к базе данных.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Чтобы просмотреть список [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ролей в текущей базе данных, используйте **sp_helprole**.  
   
 ## <a name="permissions"></a>Разрешения  

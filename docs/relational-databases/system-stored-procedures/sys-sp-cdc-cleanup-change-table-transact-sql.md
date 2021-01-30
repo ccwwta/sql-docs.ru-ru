@@ -1,13 +1,13 @@
 ---
 description: sys.sp_cdc_cleanup_change_table (Transact-SQL)
-title: sys. sp_cdc_cleanup_change_table (Transact-SQL) | Документация Майкрософт
+title: sys.sp_cdc_cleanup_change_table (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cdc_cleanup_change_table
 - sp_cdc_cleanup_change_table_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6d532b168dfdc17b85ada5b9ef6ac653b9903fc6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fc6ca4964beff8adc8f32598948964d597076804
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541110"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210750"
 ---
 # <a name="syssp_cdc_cleanup_change_table-transact-sql"></a>sys.sp_cdc_cleanup_change_table (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,12 +54,12 @@ sys.sp_cdc_cleanup_change_table
  [ @low_water_mark =] *low_water_mark*  
  Регистрационный номер транзакции в журнале (LSN), который будет использоваться в качестве нового нижнего предела для *экземпляра отслеживания*. *low_water_mark* является **двоичным (10)** и не имеет значения по умолчанию.  
   
- Если значение не равно null, оно должно быть start_lsn значением текущей записи в таблице [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) . Если в таблице cdc.lsn_time_mapping есть несколько записей, соответствующих одному моменту времени, на который ссылается указатель новой нижней конечной точки, то данному указателю присваивается наименьшее значение номера LSN данной группы записей.  
+ Если значение не равно null, оно должно быть start_lsn значением текущей записи в таблице [CDC.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) . Если в таблице cdc.lsn_time_mapping есть несколько записей, соответствующих одному моменту времени, на который ссылается указатель новой нижней конечной точки, то данному указателю присваивается наименьшее значение номера LSN данной группы записей.  
   
  Если значение явно задано как NULL, то текущая *Нижняя* граница для *экземпляра отслеживания* используется для определения верхней границы операции очистки.  
   
  [ @threshold =] "*Удаление порогового значения*"  
- Максимальное число записей, подлежащих удалению, которые могут быть удалены с помощью одной инструкции при очистке. *delete_threshold* имеет тип **bigint**и значение по умолчанию 5000.  
+ Максимальное число записей, подлежащих удалению, которые могут быть удалены с помощью одной инструкции при очистке. *delete_threshold* имеет тип **bigint** и значение по умолчанию 5000.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -81,7 +81,7 @@ sys.sp_cdc_cleanup_change_table
   
 -   Задание агента очистки сообщает о неудачном удалении.  
   
-     Администратор может запустить данную хранимую процедуру явным образом, чтобы повторно выполнить эту операцию. Чтобы повторить очистку для данного экземпляра отслеживания, выполните хранимую процедуру sys. sp_cdc_cleanup_change_table и укажите для параметра значение NULL @low_water_mark .  
+     Администратор может запустить данную хранимую процедуру явным образом, чтобы повторно выполнить эту операцию. Чтобы повторить очистку для данного экземпляра отслеживания, выполните sys.sp_cdc_cleanup_change_table и укажите значение NULL для @low_water_mark параметра.  
   
 -   Простая политика на основе срока хранения, используемая заданием агента очистки, не является оптимальной.  
   
@@ -90,9 +90,9 @@ sys.sp_cdc_cleanup_change_table
 ## <a name="permissions"></a>Разрешения  
  Необходимо членство в предопределенной роли базы данных db_owner.  
   
-## <a name="see-also"></a>См. также  
- [CDC. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- [sys. fn_cdc_get_min_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
- [sys. fn_cdc_increment_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
+ [sys.fn_cdc_get_min_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
+ [sys.fn_cdc_increment_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)  
   
   

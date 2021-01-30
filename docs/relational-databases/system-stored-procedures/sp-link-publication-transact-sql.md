@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_link_publication_TSQL
 - sp_link_publication
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b80c28d86ae4d7022ad8784adfa7ab9023e3ebd0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b6a6e0b057f0d01c838aa5ac7b57143221fec13c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543244"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210781"
 ---
 # <a name="sp_link_publication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,13 +50,13 @@ sp_link_publication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'` Имя издателя для связи. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'` Имя издателя для связи. параметр *Publisher* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @publisher_db = ] 'publisher_db'` Имя базы данных издателя для связи. Аргумент *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'` Имя базы данных издателя для связи. Аргумент *publisher_db* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @publication = ] 'publication'` Имя публикации, с которой необходимо создать ссылку. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации, с которой необходимо создать ссылку. Аргумент *publication* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @security_mode = ] security_mode` Режим безопасности, используемый подписчиком для подключения к удаленному издателю для немедленного обновления. *security_mode* имеет **тип int**и может принимать одно из следующих значений. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @security_mode = ] security_mode` Режим безопасности, используемый подписчиком для подключения к удаленному издателю для немедленного обновления. *security_mode* имеет **тип int** и может принимать одно из следующих значений. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -66,19 +66,19 @@ sp_link_publication [ @publisher = ] 'publisher'
   
 `[ @login = ] 'login'` Имя входа. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL. Этот параметр должен быть указан, если *security_mode* равен **0**.  
   
-`[ @password = ] 'password'` Пароль. Аргумент *Password* имеет тип **sysname**и значение по умолчанию NULL. Этот параметр должен быть указан, если *security_mode* равен **0**.  
+`[ @password = ] 'password'` Пароль. Аргумент *Password* имеет тип **sysname** и значение по умолчанию NULL. Этот параметр должен быть указан, если *security_mode* равен **0**.  
   
-`[ @distributor = ] 'distributor'` Имя распространителя. Аргумент *распространитель* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @distributor = ] 'distributor'` Имя распространителя. Аргумент *распространитель* имеет тип **sysname** и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_link_publication** используется немедленно обновляемыми подписками в репликации транзакций.  
   
  **sp_link_publication** можно использовать как для принудительной подписки, так и для подписок по запросу. Ее можно вызывать как до, так и после создания подписки. Запись вставляется или обновляется в MSsubscription_properties &#40;в системной таблице [&#41;Transact-SQL ](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) .  
   
- Для принудительных подписок запись может быть очищена с помощью [sp_subscription_cleanup &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md). Для подписок по запросу запись может быть очищена с помощью [sp_droppullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md) или [sp_subscription_cleanup &#40;transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md). Можно также вызвать **sp_link_publication** с ПАРОЛем null, чтобы очистить запись в [MSsubscription_properties &#40;системной таблице&#41;Transact-SQL ](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) для обеспечения безопасности.  
+ Для принудительных подписок запись может быть очищена с помощью [sp_subscription_cleanup &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md). Для подписок по запросу запись может быть очищена с помощью [sp_droppullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md) или [sp_subscription_cleanup &#40;transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md). Можно также вызвать **sp_link_publication** с ПАРОЛем null, чтобы очистить запись в [MSsubscription_properties &#40;системной таблице&#41;Transact-SQL](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) для обеспечения безопасности.  
   
  Режим по умолчанию, применяемый для немедленного обновления подписчика при соединении с издателем, не позволяет устанавливать соединение с проверкой подлинности Windows. Для подключения в режиме с проверкой подлинности Windows на издателе должен быть настроен связанный сервер, и это соединение должно применяться для немедленного обновления подписчика. Для этого необходимо, чтобы **sp_link_publication** был запущен с *security_mode*  =  **2**. В случае использования проверки подлинности Windows должно поддерживаться делегирование учетной записи безопасности.  
   

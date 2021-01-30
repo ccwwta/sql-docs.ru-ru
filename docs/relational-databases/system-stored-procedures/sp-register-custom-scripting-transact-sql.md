@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_register_custom_scripting
 - sp_register_custom_scripting_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4f73353cc5d2e0e9be02be5a0e6dc59eaf2f909f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f9239f89c5f65f0a4af3ddfd5588a92551dfbcdc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547515"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210445"
 ---
 # <a name="sp_register_custom_scripting-transact-sql"></a>Процедура sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,18 +53,18 @@ sp_register_custom_scripting [ @type  = ] 'type'
 `[ @value = ] 'value'` Имя хранимой процедуры или имени и полный путь к [!INCLUDE[tsql](../../includes/tsql-md.md)] регистрируемому файлу скрипта. *value* имеет тип **nvarchar (1024)** и не имеет значения по умолчанию.  
   
 > [!NOTE]  
->  При указании значения NULL для параметра *value*будет отменена регистрация ранее зарегистрированного скрипта, который совпадает с запуском [sp_unregister_custom_scripting](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md).  
+>  При указании значения NULL для параметра *value* будет отменена регистрация ранее зарегистрированного скрипта, который совпадает с запуском [sp_unregister_custom_scripting](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md).  
   
  Если значение *типа* — **custom_script**, ожидается имя и полный путь к [!INCLUDE[tsql](../../includes/tsql-md.md)] файлу скрипта. В противном случае *значение* должно быть именем зарегистрированной хранимой процедуры.  
   
-`[ @publication = ] 'publication'` Имя публикации, для которой регистрируется пользовательская хранимая процедура или скрипт. Аргумент *publication* имеет тип **sysname**и значение по умолчанию **null**.  
+`[ @publication = ] 'publication'` Имя публикации, для которой регистрируется пользовательская хранимая процедура или скрипт. Аргумент *publication* имеет тип **sysname** и значение по умолчанию **null**.  
   
-`[ @article = ] 'article'` Имя статьи, для которой регистрируется пользовательская хранимая процедура или скрипт. Аргумент *article* имеет тип **sysname**и значение по умолчанию **null**.  
+`[ @article = ] 'article'` Имя статьи, для которой регистрируется пользовательская хранимая процедура или скрипт. Аргумент *article* имеет тип **sysname** и значение по умолчанию **null**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_register_custom_scripting** используется в моментальных снимках и репликации транзакций.  
   
  Эта хранимая процедура должна выполняться до внесения изменений в схему реплицируемой таблицы. Дополнительные сведения об использовании этой хранимой процедуры см. [в разделе повторное создание пользовательских процедур транзакций для отражения изменений схемы](../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md).  

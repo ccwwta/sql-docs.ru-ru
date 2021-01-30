@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_log_shipping_primary_database
 - sp_delete_log_shipping_primary_database_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb1d5d00-2805-4d47-bd04-545232067345
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2b7a1e58188a9b9f3a845e465139e5a24d3fad88
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a42bb060044c35e4d2569e23e24eb8ba9bc46fd7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474399"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211133"
 ---
 # <a name="sp_delete_log_shipping_primary_database-transact-sql"></a>sp_delete_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +70,7 @@ sp_delete_log_shipping_primary_database
  Эту процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
- В этом примере показано использование **sp_delete_log_shipping_primary_database** для удаления **AdventureWorks2012**базы данных источника.  
+ В этом примере показано использование **sp_delete_log_shipping_primary_database** для удаления **AdventureWorks2012** базы данных источника.  
   
 ```  
 EXEC master.dbo.sp_delete_log_shipping_primary_database @database = N'AdventureWorks2012';  

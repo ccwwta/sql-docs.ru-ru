@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_configure
 - sp_configure_TSQL
@@ -19,12 +19,12 @@ ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017'
-ms.openlocfilehash: bd045c01439e2913179fdf2188448772f20d9f48
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 5888c4735c884721449858af55c928b30a44b1f2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97427423"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211104"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -75,7 +75,7 @@ RECONFIGURE
 ## <a name="result-sets"></a>Результирующие наборы  
  При выполнении без параметров **sp_configure** возвращает результирующий набор с пятью столбцами и упорядочивает параметры в алфавитном порядке по возрастанию, как показано в следующей таблице.  
   
- Значения для **config_value** и **run_value** не эквивалентны автоматически. После обновления параметра конфигурации с помощью **sp_configure** системный администратор должен обновить значение выполняющейся конфигурации с помощью перенастройки или повторной настройки с переопределением. Дополнительные сведения см. в разделе "Примечания".  
+ Значения для **config_value** и **run_value** не эквивалентны автоматически. После обновления параметра конфигурации с помощью **sp_configure** системный администратор должен обновить значение выполняющейся конфигурации с помощью перенастройки или повторной настройки с переопределением. Дополнительные сведения см. в разделе «Примечания».  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -85,7 +85,7 @@ RECONFIGURE
 |**config_value**|**int**|Значение, для которого параметр конфигурации был задан с помощью **sp_configure** (значение в **sys.configуратионс. Value**). Дополнительные сведения об этих параметрах см. в разделе [Параметры конфигурации сервера &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) и [sys.configуратионс &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
 |**run_value**|**int**|Текущее значение параметра конфигурации (значение в **sys.configurations.value_in_use**).<br /><br /> Дополнительные сведения см. в разделе [sys.configуратионс &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Используйте **sp_configure** для просмотра или изменения параметров серверного уровня. Для изменения параметров уровня базы данных используйте инструкцию ALTER DATABASE. Для изменения параметров, влияющих только на сеанс текущего пользователя, используйте инструкцию SET.  
   
 ### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
