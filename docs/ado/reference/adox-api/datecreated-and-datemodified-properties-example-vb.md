@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d608ea35-6e68-402f-8184-a5041e408678
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ea4c3fb59c2df1bba8cccb0d1ce9074b97950c9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a46a863f6e4f230c0f314d7207cf03ad6dd790a0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88984805"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172178"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vb"></a>Примеры свойств DateCreated и DateModified (Visual Basic)
 В этом примере демонстрируется использование свойств [DateCreated](./datecreated-property-adox.md) и [DateModified](./datemodified-property-adox.md) путем добавления нового [столбца](./column-object-adox.md) к существующей [таблице](./table-object-adox.md) и создания новой **таблицы**. Для выполнения этого примера требуется процедура Датеаутпут.  
@@ -95,7 +95,7 @@ End Sub
 ' EndDateCreatedVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство DateCreated (ADOX)](./datecreated-property-adox.md)   
  [Свойство DateModified (ADOX)](./datemodified-property-adox.md)   
  [Объект процедуры (ADOX)](./procedure-object-adox.md)   

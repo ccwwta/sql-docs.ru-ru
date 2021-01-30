@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Index
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 6b9578c0-bc94-46b9-b801-c18e14b04b31
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 58b9e80dc57ddfdbd95bcb9523e428031fcebff0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a11389324337d4e5a9deea347dda8ecd5cea3016
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88984295"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172035"
 ---
 # <a name="index-object-adox"></a>Объект Index (ADOX)
 Представляет индекс из таблицы базы данных.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Следующий код создает новый **индекс**:  
   
 ```  
@@ -62,7 +62,7 @@ Dim obj As New Index
   
 -   [Свойства, методы и события объекта Index](./index-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример метода Append для индексов (Visual Basic)](./indexes-append-method-example-vb.md)   
  [Пример свойства IndexNulls (Visual Basic)](./indexnulls-property-example-vb.md)   
  [Пример PrimaryKey и уникальных свойств (Visual Basic)](./primarykey-and-unique-properties-example-vb.md)   

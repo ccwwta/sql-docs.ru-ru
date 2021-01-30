@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Table::PutName
@@ -42,12 +42,12 @@ helpviewer_keywords:
 ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dd3a9fd328ce332c409d613ad468b96f0b94d31e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 83ef51697cd3ad1ad1a01355baead5d90788813f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983915"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171998"
 ---
 # <a name="name-property-adox"></a>Свойство Name (ADOX)
 Указывает имя объекта.  
@@ -55,7 +55,7 @@ ms.locfileid: "88983915"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает **строковое** значение.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Имена не обязательно должны быть уникальными в пределах коллекции.  
   
  Свойство **Name** доступно для чтения и записи в объектах [столбца](./column-object-adox.md), [группы](./group-object-adox.md), [ключа](./key-object-adox.md), [индекса](./index-object-adox.md), [таблицы](./table-object-adox.md)и [пользователя](./user-object-adox.md) . Свойство **Name** доступно только для чтения в объектах [каталога](./catalog-object-adox.md), [процедуры](./procedure-object-adox.md)и [представления](./view-object-adox.md) .  
@@ -85,7 +85,7 @@ ms.locfileid: "88983915"
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы добавления столбцов и таблиц, пример свойства Name (Visual Basic)](./columns-and-tables-append-methods-name-property-example-vb.md)   
  [Пример свойств для добавления ключей, типа ключа, RelatedColumn, RelatedTable и UpdateRule (Visual Basic)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Пример свойства ParentCatalog (Visual Basic)](./parentcatalog-property-example-vb.md)

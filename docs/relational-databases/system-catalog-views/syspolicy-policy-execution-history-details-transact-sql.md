@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - syspolicy_policy_execution_history_details
 - syspolicy_policy_execution_history_details_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ecb084ff03931bc82a7a07e19f66949d8a834343
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d10e65b6a701acaabc80418d59da019250acf24b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423398"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171831"
 ---
 # <a name="syspolicy_policy_execution_history_details-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88423398"
 |exception_message|**nvarchar(max)**|Сообщение, выданное в результате возникшего исключения.|  
 |exception|**nvarchar(max)**|Описание возникшего исключения.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  При устранении неполадок управления на основе политик с помощью запроса представления syspolicy_policy_execution_history_details можно определить, для каких сочетаний целевого объекта и условного выражения результат был неуспешным, когда это произошло, и просмотреть соответствующие ошибки.  
   
  Далее приводится запрос, сочетающий представления `syspolicy_policy_execution_history_details`, `syspolicy_policy_execution_history_details` и `syspolicy_policies` и выводящий имя политики, имя условия и подробные сведения об ошибках.  
@@ -69,7 +69,7 @@ WHERE PolHistDet.result = 0 ;
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в роли PolicyAdministratorRole базы данных msdb.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [Административные представления на основе политик (Transact-SQL)](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   

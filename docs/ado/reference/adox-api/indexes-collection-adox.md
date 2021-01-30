@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Table::Indexes
@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: daea070c8bd39d6208404f119578773382078634
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 74147f1168e9bf9789c0ab1111daa27536dfd64e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88984195"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172019"
 ---
 # <a name="indexes-collection-adox"></a>Коллекция Indexes (ADOX)
 Содержит все объекты [индекса](./index-object-adox.md) таблицы.  
   
-## <a name="remarks"></a>Remarks  
- Метод [append](./append-method-adox-indexes.md) для коллекции **индексов** уникален для ADOX. Вы можете:  
+## <a name="remarks"></a>Замечания  
+ Метод [append](./append-method-adox-indexes.md) для коллекции **индексов** уникален для ADOX. Вы можете выполнить следующие действия:  
   
 -   Добавьте новый индекс в коллекцию с помощью метода **append** .  
   
- Остальные свойства и методы являются стандартными для коллекций ADO. Вы можете:  
+ Остальные свойства и методы являются стандартными для коллекций ADO. Вы можете выполнить следующие действия:  
   
 -   Доступ к индексу в коллекции со свойством [Item](../ado-api/item-property-ado.md) .  
   
@@ -46,6 +46,6 @@ ms.locfileid: "88984195"
   
 -   [Свойства, методы и события коллекции Indexes](./indexes-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример метода Append для индексов (Visual Basic)](./indexes-append-method-example-vb.md)   
  [Объект Index (ADOX)](./index-object-adox.md)

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - ActiveConnection
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 541f6800a440019d210bdf427ab8dafd58acc3b5
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 71aa79f359989b1e0ab77d0247b0f1082f3ce1c6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987645"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172328"
 ---
 # <a name="activeconnection-property-ado-md"></a>Свойство ActiveConnection (многомерные объекты ADO)
 Указывает объект [подключения](../ado-api/connection-object-ado.md) ADO, к которому в настоящий момент принадлежит текущий набор ячеек или каталог.  
@@ -31,7 +31,7 @@ ms.locfileid: "88987645"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает **значение типа Variant** , содержащее строку, определяющую соединение или объект **соединения** . Значение по умолчанию — Empty.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Этому свойству можно присвоить допустимый объект **соединения** ADO или допустимую строку подключения. Если для этого свойства задана строка подключения, поставщик создает новый объект **соединения** , используя это определение, и открывает соединение.  
   
  При использовании аргумента *ActiveConnection* метода [Open](./open-method-ado-md.md) для открытия объекта набора [ячеек](./cellset-object-ado-md.md) свойство **ActiveConnection** будет наследовать значение аргумента.  
@@ -68,7 +68,7 @@ ms.locfileid: "88987645"
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример набора ячеек (Visual Basic)](./cellset-example-vb.md)   
  [Объект Connection (ADO)](../ado-api/connection-object-ado.md)   
  [Метод Open (многомерные объекты ADO)](./open-method-ado-md.md)

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Keys::Append
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 215a5391-f422-42ec-99ea-4e6fbb5d3d64
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2531031808c16db4892fb0b759a8a8d819a2222d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c4690fba27f42da95eb354b5074f9eb9954902a6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985485"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172295"
 ---
 # <a name="append-method-adox-keys"></a>Метод Append (коллекция Keys ADOX)
 Добавляет новый объект [Key](./key-object-adox.md) в коллекцию [Keys](./keys-collection-adox.md) .  
@@ -35,28 +35,28 @@ Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Key*  
+ *Ключ*  
  Добавляемый объект **Key** или имя создаваемого и добавляемого ключа.  
   
  *KeyType*  
- Необязательный элемент. Значение типа **Long** , указывающее тип ключа. Параметр *Key* соответствует свойству [Type](./type-property-key-adox.md) **ключевого** объекта.  
+ Необязательный параметр. Значение типа **Long** , указывающее тип ключа. Параметр *Key* соответствует свойству [Type](./type-property-key-adox.md) **ключевого** объекта.  
   
  *Столбец*  
- Необязательный элемент. **Строковое** значение, указывающее имя индексируемого столбца. Параметр *Columns* соответствует значению свойства [Name](./name-property-adox.md) объекта [Column](./column-object-adox.md) .  
+ Необязательный параметр. **Строковое** значение, указывающее имя индексируемого столбца. Параметр *Columns* соответствует значению свойства [Name](./name-property-adox.md) объекта [Column](./column-object-adox.md) .  
   
  *RelatedTable*  
- Необязательный элемент. **Строковое** значение, указывающее имя связанной таблицы. Параметр *RelatedTable* соответствует значению свойства **Name** объекта [Table](./table-object-adox.md) .  
+ Необязательный параметр. **Строковое** значение, указывающее имя связанной таблицы. Параметр *RelatedTable* соответствует значению свойства **Name** объекта [Table](./table-object-adox.md) .  
   
  *RelatedColumn*  
- Необязательный элемент. **Строковое** значение, указывающее имя связанного столбца для внешнего ключа. Параметр *RelatedColumn* соответствует значению свойства **Name** объекта [Column](./column-object-adox.md) .  
+ Необязательный параметр. **Строковое** значение, указывающее имя связанного столбца для внешнего ключа. Параметр *RelatedColumn* соответствует значению свойства **Name** объекта [Column](./column-object-adox.md) .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Параметр *Columns* может принимать либо имя столбца, либо массив имен столбцов.  
   
 ## <a name="applies-to"></a>Применение  
  [Коллекция Keys (ADOX)](./keys-collection-adox.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойств для добавления ключей, типа ключа, RelatedColumn, RelatedTable и UpdateRule (Visual Basic)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Метод Append (столбцы ADOX)](./append-method-adox-columns.md)   
  [Метод Append (группы ADOX)](./append-method-adox-groups.md)   

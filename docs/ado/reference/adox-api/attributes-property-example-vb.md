@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28015a4a457ddb4a64c047675d670cbdf4ce0a47
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9536ad522be7a323113e23466de5abb82cbb5824
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985295"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172264"
 ---
 # <a name="attributes-property-example-vb"></a>Пример свойства Attributes (Visual Basic)
 В этом примере демонстрируется свойство [Attributes](./attributes-property-adox.md) [столбца](./column-object-adox.md). Задание значения **адколнуллабле** позволяет пользователю задать значение [поля](../ado-api/field-object.md) [набора записей](../ado-api/recordset-object-ado.md) в виде пустой строки. В этом случае пользователь может различать записи, в которых данные не известны, и запись, в которой данные не применяются.  
@@ -126,7 +126,7 @@ End Sub
 ' EndAttributesVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство Attributes (ADOX)](./attributes-property-adox.md)   
  [Объект каталога (ADOX)](./catalog-object-adox.md)   
  [Объект Column (ADOX)](./column-object-adox.md)

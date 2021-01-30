@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7df1089e-69b7-476e-9244-19947c087351
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1cc5fd7560fc62475b3cd8a45451791b2dfeac9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b54af4688c81f524d0c2cd785225b76b8b5cc535
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983835"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99171980"
 ---
 # <a name="parameters-collection-command-property-example-vb"></a>Примеры коллекции Parameters и свойства Command (Visual Basic)
 В следующем коде показано, как использовать свойство [Command](./command-property-adox.md) с объектом [Command](../ado-api/command-object-ado.md) для получения сведений о параметрах для процедуры.  
@@ -76,7 +76,7 @@ End Sub
 ' EndParametersVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство ActiveConnection (ADOX)](./activeconnection-property-adox.md)   
  [Объект каталога (ADOX)](./catalog-object-adox.md)   
  [Свойство Command (ADOX)](./command-property-adox.md)   

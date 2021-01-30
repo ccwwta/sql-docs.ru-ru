@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bb3274b1-764d-43a7-a49f-ef55680ecd26
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 582c558222bec95914e73902b69fe9c7ce46161e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 7d79ad455184a8cb97a92c7dcc458e7fff2eddf0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985244"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172258"
 ---
 # <a name="catalog-activeconnection-property-example-vb"></a>Пример свойства ActiveConnection объекта Catalog (Visual Basic)
 Если задать для свойства [ActiveConnection](./activeconnection-property-adox.md) допустимое, открытое соединение, каталог будет открыт. Из открытого каталога можно получить доступ к объектам схемы, содержащимся в этом каталоге.  
@@ -66,7 +66,7 @@ End Sub
 Attribute VB_Name = "Catalog"  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство ActiveConnection (ADOX)](./activeconnection-property-adox.md)   
  [Объект каталога (ADOX)](./catalog-object-adox.md)   
  [Объект Table (ADOX)](./table-object-adox.md)   

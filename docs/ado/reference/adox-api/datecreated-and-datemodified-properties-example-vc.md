@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b964beee-83c7-4f91-8255-3ba864c9adfd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8071fac2ac1497e9b19cb5c5375de3a9dbc725bb
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e600adf457a91874ccf99fb9002b968b05f61a45
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88984785"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172156"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vc"></a>Примеры свойств DateCreated и DateModified (Visual C++)
 В этом примере демонстрируется использование свойств [DateCreated](./datecreated-property-adox.md) и [DateModified](./datemodified-property-adox.md) путем добавления нового [столбца](./column-object-adox.md) к существующей [таблице](./table-object-adox.md) и создания новой **таблицы**. Для выполнения этого примера требуется процедура Датеаутпут.  
@@ -115,7 +115,7 @@ void DateOutPut(_bstr_t strTemp , _TablePtr tblTemp) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Column (ADOX)](./column-object-adox.md)   
  [Свойство DateCreated (ADOX)](./datecreated-property-adox.md)   
  [Свойство DateModified (ADOX)](./datemodified-property-adox.md)   
