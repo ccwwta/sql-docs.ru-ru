@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_detach_db
 - sp_detach_db_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6829fff1f535a0e0d55b8dd849c67b0b197c4e48
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 1d4b484cd6d440b14b7639b513fba7e53f615443
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810858"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200753"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 `[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` Указывает, что файл полнотекстового индекса, связанный с отсоединяемой базой данных, не будет удален во время операции отсоединения базы данных. *KeepFulltextIndexFile* — это значение типа **nvarchar (10)** со значением по умолчанию **true**. Если *KeepFulltextIndexFile* имеет **значение false**, все файлы полнотекстовых индексов, связанные с базой данных, и метаданные полнотекстового индекса удаляются, если только база данных не доступна только для чтения. Если задано значение NULL или **true**, метаданные, связанные с полнотекстовым текстом, сохраняются.  
   
 > [!IMPORTANT]
->  Параметр ** \@ KeepFulltextIndexFile** будет удален в следующей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Не используйте его при работе над новыми приложениями и как можно быстрее измените приложения, в которых он в настоящее время используется.  
+>  Параметр **\@ KeepFulltextIndexFile** будет удален в следующей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Не используйте его при работе над новыми приложениями и как можно быстрее измените приложения, в которых он в настоящее время используется.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_catalogs_TSQL
 - sp_catalogs
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ebb29ee2-be65-4e09-9c53-e3c6d12633e1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2ff43c02d386f830b42c6cf45ff0261f771579a7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e0a50fa433ff8943de976e6f3bdeb17302c6122b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541952"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199168"
 ---
 # <a name="sp_catalogs-transact-sql"></a>sp_catalogs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ sp_catalogs [ @server_name = ] 'linked_svr'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @server_name = ] 'linked_svr'` Имя связанного сервера. Аргумент *linked_svr* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @server_name = ] 'linked_svr'` Имя связанного сервера. Аргумент *linked_svr* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -64,7 +64,7 @@ GO
 EXEC sp_catalogs 'OLE DB ODBC Linked Server #3';  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_columns_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)   
  [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   

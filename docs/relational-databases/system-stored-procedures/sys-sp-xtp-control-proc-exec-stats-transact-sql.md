@@ -1,13 +1,13 @@
 ---
 description: sys.sp_xtp_control_proc_exec_stats (Transact-SQL)
-title: sys. sp_xtp_control_proc_exec_stats (Transact-SQL) | Документация Майкрософт
+title: sys.sp_xtp_control_proc_exec_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sp_xtp_control_proc_exec_stats
 - sys.sp_xtp_control_proc_exec_stats_TSQL
@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: f5119808-76a1-4522-8529-9e02ee39adcb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dcfc3a19de02b46cb869d529c1ec3c2ce88a1c22
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 055cf66665ebfe97196dda88cf0d297eb75f7f71
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545864"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200575"
 ---
 # <a name="syssp_xtp_control_proc_exec_stats-transact-sql"></a>sys.sp_xtp_control_proc_exec_stats (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Включает сбор статистики для скомпилированных в собственном коде хранимых процедур экземпляра.  
   
- Сведения о включении сбора статистики на уровне запроса для скомпилированных в собственном режиме хранимых процедур см. в разделе [sys. sp_xtp_control_query_exec_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).  
+ Сведения о включении сбора статистики на уровне запроса для скомпилированных в собственном режиме хранимых процедур см. в разделе [sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -63,7 +63,7 @@ exec sp_xtp_control_proc_exec_stats @old_collection_value=@c output
 select @c as 'collection status'  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Выполняющаяся в памяти OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

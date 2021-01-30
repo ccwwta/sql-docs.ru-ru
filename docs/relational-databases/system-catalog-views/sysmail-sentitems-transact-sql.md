@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_sentitems_TSQL
 - sysmail_sentitems
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 16eb2a44-cebb-4cec-93ac-e2498c39989f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 06dff45056c38800c0aa72ecc28e462086e8e5b6
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: ef28d1d962fbdcfffd13dee4599b30617bbc36ad
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100154"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199704"
 ---
 # <a name="sysmail_sentitems-transact-sql"></a>sysmail_sentitems (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "98100154"
 |**last_mod_date**|**datetime**|Дата и время последнего изменения строки.|  
 |**last_mod_user**|**sysname**|Пользователь, внесший последнее изменение в строку.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  При устранении неполадок в работе компонента Database Mail в этом представлении будут отображаться атрибуты успешно отправленных сообщений, что может помочь в определении причин неполадки. Компонент Database Mail помечает сообщения как отправленные, если они успешно переданы на почтовый SMTP-сервер. Как правило, электронная почта доходит за несколько минут, однако она может задерживаться из-за неполадок на SMTP-сервере. Компонент Database Mail помечает сообщения как отправленные, когда их принимает SMTP-сервер. Неполадки, возникающие на SMTP-сервере, например электронные адреса получателей, доставка на которые невозможна, не возвращаются в компонент Database Mail. Эти электронные письма помечаются как отправленные, несмотря на то, что они не были доставлены. Этот тип неполадок следует устранять на SMTP-сервере. Кроме того, SMTP-сервер может отправить уведомление о невозможности доставить сообщение по соответствующему электронному адресу, указанному в учетной записи компонента Database Mail.  
   
 ## <a name="permissions"></a>Разрешения  

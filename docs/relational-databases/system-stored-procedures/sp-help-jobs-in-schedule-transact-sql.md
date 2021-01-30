@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_jobs_in_schedule_TSQL
 - sp_help_jobs_in_schedule
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d8a9251e807be429bfb0881afc711880520f9f7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1890fc4b8aa3757b55dfc5ad7e33070126300897
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538862"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200146"
 ---
 # <a name="sp_help_jobs_in_schedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +42,9 @@ sp_help_jobs_in_schedule
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @schedule_id = ] schedule_id` Идентификатор расписания, для которого необходимо вывести сведения. *schedule_id* имеет **тип int**и не имеет значения по умолчанию. Можно указать либо *schedule_id* , либо *schedule_name* .  
+`[ @schedule_id = ] schedule_id` Идентификатор расписания, для которого необходимо вывести сведения. *schedule_id* имеет **тип int** и не имеет значения по умолчанию. Можно указать либо *schedule_id* , либо *schedule_name* .  
   
-`[ @schedule_name = ] 'schedule_name'` Имя расписания для вывода сведений о. Аргумент *schedule_name* имеет тип **sysname**и не имеет значения по умолчанию. Можно указать либо *schedule_id* , либо *schedule_name* .  
+`[ @schedule_name = ] 'schedule_name'` Имя расписания для вывода сведений о. Аргумент *schedule_name* имеет тип **sysname** и не имеет значения по умолчанию. Можно указать либо *schedule_id* , либо *schedule_name* .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -87,7 +87,7 @@ sp_help_jobs_in_schedule
 |**has_target**|**int**|Число целевых серверов в задании.|  
 |**type**|**int**|Тип задания:<br /><br /> **1** = локальное задание.<br /><br /> **2** = многосерверное задание.<br /><br /> **0** = задание не имеет целевых серверов.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Эта процедура заносит в список сведения о заданиях, присоединенных к указанному расписанию.  
   
 ## <a name="permissions"></a>Разрешения  

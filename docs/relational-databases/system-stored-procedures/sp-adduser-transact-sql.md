@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_adduser
 - sp_adduser_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 05aa08ee4d2b518b804db93d5a2408f690b56bbc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c250837ad65e0b14fc5612eae69be6f93d8f23e6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464606"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198368"
 ---
 # <a name="sp_adduser-transact-sql"></a>sp_adduser (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,21 +45,21 @@ sp_adduser [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @loginame = ] 'login'` Имя входа или имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows. *имя входа* имеет тип **sysname**и не имеет значения по умолчанию. *имя входа* должно быть существующим [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] именем входа или именем входа Windows.  
+`[ @loginame = ] 'login'` Имя входа или имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows. *имя входа* имеет тип **sysname** и не имеет значения по умолчанию. *имя входа* должно быть существующим [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] именем входа или именем входа Windows.  
   
-`[ @name_in_db = ] 'user'` Имя нового пользователя базы данных. *User* имеет тип **sysname**и значение по умолчанию NULL. Если *пользователь* не указан, имя новой базы данных по умолчанию принимает имя *входа* в систему. При указании параметра *пользователь* присваивает новому пользователю имя в базе данных, отличное от имени входа на уровне сервера.  
+`[ @name_in_db = ] 'user'` Имя нового пользователя базы данных. *User* имеет тип **sysname** и значение по умолчанию NULL. Если *пользователь* не указан, имя новой базы данных по умолчанию принимает имя *входа* в систему. При указании параметра *пользователь* присваивает новому пользователю имя в базе данных, отличное от имени входа на уровне сервера.  
   
-`[ @grpname = ] 'role'` Роль базы данных, членом которой становится новый пользователь. Аргумент *Role* имеет тип **sysname**и значение по умолчанию NULL. *роль* должна быть допустимой ролью базы данных в текущей базе данных.  
+`[ @grpname = ] 'role'` Роль базы данных, членом которой становится новый пользователь. Аргумент *Role* имеет тип **sysname** и значение по умолчанию NULL. *роль* должна быть допустимой ролью базы данных в текущей базе данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  **sp_adduser** также создаст схему с именем пользователя.  
   
  После добавления пользователя следует определить разрешения, управляющие действиями, которые пользователь может выполнять, с помощью инструкций GRANT, DENY и REVOKE.  
   
- Для вывода списка допустимых имен входа используйте представление **sys. server_principals** .  
+ Для вывода списка допустимых имен входа используйте **sys.server_principals** .  
   
  Используйте **sp_helprole** для вывода списка допустимых имен ролей. При задании роли пользователь автоматически получает соответствующие этой роли разрешения. Если роль не указана, пользователь получает разрешения, предоставленные роли **Public** по умолчанию. Чтобы добавить пользователя к роли, необходимо указать значение *имени пользователя* . (*имя пользователя* может быть таким же, как *login_ID*.)  
   
@@ -101,13 +101,13 @@ EXEC sp_adduser 'BjornR', 'Bjorn', 'Production';
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sys.server_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [sp_addrole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
+ [sp_addrole (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
  [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md)   
  [sp_dropuser (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropuser-transact-sql.md)   
- [sp_grantdbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [sp_grantdbaccess (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
+ [Хранимая процедура sp_grantlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

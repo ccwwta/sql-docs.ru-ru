@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.fn_cdc_map_time_to_lsn
 - fn_cdc_map_time_to_lsn_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 38f07d3d3c46a46bc18f84d54b14809c201ee219
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 6db62a3241b86bdac8dcc955aef865ef8ad99a21
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094970"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198752"
 ---
 # <a name="sysfn_cdc_map_time_to_lsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -58,10 +58,10 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
  *tracking_time*  
  Значение типа datetime для сопоставления. *tracking_time* имеет тип **DateTime**.  
   
-## <a name="return-type"></a>Возвращаемый тип  
+## <a name="return-type"></a>Тип возвращаемых данных  
  **binary(10)**  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Чтобы понять, как **sys.fn_cdc_map_time_lsn** можно использовать для преобразования диапазонов DateTime в диапазоны номеров LSN, рассмотрим следующий сценарий. Предположим, что потребителю нужно получать изменения данных ежедневно. То есть потребителю нужны изменения только за определенные сутки. Нижней границей диапазона будет полночь предыдущего дня, не входя в диапазон. Верхней границей будет полночь заданного дня. В следующем примере показано, как можно использовать функцию **sys.fn_cdc_map_time_to_lsn** для систематического соотнесения этого диапазона, основанного на времени, к диапазону на основе LSN, требуемому функциями перечисления отслеживания измененных данных, чтобы вернуть все изменения в этом диапазоне.  
   
  `DECLARE @begin_time datetime, @end_time datetime, @begin_lsn binary(10), @end_lsn binary(10);`  

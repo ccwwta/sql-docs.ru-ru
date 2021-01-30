@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_indexes_TSQL
 - sp_indexes
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 133a7fb36ff65444853c1bdeb44fdefabe4aab4f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f11b9a32c05450dbe97c9130d774e4d92226fcdb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547906"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198507"
 ---
 # <a name="sp_indexes-transact-sql"></a>sp_indexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,19 +46,19 @@ sp_indexes [ @table_server = ] 'table_server'
   
 ## <a name="arguments"></a>Аргументы  
  [ @table_server =] "*table_server*"  
- Имя связанного сервера с запущенным [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], для которого запрашиваются сведения о таблице. Аргумент *table_server* имеет тип **sysname**и не имеет значения по умолчанию.  
+ Имя связанного сервера с запущенным [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], для которого запрашиваются сведения о таблице. Аргумент *table_server* имеет тип **sysname** и не имеет значения по умолчанию.  
   
  [ @table_name =] "*table_name*"  
- Имя удаленной таблицы, для которой возвращаются сведения об индексе. Аргумент *table_name* имеет тип **sysname**и значение по умолчанию NULL. Если NULL, возвращаются все таблицы указанной базы данных.  
+ Имя удаленной таблицы, для которой возвращаются сведения об индексе. Аргумент *table_name* имеет тип **sysname** и значение по умолчанию NULL. Если NULL, возвращаются все таблицы указанной базы данных.  
   
  [ @table_schema =] "*table_schema*"  
- Задает схему таблицы. В среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует владельцу таблицы. Аргумент *table_schema* имеет тип **sysname**и значение по умолчанию NULL.  
+ Задает схему таблицы. В среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует владельцу таблицы. Аргумент *table_schema* имеет тип **sysname** и значение по умолчанию NULL.  
   
  [ @table_catalog =] "*table_db*"  
- Имя базы данных, в которой находится *table_name* . Аргумент *table_db* имеет тип **sysname**и значение по умолчанию NULL. Если значение равно NULL, *table_db* значение по умолчанию — **master**.  
+ Имя базы данных, в которой находится *table_name* . Аргумент *table_db* имеет тип **sysname** и значение по умолчанию NULL. Если значение равно NULL, *table_db* значение по умолчанию — **master**.  
   
  [ @index_name =] "*index_name*"  
- Имя индекса, для которого запрашиваются сведения. Аргумент *index* имеет тип **sysname**и значение по умолчанию NULL.  
+ Имя индекса, для которого запрашиваются сведения. Аргумент *index* имеет тип **sysname** и значение по умолчанию NULL.  
   
  [ @is_unique =] "*is_unique*"  
  Тип индекса, для которого запрашиваются сведения. *is_unique* является **битным**, имеет значение по умолчанию NULL и может принимать одно из следующих значений.  
@@ -100,7 +100,7 @@ EXEC sp_indexes @table_server = 'Seattle1',
    @table_catalog = 'AdventureWorks2012';  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранимые процедуры распределенных запросов &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
  [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   

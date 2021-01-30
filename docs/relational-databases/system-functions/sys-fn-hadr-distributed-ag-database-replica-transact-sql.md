@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.fn_hadr_distributed_ag_database_replica
 - sys.fn_hadr_distributed_ag_database_replica_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0e6202a1-e872-4f53-99d7-c16b6f712efc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b87e98f49941cfa9da555d54a10185d21e36d47e
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: e704af7bcdf5df2a27bcb3a9bd8ae37494f7f6de
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753688"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199247"
 ---
 # <a name="sysfn_hadr_distributed_ag_database_replica-transact-sql"></a>sys.fn_hadr_distributed_ag_database_replica (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -68,7 +68,7 @@ SELECT * FROM sys.fn_hadr_distributed_ag_database_replica(@lagId, @databaseId)
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функции групп доступности Always On &#40;Transact-SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
  [Группы доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Распределенные группы доступности &#40;группы доступности Always On&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups.md)   

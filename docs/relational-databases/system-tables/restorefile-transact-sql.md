@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - restorefile
 - restorefile_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8e40145a-8559-4abe-8e2a-39b818928009
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: a11f4e9e96a12b0c93c9812bde8422e17667d8ad
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: f13bd0f42d4dde20689e953389be263dde03617b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099614"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201202"
 ---
 # <a name="restorefile-transact-sql"></a>restorefile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "98099614"
 |**destination_phys_drive**|**nvarchar(260)**|Диск или секция, где был восстановлен файл. Может иметь значение NULL.<br /><br /> Когда база данных возвращается в моментальный снимок базы данных, это значение заполняется так же, как и в случае полного восстановления.|  
 |**destination_phys_name**|**nvarchar(260)**|Имя файла без указания сведений о диске или секции, где был восстановлен файл. Может иметь значение NULL.<br /><br /> Когда база данных возвращается в моментальный снимок базы данных, это значение заполняется так же, как и в случае полного восстановления.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Чтобы уменьшить количество строк в этой таблице и в других таблицах резервного копирования и журнала, выполните хранимую процедуру [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) .  
   
 ## <a name="see-also"></a>См. также:  

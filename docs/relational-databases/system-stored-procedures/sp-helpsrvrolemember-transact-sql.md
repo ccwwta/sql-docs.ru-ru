@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpsrvrolemember
 - sp_helpsrvrolemember_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 189e26484ced5c955db570ad2d5f4cbe4a36e78c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f17a4be7d5e9b1511a840857c933ed240d0e3d31
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535111"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198696"
 ---
 # <a name="sp_helpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @srvrolename = ] 'role'` Имя предопределенной роли сервера. Аргумент *Role* имеет тип **sysname**и значение по умолчанию NULL. Если *роль*не указана, результирующий набор содержит сведения обо всех предопределенных ролях сервера.  
+`[ @srvrolename = ] 'role'` Имя предопределенной роли сервера. Аргумент *Role* имеет тип **sysname** и значение по умолчанию NULL. Если *роль* не указана, результирующий набор содержит сведения обо всех предопределенных ролях сервера.  
   
  *роль* может иметь любое из следующих значений.  
   
@@ -66,7 +66,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 |MemberName|**sysname**|Имя члена роли ServerRole.|  
 |MemberSID|**varbinary(85)**|Идентификатор защиты члена роли MemberName.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Хранимая процедура sp_helprolemember используется для отображения членов ролей базы данных.  
   
  Все имена входа являются членами общедоступной версии. sp_helpsrvrolemember не распознает общую роль, так как, внутри, не [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реализует Public как роль.  
@@ -85,7 +85,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 EXEC sp_helpsrvrolemember 'sysadmin';  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_helprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
  [sp_helprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

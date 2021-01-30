@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_log_shipping_secondary_database
 - sp_help_log_shipping_secondary_database_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ac291d5c829c1ddc4022a7d0d59f65348daa859a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a5fc81b903438d874a80399563527747ada9ef43
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486003"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199630"
 ---
 # <a name="sp_help_log_shipping_secondary_database-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ sp_help_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @secondary_database = ] 'secondary_database'` Имя базы данных-получателя. Аргумент *secondary_database* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @secondary_database = ] 'secondary_database'` Имя базы данных-получателя. Аргумент *secondary_database* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 `[ @secondary_id = ] 'secondary_id'` Идентификатор сервера-получателя в конфигурации доставки журналов. *secondary_id* имеет тип **uniqueidentifier** и не может иметь значение null.  
   
@@ -85,7 +85,7 @@ sp_help_log_shipping_secondary_database
 |**history_retention_period**|Время (в минутах) хранения истории доставки журналов для конкретной базы данных-получателя; по истечении этого времени записи удаляются.|  
 |**last_restored_latency**|Время (в минутах), прошедшее от создания резервной копии журналов в базе данных-источнике до ее восстановления в базу данных-получатель.<br /><br /> Исходное значение равно NULL.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Если включить параметр *secondary_database* , результирующий набор будет содержать сведения об этой базе данных-получателе. Если включить параметр *secondary_id* , результирующий набор будет содержать сведения обо всех базах данных-получателях, связанных с этим ВТОРИЧным идентификатором.  
   
  **sp_help_log_shipping_secondary_database** должны запускаться из базы данных **master** на сервере-получателе.  
@@ -93,7 +93,7 @@ sp_help_log_shipping_secondary_database
 ## <a name="permissions"></a>Разрешения  
  Эту процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_help_log_shipping_secondary_primary &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
  [Сведения о доставке журналов (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

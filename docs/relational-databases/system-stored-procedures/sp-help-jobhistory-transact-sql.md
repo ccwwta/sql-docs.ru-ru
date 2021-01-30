@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_jobhistory_TSQL
 - sp_help_jobhistory
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d805cfb7f6cf682e07e703e6854e25737a82b9cc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2cfef1ba5f28b498ab360daf67cc1bf3c79f0d2a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548001"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200134"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,40 +54,40 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_id = ] job_id` Идентификационный номер задания. *job_id* имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
+`[ @job_id = ] job_id` Идентификационный номер задания. *job_id* имеет тип **uniqueidentifier** и значение по умолчанию NULL.  
   
-`[ @job_name = ] 'job_name'` Имя задания. Аргумент *job_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` Имя задания. Аргумент *job_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @step_id = ] step_id` Идентификационный номер шага. *step_id* имеет **тип int**и значение по умолчанию NULL.  
+`[ @step_id = ] step_id` Идентификационный номер шага. *step_id* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @sql_message_id = ] sql_message_id` Идентификационный номер сообщения об ошибке, возвращенного Microsoft SQL Server при выполнении задания. *sql_message_id* имеет **тип int**и значение по умолчанию NULL.  
+`[ @sql_message_id = ] sql_message_id` Идентификационный номер сообщения об ошибке, возвращенного Microsoft SQL Server при выполнении задания. *sql_message_id* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @sql_severity = ] sql_severity` Степень серьезности сообщения об ошибке, возвращаемого SQL Server при выполнении задания. *sql_severity* имеет **тип int**и значение по умолчанию NULL.  
+`[ @sql_severity = ] sql_severity` Степень серьезности сообщения об ошибке, возвращаемого SQL Server при выполнении задания. *sql_severity* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @start_run_date = ] start_run_date` Дата запуска задания. *start_run_date*имеет **тип int**и значение по умолчанию NULL. *start_run_date* должны быть указаны в формате ГГГГММДД, где YYYY — год из четырех символов, mm — имя месяца из двух символов, а дд — двузначное имя дня.  
+`[ @start_run_date = ] start_run_date` Дата запуска задания. *start_run_date* имеет **тип int** и значение по умолчанию NULL. *start_run_date* должны быть указаны в формате ГГГГММДД, где YYYY — год из четырех символов, mm — имя месяца из двух символов, а дд — двузначное имя дня.  
   
-`[ @end_run_date = ] end_run_date` Дата завершения задания. *end_run_date* имеет **тип int**и значение по умолчанию NULL. *end_run_date*необходимо указать в формате ГГГГММДД, где гггг — это четырехзначный год, а mm — имя месяца из двух символов, а дд — двузначное имя дня.  
+`[ @end_run_date = ] end_run_date` Дата завершения задания. *end_run_date* имеет **тип int** и значение по умолчанию NULL. *end_run_date* необходимо указать в формате ГГГГММДД, где гггг — это четырехзначный год, а mm — имя месяца из двух символов, а дд — двузначное имя дня.  
   
-`[ @start_run_time = ] start_run_time` Время запуска задания. *start_run_time* имеет **тип int**и значение по умолчанию NULL. *start_run_time*должны быть указаны в формате ЧЧММСС, где ЧЧ — 2-символьный час дня, mm — это две минуты дня, а SS — двузначное значение дня.  
+`[ @start_run_time = ] start_run_time` Время запуска задания. *start_run_time* имеет **тип int** и значение по умолчанию NULL. *start_run_time* должны быть указаны в формате ЧЧММСС, где ЧЧ — 2-символьный час дня, mm — это две минуты дня, а SS — двузначное значение дня.  
   
-`[ @end_run_time = ] end_run_time` Время завершения выполнения задания. *end_run_time* имеет **тип int**и значение по умолчанию NULL. *end_run_time*должны быть указаны в формате ЧЧММСС, где ЧЧ — 2-символьный час дня, mm — это две минуты дня, а SS — двузначное значение дня.  
+`[ @end_run_time = ] end_run_time` Время завершения выполнения задания. *end_run_time* имеет **тип int** и значение по умолчанию NULL. *end_run_time* должны быть указаны в формате ЧЧММСС, где ЧЧ — 2-символьный час дня, mm — это две минуты дня, а SS — двузначное значение дня.  
   
-`[ @minimum_run_duration = ] minimum_run_duration` Минимальный период времени для завершения задания. *minimum_run_duration* имеет **тип int**и значение по умолчанию NULL. *minimum_run_duration*должны быть указаны в формате ЧЧММСС, где ЧЧ — 2-символьный час дня, mm — это две минуты дня, а SS — двузначное значение дня.  
+`[ @minimum_run_duration = ] minimum_run_duration` Минимальный период времени для завершения задания. *minimum_run_duration* имеет **тип int** и значение по умолчанию NULL. *minimum_run_duration* должны быть указаны в формате ЧЧММСС, где ЧЧ — 2-символьный час дня, mm — это две минуты дня, а SS — двузначное значение дня.  
   
 `[ @run_status = ] run_status` Состояние выполнения задания. *run_status* имеет **тип int**, значение по умолчанию NULL и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**0**|Failed|  
-|**1**|Успешно|  
+|**0**|Сбой|  
+|**1**|Выполнено|  
 |**2**|Повторить (только для этапа)|  
 |**3**|Отменено|  
 |**4**|Сообщение о проценте выполнения|  
 |**5**|Неизвестно|  
   
-`[ @minimum_retries = ] minimum_retries` Минимальное число повторных попыток выполнения задания. *minimum_retries* имеет **тип int**и значение по умолчанию NULL.  
+`[ @minimum_retries = ] minimum_retries` Минимальное число повторных попыток выполнения задания. *minimum_retries* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @oldest_first = ] oldest_first` Указывает, следует ли выводить выходные данные сначала с самыми старыми заданиями. *oldest_first* имеет **тип int**и значение по умолчанию **0**, которое сначала представляет последние задания. **1** в первую очередь представляет самые старые задания.  
+`[ @oldest_first = ] oldest_first` Указывает, следует ли выводить выходные данные сначала с самыми старыми заданиями. *oldest_first* имеет **тип int** и значение по умолчанию **0**, которое сначала представляет последние задания. **1** в первую очередь представляет самые старые задания.  
   
 `[ @server = ] 'server'` Имя сервера, на котором было выполнено задание. *Server* имеет тип **nvarchar (30)** и значение по умолчанию NULL.  
   
@@ -119,7 +119,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**retries_attempted**|**int**|Количество повторных попыток запуска этапа (всегда 0 для журнала заданий).|  
 |**server**|**nvarchar(30)**|Сервер, на котором выполняется задание или этап. Всегда имеет (**Local**).|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_help_jobhistory** возвращает отчет с историей указанных запланированных заданий. Если не указаны параметры, отчет содержит журнал всех заданий в расписании.  
   
 ## <a name="permissions"></a>Разрешения  

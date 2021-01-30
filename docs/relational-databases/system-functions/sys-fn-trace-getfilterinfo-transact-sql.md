@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - fn_trace_getfilterinfo
 - fn_trace_getfilterinfo_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 09fe4a28-ff8a-4655-9da1-4654d5bc514d
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 889a10c6ae999a5211120e52d7b903d04c5ec70e
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7e20ee696ab4d371c6b12dfb24bd5433170080ba
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097467"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200368"
 ---
 # <a name="sysfn_trace_getfilterinfo-transact-sql"></a>sys.fn_trace_getfilterinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +60,7 @@ fn_trace_getfilterinfo ( trace_id )
 |**comparison_operator**|**int**|Задает тип сравнения.<br /><br /> 0 = равны.<br /><br /> 1 = не равны.<br /><br /> 2 = больше чем.<br /><br /> 3 = меньше чем.<br /><br /> 4 = больше или равно.<br /><br /> 5 = меньше или равно.<br /><br /> 6 = схожи.<br /><br /> 7 = не схожи.|  
 |**value**|**sql_variant**|Задает значение, к которому применяется фильтр.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Пользователь задает *trace_id* значение для обнаружения, изменения и управления трассировкой. При передаче идентификатора определенной трассировки **fn_trace_getfilterinfo** возвращает сведения о любом фильтре этой трассировки. Если к указанной трассировке не применяются фильтры, функция возвращает пустой набор строк. Если передать недопустимый идентификатор, эта функция вернет пустой набор строк. Аналогичные сведения о трассировках см. в разделе [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
   
 ## <a name="permissions"></a>Разрешения  

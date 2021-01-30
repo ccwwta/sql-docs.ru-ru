@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_bindefault
 - sp_bindefault_TSQL
@@ -19,12 +19,12 @@ ms.assetid: 3da70c10-68d0-4c16-94a5-9e84c4a520f6
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9cad51a7a83f694ac89b41584929a46e1fbc725c
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 4aacb6bff81f204e89e8704406d61ffb69ae84fb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482411"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199198"
 ---
 # <a name="sp_bindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,7 +60,7 @@ sp_bindefault [ @defname = ] 'default' ,
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  **Sp_bindefault** можно использовать для привязки нового значения по умолчанию к столбцу, хотя рекомендуется использовать ограничение по умолчанию или псевдоним типа данных без отмены привязки к существующему по умолчанию. Старое значение по умолчанию переопределяется. Нельзя привязать значение по умолчанию к системному типу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или определяемого пользователем типу данных среды CLR. Если значение по умолчанию несовместимо со столбцом, к которому оно привязано, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] возвращает сообщение об ошибке при вставке значения по умолчанию, а не при его привязке.  
   
  Существующие столбцы типа данных псевдонима наследуют новое значение по умолчанию, если только к ним не привязано значение по умолчанию или *futureonly_flag* указан как **futureonly**. Новые столбцы с псевдонимом типа данных всегда наследуют значение по умолчанию.  

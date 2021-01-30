@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_unsentitems_TSQL
 - sysmail_unsentitems
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 0e8ffcc7ae60096de1b0355ed113ffb55e02e286
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c532febf9074456ec1806fdb9d7ad0eed9b9b26a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100126"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199692"
 ---
 # <a name="sysmail_unsentitems-transact-sql"></a>sysmail_unsentitems (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "98100126"
 |**last_mod_date**|**datetime**|Дата и время последнего изменения строки.|  
 |**last_mod_user**|**sysname**|Пользователь, внесший последнее изменение в строку.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  При поиске и устранении неполадок в компоненте Database Mail это представление может помочь установить природу проблемы путем отображения числа ожидающих отправки сообщений и продолжительности их ожидания. Если в данный момент сообщения не отправляются, компонент Database Mail может быть не запущен или могут быть проблемы с сетью, что не позволяет компоненту связаться с SMTP-серверами. Если многие неотправленные сообщения имеют одинаковые **profile_id**, возможно, возникла проблема с SMTP-сервером. Попробуйте добавить дополнительные учетные записи в профиль. Если сообщения отправляются, но на ожидание в очереди тратится много времени, возможно, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требуется больше ресурсов для обработки необходимого объема сообщений.  
   
 ## <a name="permissions"></a>Разрешения  

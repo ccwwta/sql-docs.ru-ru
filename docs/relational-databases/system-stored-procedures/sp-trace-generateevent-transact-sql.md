@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_trace_generateevent_TSQL
 - sp_trace_generateevent
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d8a5e027b2d76aa1e6965f1fe782b8987a927ce3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3a3120d1c1f9e6e7b3ee1c875d8aa6ae5a997d57
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541595"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200584"
 ---
 # <a name="sp_trace_generateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ sp_trace_generateevent [ @eventid = ] event_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @eventid = ] event_id` Идентификатор события, которое необходимо включить. *event_id* имеет **тип int**и не имеет значения по умолчанию. Идентификатор должен быть одним из номеров событий от 82 до 91, которые представляют определяемые пользователем события, заданные с помощью [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
+`[ @eventid = ] event_id` Идентификатор события, которое необходимо включить. *event_id* имеет **тип int** и не имеет значения по умолчанию. Идентификатор должен быть одним из номеров событий от 82 до 91, которые представляют определяемые пользователем события, заданные с помощью [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
 `[ @userinfo = ] 'user_info'` Необязательная определяемая пользователем строка, идентифицирующая причину события. *user_info* имеет тип **nvarchar (128)** и значение по умолчанию NULL.  
   
@@ -61,10 +61,10 @@ sp_trace_generateevent [ @eventid = ] event_id
 |**3**|Указанное событие недопустимо. Возможно, событие не существует или не соответствует ни одной хранимой процедуре.|  
 |**13**|Недостаточно памяти. Возвращается, когда для выполнения указанного действия недостаточно памяти.|  
   
-## <a name="remarks"></a>Примечания  
- **sp_trace_generateevent** выполняет многие действия, ранее выполненные **xp_trace_ \* ** расширенными хранимыми процедурами. Вместо **xp_trace_generate_event**используйте **sp_trace_generateevent** .  
+## <a name="remarks"></a>Замечания  
+ **sp_trace_generateevent** выполняет многие действия, ранее выполненные **\* *расширенными хранимыми процедурами xp_trace_ _. Используйте*** вместо **xp_trace_generate_event** знак _ sp_trace_generateevent.  
   
- С **sp_trace_generateevent**можно использовать только идентификационные номера пользовательских событий. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] активирует ошибку при использовании идентификационных номеров других событий.  
+ С **sp_trace_generateevent** можно использовать только идентификационные номера пользовательских событий. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] активирует ошибку при использовании идентификационных номеров других событий.  
   
  Параметры всех хранимых процедур трассировки SQL (**sp_trace_xx**) строго типизированы. Если эти аргументы указываются с неправильными типами данных входных параметров, как указано в описании их аргументов, хранимая процедура возвратит ошибку.  
   
@@ -96,7 +96,7 @@ INSERT INTO user_config_test VALUES(1, 'abc');
 ```  
   
 ## <a name="see-also"></a>См. также раздел  
- [sys. fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+ [sys.fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Трассировка SQL](../../relational-databases/sql-trace/sql-trace.md)  
   

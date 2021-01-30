@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_jobserver
 - sp_help_jobserver_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7e59691a44353826f47550bb67c7a7872fcc4200
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4c5e5f8a4c7ec027c72452ea725ec6def715309a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546105"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200121"
 ---
 # <a name="sp_help_jobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,14 +43,14 @@ sp_help_jobserver
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_id = ] job_id` Идентификационный номер задания, для которого возвращаются сведения. *job_id* имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
+`[ @job_id = ] job_id` Идентификационный номер задания, для которого возвращаются сведения. *job_id* имеет тип **uniqueidentifier** и значение по умолчанию NULL.  
   
-`[ @job_name = ] 'job_name'` Имя задания, для которого возвращаются сведения. Аргумент *job_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` Имя задания, для которого возвращаются сведения. Аргумент *job_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения.  
   
-`[ @show_last_run_details = ] show_last_run_details` Указывает, является ли информация о выполнении последнего запуска частью результирующего набора. *show_last_run_details* имеет тип **tinyint**и значение по умолчанию **0**. **0** не включает сведения о последнем запуске, а **1** —.  
+`[ @show_last_run_details = ] show_last_run_details` Указывает, является ли информация о выполнении последнего запуска частью результирующего набора. *show_last_run_details* имеет тип **tinyint** и значение по умолчанию **0**. **0** не включает сведения о последнем запуске, а **1** —.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -100,7 +100,7 @@ EXEC dbo.sp_help_jobserver
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
  [sp_delete_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

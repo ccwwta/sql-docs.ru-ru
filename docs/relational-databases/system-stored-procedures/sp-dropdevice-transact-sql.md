@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropdevice_TSQL
 - sp_dropdevice
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: de658ea419fe2fe6fcdfbbdd2b335cf5abb12e2e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5df2e24fa3ca61cb235153e0157dbb953a828629
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543511"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200666"
 ---
 # <a name="sp_dropdevice-transact-sql"></a>sp_dropdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +42,9 @@ sp_dropdevice [ @logicalname = ] 'device'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @logicalname = ] 'device'` Логическое имя устройства базы данных или устройства резервного копирования, указанное в **master.dbo.sysDevices.Name**. Аргумент *Device* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @logicalname = ] 'device'` Логическое имя устройства базы данных или устройства резервного копирования, указанное в **master.dbo.sysDevices.Name**. Аргумент *Device* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @delfile = ] 'delfile'` Указывает, следует ли удалить файл физического устройства резервного копирования. *DELFILE* имеет тип **varchar (7)**. При указании в качестве **DELFILE**файл диска физического устройства резервного копирования удаляется.  
+`[ @delfile = ] 'delfile'` Указывает, следует ли удалить файл физического устройства резервного копирования. *DELFILE* имеет тип **varchar (7)**. При указании в качестве **DELFILE** файл диска физического устройства резервного копирования удаляется.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -65,7 +65,7 @@ sp_dropdevice [ @logicalname = ] 'device'
 EXEC sp_dropdevice 'tapedump1';  
 ```  
   
-## <a name="see-also"></a>Дополнительно  
+## <a name="see-also"></a>См. также раздел  
  [Устройства резервного копирования (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Удаление SQL Server &#40;устройства резервного копирования&#41;](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)   
  [sp_addumpdevice (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   

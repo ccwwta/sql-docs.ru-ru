@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_job_TSQL
 - sp_help_job
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5c0b2f0845c98f4b5fa403bd98b87718afd0fb26
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 32ffb85143cf448742831071bee7d4b94a25ec57
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549709"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200161"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,16 +53,16 @@ sp_help_job { [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_id = ] job_id` Идентификационный номер задания. *job_id* имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
+`[ @job_id = ] job_id` Идентификационный номер задания. *job_id* имеет тип **uniqueidentifier** и значение по умолчанию NULL.  
   
-`[ @job_name = ] 'job_name'` Имя задания. Аргумент *job_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` Имя задания. Аргумент *job_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Чтобы просмотреть конкретное задание, необходимо указать либо *job_id* , либо *job_name* .  Пропустите *job_id* и *job_name* , чтобы получить сведения обо всех заданиях.
   
 `[ @job_aspect = ] 'job_aspect'` Атрибут задания для вывода. *job_aspect* имеет тип **varchar (9)**, значение по умолчанию NULL и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**ALL**|Сведения об аспекте задания|  
 |**ДОЛЖНО**|Сведения о задании|  
@@ -72,13 +72,13 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @job_type = ] 'job_type'` Тип заданий, включаемых в отчет. *job_type* имеет тип **varchar (12)** и значение по умолчанию NULL. *job_type* может быть **локальным** или **многосерверным**.  
   
-`[ @owner_login_name = ] 'login_name'` Имя входа владельца задания. Аргумент *login_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @owner_login_name = ] 'login_name'` Имя входа владельца задания. Аргумент *login_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
 `[ @subsystem = ] 'subsystem'` Имя подсистемы. *подсистема* имеет тип **nvarchar (40)** и значение по умолчанию NULL.  
   
-`[ @category_name = ] 'category'` Имя категории. *Category* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @category_name = ] 'category'` Имя категории. *Category* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @enabled = ] enabled` Число, указывающее, отображаются ли сведения о включенных заданиях или отключенных заданиях. *Enabled* имеет тип **tinyint**и значение по умолчанию NULL. **1** указывает на включенные задания, а **0** означает отключенные задания.  
+`[ @enabled = ] enabled` Число, указывающее, отображаются ли сведения о включенных заданиях или отключенных заданиях. *Enabled* имеет тип **tinyint** и значение по умолчанию NULL. **1** указывает на включенные задания, а **0** означает отключенные задания.  
   
 `[ @execution_status = ] status` Состояние выполнения заданий. *Status* имеет **тип int**, значение по умолчанию NULL и может принимать одно из следующих значений.  
   
@@ -94,9 +94,9 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @date_comparator = ] 'date_comparison'` Оператор сравнения, используемый в сравнениях *date_created* и *date_modified*. *date_comparison* имеет **тип char (1)** и может иметь значение =, \<, or > .  
   
-`[ @date_created = ] date_created` Дата создания задания. *date_created*имеет тип **DateTime**и значение по умолчанию NULL.  
+`[ @date_created = ] date_created` Дата создания задания. *date_created* имеет тип **DateTime** и значение по умолчанию NULL.  
   
-`[ @date_last_modified = ] date_modified` Дата последнего изменения задания. *date_modified* имеет тип **DateTime**и значение по умолчанию NULL.  
+`[ @date_last_modified = ] date_modified` Дата последнего изменения задания. *date_modified* имеет тип **DateTime** и значение по умолчанию NULL.  
   
 `[ @description = ] 'description_pattern'` Описание задания. *description_pattern* имеет тип **nvarchar (512)** и значение по умолчанию NULL. *description_pattern* может включать SQL Server подстановочных знаков для сопоставления шаблонов.  
   
@@ -220,7 +220,7 @@ sp_help_job { [ @job_id = ] job_id
   
  Дополнительные сведения о разрешениях этих ролей см. в разделе [Предопределенные роли базы данных агента SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Члены **SQLAgentUserRole** могут только просматривать задания, которыми они владеют. Члены **sysadmin**, **SQLAgentReaderRole**и **SQLAgentOperatorRole** могут просматривать все локальные и многосерверные задания.  
+ Члены **SQLAgentUserRole** могут только просматривать задания, которыми они владеют. Члены **sysadmin**, **SQLAgentReaderRole** и **SQLAgentOperatorRole** могут просматривать все локальные и многосерверные задания.  
   
 ## <a name="examples"></a>Примеры  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - syscollector_config_store_TSQL
 - syscollector_config_store
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: c5914dfa56d4ee6dd360c391c64e636638bb4342
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 0ffb12c3aa43b1e18e20fdf43cf0311c02881138
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094297"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199772"
 ---
 # <a name="syscollector_config_store-transact-sql"></a>syscollector_config_store (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "98094297"
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение SELECT для представления или членства в предопределенных ролях базы данных dc_operator, dc_proxy или dc_admin.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Список доступных свойств фиксирован, а их значения могут быть изменены только с помощью соответствующей хранимой процедуры. В этой таблице описываются свойства, которые доступны через данное представление.  
   
 |Имя свойства|Описание|  

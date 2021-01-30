@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_describe_parameter_encryption
 - sp_describe_parameter_encryption_TSQL
@@ -19,12 +19,12 @@ ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b06ee1588fe46b04348d2e9595eb72206f7b57d2
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 41821edc34835f60cef201ae78b3448f3d3f4699
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466825"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200778"
 ---
 # <a name="sp_describe_parameter_encryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
 
@@ -85,7 +85,7 @@ sp_describe_parameter_encryption
 |**column_encryption_key_ordinal**|**int**|Код строки в первом результирующем наборе. Строка, на которую указывает ссылка, описывает ключ шифрования столбца, настроенный для столбца, параметр соответствует.|  
 |**column_encryption_normalization_rule_version**|**tinyint**|Номер версии алгоритма нормализации типа.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Драйвер клиента, поддерживающий Always encrypted, автоматически вызывает **sp_describe_parameter_encryption** для получения метаданных шифрования для параметризованных запросов, выданных приложением. Впоследствии драйвер использует метаданные шифрования для шифрования значений параметров, которые соответствуют столбцам базы данных, защищенным с помощью Always Encrypted, и заменяет значения параметров в виде открытого текста, переданные приложением, на значения зашифрованных параметров перед отправкой запроса ядру СУБД.  
   
 ## <a name="permissions"></a>Разрешения  

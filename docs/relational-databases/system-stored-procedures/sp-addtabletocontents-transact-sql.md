@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addtabletocontents_TSQL
 - sp_addtabletocontents
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26b1946d03fe949bd0a2af52ce07d64198dd1bbf
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 469d9255813e1a072539e6aa8ca7035378ce2b92
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548358"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198412"
 ---
 # <a name="sp_addtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,16 +40,16 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @table_name = ] 'table_name'` Имя таблицы. Аргумент *table_name* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @table_name = ] 'table_name'` Имя таблицы. Аргумент *table_name* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @owner_name = ] 'owner_name'` Имя владельца таблицы. Аргумент *owner_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @owner_name = ] 'owner_name'` Имя владельца таблицы. Аргумент *owner_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
 `[ @filter_clause = ] 'filter_clause'` Указывает предложение фильтра, которое управляет тем, какие строки недавно загруженных данных должны быть добавлены в таблицы отслеживания слияния. *filter_clause* имеет тип **nvarchar (4000)** и значение по умолчанию NULL. Если *filter_clause* имеет **значение NULL**, добавляются все строки с множественной загрузкой.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_addtabletocontents** используется только в репликации слиянием.  
   
  Строки в *table_name* называются их **ROWGUIDCOL** , а ссылки добавляются в таблицы отслеживания слияния. **sp_addtabletocontents** следует использовать после выполнения операции с массовым копированием данных в таблицу, опубликованную с помощью репликации слиянием. Хранимая процедура инициирует отслеживание строк, которые были скопированы, и обеспечивает их участие в следующей синхронизации.  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpsubscriberinfo
 - sp_helpsubscriberinfo_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 490355fa242d799d524690242e4f7e2a0d8ea830
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 25eb68ab0e5c825b646c254f494ab11e1b297b60
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535108"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199115"
 ---
 # <a name="sp_helpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +39,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @subscriber = ] 'subscriber'` Имя подписчика. Аргумент *Subscriber* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает всю информацию.  
+`[ @subscriber = ] 'subscriber'` Имя подписчика. Аргумент *Subscriber* имеет тип **sysname** и значение по умолчанию **%** , которое возвращает всю информацию.  
   
 `[ @publisher = ] 'publisher'` Имя издателя. параметр *Publisher* имеет тип **sysname**, а значение по умолчанию — имя текущего сервера.  
   
@@ -53,7 +53,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**publisher**|**sysname**|Имя издателя.|  
 |**абонент**|**sysname**|Имя подписчика.|  
 |**type**|**tinyint**|Тип подписчика:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] база данных **1** = источник данных ODBC|  
-|**пользователей**|**sysname**|Идентификатор входа для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**login**|**sysname**|Идентификатор входа для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**password**|**sysname**|Пароль для проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**commit_batch_size**|**int**|Не поддерживается.|  
 |**status_batch_size**|**int**|Не поддерживается.|  
@@ -86,13 +86,13 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_helpsubscriberinfo** используется в репликации моментальных снимков, репликации транзакций и репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** , предопределенной роли базы данных **db_owner** или списка доступа к публикации для публикации могут выполнять **sp_helpsubscriberinfo**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
  [sp_changesubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   

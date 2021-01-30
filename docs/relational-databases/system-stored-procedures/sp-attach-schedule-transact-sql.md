@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_attach_schedule_TSQL
 - sp_attach_schedule
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 939c8d25428c4ff2afa7249fcb215229226e3d88
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 050436b47193c13fe36214d45bb6bd12749a5eb0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539156"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199242"
 ---
 # <a name="sp_attach_schedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,21 +43,21 @@ sp_attach_schedule
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_id = ] job_id` Идентификационный номер задания, к которому добавляется расписание. *job_id*имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
+`[ @job_id = ] job_id` Идентификационный номер задания, к которому добавляется расписание. *job_id* имеет тип **uniqueidentifier** и значение по умолчанию NULL.  
   
-`[ @job_name = ] 'job_name'` Имя задания, к которому добавляется расписание. Аргумент *job_name*имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` Имя задания, к которому добавляется расписание. Аргумент *job_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения.  
   
-`[ @schedule_id = ] schedule_id` Идентификационный номер расписания, который необходимо задать для задания. *schedule_id*имеет **тип int**и значение по умолчанию NULL.  
+`[ @schedule_id = ] schedule_id` Идентификационный номер расписания, который необходимо задать для задания. *schedule_id* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @schedule_name = ] 'schedule_name'` Имя расписания, которое необходимо задать для задания. Аргумент *schedule_name*имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @schedule_name = ] 'schedule_name'` Имя расписания, которое необходимо задать для задания. Аргумент *schedule_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Необходимо указать либо *schedule_id* , либо *schedule_name* , но нельзя указать оба значения.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Расписание и задание должны иметь одного и того же владельца.  
   
  Расписание может быть назначено более чем одному заданию. Задание может выполняться более чем в одном расписании.  
@@ -107,7 +107,7 @@ EXEC sp_attach_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_detach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  

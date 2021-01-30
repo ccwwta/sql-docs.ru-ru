@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_recompile_TSQL
 - sp_recompile
@@ -19,12 +19,12 @@ ms.assetid: 6192ca87-febd-4075-8199-14b4fa609b8c
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf933bec30b2434583970992f79dfc4e898cd479
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a5ff0697d2ca09677455c700b1dfc45f16f1ef72
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97439439"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200645"
 ---
 # <a name="sp_recompile-transact-sql"></a>sp_recompile (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +47,7 @@ sp_recompile [ @objname = ] 'object'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или ненулевое значение (неуспешное завершение)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Процедура sp_recompile ищет объект только в текущей базе данных.  
   
  Запросы, используемые хранимыми процедурами или триггерами и определяемые пользователем функции оптимизируются только после их компиляции. Как только индексы или другие изменения, которые влияют на статистику, внесены в базу данных, компилированные хранимые процедуры, триггеры и определяемые пользователем функции могут утратить эффективность. Путем перекомпиляции хранимых процедур и триггеров, влияющих на таблицу, можно повторно оптимизировать запросы.  

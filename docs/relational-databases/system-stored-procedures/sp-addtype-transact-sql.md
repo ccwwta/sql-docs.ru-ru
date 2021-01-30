@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addtype
 - sp_addtype_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b9950580719ecc68f69d09a0fbe481741dbc4a46
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ece3c9bb2d8952738f1f66c59b9cd49563ad00a6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89529371"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198387"
 ---
 # <a name="sp_addtype-transact-sql"></a>sp_addtype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,9 +45,9 @@ sp_addtype [ @typename = ] type,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @typename = ] type` Имя псевдонима типа данных. Имена типов данных псевдонима должны соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md) и должны быть уникальными в каждой базе данных. Аргумент *Type имеет тип* **sysname**и не имеет значения по умолчанию.  
+`[ @typename = ] type` Имя псевдонима типа данных. Имена типов данных псевдонима должны соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md) и должны быть уникальными в каждой базе данных. Аргумент *Type имеет тип* **sysname** и не имеет значения по умолчанию.  
   
-`[ @phystype = ] system_data_type` Физический (или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) тип данных, на котором основан псевдоним типа данных.* аргумент system_data_type* имеет тип **sysname**, не имеет значения по умолчанию и может принимать одно из следующих значений:  
+`[ @phystype = ] system_data_type` Физический (или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) тип данных, на котором основан псевдоним типа данных.*аргумент system_data_type* имеет тип **sysname**, не имеет значения по умолчанию и может принимать одно из следующих значений:  
   
 ||||  
 |-|-|-|  
@@ -68,10 +68,10 @@ sp_addtype [ @typename = ] type,
  *P*  
  Неотрицательное целое число, показывающее максимальное количество десятичных разрядов числа (как слева, так и справа от десятичного разделителя). Дополнительные сведения см. в разделе [decimal и numeric (Transact-SQL)](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
- *#d0*  
+ *s*  
  Неотрицательное целое число, показывающее максимальное количество десятичных разрядов числа (справа от десятичного разделителя), которое не должно превышать точность. Дополнительные сведения см. в разделе [decimal и numeric (Transact-SQL)](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
-`[ @nulltype = ] 'null_type'` Указывает способ обработки значений NULL в псевдониме типа данных. *null_type* имеет тип **varchar (** 8 **)**, значение по умолчанию NULL и должен заключаться в одинарные кавычки ("null", "NOT NULL" или "null"). Если *null_type* явно не определен с помощью **sp_addtype**, ему присваивается текущая допустимость значений NULL по умолчанию. Для определения текущего значения параметра возможности по умолчанию иметь значения NULL используйте системную функцию NULLGETANSINULL. Его можно настраивать с помощью инструкции SET или ALTER DATABASE. Возможность иметь значения NULL необходимо задавать в явной форме. Если ** \@ фистипе** имеет значение **bit**, а ** \@ nulltype** не указан, по умолчанию используется значение NOT NULL.  
+`[ @nulltype = ] 'null_type'` Указывает способ обработки значений NULL в псевдониме типа данных. *null_type* имеет тип **varchar (** 8 **)**, значение по умолчанию NULL и должен заключаться в одинарные кавычки ("null", "NOT NULL" или "null"). Если *null_type* явно не определен с помощью **sp_addtype**, ему присваивается текущая допустимость значений NULL по умолчанию. Для определения текущего значения параметра возможности по умолчанию иметь значения NULL используйте системную функцию NULLGETANSINULL. Его можно настраивать с помощью инструкции SET или ALTER DATABASE. Возможность иметь значения NULL необходимо задавать в явной форме. Если **\@ фистипе** имеет значение **bit**, а **\@ nulltype** не указан, по умолчанию используется значение NOT NULL.  
   
 > [!NOTE]  
 >  Параметр *null_type* определяет допустимость значений NULL по умолчанию для этого типа данных. Если возможность иметь значения NULL явно указывается для типа данных псевдонима при создании таблицы, эта настройка имеет приоритет над возможностью по умолчанию иметь значения NULL. Дополнительные сведения см. в статьях [ALTER table &#40;Transact-sql&#41;](../../t-sql/statements/alter-table-transact-sql.md) и [CREATE TABLE &#40;transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
@@ -132,7 +132,7 @@ EXEC sp_addtype fax, 'varchar(24)', 'NULL';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md)   
  [CREATE DEFAULT (Transact-SQL)](../../t-sql/statements/create-default-transact-sql.md)   

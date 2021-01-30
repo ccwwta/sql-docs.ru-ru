@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replmonitorhelppublisher_TSQL
 - sp_replmonitorhelppublisher
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 171501fe-4b74-4647-96c3-7691c777e01b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3bb6c758089b6089dfeb6b7a472a496931f6c929
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6252047b509af4311045185197994426c1d019ff
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543144"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198288"
 ---
 # <a name="sp_replmonitorhelppublisher-transact-sql"></a>sp_replmonitorhelppublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +39,7 @@ sp_replmonitorhelppublisher [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'` Имя издателя, состояние которого отслеживается. параметр *Publisher* имеет тип **sysname**и значение по умолчанию NULL. Если задано значение NULL, то данные будут возвращены для всех издателей, которые используют этого распространителя.  
+`[ @publisher = ] 'publisher'` Имя издателя, состояние которого отслеживается. параметр *Publisher* имеет тип **sysname** и значение по умолчанию NULL. Если задано значение NULL, то данные будут возвращены для всех издателей, которые используют этого распространителя.  
   
 `[ @refreshpolicy = ] refreshpolicy` Только для внутреннего использования.  
   
@@ -56,7 +56,7 @@ sp_replmonitorhelppublisher [ [ @publisher = ] 'publisher' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_replmonitorhelppublisher** используется со всеми типами репликации.  
   
 ## <a name="permissions"></a>Разрешения  

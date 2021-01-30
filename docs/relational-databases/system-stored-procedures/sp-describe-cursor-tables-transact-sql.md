@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_describe_cursor_tables_TSQL
 - sp_describe_cursor_tables
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eec1a0d9d8e61613558e0f34b13080a67ba5335b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b5c2e609eb3a521a991848b3b795b04b2ffbd01f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539008"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200800"
 ---
 # <a name="sp_describe_cursor_tables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sp_describe_cursor_tables
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @cursor_return =] *output_cursor_variable*выходные данные  
+ [ @cursor_return =] *output_cursor_variable* выходные данные  
  Имя объявленной переменной для получения выходных данных курсора. *output_cursor_variable* является **курсором**, не имеет значения по умолчанию и не должен быть связан ни с одним курсором во время вызова sp_describe_cursor_tables. Возвращаемый курсор является прокручиваемым, динамическим и доступным только для чтения.  
   
  [ @cursor_source =] {Н'локал ' | Н'глобал ' | Н'вариабле "}  
@@ -83,7 +83,7 @@ sp_describe_cursor_tables
 |dbid|**int**|Идентификатор базы данных, в которой расположена указанная таблица. 0, если используются предложения OPENQUERY или OPENROWSET.|  
 |dbname|**sysname**, **Nullable**|Имя базы данных, в которой расположена указанная таблица. NULL, если используются предложения OPENQUERY или OPENROWSET.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Процедура sp_describe_cursor_tables описывает базовые таблицы, на которые ссылается серверный курсор. Используйте процедуру sp_describe_cursor_columns для описания атрибутов результирующего набора, возвращаемого курсором. Для описания общих характеристик курсора, таких как прокручивание и возможность обновления, используйте процедуру sp_describe_cursor. Для получения списка серверных курсоров [!INCLUDE[tsql](../../includes/tsql-md.md)], видимых при соединении, используйте процедуру sp_cursor_list.  
   
 ## <a name="permissions"></a>Разрешения  

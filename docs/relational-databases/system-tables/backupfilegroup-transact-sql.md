@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - backupfilegroup_TSQL
 - backupfilegroup
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: cd2f3ac634f737772691c3fdb7a1d4ab4d736123
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: be220cdc204488f0c2f82244b543ae324218bc49
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98102745"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198672"
 ---
 # <a name="backupfilegroup-transact-sql"></a>backupfilegroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "98102745"
 |**is_readonly**|**bit**|1 = Файловая группа доступна только для чтения.|  
 |**log_filegroup_guid**|**uniqueidentifier**|Может иметь значение NULL.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
   
 > [!IMPORTANT]  
 >  Одно и то же имя файловой группы может использоваться в разных базах данных, однако у каждой файловой группы есть свой идентификатор GUID. Таким образом, **(backup_set_id, filegroup_guid)** — уникальный ключ, определяющий файловую группу в **backupfilegroup**.  

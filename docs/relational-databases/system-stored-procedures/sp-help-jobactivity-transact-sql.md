@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_jobactivity_TSQL
 - sp_help_jobactivity
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e137d556413057b409d67c8ead14530d224241e0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b399b08120b8153af01d0faab42633f5a8325142
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549712"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199645"
 ---
 # <a name="sp_help_jobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,14 +41,14 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_id = ] job_id` Идентификационный номер задания. *job_id*имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
+`[ @job_id = ] job_id` Идентификационный номер задания. *job_id* имеет тип **uniqueidentifier** и значение по умолчанию NULL.  
   
-`[ @job_name = ] 'job_name'` Имя задания. Аргумент *job_name*имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` Имя задания. Аргумент *job_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения.  
   
-`[ @session_id = ] session_id` Идентификатор сеанса для передачи сведений о. *session_id* имеет **тип int**и значение по умолчанию NULL.  
+`[ @session_id = ] session_id` Идентификатор сеанса для передачи сведений о. *session_id* имеет **тип int** и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -76,7 +76,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**operator_id_netsent**|**int**|ИДЕНТИФИКАЦИОНный номер оператора, уведомленного через **net send** по завершении задания.|  
 |**operator_id_paged**|**int**|Идентификационный номер оператора, которому по пейджеру было послано оповещение об окончании задания.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Эта хранимая процедура создает моментальный снимок текущего состояния заданий. Возвращаемые результаты представляют собой данные на момент выполнения запроса.  
   
  Агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает идентификатор сеанса каждый раз, когда запускается служба агента. Идентификатор сеанса хранится в таблице **msdb.dbo.sysсеансов**.  

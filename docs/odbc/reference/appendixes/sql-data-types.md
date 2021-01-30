@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQL data types [ODBC]
 - SQL data types [ODBC], about SQL data types
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8209463c3c316a5bd2e45a2d7b08eb65b3cb113d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e15771f52af0830f07f135453d08f4355a3fae8f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483157"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199864"
 ---
 # <a name="sql-data-types"></a>Типы данных SQL
-Каждая СУБД определяет собственные типы SQL. Каждый драйвер ODBC предоставляет только те типы данных SQL, которые определяет связанная СУБД. Сведения о том, как драйвер сопоставляет типы СУБД SQL с идентификаторами типов SQL, определенными в ODBC, и способом сопоставления типов СУБД SQL с собственными идентификаторами типов SQL, определяемых драйвером, с помощью вызова **SQLGetTypeInfo**. Драйвер также возвращает типы данных SQL при описании типов данных столбцов и параметров с помощью вызовов **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**и **SQLSpecialColumns**.  
+Каждая СУБД определяет собственные типы SQL. Каждый драйвер ODBC предоставляет только те типы данных SQL, которые определяет связанная СУБД. Сведения о том, как драйвер сопоставляет типы СУБД SQL с идентификаторами типов SQL, определенными в ODBC, и способом сопоставления типов СУБД SQL с собственными идентификаторами типов SQL, определяемых драйвером, с помощью вызова **SQLGetTypeInfo**. Драйвер также возвращает типы данных SQL при описании типов данных столбцов и параметров с помощью вызовов **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns** и **SQLSpecialColumns**.  
   
 > [!NOTE]  
 >  Типы данных SQL содержатся в полях SQL_DESC_ CONCISE_TYPE, SQL_DESC_TYPE и SQL_DESC_DATETIME_INTERVAL_CODE дескрипторов реализации. Характеристики типов данных SQL содержатся в полях SQL_DESC_PRECISION, SQL_DESC_SCALE, SQL_DESC_LENGTH и SQL_DESC_OCTET_LENGTH дескрипторов реализации. Дополнительные сведения см. в разделе [идентификаторы и дескрипторы типов данных](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md) далее в этом приложении.  
@@ -74,7 +74,7 @@ ms.locfileid: "88483157"
 |SQL_INTERVAL_HOUR_TO_MINUTE [7]|ИНТЕРВАЛ от часа (*p*) до минуты|Число часов/минут между двумя датами и временем; *p* — это начальная точность интервала.|  
 |SQL_INTERVAL_HOUR_TO_SECOND [7]|ИНТЕРВАЛ от часа (*p*) до секунды (*q*)|Число часов/минут/секунд между двумя датами и временем; *p* — это начальная точность интервала, а *q* — точность в секундах.|  
 |SQL_INTERVAL_MINUTE_TO_SECOND [7]|ИНТЕРВАЛ в МИНУТах (*p*) до секунды (*q*)|Число минут/секунд между двумя датами и временем; *p* — это начальная точность интервала, а *q* — точность в секундах.|  
-|SQL_GUID|Код GUID|Идентификатор GUID фиксированной длины.|  
+|SQL_GUID|GUID|Идентификатор GUID фиксированной длины.|  
   
  [1] это значение, возвращаемое в столбце DATA_TYPE с помощью вызова **SQLGetTypeInfo**.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "88483157"
   
  [5] в зависимости от реализации точность SQL_FLOAT может быть либо 24, либо 53: Если значение равно 24, то SQL_FLOAT тип данных совпадает с SQL_REAL; Если это 53, SQL_FLOAT тип данных совпадает с SQL_DOUBLE.  
   
- [6] в ODBC *3. x*типы данных даты, времени и отметок времени SQL SQL_TYPE_DATE, SQL_TYPE_TIME и SQL_TYPE_TIMESTAMP соответственно; в ODBC *2. x*типы данных SQL_DATE, SQL_TIME и SQL_TIMESTAMP.  
+ [6] в ODBC *3. x* типы данных даты, времени и отметок времени SQL SQL_TYPE_DATE, SQL_TYPE_TIME и SQL_TYPE_TIMESTAMP соответственно; в ODBC *2. x* типы данных SQL_DATE, SQL_TIME и SQL_TIMESTAMP.  
   
  [7] Дополнительные сведения о типах данных SQL Interval см. в подразделе « [типы данных интервала](../../../odbc/reference/appendixes/interval-data-types.md) » далее в этом приложении.  
   

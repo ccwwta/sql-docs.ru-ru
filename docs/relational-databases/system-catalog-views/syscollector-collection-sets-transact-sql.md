@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - syscollector_collection_sets_TSQL
 - syscollector_collection_sets
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: db0def92-f25b-45da-9709-eab972b33800
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: cc9b5754c1df9957f1a3e8b5e53d0465690a78a7
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: ffa91193b3c09f64d608c255bb8960b7dfb85823
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094276"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199776"
 ---
 # <a name="syscollector_collection_sets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "98094276"
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение SELECT для роли dc_operator, dc_proxy.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  API-интерфейс сборщика данных позволяет изменять и удалять только собственные наборы элементов сбора. Наборы сбора, поставляемые вместе с системой, нельзя изменять или удалять. Однако можно включать или отключать системный набор элементов сбора и менять его конфигурацию.  
   
 ## <a name="see-also"></a>См. также  

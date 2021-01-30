@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_jobschedule
 - sp_help_jobschedule_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5d74890ab154700159fcf6ca086f88cd2ac57409
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9765feaa9e3237f1ccd8d3a6dcc203c88758aefa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538828"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200129"
 ---
 # <a name="sp_help_jobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,18 +44,18 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_id = ] job_id` Идентификационный номер задания. *job_id*имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
+`[ @job_id = ] job_id` Идентификационный номер задания. *job_id* имеет тип **uniqueidentifier** и значение по умолчанию NULL.  
   
-`[ @job_name = ] 'job_name'` Имя задания. Аргумент *job_name*имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` Имя задания. Аргумент *job_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
 > [!NOTE]
 > Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения.
 
-`[ @schedule_name = ] 'schedule_name'` Имя элемента расписания для задания. Аргумент *schedule_name*имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @schedule_name = ] 'schedule_name'` Имя элемента расписания для задания. Аргумент *schedule_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @schedule_id = ] schedule_id` Идентификационный номер элемента расписания для задания. *schedule_id*имеет **тип int**и значение по умолчанию NULL.  
+`[ @schedule_id = ] schedule_id` Идентификационный номер элемента расписания для задания. *schedule_id* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @include_description = ] include_description` Указывает, следует ли включать описание расписания в результирующий набор. *include_description* имеет **бит**и значение по умолчанию **0**. Если *include_description* равен **0**, описание расписания не включается в результирующий набор. Если *include_description* равен **1**, описание расписания включается в результирующий набор.  
+`[ @include_description = ] include_description` Указывает, следует ли включать описание расписания в результирующий набор. *include_description* имеет **бит** и значение по умолчанию **0**. Если *include_description* равен **0**, описание расписания не включается в результирующий набор. Если *include_description* равен **1**, описание расписания включается в результирующий набор.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -86,7 +86,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 > **Примечание. sp_help_jobschedule** возвращает значения из **dbo.sysжобсчедулес** и **dbo.sysрасписаний** системных таблиц в **базе данных msdb**. **sysjobschedules** обновляются каждые 20 минут. Это может повлиять на значения, возвращаемые этой хранимой процедурой.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Параметры **sp_help_jobschedule** могут использоваться только в определенных сочетаниях. Если указан *schedule_id* , нельзя указать ни *job_id* , ни *job_name* . В противном случае можно использовать параметры *job_id* или *job_name* с *schedule_name*.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -143,7 +143,7 @@ EXEC dbo.sp_help_jobschedule
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   

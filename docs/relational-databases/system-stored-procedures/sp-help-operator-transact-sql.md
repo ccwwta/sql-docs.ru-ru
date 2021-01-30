@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_operator
 - sp_help_operator_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2cbf7c84c22998b5ee7e43fadad6a42cf02d17b8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 03346efcec8571ed6bf586a09a6da3631da28dc4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535476"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199667"
 ---
 # <a name="sp_help_operator-transact-sql"></a>Хранимая процедура sp_help_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ sp_help_operator
 ## <a name="arguments"></a>Аргументы  
 `[ @operator_name = ] 'operator_name'` Имя оператора. *operator_name* имеет тип **sysname**. Если параметр *operator_name* не указан, возвращаются сведения обо всех операторах.  
   
-`[ @operator_id = ] operator_id` Идентификационный номер оператора, для которого запрашиваются сведения. *operator_id*имеет **тип int**и значение по умолчанию NULL.  
+`[ @operator_id = ] operator_id` Идентификационный номер оператора, для которого запрашиваются сведения. *operator_id* имеет **тип int** и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Необходимо указать либо *operator_id* , либо *operator_name* , но нельзя указать оба значения.  
@@ -78,7 +78,7 @@ sp_help_operator
 |**last_netsend_time**|**int**|Время, когда оператор получил последнее всплывающее сетевое уведомление.|  
 |**category_name**|**sysname**|Имя категории операторов, к которой принадлежит этот оператор.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_help_operator** должны запускаться из базы данных **msdb** .  
   
 ## <a name="permissions"></a>Разрешения  

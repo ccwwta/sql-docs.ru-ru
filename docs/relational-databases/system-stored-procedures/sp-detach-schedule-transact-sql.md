@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_detach_schedule
 - sp_detach_schedule_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 38b63370a0bf4cbfff2206cf5043f71dc9f1667f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 513287fadf671cc645ffa210e96f56615e237983
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549834"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200751"
 ---
 # <a name="sp_detach_schedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,21 +43,21 @@ sp_detach_schedule
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_id = ] job_id` Идентификационный номер задания, из которого удаляется расписание. *job_id* имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
+`[ @job_id = ] job_id` Идентификационный номер задания, из которого удаляется расписание. *job_id* имеет тип **uniqueidentifier** и значение по умолчанию NULL.  
   
-`[ @job_name = ] 'job_name'` Имя задания, из которого удаляется расписание. Аргумент *job_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` Имя задания, из которого удаляется расписание. Аргумент *job_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения.  
   
-`[ @schedule_id = ] schedule_id` Идентификационный номер расписания, который необходимо удалить из задания. *schedule_id* имеет **тип int**и значение по умолчанию NULL.  
+`[ @schedule_id = ] schedule_id` Идентификационный номер расписания, который необходимо удалить из задания. *schedule_id* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @schedule_name = ] 'schedule_name'` Имя расписания, которое необходимо удалить из задания. Аргумент *schedule_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @schedule_name = ] 'schedule_name'` Имя расписания, которое необходимо удалить из задания. Аргумент *schedule_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Необходимо указать либо *schedule_id* , либо *schedule_name* , но нельзя указать оба значения.  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule` Указывает, следует ли удалять неиспользуемые расписания заданий. *delete_unused_schedule* имеет **бит**и значение по умолчанию **0**, что означает, что все расписания будут сохранены, даже если задания не ссылаются на них. Если задано значение **1**, неиспользуемые расписания заданий удаляются, если на них не ссылаются никакие задания.  
+`[ @delete_unused_schedule = ] delete_unused_schedule` Указывает, следует ли удалять неиспользуемые расписания заданий. *delete_unused_schedule* имеет **бит** и значение по умолчанию **0**, что означает, что все расписания будут сохранены, даже если задания не ссылаются на них. Если задано значение **1**, неиспользуемые расписания заданий удаляются, если на них не ссылаются никакие задания.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -93,7 +93,7 @@ EXEC dbo.sp_detach_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_exec_query_optimizer_info_TSQL
 - dm_exec_query_optimizer_info
@@ -21,12 +21,12 @@ ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0e5a367c8c336cde314cbceef14b523bac8aca1
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 4f106fec3f0a512f1f0f565536ad029d3b02af29
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98092939"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198602"
 ---
 # <a name="sysdm_exec_query_optimizer_info-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,9 +36,9 @@ ms.locfileid: "98092939"
 > [!NOTE]  
 >  Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys.dm_pdw_nodes_exec_query_optimizer_info**.  
   
-|Имя|Тип данных|Описание|  
+|name|Тип данных|Описание|  
 |----------|---------------|-----------------|  
-|**подписан**|**nvarchar(4000)**|Имя события статистики оптимизатора.|  
+|**Счетчик**|**nvarchar(4000)**|Имя события статистики оптимизатора.|  
 |**occurrence**|**bigint**|Количество вхождений события оптимизации для этого счетчика.|  
 |**value**|**float**|Среднее значение свойства для вхождения события.|  
 |**pdw_node_id**|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
@@ -48,7 +48,7 @@ ms.locfileid: "98092939"
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
 В базах данных SQL Basic, S0 и S1, а также для баз данных в эластичных пулах `Server admin` `Azure Active Directory admin` требуется учетная запись или. Для всех остальных целей службы базы данных SQL `VIEW DATABASE STATE` разрешение требуется в базе данных.   
     
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  **sys.dm_exec_query_optimizer_info** содержит следующие свойства (счетчики). Все значения частотности рассматриваются совокупно и при перезапуске системы устанавливаются в 0. Все значения полей значений при перезапуске системы устанавливаются в NULL. Все значения значимых столбцов, по которым определяется среднее, используют значение частотности из той же строки, что и знаменатель в вычислении среднего. Все оптимизации запросов измеряются, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяет изменения в **dm_exec_query_optimizer_info**, включая запросы, создаваемые пользователями и системой. Выполнение уже кэшированного плана не изменяет значения в **dm_exec_query_optimizer_info**, учитываются только оптимизации.  
   
 |Счетчик|Наличие|Значение|  

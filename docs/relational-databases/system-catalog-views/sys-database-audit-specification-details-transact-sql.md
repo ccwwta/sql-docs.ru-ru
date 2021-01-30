@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - database_audit_specification_details
 - sys.database_audit_specification_details_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 03fc60a9-1696-4109-b15e-a50046310859
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 80eb02546225f3378c2ca8f139f3282e4651ea24
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 370e00f9e3c391b3084887f1599f2b46e66d8c07
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98102834"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200357"
 ---
 # <a name="sysdatabase_audit_specification_details-transact-sql"></a>sys.database_audit_specification_details (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "98102834"
 |**database_specification_id**|**int**|Идентификатор спецификации аудита.|  
 |**audit_action_id**|**int**|Идентификатор действия аудита.|  
 |**audit_action_name**|**Имеет sysname**|Имя действия аудита или группы действий аудита.|  
-|**Class**|**int**|Определяет класс объекта, для которого выполняется аудит.|  
+|**Класс**|**int**|Определяет класс объекта, для которого выполняется аудит.|  
 |**class_ desc**|**Nvarchar (60)**|Описание класса объекта, для которого выполняется аудит:<br /><br /> - SCHEMA;<br /><br /> - TABLE.|  
 |**major_id**|**int**|Основной идентификатор объекта, для которого проводится аудит, такой как идентификатор таблицы действия аудита таблицы.|  
 |**minor_id**|**Int**|Вторичный идентификатор объекта, для которого проводится аудит, интерпретируемый в соответствии с классом, такой как идентификатор столбца действия аудита таблицы.|  
@@ -50,7 +50,7 @@ ms.locfileid: "98102834"
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [CREATE SERVER AUDIT (Transact-SQL)](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT (Transact-SQL)](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT (Transact-SQL)](../../t-sql/statements/drop-server-audit-transact-sql.md)   

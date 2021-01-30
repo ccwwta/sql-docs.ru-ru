@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_notification
 - sp_help_notification_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cce6fd1c7645857019399dae9934c8b730e14f77
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d37d091fdb380f0a08f3f0064f2ce408f439eee8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536218"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199985"
 ---
 # <a name="sp_help_notification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,19 +45,19 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @object_type = ] 'object_type'` Тип возвращаемых данных. *object_type*имеет **тип char (9)** и не имеет значения по умолчанию. *object_type* могут быть предупреждениями, в которых перечислены предупреждения, назначенные указанному имени оператора *,* или операторы, в которых перечислены операторы, отвечающие за предоставленное имя предупреждения *.*  
+`[ @object_type = ] 'object_type'` Тип возвращаемых данных. *object_type* имеет **тип char (9)** и не имеет значения по умолчанию. *object_type* могут быть предупреждениями, в которых перечислены предупреждения, назначенные указанному имени оператора *,* или операторы, в которых перечислены операторы, отвечающие за предоставленное имя предупреждения *.*  
   
-`[ @name = ] 'name'` Имя оператора (если *object_type* — операторы) или имя предупреждения (если *OBJECT_TYPE* — это Alerts). Аргумент *Name* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @name = ] 'name'` Имя оператора (если *object_type* — операторы) или имя предупреждения (если *OBJECT_TYPE* — это Alerts). Аргумент *Name* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @enum_type = ] 'enum_type'` Возвращаемые сведения о *object_type*. в большинстве случаев *ENUM_TYPE* фактически. *enum_type*имеет **тип char (10)**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
+`[ @enum_type = ] 'enum_type'` Возвращаемые сведения о *object_type*. в большинстве случаев *ENUM_TYPE* фактически. *enum_type* имеет **тип char (10)**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |ACTUAL|Выводит только *object_types* , связанные с *именем*.|  
-|ALL|Список всех*object_types* , включая те, которые не связаны с *именем*.|  
-|TARGET|Перечисляет только *object_types* , соответствующие заданному *target_name*, независимо от связи с*именем*.|  
+|ALL|Список всех *object_types* , включая те, которые не связаны с *именем*.|  
+|TARGET|Перечисляет только *object_types* , соответствующие заданному *target_name*, независимо от связи с *именем*.|  
   
-`[ @notification_method = ] notification_method` Числовое значение, определяющее возвращаемые столбцы метода уведомления. *notification_method* имеет тип **tinyint**и может принимать одно из следующих значений.  
+`[ @notification_method = ] notification_method` Числовое значение, определяющее возвращаемые столбцы метода уведомления. *notification_method* имеет тип **tinyint** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -66,7 +66,7 @@ sp_help_notification
 |**4**|NetSend: возвращает только столбец **use_netsend** .|  
 |**7**|Все: возвращает все столбцы.|  
   
-`[ @target_name = ] 'target_name'` Имя предупреждения для поиска (если *object_type* — оповещения) или имя оператора для поиска (если *object_type* является операторами). *target_name* требуется только в том случае, если *enum_type* является целевым объектом. Аргумент *target_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @target_name = ] 'target_name'` Имя предупреждения для поиска (если *object_type* — оповещения) или имя оператора для поиска (если *object_type* является операторами). *target_name* требуется только в том случае, если *enum_type* является целевым объектом. Аргумент *target_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
 ## <a name="return-code-valves"></a>Значения кодов возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -98,7 +98,7 @@ sp_help_notification
 |**has_pager**|**int**|У оператора есть адрес пейджера.<br /><br /> **1** = Да<br /><br /> **0** = Нет|  
 |**has_netsend**|**int**|Оператор имеет настроенное уведомление net send.<br /><br /> **1** = Да<br /><br /> **0** = Нет|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Эта хранимая процедура должна запускаться из базы данных **msdb** .  
   
 ## <a name="permissions"></a>Разрешения  
@@ -136,7 +136,7 @@ EXEC sp_help_notification
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_add_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
  [sp_delete_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
  [sp_update_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   

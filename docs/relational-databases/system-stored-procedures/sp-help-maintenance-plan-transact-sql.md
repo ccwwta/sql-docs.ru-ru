@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_maintenance_plan_TSQL
 - sp_help_maintenance_plan
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 99fe08406840229ded741160f855ed60f11e977a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4d996179f089b95a3270c9045778afaaf5c13cd9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89527722"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200015"
 ---
 # <a name="sp_help_maintenance_plan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -81,7 +81,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |-----------------|-----------------|  
 |**job_id**|Идентификатор всех заданий, связанных с планом обслуживания. *job_id* имеет тип **uniqueidentifier**.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_help_maintenance_plan** находится в базе данных **msdb** .  
   
 ## <a name="permissions"></a>Разрешения  

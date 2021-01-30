@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_log_shipping_monitor_primary
 - sp_help_log_shipping_monitor_primary_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d9dfcb8f-1da6-49ca-a2c8-411574915434
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 858affb649166d1cfd19f9b51030458877d8f998
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 732db5c1427526a62b8103444c0ca7063442dae6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469324"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200080"
 ---
 # <a name="sp_help_log_shipping_monitor_primary-transact-sql"></a>sp_help_log_shipping_monitor_primary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ sp_help_log_shipping_monitor_primary
 ## <a name="arguments"></a>Аргументы  
 `[ @primary_server = ] 'primary_server'` Имя основного экземпляра в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] конфигурации доставки журналов. *primary_server* имеет тип **sysname** и не может иметь значение null.  
   
-`[ @primary_database = ] 'primary_database'` Имя базы данных на сервере-источнике. Аргумент *primary_database* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @primary_database = ] 'primary_database'` Имя базы данных на сервере-источнике. Аргумент *primary_database* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -64,7 +64,7 @@ sp_help_log_shipping_monitor_primary
 |**last_backup_date_utc**|Время и дата создания последней резервной копии журнала транзакций в базе данных-источнике, выраженные в формате UTC.|  
 |**history_retention_period**|Промежуток времени в минутах, после которого записи истории доставки журнала данной базы данных-источника будут удалены.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **sp_help_log_shipping_monitor_primary** должны быть запущены из базы данных **master** на сервере мониторинга.  
   
 ## <a name="permissions"></a>Разрешения  

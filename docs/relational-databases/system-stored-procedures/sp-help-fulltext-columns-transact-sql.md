@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_fulltext_columns
 - sp_help_fulltext_columns_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 92c8656b-f7fd-4904-9796-acc9ffed4106
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 029cd09cca1945a521d7a8a11c47ea8b7700b57e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9918652699b3d7bcf6d4ec92dadb749604634641
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535955"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198305"
 ---
 # <a name="sp_help_fulltext_columns-transact-sql"></a>sp_help_fulltext_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "89535955"
   Возвращает столбцы, предназначенные для полнотекстового индексирования.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте представление каталога [sys. fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте [sys.fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md) представление каталога.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,7 +46,7 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
 ## <a name="arguments"></a>Аргументы  
 `[ @table_name = ] 'table\_name'` Имя таблицы из одной или двух частей, для которой запрашиваются сведения о полнотекстовом индексе. *table_name* имеет тип **nvarchar (517)** и значение по умолчанию NULL. Если аргумент *table_name* опущен, данные столбца полнотекстового индекса извлекаются для каждой таблицы с полнотекстовым индексом.  
   
-`[ @column_name = ] 'column\_name'` Имя столбца, для которого запрашиваются метаданные полнотекстового индекса. Аргумент *column_name* имеет тип **sysname**и значение по умолчанию NULL. Если параметр *column_name* опущен или имеет значение null, возвращаются сведения о полнотекстовом столбце для каждого столбца с полнотекстовым индексом для *table_name*. Если *table_name* также опущен или имеет значение null, возвращаются сведения о столбцах полнотекстового индекса для каждого столбца с полнотекстовым индексом для всех таблиц в базе данных.  
+`[ @column_name = ] 'column\_name'` Имя столбца, для которого запрашиваются метаданные полнотекстового индекса. Аргумент *column_name* имеет тип **sysname** и значение по умолчанию NULL. Если параметр *column_name* опущен или имеет значение null, возвращаются сведения о полнотекстовом столбце для каждого столбца с полнотекстовым индексом для *table_name*. Если *table_name* также опущен или имеет значение null, возвращаются сведения о столбцах полнотекстового индекса для каждого столбца с полнотекстовым индексом для всех таблиц в базе данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

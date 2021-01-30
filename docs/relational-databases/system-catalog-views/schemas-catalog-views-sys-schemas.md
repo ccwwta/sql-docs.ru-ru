@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - schemas_TSQL
 - sys.schemas_TSQL
@@ -21,12 +21,12 @@ ms.assetid: 29af5ce5-2af7-4103-8f08-3ec92603ba05
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d41745e41db18f720f85fbc4aef0b8dcec89892f
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: b5f245888ac8dc6d9b5c98f9f3558be4b0b8ef1e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100673"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200940"
 ---
 # <a name="schemas-catalog-views---sysschemas"></a>Представления каталога схем — sys. schemas
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "98100673"
 |**schema_id**|**int**|Идентификатор схемы. Уникален в пределах базы данных.|  
 |**principal_id**|**int**|Идентификатор участника, владеющего этой схемой.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
 Схемы баз данных действуют как пространства имен или контейнеры для объектов, таких как таблицы, представления, процедуры и функции, которые можно найти в представлении каталога **sys. Objects** .  
 
 Каждая схема имеет владельца. Владелец является [субъектом](../../relational-databases/security/authentication-access/principals-database-engine.md)безопасности.

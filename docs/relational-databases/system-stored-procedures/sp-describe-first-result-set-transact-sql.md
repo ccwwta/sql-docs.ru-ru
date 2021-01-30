@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_describe_first_result_set
 - sp_describe_first_result_set_TSQL
@@ -19,12 +19,12 @@ ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c95a79bb42cbc3ab32a5521682aacc8f4f9079d
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8e9a77fb68a5642b3ba5fac7aac9ae0d9c31c899
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466915"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200812"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -105,7 +105,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**tds_collation_id**|**int NULL**|Для внутреннего использования.|  
 |**tds_collation_sort_id**|**tinyint NULL**|Для внутреннего использования.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  **sp_describe_first_result_set** гарантирует, что если процедура возвращает первые метаданные результирующего набора для (гипотетического) пакета а и, если впоследствии выполняется пакет (a), пакет будет либо (1) выдаст ошибку времени оптимизации, (2) вызывает ошибку времени выполнения, (3) не возвращает результирующий набор или (4) возвращает первый результирующий набор с теми же метаданными, описанными **sp_describe_first_result_set**.  
   
  Имя, допустимость значений NULL и тип данных могут различаться. Если **sp_describe_first_result_set** возвращает пустой результирующий набор, то гарантируется, что пакетное выполнение вернет не результирующие наборы.  

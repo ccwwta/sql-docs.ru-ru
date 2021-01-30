@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_mailattachments_TSQL
 - sysmail_mailattachments
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 9fe55316cc27c21849379afe400d2950a5bcf882
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: adffc878cb36a7719748f8e5214bb23dab16fee2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100145"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199695"
 ---
 # <a name="sysmail_mailattachments-transact-sql"></a>sysmail_mailattachments (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "98100145"
 |**last_mod_date**|**datetime**|Дата и время последнего изменения строки.|  
 |**last_mod_user**|**sysname**|Пользователь, внесший последнее изменение в строку.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Это представление следует использовать для просмотра свойств вложений при устранении неполадок в работе компонента Database Mail.  
   
  Вложения, хранящиеся в системных таблицах, могут привести к росту базы данных **msdb** . Для удаления элементов электронной почты и связанных с ними вложений используйте **sysmail_delete_mailitems_sp** . Дополнительные сведения см. в разделе [создание агент SQL Server задания для архивации Database Mail сообщений и журналов событий](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md).  

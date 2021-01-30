@@ -6,7 +6,7 @@ ms.date: 08/09/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - backupmediaset
 - backupmediaset_TSQL
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - backupmediaset system table
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 10b4d744e7ef4e0d11a9788580ea7f8c5a67bd1f
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c886cf2fb117611d5956277656dd7aaadca9afc5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98091584"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198658"
 ---
 # <a name="backupmediaset-transact-sql"></a>backupmediaset (Transact-SQL)
 
@@ -45,7 +45,7 @@ ms.locfileid: "98091584"
 |**is_compressed**|**bit**|Указывает, является ли резервная копия сжатой:<br /><br /> 0 = не сжатая<br /><br /> 1 = сжатая<br /><br /> При обновлении базы данных **msdb** этому параметру присваивается значение null. Это означает резервное копирование без сжатия.|  
 |**is_encrypted**|**Версий**|Указывает, шифруется ли резервная копия.<br /><br /> 0 = не зашифрована<br /><br /> 1 = зашифрована|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Инструкция RESTORE VERIFYONLY из *backup_device* with LOADHISTORY заполняет столбцы таблицы **backupmediaset** соответствующими значениями из заголовка набора носителей.  
   
  Чтобы уменьшить количество строк в этой таблице и в других таблицах резервного копирования и журнала, выполните хранимую процедуру [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) .  

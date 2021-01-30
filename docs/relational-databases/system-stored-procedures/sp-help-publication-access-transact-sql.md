@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_publication_access
 - sp_help_publication_access_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 38ef2fe7710d4716d9b544086f29333c96384bf6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b33b79c6e632eef28feaa5fa8b3f605018b09953
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535244"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199602"
 ---
 # <a name="sp_help_publication_access-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,11 +41,11 @@ sp_help_publication_access [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` Имя публикации, к которой осуществляется доступ. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации, к которой осуществляется доступ. Аргумент *publication* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @return_granted = ] 'return_granted'` Идентификатор входа. *return_granted* имеет **бит**и значение по умолчанию 1. Если указано значение **0** и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется проверка подлинности, то возвращаются доступные имена входа, которые отображаются на издателе, но не на распространителе. Если указано значение **0** и используется проверка подлинности Windows, то возвращаются имена входа, не запрещающие доступ на издателе или распространителе.  
+`[ @return_granted = ] 'return_granted'` Идентификатор входа. *return_granted* имеет **бит** и значение по умолчанию 1. Если указано значение **0** и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется проверка подлинности, то возвращаются доступные имена входа, которые отображаются на издателе, но не на распространителе. Если указано значение **0** и используется проверка подлинности Windows, то возвращаются имена входа, не запрещающие доступ на издателе или распространителе.  
   
-`[ @login = ] 'login'` — Это идентификатор стандартной учетной записи безопасности. Аргумент *Login* имеет тип **sysname**и значение по умолчанию **%** .  
+`[ @login = ] 'login'` — Это идентификатор стандартной учетной записи безопасности. Аргумент *Login* имеет тип **sysname** и значение по умолчанию **%** .  
   
 `[ @initial_list = ] initial_list` Указывает, следует ли возвращать всех членов с доступом к публикации или только тем, кто имел доступ до добавления новых участников в список. *initial_list* имеет бит и значение по умолчанию **0**.  
   
@@ -64,7 +64,7 @@ sp_help_publication_access [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_help_publication_access** используется во всех типах репликации.  
   
  Если оба **иснтнаме** и **иснтграуп** в результирующем наборе равны **0**, предполагается, что имя входа является [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] именем входа.  
@@ -72,7 +72,7 @@ sp_help_publication_access [ @publication = ] 'publication'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_help_publication_access**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_grant_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
  [sp_revoke_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

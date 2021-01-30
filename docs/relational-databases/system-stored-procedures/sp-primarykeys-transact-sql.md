@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_primarykeys_TSQL
 - sp_primarykeys
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c5b967d8ac3d30147e583ffa6268cdd8d2a8d282
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 23117c882ee0c2c55e8d29089327e9dd84643878
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535006"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199590"
 ---
 # <a name="sp_primarykeys-transact-sql"></a>sp_primarykeys (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,13 +43,13 @@ sp_primarykeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @table_server = ] 'table_server'_` Имя связанного сервера, с которого возвращаются сведения о первичном ключе. Аргумент *table_server* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @table_server = ] 'table_server'_` Имя связанного сервера, с которого возвращаются сведения о первичном ключе. Аргумент *table_server* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @table_name = ] 'table_name'` Имя таблицы, для которой необходимо предоставить сведения о первичном ключе. Аргумент *table_name*имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @table_name = ] 'table_name'` Имя таблицы, для которой необходимо предоставить сведения о первичном ключе. Аргумент *table_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @table_schema = ] 'table_schema'` Схема таблицы. Аргумент *table_schema* имеет тип **sysname**и значение по умолчанию NULL. В среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует владельцу таблицы.  
+`[ @table_schema = ] 'table_schema'` Схема таблицы. Аргумент *table_schema* имеет тип **sysname** и значение по умолчанию NULL. В среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует владельцу таблицы.  
   
-`[ @table_catalog = ] 'table_catalog'` Имя каталога, в котором находится заданный *table_name* . В среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует имени базы данных. Аргумент *table_catalog* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @table_catalog = ] 'table_catalog'` Имя каталога, в котором находится заданный *table_name* . В среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует имени базы данных. Аргумент *table_catalog* имеет тип **sysname** и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  Нет  
@@ -65,8 +65,8 @@ sp_primarykeys [ @table_server = ] 'table_server'
 |**KEY_SEQ**|**int**|Порядковый номер столбца в первичном ключе, состоящем из нескольких столбцов.|  
 |**PK_NAME**|**sysname**|Идентификатор первичного ключа. Возвращает NULL, если не применим к источнику данных.|  
   
-## <a name="remarks"></a>Примечания  
- **sp_primarykeys** выполняется путем запроса набора строк PRIMARY_KEYS интерфейса **IDBSchemaRowset** поставщика OLE DB, соответствующего *table_server*. Параметры *table_name*, *table_schema*, *table_catalog*и *столбцов* передаются этому интерфейсу для ограничения возвращаемых строк.  
+## <a name="remarks"></a>Замечания  
+ **sp_primarykeys** выполняется путем запроса набора строк PRIMARY_KEYS интерфейса **IDBSchemaRowset** поставщика OLE DB, соответствующего *table_server*. Параметры *table_name*, *table_schema*, *table_catalog* и *столбцов* передаются этому интерфейсу для ограничения возвращаемых строк.  
   
  **sp_primarykeys** возвращает пустой результирующий набор, если поставщик OLE DB указанного связанного сервера не поддерживает набор строк PRIMARY_KEYS интерфейса **IDBSchemaRowset** .  
   
@@ -83,7 +83,7 @@ EXEC sp_primarykeys @table_server = N'LONDON1',
    @table_schema = N'HumanResources';  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранимые процедуры распределенных запросов &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
  [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   

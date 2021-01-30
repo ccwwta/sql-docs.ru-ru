@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_publication_validation
 - sp_publication_validation_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dccdb0f168b7b1e113a38c64a111e35e5bf62d77
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7e785892f73b45b6e5f6f20944c9c15ee88e8f63
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535013"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199575"
 ---
 # <a name="sp_publication_validation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +42,7 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 `[ @rowcount_only = ] 'rowcount_only'` Указывает, следует ли возвращать только ROWCOUNT для таблицы. *rowcount_only* имеет значение **smallint** и может принимать одно из следующих значений.  
   
@@ -60,9 +60,9 @@ sp_publication_validation [ @publication = ] 'publication'
 |**1**|Выполняет быстрое подсчет из **sysindexes. Rows**. Подсчет строк в [sys.sysиндексах](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) выполняется гораздо быстрее, чем подсчет строк в реальной таблице. Однако, поскольку [sys.sysиндексы](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) отложенно обновляются, количество строк может быть неточным.|  
 |**2** (по умолчанию)|Выполняет быстрый подсчет по условию, при котором сначала используется быстрый метод. Если быстрый метод дает неточные результаты, переключается на полный подсчет. Если *expected_rowcount* имеет значение NULL и хранимая процедура используется для получения значения, всегда используется полный счетчик (*).|  
   
-`[ @shutdown_agent = ] 'shutdown_agent'` Указывает, следует ли завершать работу агент распространения сразу после завершения проверки. *shutdown_agent* имеет **бит**и значение по умолчанию **0**. Если значение **равно 0**, агент репликации не завершает работу. Если значение равно **1**, агент репликации завершает работу после проверки последней статьи.  
+`[ @shutdown_agent = ] 'shutdown_agent'` Указывает, следует ли завершать работу агент распространения сразу после завершения проверки. *shutdown_agent* имеет **бит** и значение по умолчанию **0**. Если значение **равно 0**, агент репликации не завершает работу. Если значение равно **1**, агент репликации завершает работу после проверки последней статьи.  
   
-`[ @publisher = ] 'publisher'` Указывает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'` Указывает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname** и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  *Издатель* не должен использоваться при запросе проверки на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателе.  
@@ -70,7 +70,7 @@ sp_publication_validation [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_publication_validation** используется в репликации транзакций.  
   
  **sp_publication_validation** можно вызвать в любое время после активации статей, связанных с публикацией. Данная процедура может запускаться вручную (единовременно) либо в составе регулярных планируемых заданий по проверке данных.  
@@ -80,7 +80,7 @@ sp_publication_validation [ @publication = ] 'publication'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_publication_validation**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Проверка данных на подписчике](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
  [sp_table_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   

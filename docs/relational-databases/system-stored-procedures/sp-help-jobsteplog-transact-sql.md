@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_jobsteplog_TSQL
 - sp_help_jobsteplog
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4499ad9e2dd54e5592bd4ee9d3b22e3505e9d144
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0e5311127f4ff825f862cb3aef2317a2c53578cc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548004"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200102"
 ---
 # <a name="sp_help_jobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,16 +43,16 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_id = ] 'job_id'` Идентификационный номер задания, для которого возвращаются сведения журнала шагов задания. *job_id* имеет **тип int**и значение по умолчанию NULL.  
+`[ @job_id = ] 'job_id'` Идентификационный номер задания, для которого возвращаются сведения журнала шагов задания. *job_id* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @job_name = ] 'job_name'` Имя задания. Аргумент *job_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` Имя задания. Аргумент *job_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения.  
   
-`[ @step_id = ] step_id` Идентификационный номер этапа в задании. Если не указан, включаются все этапы задания. *step_id* имеет **тип int**и значение по умолчанию NULL.  
+`[ @step_id = ] step_id` Идентификационный номер этапа в задании. Если не указан, включаются все этапы задания. *step_id* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @step_name = ] 'step_name'` Имя шага в задании. Аргумент *step_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @step_name = ] 'step_name'` Имя шага в задании. Аргумент *step_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -71,7 +71,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**log_size**|**float**|Размер журнала шага задания в мегабайтах (МБ).|  
 |**Журналь**|**nvarchar(max)**|Вывод журнала шага задания.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_help_jobsteplog** находится в базе данных **msdb** .  
   
 ## <a name="permissions"></a>Разрешения  

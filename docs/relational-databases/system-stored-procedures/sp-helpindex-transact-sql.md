@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpindex_TSQL
 - sp_helpindex
@@ -19,12 +19,12 @@ ms.assetid: c7f73ba0-ec35-4b10-aa5f-f1487e51fbf7
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a011e8f19650dad1c52b4a88e81edf28eb0bfc47
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 2d80fa7cdea6801945d10d127bf05e258e5e2fe0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97462695"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99200319"
 ---
 # <a name="sp_helpindex-transact-sql"></a>Хранимая процедура sp_helpindex (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +56,7 @@ sp_helpindex [ @objname = ] 'name'
   
  Столбец, индексированный по убыванию, приводится в результирующем наборе со знаком «минус» (-), за которым следует его имя. Для столбца, индексированного по возрастанию (по умолчанию), приводится только его имя.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Если индексы были заданы с помощью параметра NORECOMPUTE инструкции UPDATE STATISTICS, эти сведения включаются в столбец **index_description** .  
   
  **sp_helpindex** предоставляет только столбцы индексов, упорядоченные по столбцам; Поэтому он не предоставляет сведения о XML-индексах и пространственных индексах.  
