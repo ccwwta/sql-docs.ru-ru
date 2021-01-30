@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpextendedproc
 - sp_helpextendedproc_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e1f017e-c898-4225-b375-6a73ef9aac7b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 12255797c4c9799e6e6ec3110dea58f4617142eb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e8256d22c8565b56b328119e6b5618ca4f8d226b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549689"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99197614"
 ---
 # <a name="sp_helpextendedproc-transact-sql"></a>sp_helpextendedproc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @funcname = ] 'procedure'` Имя расширенной хранимой процедуры, для которой сообщается информация. Аргумент *PROCEDURE* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @funcname = ] 'procedure'` Имя расширенной хранимой процедуры, для которой сообщается информация. Аргумент *PROCEDURE* имеет тип **sysname** и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -55,7 +55,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 |**name**|**sysname**|Имя расширенной хранимой процедуры.|  
 |**компоновки**|**nvarchar(255)**|Имя DLL.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Если указана *процедура* , **sp_helpextendedproc** отчеты по указанной расширенной хранимой процедуре. Если этот параметр не указан, **sp_helpextendedproc** возвращает все имена расширенных хранимых процедур и имена библиотек DLL, к которым принадлежит каждая расширенная хранимая процедура.  
   
 ## <a name="permissions"></a>Разрешения  

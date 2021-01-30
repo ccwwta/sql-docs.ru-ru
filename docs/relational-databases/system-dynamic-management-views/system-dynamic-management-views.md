@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -25,12 +25,12 @@ ms.assetid: cf893ecb-0bf6-4cbf-ac00-8a1099e405b1
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 422984471491d402102942304c06f37ef1a14727
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 856777121b7d613c9ac28843c98520d07a93ceac
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98098877"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99196264"
 ---
 # <a name="system-dynamic-management-views"></a>Системные динамические административные представления
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,7 +62,7 @@ FROM sys.dm_os_wait_stats;
 > [!NOTE]  
 >  Так как инструкция DENY имеет более высокий приоритет, если пользователю было предоставлено разрешение VIEW SERVER STATE, но был запрет на разрешение VIEW DATABASE STATE, пользователь сможет получать данные области сервера, но не базы данных.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  Динамические административные представления и функции организованы в следующие категории:  
 
 :::row:::

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - fn_all_changes
 - sys.fn_all_changes
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: c1b411daa6ccdfdb34da1a9560520416e26e1191
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: a4736042dc8770660f076d3865df4033ef3233d5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096485"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194491"
 ---
 # <a name="sysfn_all_changes_ltcapture_instancegt-transact-sql"></a>&lt;capture_instance sys.fn_all_changes_ &gt; (TRANSACT-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -76,7 +76,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  Может быть одним из следующих:  
   
- все  
+ all  
  Возвращает все изменения в пределах указанного диапазона номеров LSN. При использовании этого параметра для изменений, произошедших в результате операции обновления, возвращаются только строки, содержащие новые значения, записанные после обновления.  
   
  all update old  
@@ -92,7 +92,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
 |__CDC_OPERATION|**nvarchar (2)**|Код операции, указывающий операцию, необходимую для применения строки к целевой среде. Он будет изменяться в зависимости от значения аргумента *row_filter_option* , переданного в вызове:<br /><br /> *row_filter_option* = ' ALL '<br /><br /> «D» — операция удаления<br /><br /> «I» — операция вставки<br /><br /> «UN» — новые значения операции обновления<br /><br /> *row_filter_option* = "все обновление Old"<br /><br /> «D» — операция удаления<br /><br /> «I» — операция вставки<br /><br /> «UN» — новые значения операции обновления<br /><br /> «UO» — старые значения операции обновления|  
 |\<columns from @update_flag_list>|**bit**|Битовый флаг, имя которого образуется добавлением «_uflag» к имени столбца. Флаг всегда имеет значение NULL, если \_ _CDC_OPERATION равно "," I ", из" «UO» ". Если значение \_ _CDC_OPERATION "UN", оно устанавливается в значение 1, если обновление вызвало изменение в соответствующем столбце. В противном случае флагу присваивается значение 0.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Функция fn_all_changes_<capture_instance> служит оболочкой для функции запроса cdc.fn_cdc_get_all_changes_<capture_instance>. Хранимая процедура sys.sp_cdc_generate_wrapper формирует скрипт для создания оболочки.  
   
  Функции-оболочки не создаются автоматически. Чтобы создать функции-оболочки, нужно выполнить две операции:  

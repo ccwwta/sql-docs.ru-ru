@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cursorexecute
 - sp_cursorexecute_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 07795588a4c1d6df43a7041f9254a661e527be14
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6aab1670ae9d517ec60d3af572d15eaf12432f7d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543604"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205162"
 ---
 # <a name="sp_cursorexecute-transact-sql"></a>sp_cursorexecute (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ sp_cursorexecute prepared_handle, cursor
  Идентификатор курсора, созданный SQL Server. *курсор* — это обязательный параметр, который должен быть указан во всех последующих процедурах, действующих для курсора, например sp_cursorfetch  
   
  *scrollopt*  
- Параметр прокрутки. *scrollopt* — это необязательный параметр, требующий входного значения **int** . Параметр sp_cursorexecute*scrollopt* имеет те же параметры, что и для sp_cursoropen.  
+ Параметр прокрутки. *scrollopt* — это необязательный параметр, требующий входного значения **int** . Параметр sp_cursorexecute *scrollopt* имеет те же параметры, что и для sp_cursoropen.  
   
 > [!NOTE]  
 >  Значение PARAMETERIZED_STMT не поддерживается.  
@@ -59,7 +59,7 @@ sp_cursorexecute prepared_handle, cursor
 >  Если значение *scrollopt* не указано, значение по умолчанию — KEYSET, независимо от значения *scrollopt* , указанного в sp_cursorprepare.  
   
  *ccopt*  
- Параметр управления параллелизмом. *ccopt* — это необязательный параметр, требующий входного значения **int** . Параметр sp_cursorexecute*ccopt* имеет те же параметры, что и для sp_cursoropen.  
+ Параметр управления параллелизмом. *ccopt* — это необязательный параметр, требующий входного значения **int** . Параметр sp_cursorexecute *ccopt* имеет те же параметры, что и для sp_cursoropen.  
   
 > [!IMPORTANT]  
 >  Если значение *ccopt* не указано, значение по умолчанию — оптимистичный, независимо от значения *ccopt* , указанного в sp_cursorprepare.  
@@ -85,7 +85,7 @@ sp_cursorexecute prepared_handle, cursor
 |-1|Число строк неизвестно.|  
 |-n|Действует асинхронное заполнение.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
   
 ## <a name="scrollopt-and-ccopt-parameters"></a>Параметры scrollopt и ccopt  
  *scrollopt* и *ccopt* полезны при прерывании кэшированных планов для кэша сервера, что означает, что подготовленный описатель, идентифицирующий инструкцию, должен быть перекомпилирован. Значения параметров *scrollopt* и *ccopt* должны совпадать со значениями, отправленными в исходном запросе, в sp_cursorprepare.  

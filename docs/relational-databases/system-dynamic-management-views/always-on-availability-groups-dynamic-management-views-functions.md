@@ -6,7 +6,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 17a77e24-d8b8-4f8a-8a7c-05d6c5d32d96
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 3ddbe057c2320d68aaff77738a11cce3cc8913ed
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 2af99d4cc4ff82fd7205ac9f873ae1be7bc03df6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101703"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99196288"
 ---
 # <a name="always-on-availability-groups-dynamic-management-views---functions"></a>Динамические административные представления групп доступности Always On — функции
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   В этом разделе описаны динамические административные представления и функции, связанные с [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
 
 :::row:::
     :::column:::

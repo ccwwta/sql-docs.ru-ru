@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_category
 - sp_add_category_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 845801380e1047dc9c44bf597a5fbea21e9d8dc4
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: f3ddc04ec70eb08be9ca10c96b45166c0b67aa63
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753716"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194409"
 ---
 # <a name="sp_add_category-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -54,15 +54,15 @@ sp_add_category
 |ALERT|Добавление категории предупреждений.|  
 |OPERATOR|Добавление категории операторов.|  
   
-`[ @type = ] 'type'` Тип добавляемой категории. *тип* — **varchar (12)**, со значением по умолчанию **Local**и может принимать одно из следующих значений.  
+`[ @type = ] 'type'` Тип добавляемой категории. *тип* — **varchar (12)**, со значением по умолчанию **Local** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |LOCAL|Локальная категория заданий.|  
 |НЕСКОЛЬКО СЕРВЕРОВ|Многосерверная категория заданий.|  
-|None|Категория для класса, отличного от JOB **.**|  
+|NONE|Категория для класса, отличного от JOB **.**|  
   
-`[ @name = ] 'name'` Имя добавляемой категории. Имя должно быть уникальным в указанном классе. Аргумент *Name* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @name = ] 'name'` Имя добавляемой категории. Имя должно быть уникальным в указанном классе. Аргумент *Name* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -90,7 +90,7 @@ EXEC dbo.sp_add_category
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
  [sp_help_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
  [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   

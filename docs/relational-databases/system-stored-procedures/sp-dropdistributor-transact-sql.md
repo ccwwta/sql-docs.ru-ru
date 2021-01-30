@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropdistributor
 - sp_dropdistributor_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2477b0a95fb74b26ecf8294baf2ce48a9fd32d12
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f7a08c3f8cd035db38533f9b7fd56aaa34c39399
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543497"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205143"
 ---
 # <a name="sp_dropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,13 +39,13 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @no_checks = ] no_checks` Указывает, следует ли проверять зависимые объекты перед удалением распространителя. *no_checks* имеет **бит**и значение по умолчанию 0.  
+`[ @no_checks = ] no_checks` Указывает, следует ли проверять зависимые объекты перед удалением распространителя. *no_checks* имеет **бит** и значение по умолчанию 0.  
   
  Если значение **равно 0**, **sp_dropdistributor** проверяет, что все объекты публикации и распространения в дополнение к распространителю удалены.  
   
  Если значение равно **1**, **sp_dropdistributor** удаляет все объекты публикации и распространения перед удалением распространителя.  
   
-`[ @ignore_distributor = ] ignore_distributor` Указывает, выполняется ли эта хранимая процедура без соединения с распространителем. *ignore_distributor* имеет **бит**и значение по умолчанию **0**.  
+`[ @ignore_distributor = ] ignore_distributor` Указывает, выполняется ли эта хранимая процедура без соединения с распространителем. *ignore_distributor* имеет **бит** и значение по умолчанию **0**.  
   
  Если значение **равно 0**, **sp_dropdistributor** подключается к распространителю и удаляет все объекты репликации. Если **sp_dropdistributor** не удается подключиться к распространителю, хранимая процедура завершается ошибкой.  
   
@@ -54,10 +54,10 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_dropdistributor** используется во всех типах репликации.  
   
- Если на сервере существуют другие объекты издателя или распространения, **sp_dropdistributor** завершается ошибкой, если ** \@ no_checks** не имеет значение **1**.  
+ Если на сервере существуют другие объекты издателя или распространения, **sp_dropdistributor** завершается ошибкой, если **\@ no_checks** не имеет значение **1**.  
   
  Эта хранимая процедура должна быть выполнена после удаления базы данных распространителя путем выполнения **sp_dropdistributiondb**.  
   
@@ -67,7 +67,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_dropdistributor**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Disable Publishing and Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)  (Отключение публикации и распространения)  
  [sp_adddistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
  [sp_changedistributor_property &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   

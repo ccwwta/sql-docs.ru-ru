@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_attach_single_file_db
 - sp_attach_single_file_db_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0b8026e1aae3df927a6cc454f7fb4763e3d05093
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: e8fd050ff5706cc2406fcb4502c5d93a8253bc4c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753502"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99197712"
 ---
 # <a name="sp_attach_single_file_db-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @dbname = ] 'dbname'` Имя базы данных, которая будет присоединена к серверу. Имя должно быть уникальным. Аргумент *dbname* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @dbname = ] 'dbname'` Имя базы данных, которая будет присоединена к серверу. Имя должно быть уникальным. Аргумент *dbname* имеет тип **sysname** и значение по умолчанию NULL.  
   
 `[ @physname = ] 'physical_name'` Физическое имя файла базы данных, включая путь. *physical_name* имеет тип **nvarchar (260)** и значение по умолчанию NULL.  
   

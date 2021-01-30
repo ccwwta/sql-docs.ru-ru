@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changesubscriptiondtsinfo
 - sp_changesubscriptiondtsinfo_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7dfb8781e2ba00bae96efff0d2e1dea385196a38
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 63762571085653afea03470cfc1e453a85e8adad
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543684"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194414"
 ---
 # <a name="sp_changesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,7 +43,7 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 ## <a name="arguments"></a>Аргументы  
 `[ @job_id = ] job_id` Идентификатор задания агент распространения принудительной подписки. *job_id* имеет тип **varbinary (16)** и не имеет значения по умолчанию. Чтобы найти идентификатор задания распространения, выполните **sp_helpsubscription** или **sp_helppullsubscription**.  
   
-`[ @dts_package_name = ] 'dts_package_name'` Указывает имя пакета служб DTS. *dts_package_name* имеет тип **sysname**и значение по умолчанию NULL. Например, чтобы указать пакет с именем **DTSPub_Package**, необходимо указать `@dts_package_name = N'DTSPub_Package'` .  
+`[ @dts_package_name = ] 'dts_package_name'` Указывает имя пакета служб DTS. *dts_package_name* имеет тип **sysname** и значение по умолчанию NULL. Например, чтобы указать пакет с именем **DTSPub_Package**, необходимо указать `@dts_package_name = N'DTSPub_Package'` .  
   
 `[ @dts_package_password = ] 'dts_package_password'` Указывает пароль для пакета. Аргумент *dts_package_password* имеет тип **sysname** и значение по умолчанию NULL, которое указывает, что свойство Password должно остаться без изменений.  
   
@@ -55,13 +55,13 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_changesubscriptiondtsinfo** используется для репликации моментальных снимков и репликации транзакций, которые являются принудительными подписками.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** , **db_owner** предопределенной роли базы данных или создатель подписки могут выполнять **sp_changesubscriptiondtsinfo**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

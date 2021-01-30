@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_disable_collector_TSQL
 - sp_syscollector_disable_collector
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9ef4c85d-cca6-452d-94be-2be6f616c3d8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3453a78c8d5edde0db4e087af4bc2501e3b4232a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 70489f24c5c6c3e2b5b9ef8677a763916f7f9e75
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549533"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183042"
 ---
 # <a name="sp_syscollector_disable_collector-transact-sql"></a>sp_syscollector_disable_collector (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ dbo.sp_syscollector_disable_collector
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Значением по умолчанию является сборщик данных на сервере.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -59,7 +59,7 @@ dbo.sp_syscollector_disable_collector
 EXEC dbo.sp_syscollector_disable_collector;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)  
   

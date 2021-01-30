@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.endpoint_webmethods_TSQL
 - sys.endpoint_webmethods
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7dad0cf6-eafa-47cf-98cc-75ba8d3c7959
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 1c57d8319df8feb793587dc07d6d55248a0fca12
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7d528284dd7a8cb3efcbbd84d66a38362c0141f9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100639"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203916"
 ---
 # <a name="sysendpoint_webmethods-transact-sql"></a>sys.endpoint_webmethods (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "98100639"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |endpoint_id|**int**|Идентификатор конечной точки, относительно которой определен веб-метод.|  
-|namespace|**nvarchar (384)**|Пространство имен для веб-метода.|  
+|пространство имен|**nvarchar (384)**|Пространство имен для веб-метода.|  
 |method_alias|**nvarchar (64)**|Псевдоним для веб-метода.<br /><br /> Примечание. [!INCLUDE[tsql](../../includes/tsql-md.md)] идентификаторы допускают символы, которые не являются допустимыми в именах методов WSDL.<br /><br /> Псевдоним используется для установки сопоставления имени в описании WSDL для конечной точки с фактическим базовым исполняемым объектом [!INCLUDE[tsql](../../includes/tsql-md.md)], который вызывается при запуске веб-метода.|  
 |object_name|**nvarchar (776)**|Имя объекта, к которому перенаправляется веб-метод, заданное в виде ИМЯ = параметр. Части имени разделяются точкой (.) и разделителями с помощью квадратных скобок, `[``]` .<br /><br /> Имя объекта должно быть трехкомпонентным именем, заданным параметром WSDL.|  
 |result_schema|**tinyint**|Аргумент, определяющий, какое определение XSD, если таковое имеется, отправляется в ответе:<br /><br /> 0 = нет<br /><br /> 1 = Стандартное<br /><br /> 2 = По умолчанию|  

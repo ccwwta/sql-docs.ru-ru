@@ -6,7 +6,7 @@ ms.date: 09/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_os_volume_stats_TSQL
 - dm_os_volume_stats
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 32deca4f06709806d90ee7d25e25105f191ad23e
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 0f685d3d6782aa003d36788757ed76bc41fdb2de
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98098829"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193738"
 ---
 # <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sys.dm_os_volume_stats (database_id, file_id)
 |**supports_sparse_files**|**tinyint**|Указывает, поддерживает ли том разреженные файлы.  Не может иметь значение NULL в Windows и возвращает значение NULL в операционной системе Linux.|  
 |**is_read_only**|**tinyint**|Указывает, помечен ли том как доступный только для чтения. Не может иметь значение NULL.|  
 |**is_compressed**|**tinyint**|Указывает, сжат ли том в настоящее время. Не может иметь значение NULL в Windows и возвращает значение NULL в операционной системе Linux.|  
-|**incurs_seek_penalty**|**tinyint**|Указывает тип хранилища, поддерживающего этот том. Возможны следующие значения:<br /><br />0: не выполнять поиск на этом томе, как правило, если устройство хранения PMM или SSD<br /><br />1: Поиск штрафов на этом томе, обычно если устройство хранения является HDD<br /><br />2: тип хранилища не может быть определен, если том расположен по UNC-пути или подключенным общим папкам<br /><br />NULL: тип хранилища не может быть определен в операционной системе Linux<br /><br />**Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] )|  
+|**incurs_seek_penalty**|**tinyint**|Указывает тип хранилища, поддерживающего этот том. Доступны следующие значения:<br /><br />0: не выполнять поиск на этом томе, как правило, если устройство хранения PMM или SSD<br /><br />1: Поиск штрафов на этом томе, обычно если устройство хранения является HDD<br /><br />2: тип хранилища не может быть определен, если том расположен по UNC-пути или подключенным общим папкам<br /><br />NULL: тип хранилища не может быть определен в операционной системе Linux<br /><br />**Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] )|  
   
 ## <a name="security"></a>Безопасность  
   
