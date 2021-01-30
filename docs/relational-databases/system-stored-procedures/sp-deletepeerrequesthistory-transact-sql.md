@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_deletepeerrequesthistory
 - sp_deletepeerrequesthistory_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 63a4ec6e-ce79-4bf1-9d37-5ac88f8d6beb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 606c3f362b5be303ce7c0ccbd3cd53f21fde8cd8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 56dad6791177093750585122eb939ba5a4ca5763
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548113"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189618"
 ---
 # <a name="sp_deletepeerrequesthistory-transact-sql"></a>sp_deletepeerrequesthistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,19 +40,19 @@ sp_deletepeerrequesthistory [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` Имя публикации, для которой был сделан запрос состояния. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации, для которой был сделан запрос состояния. Аргумент *publication* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @request_id = ] request_id` Указывает отдельный запрос состояния, чтобы все ответы на этот запрос удалялись. *request_id* имеет **тип int**и значение по умолчанию NULL.  
+`[ @request_id = ] request_id` Указывает отдельный запрос состояния, чтобы все ответы на этот запрос удалялись. *request_id* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @cutoff_date = ] cutoff_date` Указывает дату прекращения, до которой удаляются все предыдущие записи ответа. *cutoff_date* имеет тип **DateTime**и значение по умолчанию NULL.  
+`[ @cutoff_date = ] cutoff_date` Указывает дату прекращения, до которой удаляются все предыдущие записи ответа. *cutoff_date* имеет тип **DateTime** и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_deletepeerrequesthistory** используется в одноранговой топологии репликации транзакций. Дополнительные сведения см. в разделе [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
- При выполнении **sp_deletepeerrequesthistory**необходимо указать либо *request_id* , либо *cutoff_date* .  
+ При выполнении **sp_deletepeerrequesthistory** необходимо указать либо *request_id* , либо *cutoff_date* .  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_deletepeerrequesthistory**.  

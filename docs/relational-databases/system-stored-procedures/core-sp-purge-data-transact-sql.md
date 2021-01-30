@@ -1,13 +1,13 @@
 ---
 description: core.sp_purge_data (Transact-SQL)
-title: Core. sp_purge_data (Transact-SQL) | Документация Майкрософт
+title: core.sp_purge_data (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_purge_data_TSQL
 - sp_purge_data
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ff33927812ccab2f2665e80709bcf6074ebacc1a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a4f198f3aa51d42b3dbc22d040fe9b3325f4361f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89530519"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190059"
 ---
 # <a name="coresp_purge_data-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,15 +48,15 @@ core.sp_purge_data
   
 ## <a name="arguments"></a>Аргументы  
  [ @retention_days =] *retention_days*  
- Число дней хранения данных в таблицах хранилища данных управления. Данные с отметкой времени старше *retention_days* удаляются. *retention_days* является **smallint**и ЗНАЧЕНИЕМ по умолчанию NULL. Указываемое значение должно быть положительным числом. Если задано значение NULL, то значение в столбце valid_through представления core.snapshots определяет строки, подлежащие удалению.  
+ Число дней хранения данных в таблицах хранилища данных управления. Данные с отметкой времени старше *retention_days* удаляются. *retention_days* является **smallint** и ЗНАЧЕНИЕМ по умолчанию NULL. Указываемое значение должно быть положительным числом. Если задано значение NULL, то значение в столбце valid_through представления core.snapshots определяет строки, подлежащие удалению.  
   
  [ @instance_name =] "*instance_name*"  
- Имя экземпляра набора элементов сбора. Аргумент *instance_name* имеет тип **sysname**и значение по умолчанию NULL.  
+ Имя экземпляра набора элементов сбора. Аргумент *instance_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
  *instance_name* должно быть полным именем экземпляра, состоящим из имени компьютера и имени экземпляра в формате *ComputerName* \\ *имя_экземпляра*. Если параметр имеет значение NULL, то используется экземпляр по умолчанию на локальном сервере.  
   
  [ @collection_set_uid =] "*collection_set_uid*"  
- Имеет значение GUID для набора элементов сбора. *collection_set_uid* имеет тип **uniqueidentifier**и значение по умолчанию NULL. Если он имеет значение NULL, то удаляются уточняющие строки из всех наборов элемента сбора. Чтобы получить это значение, выполните запрос к представлению каталога syscollector_collection_sets.  
+ Имеет значение GUID для набора элементов сбора. *collection_set_uid* имеет тип **uniqueidentifier** и значение по умолчанию NULL. Если он имеет значение NULL, то удаляются уточняющие строки из всех наборов элемента сбора. Чтобы получить это значение, выполните запрос к представлению каталога syscollector_collection_sets.  
   
  [ @duration =] *Длительность*  
  Максимальное число минут для выполнения операции очистки. *Duration* имеет значение **smallint**, а по умолчанию — NULL. Указываемое значение должно быть больше или равно нулю. Если оно имеет значение NULL, то операция выполняется до тех пор, пока все уточняющие строки не будут удалены либо операция не будет остановлена вручную.  
@@ -64,7 +64,7 @@ core.sp_purge_data
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Эта процедура выбирает строки в представлении core.snapshots, которые подлежат удалению в соответствии со сроком хранения. Все такие строки удаляются из таблицы core.snapshots_internal. Удаление устаревших строк приводит к каскадному удалению строк во всех таблицах хранилища данных управления. Указанная процедура выполняется с помощью предложения ON DELETE CASCADE, которое определено для всех таблиц, в которых хранятся собранные данные.  
   
  Каждый моментальный снимок и связанные с ним данные удаляются в пределах явной транзакции, а затем транзакция фиксируется. Таким образом, если операция очистки остановлена вручную или @duration превышено значение, то остаются только незафиксированные данные. Эти данные могут быть удалены во время следующего запуска задания.  
@@ -108,7 +108,7 @@ EXECUTE core.sp_purge_data @instance_name = @@SERVERNAME, @collection_set_uid = 
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Хранимые процедуры сборщика данных (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - fn_xe_file_target_read_file_TSQL
 - fn_xe_file_target_read_file
@@ -23,12 +23,12 @@ ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8af7ee0bc6c899026e51110264f2b28c2f579dd7
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: a592609cce6805105e61679e54857312e6296b6f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096367"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187370"
 ---
 # <a name="sysfn_xe_file_target_read_file-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *путь*  
+ *path*  
  Путь к файлам для чтения. *путь* может содержать подстановочные знаки и включает имя файла. *путь* имеет тип **nvarchar (260)**. Значение по умолчанию отсутствует. В контексте базы данных SQL Azure это значение является URL-адресом HTTP для файла в службе хранилища Azure.
   
  *мдпас*  
@@ -79,7 +79,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |timestamp_utc|**datetime2**|**Применимо к**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />Дата и время (часовой пояс UTC) события. Не допускает значение NULL.|  
 
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Чтение больших результирующих наборов путем исполнения **sys.fn_xe_file_target_read_file** в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] может привести к ошибке. Используйте **результаты в файловый** режим (**CTRL + SHIFT + F**), чтобы экспортировать большие результирующие наборы в файл и прочитать файл с помощью другого средства.  
   
 ## <a name="permissions"></a>Разрешения  

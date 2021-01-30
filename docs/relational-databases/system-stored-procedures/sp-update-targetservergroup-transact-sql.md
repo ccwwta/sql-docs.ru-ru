@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_update_targetservergroup_TSQL
 - sp_update_targetservergroup
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ac65ed6-e07e-40e4-a282-13bfd92dfa41
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f48424649b3265ee810e48c08602140ce133fc98
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 631e1b316cb66c69ed220cf1e1d3ca09f8e45807
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541571"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189504"
 ---
 # <a name="sp_update_targetservergroup-transact-sql"></a>sp_update_targetservergroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +42,9 @@ sp_update_targetservergroup
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @name = ] 'current_name'` Имя группы целевых серверов. Аргумент *current_name* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @name = ] 'current_name'` Имя группы целевых серверов. Аргумент *current_name* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @new_name = ] 'new_name'` Новое имя группы целевых серверов. Аргумент *new_name* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @new_name = ] 'new_name'` Новое имя группы целевых серверов. Аргумент *new_name* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -52,7 +52,7 @@ sp_update_targetservergroup
 ## <a name="permissions"></a>Разрешения  
  Для выполнения этой хранимой процедуры пользователям должна быть предоставлена предопределенная роль сервера **sysadmin** .  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_update_targetservergroup** должны запускаться из базы данных **msdb** .  
   
 ## <a name="examples"></a>Примеры  

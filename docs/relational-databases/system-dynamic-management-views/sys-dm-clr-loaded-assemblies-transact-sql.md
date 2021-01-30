@@ -6,7 +6,7 @@ ms.date: 08/09/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_clr_loaded_assemblies
 - sys.dm_clr_loaded_assemblies_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: d132a0389ca636dbc24afe016b98389021d8d848
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: fea43cf3bdbbedb83b8b848c322986c4f53afebb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099966"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99188798"
 ---
 # <a name="sysdm_clr_loaded_assemblies-transact-sql"></a>sys.dm_clr_loaded_assemblies (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "98099966"
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Представление **dm_clr_loaded_assemblies. appdomain_address** имеет связь "многие к одному" с  **dm_clr_appdomains. appdomain_address**. Представление **dm_clr_loaded_assemblies. assembly_id** имеет связь «один ко многим» с **sys. assemblies. assembly_id**.  
   
 ## <a name="examples"></a>Примеры  

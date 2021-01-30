@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - desktop database drivers [ODBC], column names
 - ODBC desktop database drivers [ODBC], column names
 ms.assetid: 5a339f61-c52f-40ad-8deb-d785f72753d4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 82cac260fc81ce5a2cfbbe3e4c3c0bdab5a47049
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 46719ea0a0ff34e103252678e25242f010d9bd37
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483697"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190645"
 ---
 # <a name="column-name-limitations"></a>Ограничения имен столбцов
 Имена столбцов могут содержать любые допустимые символы (например, пробелы). Если имена столбцов содержат символы, кроме букв, цифр и знаков подчеркивания, имя должно быть заключено в кавычки (').  

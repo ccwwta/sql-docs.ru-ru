@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_server_diagnostics
 - sp_server_diagnostics_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 01c576dcb71aa3814f1e1c560c6e38ec35874161
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b57d7d6f9925c8cd2c4670daa68054dff9f1e871
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547417"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190822"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -80,15 +80,15 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **\<name of the availability group>**: Собирает данные для указанной группы доступности (если component_type = "Always On: AvailabilityGroup").  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
 Компоненты system, resource и query_processing используются для обнаружения ошибок, а компоненты io_subsystem и events используются только для диагностики.  
   
 В следующей таблице представлены компоненты и связанные с ними состояния работоспособности.  
   
-|Components|Удовлетворительно (1)|Предупреждение (2)|Ошибка (3)|Неизвестно (0)|  
+|Компоненты|Удовлетворительно (1)|Предупреждение (2)|Ошибка (3)|Неизвестно (0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |система|x|x|x||  
-|ресурс|x|x|x||  
+|resource|x|x|x||  
 |query_processing|x|x|x||  
 |io_subsystem|x|x|||  
 |события||||x|  

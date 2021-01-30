@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_scriptdynamicupdproc_TSQL
 - sp_scriptdynamicupdproc
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 03be0aa206a4037de5e09e202e38fcce5ecf5a6c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ab8af33b865570067301df85355f13e0112979ea
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89525973"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189986"
 ---
 # <a name="sp_scriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,12 +38,12 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @artid = ] artid` Идентификатор статьи. *artid* имеет **тип int**и не имеет значения по умолчанию.  
+`[ @artid = ] artid` Идентификатор статьи. *artid* имеет **тип int** и не имеет значения по умолчанию.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  Возвращает результирующий набор, состоящий из одного столбца **nvarchar (4000)** . Результирующий набор формирует полную инструкцию CREATE PROCEDURE, служащую для создания пользовательской хранимой процедуры.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_scriptdynamicupdproc** используется в репликации транзакций. По умолчанию, при синтаксисе MCALL в сценарий включаются все столбцы, входящие в инструкцию UPDATE, а для определения измененных столбцов используется битовая карта. Если столбец не изменился, ему присваиваются его же значения, что обычно не приводит ни к каким проблемам. Если столбец является индексированным, выполняются дополнительные операции. При таком динамическом подходе принимаются во внимание только измененные столбцы, в результате чего формируется оптимальная инструкция UPDATE. Однако составление динамической инструкции UPDATE требует дополнительной обработки в период выполнения. Рекомендуется протестировать динамический и статический подходы и выбрать оптимальное решение.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -123,7 +123,7 @@ if @@rowcount = 0
   
  После выполнения этой хранимой процедуры можно использовать получившийся в итоге скрипт для создания хранимой процедуры вручную на подписчиках.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

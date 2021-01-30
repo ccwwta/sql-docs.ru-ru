@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_serveroption_TSQL
 - sp_serveroption
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ba6045caf5d95aed6d11c0844c16afd93365368f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ec6dfda1d4e12b190999b82e16c27b5127d5af6d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547398"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190781"
 ---
 # <a name="sp_serveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ sp_serveroption [@server = ] 'server'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @server = ] 'server'` Имя сервера, для которого необходимо задать параметр. Аргумент*server* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @server = ] 'server'` Имя сервера, для которого необходимо задать параметр. Аргумент *server* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 `[ @optname = ] 'option_name'` Параметр, заданный для указанного сервера. *option_name* имеет тип **varchar (** 35 **)** и не имеет значения по умолчанию. *option_name* может иметь любое из следующих значений.  
   
@@ -61,7 +61,7 @@ sp_serveroption [@server = ] 'server'
 |**RPC out**|Включает вызов RPC на заданный сервер.|  
 |**sub**|Подписчик.|  
 |**система**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**использовать удаленные параметры сортировки**|Определяет, будут ли использоваться параметры сортировки удаленного столбца или локального сервера.<br /><br /> Если **значение — true**, параметры сортировки удаленных столбцов используются для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] источников данных, а параметры сортировки, заданные в **имени параметров сортировки** , используются для источников, не являющихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] источниками данных.<br /><br /> Если **значение равно "false**", распределенные запросы всегда будут использовать параметры сортировки по умолчанию локального сервера, в то время как **имя параметров сортировки** и параметры сортировки удаленных столбцов игнорируются. Значение по умолчанию — **false**. (Значение **false** совместимо с семантикой параметров сортировки, используемых в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0.)|  
+|**использовать удаленные параметры сортировки**|Определяет, будут ли использоваться параметры сортировки удаленного столбца или локального сервера.<br /><br /> Если **значение — true**, параметры сортировки удаленных столбцов используются для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] источников данных, а параметры сортировки, заданные в **имени параметров сортировки** , используются для источников, не являющихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] источниками данных.<br /><br /> Если **значение равно "false**", распределенные запросы всегда будут использовать параметры сортировки по умолчанию локального сервера, в то время как **имя параметров сортировки** и параметры сортировки удаленных столбцов игнорируются. Значение по умолчанию — **false**. (Значение **false** совместимо с семантикой параметров сортировки, используемых в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0.)|  
 |**remote proc transaction promotion**|Используйте этот параметр, чтобы защитить действия процедуры между серверами посредством транзакции координатора распределенных транзакций (Майкрософт) ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] DTC). Если этот параметр имеет значение TRUE (или ON), то вызов удаленной хранимой процедуры приводит к запуску распределенной транзакции и прикрепляется к выполнению транзакции MS DTC. Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], вызывающий удаленную хранимую процедуру, является инициатором транзакции и контролирует ее завершение. Когда последующая инструкция COMMIT TRANSACTION или ROLLBACK TRANSACTION выдается для соединения, контролирующий экземпляр предписывает MS DTC управлять завершением распределенной транзакции на всех вовлеченных компьютерах.<br /><br /> После запуска распределенной транзакции [!INCLUDE[tsql](../../includes/tsql-md.md)] вызовы удаленных хранимых процедур могут выполняться к другим экземплярам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], определенным в качестве связанных серверов. Все связанные серверы перечислены в распределенной транзакции [!INCLUDE[tsql](../../includes/tsql-md.md)], а координатор распределенных транзакций (Майкрософт) обеспечивает завершение транзакции на каждом из связанных серверов.<br /><br /> Если этот параметр имеет значение FALSE (или OFF), локальная транзакция не станет распределенной при удаленном вызове процедуры на связанном сервере.<br /><br /> Если до выполнения вызова процедуры сервер-сервер транзакция уже является распределенной, этот параметр не действует. Вызов процедуры на связанном сервере будет выполняться в одной распределенной транзакции.<br /><br /> Если до вызова процедуры сервер-сервер у соединения нет активной транзакции, этот параметр не действует. Процедура выполняется на связанном сервере без активных транзакций.<br /><br /> Значение по умолчанию для данного параметра равно TRUE (или ON).|  
   
 `[ @optvalue = ] 'option_value'` Указывает, следует ли включать *option_name* (**true** или **On**) или Disabled (**false** или **Off**). *option_value* имеет тип **varchar (** 10 **)** и не имеет значения по умолчанию.  
@@ -71,7 +71,7 @@ sp_serveroption [@server = ] 'server'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Если параметру **совместимости с параметрами сортировки** присвоено значение true, то **имя параметров сортировки** автоматически будет иметь значение null. Если для **имени параметров сортировки** задано значение, не равное NULL, то **Параметры сортировки, совместимые** с, автоматически устанавливаются в значение false.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -85,7 +85,7 @@ USE master;
 EXEC sp_serveroption 'SEATTLE3', 'collation compatible', 'true';  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранимые процедуры распределенных запросов &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
  [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   

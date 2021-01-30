@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_foreignkeys_TSQL
 - sp_foreignkeys
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8a87d51fff7179ece3442e2459d8d2c5a96c8029
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 377ef64c76238e2e840107dbbe6b32dc9ba4c00f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543411"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189564"
 ---
 # <a name="sp_foreignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,19 +46,19 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @table_server = ] 'table_server'` Имя связанного сервера, для которого возвращаются сведения о таблице. Аргумент *table_server* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @table_server = ] 'table_server'` Имя связанного сервера, для которого возвращаются сведения о таблице. Аргумент *table_server* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @pktab_name = ] 'pktab_name'` Имя таблицы с первичным ключом. Аргумент *pktab_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @pktab_name = ] 'pktab_name'` Имя таблицы с первичным ключом. Аргумент *pktab_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @pktab_schema = ] 'pktab_schema'` Имя схемы с первичным ключом. Аргумент *pktab_schema*имеет тип **sysname**и значение по умолчанию NULL. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] здесь содержится имя владельца.  
+`[ @pktab_schema = ] 'pktab_schema'` Имя схемы с первичным ключом. Аргумент *pktab_schema* имеет тип **sysname** и значение по умолчанию NULL. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] здесь содержится имя владельца.  
   
-`[ @pktab_catalog = ] 'pktab_catalog'` Имя каталога с первичным ключом. Аргумент *pktab_catalog*имеет тип **sysname**и значение по умолчанию NULL. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] здесь содержится имя базы данных.  
+`[ @pktab_catalog = ] 'pktab_catalog'` Имя каталога с первичным ключом. Аргумент *pktab_catalog* имеет тип **sysname** и значение по умолчанию NULL. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] здесь содержится имя базы данных.  
   
-`[ @fktab_name = ] 'fktab_name'` Имя таблицы с внешним ключом. Аргумент *fktab_name*имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @fktab_name = ] 'fktab_name'` Имя таблицы с внешним ключом. Аргумент *fktab_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @fktab_schema = ] 'fktab_schema'` Имя схемы с внешним ключом. Аргумент *fktab_schema*имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @fktab_schema = ] 'fktab_schema'` Имя схемы с внешним ключом. Аргумент *fktab_schema* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @fktab_catalog = ] 'fktab_catalog'` Имя каталога с внешним ключом. Аргумент *fktab_catalog*имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @fktab_catalog = ] 'fktab_catalog'` Имя каталога с внешним ключом. Аргумент *fktab_catalog* имеет тип **sysname** и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  Нет  
@@ -85,8 +85,8 @@ sp_foreignkeys [ @table_server = ] 'table_server'
   
  В результирующем наборе столбцы FK_NAME и PK_NAME всегда возвращают NULL.  
   
-## <a name="remarks"></a>Примечания  
- **sp_foreignkeys** запрашивает набор строк FOREIGN_KEYS интерфейса **IDBSchemaRowset** поставщика OLE DB, соответствующего *table_server*. Параметры *table_name*, *table_schema*, *table_catalog*и *столбцов* передаются этому интерфейсу для ограничения возвращаемых строк.  
+## <a name="remarks"></a>Замечания  
+ **sp_foreignkeys** запрашивает набор строк FOREIGN_KEYS интерфейса **IDBSchemaRowset** поставщика OLE DB, соответствующего *table_server*. Параметры *table_name*, *table_schema*, *table_catalog* и *столбцов* передаются этому интерфейсу для ограничения возвращаемых строк.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение SELECT для схемы.  

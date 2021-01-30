@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - changesubscription
 - sp_changesubscription
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d1dd4a0fc40cf24896de912c1254b154a5538866
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: db0e26092acb2a8cb0fc546a18c0b8f4010fa8fc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543704"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189591"
 ---
 # <a name="sp_changesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,13 +49,13 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` Имя изменяемой публикации. Аргумент *publication*имеет тип **sysname**и не имеет значения по умолчанию  
+`[ @publication = ] 'publication'` Имя изменяемой публикации. Аргумент *publication* имеет тип **sysname** и не имеет значения по умолчанию  
   
-`[ @article = ] 'article'` Имя статьи, которую необходимо изменить. Аргумент *article* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @article = ] 'article'` Имя статьи, которую необходимо изменить. Аргумент *article* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @subscriber = ] 'subscriber'` Имя подписчика. Аргумент *Subscriber* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @subscriber = ] 'subscriber'` Имя подписчика. Аргумент *Subscriber* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @destination_db = ] 'destination_db'` Имя базы данных подписки. Аргумент *destination_db* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @destination_db = ] 'destination_db'` Имя базы данных подписки. Аргумент *destination_db* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 `[ @property = ] 'property'` Свойство, которое необходимо изменить для данной подписки. *свойство* имеет тип **nvarchar (30)** и может быть одним из значений в таблице.  
   
@@ -79,7 +79,7 @@ sp_changesubscription [ @publication = ] 'publication'
 ||**3**|Поставщик OLE DB|  
 |**memory_optimized**|**bit**|Указывает, что подписка поддерживает оптимизированные для памяти таблицы. *memory_optimized* является **битом**, где 1 равно true (подписка поддерживает оптимизированные для памяти таблицы).|  
   
-`[ @publisher = ] 'publisher'` Указывает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'` Указывает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname** и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  для издателя не следует указывать *издателя* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -87,7 +87,7 @@ sp_changesubscription [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_changesubscription** используется в моментальных снимках и репликации транзакций.  
   
  **sp_changesubscription** можно использовать только для изменения свойств принудительных подписок или подписок по запросу, участвующих в обновлении репликации транзакций посредством очередей. Чтобы изменить свойства всех других типов подписок по запросу, используйте [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md).  
@@ -97,7 +97,7 @@ sp_changesubscription [ @publication = ] 'publication'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_changesubscription**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
   

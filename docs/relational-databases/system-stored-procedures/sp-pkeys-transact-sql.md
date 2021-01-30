@@ -6,7 +6,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_pkeys
 - sp_pkeys_TSQL
@@ -18,12 +18,12 @@ ms.assetid: e614c75d-847b-4726-8f6f-cd18de688eda
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a55bcdd0df9f288daa22c5f4f1454b14305ec6a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: bfb9d942ae25c8bf690e1ed9740f56c021cf413d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478945"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190025"
 ---
 # <a name="sp_pkeys-transact-sql"></a>sp_pkeys (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,7 +68,7 @@ sp_pkeys [ @table_name = ] 'name'
 |KEY_SEQ|**smallint**|Порядковый номер столбца в первичном ключе, состоящем из нескольких столбцов.|  
 |PK_NAME|**sysname**|Идентификатор первичного ключа. Возвращает NULL, если не применим к источнику данных.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Процедура sp_pkeys возвращает сведения о столбцах, явно указанных в ограничении ПЕРВИЧНЫЙ КЛЮЧ. Поскольку не все системы поддерживают явно именованные первичные ключи, разработчик шлюза определяет, что представляет собой первичный ключ. Обратите внимание на то, что под первичным ключом понимается логический первичный ключ таблицы. Предполагается, что для каждого логического первичного ключа определен уникальный индекс. Этот уникальный индекс возвращает хранимая процедура sp_statistics.  
   
  В ODBC аналогом хранимой процедуры sp_pkeys является SQLPrimaryKeys. Результаты упорядочиваются по столбцам TABLE_QUALIFIER, TABLE_OWNER, TABLE_NAME и KEY_SEQ.  

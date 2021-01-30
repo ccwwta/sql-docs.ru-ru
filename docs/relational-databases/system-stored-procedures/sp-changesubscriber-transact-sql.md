@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changesubscriber
 - sp_changesubscriber_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 96cce9a9d9a0b9bf74a1ac3b67d3089f4fcd23ed
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3f920abb3544800d99ba108e024e200fad769f1a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543716"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189603"
 ---
 # <a name="sp_changesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -57,13 +57,13 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @subscriber = ] 'subscriber'` Имя подписчика, для которого необходимо изменить параметры. Аргумент *Subscriber* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @subscriber = ] 'subscriber'` Имя подписчика, для которого необходимо изменить параметры. Аргумент *Subscriber* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @type = ] type` Тип подписчика. *Type имеет тип* **tinyint**и значение по умолчанию NULL. **0** означает [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчик. **1** указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] другой подписчик сервера источника данных ODBC, отличный от или другого.  
+`[ @type = ] type` Тип подписчика. *Type имеет тип* **tinyint** и значение по умолчанию NULL. **0** означает [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчик. **1** указывает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] другой подписчик сервера источника данных ODBC, отличный от или другого.  
   
 `[ @login = ] 'login'`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Идентификатор входа для проверки подлинности. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @password = ] 'password'` Пароль для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. Аргумент *Password* имеет тип **sysname**и значение по умолчанию **%** . **%** Указывает, что свойство Password не изменяется.  
+`[ @password = ] 'password'` Пароль для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. Аргумент *Password* имеет тип **sysname** и значение по умолчанию **%** . **%** Указывает, что свойство Password не изменяется.  
   
 `[ @commit_batch_size = ] commit_batch_size` Поддерживается только для обратной совместимости.  
   
@@ -71,7 +71,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @flush_frequency = ] flush_frequency` Поддерживается только для обратной совместимости.  
   
-`[ @frequency_type = ] frequency_type` Частота, с которой следует запланировать задачу распределения. *frequency_type* имеет **тип int**и может принимать одно из следующих значений.  
+`[ @frequency_type = ] frequency_type` Частота, с которой следует запланировать задачу распределения. *frequency_type* имеет **тип int** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -84,49 +84,49 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**64**|Автозапуск|  
 |**128**|Повторяющееся задание|  
   
-`[ @frequency_interval = ] frequency_interval` Интервал для *frequency_type*. *frequency_interval* имеет **тип int**и значение по умолчанию NULL.  
+`[ @frequency_interval = ] frequency_interval` Интервал для *frequency_type*. *frequency_interval* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval` Дата задачи распространения. Этот параметр используется, если *frequency_type* установлен в значение **32** (ежемесячное относительное расписание). *frequency_relative_interval* имеет **тип int**и может принимать одно из следующих значений.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` Дата задачи распространения. Этот параметр используется, если *frequency_type* установлен в значение **32** (ежемесячное относительное расписание). *frequency_relative_interval* имеет **тип int** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |**1**|First|  
-|**2**|Second|  
+|**2**|Секунда|  
 |**4**|Третье|  
 |**8**|Четвертая|  
 |**16**|Последний|  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Частота повторения задачи распределения во время определенных *frequency_type*. *frequency_recurrence_factor* имеет **тип int**и значение по умолчанию NULL.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Частота повторения задачи распределения во время определенных *frequency_type*. *frequency_recurrence_factor* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @frequency_subday = ] frequency_subday` Частота повторного планирования в течение заданного периода. *frequency_subday* имеет **тип int**и может принимать одно из следующих значений.  
+`[ @frequency_subday = ] frequency_subday` Частота повторного планирования в течение заданного периода. *frequency_subday* имеет **тип int** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |**1**|Однократно|  
-|**2**|Second|  
+|**2**|Секунда|  
 |**4**|Минута|  
 |**8**|Час|  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval` Интервал для *frequence_subday*. *frequency_subday_interval* имеет **тип int**и значение по умолчанию NULL.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Интервал для *frequence_subday*. *frequency_subday_interval* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day` Время суток, когда запланировано первое выполнение задачи распространения, в формате ЧЧММСС. *active_start_time_of_day* имеет **тип int**и значение по умолчанию NULL.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Время суток, когда запланировано первое выполнение задачи распространения, в формате ЧЧММСС. *active_start_time_of_day* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day` Время суток, когда запланировано выполнение задачи распространения, в формате ЧЧММСС. *active_end_time_of_day*имеет **тип int**и значение по умолчанию NULL.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Время суток, когда запланировано выполнение задачи распространения, в формате ЧЧММСС. *active_end_time_of_day* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @active_start_date = ] active_start_date` Дата первого запланированного выполнения задачи распределения в формате ГГГГММДД. *active_start_date* имеет **тип int**и значение по умолчанию NULL.  
+`[ @active_start_date = ] active_start_date` Дата первого запланированного выполнения задачи распределения в формате ГГГГММДД. *active_start_date* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @active_end_date = ] active_end_date` Дата запланированной остановки задачи распространения в формате ГГГГММДД. *active_end_date*имеет **тип int**и значение по умолчанию NULL.  
+`[ @active_end_date = ] active_end_date` Дата запланированной остановки задачи распространения в формате ГГГГММДД. *active_end_date* имеет **тип int** и значение по умолчанию NULL.  
   
 `[ @description = ] 'description'` Необязательное текстовое описание. *Description* имеет тип **nvarchar (255)** и значение по умолчанию NULL.  
   
-`[ @security_mode = ] security_mode` Реализованный режим безопасности. *security_mode* имеет **тип int**и может принимать одно из следующих значений.  
+`[ @security_mode = ] security_mode` Реализованный режим безопасности. *security_mode* имеет **тип int** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности|  
 |**1**|Проверка подлинности Windows|  
   
-`[ @publisher = ] 'publisher'` Указывает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'` Указывает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname** и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  При изменении свойств статьи издателя не следует использовать *Издатель* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -134,13 +134,13 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_changesubscriber** используется во всех типах репликации.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_changesubscriber**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
  [sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
  [sp_helpdistributiondb (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   

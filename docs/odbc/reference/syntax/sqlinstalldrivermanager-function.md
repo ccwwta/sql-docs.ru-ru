@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLInstallDriverManager
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: aebc439b-fffd-4d98-907a-0163f79aee8d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b39e2c9304fd47394617d48f22ac91284af1b45d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b85af0323de46972ec6d6c4bf88359209b0015d5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421178"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189700"
 ---
 # <a name="sqlinstalldrivermanager-function"></a>Функция SQLInstallDriverManager
 **Соответствия**  
@@ -58,7 +58,7 @@ BOOL SQLInstallDriverManager(
  Функция возвращает TRUE, если она успешна, и FALSE в случае сбоя.  
   
 ## <a name="diagnostics"></a>Диагностика  
- Когда **склинсталлдриверманажер** возвращает значение false, связанное значение * \* пферроркоде* может быть получено путем вызова **склинсталлереррор**. В следующей таблице перечислены значения * \* пферроркоде* , которые могут быть возвращены **склинсталлереррор** , и объясняется каждый из них в контексте этой функции.  
+ Когда **склинсталлдриверманажер** возвращает значение false, связанное значение *\* пферроркоде* может быть получено путем вызова **склинсталлереррор**. В следующей таблице перечислены значения *\* пферроркоде* , которые могут быть возвращены **склинсталлереррор** , и объясняется каждый из них в контексте этой функции.  
   
 |*\*пферроркоде*|Ошибка|Описание|  
 |---------------------|-----------|-----------------|  

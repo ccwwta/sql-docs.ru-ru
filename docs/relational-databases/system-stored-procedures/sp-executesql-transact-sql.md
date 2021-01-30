@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_executesql
 - sp_executesql_TSQL
@@ -20,12 +20,12 @@ ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 315abb75423d2d7fa11d70ab1b2d6897b8bbc372
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 333bc510861d769a8b9dbb22272918e65982ff2a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97428083"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99188016"
 ---
 # <a name="sp_executesql-transact-sql"></a>Хранимая процедура sp_executesql (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -76,7 +76,7 @@ sp_executesql [ @stmt = ] statement
 ## <a name="result-sets"></a>Результирующие наборы  
  Возвращает результирующие наборы всех заданных инструкций SQL, встроенные в строку SQL.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  sp_executesql параметры должны быть указаны в определенном порядке, как описано в разделе "синтаксис" ранее в этом разделе. Если параметры вводятся не в этом порядке, будет выдано сообщение об ошибке.  
   
  Относительно пакетов инструкций, области имен и контекста базы данных процедура sp_executesql ведет себя аналогично инструкции EXECUTE. [!INCLUDE[tsql](../../includes/tsql-md.md)]Инструкция или пакет в \@ параметре sp_executesql stmt не компилируются до тех пор, пока не будет выполнена инструкция sp_executesql. Содержимое \@ stmt компилируется и выполняется в виде плана выполнения, отделенного от плана выполнения пакета, который вызывал sp_executesql. Пакет, содержащийся в процедуре sp_executesql, не может ссылаться на переменные, объявленные в пакете, вызвавшем sp_executesql. Локальные курсоры или переменные в пакете sp_executesql недоступны пакету, вызвавшему sp_executesql. Изменения в контексте базы данных длятся только до завершения выполнения инструкции sp_executesql.  

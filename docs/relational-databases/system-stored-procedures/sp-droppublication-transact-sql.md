@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_droppublication_TSQL
 - sp_droppublication
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b52b37e6-4fec-40cf-abba-7dce4ff395fd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5ae91db140ea261a6417cb08eae07cfe2eb7fb79
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fcad06d60e5770490d8f4a619d7483c8b29be2d5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538941"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187048"
 ---
 # <a name="sp_droppublication-transact-sql"></a>sp_droppublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,14 +39,14 @@ sp_droppublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` Имя удаляемой публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию. Если указано значение **ALL** , все публикации удаляются из базы данных публикации, за исключением тех, для которых используются подписки.  
+`[ @publication = ] 'publication'` Имя удаляемой публикации. Аргумент *publication* имеет тип **sysname** и не имеет значения по умолчанию. Если указано значение **ALL** , все публикации удаляются из базы данных публикации, за исключением тех, для которых используются подписки.  
   
 `[ @ignore_distributor = ] ignore_distributor` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_droppublication** используется в репликации моментальных снимков и репликации транзакций.  
   
  **sp_droppublication** рекурсивно удаляет все статьи, связанные с публикацией, а затем удаляет саму публикацию. Публикацию нельзя удалить, если у нее есть хотя бы одна подписка. Сведения об удалении подписок см. в разделе [Удаление принудительной подписки](../../relational-databases/replication/delete-a-push-subscription.md) и [Удаление подписки по запросу](../../relational-databases/replication/delete-a-pull-subscription.md).  
@@ -59,7 +59,7 @@ sp_droppublication [ @publication= ] 'publication'
 ## <a name="examples"></a>Примеры  
  [!code-sql[HowTo#sp_droppublication](../../relational-databases/replication/codesnippet/tsql/sp-droppublication-trans_1.sql)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Удаление публикации](../../relational-databases/replication/publish/delete-a-publication.md)   
  [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - xp_sqlmaint
 - xp_sqlmaint_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cfe66be84a9f631422c624eaf65152569d0405bd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b83e5e84d5712e9b1cf3e253222d1ef6d212720
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419188"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187957"
 ---
 # <a name="xp_sqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,10 +49,10 @@ xp_sqlmaint 'switch_string'
  **-?** Недопустимый параметр для **xp_sqlmaint**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- Отсутствует. Возвращает ошибку, если программа **sqlmaint** завершается сбоем.  
+ Нет. Возвращает ошибку, если программа **sqlmaint** завершается сбоем.  
   
-## <a name="remarks"></a>Remarks  
- Если эта процедура вызывается пользователем, вошедшим в систему с проверкой подлинности SQL Server, то перед выполнением параметры **-U "***login_ID***"** и **-P "***password***** " добавляются в начало *switch_string* . Если пользователь вошел в систему с проверкой подлинности Windows, *switch_string* передается без изменений в **sqlmaint**.  
+## <a name="remarks"></a>Замечания  
+ Если эта процедура вызывается пользователем, вошедшим в систему с проверкой подлинности SQL Server, то перед выполнением параметры **-U "**_login_ID_*_"_* и **-P "**_Password_*_"_* добавляются в начало *switch_string* . Если пользователь вошел в систему с проверкой подлинности Windows, *switch_string* передается без изменений в **sqlmaint**.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо членство в предопределенной роли сервера **sysadmin** .  

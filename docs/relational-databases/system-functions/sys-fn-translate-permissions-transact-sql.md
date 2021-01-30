@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.fn_translate_permissions
 - sys.fn_translate_permissions_TSQL
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: e4d00e0b945012cb8a1b583921328009d12a34ad
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 98997af48b4e1f51b18c5441d99f6abaec57b293
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094953"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187401"
 ---
 # <a name="sysfn_translate_permissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +53,7 @@ sys.fn_translate_permissions ( level , perms )
 ## <a name="returns"></a>Возвращаемое значение  
  **table**  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Значение, возвращаемое в столбце **Permissions** трассировки SQL, является целочисленным представлением битовой маски, используемой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для вычисления действующих разрешений. Каждый из 25 вида защищаемых объектов имеет собственный набор разрешений с соответствующими числовыми значениями. **sys.fn_translate_permissions** преобразует эту битовую маску в таблицу имен разрешений.  
   
 ## <a name="permissions"></a>Разрешения  

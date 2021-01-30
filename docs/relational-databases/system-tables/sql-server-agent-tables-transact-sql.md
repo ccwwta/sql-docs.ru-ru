@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 6cb39bfd-079e-4be4-9c42-2fa234c65ce1
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 3cf53dd13bd94c9632c4f3c2464bda38d50e3742
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: f606e046f09254c3beb9c933a04640eea78990ee
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096157"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191132"
 ---
 # <a name="sql-server-agent-tables-transact-sql"></a>Таблицы агента SQL Server (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   В подразделах данного раздела описаны системные таблицы, в которых хранятся данные агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Все таблицы находятся в схеме dbo в базе данных msdb.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [dbo.sysalerts](../../relational-databases/system-tables/dbo-sysalerts-transact-sql.md)  
  Содержит одну строку для каждого предупреждения.  
   

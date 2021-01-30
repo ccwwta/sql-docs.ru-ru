@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_control_dbmasterkey_password
 - sp_control_dbmasterkey_password_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 08b749ad756a47ed991acd1ad0ea1d533bbb770c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 06de3460a55eecba6c1525576caec85d6baa905f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481460"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99190038"
 ---
 # <a name="sp_control_dbmasterkey_password-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -53,13 +53,13 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
  @action= Н'дроп '  
  Указывает на то, что учетные данные для указанной базы данных будет удалены из хранилища учетных данных. Значение, передаваемое в @action , имеет тип **nvarchar**.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нужен главный ключ базы данных для расшифровки или шифрования ключа, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается расшифровать главный ключ базы данных с помощью главного ключа службы экземпляра. Если расшифровка заканчивается неудачей, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет в хранилище учетных данных поиск учетных данных главного ключа, имеющих идентификатор GUID того же семейства, что и у базы данных, для которой нужен главный ключ. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается расшифровать главный ключ базы данных с помощью всех подходящих учетных данных, пока не удастся расшифровать ключ или пока не кончатся учетные данные.  
   
 > [!CAUTION]  
 >  Не создавайте учетные данные главного ключа для базы данных, которая должна быть недоступна sa и другим привилегированным участникам [системы безопасности] на уровне сервера. База данных может быть настроена таким образом, чтобы иерархия ее ключей не могла быть расшифрована главным ключом службы. Этот параметр поддерживается для максимальной защиты баз данных, содержащих зашифрованные сведения, которые не должны быть доступны sa или другим привилегированным участникам [системы безопасности] на уровне сервера. Создание учетных данных главного ключа для такой базы данных сводит на нет эту защиту, позволяя sa и другим привилегированным участникам [системы безопасности] на уровне сервера расшифровывать базу данных.  
   
- Учетные данные, созданные с помощью sp_control_dbmasterkey_password, отображаются в представлении каталога [sys. master_key_passwords](../../relational-databases/system-catalog-views/sys-master-key-passwords-transact-sql.md) . Имена учетных данных, создаваемых для главных ключей базы данных, имеют следующий формат: `##DBMKEY_<database_family_guid>_<random_password_guid>##` . Пароль хранится как секретные учетные данные. Для каждого пароля, добавленного в хранилище учетных данных, существует строка в представлении sys.credentials.  
+ Учетные данные, созданные с помощью sp_control_dbmasterkey_password, отображаются в представлении каталога [sys.master_key_passwords](../../relational-databases/system-catalog-views/sys-master-key-passwords-transact-sql.md) . Имена учетных данных, создаваемых для главных ключей базы данных, имеют следующий формат: `##DBMKEY_<database_family_guid>_<random_password_guid>##` . Пароль хранится как секретные учетные данные. Для каждого пароля, добавленного в хранилище учетных данных, существует строка в представлении sys.credentials.  
   
  Нельзя использовать sp_control_dbmasterkey_password для создания учетных данных для следующих системных баз данных: Master, Model, msdb или tempdb.  
   
@@ -100,10 +100,10 @@ EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2012',
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка зашифрованной зеркальной базы данных](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
- [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.credentials (Transact-SQL)](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
  [Учетные данные (компонент Database Engine)](../../relational-databases/security/authentication-access/credentials-database-engine.md)  
   

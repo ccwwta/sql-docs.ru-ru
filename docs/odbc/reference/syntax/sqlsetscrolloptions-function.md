@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLSetScrollOptions
 apilocation:
@@ -21,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 2a825ba7-7942-4c23-bcdb-c80dc12f8c86
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0197c3756b76b480cd5370b5edff9d6fc88b201c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 69e592350680b4cf3244df823324fb85b8d6153e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491211"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99188025"
 ---
 # <a name="sqlsetscrolloptions-function"></a>Функция SQLSetScrollOptions
 **Соответствия**  
  Введенная версия: соответствие стандартам ODBC 1,0: не рекомендуется  
   
  **Сводка**  
- В ODBC *3. x*функция ODBC 2,0 **SQLSetScrollOptions** была заменена вызовами функций **SQLGetInfo** и **SQLSetStmtAttr**.  
+ В ODBC *3. x* функция ODBC 2,0 **SQLSetScrollOptions** была заменена вызовами функций **SQLGetInfo** и **SQLSetStmtAttr**.  
   
 > [!NOTE]
 >  Дополнительные сведения о том, как диспетчер драйверов сопоставляет эту функцию, когда приложение ODBC *2. x* работает с драйвером ODBC *3. x* , см. в разделе [сопоставление устаревших функций](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) в приложении G: рекомендации по драйверу для обеспечения обратной совместимости.  
@@ -41,7 +41,7 @@ ms.locfileid: "88491211"
 > [!NOTE]
 >  Когда диспетчер драйверов сопоставляет **SQLSetScrollOptions** для приложения, работающего с драйвером ODBC *3. x* , который не поддерживает **SQLSetScrollOptions**, диспетчер драйверов устанавливает параметр инструкции SQL_ROWSET_SIZE, а не атрибут SQL_ATTR_ROW_ARRAY_SIZE инструкции, в аргумент *ровсетсизе* в **склсетскроллоптион**. В результате **SQLSetScrollOptions** не может использоваться приложением при выборке нескольких строк путем вызова **SQLFetch** или **SQLFetchScroll**. Его можно использовать только при выборке нескольких строк путем вызова **SQLExtendedFetch**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Если приложение будет работать в 64-разрядной операционной системе, см. раздел [сведения о ODBC 64-bit](../../../odbc/reference/odbc-64-bit-information.md).  
   
 ## <a name="see-also"></a>См. также:  
