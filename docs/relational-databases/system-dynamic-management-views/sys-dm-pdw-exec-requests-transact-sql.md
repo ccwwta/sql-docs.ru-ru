@@ -6,19 +6,19 @@ ms.date: 11/05/2019
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: a84facf470cbafa9480c1beb48b19be7b9783f51
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 44dc108960c3fe8cda9e632802185f0472eb0373
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482567"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99142683"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -49,7 +49,7 @@ ms.locfileid: "97482567"
 |client_correlation_id|**nvarchar(255)**|Необязательное определяемое пользователем имя для сеанса клиента.  Чтобы задать для сеанса, вызовите sp_set_session_context "client_correlation_id", " <CorrelationIDName> ".  Выполните команду `SELECT SESSION_CONTEXT(N'client_correlation_id')` , чтобы получить его значение.|
 ||||
 
-## <a name="remarks"></a>Комментарии 
+## <a name="remarks"></a>Замечания 
  Сведения о максимальном объеме строк, хранящихся в этом представлении, см. в разделе метаданные статьи [ограничения емкости](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .
 
 Отрицательное целочисленное значение в result_cache_hit столбце является битовым значением всех примененных причин, по которым результирующий набор запроса не может быть кэширован.  Этот столбец может быть [| (Побитовое или)](../../t-sql/language-elements/bitwise-or-transact-sql.md) произведение одного или нескольких из следующих значений:  

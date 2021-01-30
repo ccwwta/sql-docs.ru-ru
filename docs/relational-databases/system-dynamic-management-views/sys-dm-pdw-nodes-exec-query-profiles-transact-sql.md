@@ -6,19 +6,19 @@ ms.date: 10/14/2019
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest
-ms.openlocfilehash: f1917899d58262f670b58843c118864618702950
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 9158ede7f526fe5ce4cbce7b9e6741c03e170849
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98169966"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99140941"
 ---
 # <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys.dm_pdw_nodes_exec_query_profiles (Transact-SQL)
 
@@ -70,14 +70,14 @@ ms.locfileid: "98169966"
 |actual_read_row_count|**bigint**|Число строк, считанных оператором перед применением остаточного предиката.| 
 |estimated_read_row_count|**bigint**|**Применимо к:** Начиная с с [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] пакетом обновления 1. <br/>Количество строк, которое должно быть считано оператором перед применением остаточного предиката.|  
   
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Замечания
 
 Те же примечания в [sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md) применяются.  
 
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение `VIEW SERVER STATE` на сервере.  
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
  [Динамические административные представления Azure синапсе Analytics и Параллельное хранилище данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
    
