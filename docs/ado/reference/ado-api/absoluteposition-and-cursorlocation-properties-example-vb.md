@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c4755799-c60a-4b5e-a01f-b85dd0e0a7f9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a693873e674a0a12dc523994faa1eded7e52a3ed
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d8aa5915ac2ea13b03964f58c5421102101afffb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977195"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161040"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-vb"></a>Примеры свойств примеры AbsolutePosition и CursorLocation (Visual Basic)
 В этом примере показано, как свойство [примеры AbsolutePosition](./absoluteposition-property-ado.md) может отслеживать ход выполнения цикла, который перечисляет все записи [набора записей](./recordset-object-ado.md). Свойство [CursorLocation](./cursorlocation-property-ado.md) используется для включения свойства **примеры AbsolutePosition** путем установки курсора на клиентский курсор.  
@@ -92,7 +92,7 @@ End Sub
 'EndAbsolutePositionVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство примеры AbsolutePosition (ADO)](./absoluteposition-property-ado.md)   
  [Свойство CursorLocation (ADO)](./cursorlocation-property-ado.md)   
  [Объект Recordset (ADO)](./recordset-object-ado.md)

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cdc_help_change_data_capture_TSQL
 - sys.sp_cdc_help_change_data_capture_TSQL
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 13f78f25cd02ccf9c698518b5aa10f7fda0b7694
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 79c12ab4b1bdfb3a955c83ef3d724a026f24f1ea
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809827"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159774"
 ---
 # <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,14 +47,14 @@ sys.sp_cdc_help_change_data_capture
   
 ## <a name="arguments"></a>Аргументы  
  [ @source_schema =] "*source_schema*"  
- Имя схемы, к которой относится исходная таблица. Аргумент *source_schema* имеет тип **sysname**и значение по умолчанию NULL. Если указан *source_schema* , необходимо также указать *source_name* .  
+ Имя схемы, к которой относится исходная таблица. Аргумент *source_schema* имеет тип **sysname** и значение по умолчанию NULL. Если указан *source_schema* , необходимо также указать *source_name* .  
   
  Если значение не равно NULL, *source_schema* должен существовать в текущей базе данных.  
   
  Если *source_schema* не равно null, *source_name* также должен иметь значение, отличное от NULL.  
   
  [ @source_name =] "*source_name*"  
- Имя исходной таблицы. Аргумент *source_name* имеет тип **sysname**и значение по умолчанию NULL. Если указан *source_name* , необходимо также указать *source_schema* .  
+ Имя исходной таблицы. Аргумент *source_name* имеет тип **sysname** и значение по умолчанию NULL. Если указан *source_name* , необходимо также указать *source_schema* .  
   
  Если значение не равно NULL, *source_name* должен существовать в текущей базе данных.  
   
@@ -83,7 +83,7 @@ sys.sp_cdc_help_change_data_capture
 |index_column_list|**nvarchar(max)**|Список столбцов индекса, который использовался для уникальной идентификации строк в исходной таблице.|  
 |captured_column_list|**nvarchar(max)**|Список отслеживаемых исходных столбцов.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Если оба *source_schema* и *source_name* по умолчанию имеют значение null или явно задают значение null, эта хранимая процедура возвращает сведения обо всех экземплярах отслеживания базы данных, к которым вызывающий объект имеет доступ. Если *source_schema* и *SOURCE_NAME* не равны NULL, возвращаются только сведения о конкретной именованной таблице с поддержкой.  
   
 ## <a name="permissions"></a>Разрешения  

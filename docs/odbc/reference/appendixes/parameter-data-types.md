@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - data types [ODBC], parameters
 - parameter data type [ODBC]
@@ -15,12 +15,12 @@ ms.assetid: fd7e99d8-d26a-408c-9733-6ffccde99f75
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: ''
-ms.openlocfilehash: 0114f0cff269d35ddf1e93c653c46bcc8d863a29
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fbc01ee7f6c4e7cd3ca7dbe4deb6e78e5ff78449
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483247"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160831"
 ---
 # <a name="parameter-data-types"></a>Типы данных параметров
 Несмотря на то, что каждый параметр, указанный с помощью **SQLBindParameter** , определяется с помощью типа данных SQL, параметры в инструкции SQL не имеют встроенного типа данных. Поэтому маркеры параметров могут включаться в инструкцию SQL, только если их типы данных могут выводиться из другого операнда в инструкции. Например, в арифметическом выражении, например? + СТОЛБЕЦ1 тип данных параметра может выводиться из типа данных именованного столбца, представленного СТОЛБЕЦ1. Приложение не может использовать маркер параметра, если тип данных не может быть определен.  

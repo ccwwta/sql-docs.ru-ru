@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - server_audit_specification_details
 - sys.server_audit_specification_details_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 792724dc-402e-4b17-9f2c-029d910bf88e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 714a6804a75342b732d88bd0442997fc8be362f1
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 4644b002d02ec55684201c8d9774dc12b2e15525
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097954"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159055"
 ---
 # <a name="sysserver_audit_specification_details-transact-sql"></a>sys.server_audit_specification_details (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "98097954"
 |server_specification_id|**int**|Идентификатор спецификации аудита сервера|  
 |audit_action_id|**int**|Идентификатор действия аудита|  
 |audit_action_name|**sysname**|Имя группы или имя действия аудита|  
-|class|**tinyint**|Зарезервированное|  
-|class_desc|**nvarchar(60)**|Зарезервированное|  
-|major_id|**int**|Зарезервированное|  
-|minor_id|**int**|Зарезервированное|  
-|audited_principal_id|**int**|Зарезервированное|  
+|class|**tinyint**|Зарезервировано|  
+|class_desc|**nvarchar(60)**|Зарезервировано|  
+|major_id|**int**|Зарезервировано|  
+|minor_id|**int**|Зарезервировано|  
+|audited_principal_id|**int**|Зарезервировано|  
 |audited_result|**nvarchar(60)**|Результат аудита:<br /><br /> - SUCCESS AND FAILURE<br /><br /> - SUCCESS<br /><br /> - FAILURE|  
 |is_group|**bit**|Является ли группой объект, прошедший аудит:<br /><br /> 0 — не группа;<br /><br /> 1 — группа.|  
   

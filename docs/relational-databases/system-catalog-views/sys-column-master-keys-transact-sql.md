@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - column_master_key_definitions_TSQL
 - column_master_key_definitions
@@ -26,12 +26,12 @@ ms.assetid: fbec2efa-5fe9-4121-9b34-60497b0b2aca
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9b62a54ec2ab17d76f5f726dbd26f28a60d79afc
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 33682106df449dbdd1dd1c4244dffe89118a2964
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97429649"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161416"
 ---
 # <a name="syscolumn_master_keys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
 
@@ -46,7 +46,7 @@ ms.locfileid: "97429649"
 |**create_date**|**datetime**|Дата создания главного ключа столбца.|  
 |**modify_date**|**datetime**|Дата последнего изменения главного ключа столбца.|  
 |**key_store_provider_name**|**sysname**|Имя поставщика для хранилища главных ключей столбцов, содержащего CMK. Допустимыми значениями являются:<br /><br /> MSSQL_CERTIFICATE_STORE — если хранилищем главных ключей столбцов является хранилище сертификатов.<br /><br /> Определяемое пользователем значение, если хранилище главных ключей столбцов имеет настраиваемый тип.|  
-|**key_path**|**nvarchar(4000)**|Путь к главному столбцу главного ключа, относящийся к ключу. Формат пути зависит от типа хранилища главных ключей столбцов. Пример.<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Для пользовательского хранилища главного ключа столбца разработчик несет ответственность за определение пути к ключу для пользовательского хранилища главного ключа столбца.|  
+|**key_path**|**nvarchar(4000)**|Путь к главному столбцу главного ключа, относящийся к ключу. Формат пути зависит от типа хранилища главных ключей столбцов. Пример:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Для пользовательского хранилища главного ключа столбца разработчик несет ответственность за определение пути к ключу для пользовательского хранилища главного ключа столбца.|  
 |**allow_enclave_computations**|**bit**|Указывает, можно ли использовать главный ключ столбца анклава (если ключи шифрования столбца, зашифрованные с помощью этого главного ключа, могут использоваться для вычислений в защищенном енклавес на стороне сервера). Дополнительные сведения см. в статье [Always Encrypted с безопасными анклавами](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|  
 |**подпись**|**varbinary(max)**|Цифровая подпись **key_path** и **allow_enclave_computations**, созданная с помощью главного ключа столбца, на которую ссылается **key_path**.|
 

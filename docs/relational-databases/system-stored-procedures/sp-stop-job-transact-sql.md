@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_stop_job_TSQL
 - sp_stop_job
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c9f44d705f9aff418312a9f8d0f1a9a9f8012216
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b7f4c7010ae6b00f083e54bcd3b6ec152d5d66ab
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551209"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159789"
 ---
 # <a name="sp_stop_job-transact-sql"></a>sp_stop_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,9 +45,9 @@ sp_stop_job
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_name = ] 'job_name'` Имя останавливаемого задания. Аргумент *job_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` Имя останавливаемого задания. Аргумент *job_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @job_id = ] job_id` Идентификационный номер останавливаемого задания. *job_id* имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
+`[ @job_id = ] job_id` Идентификационный номер останавливаемого задания. *job_id* имеет тип **uniqueidentifier** и значение по умолчанию NULL.  
   
 `[ @originating_server = ] 'master_server'` Имя главного сервера. Если указано, останавливаются все многосерверные задания. *master_server* имеет тип **nvarchar (128)** и значение по умолчанию NULL. Этот параметр следует указывать только при вызове **sp_stop_job** на целевом сервере.  
   

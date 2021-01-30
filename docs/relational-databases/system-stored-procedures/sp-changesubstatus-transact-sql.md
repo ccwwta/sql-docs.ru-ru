@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changesubstatus
 - sp_changesubstatus_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: faee6b09f682c5d13a3c005d95b1d513d9206026
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 89de8f8a4c5f1abb3a07551bcca6eac53e0b2e2a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539136"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158967"
 ---
 # <a name="sp_changesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -65,11 +65,11 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию **%** . Если *Публикация* не указана, затрагиваются все публикации.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname** и значение по умолчанию **%** . Если *Публикация* не указана, затрагиваются все публикации.  
   
-`[ @article = ] 'article'` Имя статьи. Оно должно быть уникальным для публикации. Аргумент *article* имеет тип **sysname**и значение по умолчанию **%** . Если *статья* не указана, затрагиваются все статьи.  
+`[ @article = ] 'article'` Имя статьи. Оно должно быть уникальным для публикации. Аргумент *article* имеет тип **sysname** и значение по умолчанию **%** . Если *статья* не указана, затрагиваются все статьи.  
   
-`[ @subscriber = ] 'subscriber'` Имя подписчика, для которого изменяется состояние. Аргумент *Subscriber* имеет тип **sysname**и значение по умолчанию **%** . Если параметр *подписчик* не указан, состояние изменяется для всех подписчиков на указанную статью.  
+`[ @subscriber = ] 'subscriber'` Имя подписчика, для которого изменяется состояние. Аргумент *Subscriber* имеет тип **sysname** и значение по умолчанию **%** . Если параметр *подписчик* не указан, состояние изменяется для всех подписчиков на указанную статью.  
   
 `[ @status = ] 'status'` — Это состояние подписки в таблице **syssubscriptions** . Аргумент *Status* имеет тип **sysname**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
   
@@ -79,46 +79,46 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |**inactive**|Запись о подписчике существует, но подписка отсутствует.|  
 |**subscribed**|Подписчик запрашивает данные, но еще не синхронизирован.|  
   
-`[ @previous_status = ] 'previous_status'` Предыдущее состояние подписки. Аргумент *previous_status* имеет тип **sysname**и значение по умолчанию NULL. Этот параметр позволяет изменить все подписки, имеющие это состояние, таким образом разрешая групповые функции для определенного набора подписок (например, установка всех активных подписок обратно на **подписку**).  
+`[ @previous_status = ] 'previous_status'` Предыдущее состояние подписки. Аргумент *previous_status* имеет тип **sysname** и значение по умолчанию NULL. Этот параметр позволяет изменить все подписки, имеющие это состояние, таким образом разрешая групповые функции для определенного набора подписок (например, установка всех активных подписок обратно на **подписку**).  
   
-`[ @destination_db = ] 'destination_db'` Имя целевой базы данных. Аргумент *destination_db* имеет тип **sysname**и значение по умолчанию **%** .  
+`[ @destination_db = ] 'destination_db'` Имя целевой базы данных. Аргумент *destination_db* имеет тип **sysname** и значение по умолчанию **%** .  
   
-`[ @frequency_type = ] frequency_type` Частота, с которой следует запланировать задачу распределения. *frequency_type* имеет **тип int**и значение по умолчанию NULL.  
+`[ @frequency_type = ] frequency_type` Частота, с которой следует запланировать задачу распределения. *frequency_type* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @frequency_interval = ] frequency_interval` Значение, применяемое к частоте, установленной *frequency_type*. *frequency_interval* имеет **тип int**и значение по умолчанию NULL.  
+`[ @frequency_interval = ] frequency_interval` Значение, применяемое к частоте, установленной *frequency_type*. *frequency_interval* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval` Дата задачи распространения. Этот параметр используется, если *frequency_type* установлен в значение 32 (ежемесячное относительное расписание). *frequency_relative_interval* имеет **тип int**и может принимать одно из следующих значений.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` Дата задачи распространения. Этот параметр используется, если *frequency_type* установлен в значение 32 (ежемесячное относительное расписание). *frequency_relative_interval* имеет **тип int** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |**1**|First|  
-|**2**|Second|  
+|**2**|Секунда|  
 |**4**|Третье|  
 |**8**|Четвертая|  
 |**16**|Последний|  
 |NULL (по умолчанию)||  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Коэффициент повторения, используемый *frequency_type*. *frequency_recurrence_factor* имеет **тип int**и значение по умолчанию NULL.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Коэффициент повторения, используемый *frequency_type*. *frequency_recurrence_factor* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @frequency_subday = ] frequency_subday` Частота повторного планирования в течение заданного периода (в минутах). *frequency_subday* имеет **тип int**и может принимать одно из следующих значений.  
+`[ @frequency_subday = ] frequency_subday` Частота повторного планирования в течение заданного периода (в минутах). *frequency_subday* имеет **тип int** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |**1**|Однократно|  
-|**2**|Second|  
+|**2**|Секунда|  
 |**4**|Минута|  
 |**8**|Час|  
 |NULL (по умолчанию)||  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval` Интервал для *frequency_subday*. *frequency_subday_interval* имеет **тип int**и значение по умолчанию NULL.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Интервал для *frequency_subday*. *frequency_subday_interval* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day` Время суток, когда запланировано первое выполнение задачи распространения, в формате ЧЧММСС. *active_start_time_of_day* имеет **тип int**и значение по умолчанию NULL.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Время суток, когда запланировано первое выполнение задачи распространения, в формате ЧЧММСС. *active_start_time_of_day* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day` Время суток, когда запланировано выполнение задачи распространения, в формате ЧЧММСС. *active_end_time_of_day* имеет **тип int**и значение по умолчанию NULL.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Время суток, когда запланировано выполнение задачи распространения, в формате ЧЧММСС. *active_end_time_of_day* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @active_start_date = ] active_start_date` Дата первого запланированного выполнения задачи распределения в формате ГГГГММДД. *active_start_date* имеет **тип int**и значение по умолчанию NULL.  
+`[ @active_start_date = ] active_start_date` Дата первого запланированного выполнения задачи распределения в формате ГГГГММДД. *active_start_date* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @active_end_date = ] active_end_date` Дата запланированной остановки задачи распространения в формате ГГГГММДД. *active_end_date* имеет **тип int**и значение по умолчанию NULL.  
+`[ @active_end_date = ] active_end_date` Дата запланированной остановки задачи распространения в формате ГГГГММДД. *active_end_date* имеет **тип int** и значение по умолчанию NULL.  
   
 `[ @optional_command_line = ] 'optional_command_line'` — Необязательная Командная строка. *optional_command_line* имеет тип **nvarchar (4000)** и значение по умолчанию NULL.  
   
@@ -136,20 +136,20 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  > [!NOTE]  
 >  Удаленная активация агента является устаревшей и больше не поддерживается. Этот аргумент поддерживается только для обратной совместимости скриптов. При установке *remote_agent_server_name* любого значения, отличного от NULL, возникает ошибка.  
   
-`[ @dts_package_name = ] 'dts_package_name'` Указывает имя пакета служб DTS. *dts_package_name* имеет тип **sysname**и значение по умолчанию NULL. Например, для пакета с именем **DTSPub_Package** можно указать `@dts_package_name = N'DTSPub_Package'` .  
+`[ @dts_package_name = ] 'dts_package_name'` Указывает имя пакета служб DTS. *dts_package_name* имеет тип **sysname** и значение по умолчанию NULL. Например, для пакета с именем **DTSPub_Package** можно указать `@dts_package_name = N'DTSPub_Package'` .  
   
 `[ @dts_package_password = ] 'dts_package_password'` Указывает пароль для пакета. Аргумент *dts_package_password* имеет тип **sysname** и значение по умолчанию NULL, которое указывает, что свойство Password должно остаться без изменений.  
   
 > [!NOTE]  
 >  У пакета служб DTS должен быть пароль.  
   
-`[ @dts_package_location = ] dts_package_location` Указывает расположение пакета. *dts_package_location* имеет **тип int**и значение по умолчанию **0**. Если значение **равно 0**, расположение пакета находится на распространителе. Если значение равно **1**, расположение пакета находится на подписчике. Расположение пакета может быть **распространителем** или **подписчиком**.  
+`[ @dts_package_location = ] dts_package_location` Указывает расположение пакета. *dts_package_location* имеет **тип int** и значение по умолчанию **0**. Если значение **равно 0**, расположение пакета находится на распространителе. Если значение равно **1**, расположение пакета находится на подписчике. Расположение пакета может быть **распространителем** или **подписчиком**.  
   
 `[ @skipobjectactivation = ] skipobjectactivation` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @distribution_job_name = ] 'distribution_job_name'` Имя задания распространения. Аргумент *distribution_job_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @distribution_job_name = ] 'distribution_job_name'` Имя задания распространения. Аргумент *distribution_job_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @publisher = ] 'publisher'` Указывает издателя, отличного от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'` Указывает издателя, отличного от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname** и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  При изменении свойств статьи издателя не следует использовать *Издатель* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -157,7 +157,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_changesubstatus** используется в репликации моментальных снимков и репликации транзакций.  
   
  **sp_changesubstatus** изменяет состояние подписчика в таблице **syssubscriptions** с измененным состоянием. При необходимости обновляет состояние статьи в таблице **sysarticles** , чтобы указать на активное или неактивное значение. При необходимости он устанавливает или отключает флаг репликации в таблице **sysobjects** для реплицированной таблицы.  
@@ -165,7 +165,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** , **db_owner** предопределенной роли базы данных или создатель подписки могут выполнять **sp_changesubstatus**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
  [sp_helpdistributor (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   

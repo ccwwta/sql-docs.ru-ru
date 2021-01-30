@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysdatatypemappings
 - sysdatatypemappings_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5dfafb70-3e3d-4465-b293-1acff1f855b6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ad4a6df1ae2dbdd418e133053330095a389bdf24
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 753a18b314ea51fa341fe8e6f8b0fdfd235bf95b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427536"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160327"
 ---
 # <a name="sysdatatypemappings-transact-sql"></a>sysdatatypemappings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "88427536"
 |**source_scale_min**|**int**|Минимальный масштаб типа данных в СУБД-источнике; причем значение NULL указывает, что масштаб не используется.|  
 |**source_scale_max**|**int**|Максимальный масштаб типа данных в СУБД-источнике; причем значение NULL указывает, что масштаб не используется.|  
 |**source_nullable**|**bit**|Указывается, что тип данных назначения поддерживает значения NULL.|  
-|**source_createparams**|**int**|Только для внутреннего применения.|  
+|**source_createparams**|**int**|Только для внутреннего использования.|  
 |**destination_dbms**|**sysname**|Указывается имя целевой СУБД. Это имя может принимать одно из следующих значений.<br /><br /> **MSSQLServer** = назначение является SQL Server базой данных.<br /><br /> **Oracle** = назначение является базой данных Oracle.<br /><br /> **DB2** = назначением является база данных IBM DB2.<br /><br /> **SYBASE** = целевой является база данных SYBASE.|  
 |**destination_version**|**sysname**|Версия продукта целевой СУБД.|  
 |**destination_type**|**sysname**|Тип данных в целевой СУБД.|  
@@ -51,7 +51,7 @@ ms.locfileid: "88427536"
 |**destination_precision**|**bigint**|Точность типа данных в целевой СУБД.|  
 |**destination_scale**|**int**|Масштаб типа данных в целевой СУБД.|  
 |**destination_nullable**|**bit**|Указывает, поддерживает ли тип данных в целевой СУБД значения NULL.|  
-|**destination_createparams**|**int**|Только для внутреннего применения.|  
+|**destination_createparams**|**int**|Только для внутреннего использования.|  
 |**потери данных**|**bit**|Указывает, возникают ли потери данных при сопоставлении типов данных СУБД источника и адресата.|  
 |**is_default**|**bit**|Указывает, используется ли сопоставление типов данных по умолчанию.|  
   

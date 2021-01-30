@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysprocesses_TSQL
 - sys.sysprocesses_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: d8272d6759508697512506bcab8df81d65b90b83
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 6b0a49e257760e44398da7426933f6a9050a62f2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095394"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160670"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "98095394"
 |request_id|**int**|Идентификатор запроса. Применяется для идентификаций запросов, выполняемых в текущем сеансе.|
 |page_resource |**Binary (8)** |**Область применения**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br /><br /> 8-байтовое шестнадцатеричное представление ресурса страницы, если `waitresource` столбец содержит страницу. |  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Если пользователь имеет разрешение VIEW SERVER STATE на сервере, он увидит все выполняющиеся сеансы на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В противном случае пользователь увидит только текущий сеанс.  
   
 ## <a name="see-also"></a>См. также:  

@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ODBC cursor library [ODBC], using cursor library
 - cursor library [ODBC], using cursor library
 ms.assetid: 9653f2f8-ccfc-4220-99ef-601dc0fa641c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: be42c95692537c0479afb7ed492756b8a54ab030
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1658d3c628506f1b5c53a5c9271a10f96fa2ef44
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88386200"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158192"
 ---
 # <a name="using-the-odbc-cursor-library"></a>Использование библиотеки курсоров ODBC
 > [!IMPORTANT]  
@@ -29,7 +29,7 @@ ms.locfileid: "88386200"
   
 1.  Вызывает **SQLSetConnectAttr** с *атрибутом* SQL_ATTR_ODBC_CURSORS, чтобы указать, как библиотека курсоров должна использоваться с определенным соединением. Библиотека курсоров может использоваться всегда (SQL_CUR_USE_ODBC), используется только в том случае, если драйвер не поддерживает прокручиваемые курсоры (SQL_CUR_USE_IF_NEEDED) или никогда не используется (SQL_CUR_USE_DRIVER).  
   
-2.  Вызывает **SQLConnect**, **SQLDriverConnect**или **SQLBrowseConnect** для подключения к источнику данных.  
+2.  Вызывает **SQLConnect**, **SQLDriverConnect** или **SQLBrowseConnect** для подключения к источнику данных.  
   
 3.  Вызывает **SQLSetStmtAttr** для указания типа курсора (SQL_ATTR_CURSOR_TYPE), параллелизма (SQL_ATTR_CONCURRENCY) и размера набора строк (SQL_ATTR_ROW_ARRAY_SIZE). Библиотека курсоров поддерживает однопроходные и статические курсоры. Однонаправленные курсоры должны быть доступны только для чтения, тогда как статические курсоры могут быть доступны только для чтения или могут использовать управление оптимистичным параллелизмом, сравнивая значения.  
   

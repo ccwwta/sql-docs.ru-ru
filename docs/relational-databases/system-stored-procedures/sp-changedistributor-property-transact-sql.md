@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changedistributor_property_TSQL
 - sp_changedistributor_property
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 62768c7cca029d3424e478cb1b16aa01df1a52c1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bc6809a0120091ef489bd41618e4b81006961353
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539138"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159010"
 ---
 # <a name="sp_changedistributor_property-transact-sql"></a>sp_changedistributor_property (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +39,7 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @property = ] 'property'` Свойство для заданного распространителя. Аргумент *Property* имеет тип **sysname**и может принимать одно из следующих значений.  
+`[ @property = ] 'property'` Свойство для заданного распространителя. Аргумент *Property* имеет тип **sysname** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -51,7 +51,7 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_changedistributor_property** используется во всех типах репликации.  
   
 ## <a name="example"></a>Пример  

@@ -1,13 +1,13 @@
 ---
 description: sys.sp_cdc_stop_job (Transact-SQL)
-title: sys. sp_cdc_stop_job (Transact-SQL) | Документация Майкрософт
+title: sys.sp_cdc_stop_job (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sp_cdc_stop_job_TSQL
 - sys.sp_cdc_stop_job
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 421fc21c-c7a4-407c-8b31-359273b68c63
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1b82d231a4633c2aa3ed7b45833009c8a2bc43a5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c2a738af88e947528f4c8d2cadf871db7cd8334a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89526494"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159744"
 ---
 # <a name="syssp_cdc_stop_job-transact-sql"></a>sys.sp_cdc_stop_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ sys.sp_cdc_stop_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ [ @job_type = ] 'job_type_' ]` Тип добавляемого задания. *job_type* имеет тип **nvarchar (20)** с **записью**по умолчанию. Допустимые входные данные: **запись** и **Очистка**.  
+`[ [ @job_type = ] 'job_type_' ]` Тип добавляемого задания. *job_type* имеет тип **nvarchar (20)** с **записью** по умолчанию. Допустимые входные данные: **запись** и **Очистка**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -66,8 +66,8 @@ EXEC sys.sp_cdc_stop_job @job_type = N'capture';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [dbo. cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [sys. sp_cdc_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md)  
+## <a name="see-also"></a>См. также:  
+ [dbo.cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
+ [sys.sp_cdc_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md)  
   
   

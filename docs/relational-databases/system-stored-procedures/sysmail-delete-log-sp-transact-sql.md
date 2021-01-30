@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_delete_log_sp_TSQL
 - sysmail_delete_log_sp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7cc01563da03abda4ea8eef8b639ba5704549f55
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1f3921d220f367d15849eab080369db986d8f53e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538443"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160020"
 ---
 # <a name="sysmail_delete_log_sp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,12 +44,12 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ## <a name="arguments"></a>Аргументы  
 `[ @logged_before = ] 'logged_before'` Удаляет записи вплоть до даты и времени, указанных аргументом *logged_before* . *logged_before* имеет тип **DateTime** со значением NULL по умолчанию. Значение NULL соответствует всем датам.  
   
-`[ @event_type = ] 'event_type'` Удаляет записи журнала типа, указанного в качестве *event_type*. *event_type* имеет тип **varchar (15)** и не имеет значения по умолчанию. Допустимые записи: **Success**, **warning**, **Error**и **информационный**. NULL соответствует всем типам событий.  
+`[ @event_type = ] 'event_type'` Удаляет записи журнала типа, указанного в качестве *event_type*. *event_type* имеет тип **varchar (15)** и не имеет значения по умолчанию. Допустимые записи: **Success**, **warning**, **Error** и **информационный**. NULL соответствует всем типам событий.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Для окончательного удаления записей из журнала Database Mail используйте хранимую процедуру **sysmail_delete_log_sp** . Необязательный аргумент позволяет удалять записи определенной давности. Из этого следует, что удаляются события, созданные ранее даты, заданной в аргументе. Необязательный аргумент позволяет удалять только события определенного типа, указанные в качестве аргумента **event_type** .  
   
  При удалении записей из журнала компонента Database Mail записи электронной почты не удаляются из таблиц Database Mail. Используйте [sysmail_delete_mailitems_sp](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md) , чтобы удалить электронную почту из Database Mail таблиц.  
@@ -85,7 +85,7 @@ EXECUTE msdb.dbo.sysmail_delete_log_sp
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
  [sysmail_delete_mailitems_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)   
  [Создание задания агента SQL Server по архивации сообщений и журналов событий компонента Database Mail](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  

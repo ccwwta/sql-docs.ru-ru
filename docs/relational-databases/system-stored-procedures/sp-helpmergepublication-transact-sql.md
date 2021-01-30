@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpmergepublication
 - sp_helpmergepublication_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1042543ba82dcbd4bc7376acf6943a838506b6fa
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8001e98b207ca9493ff71b1f874b12b0d5227306
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549610"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160609"
 ---
 # <a name="sp_helpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,22 +44,22 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>Аргументы  
  [ @publication **=** ] **"**_Публикация_**"**  
- Имя публикации. Аргумент *publication*имеет тип **sysname**и значение по умолчанию **%** , которое возвращает сведения обо всех публикациях слиянием в текущей базе данных.  
+ Имя публикации. Аргумент *publication* имеет тип **sysname** и значение по умолчанию **%** , которое возвращает сведения обо всех публикациях слиянием в текущей базе данных.  
   
- [ @found **=** ] **"***найден***"** Output  
- Флаг для указания возвращаемых строк. Аргумент *Found*имеет **тип int** и параметр OUTPUT и значение по умолчанию NULL. **1** указывает, что публикация найдена. значение **0** указывает, что публикация не найдена.  
+ [ @found **=** ] **"**_найден_*_"_* Output  
+ Флаг для указания возвращаемых строк. Аргумент *Found* имеет **тип int** и параметр OUTPUT и значение по умолчанию NULL. **1** указывает, что публикация найдена. значение **0** указывает, что публикация не найдена.  
   
- [ @publication_id **=** ] **"***publication_id***"** Output  
+ [ @publication_id **=** ] **"**_publication_id_*_"_* Output  
  Идентификационный номер публикации. *publication_id* имеет тип **uniqueidentifier** и параметр OUTPUT и значение по умолчанию NULL.  
   
- [ @reserved **=** ] **'***reserved***'**  
+ [ @reserved **=** ] **'**_reserved_*_'_*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*reserved* имеет тип **nvarchar (20)** и значение по умолчанию NULL.  
   
- [ @publisher **=** ] **'***Издатель***'**  
- Имя издателя. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+ [ @publisher **=** ] **'**_Издатель_*_'_*  
+ Имя издателя. Аргумент *Publisher* имеет тип **sysname** и значение по умолчанию NULL.  
   
- [ @publisher_db **=** ] **"***publisher_db***"**  
- Имя базы данных публикации. Аргумент *publisher_db* имеет тип **sysname**и значение по умолчанию NULL.  
+ [ @publisher_db **=** ] **"**_publisher_db_*_"_*  
+ Имя базы данных публикации. Аргумент *publisher_db* имеет тип **sysname** и значение по умолчанию NULL.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -70,7 +70,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |description|**nvarchar(255)**|Описание публикации.|  
 |status|**tinyint**|Указывает, когда доступны данные публикации.|  
 |retention|**int**|Количество времени, необходимое для сохранения метаданных об изменениях статей в публикации. Единицами измерения этого периода времени могут быть дни, недели, месяцы или года. Сведения о единицах измерений см. в столбце retention_period_unit.|  
-|sync_mode|**tinyint**|Режим синхронизации этой публикации:<br /><br /> **0** = собственная программа для выполнения операций копирования (программа**bcp** )<br /><br /> **1** = символьное групповое копирование|  
+|sync_mode|**tinyint**|Режим синхронизации этой публикации:<br /><br /> **0** = собственная программа для выполнения операций копирования (программа **bcp** )<br /><br /> **1** = символьное групповое копирование|  
 |allow_push|**int**|Определяет, могут ли для данной публикации быть созданы принудительные подписки. **0** означает, что принудительная подписка не разрешена.|  
 |allow_pull|**int**|Определяет, могут ли для данной публикации быть созданы подписки по запросу. **0** означает, что подписка по запросу не разрешена.|  
 |allow_anonymous|**int**|Определяет, могут ли для данной публикации быть созданы анонимные подписки. значение **0** означает, что анонимная подписка не разрешена.|  
@@ -118,7 +118,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Процедура sp_helpmergepublication используется в репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  

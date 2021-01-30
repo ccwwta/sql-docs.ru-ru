@@ -7,18 +7,18 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - enumerated constants [ADO]
 ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c3c19b98cbb000abc93755c3de43ac5420db164d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 5882488e36fb420ad808974d18b34acb8ccbc00c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976485"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161649"
 ---
 # <a name="ado-enumerated-constants"></a>Перечисляемые константы ADO
 Для облегчения отладки в перечислениях ADO перечисляются значения для каждой константы. Однако это значение является исключительно рекомендацией и может изменяться от одного выпуска ADO к другому. Код должен зависеть только от имени, а не от фактического значения каждой перечислимой константы.  
@@ -33,14 +33,14 @@ ms.locfileid: "88976485"
 |[BookmarkEnum](./bookmarkenum.md)|Задает закладку, которая указывает, где должна начинаться операция.|  
 |[CommandTypeEnum](./commandtypeenum.md)|Указывает, как должен интерпретироваться аргумент команды.|  
 |[CompareEnum](./compareenum.md)|Задает относительное расположение двух записей, представленных их закладками.|  
-|[ConnectModeEnum](./connectmodeenum.md)|Указывает доступные разрешения для изменения данных в **соединении**, открытия **записи**или указания значений для свойства **mode** объектов **Record** и **Stream** .|  
+|[ConnectModeEnum](./connectmodeenum.md)|Указывает доступные разрешения для изменения данных в **соединении**, открытия **записи** или указания значений для свойства **mode** объектов **Record** и **Stream** .|  
 |[ConnectOptionEnum](./connectoptionenum.md)|Указывает, должен ли метод **открытия** объекта **соединения** возвращаться после (синхронно) или перед (асинхронно) установленным соединением.|  
 |[ConnectPromptEnum](./connectpromptenum.md)|Указывает, должно ли отображаться диалоговое окно для запроса отсутствующих параметров при открытии соединения с источником данных ODBC.|  
 |[CopyRecordOptionsEnum](./copyrecordoptionsenum.md)|Задает поведение метода **копирекорд** .|  
 |[CursorLocationEnum](./cursorlocationenum.md)|Задает расположение обработчика курсора.|  
 |[CursorOptionEnum](./cursoroptionenum.md)|Указывает, для каких функций должен проверяться метод **поддержки** .|  
 |[CursorTypeEnum](./cursortypeenum.md)|Указывает тип курсора, используемого в объекте **набора записей** .|  
-|[DataTypeEnum](./datatypeenum.md)|Указывает тип данных **поля**, **параметра**или **Свойства**.|  
+|[DataTypeEnum](./datatypeenum.md)|Указывает тип данных **поля**, **параметра** или **Свойства**.|  
 |[EditModeEnum](./editmodeenum.md)|Указывает состояние редактирования записи a.|  
 |[ErrorValueEnum](./errorvalueenum.md)|Указывает тип ошибки времени выполнения ADO.|  
 |[EventReasonEnum](./eventreasonenum.md)|Указывает причину возникновения события.|  
@@ -78,7 +78,7 @@ ms.locfileid: "88976485"
 |[StringFormatEnum](./stringformatenum.md)|Задает формат при извлечении **набора записей** в виде строки. Задает атрибуты транзакции для объекта **соединения** .|  
 |[XactAttributeEnum](./xactattributeenum.md)|Задает атрибуты транзакции для объекта **соединения** .|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по API ADO](./ado-api-reference.md)   
  [Коллекции ADO](./ado-collections.md)   
  [Динамические свойства ADO](./ado-dynamic-properties.md)   

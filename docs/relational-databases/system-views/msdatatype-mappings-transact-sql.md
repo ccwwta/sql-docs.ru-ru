@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - MSdatatype_mappings
 - MSdatatype_mappings_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 13cdabb3-6e07-4e8d-ae80-4235022ccc7f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f67f313d177b5ef22e6cb97b9ab25d5281c860e2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bbafdd41f1c1c3c10425a3d5f63af103a23dc9a6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463857"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160405"
 ---
 # <a name="msdatatype_mappings-transact-sql"></a>MSdatatype_mappings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88463857"
 |**sql_type**|**nvarchar(128)**|Тип данных SQL Server.|  
 |**dest_type**|**nvarchar(128)**|Название типа данных, не являющихся данными SQL Server.|  
 |**dest_prec**|**bigint**|Точность типа данных, не являющихся данными SQL Server.|  
-|**dest_create_params**|**int**|Только для внутреннего применения.|  
+|**dest_create_params**|**int**|Только для внутреннего использования.|  
 |**dest_nullable**|**bit**|Заполняется, если тип данных, не являющихся данными SQL Server, поддерживает значение NULL.|  
   
 ## <a name="see-also"></a>См. также  

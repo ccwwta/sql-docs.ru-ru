@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_resetsnapshotdeliveryprogress
 - sp_resetsnapshotdeliveryprogress_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b4bcee8dfc47a489fc605bcd3bd787a1ed393329
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4b0d858fdaf03a50a4d87447dc57c09f4a79792c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543096"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158416"
 ---
 # <a name="sp_resetsnapshotdeliveryprogress-transact-sql"></a>sp_resetsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,20 +39,20 @@ sp_resetsnapshotdeliveryprogress [ [ @verbose_level = ] verbose_level ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @verbose_level = ] verbose_level` Указывает объем возвращаемых сведений. *verbose_level*имеет **тип int**и значение по умолчанию **1**. Значение **1** означает, что если необходимые блокировки не удается получить в таблице **MSsnapshotdeliveryprogress** , то возвращается ошибка, а **0** означает, что ошибка не возвращается.  
+`[ @verbose_level = ] verbose_level` Указывает объем возвращаемых сведений. *verbose_level* имеет **тип int** и значение по умолчанию **1**. Значение **1** означает, что если необходимые блокировки не удается получить в таблице **MSsnapshotdeliveryprogress** , то возвращается ошибка, а **0** означает, что ошибка не возвращается.  
   
 `[ @drop_table = ] 'drop_table'` Указывает, следует ли удалить или усечь таблицу, содержащую сведения о ходе выполнения моментального снимка. *DROP_TABLE* имеет тип **nvarchar (5)** и значение по умолчанию **false**. FALSE означает, что таблица усекается, а TRUE означает, что таблица удаляется.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_resetsnapshotdeliveryprogress** удаляются все строки в таблице **MSsnapshotdeliveryprogress** . Благодаря этому удаляются все метаданные, оставленные в базе данных подписки предыдущим процессом в ходе доставки моментального снимка.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_resetsnapshotdeliveryprogress**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранимые процедуры репликации (Transact-SQL)](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

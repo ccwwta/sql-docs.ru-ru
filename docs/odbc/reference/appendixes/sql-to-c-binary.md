@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - converting data from SQL to c types [ODBC], binary
 - binary data type [ODBC]
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8c519072-ae4c-4d32-9d4e-775e3d3d6389
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 229611308c2dba83a8d793810eb5a5443cbd7062
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 30fbabde654f69af7a0cb68e2606c0f2d93697c1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456557"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160822"
 ---
 # <a name="sql-to-c-binary"></a>Преобразование данных из SQL в C: двоичные данные
 Для двоичных типов данных ODBC SQL используются следующие идентификаторы:  
@@ -36,9 +36,9 @@ ms.locfileid: "88456557"
   
 |Идентификатор типа C|Тест|**таржетвалуептр*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|(Длина данных в байтах) \* 2 < *BufferLength*<br /><br /> (Длина данных в байтах) \* 2 >= *BufferLength*|Данные<br /><br /> Усеченные данные|Длина данных в байтах<br /><br /> Длина данных в байтах|Недоступно<br /><br /> 01004|  
-|SQL_C_WCHAR|(Символьная длина данных) \* 2 < *BufferLength*<br /><br /> (Символьная длина данных) \* 2 >= *BufferLength*|Данные<br /><br /> Усеченные данные|Длина данных в символах<br /><br /> Длина данных в символах|Недоступно<br /><br /> 01004|  
-|SQL_C_BINARY|Длина данных в байтах <= *BufferLength*<br /><br /> Длина байта данных > *BufferLength*|Данные<br /><br /> Усеченные данные|Длина данных в байтах<br /><br /> Длина данных в байтах|Недоступно<br /><br /> 01004|  
+|SQL_C_CHAR|(Длина данных в байтах) \* 2 < *BufferLength*<br /><br /> (Длина данных в байтах) \* 2 >= *BufferLength*|Данные<br /><br /> Усеченные данные|Длина данных в байтах<br /><br /> Длина данных в байтах|н/д<br /><br /> 01004|  
+|SQL_C_WCHAR|(Символьная длина данных) \* 2 < *BufferLength*<br /><br /> (Символьная длина данных) \* 2 >= *BufferLength*|Данные<br /><br /> Усеченные данные|Длина данных в символах<br /><br /> Длина данных в символах|н/д<br /><br /> 01004|  
+|SQL_C_BINARY|Длина данных в байтах <= *BufferLength*<br /><br /> Длина байта данных > *BufferLength*|Данные<br /><br /> Усеченные данные|Длина данных в байтах<br /><br /> Длина данных в байтах|н/д<br /><br /> 01004|  
   
  Когда двоичные данные SQL преобразуются в символьные данные C, каждый байт (8 бит) исходных данных представляется в виде двух символов ASCII. Эти символы — это представление чисел в кодировке ASCII в шестнадцатеричной форме. Например, двоичное значение 00000001 преобразуется в "01", а двоичный 11111111 преобразуется в "FF".  
   

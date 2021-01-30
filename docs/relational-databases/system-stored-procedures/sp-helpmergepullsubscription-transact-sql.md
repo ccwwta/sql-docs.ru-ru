@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpmergepullsubscription
 - sp_helpmergepullsubscription_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b74d9846d672a59adbde9eada760af1d60fc725e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 91266e8d825fd669979e925753804230fd62027c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543282"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160601"
 ---
 # <a name="sp_helpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,13 +41,13 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="argument"></a>Аргумент  
-`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию **%** . Если параметр *publication* имеет значение **%** , то возвращаются сведения обо всех публикациях слиянием и подписках в текущей базе данных.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname** и значение по умолчанию **%** . Если параметр *publication* имеет значение **%** , то возвращаются сведения обо всех публикациях слиянием и подписках в текущей базе данных.  
   
-`[ @publisher = ] 'publisher'` Имя издателя. Аргумент *Publisher*имеет тип **sysname**и значение по умолчанию **%** .  
+`[ @publisher = ] 'publisher'` Имя издателя. Аргумент *Publisher* имеет тип **sysname** и значение по умолчанию **%** .  
   
-`[ @publisher_db = ] 'publisher_db'` Имя базы данных издателя. Аргумент *publisher_db*имеет тип **sysname**и значение по умолчанию **%** .  
+`[ @publisher_db = ] 'publisher_db'` Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname** и значение по умолчанию **%** .  
   
-`[ @subscription_type = ] 'subscription_type'` Указывает, следует ли отображать подписки по запросу. *subscription_type*имеет тип **nvarchar (10)** и значение по умолчанию **"Pull"**. Допустимые значения: **"Push"**, **"Pull**" или **"both"**.  
+`[ @subscription_type = ] 'subscription_type'` Указывает, следует ли отображать подписки по запросу. *subscription_type* имеет тип **nvarchar (10)** и значение по умолчанию **"Pull"**. Допустимые значения: **"Push"**, **"Pull**" или **"both"**.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -102,13 +102,13 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_helpmergepullsubscription** используется в репликации слиянием. В результирующем наборе дата, возвращаемая в **last_updated** , форматируется как *ГГГГММДД чч: мм: СС. FFF*.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** и **db_owner** предопределенной роли базы данных могут выполнять **sp_helpmergepullsubscription**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_changemergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
  [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   

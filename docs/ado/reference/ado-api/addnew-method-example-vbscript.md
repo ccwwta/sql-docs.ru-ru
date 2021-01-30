@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: dcdcaf0a-b9b0-4d81-8728-43c38c4c853b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d10fadde8b509b504ca857530d43d81b749ffaf4
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 28facc99df37a43629596d0668d40fe84b68ad82
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976705"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161704"
 ---
 # <a name="addnew-method-example-vbscript"></a>Пример метода AddNew (VBScript)
 В этом примере используется метод [AddNew](./addnew-method-ado.md) для создания новой записи с указанным именем.  
   
  Используйте следующий пример на странице Active Server (ASP). Используйте **Find** для поиска файла адовбс. Inc и поместите его в каталог, который планируется использовать. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **аддневвбс. ASP**. Результат можно просмотреть в любом клиентском браузере.  
   
- Чтобы выполнить пример, добавьте новую запись в HTML-форму. Щелкните **Добавить новый**. Чтобы удалить ненужные записи, см. [пример метода Delete](./delete-method-example-vbscript.md) .  
+ Чтобы выполнить пример, добавьте новую запись в HTML-форму. Щелкните **Add New** (Добавить новый). Чтобы удалить ненужные записи, см. [пример метода Delete](./delete-method-example-vbscript.md) .  
   
 ```  
 <!-- BeginAddNewVBS -->  
@@ -213,6 +213,6 @@ End Sub
 <!-- EndAddNewVBS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод AddNew (ADO)](./addnew-method-ado.md)   
  [Объект Recordset (ADO)](./recordset-object-ado.md)

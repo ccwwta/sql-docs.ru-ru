@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.configurations_TSQL
 - configurations
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 10956e1c3738c64829ec18d92a05b9f427b1833d
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: bca35c6287a88c1439ca64c6f7cfd431de0269ea
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100692"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159108"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "98100692"
 |**is_dynamic**|**bit**|1 = переменная, вступающая в силу после выполнения инструкции RECONFIGURE.|  
 |**is_advanced**|**bit**|1 = переменная отображается, только если задан параметр **Показать адванцедоптион** .|  
   
- ## <a name="remarks"></a>Комментарии
+ ## <a name="remarks"></a>Замечания
   Список всех параметров конфигурации сервера см. в разделе [Параметры конфигурации сервера &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
 > [!NOTE]  
@@ -63,7 +63,7 @@ select * from sys.configurations where value != value_in_use
 
 Если значение соответствует измененному параметру конфигурации, но **value_in_use** не совпадает, то либо команда RECONFIGURE не была выполнена, либо произошел сбой, либо необходимо перезапустить ядро сервера.
 
-Существуют параметры конфигурации, в которых значения и value_in_use могут отличаться, и это ожидаемое поведение. Пример:
+Существуют параметры конфигурации, в которых значения и value_in_use могут отличаться, и это ожидаемое поведение. Например:
 
 "max server memory (МБ)" — значение по умолчанию, равное 0, отображается как **value_in_use** = 2147483647<br>
 

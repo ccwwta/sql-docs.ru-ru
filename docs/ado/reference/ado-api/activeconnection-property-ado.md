@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Command15::ActiveConnection
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bc1a54d70639e4e3ff78748b4e04483fcfefafdb
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: efcb376c9ad27dff5a0c85d73f70ae4000385e3d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976965"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159241"
 ---
 # <a name="activeconnection-property-ado"></a>Свойство ActiveConnection (ADO)
 Указывает, к какому объекту [соединения](./connection-object-ado.md) в данный момент принадлежит указанная [команда](./command-object-ado.md), [набор записей](./recordset-object-ado.md)или объект [записи](./record-object-ado.md) .  
@@ -31,7 +31,7 @@ ms.locfileid: "88976965"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает **строковое** значение, содержащее определение соединения, если соединение закрыто, или **вариант** , содержащий текущий объект **соединения** , если соединение открыто. По умолчанию используется пустая ссылка на объект. См. свойство [ConnectionString](./connectionstring-property-ado.md) .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Используйте свойство **ActiveConnection** , чтобы определить объект **соединения** , для которого будет выполняться указанный объект **команды** , или будет открыт указанный **набор записей** .  
   
 ## <a name="command"></a>Команда  
@@ -41,7 +41,7 @@ ms.locfileid: "88976965"
   
  Если объект **соединения** назначен свойству **ActiveConnection** , то объект должен быть открыт. При назначении закрытого объекта соединения возникает ошибка.  
   
-### <a name="note"></a>Примечание.  
+### <a name="note"></a>Примечание  
  **Microsoft Visual Basic** Если задать для свойства **ActiveConnection** значение Nothing, объект **команды** *не* будет связан с текущим **соединением** и будет вызван тем, что поставщик выпустит все связанные ресурсы в источнике данных. Затем можно связать объект **команды** с тем же или с другим объектом **Connection** . Некоторые поставщики позволяют изменить значение свойства с одного **соединения** на другое без необходимости присвоить свойству значение *Nothing*.  
   
  Если коллекция [Parameters](./parameters-collection-ado.md) объекта **Command** содержит параметры, предоставленные поставщиком, коллекция удаляется, если для свойства **ActiveConnection** задано значение *Nothing* или другой объект **соединения** . Если вы вручную создаете объекты [параметров](./parameter-object.md) и используете их для заполнения коллекции **Parameters** объекта **Command** , установка свойства **ActiveConnection** в значение *Nothing* или на другой объект **соединения** оставляет коллекцию **параметров** неизменной.  
@@ -60,7 +60,7 @@ ms.locfileid: "88976965"
 > [!NOTE]
 >  **Использование удаленной службы данных** При использовании объекта **набора записей** на стороне клиента это свойство может быть установлено только в строку подключения или (в Microsoft Visual Basic или Visual Basic, Scripting Edition) в значение *Nothing*.  
   
-## <a name="record"></a>Записей  
+## <a name="record"></a>Record  
  Это свойство доступно для чтения и записи при закрытии объекта **Record** и может содержать строку соединения или ссылку на открытый объект **соединения** . Это свойство доступно только для чтения, если объект **Record** открыт, и содержит ссылку на открытый объект **соединения** .  
   
  Объект **соединения** создается неявно при открытии объекта **Record** из URL-адреса. Откройте **запись** с существующим открытым объектом **соединения** , назначив этому свойству объект **соединения** или используя объект **соединения** в качестве параметра в вызове метода [Open](./open-method-ado-record.md) . Если **запись** была открыта из существующей **записи** или [набора записей](./recordset-object-ado.md), то она автоматически связывается с объектом **соединения** **записи** или объекта **набора записей** .  
@@ -82,7 +82,7 @@ ms.locfileid: "88976965"
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойств ActiveConnection, CommandText, CommandTimeout, CommandType, Size и Direction (Visual Basic)](./activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
  [Пример свойств ActiveConnection, CommandText, CommandTimeout, CommandType, Size и Direction (Visual c++)](./activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
  [Пример свойств ActiveConnection, CommandText, CommandTimeout, CommandType, Size и Direction (JScript)](./activeconnection-commandtext-timeout-type-size-example-jscript.md)   

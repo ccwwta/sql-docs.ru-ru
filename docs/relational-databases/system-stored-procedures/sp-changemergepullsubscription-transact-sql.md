@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changemergepullsubscription
 - sp_changemergepullsubscription_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 39cb33678b853feadbbb20a88669f0b48a3d444a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f8590cd397f41ca4c4db8776f614f47b2b05c921
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546221"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159833"
 ---
 # <a name="sp_changemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,15 +42,15 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию%.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname** и значение по умолчанию%.  
   
-`[ @publisher = ] 'publisher'` Имя издателя. Аргумент *Publisher*имеет тип **sysname**и значение по умолчанию%.  
+`[ @publisher = ] 'publisher'` Имя издателя. Аргумент *Publisher* имеет тип **sysname** и значение по умолчанию%.  
   
-`[ @publisher_db = ] 'publisher_db'` Имя базы данных издателя. Аргумент *publisher_db*имеет тип **sysname**и значение по умолчанию%.  
+`[ @publisher_db = ] 'publisher_db'` Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname** и значение по умолчанию%.  
   
-`[ @property = ] 'property'` Имя изменяемого свойства. Аргумент *Property* имеет тип **sysname**и может принимать одно из значений в таблице.  
+`[ @property = ] 'property'` Имя изменяемого свойства. Аргумент *Property* имеет тип **sysname** и может принимать одно из значений в таблице.  
   
-`[ @value = ] 'value'` Новое значение для указанного свойства. *значение*равно **nvarchar (255)** и может быть одним из значений в таблице.  
+`[ @value = ] 'value'` Новое значение для указанного свойства. *значение* равно **nvarchar (255)** и может быть одним из значений в таблице.  
   
 |Свойство|Значение|Описание|  
 |--------------|-----------|-----------------|  
@@ -95,7 +95,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_changemergepullsubscription** используется в репликации слиянием.  
   
  Подразумевается, что текущий сервер и текущая база данных являются соответственно подписчиком и базой данных подписчика.  

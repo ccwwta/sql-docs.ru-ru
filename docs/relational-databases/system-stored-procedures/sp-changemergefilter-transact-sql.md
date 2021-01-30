@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changemergefilter_TSQL
 - sp_changemergefilter
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3e5a5208eeb1a47971e1960bd9c9c581d5d6517e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8081fc9a95452d68540acf3b2a5a412910f75219
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539133"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159844"
 ---
 # <a name="sp_changemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,15 +44,15 @@ sp_changemergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @article = ] 'article'` Имя статьи. Аргумент *article* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @article = ] 'article'` Имя статьи. Аргумент *article* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @filtername = ] 'filtername'` Текущее имя фильтра. *filtername* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @filtername = ] 'filtername'` Текущее имя фильтра. *filtername* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @property = ] 'property'` Имя изменяемого свойства. Аргумент *Property* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @property = ] 'property'` Имя изменяемого свойства. Аргумент *Property* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @value = ] 'value'` Новое значение для указанного свойства. *value*имеет тип **nvarchar (1000)** и не имеет значения по умолчанию.  
+`[ @value = ] 'value'` Новое значение для указанного свойства. *value* имеет тип **nvarchar (1000)** и не имеет значения по умолчанию.  
   
  Эта таблица описывает свойства статей и значения этих свойств.  
   
@@ -67,7 +67,7 @@ sp_changemergefilter [ @publication= ] 'publication'
 |**join_unique_key**|**true**|Соединение находится в уникальном ключе.|  
 ||**false**|Соединение не находится в уникальном ключе.|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Подтверждает, что действие, выполняемое этой хранимой процедурой, может сделать существующий моментальный снимок недействительным. *force_invalidate_snapshot* является **битом**и имеет значение по умолчанию **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Подтверждает, что действие, выполняемое этой хранимой процедурой, может сделать существующий моментальный снимок недействительным. *force_invalidate_snapshot* является **битом** и имеет значение по умолчанию **0**.  
   
  **0** указывает, что изменения в статье слияния не приводят к недействительности моментального снимка. Если хранимая процедура определяет, что изменение требует создания нового моментального снимка, возникает ошибка и изменения не выполняются.  
   
@@ -82,10 +82,10 @@ sp_changemergefilter [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_changemergefilter** используется в репликации слиянием.  
   
- Изменения фильтра для статьи слияния требует создания моментального снимка; если таковой уже существует, необходимо его повторное создание. Это выполняется путем установки ** \@ force_invalidate_snapshot** в значение **1**. Кроме того, если на статью имеются подписки, то необходима их повторная инициализация. Это можно сделать, задав для ** \@ force_reinit_subscription** значение **1**.  
+ Изменения фильтра для статьи слияния требует создания моментального снимка; если таковой уже существует, необходимо его повторное создание. Это выполняется путем установки **\@ force_invalidate_snapshot** в значение **1**. Кроме того, если на статью имеются подписки, то необходима их повторная инициализация. Это можно сделать, задав для **\@ force_reinit_subscription** значение **1**.  
   
  Для использования логических записей публикация и статьи должны удовлетворять определенным требованиям. Дополнительные сведения см. в статье [Группирование изменений в связанных строках с помощью логических записей](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   

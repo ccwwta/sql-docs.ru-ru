@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changedistpublisher_TSQL
 - sp_changedistpublisher
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ca2b3369a75d2e2b80624d99d2fe11459b8ff749
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d48757f7404ba4f915e7b92609c9077ab702adb4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548273"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159040"
 ---
 # <a name="sp_changedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -41,7 +41,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'` Имя издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'` Имя издателя. параметр *Publisher* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 `[ @property = ] 'property'` Свойство, которое необходимо изменить для данного издателя. *свойство* имеет тип **sysname** и может принимать одно из следующих значений.  
   
@@ -59,7 +59,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 |**active**|**true**|Активирует издатель.|  
 ||**false**|Отключает издатель.|  
 |**distribution_db**||Имя базы данных распространителя.|  
-|**пользователей**||Имя входа.|  
+|**login**||Имя входа.|  
 |**password**||Надежный пароль для указанного имени входа.|  
 |**security_mode**|**1**|При подключении к подписчику используется проверка подлинности Windows. *Его нельзя изменить для не относящегося к* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *издатель.*|  
 ||**0**|При подключении к издателю используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Его нельзя изменить для не относящегося к* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *издатель.*|  
@@ -70,7 +70,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_changedistpublisher** используется во всех типах репликации.  
   
 ## <a name="permissions"></a>Разрешения  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysindexes
 - sysindexes_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: cf8982115b1a4399c327aefc66a5e99a1d46c575
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: bda40e2ddc1858857bc6ae3f1616d05987c708c0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094199"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158541"
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "98094199"
 |**maxlen**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**rows**|**int**|Количество строк на уровне данных, основанное на столбцах с **indid** = 0 и **indid** = 1, и значение повторяется для **indid** >1.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Столбцы, определенные как зарезервированные, не должны использоваться.  
   
  Столбцы **дпажес**, **reserved** и **used** не будут возвращать точные результаты, если таблица или индекс содержат данные в единице распределения ROW_OVERFLOW. Кроме того, счетчики страниц для каждого индекса отслеживаются отдельно и не суммируются для базовой таблицы. Для просмотра количества страниц используйте представления каталога [sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) или [sys. partitions](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) или динамическое административное представление [sys.dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) .  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changedistributiondb_TSQL
 - sp_changedistributiondb
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 35a090a0dc82f09ccceb1a4d56c09f8ab9d8191f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 958b76e23e52a6f36d54acf9d596cec92aadefba
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536744"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159017"
 ---
 # <a name="sp_changedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,9 +40,9 @@ sp_changedistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @database = ] 'database'` Имя базы данных распространителя. Аргумент *Database* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @database = ] 'database'` Имя базы данных распространителя. Аргумент *Database* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @property = ] 'property'` Свойство, которое необходимо изменить для данной базы данных. Аргумент *Property* имеет тип **sysname**и может принимать одно из следующих значений.  
+`[ @property = ] 'property'` Свойство, которое необходимо изменить для данной базы данных. Аргумент *Property* имеет тип **sysname** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -56,7 +56,7 @@ sp_changedistributiondb [ @database= ] 'database'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_changedistributiondb** используется во всех типах репликации.  
   
 ## <a name="example"></a>Пример  

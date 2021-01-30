@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysfilegroups_TSQL
 - sys.sysfilegroups
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: e567fa07-31cd-43cc-b8c7-ba6108baca80
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 609563f4998215367649a33cfc5136b8edd0e26b
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 9d0a11ac6a62ee7f2936e3c31f8e99389b2bd10c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099120"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160719"
 ---
 # <a name="syssysfilegroups-transact-sql"></a>Представление совместимости sys.sysfiles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "98099120"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**Идентификатор**|**smallint**|Уникальный для каждой базы данных идентификатор группы.|  
-|**allocpolicy**|**smallint**|Зарезервированное|  
+|**allocpolicy**|**smallint**|Зарезервировано|  
 |**status**|**int**|0x8 = только для чтения<br /><br /> 0x10 = по умолчанию|  
 |**Группа**|**sysname**|Имя файловой группы.|  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syspolicy_update_policy_category_TSQL
 - sp_syspolicy_update_policy_category
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6b6413c2-7a3b-4eff-91d9-5db2011869d6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 911dfde6ac3cb10ec67e788f7d8937e44ca6727e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8825e94add7ceb74f6adcc0d52fda768d5e777bc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492982"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161279"
 ---
 # <a name="sp_syspolicy_update_policy_category-transact-sql"></a>sp_syspolicy_update_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +41,9 @@ sp_syspolicy_update_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @name = ] 'name'` Имя категории политики. Аргумент *Name* имеет тип **sysname**и должен быть указан, если *policy_category_id* имеет значение null.  
+`[ @name = ] 'name'` Имя категории политики. Аргумент *Name* имеет тип **sysname** и должен быть указан, если *policy_category_id* имеет значение null.  
   
-`[ @policy_category_id = ] policy_category_id` Идентификатор для категории политики. *policy_category_id* имеет **тип int**и должен быть указан, если *Name* имеет значение null.  
+`[ @policy_category_id = ] policy_category_id` Идентификатор для категории политики. *policy_category_id* имеет **тип int** и должен быть указан, если *Name* имеет значение null.  
   
 `[ @mandate_database_subscriptions = ] mandate_database_subscriptions` Определяет, требует ли подписка базы данных для категории политики. *mandate_database_subscriptions* является **битовым** значением и ЗНАЧЕНИЕМ по умолчанию NULL. Можно использовать одно из следующих значений:  
   
@@ -54,7 +54,7 @@ sp_syspolicy_update_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Процедура sp_syspolicy_update_policy_category должна выполняться в контексте системной базы данных msdb.  
   
  Необходимо указать значение либо для *имени* , либо для *policy_category_id*. Они не могут одновременно иметь значения NULL. Чтобы получить эти значения, запросите системное представление msdb.dbo.syspolicy_policy_categories.  

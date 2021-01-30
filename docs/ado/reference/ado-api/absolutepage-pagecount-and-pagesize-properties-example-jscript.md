@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - JScript
 helpviewer_keywords:
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2db6dd3f-5a9c-438c-ae62-d09242906c98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c6f2d273b696f19286646525768bfa06a8fe6d55
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 3fee0e541cbf63bc204a7a8aae2ac17dd0e65128
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977304"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159965"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-jscript"></a>Пример свойств примеры absolutepage, PageCount и PageSize (JScript)
 В этом примере демонстрируются свойства примеры absolutepage, PageCount и PageSize. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **абсолутепажежс. ASP**.  
@@ -110,7 +110,7 @@ BODY {
                     if (iRecord == 1)  
                         strMessage += "<td>Page " + i + " of " + rsEmployee.PageCount + "</td>"  
                     else  
-                        strMessage += "<td> </td>";  
+                        strMessage += "<td> </td>";  
   
                     // First and last name are in first column.  
                     strMessage += "<TD>" + rsEmployee.Fields("FirstName") + " ";  
@@ -158,7 +158,7 @@ BODY {
 <!-- EndAbsolutePageJS -->  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство примеры absolutepage (ADO)](./absolutepage-property-ado.md)   
  [Свойство PageCount (ADO)](./pagecount-property-ado.md)   
  [Свойство PageSize (ADO)](./pagesize-property-ado.md)   
