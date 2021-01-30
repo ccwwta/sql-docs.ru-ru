@@ -1,13 +1,13 @@
 ---
 description: 'Преобразование из C в SQL: интервалы времени дня'
-title: 'C в SQL: день — интервалы времени | Документация Майкрософт'
+title: 'C на SQL: Day-Time интервалы | Документация Майкрософт'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - day-time intervals [ODBC]
 - data conversions from C to SQL types [ODBC], day-time intervals
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f9ee1ddb-dec7-4f78-b6e2-5ba34e7d6f59
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: aba5bb40a34f100cf33d5c07fb6e796b227904dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e207a7533a0f09360925f6123e8797bdabecc21b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499997"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207829"
 ---
 # <a name="c-to-sql-day-time-intervals"></a>Преобразование из C в SQL: интервалы времени дня
 Идентификаторы для типов данных ODBC C в течение дня времени:  
@@ -50,10 +50,10 @@ ms.locfileid: "88499997"
   
 |Идентификатор типа SQL|Тест|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR [a]<br /><br /> SQL_VARCHAR [a]<br /><br /> SQL_LONGVARCHAR [a]|Длина байта столбца >= Длина байтового символа<br /><br /> Длина байта столбца < длина байтовой кодировки [a]<br /><br /> Значение данных не является допустимым литералом интервала|Недоступно<br /><br /> 22001<br /><br /> 22015|  
-|SQL_WCHAR [a]<br /><br /> SQL_WVARCHAR [a]<br /><br /> SQL_WLONGVARCHAR [a]|Длина символа столбца >= символьная длина данных<br /><br /> Длина символов в столбцах < символьной длины данных [a]<br /><br /> Значение данных не является допустимым литералом интервала|Недоступно<br /><br /> 22001<br /><br /> 22015|  
-|SQL_TINYINT [b]<br /><br /> SQL_SMALLINT [b] SQL_INTEGER [b]<br /><br /> SQL_BIGINT [b] SQL_NUMERIC [b]<br /><br /> SQL_DECIMAL [b]|Преобразование интервала с одним полем не привело к усечению целых цифр<br /><br /> Преобразование привело к усечению целых цифр|Недоступно<br /><br /> 22003|  
-|SQL_INTERVAL_DAY<br /><br /> SQL_INTERVAL_HOUR<br /><br /> SQL_INTERVAL_MINUTE<br /><br /> SQL_INTERVAL_SECOND<br /><br /> SQL_INTERVAL_DAY_TO_HOUR<br /><br /> SQL_INTERVAL_DAY_TO_MINUTE<br /><br /> SQL_INTERVAL_DAY_TO_SECOND<br /><br /> SQL_INTERVAL_HOUR_TO_MINUTE<br /><br /> SQL_INTERVAL_HOUR_TO_SECOND<br /><br /> SQL_INTERVAL_MINUTE_TO_SECOND|Значение данных было преобразовано без усечения каких бы то ни было полей<br /><br /> Одно или несколько полей значения данных были усечены во время преобразования|Недоступно<br /><br /> 22015|  
+|SQL_CHAR [a]<br /><br /> SQL_VARCHAR [a]<br /><br /> SQL_LONGVARCHAR [a]|Длина байта столбца >= Длина байтового символа<br /><br /> Длина байта столбца < длина байтовой кодировки [a]<br /><br /> Значение данных не является допустимым литералом интервала|н/д<br /><br /> 22001<br /><br /> 22015|  
+|SQL_WCHAR [a]<br /><br /> SQL_WVARCHAR [a]<br /><br /> SQL_WLONGVARCHAR [a]|Длина символа столбца >= символьная длина данных<br /><br /> Длина символов в столбцах < символьной длины данных [a]<br /><br /> Значение данных не является допустимым литералом интервала|н/д<br /><br /> 22001<br /><br /> 22015|  
+|SQL_TINYINT [b]<br /><br /> SQL_SMALLINT [b] SQL_INTEGER [b]<br /><br /> SQL_BIGINT [b] SQL_NUMERIC [b]<br /><br /> SQL_DECIMAL [b]|Преобразование интервала с одним полем не привело к усечению целых цифр<br /><br /> Преобразование привело к усечению целых цифр|н/д<br /><br /> 22003|  
+|SQL_INTERVAL_DAY<br /><br /> SQL_INTERVAL_HOUR<br /><br /> SQL_INTERVAL_MINUTE<br /><br /> SQL_INTERVAL_SECOND<br /><br /> SQL_INTERVAL_DAY_TO_HOUR<br /><br /> SQL_INTERVAL_DAY_TO_MINUTE<br /><br /> SQL_INTERVAL_DAY_TO_SECOND<br /><br /> SQL_INTERVAL_HOUR_TO_MINUTE<br /><br /> SQL_INTERVAL_HOUR_TO_SECOND<br /><br /> SQL_INTERVAL_MINUTE_TO_SECOND|Значение данных было преобразовано без усечения каких бы то ни было полей<br /><br /> Одно или несколько полей значения данных были усечены во время преобразования|н/д<br /><br /> 22015|  
   
  [a] все типы данных интервала C могут быть преобразованы в символьный тип данных.  
   

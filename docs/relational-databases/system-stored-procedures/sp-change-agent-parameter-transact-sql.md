@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_change_agent_parameter_TSQL
 - sp_change_agent_parameter
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6020788189dbd352b3a469809e0a95a85a6a5a5f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e8bfb83ad0b05f57d4be97838882288937ffbcc1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548275"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206596"
 ---
 # <a name="sp_change_agent_parameter-transact-sql"></a>Хранимая процедура sp_change_agent_parameter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,9 +38,9 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @profile_id = ] profile_id,` Идентификатор профиля. *profile_id* имеет **тип int**и не имеет значения по умолчанию.  
+`[ @profile_id = ] profile_id,` Идентификатор профиля. *profile_id* имеет **тип int** и не имеет значения по умолчанию.  
   
-`[ @parameter_name = ] 'parameter_name'` Имя параметра. Аргумент *parameter_name* имеет тип **sysname**и не имеет значения по умолчанию. Для системных профилей параметры, которые могут быть изменены, зависят от типа агента. Чтобы узнать, какой тип агента представляет этот *profile_id* , найдите столбец *profile_id* в таблице **Msagent_profiles** и обратите внимание на значение *agent_type* .  
+`[ @parameter_name = ] 'parameter_name'` Имя параметра. Аргумент *parameter_name* имеет тип **sysname** и не имеет значения по умолчанию. Для системных профилей параметры, которые могут быть изменены, зависят от типа агента. Чтобы узнать, какой тип агента представляет этот *profile_id* , найдите столбец *profile_id* в таблице **Msagent_profiles** и обратите внимание на значение *agent_type* .  
   
 > [!NOTE]  
 >  Если параметр поддерживается для данного *agent_type*, но он не был определен в профиле агента, возвращается ошибка. Чтобы добавить параметр в профиль агента, необходимо выполнить [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
@@ -239,14 +239,14 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **SQLQueueMode**  
   
- Чтобы узнать, какие параметры были определены для данного профиля, выполните **sp_help_agent_profile** и обратите внимание на *profile_name* , связанные с *profile_id*. При помощи соответствующего *profile_id*выполните следующий запуск **sp_help_agent_parameters** с помощью *profile_id* , чтобы просмотреть параметры, связанные с профилем. Параметры можно добавить в профиль, выполнив [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
+ Чтобы узнать, какие параметры были определены для данного профиля, выполните **sp_help_agent_profile** и обратите внимание на *profile_name* , связанные с *profile_id*. При помощи соответствующего *profile_id* выполните следующий запуск **sp_help_agent_parameters** с помощью *profile_id* , чтобы просмотреть параметры, связанные с профилем. Параметры можно добавить в профиль, выполнив [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
   
 `[ @parameter_value = ] 'parameter_value'` Новое значение параметра. *parameter_value* имеет тип **nvarchar (255)** и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_change_agent_parameter** используется во всех типах репликации.  
   
 ## <a name="permissions"></a>Разрешения  

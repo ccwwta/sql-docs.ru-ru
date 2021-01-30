@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_browsereplcmds_TSQL
 - sp_browsereplcmds
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 39fafe6f0e36d0c88ebb74285e8c8206977f73bd
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f798dcb9689221d9a8ef1964d4237a1fe649a4c5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548248"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206625"
 ---
 # <a name="sp_browsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -49,17 +49,17 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
 `[ @xact_seqno_end = ] 'xact_seqno_end'` Задает наибольший точный порядковый номер для возврата. *xact_seqno_end* имеет тип **nchar (22)** и значение по умолчанию 0xFFFFFFFFFFFFFFFFFFFF.  
   
-`[ @originator_id = ] 'originator_id'` Указывает, возвращаются ли команды с указанным *originator_id* . *originator_id* имеет **тип int**и значение по умолчанию NULL.  
+`[ @originator_id = ] 'originator_id'` Указывает, возвращаются ли команды с указанным *originator_id* . *originator_id* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @publisher_database_id = ] 'publisher_database_id'` Указывает, возвращаются ли команды с указанным *publisher_database_id* . *publisher_database_id* имеет **тип int**и значение по умолчанию NULL.  
+`[ @publisher_database_id = ] 'publisher_database_id'` Указывает, возвращаются ли команды с указанным *publisher_database_id* . *publisher_database_id* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @article_id = ] 'article_id'` Указывает, возвращаются ли команды с указанным *article_id* . *article_id* имеет **тип int**и значение по умолчанию NULL.  
+`[ @article_id = ] 'article_id'` Указывает, возвращаются ли команды с указанным *article_id* . *article_id* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @command_id = ] command_id` — Это расположение команды в MSrepl_commands &#40;декодировании [&#41;Transact-SQL ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) . *command_id* имеет **тип int**и значение по умолчанию NULL. Если указано, необходимо также указать все остальные параметры, а *xact_seqno_start*должны быть идентичны *xact_seqno_end*.  
+`[ @command_id = ] command_id` — Это расположение команды в MSrepl_commands &#40;декодировании [&#41;Transact-SQL ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) . *command_id* имеет **тип int** и значение по умолчанию NULL. Если указано, необходимо также указать все остальные параметры, а *xact_seqno_start* должны быть идентичны *xact_seqno_end*.  
   
-`[ @agent_id = ] agent_id` Указывает, что возвращаются только команды для конкретного агента репликации. *agent_id* имеет **тип int**и значение по умолчанию NULL.  
+`[ @agent_id = ] agent_id` Указывает, что возвращаются только команды для конкретного агента репликации. *agent_id* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @compatibility_level = ] compatibility_level` Версия, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в которой *COMPATIBILITY_LEVEL* имеет **тип int**и значение по умолчанию 9000000.  
+`[ @compatibility_level = ] compatibility_level` Версия, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в которой *COMPATIBILITY_LEVEL* имеет **тип int** и значение по умолчанию 9000000.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -74,7 +74,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**article_id**|**int**|Идентификатор статьи.|  
 |**type**|**int**|Тип команды.|  
 |**partial_command**|**bit**|Обозначает, является ли эта команда частичной.|  
-|**hashkey**|**int**|Только для внутреннего применения.|  
+|**hashkey**|**int**|Только для внутреннего использования.|  
 |**originator_publication_id**|**int**|Идентификатор публикации, в которой началась транзакция.|  
 |**originator_db_version**|**int**|Версия базы данных, в которой началась транзакция.|  
 |**originator_lsn**|**varbinary (16)**|Указывает регистрационный номер транзакции в журнале (номер LSN) для команды в порождающей публикации. Используется для одноранговой репликации транзакций.|  
@@ -83,7 +83,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
  Длинные команды в результирующих наборах могут быть разбиты на несколько строк.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_browsereplcmds** используется в репликации транзакций.  
   
 ## <a name="permissions"></a>Разрешения  

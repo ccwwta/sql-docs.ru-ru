@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.resource_governor_configuration_TSQL
 - sys.resource_governor_configuration
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 89099668-1dc6-4b07-9d8b-49bc95c7bfc0
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 34e8a269a2c8e7fafd0ba0e6645e2363eefa5d77
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c36375450d680d85bd551124f2eb9bfb03d895d6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097982"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206842"
 ---
 # <a name="sysresource_governor_configuration-transact-sql"></a>sys.resource_governor_configuration (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "98097982"
 |is_enabled|**bit**|Отображает текущее состояние регулятора ресурсов:<br /><br /> 0 = Resource Governor не включена.<br /><br /> 1 = Resource Governor включен.<br /><br /> Не допускает значение NULL.|  
 |max_outstanding_io_per_volume|**int**|**Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.<br /><br /> Максимальное число невыполненных операций ввода-вывода в расчете на том.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Представление каталога отображает конфигурацию регулятора ресурсов в том виде, в каком она хранится в метаданных. Для просмотра конфигурации, хранимой в памяти, используйте соответствующее динамическое административное представление.  
   
 ## <a name="permissions"></a>Разрешения  

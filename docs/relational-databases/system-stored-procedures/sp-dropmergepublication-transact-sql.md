@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropmergepublication
 - sp_dropmergepublication_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0c787c7c2503f9182b704e83a04664d7d377cef4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 35024724255eea714de42f8fb3a974188730fcef
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538978"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208221"
 ---
 # <a name="sp_dropmergepublication-transact-sql"></a>sp_dropmergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,18 +41,18 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` Имя публикации, которую нужно удалить. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию. Если **все**существующие публикации слиянием удалены, а также связанное с ними задание агент моментальных снимков. Если указать конкретное значение для параметра *publication*, то удаляются только эта публикация и связанное с ним задание агент моментальных снимков.  
+`[ @publication = ] 'publication'` Имя публикации, которую нужно удалить. Аргумент *publication* имеет тип **sysname** и не имеет значения по умолчанию. Если **все** существующие публикации слиянием удалены, а также связанное с ними задание агент моментальных снимков. Если указать конкретное значение для параметра *publication*, то удаляются только эта публикация и связанное с ним задание агент моментальных снимков.  
   
-`[ @ignore_distributor = ] ignore_distributor` Используется для удаления публикации без выполнения задач очистки на распространителе. *ignore_distributor* имеет **бит**и значение по умолчанию **0**. Данный аргумент также используется при переустановке распространителя.  
+`[ @ignore_distributor = ] ignore_distributor` Используется для удаления публикации без выполнения задач очистки на распространителе. *ignore_distributor* имеет **бит** и значение по умолчанию **0**. Данный аргумент также используется при переустановке распространителя.  
   
-`[ @reserved = ] reserved` Зарезервировано для будущего использования. параметр *reserved* имеет значение **bit**и значение по умолчанию **0**.  
+`[ @reserved = ] reserved` Зарезервировано для будущего использования. параметр *reserved* имеет значение **bit** и значение по умолчанию **0**.  
   
 `[ @ignore_merge_metadata = ] ignore_merge_metadata` Только для внутреннего использования.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_dropmergepublication** используется в репликации слиянием.  
   
  **sp_dropmergepublication** рекурсивно удаляет все статьи, связанные с публикацией, а затем удаляет саму публикацию. Публикацию нельзя удалить, если у нее есть хотя бы одна подписка. Сведения об удалении подписок см. в разделе [Удаление принудительной подписки](../../relational-databases/replication/delete-a-push-subscription.md) и [Удаление подписки по запросу](../../relational-databases/replication/delete-a-pull-subscription.md).  
@@ -65,7 +65,7 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_dropmergepublication**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Удаление публикации](../../relational-databases/replication/publish/delete-a-publication.md)   
  [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
  [sp_changemergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   

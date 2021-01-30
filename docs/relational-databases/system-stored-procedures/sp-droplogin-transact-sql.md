@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_droplogin
 - sp_droplogin_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e58684d1-c394-48de-906e-da6ee91100c3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cdca4f3aa533344b7e94a6a2dea6f14c35af6fdb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d24deba121b218c7dc84dd2bdb050d71d8577e3e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548074"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209327"
 ---
 # <a name="sp_droplogin-transact-sql"></a>sp_droplogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,12 +43,12 @@ sp_droplogin [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @loginame = ] 'login'` Имя входа для удаления. Аргумент *Login* имеет тип **sysname**и не имеет значения по умолчанию. *имя входа* должно уже существовать в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+`[ @loginame = ] 'login'` Имя входа для удаления. Аргумент *Login* имеет тип **sysname** и не имеет значения по умолчанию. *имя входа* должно уже существовать в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_droplogin** вызывает DROP LOGIN.  
   
  **sp_droplogin** не может быть выполнена в пользовательской транзакции.  

@@ -6,7 +6,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_clr_appdomains
 - sys.dm_clr_appdomains
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: ae934fc3b9d8f7664e2542450ee1456298548c85
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7579a0648bbc5eee90512bb70dfd667728b56834
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097784"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208112"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "98097784"
 |**total_allocated_memory_kb**|**bigint**|Общий размер (в килобайтах) всей выделенной памяти, которая была выделена в домене приложения с момента его создания (без вычета освобожденной и собранной памяти). Это эквивалентно **System. AppDomain. мониторингтоталаллокатедмеморисизе**.|  
 |**survived_memory_kb**|**bigint**|Количество килобайт, сохранившихся после последней полной, блокирующей сборки мусора, на которые заведомо существуют ссылки из текущего домена приложения. Это эквивалентно **System. AppDomain. мониторингсурвиведмеморисизе**.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Существует связь "один к одному" между **dm_clr_appdomains. appdomain_address** и **dm_clr_loaded_assemblies. appdomain_address**.  
   
  В следующих таблицах перечислены возможные значения **состояния** , их описания и время их возникновения в жизненном цикле **AppDomain** . Эти сведения можно использовать, чтобы отслеживать Lifecyle **AppDomain** и отслеживать подозрительные или повторяющиеся экземпляры **AppDomain** , не анализируя журнал событий Windows.  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addmessage
 - sp_addmessage_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 306fc9b2316d599380b3a6e781d4f8a1ef646626
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f9bdbbac913643bd0d44ba7e45b07c8bc3e09789
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89529298"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209374"
 ---
 # <a name="sp_addmessage-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,12 +51,12 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
   
 `[ @lang = ] 'language'` Язык этого сообщения. *Language* имеет тип **sysname** и значение по умолчанию NULL. Поскольку на одном сервере можно установить несколько языков, *язык* определяет язык, на котором написано каждое сообщение. Если *язык* не указан, язык является языком по умолчанию для сеанса.  
   
-`[ @with_log = ] { 'TRUE' | 'FALSE' }` Указывает, следует ли записывать сообщение в журнал приложений Windows при его возникновении. ** \@ WITH_LOG** имеет тип **varchar (5)** и значение по умолчанию false. Если указано значение TRUE, сообщение об ошибке всегда записывается в журнал приложений Windows. Если указано значение FALSE, то сообщение об ошибке может попасть в журнал приложений Windows в зависимости от того, как эта ошибка возникла. Только члены роли сервера **sysadmin** могут использовать этот параметр.  
+`[ @with_log = ] { 'TRUE' | 'FALSE' }` Указывает, следует ли записывать сообщение в журнал приложений Windows при его возникновении. **\@ WITH_LOG** имеет тип **varchar (5)** и значение по умолчанию false. Если указано значение TRUE, сообщение об ошибке всегда записывается в журнал приложений Windows. Если указано значение FALSE, то сообщение об ошибке может попасть в журнал приложений Windows в зависимости от того, как эта ошибка возникла. Только члены роли сервера **sysadmin** могут использовать этот параметр.  
   
 > [!NOTE]  
 >  Если сообщение заносится в журнал приложений Windows, оно также заносится и в журнал ошибок компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-`[ @replace = ] 'replace'` При указании в качестве *замены*строки существующее сообщение об ошибке перезаписывается новым текстом сообщения и уровнем серьезности. *Replace* имеет тип **varchar (7)** и значение по умолчанию NULL. Этот параметр необходимо указать, если *msg_id* уже существует. При замене сообщения английского языка (США), уровень серьезности заменяется для всех сообщений на всех языках, имеющих тот же *msg_id*.  
+`[ @replace = ] 'replace'` При указании в качестве *замены* строки существующее сообщение об ошибке перезаписывается новым текстом сообщения и уровнем серьезности. *Replace* имеет тип **varchar (7)** и значение по умолчанию NULL. Этот параметр необходимо указать, если *msg_id* уже существует. При замене сообщения английского языка (США), уровень серьезности заменяется для всех сообщений на всех языках, имеющих тот же *msg_id*.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -157,7 +157,7 @@ RAISERROR(60000,1,1,15,'param1','param2'); -- error, severity, state,
 GO                                       -- parameters.  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [sp_altermessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
  [sp_dropmessage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   

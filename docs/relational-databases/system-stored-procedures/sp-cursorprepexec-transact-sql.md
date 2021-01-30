@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cursorprepexec_TSQL
 - sp_cursorprepexec
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c77a02d7232acdd9dd2f109c6e7ae2d56121382e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b59597048ba7edc1102c3151d720e9bc6ff36942
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549925"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209699"
 ---
 # <a name="sp_cursorprepexec-transact-sql"></a>sp_cursorprepexec (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,13 +49,13 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  Идентификатор курсора, созданный [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *курсор* — это обязательный параметр, который должен быть указан во всех последующих процедурах, действующих для данного курсора, например sp_cursorfetch.  
   
  *params*  
- Указывает параметризованные инструкции. Определение переменных *params* подставляется для маркеров параметров в инструкции. *params* — это обязательный параметр, который вызывает для входного значения **ntext**, **nchar**или **nvarchar** .  
+ Указывает параметризованные инструкции. Определение переменных *params* подставляется для маркеров параметров в инструкции. *params* — это обязательный параметр, который вызывает для входного значения **ntext**, **nchar** или **nvarchar** .  
   
 > [!NOTE]  
 >  Используйте строку **ntext** в качестве входного значения при параметризованной инструкции *stmt* и значения *scrollopt* PARAMETERIZED_STMT.  
   
  *инструкция*  
- Определяет результирующий набор курсора. Параметр *инструкции* является обязательным и вызывает для входного значения **ntext**, **nchar**или **nvarchar** .  
+ Определяет результирующий набор курсора. Параметр *инструкции* является обязательным и вызывает для входного значения **ntext**, **nchar** или **nvarchar** .  
   
 > [!NOTE]  
 >  Правила указания значения stmt те же, что и для sp_cursoropen, за исключением того, что строкой типа данных *stmt* должен быть **ntext**.  

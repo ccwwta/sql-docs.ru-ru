@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cursor_list
 - sp_cursor_list_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dca9473813bf8e4324f1b7de6fb1a30c38a21148
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3a60d447d7072c6386faef08d1dd7398f906064d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536659"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205184"
 ---
 # <a name="sp_cursor_list-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,8 +42,8 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @cursor_return =] *cursor_variable_name*выходные данные  
- Имя объявленной переменной курсора. *cursor_variable_name* является **курсором**и не имеет значения по умолчанию. Этот аргумент является динамическим, прокручиваемым и предназначенным только для чтения.  
+ [ @cursor_return =] *cursor_variable_name* выходные данные  
+ Имя объявленной переменной курсора. *cursor_variable_name* является **курсором** и не имеет значения по умолчанию. Этот аргумент является динамическим, прокручиваемым и предназначенным только для чтения.  
   
  [ @cursor_scope =] *cursor_scope*  
  Определяет, какие уровни курсоров включаются в отчет. *cursor_scope* имеет **тип int**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
@@ -68,7 +68,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |cursor_name|**sysname**|Имя курсора из инструкции DECLARE CURSOR. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , если курсор был создан путем присвоения переменной курсора курсора, **cursor_name** возвращает имя переменной курсора.  В предыдущих версиях этот выходной столбец возвращает имя, сформированное системой.|  
 |cursor_scope|**smallint**|1 = LOCAL<br /><br /> 2 = GLOBAL|  
 |status|**smallint**|Те же значения, какие представлены системной функцией CURSOR_STATUS.<br /><br /> 1 = курсор, указанный ссылкой в имени или переменной курсора, открыт. Если курсор нечувствительный, статичный или является набором ключей, он имеет, по крайней мере, одну строку. Если курсор динамический, результирующий набор имеет ноль или более строк.<br /><br /> 0 = курсор, указанный ссылкой в имени или переменной курсора, открыт, но не имеет строк. Динамические курсоры не возвращают это значение.<br /><br /> -1 = курсор, указанный ссылкой в имени или переменной курсора, закрывается.<br /><br /> -2 = применимо только к переменным курсора. Нет курсора, назначенного переменной. Возможно, параметр OUTPUT назначил курсор переменной, но хранимая процедура закрыла курсор перед возвратом.<br /><br /> -3 = курсор или переменная курсора с заданным именем не существует либо переменной не выделен курсор.|  
-|для базы данных модели|**smallint**|1 = нечувствительный (или статичный)<br /><br /> 2 = набор ключей<br /><br /> 3 = динамический<br /><br /> 4 = перемотка вперед|  
+|model|**smallint**|1 = нечувствительный (или статичный)<br /><br /> 2 = набор ключей<br /><br /> 3 = динамический<br /><br /> 4 = перемотка вперед|  
 |параллелизм|**smallint**|1 = только для чтения<br /><br /> 2 = блокирование прокрутки<br /><br /> 3 = оптимистический|  
 |scrollable|**smallint**|0 = только вперед<br /><br /> 1 = возможна прокрутка|  
 |open_status|**smallint**|0 = закрыт<br /><br /> 1 = открыт|  
@@ -79,7 +79,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |last_operation|**smallint**|Последняя операция, выполненная с данным курсором.<br /><br /> 0 = операции c курсором не выполнялись.<br /><br /> 1 = OPEN;<br /><br /> 2 = FETCH;<br /><br /> 3 = ВСТАВИТЬ<br /><br /> 4 = UPDATE;<br /><br /> 5 = DELETE;<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|Уникальное значение, определяющее курсор в пределах области сервера.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Хранимая процедура sp_cursor_list представляет список текущих серверных курсоров, открытых соединением, и описывает атрибуты, являющиеся глобальными по отношению к каждому курсору, такие как возможность прокрутки и обновления курсора. Курсоры, представленные в хранимой процедуре sp_cursor_list, включают:  
   
 -   серверные курсоры [!INCLUDE[tsql](../../includes/tsql-md.md)];  
@@ -130,7 +130,7 @@ DEALLOCATE abc;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

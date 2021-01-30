@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_agent_profile
 - sp_help_agent_profile_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7bcb9de7480bf0aea92f585cfece47cf09545195
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8c335753621a90bbf9872a7786a6619cbd090249
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538864"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208944"
 ---
 # <a name="sp_help_agent_profile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +39,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @agent_type = ] agent_type` Тип агента. *agent_type* имеет **тип int**, значение по умолчанию **0**и может принимать одно из следующих значений.  
+`[ @agent_type = ] agent_type` Тип агента. *agent_type* имеет **тип int**, значение по умолчанию **0** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -49,7 +49,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 |**4**|Агент слияния.|  
 |**9**|Агент чтения очереди.|  
   
-`[ @profile_id = ] profile_id` Идентификатор отображаемого профиля. *profile_id* имеет **тип int**и значение по умолчанию **-1**, которое возвращает все профили в таблице **MSagent_profiles** .  
+`[ @profile_id = ] profile_id` Идентификатор отображаемого профиля. *profile_id* имеет **тип int** и значение по умолчанию **-1**, которое возвращает все профили в таблице **MSagent_profiles** .  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -65,7 +65,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_help_agent_profile** используется во всех типах репликации.  
   
 ## <a name="permissions"></a>Разрешения  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_grant_publication_access_TSQL
 - sp_grant_publication_access
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 5078173bfdf8ea079c0fa553c64a6235b101cdc2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bea8096d3d0d57b6044edc26bb5f64572487157
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469378"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209002"
 ---
 # <a name="sp_grant_publication_access-transact-sql"></a>sp_grant_publication_access (Transact-SQL)
 
@@ -39,16 +39,16 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` Имя публикации, к которой осуществляется доступ. **параметр "***publication***"** имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации, к которой осуществляется доступ. параметр **"**_publication_*_"_* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @login = ] 'login'` Идентификатор входа. **Аргумент***Login***** имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @login = ] 'login'` Идентификатор входа. **аргумент**_Login_*_имеет_* тип **sysname** и не имеет значения по умолчанию.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  **sp_grant_publication_access** используется в репликации моментальных снимков, транзакций и репликация слиянием.  
   
  Эту хранимую процедуру можно вызывать повторно.  
@@ -56,7 +56,7 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_grant_publication_access**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_help_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)   
  [sp_revoke_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
  [Организация безопасности издателя](../../relational-databases/replication/security/secure-the-publisher.md)   

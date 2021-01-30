@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_maintenance_plan_db_TSQL
 - sp_add_maintenance_plan_db
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 76f4fefa-5b99-4deb-beed-e198987a45a9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5d8369e3cdd8ad7d7c943e715361cbd26d99bb00
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e8cc84a2afd70a4e5bd89a581b0fb1ac1dcc229f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474640"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209017"
 ---
 # <a name="sp_add_maintenance_plan_db-transact-sql"></a>sp_add_maintenance_plan_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,14 +46,14 @@ sp_add_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @plan_id = ] 'plan_id'` Указывает идентификатор плана плана обслуживания. *plan_id* имеет тип **uniqueidentifier**и должен быть допустимым идентификатором.  
+`[ @plan_id = ] 'plan_id'` Указывает идентификатор плана плана обслуживания. *plan_id* имеет тип **uniqueidentifier** и должен быть допустимым идентификатором.  
   
 `[ @db_name = ] 'database_name'` Указывает имя базы данных, добавляемой в план обслуживания. База данных должна быть создана или уже существовать до добавления в план. Аргумент *database_name* имеет тип **sysname**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  **sp_add_maintenance_plan_db** должны запускаться из базы данных **msdb** .  
   
 ## <a name="permissions"></a>Разрешения  

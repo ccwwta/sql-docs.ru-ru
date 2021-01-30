@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_create_collection_item
 - sp_syscollector_create_collection_item_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a99c9adb21d6c9b09d4e1e29ad845253ba3c9b19
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e58f8407c152be375099e9eb70e3fe63d0100e67
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538540"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207041"
 ---
 # <a name="sp_syscollector_create_collection_item-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ sp_syscollector_create_collection_item
  *имя* должно быть уникальным. Чтобы получить список имен элементов текущего сбора, выполните запрос системного представления syscollector_collection_items.  
   
  [ @frequency =] *Частота*  
- Используется для указания времени (в секундах), определяющего, насколько часто этот элемент сбора собирает данные. параметр *Frequency* имеет **тип int**и значение по умолчанию 5. Минимальное значение, которое можно указать, составляет 5 секунд.  
+ Используется для указания времени (в секундах), определяющего, насколько часто этот элемент сбора собирает данные. параметр *Frequency* имеет **тип int** и значение по умолчанию 5. Минимальное значение, которое можно указать, составляет 5 секунд.  
   
  Если набор сбора настроен на режим без кэширования, частота не учитывается, поскольку этот режим предусматривает выполнение сбора данных и передачу по расписанию, указанному для набора сбора. Чтобы просмотреть режим сбора набора сбора, запросите [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) системное представление.  
   
@@ -72,7 +72,7 @@ sp_syscollector_create_collection_item
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Функция sp_syscollector_create_collection_item должна выполняться в контексте системной базы данных msdb.  
   
  Набор сбора, в который добавляется элемент сбора, необходимо остановить перед созданием элемента сбора. Добавлять элементы сбора в системные наборы сбора невозможно.  
@@ -116,7 +116,7 @@ EXEC sp_syscollector_create_collection_item
     @collection_item_id = @collection_item_id OUTPUT;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)   
  [sp_syscollector_update_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-update-collection-item-transact-sql.md)   

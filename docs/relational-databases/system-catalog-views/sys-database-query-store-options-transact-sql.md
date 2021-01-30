@@ -5,7 +5,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - DATABASE_QUERY_STORE_OPTIONS_TSQL
 - DATABASE_QUERY_STORE_OPTIONS
@@ -20,12 +20,12 @@ ms.author: wiassaf
 ms.custom: ''
 ms.date: 1/8/2021
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7735f03de4231cc46871a3470535a53ca9d3f942
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: d7bf0de864d97fffd5c06bb716ef4cae9dece4de
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171926"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209460"
 ---
 # <a name="sysdatabase_query_store_options-transact-sql"></a>sys.database_query_store_options (Transact-SQL)
 
@@ -49,7 +49,7 @@ ms.locfileid: "98171926"
 |**stale_query_threshold_days**|**bigint**|Число дней, в течение которых данные запроса хранятся в хранилище запросов. Значение по умолчанию — **30**. Задайте значение 0, чтобы отключить политику хранения.<br />Для выпуска [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition значение по умолчанию — семь дней.<br /><br /> Измените с помощью `ALTER DATABASE <database> SET QUERY_STORE ( CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = <value> ) )` инструкции.|  
 |**max_plans_per_query**|**bigint**|Ограничивает максимальное количество хранимых планов. Значение по умолчанию — **200**. Если достигнуто максимальное значение, хранилище запросов прекращает запись новых планов для этого запроса. Значение 0 устраняет ограничение в отношении количества захваченных планов.<br /><br /> Измените с помощью `ALTER DATABASE<database> SET QUERY_STORE (MAX_PLANS_PER_QUERY = <n>)` инструкции.|  
 |**query_capture_mode**|**smallint**|Текущий активный режим записи запросов:<br /><br /> **1** = все — записываются все запросы. Это значение конфигурации по умолчанию для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и более поздних версий).<br /><br /> 2 = Автоматический сбор соответствующих запросов на основе числа выполнений и потребления ресурсов. Это значение конфигурации по умолчанию для [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].<br /><br /> 3 = NONE — отключить запись новых запросов. Хранилище запросов будет продолжать сбор статистики компиляции и времени выполнения для запросов, которые уже были записаны. Используйте эту конфигурацию с осторожностью, так как вы можете пропустить важные запросы. <br /><br /> 4 = CUSTOM — позволяет дополнительный контроль над политикой отслеживания запросов с помощью [параметров QUERY_CAPTURE_POLICY](../../t-sql/statements/alter-database-transact-sql-set-options.md#SettingOptions).<br /> **Область применения**: [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] и более поздних версий.|  
-|**query_capture_mode_desc**|**nvarchar(60)**|Текстовое описание фактического режима записи хранилища запросов:<br /><br /> ALL (по умолчанию для [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] )<br /><br /> **Авто** (по умолчанию для [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] )<br /><br /> None <br /><br /> CUSTOM|  
+|**query_capture_mode_desc**|**nvarchar(60)**|Текстовое описание фактического режима записи хранилища запросов:<br /><br /> ALL (по умолчанию для [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] )<br /><br /> **Авто** (по умолчанию для [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] )<br /><br /> NONE <br /><br /> CUSTOM|  
 |**capture_policy_execution_count**|**int**|Параметр НАСТРАИВАЕМой политики режима записи запросов. Определяет количество выполнений запроса в течение ознакомительного периода. Значение по умолчанию равно 30.<br />**Область применения**: [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] и более поздних версий.| 
 |**capture_policy_total_compile_cpu_time_ms**|**bigint**|Параметр НАСТРАИВАЕМой политики режима записи запросов. Определяет общее время ЦП, затраченное на компиляцию, которое запрос использовал за ознакомительный период. Значение по умолчанию — 1000.<br /> **Область применения**: [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] и более поздних версий.|
 |**capture_policy_total_execution_cpu_time_ms**|**bigint**|Параметр НАСТРАИВАЕМой политики режима записи запросов. Определяет общее время ЦП, затраченное на выполнение, которое запрос использовал за ознакомительный период. Значение по умолчанию — 100.<br /> **Область применения**: [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] и более поздних версий.|

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_alert
 - sp_help_alert_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b02f303a4465df18cb049d06ecef585dad29a504
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b39195e5f1dd21fead42a05850f9b5e5e5874b52
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549728"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208939"
 ---
 # <a name="sp_help_alert-transact-sql"></a>sp_help_alert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,19 +46,19 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ## <a name="arguments"></a>Аргументы  
 `[ @alert_name = ] 'alert_name'` Имя оповещения. *alert_name* имеет тип **nvarchar (128)**. Если параметр *alert_name* не указан, возвращаются сведения обо всех оповещениях.  
   
-`[ @order_by = ] 'order_by'` Порядок сортировки, используемый для создания результатов. Аргумент *order_by*имеет тип **sysname**и значение по умолчанию N "*Name*".  
+`[ @order_by = ] 'order_by'` Порядок сортировки, используемый для создания результатов. Аргумент *order_by* имеет тип **sysname** и значение по умолчанию N "*Name*".  
   
-`[ @alert_id = ] alert_id` Идентификационный номер предупреждения для передачи сведений о. *alert_id*имеет **тип int**и значение по умолчанию NULL.  
+`[ @alert_id = ] alert_id` Идентификационный номер предупреждения для передачи сведений о. *alert_id* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @category_name = ] 'category'` Категория оповещения. *Category* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @category_name = ] 'category'` Категория оповещения. *Category* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @legacy_format = ] legacy_format` Указывает, следует ли создавать результирующий набор прежних версий. *legacy_format* имеет **бит**и значение по умолчанию **0**. Если *legacy_format* равен **1**, **sp_help_alert** возвращает результирующий набор, возвращенный **sp_help_alert** в Microsoft SQL Server 2000.  
+`[ @legacy_format = ] legacy_format` Указывает, следует ли создавать результирующий набор прежних версий. *legacy_format* имеет **бит** и значение по умолчанию **0**. Если *legacy_format* равен **1**, **sp_help_alert** возвращает результирующий набор, возвращенный **sp_help_alert** в Microsoft SQL Server 2000.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Если ** \@ legacy_format** равен **0**, **sp_help_alert** создает следующий результирующий набор.  
+ Если **\@ legacy_format** равен **0**, **sp_help_alert** создает следующий результирующий набор.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -68,7 +68,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Код ошибки сообщения, который определен для предупреждения (Обычно соответствует номеру ошибки в таблице **sysmessages** ). Если для определения предупреждения используется серьезность, **message_id** имеет значение **0** или null.|  
-|**severity**|**int**|Уровень серьезности (от **9** до **25**, **110**, **120**, **130**или **140**), определяющий оповещение.|  
+|**severity**|**int**|Уровень серьезности (от **9** до **25**, **110**, **120**, **130** или **140**), определяющий оповещение.|  
 |**доступной**|**tinyint**|Состояние того, включено ли оповещение (**1**) или нет (**0**). Отправка отключенных предупреждений не производится.|  
 |**delay_between_responses**|**int**|Время ожидания (в секундах) между ответами на предупреждение.|  
 |**last_occurrence_date**|**int**|Дата последнего возникновения предупреждения.|  
@@ -90,9 +90,9 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 7.0 всегда будет иметь значение «[Без категорий]».|  
 |**wmi_namespace**|**sysname**|Если **тип** имеет значение **3**, в этом столбце отображается пространство имен для события WMI.|  
 |**wmi_query**|**nvarchar(512)**|Если **тип** — **3**, в этом столбце отображается запрос для события WMI.|  
-|**type**|**int**|Тип события:<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оповещение о событии 1<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предупреждение о производительности<br /><br /> **3** = предупреждение о событии WMI|  
+|**type**|**int**|Тип события:<br /><br />   =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оповещение о событии 1<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предупреждение о производительности<br /><br /> **3** = предупреждение о событии WMI|  
   
- Если ** \@ legacy_format** равен **1**, **sp_help_alert** создает следующий результирующий набор.  
+ Если **\@ legacy_format** равен **1**, **sp_help_alert** создает следующий результирующий набор.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -102,7 +102,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Код ошибки сообщения, который определен для предупреждения (Обычно соответствует номеру ошибки в таблице **sysmessages** ). Если для определения предупреждения используется серьезность, **message_id** имеет значение **0** или null.|  
-|**severity**|**int**|Уровень серьезности (от **9** до **25**, **110**, **120**, **130**или 1**40**), определяющий оповещение.|  
+|**severity**|**int**|Уровень серьезности (от **9** до **25**, **110**, **120**, **130** или 1 **40**), определяющий оповещение.|  
 |**доступной**|**tinyint**|Состояние того, включено ли оповещение (**1**) или нет (**0**). Отправка отключенных предупреждений не производится.|  
 |**delay_between_responses**|**int**|Время ожидания (в секундах) между ответами на предупреждение.|  
 |**last_occurrence_date**|**int**|Дата последнего возникновения предупреждения.|  
@@ -122,15 +122,15 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].|  
 |**performance_condition**|**nvarchar(512)**|Если **тип** имеет значение **2**, в этом столбце отображается определение условия производительности. Если **тип** — **3**, в этом столбце отображается запрос для события WMI. В противном случае столбец содержит значение NULL.|  
 |**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Всегда будет иметь "**[без категории]**" для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0.|  
-|**type**|**int**|Тип предупреждения:<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оповещение о событии 1<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предупреждение о производительности<br /><br /> **3** = предупреждение о событии WMI|  
+|**type**|**int**|Тип предупреждения:<br /><br />   =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оповещение о событии 1<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предупреждение о производительности<br /><br /> **3** = предупреждение о событии WMI|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_help_alert** должны запускаться из базы данных **msdb** .  
   
 ## <a name="permissions"></a>Разрешения  
  По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена предопределенная роль базы данных **SQLAgentOperatorRole** в базе данных **msdb** .  
   
- Дополнительные сведения о **SQLAgentOperatorRole**см. в разделе [Агент SQL Server предопределенных ролей базы данных](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
+ Дополнительные сведения о **SQLAgentOperatorRole** см. в разделе [Агент SQL Server предопределенных ролей базы данных](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере выдаются сведения о предупреждении `Demo: Sev. 25 Errors`.  

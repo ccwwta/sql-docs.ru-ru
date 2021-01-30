@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_maintenance_plan
 - sp_add_maintenance_plan_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 01ab1834-6260-47cb-a1b7-20722217b062
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a26b25a4c6484363ede0435b58febf894f13481f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d24a6cae27d0baba9b88549e99fc7e477539f57d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474610"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208022"
 ---
 # <a name="sp_add_maintenance_plan-transact-sql"></a>sp_add_maintenance_plan (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,13 +48,13 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ## <a name="arguments"></a>Аргументы  
 `[ @plan_name = ] 'plan_name'` Указывает имя добавляемого плана обслуживания. *plan_name* имеет тип **varchar (128)**.  
   
- ** @plan_id = '** *plan_id* **'**  
+ **@plan_id = '** *plan_id* **'**  
  Указывает идентификатор плана обслуживания. *plan_id* имеет тип **uniqueidentifier**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  **sp_add_maintenance_plan** необходимо запустить из базы данных **msdb** и создать новый, но пустой план обслуживания. Чтобы добавить одну или несколько баз данных и связать их с заданием или заданиями, выполните **sp_add_maintenance_plan_db** и **sp_add_maintenance_plan_job**.  
   
 ## <a name="permissions"></a>Разрешения  

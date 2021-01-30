@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_category
 - sp_help_category_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d500bad167bda9085d4caf40bdaa9e442cb26efb
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 68c8d1fcf243de008f889d4037bbd38a590c6403
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549717"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208932"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,15 +59,15 @@ sp_help_category [ [ @class = ] 'class' ]
 |**MULTI -SERVER**|Категория многосерверных заданий.|  
 |**NONE**|Категория для класса, отличного от **Job**.|  
   
-`[ @name = ] 'name'` Имя категории, для которой запрашиваются сведения. Аргумент *Name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @name = ] 'name'` Имя категории, для которой запрашиваются сведения. Аргумент *Name* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @suffix = ] suffix` Указывает, является ли столбец **category_type** в результирующем НАБОРе идентификатором или именем. *суффикс* имеет **битовую**длину и значение по умолчанию **0**. **1** показывает **category_type** как имя, а **0** — как идентификатор.  
+`[ @suffix = ] suffix` Указывает, является ли столбец **category_type** в результирующем НАБОРе идентификатором или именем. *суффикс* имеет **битовую** длину и значение по умолчанию **0**. **1** показывает **category_type** как имя, а **0** — как идентификатор.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Если ** \@ суффикс** равен **0**, **sp_help_category** возвращает следующий результирующий набор:  
+ Если **\@ суффикс** равен **0**, **sp_help_category** возвращает следующий результирующий набор:  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -75,15 +75,15 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**tinyint**|Тип категории:<br /><br /> **1** = локальный<br /><br /> **2** = многосерверная<br /><br /> **3** = нет|  
 |**name**|**sysname**|Имя категории|  
   
- Если ** \@ суффикс** равен **1**, **sp_help_category** возвращает следующий результирующий набор:  
+ Если **\@ суффикс** равен **1**, **sp_help_category** возвращает следующий результирующий набор:  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|Идентификатор категории|  
-|**category_type**|**sysname**|Тип категории. Один из нескольких **локальных**, **многосерверных**или **нет**|  
+|**category_type**|**sysname**|Тип категории. Один из нескольких **локальных**, **многосерверных** или **нет**|  
 |**name**|**sysname**|Имя категории|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_help_category** должны запускаться из базы данных **msdb** .  
   
  Если никакие аргументы не указаны, результирующий набор содержит сведения обо всех категориях заданий.  
@@ -126,7 +126,7 @@ EXEC dbo.sp_help_category
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
  [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
  [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   

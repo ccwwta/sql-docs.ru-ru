@@ -1,13 +1,13 @@
 ---
 description: Функции каталога полнотекстового и семантического поиска (Transact-SQL)
-title: Функции полнотекстового поиска и семантического поиска (Transact-SQL) | Документация Майкрософт
+title: Функции поиска Full-Text и семантического поиска (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a61a3694-7604-4583-962e-fc30f771c6fa
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: deb790da4e4e263318717c3ee81cc8ee8d467ae6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 29b1abedf27c163cd21ab0113896c4a3ebaae459
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474657"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207464"
 ---
 # <a name="full-text-search-and-semantic-search-functions-transact-sql"></a>Функции каталога полнотекстового и семантического поиска (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

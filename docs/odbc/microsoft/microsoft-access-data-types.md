@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Access driver
 - Jet-based ODBC drivers [ODBC], Access driver
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b537348a-bea0-4bd6-84a4-52a75292957f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 24428c436e9e60c8ca5e42288b217f2c576cbd0d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0e7a55c6929d63bf036c9f1585d2eb039f6fec77
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88340770"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205711"
 ---
 # <a name="microsoft-access-data-types"></a>Типы данных Microsoft Access
 В следующей таблице показаны типы данных Microsoft Access, типы данных, используемые для создания таблиц, и типы данных ODBC SQL.  
@@ -36,7 +36,7 @@ ms.locfileid: "88340770"
 |ПОДПИСАН|ПОДПИСАН|SQL_INTEGER|  
 |CURRENCY|ДЕНЕЖНАЯ ЕДИНИЦА|SQL_NUMERIC|  
 |ДАТА И ВРЕМЯ|DATETIME|SQL_TIMESTAMP|  
-|Код GUID|Код GUID|SQL_GUID|  
+|GUID|GUID|SQL_GUID|  
 |ДЛИННЫЙ ДВОИЧНЫЙ ФАЙЛ|лонгбинари|SQL_LONGVARBINARY|  
 |ДЛИННЫЙ ТЕКСТ|LONGTEXT|SQL_LONGVARCHAR [2] SQL_WLONGVARCHAR [3]|  
 |ПОЛУЧЕНА|LONGTEXT|SQL_LONGVARCHAR [2] SQL_WLONGVARCHAR [3]|  
@@ -67,7 +67,7 @@ ms.locfileid: "88340770"
 |BYTE|Несмотря на то, что поле номера Microsoft Access с размером FieldSize, равным BYTE, не подписано, при использовании драйвера Microsoft Access в поле можно вставить отрицательное число.|  
 |CHAR, LONGVARCHAR и VARCHAR|Символьная строка символов может содержать любой символ ANSI (1-255 десятичное число). Для представления одной одинарной кавычки (') используйте две последовательные одинарные кавычки (' ').<br /><br /> Процедуры должны использоваться для передачи символьных данных при использовании любого специального символа в столбце символьного типа данных.|  
 |DATE|Значения даты должны быть либо ограничены в соответствии с каноническим форматом даты ODBC, либо разделяться разделителем даты и времени ("#"). В противном случае Microsoft Access будет рассматривать значение как арифметическое выражение и не будет вызывать предупреждение или ошибку.<br /><br /> Например, Дата "5 марта 1996" должна быть представлена в виде {d ' 1996-03-05 '} или #03/05/1996 #; в противном случае, если будет отправлено только 03/05/1993, Microsoft Access вычислит это значение 3 на 5 деленное на 1996. Это значение округляется до целого числа 0, а нулевой день сопоставляется с 1899-12-31, то есть используется дата.<br /><br /> Символ вертикальной черты (&#124;) нельзя использовать в значении даты, даже если он заключен в обратные кавычки.|  
-|Код GUID|Тип данных ограничен Microsoft Access 4,0.|  
+|GUID|Тип данных ограничен Microsoft Access 4,0.|  
 |NUMERIC|Тип данных ограничен Microsoft Access 4,0.|  
   
  Дополнительные ограничения для типов данных можно найти в [ограничениях типа данных](../../odbc/microsoft/data-type-limitations.md).

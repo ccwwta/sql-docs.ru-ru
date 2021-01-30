@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_jobcount
 - sp_help_jobcount_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ae8ef851-646c-4889-bc11-c8ec78762572
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2498f73d712a2de4c03dbd48c5f18eb0f5d49293
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 19514ea8eb65aee4161e6f1316abdf76eb156196
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89527927"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206435"
 ---
 # <a name="sp_help_jobcount-transact-sql"></a>sp_help_jobcount (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +42,9 @@ sp_help_jobcount
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @schedule_id = ] schedule_id` Идентификатор расписания для перечисления. *schedule_id* имеет **тип int**и не имеет значения по умолчанию. Можно указать либо *schedule_id* , либо *schedule_name* .  
+`[ @schedule_id = ] schedule_id` Идентификатор расписания для перечисления. *schedule_id* имеет **тип int** и не имеет значения по умолчанию. Можно указать либо *schedule_id* , либо *schedule_name* .  
   
-`[ @schedule_name = ] 'schedule_name'` Имя расписания для перечисления. Аргумент *schedule_name* имеет тип **sysname**и не имеет значения по умолчанию. Можно указать либо *schedule_id* , либо *schedule_name* .  
+`[ @schedule_name = ] 'schedule_name'` Имя расписания для перечисления. Аргумент *schedule_name* имеет тип **sysname** и не имеет значения по умолчанию. Можно указать либо *schedule_id* , либо *schedule_name* .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -56,7 +56,7 @@ sp_help_jobcount
 |-----------------|---------------|-----------------|  
 |**жобкаунт**|**int**|Количество заданий в указанном расписании.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Эта процедура возвращает количество заданий, связанных с указанным расписанием.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -84,7 +84,7 @@ EXEC sp_help_jobcount
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Агент SQL Server хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   

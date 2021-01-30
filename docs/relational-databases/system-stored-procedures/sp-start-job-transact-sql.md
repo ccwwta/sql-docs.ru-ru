@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_start_job
 - sp_start_job_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4e7a86d9ea25b4d9ae412b922cc6f36ddce27c20
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 09da744c09bd822ae01166722812141a05e13ed1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545944"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207285"
 ---
 # <a name="sp_start_job-transact-sql"></a>sp_start_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,15 +46,15 @@ sp_start_job
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_name = ] 'job_name'` Имя запускаемого задания. Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения. Аргумент *job_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` Имя запускаемого задания. Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения. Аргумент *job_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @job_id = ] job_id` Идентификационный номер запускаемого задания. Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения. *job_id* имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
+`[ @job_id = ] job_id` Идентификационный номер запускаемого задания. Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения. *job_id* имеет тип **uniqueidentifier** и значение по умолчанию NULL.  
   
 `[ @error_flag = ] error_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 `[ @server_name = ] 'server_name'` Целевой сервер, на котором необходимо запустить задание. *server_name* имеет тип **nvarchar (128)** и значение по умолчанию NULL. *server_name* должен быть одним из целевых серверов, на которые в данный момент нацелено задание.  
   
-`[ @step_name = ] 'step_name'` Имя шага, с которого начинается выполнение задания. Применяется только к локальным заданиям. Аргумент *step_name* имеет тип **sysname**и значение по умолчанию NULL  
+`[ @step_name = ] 'step_name'` Имя шага, с которого начинается выполнение задания. Применяется только к локальным заданиям. Аргумент *step_name* имеет тип **sysname** и значение по умолчанию NULL  
   
 `[ @output_flag = ] output_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -91,7 +91,7 @@ EXEC dbo.sp_start_job N'Weekly Sales Data Backup' ;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [sp_stop_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   

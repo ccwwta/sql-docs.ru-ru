@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_agent_default
 - sp_help_agent_default_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9df854b8199d265dff29277baf6ed9fe443bc46b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a5c2d74b71dfc55f4654b566e314157895f743bf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538886"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208968"
 ---
 # <a name="sp_help_agent_default-transact-sql"></a>sp_help_agent_default (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +39,7 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @profile_id = ] _profile_idOUTPUT` Идентификатор конфигурации по умолчанию для типа агента. *profile_id* имеет **тип int**и не имеет значения по умолчанию. *profile_id* также является выходным параметром и возвращает идентификатор конфигурации по умолчанию для типа агента.  
+`[ @profile_id = ] _profile_idOUTPUT` Идентификатор конфигурации по умолчанию для типа агента. *profile_id* имеет **тип int** и не имеет значения по умолчанию. *profile_id* также является выходным параметром и возвращает идентификатор конфигурации по умолчанию для типа агента.  
   
 `[ @agent_type = ] 'agent_type'` Тип агента. *agent_type* имеет **тип int**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
   
@@ -54,13 +54,13 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_help_agent_default** используется во всех типах репликации.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **replmonitor** могут выполнять **sp_help_agent_default**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

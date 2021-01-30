@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_data_file_recover_suspect_db
 - sp_add_data_file_recover_suspect_db_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b25262aa-a228-48b7-8739-6581c760b171
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ae07b655dd7b693876c61b600315ac8874d988ff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9e6361871e82e64283dc4d2afb305baa2dc5e193
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481668"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206771"
 ---
 # <a name="sp_add_data_file_recover_suspect_db-transact-sql"></a>sp_add_data_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @dbName = ] 'database_ '` Имя базы данных. Аргумент *Database* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @dbName = ] 'database_ '` Имя базы данных. Аргумент *Database* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 `[ @filegroup = ] 'filegroup_name_ '` Файловая группа для добавления файла *filegroup_name* имеет тип **nvarchar (260)** и значение по умолчанию NULL, которое указывает на первичный файл.  
   

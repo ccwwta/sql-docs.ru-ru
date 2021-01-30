@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 81db44bae57dec8bb0298e872221998ac45e0a3a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6ebfc2afdcbaa3ca5eddd5d311262ba19780e332
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542079"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205257"
 ---
 # <a name="object-hierarchy-syntax-transact-sql"></a>Синтаксис иерархии объектов (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "89542079"
   
  Следует обязательно использовать двойные кавычки ("). Все именованные параметры должны указываться после указания всех позиционных параметров.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Если *траверседобжект* не указан, требуется *пропертйормесод* .  
   
  Если *пропертйормесод* не указан, *траверседобжект* возвращается в качестве выходного параметра токена объекта из хранимой процедуры OLE-автоматизации. Если указан параметр *пропертйормесод* , вызывается свойство или метод *траверседобжект* , а значение свойства или возвращаемое значение метода возвращается в виде выходного параметра из хранимой процедуры OLE-автоматизации.  
@@ -89,7 +89,7 @@ EXEC @hr = sp_OAMethod @object,
    @checkoutput OUT  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример скрипта OLE Automation](../../relational-databases/stored-procedures/ole-automation-sample-script.md)   
  [Хранимые процедуры OLE-автоматизации (Transact-SQL)](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)  
   

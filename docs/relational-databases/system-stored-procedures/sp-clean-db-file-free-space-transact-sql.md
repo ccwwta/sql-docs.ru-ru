@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_clean_db_file_free_space
 - sp_clean_db_file_free_space_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3eb53a67-969d-4cb8-9681-b1c8e6fd55b6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 75463e5785c76e6904d2d7a82bf03f160811e6d0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 032cc0a56b9ae181a4c3f3206bcc95a63485d45c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543632"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206534"
 ---
 # <a name="sp_clean_db_file_free_space-transact-sql"></a>sp_clean_db_file_free_space (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ sp_clean_db_file_free_space
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Удаляет операции из таблицы или обновляет операции, которые приводят к перемещению строки, что может немедленно освободить пространство на странице путем удаления ссылок на строку. Но при определенных обстоятельствах строка может физически оставаться на странице данных как фантомная запись. Фантомные записи периодически удаляются фоновым процессом. Эти остаточные данные не возвращаются [!INCLUDE[ssDE](../../includes/ssde-md.md)] в ответ на запросы. Однако в средах, в которых физическая безопасность данных или файлов резервных копий находится под угрозой, можно использовать `sp_clean_db_file_free_space` для очистки этих фантомных записей. Чтобы выполнить эту операцию для всех файлов базы данных одновременно, используйте [sp_clean_db_free_space (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-clean-db-free-space-transact-sql.md). 
   
  Продолжительность времени, необходимого для выполнения процедуры sp_clean_db_file_free_space, зависит от размера файла, доступного свободного пространства и емкости диска. Поскольку работа `sp_clean_db_file_free_space` может значительно повлиять на операции ввода-вывода, рекомендуется выполнять эту процедуру за пределами обычных часов работы.  

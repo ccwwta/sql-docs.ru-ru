@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_changepublication
 - sp_changepublication_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6e29fade73adba6cb82b6d4ac22cae122d4c60cd
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: a0e183d97b17936d5d7e1b414c2d492910a8a8b3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98169447"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207076"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -50,7 +50,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   
  В данной таблице описаны свойства публикации, доступные для изменения, а также ограничения на значения этих свойств.  
   
-|Свойство.|Значение|Описание|  
+|Свойство|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|Для данной публикации можно создать анонимные подписки, а *immediate_sync* также должны иметь **значение true**. Невозможно изменить для одноранговых публикаций.|  
 ||**false**|На данную публикацию нельзя создавать анонимные подписки. Невозможно изменить для одноранговых публикаций.|  
@@ -97,7 +97,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|Удаляет сведения о публикации из службы Active Directory.|  
 |**queue_type**|**sql**|Для хранения транзакций используется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это свойство можно изменить только при отсутствии активных подписок.<br /><br /> Примечание. Поддержка использования [!INCLUDE[msCoName](../../includes/msconame-md.md)] очереди сообщений была прекращена. Указание значения **MSMQ** для *value* приводит к ошибке.|  
 |**repl_freq**|**обеспечения**|Публикует выход всех транзакций, основанных на журнале.|  
-||**snapshot** (моментальный снимок).|Публикует только запланированные события синхронизации.|  
+||**обновляем**|Публикует только запланированные события синхронизации.|  
 |**replicate_ddl**|**1**|Реплицируются инструкции языка определения данных (DDL), которые выполняются на издателе. Это свойство невозможно изменить для публикаций, не являющихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**0**|Репликация инструкций DDL не производится. Это свойство невозможно изменить для публикаций, не являющихся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Невозможно отключить репликацию изменений схемы при использовании одноранговой репликации.|  
 |**replicate_partition_switch**|**true**|ИЗМЕНИТЬ ТАБЛИЦУ... Инструкции SWITCH, которые выполняются в опубликованной базе данных, должны реплицироваться на подписчики. Этот параметр допустим, только если *allow_partition_switch* имеет значение true. Дополнительные сведения см. в статье [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md) (Репликация секционированных таблиц и индексов).|  
@@ -134,7 +134,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_changepublication** используется в репликации моментальных снимков и репликации транзакций.  
   
  После изменения любого из следующих свойств необходимо создать новый моментальный снимок, а для параметра *force_invalidate_snapshot* необходимо указать значение **1** .  

@@ -1,12 +1,12 @@
 ---
 description: sys.registered_search_property_lists (Transact-SQL)
-title: sys. registered_search_property_lists (Transact-SQL) | Документация Майкрософт
+title: sys.registered_search_property_lists (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - registered_search_property_lists_TSQL
 - sys.registered_search_property_lists
@@ -22,12 +22,12 @@ ms.assetid: 630d4caa-9bea-4cd3-a5b1-01098b0855fc
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 9137345d642f1bc599ace1645cd5e441b927c4fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6504ed677747548d940de7858ceade9a6a0ac75a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447861"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206858"
 ---
 # <a name="sysregistered_search_property_lists-transact-sql"></a>sys.registered_search_property_lists (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88447861"
 |**modify_date**|**datetime**|Дата последнего изменения списка свойств с помощью инструкции ALTER.|  
 |**principal_id**|**int**|Владелец списка свойств.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Дополнительные сведения см. в статье [Поиск свойств документа с использованием списков свойств поиска](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
 ## <a name="permissions"></a>Разрешения  

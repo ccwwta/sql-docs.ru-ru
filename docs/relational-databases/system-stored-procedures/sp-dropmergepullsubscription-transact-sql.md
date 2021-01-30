@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropmergepullsubscription
 - sp_dropmergepullsubscription_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9301dd80-72f7-4adb-9b13-87e7f9114248
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 20f8fb9eea5be15a3957c9ca430b81cf52a89709
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6d0ee785012033001e9c458749eecc7921ef3fe3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538960"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208223"
 ---
 # <a name="sp_dropmergepullsubscription-transact-sql"></a>sp_dropmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,18 +41,18 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию NULL. Это обязательный параметр. Укажите значение **ALL** , чтобы удалить подписки на все публикации  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname** и значение по умолчанию NULL. Это обязательный параметр. Укажите значение **ALL** , чтобы удалить подписки на все публикации  
   
-`[ @publisher = ] 'publisher'` Имя издателя. Аргумент *Publisher*имеет тип **sysname**и значение по умолчанию NULL. Это обязательный параметр.  
+`[ @publisher = ] 'publisher'` Имя издателя. Аргумент *Publisher* имеет тип **sysname** и значение по умолчанию NULL. Это обязательный параметр.  
   
-`[ @publisher_db = ] 'publisher_db'` Имя базы данных издателя. Аргумент *publisher_db*имеет тип **sysname**и значение по умолчанию NULL. Это обязательный параметр.  
+`[ @publisher_db = ] 'publisher_db'` Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname** и значение по умолчанию NULL. Это обязательный параметр.  
   
-`[ @reserved = ] 'reserved'` Зарезервировано для будущего использования. параметр *reserved* имеет значение **bit**и значение по умолчанию **0**.  
+`[ @reserved = ] 'reserved'` Зарезервировано для будущего использования. параметр *reserved* имеет значение **bit** и значение по умолчанию **0**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_dropmergepullsubscription** используется в репликации слиянием.  
   
  **sp_dropmergepullsubscription** удаляет агент слияния для этой подписки слиянием по запросу, хотя агент слияния не создается в **sp_addmergepullsubscription**.  
@@ -63,7 +63,7 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или пользователь, создавший подписку слиянием по запросу, могут выполнять **sp_dropmergepullsubscription**. Предопределенная роль базы данных **db_owner** может быть **sp_dropmergepullsubscription** выполнена только в том случае, если пользователь, создавший подписку слиянием по запросу, принадлежит этой роли.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Удаление подписки по запросу](../../relational-databases/replication/delete-a-pull-subscription.md)   
  [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_changemergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   

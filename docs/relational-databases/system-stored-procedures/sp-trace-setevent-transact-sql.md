@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_trace_setevent_TSQL
 - sp_trace_setevent
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f678427f05b5c3b136a7dfe18e1f51eb91773b91
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fffcbb5ec35fb329fa0ed3dac4782f0f1417ce82
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543009"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209727"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>Хранимая процедура sp_trace_setevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,9 +46,9 @@ sp_trace_setevent [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @traceid = ] trace_id` Идентификатор изменяемой трассировки. *trace_id* имеет **тип int**и не имеет значения по умолчанию. Пользователь использует это *trace_id* значение для выявления, изменения и управления трассировкой.  
+`[ @traceid = ] trace_id` Идентификатор изменяемой трассировки. *trace_id* имеет **тип int** и не имеет значения по умолчанию. Пользователь использует это *trace_id* значение для выявления, изменения и управления трассировкой.  
   
-`[ @eventid = ] event_id` Идентификатор события, которое необходимо включить. *event_id* имеет **тип int**и не имеет значения по умолчанию.  
+`[ @eventid = ] event_id` Идентификатор события, которое необходимо включить. *event_id* имеет **тип int** и не имеет значения по умолчанию.  
   
  Эта таблица содержит список событий, которые можно добавить или удалить из трассировки.  
   
@@ -59,7 +59,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |11|RPC:Starting|Возникает при запуске вызова удаленной процедуры RPC.|  
 |12|SQL:BatchCompleted|Возникает при завершении пакета языка [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |13|SQL:BatchStarting|Возникает при запуске пакета языка [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
-|14|Аудит входа в систему|Возникает, когда пользователь успешно входит в систему [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|14|Audit Login|Возникает, когда пользователь успешно входит в систему [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |15|Audit Logout|Возникает, когда пользователь выходит из системы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |16|Внимание|Возникает при событиях, требующих внимания, например запросах клиента на прерывание или разрыв соединения клиента.|  
 |17|ExistingConnection|Обнаруживает всю деятельность пользователей, соединенных с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до начала трассировки.|  
@@ -134,12 +134,12 @@ sp_trace_setevent [ @traceid = ] trace_id
 |102|Аудит GDR области базы данных|Возникает каждый раз, когда пользователь выдает GRANT, DENY, REVOKE в качестве разрешения инструкции в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для действий, связанных только с базой данных, например для предоставления разрешения на базу данных.|  
 |103|Audit Object GDR Event|Возникает каждый раз, когда пользователь [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выдает разрешения GRANT, DENY, REVOKE на объект.|  
 |104|Audit AddLogin Event|Происходит при [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] добавлении или удалении имени входа; для **sp_addlogin** и **sp_droplogin**.|  
-|105|Audit Login GDR Event|Происходит при добавлении или удалении право на вход в Windows; для **sp_grantlogin**, **sp_revokelogin**и **sp_denylogin**.|  
+|105|Audit Login GDR Event|Происходит при добавлении или удалении право на вход в Windows; для **sp_grantlogin**, **sp_revokelogin** и **sp_denylogin**.|  
 |106|Audit Login Change Property Event|Происходит при изменении свойства имени входа, за исключением паролей. для **sp_defaultdb** и **sp_defaultlanguage**.|  
 |107|Audit Login Change Password Event|Возникает при изменении пароля имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Пароли не записываются.|  
-|108|Audit Add Login to Server Role Event|Происходит при добавлении или удалении имени входа из предопределенной роли сервера. для **sp_addsrvrolemember**и **sp_dropsrvrolemember**.|  
-|109|Audit Add DB User Event|Происходит при добавлении или удалении имени входа в качестве пользователя базы данных (Windows или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) в базе данных; для **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**и **sp_dropuser**.|  
-|110|Audit Add Member to DB Role Event|Происходит при добавлении или удалении имени входа в качестве пользователя базы данных (фиксированного или определяемого пользователем) в базе данных; для **sp_addrolemember**, **sp_droprolemember**и **sp_changegroup**.|  
+|108|Audit Add Login to Server Role Event|Происходит при добавлении или удалении имени входа из предопределенной роли сервера. для **sp_addsrvrolemember** и **sp_dropsrvrolemember**.|  
+|109|Audit Add DB User Event|Происходит при добавлении или удалении имени входа в качестве пользователя базы данных (Windows или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ) в базе данных; для **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser** и **sp_dropuser**.|  
+|110|Audit Add Member to DB Role Event|Происходит при добавлении или удалении имени входа в качестве пользователя базы данных (фиксированного или определяемого пользователем) в базе данных; для **sp_addrolemember**, **sp_droprolemember** и **sp_changegroup**.|  
 |111|Audit Add Role Event|Происходит при добавлении или удалении имени входа в базу данных в качестве пользователя базы данных. для **sp_addrole** и **sp_droprole**.|  
 |112|Audit App Role Change Password Event|Возникает при изменении пароля роли приложения.|  
 |113|Audit Statement Permission Event|Возникает при использовании разрешения инструкции (например, CREATE TABLE).|  
@@ -237,7 +237,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |218|Plan Guide Unsuccessful|Указывает, что SQL Server не удалось создать план выполнения для запроса или пакета, в котором содержится структура плана. SQL Server выполнил попытку создать план выполнения для этого запроса или пакета без применения структуры плана. Эту проблему могла вызвать недопустимая структура плана. Структуры планов можно проверить при помощи системной функции sys.fn_validate_plan_guide.|  
 |235|Audit Fulltext||  
   
-`[ @columnid = ] column_id` Идентификатор столбца, добавляемого для события. *column_id* имеет **тип int**и не имеет значения по умолчанию.  
+`[ @columnid = ] column_id` Идентификатор столбца, добавляемого для события. *column_id* имеет **тип int** и не имеет значения по умолчанию.  
   
  В следующей таблице приводится список столбцов, которые могут добавляться для события.  
   
@@ -262,10 +262,10 @@ sp_trace_setevent [ @traceid = ] trace_id
 |17|**Writes**|Число логических обращений к дискам на запись, выполненное сервером для данного события.|  
 |18|**ЦП**|Объем времени ЦП (в миллисекундах), использованного событием.|  
 |19|**Разрешения**|Представляет битовую карту разрешений. Используется событием Security Auditing.|  
-|20|**Уровень серьезности**|Степень серьезности исключения.|  
+|20|**Уровень серьезности**|Уровень серьезности исключения.|  
 |21|**EventSubClass**|Тип подкласса события. Этот столбец данных заполняется не для всех классов событий.|  
 |22|**ObjectID**|Идентификатор объекта, назначенный системой.|  
-|23|**Успешно**|Успех попытки использования разрешений. Применяется для аудита.<br /><br /> **1** = успешное завершение**0** = сбой|  
+|23|**Успешно**|Успех попытки использования разрешений. Применяется для аудита.<br /><br /> **1** = успешное завершение **0** = сбой|  
 |24|**IndexID**|Идентификатор индекса объекта, связанного с событием. Чтобы определить идентификатор индекса для объекта, используйте столбец **indid** в системной таблице **sysindexes** .|  
 |25|**IntegerData**|Целочисленное значение, зависящее от класса событий, перехватываемых при трассировке.|  
 |26|**ServerName**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , *ServerName* или *servername\instancename*, для которого выполняется трассировка.|  
@@ -273,7 +273,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |28|**ObjectType**|Тип объекта, например: таблица, функция или хранимая процедура.|  
 |29|**NestLevel**|Уровень вложенности, на котором выполняется хранимая процедура. См. раздел [@ @NESTLEVEL &#40;TRANSACT-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md).|  
 |30|**Состояние**|Состояние сервера в случае ошибки.|  
-|31|**Ошибка**|Номер ошибки.|  
+|31|**Error**|Номер ошибки.|  
 |32|**Режим**|Режим полученной блокировки. Этот столбец не заполняется событием **Lock: Released** .|  
 |33|**Дескриптор**|Дескриптор объекта, относящегося к событию.|  
 |34|**ObjectName**|Имя объекта, к которому выполняется доступ.|  
@@ -299,23 +299,23 @@ sp_trace_setevent [ @traceid = ] trace_id
 |54|**GUID**|Значение идентификатора GUID, зависящее от класса события, захваченного при трассировке.|  
 |55|**IntegerData2**|Целое число, значение которого зависит от класса событий, захваченного при трассировке.|  
 |56|**ObjectID2**|Идентификатор связанного объекта или сущности, если он доступен.|  
-|57|**Тип**|Целое число, значение которого зависит от класса событий, захваченного при трассировке.|  
+|57|**Type**|Целое число, значение которого зависит от класса событий, захваченного при трассировке.|  
 |58|**OwnerID**|Тип объекта-владельца блокировки. Только для событий блокировки.|  
 |59|**ParentName**|Имя схемы, в которой находится объект.|  
 |60|**IsSystem**|Указывает, произошло событие в системном или в пользовательском процессе.<br /><br /> **1** = системный процесс<br /><br /> **0** = пользователь.|  
 |61|**Offset**|Начальное смещение инструкции в пределах хранимой процедуры или пакета.|  
 |62|**SourceDatabaseID**|Идентификатор базы данных, в которой находится источник объекта.|  
 |63|**SqlHandle**|64-разрядная версия хэша, основанная на тексте нерегламентированного запроса или базы данных и на идентификаторе объекта SQL. Это значение можно передать в функцию **sys.dm_exec_sql_text()** , чтобы получить связанный текст SQL.|  
-|64|**SessionLoginName**|Имя входа пользователя, который инициировал сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем **Имя_входа1** и при выполнении инструкции под именем **Имя_входа2**поле **SessionLoginName** будет содержать **Имя_входа1**, а поле **LoginName** — **Имя_входа2**. В данном столбце отображаются имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Windows.|  
+|64|**SessionLoginName**|Имя входа пользователя, который инициировал сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем **Имя_входа1** и при выполнении инструкции под именем **Имя_входа2** поле **SessionLoginName** будет содержать **Имя_входа1**, а поле **LoginName** — **Имя_входа2**. В данном столбце отображаются имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Windows.|  
   
  **[ @on =]** *вкл* .  
- Указывает, следует ли привести событие в состояние ON (1) или OFF (0). параметр *On* имеет значение **bit**и не имеет значения по умолчанию.  
+ Указывает, следует ли привести событие в состояние ON (1) или OFF (0). параметр *On* имеет значение **bit** и не имеет значения по умолчанию.  
   
  Если параметр *On* имеет значение **1**, а *column_id* имеет значение null, то событие устанавливается в значение on и все столбцы очищаются. Если *column_id* не равно null, то для этого события в столбце устанавливается значение ON.  
   
  Если параметр *On* имеет значение **0**, а *column_id* имеет значение null, то событие отключено и все столбцы очищаются. Если *column_id* не равно null, столбец будет отключен.  
   
- В этой таблице показано ** \@ взаимодействие между и** ** \@ columnid**.  
+ В этой таблице показано **\@ взаимодействие между и** **\@ columnid**.  
   
 |\@on|\@columnid|Результат|  
 |---------|---------------|------------|  
@@ -339,7 +339,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |13|Недостаточно памяти. Возвращается, когда для выполнения указанного действия недостаточно памяти.|  
 |16|Недопустимая функция для данной трассировки.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_trace_setevent** выполняет многие действия, ранее выполненные расширенными хранимыми процедурами, доступными в более ранних версиях служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Используйте **sp_trace_setevent** вместо следующего:  
   
 -   **xp_trace_addnewqueue**  
@@ -348,7 +348,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 -   **xp_trace_seteventclassrequired.**  
   
- Пользователи должны выполнять **sp_trace_setevent** для каждого столбца, добавляемого для каждого события. При каждом выполнении, если параметр ** \@ On** имеет значение **1**, **sp_trace_setevent** добавляет указанное событие в список событий трассировки. Если параметр ** \@ On** имеет значение **0**, **sp_trace_setevent** удаляет указанное событие из списка.  
+ Пользователи должны выполнять **sp_trace_setevent** для каждого столбца, добавляемого для каждого события. При каждом выполнении, если параметр **\@ On** имеет значение **1**, **sp_trace_setevent** добавляет указанное событие в список событий трассировки. Если параметр **\@ On** имеет значение **0**, **sp_trace_setevent** удаляет указанное событие из списка.  
   
  Параметры всех хранимых процедур трассировки SQL (**sp_trace_xx**) строго типизированы. Если эти аргументы указываются с неправильными типами данных входных параметров, как указано в описании их аргументов, хранимая процедура возвратит ошибку.  
   
@@ -358,7 +358,7 @@ sp_trace_setevent [ @traceid = ] trace_id
  Пользователь должен иметь разрешение ALTER TRACE.  
   
 ## <a name="see-also"></a>См. также:  
- [sys. fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+ [sys.fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys.fn_trace_getinfo (Transact-SQL)](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [Справочник по классам событий SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md)   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addqueued_artinfo
 - sp_addqueued_artinfo_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 16709ac2b02acf8641661831c4aee831ef95bc19
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c0899ff490b553471fc766413fdf0cca27955fa0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548339"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206658"
 ---
 # <a name="sp_addqueued_artinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "89548339"
   
   
 > [!IMPORTANT]  
->  Вместо **sp_addqueued_artinfo**следует использовать [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) процедуру. [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) создает скрипт, содержащий вызовы **sp_addqueued_artinfo** и **sp_addsynctrigger** .  
+>  Вместо **sp_addqueued_artinfo** следует использовать [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) процедуру. [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) создает скрипт, содержащий вызовы **sp_addqueued_artinfo** и **sp_addsynctrigger** .  
   
  Создает таблицу [MSsubscription_articles](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md) на подписчике, которая используется для трассировки сведений о подписке статьи (обновление посредством очередей и немедленное обновление с обновлением посредством очередей при отработке отказа). Эта хранимая процедура выполняется на подписчике в базе данных подписки.  
   
@@ -50,27 +50,27 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @artid = ] 'artid'` Имя идентификатора статьи. *artid* имеет **тип int**и не имеет значения по умолчанию  
+`[ @artid = ] 'artid'` Имя идентификатора статьи. *artid* имеет **тип int** и не имеет значения по умолчанию  
   
-`[ @article = ] 'article'` Имя статьи, для которой создается скрипт. Аргумент *article* имеет тип **sysname**и не имеет значения по умолчанию  
+`[ @article = ] 'article'` Имя статьи, для которой создается скрипт. Аргумент *article* имеет тип **sysname** и не имеет значения по умолчанию  
   
-`[ @publisher = ] 'publisher'` Имя сервера издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'` Имя сервера издателя. параметр *Publisher* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @publisher_db = ] 'publisher_db'` Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'` Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @publication = ] 'publication'` Имя публикации, для которой создается скрипт. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации, для которой создается скрипт. Аргумент *publication* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @dest_table = ] _'dest_table'` Имя целевой таблицы. Аргумент *dest_table* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @dest_table = ] _'dest_table'` Имя целевой таблицы. Аргумент *dest_table* имеет тип **sysname** и не имеет значения по умолчанию.  
   
- [** @owner =** ] **"**_владелец_**"**  
- Владелец подписки. Аргумент *owner* имеет тип **sysname**и не имеет значения по умолчанию.  
+ [**@owner =** ] **"**_владелец_**"**  
+ Владелец подписки. Аргумент *owner* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @cft_table = ] 'cft_table'` Имя таблицы конфликтов обновления посредством очередей для этой статьи. Аргумент *cft_table*имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @cft_table = ] 'cft_table'` Имя таблицы конфликтов обновления посредством очередей для этой статьи. Аргумент *cft_table* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_addqueued_artinfo** используется агент распространения как часть инициализации подписки. Эта хранимая процедура, как правило, не запускается пользователями, но может быть полезна в случае, когда необходимо вручную установить подписку.  
   
  [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) вместо **sp_addqueued_artinfo**.  

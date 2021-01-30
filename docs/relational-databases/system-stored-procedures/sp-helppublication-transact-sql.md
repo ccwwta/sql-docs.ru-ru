@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helppublication_TSQL
 - sp_helppublication
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eee9206e8d8ed3d5012ca463fed490ea9d8a6b1c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e45091866308b3c674217e0582bb64da59d51f75
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535151"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210238"
 ---
 # <a name="sp_helppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +42,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ## <a name="arguments"></a>Аргументы  
 `[ @publication = ] 'publication'` Имя просматриваемой публикации. Аргумент *publication* имеет тип sysname и значение по умолчанию **%** , которое возвращает сведения обо всех публикациях.  
   
-`[ @found = ] 'found' OUTPUT` Флаг, указывающий возвращаемые строки. Аргумент *Found*имеет **тип int** и выходной параметр и значение по умолчанию **23456**. **1** указывает, что публикация найдена. значение **0** указывает, что публикация не найдена.  
+`[ @found = ] 'found' OUTPUT` Флаг, указывающий возвращаемые строки. Аргумент *Found* имеет **тип int** и выходной параметр и значение по умолчанию **23456**. **1** указывает, что публикация найдена. значение **0** указывает, что публикация не найдена.  
   
 `[ @publisher = ] 'publisher'` Указывает издателя, отличного от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип sysname и значение по умолчанию NULL.  
   
@@ -59,7 +59,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |status|**tinyint**|Текущее состояние публикации.<br /><br /> **0** = неактивно.<br /><br /> **1** = активно.|  
 |задача||Используется для обратной совместимости.|  
 |replication frequency|**tinyint**|Тип частоты репликации:<br /><br /> **0** = транзакционное<br /><br /> **1** = моментальный снимок|  
-|synchronization method|**tinyint**|Режим синхронизации:<br /><br /> **0** = собственная программа для выполнения операций копирования (программа**bcp** )<br /><br /> **1** = символьное групповое копирование<br /><br /> **3** = одновременные. Это означает, что используется собственная операция копирования (программа**bcp**), но таблицы не блокируются во время создания моментального снимка.<br /><br /> **4** = Concurrent_c. Это означает, что используется символьное групповое копирование, но таблицы не блокируются во время создания моментального снимка.|  
+|synchronization method|**tinyint**|Режим синхронизации:<br /><br /> **0** = собственная программа для выполнения операций копирования (программа **bcp** )<br /><br /> **1** = символьное групповое копирование<br /><br /> **3** = одновременные. Это означает, что используется собственная операция копирования (программа **bcp**), но таблицы не блокируются во время создания моментального снимка.<br /><br /> **4** = Concurrent_c. Это означает, что используется символьное групповое копирование, но таблицы не блокируются во время создания моментального снимка.|  
 |description|**nvarchar(255)**|Дополнительное описание публикации.|  
 |immediate_sync|**bit**|Указывает, выполняется ли создание (повторное создание) файлов синхронизации при каждом запуске агента моментальных снимков.|  
 |enabled_for_internet|**bit**|Указывает доступность файлов синхронизации для публикации через Интернет по протоколу FTP, а также их доступность для других служб.|  
@@ -89,7 +89,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |conflict_retention|**int**|Задает срок хранения конфликтных записей в днях.|  
 |conflict_policy|**int**|Задает политику устранения конфликтов при обновлении подписчика посредством очередей. Может принимать одно из следующих значений:<br /><br /> **1** = побеждает конфликт с издателем.<br /><br /> **2** = конфликт побеждает подписчиком.<br /><br /> **3** = подписка повторно инициализирована.|  
 |queue_type||Задает используемый тип очереди. Может принимать одно из следующих значений:<br /><br /> **MSMQ** = использовать [!INCLUDE[msCoName](../../includes/msconame-md.md)] очередь сообщений для хранения транзакций.<br /><br /> **SQL** = используется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для хранения транзакций.<br /><br /> Примечание. Поддержка очереди сообщений была прекращена.|  
-|backward_comp_level||Уровень совместимости базы данных. Может иметь одно из следующих значений:<br /><br /> **90**  =  90 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100**  =  100 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|backward_comp_level||Уровень совместимости базы данных. Может иметь одно из следующих значений:<br /><br />   =  90 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br />   =  100 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_AD|**bit**|Указывает, опубликована ли публикация в каталоге [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Значение **1** указывает на то, что оно опубликовано, а значение **0** указывает на то, что оно не опубликовано.|  
 |allow_initialize_from_backup|**bit**|Показывает, может ли подписчик инициализировать подписку на эту публикацию из резервной копии, а не из исходного моментального снимка. **1** означает, что подписки можно инициализировать из резервной копии, а **0** — нет. Дополнительные сведения см. в разделе [Инициализация транзакционной подписки без моментального снимка](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md) подписчика транзакций без моментального снимка.|  
 |replicate_ddl|**int**|Указывает, поддерживается ли для публикации репликация схемы. **1** указывает, что инструкции языка описания данных DDL, выполняемые на издателе, реплицируются, а **0** означает, что инструкции DDL не реплицируются. Дополнительные сведения см. в статье [Внесение изменений в схемы баз данных публикации](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).|  
@@ -98,14 +98,14 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |enabled_for_het_sub|**int**|Указывает, поддерживает ли публикация подписчиков, отличных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Значение **1** означает, что подписчики, отличные от, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживаются. Значение **0** означает, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживаются только подписчики. Дополнительные сведения см. в статье [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).|  
 |enabled_for_p2p_conflictdetection|**int**|Определяет, будет ли агент распространителя обнаруживать конфликты публикации, разрешенной для одноранговой репликации. Значение **1** означает, что конфликты обнаруживаются. Дополнительные сведения см. в разделе [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 |originator_id|**int**|Указывает идентификатор в одноранговой топологии. Этот идентификатор используется для обнаружения конфликтов, если **enabled_for_p2p_conflictdetection** имеет значение **1**. Список использованных идентификаторов запросите в системной таблице [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) .|  
-|p2p_continue_onconflict|**int**|Указывает, продолжает ли агент распространителя обрабатывать изменения при обнаружении конфликта. Значение **1** означает, что агент продолжит обрабатывать изменения.<br /><br /> ** \* \* Внимание \* ! \* ** рекомендуется использовать значение по умолчанию **0**. Если этот параметр имеет значение **1**, агент распространения пытается выполнить согласование данных в топологии, применяя конфликтующую строку из узла с НАИБОЛЬШим идентификатором инициатора. Этот метод не гарантирует конвергенции. После обнаружения конфликта следует убедиться, что топология остается согласованной. Дополнительные сведения см. в подразделе «Обработка конфликтов» раздела [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
+|p2p_continue_onconflict|**int**|Указывает, продолжает ли агент распространителя обрабатывать изменения при обнаружении конфликта. Значение **1** означает, что агент продолжит обрабатывать изменения.<br /><br /> **\* \* Внимание \* ! \*** рекомендуется использовать значение по умолчанию **0**. Если этот параметр имеет значение **1**, агент распространения пытается выполнить согласование данных в топологии, применяя конфликтующую строку из узла с НАИБОЛЬШим идентификатором инициатора. Этот метод не гарантирует конвергенции. После обнаружения конфликта следует убедиться, что топология остается согласованной. Дополнительные сведения см. в подразделе «Обработка конфликтов» раздела [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 |allow_partition_switch|**int**|Указывает, будет ли ALTER TABLE... Операторы SWITCH можно выполнять в опубликованной базе данных. Дополнительные сведения см. в статье [Replicate Partitioned Tables and Indexes](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md) (Репликация секционированных таблиц и индексов).|  
 |replicate_partition_switch|**int**|Указывает, будет ли ALTER TABLE... Инструкции SWITCH, которые выполняются в опубликованной базе данных, должны реплицироваться на подписчики. Этот параметр допустим, только если *allow_partition_switch* имеет значение **1**.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Процедура sp_helppublication используется при репликации моментальных снимков и транзакций.  
   
  Процедура sp_helppublication возвращает сведения обо всех публикациях, которые принадлежат пользователю, выполняющему эту процедуру.  

@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - alter table [ODBC]
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c72d03abff792ff103bf009cd12b718c74bd497d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 186647c40517c5ecf77a55e6bbc08155c98ffed9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483707"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205758"
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE (команда SQL)
 Программно изменяет структуру таблицы.  
@@ -151,7 +151,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  УДАЛИТЬ ПРОВЕРКУ  
  Удаляет правило проверки таблицы.  
   
- Добавьте тег *EEXPRESSION3*первичного ключа *TagName2*  
+ Добавьте тег *EEXPRESSION3* первичного ключа *TagName2*  
  Добавляет первичный индекс в таблицу. *eExpression3* указывает ключевое выражение первичного индекса, а *TagName2* указывает имя первичного тега индекса. Имена тегов индекса могут содержать до 10 символов. Если тег *TagName2* опущен и *eExpression3* является одним полем, то имя тега первичного индекса совпадает с именем поля, указанного в *eExpression3*.  
   
  УДАЛИТЬ ПЕРВИЧНЫЙ КЛЮЧ  
@@ -172,7 +172,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  УДАЛИТЬ тег внешнего ключа *TagName6*[Save]  
  Удаляет внешний ключ, тег индекса которого — *TagName6*. Если параметр SAVE не задан, тег индекса удаляется из структурного индекса. Включить SAVE, чтобы запретить удаление тега индекса из структурного индекса.  
   
- Переименование СТОЛБЦА *FieldName4*в *FieldName5*  
+ Переименование СТОЛБЦА *FieldName4* в *FieldName5*  
  Позволяет изменить имя поля в таблице. *FieldName4* указывает имя поля, которое переименовывается. *FieldName5* указывает новое имя поля.  
   
 > [!CAUTION]  
@@ -181,7 +181,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  Не проверять  
  Указывает, что Visual FoxPro позволяет вносить изменения в структуру таблицы; Эти изменения могут нарушать целостность данных в таблице. По умолчанию Visual FoxPro не позволяет ALTER TABLE вносить изменения, нарушающие целостность данных в таблице. Включите "unvalidate", чтобы переопределить это поведение по умолчанию.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Инструкцию ALTER TABLE можно использовать для изменения структуры таблицы, которая не была добавлена в базу данных. Однако Visual FoxPro выдает ошибку, если при изменении свободной таблицы в нее включаются предложения DEFAULT, FOREIGN KEY, PRIMARY KEY, REFERENCEs или SET.  
   
  Инструкция ALTER TABLE может перестроить таблицу путем создания нового заголовка таблицы и добавления записей к заголовку таблицы. Например, изменение типа или ширины поля может привести к перестроению таблицы.  

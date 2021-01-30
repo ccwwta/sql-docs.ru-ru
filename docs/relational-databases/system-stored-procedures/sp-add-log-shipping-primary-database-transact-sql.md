@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_log_shipping_primary_database
 - sp_add_log_shipping_primary_database_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ed823f2b6564593388893db74866931bc1c0c93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4c967127366c935b42ac33158982c6734114b2d8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464672"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206718"
 ---
 # <a name="sp_add_log_shipping_primary_database-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -78,13 +78,13 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
 `[ @monitor_server_password = ] 'monitor_server_password'` Пароль учетной записи, используемой для доступа к серверу мониторинга.  
   
-`[ @backup_threshold = ] backup_threshold` Продолжительность времени (в минутах) после создания последней резервной копии до возникновения ошибки *threshold_alert* . *backup_threshold* имеет **тип int**и значение по умолчанию 60 минут.  
+`[ @backup_threshold = ] backup_threshold` Продолжительность времени (в минутах) после создания последней резервной копии до возникновения ошибки *threshold_alert* . *backup_threshold* имеет **тип int** и значение по умолчанию 60 минут.  
   
-`[ @threshold_alert = ] threshold_alert` Предупреждение, создаваемое при превышении порогового значения резервного копирования. *threshold_alert* имеет **тип int**и значение по умолчанию 14 420.  
+`[ @threshold_alert = ] threshold_alert` Предупреждение, создаваемое при превышении порогового значения резервного копирования. *threshold_alert* имеет **тип int** и значение по умолчанию 14 420.  
   
 `[ @threshold_alert_enabled = ] threshold_alert_enabled` Указывает, будет ли создаваться предупреждение при превышении *backup_threshold* . Значение по умолчанию (0) указывает, что это предупреждение отключено и не будет активизироваться. *threshold_alert_enabled* имеет **бит**.  
   
-`[ @history_retention_period = ] history_retention_period` Продолжительность времени в минутах, в течение которого будет храниться журнал. *history_retention_period* имеет **тип int**и значение по умолчанию NULL. Если ничего не указано, подразумевается значение 14420.  
+`[ @history_retention_period = ] history_retention_period` Продолжительность времени в минутах, в течение которого будет храниться журнал. *history_retention_period* имеет **тип int** и значение по умолчанию NULL. Если ничего не указано, подразумевается значение 14420.  
   
 `[ @backup_job_id = ] backup_job_id OUTPUT`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Идентификатор задания агента, связанного с заданием резервного копирования на сервере источника. *backup_job_id* имеет тип **uniqueidentifier** и не может иметь значение null.  
   

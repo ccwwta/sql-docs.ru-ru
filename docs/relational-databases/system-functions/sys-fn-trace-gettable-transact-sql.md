@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - fn_trace_gettable
 - fn_trace_gettable_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c2590159-6ec5-4510-81ab-e935cc4216cd
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 1f1593e1d12621b5dbe858b0f012322f447111e4
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: ba7550423c7d477a8a85d75b73294fbb97fbde6d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101312"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208082"
 ---
 # <a name="sysfn_trace_gettable-transact-sql"></a>sys.fn_trace_gettable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ fn_trace_gettable ( 'filename' , number_files )
  *number_files*  
  Указывает число считываемых файлов продолжения. Это число включает исходный файл, указанный в поле *filename*. *number_files* является типом **int**.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Если *number_files* указан в качестве **значения по умолчанию**, **fn_trace_gettable** считывает все файлы продолжения, пока не достигнет конца трассировки. **fn_trace_gettable** возвращает таблицу со всеми столбцами, допустимыми для указанной трассировки. Дополнительные сведения см. в разделе [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
  Имейте в виду, что функция fn_trace_gettable не будет загружать файлы продолжения (если этот параметр указан с помощью аргумента *number_files* ), где исходное имя файла трассировки заканчивается символом подчеркивания и числовым значением. (Это не относится к символам подчеркивания и номеру, которые автоматически добавляются при пересчете файла.) В качестве обходного решения можно переименовать файлы трассировки, чтобы удалить символы подчеркивания в исходном имени файла. Например, если исходный файл называется **Trace_Oct_5. trc** , а файл продолжения имеет имя **Trace_Oct_5_1. trc**, можно переименовать файлы в **TraceOct5. trc** и **TraceOct5_1. trc**.  

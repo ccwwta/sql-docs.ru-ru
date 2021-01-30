@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - data types [ODBC], interval data types
 - length of data types [ODBC]
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e9eb38d8-f9db-4401-8c62-aa394054cbbf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 589a13e0f0b2c6e6e42ade0f0dc32415556a0efc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3ad7248bc56ab24d999bbc025fada9ca4501ab2d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483286"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208546"
 ---
 # <a name="interval-data-type-length"></a>Длина интервального типа данных
 Для определения длины типа данных интервала в символах используются следующие правила. Длина выражается в количестве символов. Число байтов зависит от кодировки. Длина включает следующие значения, которые были добавлены вместе:  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_setapprole
 - sp_setapprole_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0513878f65513e57a6e26bb52d8101ba6c5d672c
-ms.sourcegitcommit: 2144a22ad4380182133e87664a907fe6f06b5f95
+ms.openlocfilehash: f34be78bc4d3f47ff2a11d0a6ed09c22c3670dca
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2020
-ms.locfileid: "94570962"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209277"
 ---
 # <a name="sp_setapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
 
@@ -72,7 +72,7 @@ sp_setapprole [ @rolename = ] 'role',
 
  0 (успешное завершение) и 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Замечания
 
  После активации роли приложения с помощью **sp_setapprole** роль остается активной до тех пор, пока пользователь не отключится от сервера или не выполнит **sp_unsetapprole**. **sp_setapprole** могут выполняться только прямыми [!INCLUDE[tsql](../../includes/tsql-md.md)] операторами на нерегламентированном уровне, а не в другой хранимой процедуре, триггере или в пользовательской транзакции.  
   

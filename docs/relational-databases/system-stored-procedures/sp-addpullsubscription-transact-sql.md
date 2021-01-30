@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addpullsubscription
 - sp_addpullsubscription_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8e5c15e1892f6640e8fddbcc0b89898ffce4f6b2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c119173ba184ef8fe3a03c59e90965650bb9c35c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549975"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206673"
 ---
 # <a name="sp_addpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,14 +45,14 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'` Имя издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'` Имя издателя. параметр *Publisher* имеет тип **sysname** и не имеет значения по умолчанию.  
 
 > [!NOTE]
 > Имя сервера можно указать как `<Hostname>,<PortNumber>` . Может потребоваться указать номер порта для подключения, если SQL Server развертывается в Linux или Windows с помощью настраиваемого порта, а служба браузера отключена.
   
-`[ @publisher_db = ] 'publisher_db'` Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname**и значение по умолчанию NULL. *publisher_db* не учитываются издателями Oracle.  
+`[ @publisher_db = ] 'publisher_db'` Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname** и значение по умолчанию NULL. *publisher_db* не учитываются издателями Oracle.  
   
-`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 `[ @independent_agent = ] 'independent_agent'` Указывает, существует ли изолированная агент распространения для этой публикации. *independent_agent* имеет тип **nvarchar (5)** и значение по умолчанию true. Если **значение — true**, то для этой публикации существует изолированный агент распространения. Если **значение равно false**, то для каждой пары базы данных издателя или подписчика существует один агент распространения. *independent_agent* является свойством публикации и должно иметь то же значение, что и на издателе.  
   
@@ -75,13 +75,13 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_addpullsubscription** используется в репликации моментальных снимков и репликации транзакций.  
   
 > [!IMPORTANT]  
 >  Для обновляемых посредством очередей подписок при соединении с подписчиками используйте проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], указывая для каждого из подписчиков различные учетные записи. При создании подписки по запросу, поддерживающей обновление посредством очередей, репликация всегда устанавливает соединение с использованием проверки подлинности Windows (так как для подписок по запросу репликация не сможет получить доступ к метаданным на подписчике, необходимым для выполнения проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). В этом случае следует выполнить [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) , чтобы изменить подключение для использования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности после настройки подписки.  
   
- Если [MSreplication_subscriptions &#40;таблицы&#41;Transact-SQL ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) не существует на подписчике, **sp_addpullsubscription** создает ее. Она также добавляет строку в [MSreplication_subscriptions &#40;таблице&#41;Transact-SQL ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) . Для подписок по запросу [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) должны быть вызваны на издателе первыми.  
+ Если [MSreplication_subscriptions &#40;таблицы&#41;Transact-SQL](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) не существует на подписчике, **sp_addpullsubscription** создает ее. Она также добавляет строку в [MSreplication_subscriptions &#40;таблице&#41;Transact-SQL ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) . Для подписок по запросу [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) должны быть вызваны на издателе первыми.  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addpullsubscription-t_1.sql)]  

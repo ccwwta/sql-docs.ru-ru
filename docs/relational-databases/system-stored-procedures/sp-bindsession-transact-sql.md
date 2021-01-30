@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_bindsession
 - sp_bindsession_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1436fe21-ad00-4a98-aca1-1451a5e571d2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 900f6383a4a285cac36262096a66e64603467c79
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 64f6b6b4134c5f29dea38d87e7d75e43910ca530
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548241"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206610"
 ---
 # <a name="sp_bindsession-transact-sql"></a>sp_bindsession (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,12 +44,12 @@ sp_bindsession { 'bind_token' | NULL }
   
 ## <a name="arguments"></a>Аргументы  
  **"** *bind_token* **"**  
- Токен, идентифицирующий транзакцию, первоначально полученную с помощью **sp_getbindtoken** или функции **Srv_getbindtoken** Open Data Services. *bind_token*имеет тип **varchar (255)**.  
+ Токен, идентифицирующий транзакцию, первоначально полученную с помощью **sp_getbindtoken** или функции **Srv_getbindtoken** Open Data Services. *bind_token* имеет тип **varchar (255)**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Два объединенных сеанса совместно используют только транзакции и блокировки. Каждый сеанс сохраняет свой собственный уровень изоляции, и установка нового уровня изоляции на одном сеансе не затронет уровень изоляции другого сеанса. Каждый сеанс идентифицируется по его учетной записи безопасности и может обращаться только к тем ресурсам базы данных, на которые учетной записи предоставлены разрешения.  
   
  **sp_bindsession** использует маркер привязки для привязки двух или более существующих сеансов клиента. Эти сеансы клиента должны быть на одном экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], от которого был получен токен связывания. Сеанс — это клиент, выполняющий команду. Привязанные сеансы баз данных совместно используют пространство транзакций и блокировок.  

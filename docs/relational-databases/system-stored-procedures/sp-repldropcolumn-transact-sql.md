@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_repldropcolumn_TSQL
 - sp_repldropcolumn
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fdc1ec5f-f108-42b4-a2d8-f06a71913ab8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: df9b2be3d6253bd3ba225d4cc444e705678109f3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6c5fdabf724c284e8a75244269321b92c81b46ea
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534941"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206431"
 ---
 # <a name="sp_repldropcolumn-transact-sql"></a>sp_repldropcolumn (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,7 +59,7 @@ sp_repldropcolumn [ @source_object = ] 'source_object', [ @column = ] 'column'
   
 -   Если пользовательские хранимые процедуры автоматически создаются повторно, *schema_change_script* можно использовать для удаления этих пользовательских хранимых процедур и замены их пользовательскими хранимыми процедурами, которые поддерживают новую схему.  
   
--   Если пользовательские хранимые процедуры не формируются автоматически, *schema_change_script*можно использовать для повторного создания этих хранимых процедур или для создания пользовательских хранимых процедур, определяемых пользователем.  
+-   Если пользовательские хранимые процедуры не формируются автоматически, *schema_change_script* можно использовать для повторного создания этих хранимых процедур или для создания пользовательских хранимых процедур, определяемых пользователем.  
   
  [ @force_invalidate_snapshot =] *force_invalidate_snapshot*  
  Определяет возможность недействительности моментального снимка. *force_invalidate_snapshot* является битом и имеет значение по умолчанию 1.  
@@ -81,7 +81,7 @@ sp_repldropcolumn [ @source_object = ] 'source_object', [ @column = ] 'column'
 ## <a name="permissions"></a>Разрешения  
  Для выполнения хранимой процедуры sp_repldropcolumn необходимо быть членом предопределенной роли сервера sysadmin на издателе либо членом предопределенной роли db_ddladmin или db_ddladmin базы данных публикации.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Устаревшие функции в Репликация SQL Server](../../relational-databases/replication/deprecated-features-in-sql-server-replication.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - set ANSI command [ODBC]
 ms.assetid: cf9a01b2-14bf-458c-a73c-2a58ddef32d8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4a9f9c576199905c23994af4dc6b031114f4ad72
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bb9dbd2b73b4ff0f7f75442c42de31dbe389211a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466406"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208666"
 ---
 # <a name="set-ansi-command"></a>Команда SET ANSI
 Определяет, как выполняется сравнение строк разной длины с помощью оператора = в командах SQL Visual FoxPro.  
@@ -38,7 +38,7 @@ SET ANSI ON | OFF
 'Tommy' = 'Tom'  
 ```  
   
- Результат равен false (. Е), если параметр SET ANSI имеет значение ON, так как при заполнении "Tom" становится "Tom", а строки "Tom" и "Антон" не соответствуют символу для символа.  
+ Результат равен false (. F.), если параметр SET ANSI имеет значение ON, так как при заполнении "Tom" становится "Tom", а строки "Tom" и "Антон" не соответствуют символу для символа.  
   
  Оператор = = использует этот метод для сравнения в командах SQL Visual FoxPro.  
   
@@ -51,7 +51,7 @@ SET ANSI ON | OFF
   
  Результат равен true (. T.), если параметр SET ANSI имеет значение OFF, так как сравнение останавливается после "Tom".  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  SET ANSI определяет, будет ли укороченная строка из двух строк дополнена пробелами при сравнении строк SQL. SET ANSI не влияет на оператор = =; При использовании оператора = = более короткая строка всегда дополняется пробелами для сравнения.  
   
 ## <a name="string-order"></a>Порядок строк  

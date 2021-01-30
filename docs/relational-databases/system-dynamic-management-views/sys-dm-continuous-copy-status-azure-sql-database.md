@@ -5,7 +5,7 @@ titleSuffix: Azure SQL Database
 ms.date: 03/03/2017
 ms.service: sql-database
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_continuous_copy_status_TSQL
 - dm_continuous_copy_status_TSQL
@@ -21,12 +21,12 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 94370b562160315e53feb46a83cbb68a848e064f
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7e0dc3ec69f4c35b1361cf12f501f4b23abf29c7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099979"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207801"
 ---
 # <a name="sysdm_continuous_copy_status-azure-sql-database"></a>sys.dm_continuous_copy_status (база данных SQL Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "98099979"
 ## <a name="permissions"></a>Разрешения  
  Для получения данных необходимо членство в роли базы данных **db_owner** . Пользователь dbo, члены роли базы данных **DBManager** и имя входа sa могут также запрашивать это представление.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Представление **sys.dm_continuous_copy_status** создается в базе данных **ресурсов** и отображается во всех базах данных, включая логическую реплику. Однако запрос этого представления для логической базы данных master возвращает пустой набор.  
   
  Если отношение непрерывного копирования к базе данных завершается, строка для этой базы данных в представлении **sys.dm_continuous_copy_status** исчезает.  

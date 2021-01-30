@@ -1,13 +1,13 @@
 ---
-description: sys. fn_hadr_backup_is_preferred_replica (Transact-SQL)
-title: sys. fn_hadr_backup_is_preferred_replica (Transact-SQL) | Документация Майкрософт
+description: sys.fn_hadr_backup_is_preferred_replica (Transact-SQL)
+title: sys.fn_hadr_backup_is_preferred_replica (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.fn_hadr_backup_is_preferred_replica_TSQL
 - sys.fn_hadr_backup_is_preferred_replica
@@ -22,14 +22,14 @@ helpviewer_keywords:
 ms.assetid: 61b9be77-e2f6-4da1-b2ae-a62cbe226145
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ce16f8300546c77114a27706a7b7ed32806f98ac
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 009e237b8d7ac7d100100969cf9f8a75bbad1195
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427816"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206034"
 ---
-# <a name="sysfn_hadr_backup_is_preferred_replica--transact-sql"></a>sys. fn_hadr_backup_is_preferred_replica (Transact-SQL)
+# <a name="sysfn_hadr_backup_is_preferred_replica--transact-sql"></a>sys.fn_hadr_backup_is_preferred_replica (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Используется для определения, является ли текущая реплика предпочитаемой резервной репликой.  
@@ -50,7 +50,7 @@ sys.fn_hadr_backup_is_preferred_replica ( 'dbname' )
 ## <a name="returns"></a>Возвращаемое значение  
  Возвращает тип данных **bool**: 1, если база данных в текущем экземпляре находится на предпочтительной реплике; в противном случае — значение 0.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Используйте данную функцию в скрипте резервного копирования для определения, доступна ли текущая база данных на реплике, которая является предпочитаемой для резервного копирования. Вы можете запустить скрипт на любой доступной реплике. Каждая из данных задач обращается к одним и тем же данным для определения того, какую задачу следует выполнить, поэтому для создания резервной копии фактически обрабатывается только одна запланированная задача. Образец кода должен быть аналогичен следующему.  
   
 ```  

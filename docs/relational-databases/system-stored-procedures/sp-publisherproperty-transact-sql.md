@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_publisherproperty
 - sp_publisherproperty_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 459e5c7c702f01cbae74843e4ed8b3152d25626f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 80e2e9eda3d6a4f900c4ab9f8e48dc783d23cd2d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534975"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210051"
 ---
 # <a name="sp_publisherproperty-transact-sql"></a>sp_publisherproperty (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,9 +40,9 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'` Имя разнородного издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'` Имя разнородного издателя. параметр *Publisher* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @propertyname = ] 'propertyname'` Имя устанавливаемого свойства. Аргумент *PropertyName* имеет тип **sysname**и может принимать одно из следующих значений.  
+`[ @propertyname = ] 'propertyname'` Имя устанавливаемого свойства. Аргумент *PropertyName* имеет тип **sysname** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -53,7 +53,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
  Если аргумент *PropertyName* опущен, возвращаются все устанавливаемые свойства.  
   
  `[ @propertyvalue = ] 'propertyvalue'`  
- Новое значение свойства. *propertyvalue* имеет тип **sysname**и значение по умолчанию NULL. Если параметр *propertyvalue* опущен, возвращается текущее значение свойства.  
+ Новое значение свойства. *propertyvalue* имеет тип **sysname** и значение по умолчанию NULL. Если параметр *propertyvalue* опущен, возвращается текущее значение свойства.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -65,7 +65,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_publisherproperty** используется в репликации транзакций для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, отличных от.  
   
  Если указан только *Издатель* , результирующий набор включает текущие параметры для всех свойств, которые могут быть установлены.  
@@ -79,7 +79,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** на распространителе могут выполнять **sp_publisherproperty**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Configure the Transaction Set Job for an Oracle Publisher](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)  (Настройка задания для набора транзакции в издателе Oracle)  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

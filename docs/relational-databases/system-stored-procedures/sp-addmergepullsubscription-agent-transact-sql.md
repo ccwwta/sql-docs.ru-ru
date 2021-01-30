@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addmergepullsubscription_agent
 - sp_addmergepullsubscription_agent_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7ad9425df176a7f822b18ab793d0eada4362c551
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4ecc9b2fded678671bc608235fa3080f2ed31573
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89530355"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209431"
 ---
 # <a name="sp_addmergepullsubscription_agent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 
@@ -91,64 +91,64 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @name = ] 'name'` Имя агента. Аргумент *Name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @name = ] 'name'` Имя агента. Аргумент *Name* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @publisher = ] 'publisher'` Имя сервера издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'` Имя сервера издателя. параметр *Publisher* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @publisher_db = ] 'publisher_db'` Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'` Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @publisher_security_mode = ] publisher_security_mode` Режим безопасности, используемый при соединении с издателем при синхронизации. *publisher_security_mode* имеет **тип int**и значение по умолчанию 1. Если значение **равно 0**, то задает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверку подлинности. Если значение равно **1**, указывает проверку подлинности Windows.  
+`[ @publisher_security_mode = ] publisher_security_mode` Режим безопасности, используемый при соединении с издателем при синхронизации. *publisher_security_mode* имеет **тип int** и значение по умолчанию 1. Если значение **равно 0**, то задает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверку подлинности. Если значение равно **1**, указывает проверку подлинности Windows.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @publisher_login = ] 'publisher_login'` Имя входа, используемое при соединении с издателем при синхронизации. Аргумент *publisher_login* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher_login = ] 'publisher_login'` Имя входа, используемое при соединении с издателем при синхронизации. Аргумент *publisher_login* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @publisher_password = ] 'publisher_password'` Пароль, используемый при соединении с издателем. Аргумент *publisher_password* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher_password = ] 'publisher_password'` Пароль, используемый при соединении с издателем. Аргумент *publisher_password* имеет тип **sysname** и значение по умолчанию NULL.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] При возможности предлагать пользователю ввод учетных данных безопасности во время выполнения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  
   
 `[ @publisher_encrypted_password = ]publisher_encrypted_password` Параметр *publisher_encrypted_password* больше не поддерживается. Попытка присвоить этому параметру **bit** значение **1** приведет к ошибке.  
   
-`[ @subscriber = ] 'subscriber'` Имя подписчика. Аргумент *Subscriber* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @subscriber = ] 'subscriber'` Имя подписчика. Аргумент *Subscriber* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @subscriber_db = ] 'subscriber_db'` Имя базы данных подписки. Аргумент *subscriber_db* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @subscriber_db = ] 'subscriber_db'` Имя базы данных подписки. Аргумент *subscriber_db* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @subscriber_security_mode = ] subscriber_security_mode` Режим безопасности, используемый при соединении с подписчиком при синхронизации. *subscriber_security_mode* имеет **тип int**и значение по умолчанию 1. Если значение **равно 0**, то задает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверку подлинности. Если значение равно **1**, указывает проверку подлинности Windows.  
+`[ @subscriber_security_mode = ] subscriber_security_mode` Режим безопасности, используемый при соединении с подписчиком при синхронизации. *subscriber_security_mode* имеет **тип int** и значение по умолчанию 1. Если значение **равно 0**, то задает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверку подлинности. Если значение равно **1**, указывает проверку подлинности Windows.  
   
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Агент слияния всегда подключается к локальному подписчику с использованием проверки подлинности Windows. Если для этого аргумента указано значение, оно не будет учитываться и будет возвращено предупреждающее сообщение.  
   
-`[ @subscriber_login = ] 'subscriber_login'` Имя входа подписчика, используемое при соединении с подписчиком при синхронизации. *subscriber_login* является обязательным, если *subscriber_security_mode* имеет значение **0**. Аргумент *subscriber_login* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @subscriber_login = ] 'subscriber_login'` Имя входа подписчика, используемое при соединении с подписчиком при синхронизации. *subscriber_login* является обязательным, если *subscriber_security_mode* имеет значение **0**. Аргумент *subscriber_login* имеет тип **sysname** и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Если для этого аргумента указано значение, оно не будет учитываться и будет возвращено предупреждающее сообщение.  
   
-`[ @subscriber_password = ] 'subscriber_password'` Пароль подписчика для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. *subscriber_password* является обязательным, если *subscriber_security_mode* имеет значение **0**. Аргумент *subscriber_password* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @subscriber_password = ] 'subscriber_password'` Пароль подписчика для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности. *subscriber_password* является обязательным, если *subscriber_security_mode* имеет значение **0**. Аргумент *subscriber_password* имеет тип **sysname** и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Если для этого аргумента указано значение, оно не будет учитываться и будет возвращено предупреждающее сообщение.  
   
-`[ @distributor = ] 'distributor'` Имя распространителя. Аргумент *распространитель* имеет тип **sysname**и значение по умолчанию *издателя*. то есть издатель также является распространителем.  
+`[ @distributor = ] 'distributor'` Имя распространителя. Аргумент *распространитель* имеет тип **sysname** и значение по умолчанию *издателя*. то есть издатель также является распространителем.  
   
-`[ @distributor_security_mode = ] distributor_security_mode` Режим безопасности, используемый при соединении с распространителем при синхронизации. *distributor_security_mode* имеет **тип int**и значение по умолчанию 0. **0** — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности. **1** указывает проверку подлинности Windows.  
+`[ @distributor_security_mode = ] distributor_security_mode` Режим безопасности, используемый при соединении с распространителем при синхронизации. *distributor_security_mode* имеет **тип int** и значение по умолчанию 0. **0** — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности. **1** указывает проверку подлинности Windows.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @distributor_login = ] 'distributor_login'` Имя входа распространителя, используемое при соединении с распространителем при синхронизации. *distributor_login* является обязательным, если *distributor_security_mode* имеет значение **0**. Аргумент *distributor_login* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @distributor_login = ] 'distributor_login'` Имя входа распространителя, используемое при соединении с распространителем при синхронизации. *distributor_login* является обязательным, если *distributor_security_mode* имеет значение **0**. Аргумент *distributor_login* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @distributor_password = ] 'distributor_password'` Пароль распространителя. *distributor_password* является обязательным, если *distributor_security_mode* имеет значение **0**. Аргумент *distributor_password* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @distributor_password = ] 'distributor_password'` Пароль распространителя. *distributor_password* является обязательным, если *distributor_security_mode* имеет значение **0**. Аргумент *distributor_password* имеет тип **sysname** и значение по умолчанию NULL.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] При возможности предлагать пользователю ввод учетных данных безопасности во время выполнения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  
   
 `[ @encrypted_password = ] encrypted_password` Параметр *encrypted_password* больше не поддерживается. Попытка присвоить этому параметру **bit** значение **1** приведет к ошибке.  
   
-`[ @frequency_type = ] frequency_type` Частота, с которой следует запланировать агент слияния. *frequency_type* имеет **тип int**и может принимать одно из следующих значений.  
+`[ @frequency_type = ] frequency_type` Частота, с которой следует запланировать агент слияния. *frequency_type* имеет **тип int** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -165,7 +165,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 > [!NOTE]  
 >  Указание значения **64** приводит к запуску агент слияния в непрерывном режиме. Это соответствует установке параметра **-Continuous** для агента. Дополнительные сведения см. в статье [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
   
-`[ @frequency_interval = ] frequency_interval` День или дни выполнения агент слияния. *frequency_interval* имеет **тип int**и может принимать одно из следующих значений.  
+`[ @frequency_interval = ] frequency_interval` День или дни выполнения агент слияния. *frequency_interval* имеет **тип int** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -181,38 +181,38 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**10**|По выходным дням|  
 |NULL (по умолчанию)||  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval` Дата агент слияния. Этот параметр используется, если *frequency_type* установлен в значение **32** (ежемесячное относительное расписание). *frequency_relative_interval* имеет **тип int**и может принимать одно из следующих значений.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` Дата агент слияния. Этот параметр используется, если *frequency_type* установлен в значение **32** (ежемесячное относительное расписание). *frequency_relative_interval* имеет **тип int** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |**1**|First|  
-|**2**|Second|  
+|**2**|Секунда|  
 |**4**|Третье|  
 |**8**|Четвертая|  
 |**16**|Последний|  
 |NULL (по умолчанию)||  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Коэффициент повторения, используемый *frequency_type*. *frequency_recurrence_factor* имеет **тип int**и значение по умолчанию NULL.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Коэффициент повторения, используемый *frequency_type*. *frequency_recurrence_factor* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @frequency_subday = ] frequency_subday` Частота повторного планирования в течение заданного периода. *frequency_subday* имеет **тип int**и может принимать одно из следующих значений.  
+`[ @frequency_subday = ] frequency_subday` Частота повторного планирования в течение заданного периода. *frequency_subday* имеет **тип int** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |**1**|Однократно|  
-|**2**|Second|  
+|**2**|Секунда|  
 |**4**|Минута|  
 |**8**|Час|  
 |NULL (по умолчанию)||  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval` Интервал для *frequency_subday*. *frequency_subday_interval* имеет **тип int**и значение по умолчанию NULL.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Интервал для *frequency_subday*. *frequency_subday_interval* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day` Время первого запланированного агент слияния в формате ЧЧММСС. *active_start_time_of_day* имеет **тип int**и значение по умолчанию NULL.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Время первого запланированного агент слияния в формате ЧЧММСС. *active_start_time_of_day* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day` Время суток, когда запланировать агент слияния прекращается в формате ЧЧММСС. *active_end_time_of_day* имеет **тип int**и значение по умолчанию NULL.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Время суток, когда запланировать агент слияния прекращается в формате ЧЧММСС. *active_end_time_of_day* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @active_start_date = ] active_start_date` Дата первого запланированного запуска агент слияния в формате ГГГГММДД. *active_start_date* имеет **тип int**и значение по умолчанию NULL.  
+`[ @active_start_date = ] active_start_date` Дата первого запланированного запуска агент слияния в формате ГГГГММДД. *active_start_date* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @active_end_date = ] active_end_date` Дата прекращения расписания агент слияния в формате ГГГГММДД. *active_end_date* имеет **тип int**и значение по умолчанию NULL.  
+`[ @active_end_date = ] active_end_date` Дата прекращения расписания агент слияния в формате ГГГГММДД. *active_end_date* имеет **тип int** и значение по умолчанию NULL.  
   
 `[ @optional_command_line = ] 'optional_command_line'` Необязательная Командная строка, предоставляемая агент слияния. *optional_command_line* имеет тип **nvarchar (255)** и значение по умолчанию "". Может использоваться для передачи агенту слияния дополнительных параметров. Следующий пример иллюстрирует увеличение времени ожидания выполнения запроса по умолчанию до `600` секунд.  
   
@@ -250,15 +250,15 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
  > [!NOTE]  
 >  Удаленная активация агента является устаревшей и больше не поддерживается. Этот аргумент поддерживается только для обратной совместимости скриптов. При установке *remote_agent_server_name* любого значения, отличного от NULL, будет выдаваться ошибка.  
   
-`[ @job_name = ] 'job_name' ]` Имя существующего задания агента. Аргумент *job_name* имеет тип **sysname**и значение по умолчанию NULL. Этот аргумент указывается только тогда, когда подписка будет синхронизироваться с использованием существующего задания, а не вновь создаваемого задания (выбор по умолчанию). Если вы не являетесь членом предопределенной роли сервера **sysadmin** , необходимо указать *job_login* и *job_password* при указании *job_name*.  
+`[ @job_name = ] 'job_name' ]` Имя существующего задания агента. Аргумент *job_name* имеет тип **sysname** и значение по умолчанию NULL. Этот аргумент указывается только тогда, когда подписка будет синхронизироваться с использованием существующего задания, а не вновь создаваемого задания (выбор по умолчанию). Если вы не являетесь членом предопределенной роли сервера **sysadmin** , необходимо указать *job_login* и *job_password* при указании *job_name*.  
   
 `[ @dynamic_snapshot_location = ] 'dynamic_snapshot_location' ]` Путь к папке, из которой будут считываться файлы моментальных снимков, если будет использоваться моментальный снимок отфильтрованных данных. *dynamic_snapshot_location* имеет тип **nvarchar (260)** и значение по умолчанию NULL. Дополнительные сведения см. в разделе [Параметризованные фильтры строк](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-`[ @use_web_sync = ] use_web_sync` Указывает, что веб-синхронизация включена. *use_web_sync* имеет **бит**и значение по умолчанию 0. **1** указывает, что подписка по запросу может быть синхронизирована через Интернет по протоколу HTTP.  
+`[ @use_web_sync = ] use_web_sync` Указывает, что веб-синхронизация включена. *use_web_sync* имеет **бит** и значение по умолчанию 0. **1** указывает, что подписка по запросу может быть синхронизирована через Интернет по протоколу HTTP.  
   
 `[ @internet_url = ] 'internet_url'` Расположение прослушивателя репликации (REPLISAPI.DLL) для веб-синхронизации. *internet_url* имеет тип **nvarchar (260)** и значение по умолчанию NULL. *internet_url* является полным URL-адресом в формате `http://server.domain.com/directory/replisapi.dll` . Если сервер настроен для прослушивания порта, отличного от 80-го, необходимо также задать номер порта в формате `http://server.domain.com:portnumber/directory/replisapi.dll`, где `portnumber` указывает номер порта.  
   
-`[ @internet_login = ] 'internet_login'` Имя входа, используемое агент слияния при соединении с веб-сервером, на котором размещается веб-синхронизация, с использованием обычной проверки подлинности HTTP. Аргумент *internet_login* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @internet_login = ] 'internet_login'` Имя входа, используемое агент слияния при соединении с веб-сервером, на котором размещается веб-синхронизация, с использованием обычной проверки подлинности HTTP. Аргумент *internet_login* имеет тип **sysname** и значение по умолчанию NULL.  
   
 `[ @internet_password = ] 'internet_password'` Пароль, используемый агент слияния при подключении к веб-серверу, на котором размещается веб-синхронизация, с использованием обычной проверки подлинности HTTP. *internet_password* имеет тип **nvarchar (524)** и значение по умолчанию NULL.  
   
@@ -275,13 +275,13 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 > [!NOTE]  
 >  При веб-синхронизации рекомендуется использовать обычную проверку подлинности. Чтобы использовать веб-синхронизацию, необходимо установить TLS-соединение с этим сервером. Дополнительные сведения см. в разделе [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).  
   
-`[ @internet_timeout = ] internet_timeout` Продолжительность времени в секундах до истечения срока действия запроса веб-синхронизации. *internet_timeout* имеет **тип int**и значение по умолчанию **300** секунд.  
+`[ @internet_timeout = ] internet_timeout` Продолжительность времени в секундах до истечения срока действия запроса веб-синхронизации. *internet_timeout* имеет **тип int** и значение по умолчанию **300** секунд.  
   
-`[ @hostname = ] 'hostname'` Переопределяет значение HOST_NAME (), если эта функция используется в предложении WHERE параметризованного фильтра. Аргумент *HostName* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @hostname = ] 'hostname'` Переопределяет значение HOST_NAME (), если эта функция используется в предложении WHERE параметризованного фильтра. Аргумент *HostName* имеет тип **sysname** и значение по умолчанию NULL.  
   
 `[ @job_login = ] 'job_login'` Имя входа для учетной записи Windows, под которой запускается агент. *job_login* имеет тип **nvarchar (257)** и не имеет значения по умолчанию. Эта учетная запись Windows всегда используется при соединениях агента с подписчиком и соединениях с распространителем и издателем, когда применяется встроенная проверка подлинности Windows.  
   
-`[ @job_password = ] 'job_password'` Пароль для учетной записи Windows, под которой запускается агент. Аргумент *job_password* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @job_password = ] 'job_password'` Пароль для учетной записи Windows, под которой запускается агент. Аргумент *job_password* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 > [!IMPORTANT]  
 >  Не храните данные проверки подлинности в файлах скриптов. Для обеспечения лучшей защиты имена входа и пароли должны вводиться в ходе выполнения.  
@@ -289,10 +289,10 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_addmergepullsubscription_agent** используется в репликации слиянием и использует функции, аналогичные [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md).  
   
- Пример правильного указания параметров безопасности при выполнении **sp_addmergepullsubscription_agent**см. в разделе [Создание подписки по запросу](../../relational-databases/replication/create-a-pull-subscription.md).  
+ Пример правильного указания параметров безопасности при выполнении **sp_addmergepullsubscription_agent** см. в разделе [Создание подписки по запросу](../../relational-databases/replication/create-a-pull-subscription.md).  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_addmergepullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergepullsubscript_1_1.sql)]  

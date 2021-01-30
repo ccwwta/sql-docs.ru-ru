@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - converting data from c to SQL types [ODBC], guid
 - data conversions from C to SQL types [ODBC], guid
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9168b0b6-a828-4fef-b8cd-bdf439776f23
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3fca2ba20df65222eaf1ce6f4384f449a1524334
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 22b47fa414244d777ec686f146834f28adff4868
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499987"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210022"
 ---
 # <a name="c-to-sql-guid"></a>Преобразование из C в SQL: GUID
 Идентификатор для типа данных ODBC C:  
@@ -31,13 +31,13 @@ ms.locfileid: "88499987"
   
 |Идентификатор типа SQL|Тест|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR|Длина байта столбца >= 36|Недоступно|  
+|SQL_CHAR|Длина байта столбца >= 36|н/д|  
 |SQL_VARCHAR|Длина байта столбца < 36|22001|  
 |SQL_LONGVARCHAR|Значение данных не является допустимым идентификатором GUID|22018|  
-|SQL_WCHAR|Длина символа столбца >= 36|Недоступно|  
+|SQL_WCHAR|Длина символа столбца >= 36|н/д|  
 |SQL_WVARCHAR|Длина символов столбца < 36|22001|  
 |SQL_WLONGVARCHAR|Значение данных не является допустимым идентификатором GUID|22018|  
-|SQL_GUID|Нет [a]|Недоступно|  
+|SQL_GUID|Нет [a]|н/д|  
   
  [a] все шестнадцатеричные значения допустимы в виде идентификатора GUID.  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_job_TSQL
 - sp_add_job
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 89f90d460287fadc9cdda97c020ccef7a47ceccd
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: 39f083d083a38e4a581c507354efaf6548471e7d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753867"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206802"
 ---
 # <a name="sp_add_job-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -58,21 +58,21 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_name = ] 'job_name'` Имя задания. Имя должно быть уникальным и не может содержать символ процента ( **%** ). *job_name*имеет тип **nvarchar (128)** и не имеет значения по умолчанию.  
+`[ @job_name = ] 'job_name'` Имя задания. Имя должно быть уникальным и не может содержать символ процента ( **%** ). *job_name* имеет тип **nvarchar (128)** и не имеет значения по умолчанию.  
   
-`[ @enabled = ] enabled` Указывает состояние добавленного задания. *Enabled*имеет тип **tinyint**и значение по умолчанию 1 (включено). Если значение **равно 0**, задание не включено и не выполняется в соответствии с расписанием. Однако его можно запустить вручную.  
+`[ @enabled = ] enabled` Указывает состояние добавленного задания. *Enabled* имеет тип **tinyint** и значение по умолчанию 1 (включено). Если значение **равно 0**, задание не включено и не выполняется в соответствии с расписанием. Однако его можно запустить вручную.  
   
 `[ @description = ] 'description'` Описание задания. *Description* имеет тип **nvarchar (512)** и значение по умолчанию NULL. Если *Описание* отсутствует, используется параметр "нет описания".  
   
-`[ @start_step_id = ] step_id` Идентификационный номер первого шага, выполняемого для задания. *step_id*имеет **тип int**и значение по умолчанию 1.  
+`[ @start_step_id = ] step_id` Идентификационный номер первого шага, выполняемого для задания. *step_id* имеет **тип int** и значение по умолчанию 1.  
   
-`[ @category_name = ] 'category'` Категория для задания. *Category*имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @category_name = ] 'category'` Категория для задания. *Category* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @category_id = ] category_id` Независимый от языка механизм для указания категории заданий. *category_id*имеет **тип int**и значение по умолчанию NULL.  
+`[ @category_id = ] category_id` Независимый от языка механизм для указания категории заданий. *category_id* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @owner_login_name = ] 'login'` Имя входа, владеющего заданием. Аргумент *Login*имеет тип **sysname**и значение по умолчанию NULL, которое интерпретируется как текущее имя входа. Только члены предопределенной роли сервера **sysadmin** могут устанавливать или изменять значение для ** \@ owner_login_name**. Если пользователи, не являющиеся участниками роли **sysadmin** , или изменяют значение ** \@ owner_login_name**, выполнение этой хранимой процедуры завершается неудачей и возвращается ошибка.  
+`[ @owner_login_name = ] 'login'` Имя входа, владеющего заданием. Аргумент *Login* имеет тип **sysname** и значение по умолчанию NULL, которое интерпретируется как текущее имя входа. Только члены предопределенной роли сервера **sysadmin** могут устанавливать или изменять значение для **\@ owner_login_name**. Если пользователи, не являющиеся участниками роли **sysadmin** , или изменяют значение **\@ owner_login_name**, выполнение этой хранимой процедуры завершается неудачей и возвращается ошибка.  
   
-`[ @notify_level_eventlog = ] eventlog_level` Значение, указывающее, когда следует поместить запись в журнал приложений Microsoft Windows для этого задания. *eventlog_level*имеет **тип int**и может принимать одно из следующих значений.  
+`[ @notify_level_eventlog = ] eventlog_level` Значение, указывающее, когда следует поместить запись в журнал приложений Microsoft Windows для этого задания. *eventlog_level* имеет **тип int** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -81,24 +81,24 @@ sp_add_job [ @job_name = ] 'job_name'
 |**2** (по умолчанию)|При сбое|  
 |**3**|Всегда|  
   
-`[ @notify_level_email = ] email_level` Значение, указывающее, когда следует отправить сообщение электронной почты после завершения этого задания. *email_level*имеет **тип int**и значение по умолчанию **0**, что означает Never. *email_level*использует те же значения, что и *eventlog_level*.  
+`[ @notify_level_email = ] email_level` Значение, указывающее, когда следует отправить сообщение электронной почты после завершения этого задания. *email_level* имеет **тип int** и значение по умолчанию **0**, что означает Never. *email_level* использует те же значения, что и *eventlog_level*.  
   
-`[ @notify_level_netsend = ] netsend_level` Значение, указывающее, когда следует отправить сетевое сообщение после завершения этого задания. *netsend_level*имеет **тип int**и значение по умолчанию **0**, что означает Never. *netsend_level* использует те же значения, что и *eventlog_level*.  
+`[ @notify_level_netsend = ] netsend_level` Значение, указывающее, когда следует отправить сетевое сообщение после завершения этого задания. *netsend_level* имеет **тип int** и значение по умолчанию **0**, что означает Never. *netsend_level* использует те же значения, что и *eventlog_level*.  
   
-`[ @notify_level_page = ] page_level` Значение, указывающее, когда следует отправить страницу после завершения этого задания. *page_level*имеет **тип int**и значение по умолчанию **0**, что означает Never. *page_level*использует те же значения, что и *eventlog_level*.  
+`[ @notify_level_page = ] page_level` Значение, указывающее, когда следует отправить страницу после завершения этого задания. *page_level* имеет **тип int** и значение по умолчанию **0**, что означает Never. *page_level* использует те же значения, что и *eventlog_level*.  
   
-`[ @notify_email_operator_name = ] 'email_name'` Адрес электронной почты пользователя, которому отправляется сообщение при достижении *email_level* . Аргумент *email_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @notify_email_operator_name = ] 'email_name'` Адрес электронной почты пользователя, которому отправляется сообщение при достижении *email_level* . Аргумент *email_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @notify_netsend_operator_name = ] 'netsend_name'` Имя оператора, которому отправляется сетевое сообщение после завершения этого задания. Аргумент *netsend_name*имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @notify_netsend_operator_name = ] 'netsend_name'` Имя оператора, которому отправляется сетевое сообщение после завершения этого задания. Аргумент *netsend_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @notify_page_operator_name = ] 'page_name'` Имя пользователя, которому будет присвоена страница после завершения этого задания. Аргумент *page_name*имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @notify_page_operator_name = ] 'page_name'` Имя пользователя, которому будет присвоена страница после завершения этого задания. Аргумент *page_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @delete_level = ] delete_level` Значение, указывающее, когда следует удалять задание. *delete_value*имеет **тип int**и значение по умолчанию 0, что означает никогда. *delete_level*использует те же значения, что и *eventlog_level*.  
+`[ @delete_level = ] delete_level` Значение, указывающее, когда следует удалять задание. *delete_value* имеет **тип int** и значение по умолчанию 0, что означает никогда. *delete_level* использует те же значения, что и *eventlog_level*.  
   
 > [!NOTE]  
 >  Если *delete_level* имеет значение **3**, задание выполняется только один раз, независимо от всех расписаний, определенных для задания. Если в какой-то момент задание удаляет себя, журнал этого задания также удаляется.  
   
-`[ @job_id = ] _job_idOUTPUT` Идентификационный номер задания, назначенный заданию при успешном создании. *job_id*является выходной переменной типа **uniqueidentifier**и ЗНАЧЕНИЕМ по умолчанию NULL.  
+`[ @job_id = ] _job_idOUTPUT` Идентификационный номер задания, назначенный заданию при успешном создании. *job_id* является выходной переменной типа **uniqueidentifier** и ЗНАЧЕНИЕМ по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -107,7 +107,7 @@ sp_add_job [ @job_name = ] 'job_name'
  None  
   
 ## <a name="remarks"></a>Remarks  
- ** \@ originating_server** существует в **sp_add_job,** но не указана в списке arguments. ** \@ originating_server** зарезервировано для внутреннего использования.  
+ **\@ originating_server** существует в **sp_add_job,** но не указана в списке arguments. **\@ originating_server** зарезервировано для внутреннего использования.  
   
  После выполнения **sp_add_job** для добавления задания **sp_add_jobstep** можно использовать для добавления действий, выполняющих действия для задания. **sp_add_jobschedule** можно использовать для создания расписания, используемого [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службой агента для выполнения задания. Используйте **sp_add_jobserver** , чтобы задать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляр, в котором выполняется задание, и **sp_delete_jobserver** , чтобы удалить задание из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляра.  
   
@@ -126,7 +126,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  Сведения о конкретных разрешениях, связанных с каждой из этих предопределенных ролей базы данных, см. в разделе агент SQL Server предопределенных [ролей базы данных](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Только члены предопределенной роли сервера **sysadmin** могут устанавливать или изменять значение для ** \@ owner_login_name**. Если пользователи, не являющиеся участниками роли **sysadmin** , или изменяют значение ** \@ owner_login_name**, выполнение этой хранимой процедуры завершается неудачей и возвращается ошибка.  
+ Только члены предопределенной роли сервера **sysadmin** могут устанавливать или изменять значение для **\@ owner_login_name**. Если пользователи, не являющиеся участниками роли **sysadmin** , или изменяют значение **\@ owner_login_name**, выполнение этой хранимой процедуры завершается неудачей и возвращается ошибка.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -168,7 +168,7 @@ EXEC dbo.sp_add_job
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
  [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   

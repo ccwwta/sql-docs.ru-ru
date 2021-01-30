@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropmergearticle
 - sp_dropmergearticle_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7c91fe7b1cc57630565fae398fc8cbc798df314a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 58759010972cd8bed8f32f909d0b326f8b964a13
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536542"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208265"
 ---
 # <a name="sp_dropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,21 +44,21 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` Имя публикации, из которой удаляется статья. Аргумент *publication*имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации, из которой удаляется статья. Аргумент *publication* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @article = ] 'article'` Имя статьи, которую нужно удалить из данной публикации. Аргумент *article*имеет тип **sysname**и не имеет значения по умолчанию. В случае **всех**существующих статей в указанной публикации слиянием удаляются все существующие статьи. Даже если *статья* **все**же, публикация все равно должна быть удалена отдельно от статьи.  
+`[ @article = ] 'article'` Имя статьи, которую нужно удалить из данной публикации. Аргумент *article* имеет тип **sysname** и не имеет значения по умолчанию. В случае **всех** существующих статей в указанной публикации слиянием удаляются все существующие статьи. Даже если *статья* **все** же, публикация все равно должна быть удалена отдельно от статьи.  
   
-`[ @ignore_distributor = ] ignore_distributor` Указывает, выполняется ли эта хранимая процедура без соединения с распространителем. *ignore_distributor* имеет **бит**и значение по умолчанию **0**.  
+`[ @ignore_distributor = ] ignore_distributor` Указывает, выполняется ли эта хранимая процедура без соединения с распространителем. *ignore_distributor* имеет **бит** и значение по умолчанию **0**.  
   
 `[ @reserved = ] reserved` Зарезервировано для будущего использования. *reserved* имеет тип **nvarchar (20)** и значение по умолчанию NULL.  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Включает или отключает возможность недействительности моментального снимка. *force_invalidate_snapshot* является **битом**и имеет значение по умолчанию **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Включает или отключает возможность недействительности моментального снимка. *force_invalidate_snapshot* является **битом** и имеет значение по умолчанию **0**.  
   
  **0** указывает, что изменения в статье слияния не приводят к недействительности моментального снимка.  
   
  **1** означает, что изменения в статье слияния могут привести к недействительности моментального снимка, и, если это так, значение **1** дает разрешение на создание нового моментального снимка.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription` Подтверждает, что удаление статьи требует повторной инициализации существующих подписок. *force_reinit_subscription* является **битом**и имеет значение по умолчанию **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Подтверждает, что удаление статьи требует повторной инициализации существующих подписок. *force_reinit_subscription* является **битом** и имеет значение по умолчанию **0**.  
   
  **0** указывает, что удаление статьи не приводит к повторной инициализации подписки.  
   
@@ -69,7 +69,7 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_dropmergearticle** используется в репликации слиянием. Дополнительные сведения об удалении статей см. в [статье Добавление и удаление статей в существующих публикациях](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
  При запуске **sp_dropmergearticle** для удаления статьи из публикации объект не удаляется из базы данных публикации или соответствующего объекта из базы данных подписки. При необходимости эти объекты могут быть удалены вручную при помощи инструкции `DROP <object>`.  

@@ -1,13 +1,13 @@
 ---
-description: managed_backup. fn_get_health_status (Transact-SQL)
-title: managed_backup. fn_get_health_status (Transact-SQL) | Документация Майкрософт
+description: managed_backup.fn_get_health_status managed_backup (Transact-SQL)
+title: managed_backup managed_backup.fn_get_health_status (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - fn_get_health_status_TSQL
 - smart_admin.fn_get_health_status_TSQL
@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4aa10efc95af42c7793fb37b49a72061353b0ee0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b139114cb7be4094c652f1fbf69313d4f7f1f2db
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419558"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207402"
 ---
-# <a name="managed_backupfn_get_health_status-transact-sql"></a>managed_backup. fn_get_health_status (Transact-SQL)
+# <a name="managed_backupfn_get_health_status-transact-sql"></a>managed_backup.fn_get_health_status managed_backup (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Возвращает таблицу, состоящую из 0, одной или более строк объединенного числа ошибок, указанных расширенными событиями в течение заданного периода времени.  
@@ -63,8 +63,8 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
 |number_of_backup_loops|INT|Число сканирований агентом резервного копирования всех баз данных, настроенных с помощью [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |number_of_retention_loops|INT|Количество сканирований баз данных, выполняемых для оценки заданного срока хранения.|  
   
-## <a name="best-practices"></a>Советы и рекомендации  
- Эти суммарные значения можно использовать для контроля состояния работоспособности системы. Например, если столбец number_of_retention_loops получает значение 0 за 30 минут, то, возможно, управление хранением работает слишком долго или неправильно. Ненулевые столбцы ошибок могут означать неполадки, и для обнаружения проблемы следует ознакомиться с журналами расширенных событий. Кроме того, можно использовать хранимую процедуру **managed_backup. sp_get_backup_diagnostics** , чтобы получить список расширенных событий, чтобы найти подробные сведения об ошибке.  
+## <a name="best-practices"></a>Рекомендации  
+ Эти суммарные значения можно использовать для контроля состояния работоспособности системы. Например, если столбец number_of_retention_loops получает значение 0 за 30 минут, то, возможно, управление хранением работает слишком долго или неправильно. Ненулевые столбцы ошибок могут означать неполадки, и для обнаружения проблемы следует ознакомиться с журналами расширенных событий. Кроме того, можно использовать хранимую процедуру **managed_backup. sp_get_backup_diagnostics** для получения списка расширенных событий, чтобы найти подробные сведения об ошибке.  
   
 ## <a name="security"></a>Безопасность  
   

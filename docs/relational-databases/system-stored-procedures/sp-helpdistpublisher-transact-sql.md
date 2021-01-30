@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpdistpublisher_TSQL
 - sp_helpdistpublisher
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 129192de74a83232334437035599cffe24a910d8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 461a186656cbef0d1a83eecb2a3e58d63ab896ac
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543350"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209307"
 ---
 # <a name="sp_helpdistpublisher-transact-sql"></a>Хранимая процедура sp_helpdistpublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +39,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'` Издатель, для которого возвращаются свойства. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию **%** .  
+`[ @publisher = ] 'publisher'` Издатель, для которого возвращаются свойства. Аргумент *Publisher* имеет тип **sysname** и значение по умолчанию **%** .  
   
 `[ @check_user = ] check_user` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -50,7 +50,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 |**name**|**sysname**|Имя издателя.|  
 |**distribution_db**|**sysname**|База данных распространителя для указанного издателя.|  
 |**security_mode**|**int**|Режим безопасности, используемый агентами репликации для подключения к издателю обновляемых посредством очередей подписок, или к издателю, не являющемуся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности<br /><br /> **1** = проверка подлинности Windows|  
-|**пользователей**|**sysname**|Имя входа, используемое агентами репликации для подключения к издателю обновляемых посредством очередей подписок, или к издателю, не являющемуся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**login**|**sysname**|Имя входа, используемое агентами репликации для подключения к издателю обновляемых посредством очередей подписок, или к издателю, не являющемуся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**password**|**nvarchar (524)**|Возвращаемый пароль (в простой зашифрованной форме). Пароль имеет значение NULL для пользователей, отличных от **sysadmin**.|  
 |**active**|**bit**|Использует ли удаленный издатель локальный сервер в качестве распространителя:<br /><br /> **0** = Нет<br /><br /> **1** = Да|  
 |**working_directory**|**nvarchar(255)**|Имя рабочего каталога.|  
@@ -63,15 +63,15 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_helpdistpublisher** используется во всех типах репликации.  
   
- **sp_helpdistpublisher** не будет отображать имя или пароль издателя в результирующем наборе для имен входа, не являющихся**администраторами** .  
+ **sp_helpdistpublisher** не будет отображать имя или пароль издателя в результирующем наборе для имен входа, не являющихся **администраторами** .  
   
 ## <a name="permissions"></a>Разрешения  
  Члены предопределенной роли сервера **sysadmin** могут выполнять **Sp_helpdistpublisher** для любого издателя, использующего локальный сервер в качестве распространителя. Члены предопределенной роли базы данных **db_owner** или роли **replmonitor** в базе данных распространителя могут выполнять **sp_helpdistpublisher** для любого издателя, использующего эту базу данных распространителя. Пользователи из списка доступа к публикации для публикации на указанном *издателе* могут выполнять **sp_helpdistpublisher**. Если параметр *Publisher* не указан, возвращаются сведения для всех издателей, к которым у пользователя есть права доступа.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Просмотр и изменение свойств издателя и распространителя](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_changedistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   

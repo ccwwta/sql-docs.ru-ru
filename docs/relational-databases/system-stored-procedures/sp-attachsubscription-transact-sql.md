@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_attachsubscription
 - sp_attachsubscription_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 25a617eeac0926e6bcb80f99125603072ee34be8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a7357d6a37472d9d530dfcf3ecfe3c9bddfffd58
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539158"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206642"
 ---
 # <a name="sp_attachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,46 +54,46 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @dbname = ] 'dbname'` Строка, указывающая целевую базу данных подписки по имени. Аргумент *dbname* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @dbname = ] 'dbname'` Строка, указывающая целевую базу данных подписки по имени. Аргумент *dbname* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 `[ @filename = ] 'filename'` — Это имя и физическое расположение основного MDF-**файла (основной** файл данных). *filename* имеет тип **nvarchar (260)** и не имеет значения по умолчанию.  
   
-`[ @subscriber_security_mode = ] 'subscriber_security_mode'` Режим безопасности подписчика, используемый при соединении с подписчиком при синхронизации. *subscriber_security_mode* имеет **тип int**и значение по умолчанию NULL.  
+`[ @subscriber_security_mode = ] 'subscriber_security_mode'` Режим безопасности подписчика, используемый при соединении с подписчиком при синхронизации. *subscriber_security_mode* имеет **тип int** и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Необходимо использовать проверку подлинности Windows. Если *subscriber_security_mode* не равен **1** (проверка подлинности Windows), возвращается ошибка.  
   
-`[ @subscriber_login = ] 'subscriber_login'` Имя входа подписчика, используемое при соединении с подписчиком при синхронизации. Аргумент *subscriber_login* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @subscriber_login = ] 'subscriber_login'` Имя входа подписчика, используемое при соединении с подписчиком при синхронизации. Аргумент *subscriber_login* имеет тип **sysname** и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Если *subscriber_security_mode* не равен **1** , а *subscriber_login* указан, возвращается ошибка.  
   
-`[ @subscriber_password = ] 'subscriber_password'` Пароль подписчика. Аргумент *subscriber_password* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @subscriber_password = ] 'subscriber_password'` Пароль подписчика. Аргумент *subscriber_password* имеет тип **sysname** и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Данный аргумент является устаревшим и сохранен только для поддержки обратной совместимости скриптов. Если *subscriber_security_mode* не равен **1** , а *subscriber_password* указан, возвращается ошибка.  
   
-`[ @distributor_security_mode = ] distributor_security_mode` Режим безопасности, используемый при соединении с распространителем при синхронизации. *distributor_security_mode* имеет **тип int**и значение по умолчанию **0**. **0** — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности. **1** указывает проверку подлинности Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @distributor_security_mode = ] distributor_security_mode` Режим безопасности, используемый при соединении с распространителем при синхронизации. *distributor_security_mode* имеет **тип int** и значение по умолчанию **0**. **0** — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности. **1** указывает проверку подлинности Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @distributor_login = ] 'distributor_login'` Имя входа распространителя, используемое при соединении с распространителем при синхронизации. *distributor_login* является обязательным, если *distributor_security_mode* имеет значение **0**. Аргумент *distributor_login* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @distributor_login = ] 'distributor_login'` Имя входа распространителя, используемое при соединении с распространителем при синхронизации. *distributor_login* является обязательным, если *distributor_security_mode* имеет значение **0**. Аргумент *distributor_login* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @distributor_password = ] 'distributor_password'` Пароль распространителя. *distributor_password* является обязательным, если *distributor_security_mode* имеет значение **0**. Аргумент *distributor_password* имеет тип **sysname**и значение по умолчанию NULL. Значение *distributor_password* должно быть меньше 120 символов Юникода.  
+`[ @distributor_password = ] 'distributor_password'` Пароль распространителя. *distributor_password* является обязательным, если *distributor_security_mode* имеет значение **0**. Аргумент *distributor_password* имеет тип **sysname** и значение по умолчанию NULL. Значение *distributor_password* должно быть меньше 120 символов Юникода.  
   
 > [!IMPORTANT]  
 >  Не используйте пустые пароли. Выбирайте надежные пароли. По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  
   
-`[ @publisher_security_mode = ] publisher_security_mode` Режим безопасности, используемый при соединении с издателем при синхронизации. *publisher_security_mode* имеет **тип int**и значение по умолчанию **1**. Если значение **равно 0**, то задает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверку подлинности. Если значение равно **1**, указывает проверку подлинности Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode` Режим безопасности, используемый при соединении с издателем при синхронизации. *publisher_security_mode* имеет **тип int** и значение по умолчанию **1**. Если значение **равно 0**, то задает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверку подлинности. Если значение равно **1**, указывает проверку подлинности Windows. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @publisher_login = ] 'publisher_login'` Имя входа, используемое при соединении с издателем при синхронизации. Аргумент *publisher_login* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher_login = ] 'publisher_login'` Имя входа, используемое при соединении с издателем при синхронизации. Аргумент *publisher_login* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @publisher_password = ] 'publisher_password'` Пароль, используемый при соединении с издателем. Аргумент *publisher_password* имеет тип **sysname**и значение по умолчанию NULL. Значение *publisher_password* должно быть меньше 120 символов Юникода.  
+`[ @publisher_password = ] 'publisher_password'` Пароль, используемый при соединении с издателем. Аргумент *publisher_password* имеет тип **sysname** и значение по умолчанию NULL. Значение *publisher_password* должно быть меньше 120 символов Юникода.  
   
 > [!IMPORTANT]  
 >  Не используйте пустые пароли. Выбирайте надежные пароли. По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  
   
 `[ @job_login = ] 'job_login'` Имя входа для учетной записи Windows, под которой запускается агент. *job_login* имеет тип **nvarchar (257)** и не имеет значения по умолчанию. Для соединения агента с распространителем всегда используется эта учетная запись Windows.  
   
-`[ @job_password = ] 'job_password'` Пароль для учетной записи Windows, под которой запускается агент. Аргумент *job_password* имеет тип **sysname**и не имеет значения по умолчанию. Значение *job_password* должно быть меньше 120 символов Юникода.  
+`[ @job_password = ] 'job_password'` Пароль для учетной записи Windows, под которой запускается агент. Аргумент *job_password* имеет тип **sysname** и не имеет значения по умолчанию. Значение *job_password* должно быть меньше 120 символов Юникода.  
   
 > [!IMPORTANT]  
 >  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  
@@ -106,7 +106,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_attachsubscription** используется в репликации моментальных снимков, репликации транзакций и репликации слиянием.  
   
  Подписка не может быть присоединена к публикации, если срок хранения публикации истек. При указании подписки с истекшим сроком хранения публикации возникает ошибка при присоединении или первой синхронизации подписки. Публикации с сроком хранения публикации **0** (никогда не истекает) игнорируются.  
@@ -114,7 +114,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_attachsubscription**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

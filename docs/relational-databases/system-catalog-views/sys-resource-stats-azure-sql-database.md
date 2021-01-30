@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 09/13/2018
 ms.service: sql-database
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - resource_stats
 - sys.resource_stats
@@ -20,12 +20,12 @@ ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: 835fcabe9a247efb7cf280eb89a0baefd4076640
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 14785888953906f42b2196dc2cb06ca35cfc3a8b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97429130"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99210031"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats (база данных SQL Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "97429130"
 ## <a name="permissions"></a>Разрешения  
  Это представление доступно для всех ролей пользователей с разрешениями на подключение к виртуальной базе данных **master** .  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Данные, возвращаемые **sys.resource_stats** , выражаются в процентном отношении к максимально допустимому уровню обслуживания или уровня производительности, который вы используете.  
   
  Если база данных является членом эластичного пула, то статистика ресурсов, представленная в виде процентных значений, выражается в процентах от максимального предела для баз данных, как указано в конфигурации эластичного пула.  

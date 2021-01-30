@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_log_shipping_secondary_database
 - sp_add_log_shipping_secondary_database_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 384884e2b2b076b20cb9c679c3494a7c292f77a1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d13a58428c4fefe2cc19668de22e604f721d0a96
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464674"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99206705"
 ---
 # <a name="sp_add_log_shipping_secondary_database-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,11 +54,11 @@ sp_add_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @secondary_database = ] 'secondary_database'` Имя базы данных-получателя. Аргумент *secondary_database* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @secondary_database = ] 'secondary_database'` Имя базы данных-получателя. Аргумент *secondary_database* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 `[ @primary_server = ] 'primary_server'` Имя основного экземпляра в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] конфигурации доставки журналов. *primary_server* имеет тип **sysname** и не может иметь значение null.  
   
-`[ @primary_database = ] 'primary_database'` Имя базы данных на сервере-источнике. Аргумент *primary_database* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @primary_database = ] 'primary_database'` Имя базы данных на сервере-источнике. Аргумент *primary_database* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 `[ @restore_delay = ] 'restore_delay'` Время в минутах, в течение которого сервер-получатель ждет перед восстановлением заданного файла резервной копии. *restore_delay* имеет **тип int** и не может иметь значение null. Значение по умолчанию — 0.  
   
@@ -82,11 +82,11 @@ sp_add_log_shipping_secondary_database
   
 `[ @restore_threshold = ] 'restore_threshold'` Количество минут между операциями восстановления до создания предупреждения. *restore_threshold* имеет **тип int** и не может иметь значение null.  
   
-`[ @threshold_alert = ] 'threshold_alert'` Предупреждение, создаваемое при превышении порогового значения резервного копирования. *threshold_alert* имеет **тип int**и значение по умолчанию 14 420.  
+`[ @threshold_alert = ] 'threshold_alert'` Предупреждение, создаваемое при превышении порогового значения резервного копирования. *threshold_alert* имеет **тип int** и значение по умолчанию 14 420.  
   
 `[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` Указывает, возникает ли предупреждение при превышении *backup_threshold* . При значении, равном единице (1), устанавливаемом по умолчанию, предупреждение будет инициировано. *threshold_alert_enabled* имеет **бит**.  
   
-`[ @history_retention_period = ] 'history_retention_period'` Продолжительность времени в минутах, в течение которого сохраняется журнал. *history_retention_period* имеет **тип int**и значение по умолчанию NULL. Если ничего не указано, используется значение 14 420.  
+`[ @history_retention_period = ] 'history_retention_period'` Продолжительность времени в минутах, в течение которого сохраняется журнал. *history_retention_period* имеет **тип int** и значение по умолчанию NULL. Если ничего не указано, используется значение 14 420.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

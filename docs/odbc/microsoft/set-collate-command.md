@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - set collate command [ODBC]
 ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5ca796da60adf0c432b5bbd80065e58563664bc5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f6158f79c589e446c2b3c106a1d14fd58715714f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466386"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208651"
 ---
 # <a name="set-collate-command"></a>Команда SET COLLATE
 Задает последовательность параметров сортировки для полей символов в последующих операциях индексирования и сортировки.  
@@ -34,7 +34,7 @@ SET COLLATE TO cSequenceName
  *ксекуенценаме*  
  Задает последовательность параметров сортировки. Доступные параметры последовательности сортировки описаны в следующей таблице.  
   
-|Варианты|Язык|  
+|Параметры|Язык|  
 |-------------|--------------|  
 |нидерландский|Нидерландский|  
 |GENERAL|Английский, французский, немецкий, современный испанский, португальский и другие западноевропейские языки|  
@@ -69,10 +69,10 @@ SET COLLATE TO "SWEFIN"
 SET COLLATE TO cSequenceName  
 ```  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  SET COLLATE позволяет упорядочивать таблицы, содержащие диакритические знаки, для любого из поддерживаемых языков. Изменение параметра SET COLLATE не влияет на последовательность сортировки ранее открытых индексов. Visual FoxPro автоматически поддерживает существующие индексы, обеспечивая гибкость при создании множества различных типов индексов, даже для одного поля.  
   
  Например, если создается индекс с параметром SET Collation, равным GENERAL, а Настройка параметров сортировки в дальнейшем изменится на Испанский, то в индексе будет храниться общая последовательность параметров сортировки.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диалоговое окно настройки ODBC для Visual FoxPro](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)

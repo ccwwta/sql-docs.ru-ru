@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - date data type [ODBC]
 - converting data from c to SQL types [ODBC], date
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bea087d3-911f-418b-b483-d2b5b334da19
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f9d8bed4b16ee1c63134cdb9e1ae0b8303b0deb5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a0724309642b8a6dc640b6159715927544d74733
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500007"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207852"
 ---
 # <a name="c-to-sql-date"></a>Преобразование из C в SQL: даты
 Идентификатор для типа данных Date ODBC C:  
@@ -31,10 +31,10 @@ ms.locfileid: "88500007"
   
 |Идентификатор типа SQL|Тест|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Длина байта столбца >= 10<br /><br /> Длина байта столбца < 10<br /><br /> Значение данных не является допустимой датой|Недоступно<br /><br /> 22001<br /><br /> 22008|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Длина символа столбца >= 10<br /><br /> Длина символа столбца < 10<br /><br /> Значение данных не является допустимой датой|Недоступно<br /><br /> 22001<br /><br /> 22008|  
-|SQL_TYPE_DATE|Значение данных является допустимой датой<br /><br /> Значение данных не является допустимой датой|Недоступно<br /><br /> 22007|  
-|SQL_TYPE_TIMESTAMP|Значение данных является допустимой датой [a]<br /><br /> Значение данных не является допустимой датой|Недоступно<br /><br /> 22007|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Длина байта столбца >= 10<br /><br /> Длина байта столбца < 10<br /><br /> Значение данных не является допустимой датой|н/д<br /><br /> 22001<br /><br /> 22008|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Длина символа столбца >= 10<br /><br /> Длина символа столбца < 10<br /><br /> Значение данных не является допустимой датой|н/д<br /><br /> 22001<br /><br /> 22008|  
+|SQL_TYPE_DATE|Значение данных является допустимой датой<br /><br /> Значение данных не является допустимой датой|н/д<br /><br /> 22007|  
+|SQL_TYPE_TIMESTAMP|Значение данных является допустимой датой [a]<br /><br /> Значение данных не является допустимой датой|н/д<br /><br /> 22007|  
   
  [a] временная часть метки времени имеет значение 0.  
   

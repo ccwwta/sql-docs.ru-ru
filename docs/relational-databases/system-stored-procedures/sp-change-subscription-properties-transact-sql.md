@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_change_subscription_properties_TSQL
 - sp_change_subscription_properties
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ad4761fdbac615ad453741a0b01d410ca3b5d572
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ed6615b10487744ae5ac5c0775627bea97e29c66
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89528889"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208300"
 ---
 # <a name="sp_change_subscription_properties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,23 +43,23 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'` Имя издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'` Имя издателя. параметр *Publisher* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @publisher_db = ] 'publisher_db'` Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'` Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 `[ @property = ] 'property'` Изменяемое свойство. *свойство* имеет тип **sysname**.  
   
 `[ @value = ] 'value'` Новое значение свойства. *value* имеет тип **nvarchar (1000)** и не имеет значения по умолчанию.  
   
-`[ @publication_type = ] publication_type` Указывает тип репликации публикации. *publication_type* имеет **тип int**и может принимать одно из следующих значений.  
+`[ @publication_type = ] publication_type` Указывает тип репликации публикации. *publication_type* имеет **тип int** и может принимать одно из следующих значений.  
   
 |Значение|Тип публикации|  
 |-----------|----------------------|  
 |**0**|Транзакционную|  
 |**1**|Моментальный снимок|  
-|**2**|Объединение|  
+|**2**|Объединить|  
 |NULL (по умолчанию)|Репликация определяет тип публикации. Так как хранимая процедура должна выполнять просмотр в нескольких таблицах, работа при указании этого значения производится медленнее, чем в случае, когда предоставлен точный тип публикации.|  
   
  Эта таблица описывает свойства статей и значения этих свойств.  
@@ -103,7 +103,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_change_subscription_properties** используется во всех типах репликации.  
   
  **sp_change_subscription_properties** используется для подписок по запросу.  

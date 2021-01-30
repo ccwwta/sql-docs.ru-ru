@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_fulltext_catalog_components_TSQL
 - sp_help_fulltext_catalog_components
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2884cda986a99f23c88c71c8960d25a467de0663
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6a3854205649215de979c2421c2a8e506e826245
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548046"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208911"
 ---
 # <a name="sp_help_fulltext_catalog_components-transact-sql"></a>sp_help_fulltext_catalog_components (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ sp_help_fulltext_catalog_components
 |-----------------|---------------|-----------------|  
 |**имя полнотекстового каталога**|**int**|Имя полнотекстового каталога.|  
 |**Идентификатор полнотекстового каталога**|**sysname**|Идентификатор полнотекстового каталога.|  
-|**componenttype**|**sysname**|Тип компонента. Это может быть:<br /><br /> Filter<br /><br /> Обработчик протокола<br /><br /> Средство разбиения по словам|  
+|**componenttype**|**sysname**|Тип компонента. Это может быть:<br /><br /> Фильтр<br /><br /> Обработчик протокола<br /><br /> Средство разбиения по словам|  
 |**ComponentName**|**sysname**|Имя компонента.|  
 |**этому**|**uniqueidentifier**|Идентификатор класса компонента.|  
 |**FullPath**|**nvarchar(256)**|Путь к расположению компонента.<br /><br /> NULL = вызывающая сторона не является членом предопределенной роли сервера **serveradmin** .|  

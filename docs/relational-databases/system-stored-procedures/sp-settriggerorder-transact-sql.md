@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_settriggerorder
 - sp_settriggerorder_TSQL
@@ -19,12 +19,12 @@ ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d8ef1360e35d084703a4f86590ade57be6a4c24
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f7977873f4b2887b736ffc16f5592340f5b87dee
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468305"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207369"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,11 +55,11 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 |-----------|-----------------|  
 |**Первая**|Триггер срабатывает первым.|  
 |**Последняя**|Триггер срабатывает последним.|  
-|**Нет**|Порядок срабатывания триггера не определен.|  
+|**None**|Порядок срабатывания триггера не определен.|  
   
 `[ @stmttype = ] 'statement_type'` Указывает инструкцию SQL, которая запускает триггер. *statement_type* имеет тип **varchar (50)** и может использоваться для вставки, обновления, удаления, входа в систему или любого [!INCLUDE[tsql](../../includes/tsql-md.md)] события инструкции, указанного в [DDL-событиях](../../relational-databases/triggers/ddl-events.md). Группы событий задавать нельзя.  
   
- Триггер можно назначить **первым** или **последним** триггером для типа инструкции только после того, как триггер был определен как триггер для этого типа инструкции. Например, триггер **TR1** может быть назначен **первым** для инструкции INSERT в таблице **T1** , если **TR1** определен как триггер INSERT. [!INCLUDE[ssDE](../../includes/ssde-md.md)]Функция возвращает ошибку, если **TR1**, который был определен только как триггер INSERT, устанавливается в качестве **первого** или **последнего** триггера для инструкции UPDATE. Дополнительные сведения см. в разделе "Примечания".  
+ Триггер можно назначить **первым** или **последним** триггером для типа инструкции только после того, как триггер был определен как триггер для этого типа инструкции. Например, триггер **TR1** может быть назначен **первым** для инструкции INSERT в таблице **T1** , если **TR1** определен как триггер INSERT. [!INCLUDE[ssDE](../../includes/ssde-md.md)]Функция возвращает ошибку, если **TR1**, который был определен только как триггер INSERT, устанавливается в качестве **первого** или **последнего** триггера для инструкции UPDATE. Дополнительные сведения см. в разделе «Примечания».  
   
  **\@ Namespace =** { **' база данных**'  |  **' сервер '** | ЗАКАНЧИВАЮЩ  
  Если *triggername* является триггером DDL, **\@ пространство имен** указывает, была ли *triggername* создана с областью базы данных или областью сервера. Если *triggername* является триггером входа, необходимо указать Server. Дополнительные сведения об области триггера DDL см. в разделе [триггеры DDL](../../relational-databases/triggers/ddl-triggers.md). Если не указано или указано значение NULL, *triggername* является триггером DML.  
@@ -69,7 +69,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) и 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
   
 ## <a name="dml-triggers"></a>Триггеры DML  
  Для каждой инструкции в одной таблице может быть только один **первый** и один **последний** триггер.  

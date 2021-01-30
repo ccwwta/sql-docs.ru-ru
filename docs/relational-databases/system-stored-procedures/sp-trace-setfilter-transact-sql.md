@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_trace_setfilter
 - sp_trace_setfilter_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8edccbecb7d5a44b2fc8a5eed2297498c0f94bae
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b068b4659b3c3205aa52d6ebffc0daf680c3cd9d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547850"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99209716"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,13 +47,13 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @traceid = ] trace_id` Идентификатор трассировки, для которой задан фильтр. *trace_id* имеет **тип int**и не имеет значения по умолчанию. Пользователь использует это *trace_id* значение для выявления, изменения и управления трассировкой.  
+`[ @traceid = ] trace_id` Идентификатор трассировки, для которой задан фильтр. *trace_id* имеет **тип int** и не имеет значения по умолчанию. Пользователь использует это *trace_id* значение для выявления, изменения и управления трассировкой.  
   
-`[ @columnid = ] column_id` Идентификатор столбца, к которому применяется фильтр. *column_id* имеет **тип int**и не имеет значения по умолчанию. Если *column_id* имеет значение null, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] очищает все фильтры для указанной трассировки.  
+`[ @columnid = ] column_id` Идентификатор столбца, к которому применяется фильтр. *column_id* имеет **тип int** и не имеет значения по умолчанию. Если *column_id* имеет значение null, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] очищает все фильтры для указанной трассировки.  
   
-`[ @logical_operator = ] logical_operator` Указывает, применяется ли оператор AND (**0**) или OR (**1**). *logical_operator* имеет **тип int**и не имеет значения по умолчанию.  
+`[ @logical_operator = ] logical_operator` Указывает, применяется ли оператор AND (**0**) или OR (**1**). *logical_operator* имеет **тип int** и не имеет значения по умолчанию.  
   
-`[ @comparison_operator = ] comparison_operator` Указывает тип выполняемого сравнения. *comparison_operator* имеет **тип int**и не имеет значения по умолчанию. В таблице содержатся операторы сравнения и представляющие их значения.  
+`[ @comparison_operator = ] comparison_operator` Указывает тип выполняемого сравнения. *comparison_operator* имеет **тип int** и не имеет значения по умолчанию. В таблице содержатся операторы сравнения и представляющие их значения.  
   
 |Значение|Оператор сравнения|  
 |-----------|-------------------------|  
@@ -92,7 +92,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |13|Недостаточно памяти. Возвращается, когда для выполнения указанного действия недостаточно памяти.|  
 |16|Недопустимая функция для данной трассировки.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_trace_setfilter** — это [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранимая процедура, которая выполняет многие действия, ранее выполненные расширенными хранимыми процедурами, доступными в более ранних версиях служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Используйте **sp_trace_setfilter** вместо **xp_trace_set \* фильтрации** расширенных хранимых процедур для создания, применения и удаления фильтров в трассировке. Дополнительные сведения см. [в разделе Фильтрация трассировки](../../relational-databases/sql-trace/filter-a-trace.md).  
   
  Все фильтры для определенного столбца должны быть включены одновременно в одном выполнении **sp_trace_setfilter**. Например, если пользователь собирается применить два фильтра к столбцу имен приложений и один фильтр к столбцу имен пользователей, то ему потребуется указать фильтры для имен приложений последовательно. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает ошибку, когда пользователь пытается указать фильтр по имени приложения в пределах одного хранимого вызова процедуры, за которым указывается фильтр по имени пользователя, после чего — второй фильтр по имени приложения.  

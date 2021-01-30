@@ -1,13 +1,13 @@
 ---
-description: managed_backup. fn_available_backups (Transact-SQL)
-title: managed_backup. fn_available_backups (Transact-SQL) | Документация Майкрософт
+description: managed_backup.fn_available_backups managed_backup (Transact-SQL)
+title: managed_backup managed_backup.fn_available_backups (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - smart_admin.fn_available_backups
 - smart_admin.fn_available_backups_TSQL
@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 23c7f7cb176bf91494b41cf8b81435b287d261fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e64cba484413a0d5ebc1a8365d0e843c49ba7692
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419538"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207441"
 ---
-# <a name="managed_backupfn_available_backups-transact-sql"></a>managed_backup. fn_available_backups (Transact-SQL)
+# <a name="managed_backupfn_available_backups-transact-sql"></a>managed_backup.fn_available_backups managed_backup (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Возвращает таблицу, где нуль, одна или несколько строк, для доступных файлов резервных копий для указанной базы данных. Возвращаемые файлы резервных копий являются резервными копиями, созданными [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
