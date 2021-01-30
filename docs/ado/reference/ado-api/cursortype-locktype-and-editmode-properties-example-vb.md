@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2cb4a304-f40a-4897-8b93-82c2d8e93500
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2980b26402b1db1b9b0e634a4acd0dcdeec2be30
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4451b3e733fa593a0c2c3c0f1d48ba4d24c697de
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88974335"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167630"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>Примеры свойств примеры CursorType, LockType и EditMode (Visual Basic)
 В этом примере показано задание свойств [примеры CursorType](./cursortype-property-ado.md) и [LockType](./locktype-property-ado.md) перед открытием [набора записей](./recordset-object-ado.md). Он также показывает значение свойства [EditMode](./editmode-property.md) в различных условиях. Для выполнения этой процедуры требуется функция Едитмодеаутпут.  
@@ -123,7 +123,7 @@ End Function
 'EndEditModeVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство примеры CursorType (ADO)](./cursortype-property-ado.md)   
  [курсортипинум](./cursortypeenum.md)   
  [EditMode, свойство](./editmode-property.md)   

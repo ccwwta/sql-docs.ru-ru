@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7d30aa737f78ba6356ac5104ca24ceeaf2f5504a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 29ef200146cdd048375c815e426f3d208095238f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990795"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167212"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>Пример свойств IsolationLevel и Mode (Visual c++)
 В этом примере свойство [mode](./mode-property-ado.md) используется для открытия монопольного соединения, а свойство [IsolationLevel](./isolationlevel-property.md) — для открытия транзакции, которая выполняет изоляцию других транзакций.  
@@ -244,6 +244,6 @@ void PrintComError(_com_error &e) {
 **Луковиц, ликс и чесночный: секреты кулинарных Средиземноморье-trad_cook**  
 **50 лет в Буккингхам Palace Китченс-trad_cook**  
 **Суши, кто угодно? — trad_cook**   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [IsolationLevel, свойство](./isolationlevel-property.md)   
  [Свойство Mode (ADO)](./mode-property-ado.md)

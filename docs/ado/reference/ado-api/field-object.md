@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Field
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: b10a72fc-3c4b-4186-a70b-993dc9f7a092
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4768281228e39ed8eeb6ffc003e463bf8a53450d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6042032018ea75eb7b2b13bb677ad48dca56290b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973235"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167374"
 ---
 # <a name="field-object"></a>Объект Field
 Представляет столбец данных с общим типом данных.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Каждый объект **field** соответствует столбцу в [наборе записей](../../../ado/reference/ado-api/recordset-object-ado.md). Свойство [value](../../../ado/reference/ado-api/value-property-ado.md) объектов **field** используется для задания или возврата данных для текущей записи. В зависимости от функциональных возможностей, предоставляемых поставщиком, некоторые коллекции, методы или свойства объекта **field** могут быть недоступны.  
   
  С помощью коллекций, методов и свойств объекта **field** можно выполнять следующие действия.  
@@ -47,13 +47,13 @@ ms.locfileid: "88973235"
   
 -   Если поставщик поддерживает пакетные обновления, устраните расхождения в значениях полей во время пакетного обновления с помощью свойств [originalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) и [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) .  
   
- Все свойства метаданных (**имя**, **Тип**, **DefinedSize**, **точность**и **NumericScale**) доступны перед открытием **набора записей**объекта **поля** . Их установка в это время полезна для динамического создания форм.  
+ Все свойства метаданных (**имя**, **Тип**, **DefinedSize**, **точность** и **NumericScale**) доступны перед открытием **набора записей** объекта **поля** . Их установка в это время полезна для динамического создания форм.  
   
  Этот раздел содержит следующий раздел.  
   
 -   [Свойства, методы и события объекта Field](../../../ado/reference/ado-api/field-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Коллекция Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

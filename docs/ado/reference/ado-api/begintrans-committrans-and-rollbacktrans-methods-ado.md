@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Connection15::raw_RollbackTrans
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 02c19026d519cf5c115dedfbe4c4dcdbf89cd37b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: de30ee4629d66371e41180e0caf171a91237d65c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975935"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167855"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>Методы BeginTrans, CommitTrans и RollbackTrans (ADO)
 Эти методы транзакций управляют обработкой транзакций в объекте [соединения](./connection-object-ado.md) следующим образом:  
@@ -71,12 +71,12 @@ object.RollbackTrans
  В зависимости от свойства [атрибута](./attributes-property-ado.md) объекта **Connection** вызов методов **CommitTrans** или **RollbackTrans** может автоматически начать новую транзакцию. Если свойство **Attributes** имеет значение **адксакткоммитретаининг**, то поставщик автоматически запускает новую транзакцию после вызова **CommitTrans** . Если свойство **Attributes** имеет значение **адксактабортретаининг**, то поставщик автоматически запускает новую транзакцию после вызова **RollbackTrans** .  
   
 ## <a name="remote-data-service"></a>Remote Data Service  
- Методы **примеры BeginTrans**, **CommitTrans**и **RollbackTrans** недоступны для объекта **подключения** на стороне клиента.  
+ Методы **примеры BeginTrans**, **CommitTrans** и **RollbackTrans** недоступны для объекта **подключения** на стороне клиента.  
   
 ## <a name="applies-to"></a>Применение  
  [Объект Connection (ADO)](./connection-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Примеры методов примеры BeginTrans, CommitTrans и RollbackTrans (Visual Basic)](./begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
  [Примеры методов примеры BeginTrans, CommitTrans и RollbackTrans (Visual c++)](./begintrans-committrans-and-rollbacktrans-methods-example-vc.md)   
  [Свойство Attributes (ADO)](./attributes-property-ado.md)

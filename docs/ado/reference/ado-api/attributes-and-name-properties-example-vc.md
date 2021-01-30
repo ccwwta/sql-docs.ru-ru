@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2db7c9ca-d7d0-4c8e-840b-b27d7933ec40
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c4eb8b682e7e539c1c0af784eb70016fa1bb25c1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6ab7be112f27f16d25d613b21f9ecbe5b14fcbbd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975965"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167864"
 ---
 # <a name="attributes-and-name-properties-example-vc"></a>Пример атрибутов и свойств имени (Visual c++)
 В этом примере отображается значение свойства [Attributes](./attributes-property-ado.md) для объектов [соединения](./connection-object-ado.md), [поля](./field-object.md)и [Свойства](./property-object-ado.md) . В нем используется свойство [Name](./name-property-ado.md) для вывода имени каждого **поля** и объекта **Свойства** .  
@@ -181,7 +181,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство Attributes (ADO)](./attributes-property-ado.md)   
  [Объект Connection (ADO)](./connection-object-ado.md)   
  [Объект Field](./field-object.md)   

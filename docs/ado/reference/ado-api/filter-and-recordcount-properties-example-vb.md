@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7cee9fa6460366dd727c2eb1c6ce26c43286ea51
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: eadbd94d0dca864b3d6e9c0a172e60845e7c584e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973045"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167342"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Примеры свойств Filter и RecordCount (Visual Basic)
-Этот пример открывает [набор записей](./recordset-object-ado.md) в таблице Publishers базы данных ***pubs*** . Затем используется свойство [Filter](./filter-property.md) , чтобы ограничить количество видимых записей для издателей в определенной стране или регионе. Свойство **RecordCount** используется для отображения разницы между отфильтрованными и неотфильтрованными наборами записей.  
+Этот пример открывает [набор записей](./recordset-object-ado.md) в таблице Publishers в базе данных ***pubs** _. Затем используется свойство [Filter](./filter-property.md) , чтобы ограничить количество видимых записей для издателей в определенной стране или регионе. Свойство _ *RecordCount** используется для отображения разницы между отфильтрованными и неотфильтрованными наборами записей.  
   
 ```  
 'BeginFilterVB  
@@ -115,7 +115,7 @@ End Sub
 Attribute VB_Name = "Filter"  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство Filter](./filter-property.md)   
  [Свойство RecordCount (ADO)](./recordcount-property-ado.md)   
  [Объект Recordset (ADO)](./recordset-object-ado.md)

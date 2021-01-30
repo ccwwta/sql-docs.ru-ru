@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 47cae7b3aabda7192467bf4dd746ac9a083b404a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 17ea6f0a278a9df688a27db338f566c4e5be6b1d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989035"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170262"
 ---
 # <a name="sort-property-example-vb"></a>Пример свойства Sort (Visual Basic)
-В этом примере используется свойство [Sort](./sort-property.md) объекта [Recordset](./recordset-object-ado.md) для изменения порядка строк **набора записей** , производного от таблицы ***authors*** базы данных ***pubs*** . Вторичная служебная программа выводит каждую строку.  
+В этом примере используется свойство [Sort](./sort-property.md) объекта [Recordset](./recordset-object-ado.md) для изменения порядка строк **набора записей** , полученного из таблицы **_authors_* в базе данных _*_pubs_*_ . Вторичная служебная программа выводит каждую строку.  
   
 ```  
 'BeginSortVB  
@@ -52,7 +52,7 @@ Public Sub Main()
     ' open client-side recordset to enable sort method  
     Set rstAuthors = New ADODB.Recordset  
     rstAuthors.CursorLocation = adUseClient  
-    strSQLAuthors = "SELECT * FROM Authors"  
+    strSQLAuthors = "SELECT _ FROM Authors"  
     rstAuthors.Open strSQLAuthors, Cnxn, adOpenStatic, adLockReadOnly, adCmdText  
   
      ' sort the recordset last name ascending  
@@ -110,6 +110,6 @@ End Sub
 Attribute VB_Name = "Sort"  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Recordset (ADO)](./recordset-object-ado.md)   
  [Свойство Sort](./sort-property.md)

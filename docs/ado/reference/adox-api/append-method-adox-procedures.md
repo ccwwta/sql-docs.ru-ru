@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Procedures::Append
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 38e3492c-c1e1-42e3-a71a-befdc90204db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bc35ccb48211f6a849dc102ba2d1806a79b2426
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d424e1fdcfaa64d57e8e9c1628f00ebab25f6446
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985465"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169589"
 ---
 # <a name="append-method-adox-procedures"></a>Метод Append (коллекция Procedures ADOX)
 Добавляет новый объект [процедуры](./procedure-object-adox.md) в коллекцию [процедур](./procedures-collection-adox.md) .  
@@ -35,13 +35,13 @@ Procedures.Append Name, Command
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *имя*;  
+ *Имя*  
  **Строковое** значение, указывающее имя создаваемой и добавляемой процедуры.  
   
- *Команда*  
+ *Command*  
  Объект [команды](../ado-api/command-object-ado.md) ADO, представляющий процедуру, которую необходимо создать и добавить.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Создает новую процедуру в источнике данных с именем и атрибутами, указанными в объекте **Command** .  
   
  Если текст команды, который указывает пользователь, представляет представление, а не процедуру, то поведение зависит от используемого поставщика. Если поставщик не поддерживает хранимые команды, **Добавление** завершится ошибкой.  
@@ -52,7 +52,7 @@ Procedures.Append Name, Command
 ## <a name="applies-to"></a>Применение  
  [Коллекция Procedures (ADOX)](./procedures-collection-adox.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример метода Append для процедур (Visual Basic)](./procedures-append-method-example-vb.md)   
  [Метод Append (столбцы ADOX)](./append-method-adox-columns.md)   
  [Метод Append (группы ADOX)](./append-method-adox-groups.md)   

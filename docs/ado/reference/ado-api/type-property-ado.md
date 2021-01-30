@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Parameter::Type
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9f4dcfd3c22363ab4950e03844647f990a34f4d5
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ac7cb237f0b3c3adb2621e8e7ad15912b907a4d7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988315"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170075"
 ---
 # <a name="type-property-ado"></a>Свойство Type (ADO)
 Указывает операционный тип или тип данных для [параметра](./parameter-object.md), [поля](./field-object.md)или объекта [Свойства](./property-object-ado.md) .  
@@ -30,7 +30,7 @@ ms.locfileid: "88988315"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает значение [дататипинум](./datatypeenum.md) .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Для объектов **параметров** свойство **Type** доступно для чтения и записи. Для новых **объектов Field** , добавленных к коллекции [Fields](./fields-collection-ado.md) [записи](./record-object-ado.md), **тип** доступен только для чтения и записи только после того, как было указано свойство [value](./value-property-ado.md) для **поля** и поставщик данных успешно добавил новое **поле** , вызвав метод [Update](./update-method.md) коллекции **Fields** .  
   
  Для всех остальных объектов свойство **Type** доступно только для чтения.  
@@ -49,7 +49,7 @@ ms.locfileid: "88988315"
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойства Type (Field) (VB)](./type-property-example-field-vb.md)   
  [Пример свойства Type (Property) (VC + +)](./type-property-example-property-vc.md)   
  [Свойство RecordType (ADO)](./recordtype-property-ado.md)   

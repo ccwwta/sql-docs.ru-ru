@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Key::put_DeleteRule
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 87bd4c0a-cae3-4007-a939-4193acaa00ac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 132989235a5cf9f2a6a7ce13f25a394cab45d88a
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4b591759ee1964ed1e5962558d8590d69957d3be
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88984615"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169429"
 ---
 # <a name="deleterule-property-adox"></a>Свойство DeleteRule (ADOX)
 Указывает действие, выполняемое при удалении первичного ключа.  
@@ -33,11 +33,11 @@ ms.locfileid: "88984615"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает и возвращает значение **типа Long** , которое может быть одной из констант [рулинум](./ruleenum.md) . Значение по умолчанию — **адриноне**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Это свойство доступно только для чтения для объектов [ключей](./key-object-adox.md) , уже добавленных в коллекцию.  
   
 ## <a name="applies-to"></a>Применение  
  [Объект Key (ADOX)](./key-object-adox.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойства DeleteRule (Visual Basic)](./deleterule-property-example-vb.md)

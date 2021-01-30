@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Execute21 method [RDS]
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fba16dc701ab402084633a7adbdceb4cea273b8d
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 92ec3f1eb3cf5504bd2a64322e91640bd9518a2e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91720727"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168998"
 ---
 # <a name="execute21-method-rds"></a>Метод Execute21 (служба удаленных рабочих столов)
 Выполняет запрос и создает набор записей ADO для использования в ADO 2,1.  
@@ -70,7 +70,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *ппараметерс*  
  Значение типа Variant, содержащее надежный массив определений параметров. Если параметр " *info* " был указан в *лексекутеоптионс*, этот параметр используется для возврата определений параметров, полученных от поставщика OLE DB. В противном случае этот параметр может быть пустым.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Параметр *хандлерстринг* может иметь значение null. Что происходит в этом случае, зависит от настройки сервера RDS. Строка обработчика "МСДФМАП. Handler" указывает, что следует использовать предоставляемый корпорацией Майкрософт обработчик (Msdfmap.dll). Строка обработчика "МАСДФМАП. Handler sample.ini" указывает, что следует использовать обработчик Msdfmap.dll и что аргумент "sample.ini" должен передаваться в обработчик. MSDFMAP.dll будет интерпретировать аргумент как направление использования sample.ini для проверки соединения и строк запроса.  
   
 > [!NOTE]

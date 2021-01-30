@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cc59d23a-2f38-42f9-8b65-ed89009e87ec
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9d8277ab358c7eb90737f4da5a0f118d3b087150
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 7e87cbfc84180ba025b6a95090ccd0cbb7ed8f43
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988115"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170015"
 ---
 # <a name="update-and-cancelupdate-methods-example-vc"></a>Примеры методов Update и CancelUpdate (Visual C++)
 В этом примере демонстрируется метод [Update](./update-method.md) в сочетании с методом [CancelUpdate](./cancelupdate-method-ado.md) .  
@@ -310,6 +310,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод CancelUpdate (ADO)](./cancelupdate-method-ado.md)   
  [Метод Update](./update-method.md)

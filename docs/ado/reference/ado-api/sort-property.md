@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::get_Sort
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9397d99d2d020fcf2c703bd96420ee4af4b1a610
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 57f46248dc23d92752a6354a557285daeaf0a0f8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988995"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170252"
 ---
 # <a name="sort-property"></a>Свойство Sort
 Указывает одно или несколько имен полей, в которых сортируется [набор записей](./recordset-object-ado.md) , а также сведения о том, сортируются ли каждое поле в порядке возрастания или убывания.  
@@ -35,7 +35,7 @@ ms.locfileid: "88988995"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает **строковое** значение, указывающее имена полей в **наборе записей** , по которому выполняется сортировка. Каждое имя разделяются запятыми, и при необходимости следует указать пустое значение и ключевое слово **ASC**, которое сортирует поле в возрастающем порядке или **DESC**, что сортирует поле в убывающем порядке. По умолчанию, если ключевое слово не указано, поле сортируется в возрастающем порядке.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Для этого свойства необходимо, чтобы свойство [CursorLocation](./cursorlocation-property-ado.md) было установлено в значение **адусеклиент**. Для каждого поля, указанного в свойстве **Sort** , будет создан временный индекс, если индекс еще не существует.  
   
  Операция сортировки эффективна, поскольку данные физически не переупорядочиваются, но доступ к ним осуществляется в порядке, указанном индексом.  
@@ -46,16 +46,16 @@ ms.locfileid: "88988995"
   
  Если задать для свойства **Sort** пустую строку, строки будут сброшены в исходный порядок и удалены временные индексы. Существующие индексы не будут удалены.  
   
- Предположим, что **набор записей** содержит три поля с именами *FirstName*, *middleInitial*и *LastName*. Задайте для свойства **Sort** строку " `lastName DESC, firstName ASC` ", которая будет упорядочивать **набор записей** по фамилии в убывающем порядке, а затем по имени по возрастанию. Инициал отчества игнорируется.  
+ Предположим, что **набор записей** содержит три поля с именами *FirstName*, *middleInitial* и *LastName*. Задайте для свойства **Sort** строку " `lastName DESC, firstName ASC` ", которая будет упорядочивать **набор записей** по фамилии в убывающем порядке, а затем по имени по возрастанию. Инициал отчества игнорируется.  
   
  Ни одно поле не может называться "ASC" или "DESC", так как эти имена конфликтуют с ключевыми словами **ASC** и **DESC**. Можно создать псевдоним для поля с конфликтующим именем с помощью ключевого слова **as** в запросе, возвращающем **набор записей**.  
   
 ## <a name="applies-to"></a>Применение  
  [Объект Recordset (ADO)](./recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойства Sort (Visual Basic)](./sort-property-example-vb.md)   
  [Пример свойства Sort (Visual c++)](./sort-property-example-vc.md)   
- [Свойство optimize — Dynamic (ADO)](./optimize-property-dynamic-ado.md)   
+ [Оптимизация Property-Dynamic (ADO)](./optimize-property-dynamic-ado.md)   
  [Свойство SortColumn (RDS)](../rds-api/sortcolumn-property-rds.md)   
  [Свойство SortDirection (служба удаленных рабочих столов)](../rds-api/sortdirection-property-rds.md)

@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - methods [ADOX]
 - ADOX, methods
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b6b0626880ee69e4a35df9bb86c3f07d9c3c0a1d
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 0ab9548dabfc6e330353dde12c0142edb026ab4d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641356"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169632"
 ---
 # <a name="adox-methods"></a>Методы ADOX
 
@@ -35,7 +35,7 @@ ms.locfileid: "97641356"
 |[Append (представления)](./append-method-adox-views.md)|Добавляет новый объект **представления** в коллекцию **представлений** .|  
 |[ChangePassword;](./changepassword-method-adox.md)|Изменяет пароль для учетной записи пользователя.|  
 |[Создание](./create-method-adox.md)|Создает новый каталог.|  
-|[Удалить](./delete-method-adox-collections.md)|Удаляет объект из коллекции.|  
+|[Удаление](./delete-method-adox-collections.md)|Удаляет объект из коллекции.|  
 |[Примеры методов getobjectowner](./getobjectowner-method-adox.md)|Возвращает владельца объекта в каталоге.|  
 |[GetPermissions](./getpermissions-method-adox.md)|Возвращает разрешения для группы или пользователя на объекте.|  
 |[SetObjectOwner](./setobjectowner-method.md)|Указывает владельца объекта в каталоге.|  

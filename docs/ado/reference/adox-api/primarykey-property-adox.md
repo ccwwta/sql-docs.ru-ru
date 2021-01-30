@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Index::PrimaryKey
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 30185312-5e09-4804-852d-e505d660113a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 79a3d8567c4f6a878611cbed890f320fe2f7ac9e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e42da0195d1e95bbeac1939d69b23f9955ad4677
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983655"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169264"
 ---
 # <a name="primarykey-property-adox"></a>Свойство PrimaryKey (ADOX)
 Указывает, представляет ли индекс первичный ключ в таблице.  
@@ -33,7 +33,7 @@ ms.locfileid: "88983655"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает и возвращает **логическое** значение.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Значение по умолчанию равно **False**.  
   
  Это свойство доступно только для чтения в объектах [индекса](./index-object-adox.md) , уже добавленных в коллекцию.  
@@ -41,6 +41,6 @@ ms.locfileid: "88983655"
 ## <a name="applies-to"></a>Применение  
  [Объект Index (ADOX)](./index-object-adox.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример PrimaryKey и уникальных свойств (Visual Basic)](./primarykey-and-unique-properties-example-vb.md)   
  [Объект Index (ADOX)](./index-object-adox.md)

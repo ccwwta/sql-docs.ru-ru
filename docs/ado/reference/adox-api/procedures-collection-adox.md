@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Procedures
@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b3f98420fc85cabd2ccc584817ac6ca9a9203081
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c77c3eccd6cc2e61898b1619ec6255f65227384b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983575"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169246"
 ---
 # <a name="procedures-collection-adox"></a>Коллекция Procedures (ADOX)
 Содержит все объекты [процедур](./procedure-object-adox.md) каталога.  
   
-## <a name="remarks"></a>Remarks  
- Метод [append](./append-method-adox-procedures.md) для коллекции **процедур** уникален для ADOX. Вы можете:  
+## <a name="remarks"></a>Замечания  
+ Метод [append](./append-method-adox-procedures.md) для коллекции **процедур** уникален для ADOX. Вы можете выполнить следующие действия:  
   
 -   Добавьте новую процедуру в коллекцию с помощью метода **append** .  
   
- Остальные свойства и методы являются стандартными для коллекций ADO. Вы можете:  
+ Остальные свойства и методы являются стандартными для коллекций ADO. Вы можете выполнить следующие действия:  
   
 -   Получите доступ к процедуре в коллекции со свойством [Item](../ado-api/item-property-ado.md) .  
   
@@ -46,7 +46,7 @@ ms.locfileid: "88983575"
   
 -   [Свойства, методы и события коллекции Indexes](./indexes-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойств Command и CommandText (Visual Basic)](./command-and-commandtext-properties-example-vb.md)   
  [Коллекция Parameters, пример свойства Command (Visual Basic)](./parameters-collection-command-property-example-vb.md)   
  [Пример метода Append для процедур (Visual Basic)](./procedures-append-method-example-vb.md)   

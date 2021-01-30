@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Record::Source
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b9c551e52864caca8834350d5107b76aed88700d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 232bebc8eabf96584a4513c3197f329ecf70fe87
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988945"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170234"
 ---
 # <a name="source-property-ado-record"></a>Свойство Source (объект Record ADO)
 Указывает источник данных или объект, представленный [записью](./record-object-ado.md).  
@@ -34,7 +34,7 @@ ms.locfileid: "88988945"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает значение **типа Variant** , указывающее сущность, представленную **записью**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Свойство **Source** возвращает *Исходный* аргумент метода [Open](./open-method-ado-record.md) объекта **Record** . Он может содержать абсолютную или относительную строку URL-адреса. Абсолютный URL-адрес можно использовать без задания свойства [ActiveConnection](./activeconnection-property-ado.md) для непосредственного открытия объекта **записи** . В этом случае создается неявный объект **соединения** .  
   
  Свойство **Source** может также содержать ссылку на уже открытый **набор записей**, который открывает объект **Record** , представляющий текущую строку в **наборе записей**.  
@@ -51,6 +51,6 @@ ms.locfileid: "88988945"
 ## <a name="applies-to"></a>Применение  
  [Объект Record (ADO)](./record-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство Source (ошибка ADO)](./source-property-ado-error.md)   
  [Свойство Source (объект Recordset ADO)](./source-property-ado-recordset.md)

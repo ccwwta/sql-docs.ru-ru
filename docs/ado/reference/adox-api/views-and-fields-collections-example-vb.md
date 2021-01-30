@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d8304849-3f80-4cf3-9425-529d2a8ebedd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 610ad3b837c7fc91cbfeba440b0fa2aea9fca81e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cdc510d8668f0e1b0242d99531658e298248bed8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88982895"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99169107"
 ---
 # <a name="views-and-fields-collections-example-vb"></a>Примеры коллекций Views и Fields (Visual Basic)
 В следующем коде показано, как использовать свойство [Command](./command-property-adox.md) и объект [Recordset](../ado-api/recordset-object-ado.md) для получения сведений о поле для представления.  
@@ -78,7 +78,7 @@ End Sub
 ' EndViewFieldsVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство ActiveConnection (ADOX)](./activeconnection-property-adox.md)   
  [Объект каталога (ADOX)](./catalog-object-adox.md)   
  [Свойство Command (ADOX)](./command-property-adox.md)   

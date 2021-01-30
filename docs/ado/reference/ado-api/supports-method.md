@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::raw_Supports
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8a91268668dae9ba430ba696ffb0186749047af9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 26de39ffdd918a8281998b32d89c68fd1babf75e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988325"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170089"
 ---
 # <a name="supports-method"></a>Метод Supports
 Определяет, поддерживает ли указанный объект [Recordset](./recordset-object-ado.md) определенный тип функциональности.  
@@ -41,7 +41,7 @@ boolean = recordset.Supports(CursorOptions )
  *курсороптионс*  
  **Длинное** выражение, состоящее из одного или нескольких значений [курсороптионенум](./cursoroptionenum.md) .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Используйте метод **поддерживает** , чтобы определить, какие типы функций поддерживает объект **Recordset** . Если объект **набора записей** поддерживает функции, соответствующие константы которых находятся в *Курсороптионс*, метод **поддерживает** возврат значения **true**. В противном случае возвращается **значение false**.  
   
 > [!NOTE]
@@ -50,7 +50,7 @@ boolean = recordset.Supports(CursorOptions )
 ## <a name="applies-to"></a>Применение  
  [Объект Recordset (ADO)](./recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример метода поддержки (Visual Basic)](./supports-method-example-vb.md)   
  [Пример метода поддержки (Visual c++)](./supports-method-example-vc.md)   
  [Свойство CursorType (ADO)](./cursortype-property-ado.md)

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::BOF
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 710a116e28a102eeac8a7a062a9f66cd8dcbe79c
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 71424db7a06dc8b1d5d47a3505e90ffaf175cc3b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975785"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167831"
 ---
 # <a name="bof-eof-properties-ado"></a>Свойства BOF и EOF (ADO)
 -   **BOF** Указывает, что текущая запись находится перед первой записью в объекте [набора записей](./recordset-object-ado.md) .  
@@ -33,7 +33,7 @@ ms.locfileid: "88975785"
 ## <a name="return-value"></a>Возвращаемое значение  
  Свойства **BOF** и **EOF** возвращают **логические** значения.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Используйте свойства **BOF** и **EOF** , чтобы определить, содержит ли объект **набора** записей записи или выходят за пределы объекта **набора записей** при переходе от записи к записи.  
   
  Свойство **BOF** возвращает **значение true** (-1), если текущая запись находится перед первой записью, и **false** (0), если текущая запись находится в положении или после первой записи.  
@@ -42,7 +42,7 @@ ms.locfileid: "88975785"
   
  Если свойство **BOF** или **EOF** имеет **значение true**, текущая запись отсутствует.  
   
- При открытии объекта **Recordset** , не содержащего записей, свойства **BOF** и **EOF** устанавливаются в **значение true** (Дополнительные сведения об этом состоянии **набора записей**см. в свойстве [RecordCount](./recordcount-property-ado.md) ). При открытии объекта **набора записей** , содержащего хотя бы одну запись, первая запись является текущей, а свойства **BOF** и **EOF** — **false**.  
+ При открытии объекта **Recordset** , не содержащего записей, свойства **BOF** и **EOF** устанавливаются в **значение true** (Дополнительные сведения об этом состоянии **набора записей** см. в свойстве [RecordCount](./recordcount-property-ado.md) ). При открытии объекта **набора записей** , содержащего хотя бы одну запись, первая запись является текущей, а свойства **BOF** и **EOF** — **false**.  
   
  Если удалить последнюю оставшуюся запись в объекте **Recordset** , то свойства **BOF** и **EOF** могут остаться **ложными** , пока вы не попытаетесь изменить расположение текущей записи.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "88975785"
   
 ||MoveFirst<br /><br /> MoveLast|MovePrevious<br /><br /> Переместить < 0|Переместить 0|Метод<br /><br /> Переместить > 0|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
-|**BOF** = **True**, **EOF**— = **false**|Разрешено|Error|Error|Разрешено|  
+|**BOF** = **True**, **EOF**— = **false**|Допускается|Error|Error|Допускается|  
 |**BOF** = **False**, **EOF**— = **true**|Разрешено|Разрешено|Error|Error|  
 |Оба значения **true**|Error|Error|Error|Error|  
 |Оба значения **false**|Разрешено|Разрешено|Разрешено|Разрешено|  
@@ -69,6 +69,6 @@ ms.locfileid: "88975785"
 ## <a name="applies-to"></a>Применение  
  [Объект Recordset (ADO)](./recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойств BOF, EOF и Bookmark (Visual Basic)](./bof-eof-and-bookmark-properties-example-vb.md)   
  [Пример свойств BOF, EOF и Bookmark (Visual c++)](./bof-eof-and-bookmark-properties-example-vc.md)

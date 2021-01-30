@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Fields
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6f16fd27e7bee9d3f9e922de4db625b897266a61
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2e16bf602bd0c54b425587fcf1a50d2cc60b2aa7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88973125"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167362"
 ---
 # <a name="fields-collection-ado"></a>Коллекция Fields (ADO)
 Содержит все объекты [полей](./field-object.md) [набора записей](./recordset-object-ado.md) или объекта [записи](./record-object-ado.md) .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Объект **набора записей** содержит коллекцию **Fields** , состоящие из объектов **полей** . Каждый объект **field** соответствует столбцу в **наборе записей**. Можно заполнить коллекцию **Fields** перед открытием **набора записей** , вызвав метод [Refresh](./refresh-method-ado.md) в коллекции.  
   
 > [!NOTE]
@@ -46,5 +46,5 @@ ms.locfileid: "88973125"
   
 -   [Свойства, методы и события коллекции Fields](./fields-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Field](./field-object.md)

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 64493bab591d4f7a34a5e189a88189664156b63d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d3f433434833ee07e4ebbf999e2ef2ca122f44fc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988255"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170063"
 ---
 # <a name="type-property-example-field-vc"></a>Пример свойства Type (объект Field) (Visual C++)
-В этом примере показано свойство [Type](./type-property-ado.md) , в котором отображается имя константы, соответствующее значению свойства **Type** всех объектов [field](./field-object.md) в таблице ***Employees*** . Для выполнения этой процедуры требуется функция FieldType.  
+В этом примере показано свойство [Type](./type-property-ado.md) , в котором отображается имя константы, соответствующее значению свойства **Type** всех объектов [field](./field-object.md) в таблице **_Employees_* _. Для выполнения этой процедуры требуется функция FieldType.  
   
 ## <a name="example"></a>Пример  
   
@@ -154,7 +154,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Поля в таблице Employee:**  
+ _ *Поля в таблице Employee:**  
  **Имя: emp_id**  
  **Тип: Адчар**  
  **Имя: fname.**  
@@ -171,6 +171,6 @@ void PrintComError(_com_error &e) {
  **Тип: Адчар**  
  **Имя: hire_date**  
  **Тип: Аддбтиместамп**   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Field](./field-object.md)   
  [Свойство Type (ADO)](./type-property-ado.md)

@@ -1,5 +1,5 @@
 ---
-description: Уникальная таблица, уникальная схема, свойства уникального каталога — Dynamic (ADO)
+description: Уникальная таблица, уникальная схема, уникальный Properties-Dynamic каталога (ADO)
 title: Управление изменениями в базовой таблице набора записей (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Unique Table property [ADO]
@@ -16,26 +16,26 @@ helpviewer_keywords:
 ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 50a17938a2e1cffd3cc0bf76d3cc3758358318d2
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 485fe00e6f55e6916341fd4420f0aaaa395fe54b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988165"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99170050"
 ---
-# <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Уникальная таблица, уникальная схема, свойства уникального каталога — Dynamic (ADO)
+# <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Уникальная таблица, уникальная схема, уникальный Properties-Dynamic каталога (ADO)
 Позволяет точно управлять изменениями в определенной базовой таблице в [наборе записей](./recordset-object-ado.md) , сформированном операцией Join над несколькими базовыми таблицами.  
   
 -   **Уникальная таблица** указывает имя базовой таблицы, в которой разрешены обновления, вставки и удаления.  
   
--   **Уникальная схема** указывает *схему*или имя владельца таблицы.  
+-   **Уникальная схема** указывает *схему* или имя владельца таблицы.  
   
--   **Уникальный каталог** указывает *Каталог*или имя базы данных, содержащей таблицу.  
+-   **Уникальный каталог** указывает *Каталог* или имя базы данных, содержащей таблицу.  
   
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает **строковое** значение, которое является именем таблицы, схемы или каталога.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Требуемая базовая таблица уникально идентифицируется по именам каталогов, схем и таблиц. Если задано свойство **уникальной таблицы** , то для поиска базовой таблицы используются значения **уникальной схемы** или свойства **уникального каталога** . Он предназначен, но не является обязательным, так как либо **уникальная схема** , либо свойства **уникального каталога** задаются до того, как будет задано свойство **уникальной таблицы** .  
   
  Первичный ключ **уникальной таблицы** рассматривается как первичный ключ всего **набора записей**. Это ключ, используемый для любого метода, для которого необходим первичный ключ.  
@@ -51,5 +51,5 @@ ms.locfileid: "88988165"
 ## <a name="applies-to"></a>Применение  
  [Объект Recordset (ADO)](./recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Recordset (ADO)](./recordset-object-ado.md)
