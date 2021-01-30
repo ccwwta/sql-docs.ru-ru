@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::MoveLast
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: a61a01a7-5b33-4150-9126-21dfa63654cb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dd050c775c706b3cafe2586eed05d93f9079fe27
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2c0f227b7c66928d04980a454828e8d7a80f064f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990555"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167093"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-ado"></a>Методы MoveFirst, MoveLast, MoveNext и MovePrevious (ADO)
 Переходит к первой, последней, следующей или предыдущей записи в указанном объекте [набора записей](./recordset-object-ado.md) и делает запись текущей записью.  
@@ -50,7 +50,7 @@ recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
   
  Вызов метода **MoveFirst** или **MoveLast** , если **набор записей** пуст (значение **BOF** и **EOF** равно true), выдает ошибку.  
   
- Используйте метод **MoveNext** для перемещения текущей записи, расположенной на одну запись вперед (в нижней части **набора записей**). Если последняя запись является текущей и вызывается метод **MoveNext** , ADO устанавливает текущую запись в качестве текущей записи после последней записи в **наборе записей** (значение[EOF](./bof-eof-properties-ado.md) равно **true**). Попытка перемещения вперед, если свойство **EOF** уже имеет **значение true** , приводит к ошибке.  
+ Используйте метод **MoveNext** для перемещения текущей записи, расположенной на одну запись вперед (в нижней части **набора записей**). Если последняя запись является текущей и вызывается метод **MoveNext** , ADO устанавливает текущую запись в качестве текущей записи после последней записи в **наборе записей** (значение [EOF](./bof-eof-properties-ado.md) равно **true**). Попытка перемещения вперед, если свойство **EOF** уже имеет **значение true** , приводит к ошибке.  
   
  В ADO 2,5 и более поздних версиях, когда **набор записей** фильтруется или сортируется и изменяются данные текущей записи, вызов метода **MoveNext** перемещает курсор на две записи вперед от текущей записи. Это происходит потому, что при изменении текущей записи Следующая запись становится новой текущей записью. Вызов **MoveNext** после изменения перемещает курсор на одну запись вперед от новой текущей записи. Это отличается от поведения в ADO 2,1 и более ранних версиях. В этих более ранних версиях изменение данных текущей записи в отсортированном или фильтруемом **наборе записей** не изменяет позицию текущей записи, а **MoveNext** перемещает курсор на следующую запись сразу после текущей записи.  
   
@@ -61,7 +61,7 @@ recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
 ## <a name="applies-to"></a>Применение  
  [Объект Recordset (ADO)](./recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Примеры методов MoveFirst, MoveLast, MoveNext и MovePrevious (Visual Basic)](./movefirst-movelast-movenext-and-moveprevious-methods-example-vb.md)   
  [Пример методов MoveFirst, MoveLast, MoveNext и MovePrevious (VBScript)](./movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript.md)   
  [Пример методов MoveFirst, MoveLast, MoveNext и MovePrevious (Visual c++)](./movefirst-movelast-movenext-and-moveprevious-methods-example-vc.md)   

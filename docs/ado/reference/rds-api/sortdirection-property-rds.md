@@ -7,19 +7,19 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - SortDirection property [RDS]
 ms.assetid: 1d9d8715-e4ad-4ff3-bf7f-f1dc0532d8c2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cd6336c4c19a79a21f9649fdf3521fc8fe40275c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 8bfd6b6c504077bd20ced3d302206c129ab781ae
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724221"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166118"
 ---
 # <a name="sortdirection-property-rds"></a>Свойство SortDirection (служба удаленных рабочих столов)
 Указывает, используется ли порядок сортировки по возрастанию или по убыванию.  
@@ -39,15 +39,15 @@ DataControl.SortDirection = value
  Объектная переменная, представляющая [RDS. Объект элемента управления](./datacontrol-object-rds.md) .  
   
  *Значение*  
- **Логическое** значение, которое при установке значения **true**указывает направление сортировки по возрастанию. **Значение false** указывает на убывающий порядок.  
+ **Логическое** значение, которое при установке значения **true** указывает направление сортировки по возрастанию. **Значение false** указывает на убывающий порядок.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Свойства [sortColumn](./sortcolumn-property-rds.md), **SortDirection**, [FilterValue](./filtervalue-property-rds.md), [филтеркритерион](./filtercriterion-property-rds.md)и [филтерколумн](./filtercolumn-property-rds.md) предоставляют функции сортировки и фильтрации кэша на стороне клиента. Функция сортировки упорядочивает записи, используя значения из одного столбца. Функция фильтрации отображает подмножество записей на основе критериев поиска, а полный [набор записей](../ado-api/recordset-object-ado.md) сохраняется в кэше. Метод [Reset](./reset-method-rds.md) выполнит условия и заменит текущий **набор** записей на обновляемый **набор записей**.  
   
 ## <a name="applies-to"></a>Применение  
  [Объект DataControl (служба удаленных рабочих столов)](./datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Примеры свойств Филтерколумн, Филтеркритерион, FilterValue, SortColumn и SortDirection и метода Reset (VBScript)](./filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
  [Sort, свойство](../ado-api/sort-property.md)   
  [Свойство SortColumn (служба удаленных рабочих столов)](./sortcolumn-property-rds.md)

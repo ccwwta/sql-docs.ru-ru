@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Parameter::Precision
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1fa38e78-6b5b-414d-ba0a-3dd26b29b766
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e7a166077bd0237ff822193297d57dc364d17bef
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4e8eba98d2489dab9bd41019ddc1f32da3711ad1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990055"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166851"
 ---
 # <a name="precision-property-ado"></a>Свойство Precision (ADO)
 Указывает степень точности для числовых значений в объекте [параметра](./parameter-object.md) или для числовых объектов [полей](./field-object.md) .  
@@ -30,7 +30,7 @@ ms.locfileid: "88990055"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает значение **типа Byte** , указывающее максимальное количество цифр, используемых для представления значений.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Используйте свойство **Precision** , чтобы определить максимальное количество цифр, используемых для представления значений числового **параметра** или объекта **поля** .  
   
  Значение доступно для чтения и записи в объекте **Parameter** .  
@@ -48,7 +48,7 @@ ms.locfileid: "88990055"
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойств NumericScale и Precision (Visual Basic)](./numericscale-and-precision-properties-example-vb.md)   
  [Пример свойств NumericScale и Precision (Visual c++)](./numericscale-and-precision-properties-example-vc.md)   
  [Свойство NumericScale (ADO)](./numericscale-property-ado.md)

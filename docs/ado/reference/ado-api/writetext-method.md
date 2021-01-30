@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Stream::raw_WriteText
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d38d493fb57e8147f882056d07514ba9f405ecf9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b4c05ab892ce442db5eefefddf3eb0796af5dec9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987725"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166244"
 ---
 # <a name="writetext-method"></a>Метод WriteText
 Записывает указанную текстовую строку в объект [потока](./stream-object-ado.md) .  
@@ -35,13 +35,13 @@ Stream.WriteText Data, Options
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Data*  
+ *Данные*  
  **Строковое** значение, содержащее текст в символах для написания.  
   
  *Параметры*  
- Необязательный элемент. Значение [стреамвритинум](./streamwriteenum.md) , указывающее, должен ли символ разделителя строки записываться в конце указанной строки.  
+ Необязательный параметр. Значение [стреамвритинум](./streamwriteenum.md) , указывающее, должен ли символ разделителя строки записываться в конце указанной строки.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Указанные строки записываются в объект **потока** без промежуточных пробелов или символов между строками.  
   
  Текущей [позиции](./position-property-ado.md) присваивается символ, следующий за записанными данными. Метод **WriteText** не усекает остальные данные в потоке. Если вы хотите усечь эти символы, вызовите [сетеос](./seteos-method.md).  
@@ -54,5 +54,5 @@ Stream.WriteText Data, Options
 ## <a name="applies-to"></a>Применение  
  [Объект Stream (ADO)](./stream-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Write](./write-method.md)

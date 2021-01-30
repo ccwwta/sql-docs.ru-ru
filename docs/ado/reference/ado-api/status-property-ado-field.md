@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Field::Status
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8cd1f7f4-0a3a-4f07-b8ba-6582e70140ad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 11f59e99eab0a742a4d7618f7ac66cb486af2933
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b0ae4ed8f72dca085edd0c82220296d65795d6ac
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988725"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166467"
 ---
 # <a name="status-property-ado-field"></a>Свойство Status (объект Field ADO)
 Указывает состояние объекта [поля](./field-object.md) .  
@@ -31,7 +31,7 @@ ms.locfileid: "88988725"
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение [фиелдстатусенум](./fieldstatusenum.md) . Значение по умолчанию — **адфиелдок**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
   
 ## <a name="record-field-status"></a>Состояние поля записи  
  Изменения значения объекта **поля** в коллекции полей объекта [записи](./record-object-ado.md) кэшируются до тех пор, пока не будет вызван метод [обновления](./update-method.md) объекта. Если в этот момент изменение значения поля привело к ошибке, OLE DB вызывает ошибку **DB_E_ERRORSOCCURRED** (2147749409). Свойство Status любого из объектов **field** в коллекции **Fields** , вызвавшей ошибку, будет содержать значение из [фиелдстатусенум](./fieldstatusenum.md) , описывающее причину проблемы.  
@@ -48,6 +48,6 @@ ms.locfileid: "88988725"
 ## <a name="applies-to"></a>Применение  
  [Объект Field](./field-object.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойства Status (поле) (VB)](./status-property-example-field-vb.md)   
  [Пример свойства Status (Visual C++)](./status-property-example-vc.md)

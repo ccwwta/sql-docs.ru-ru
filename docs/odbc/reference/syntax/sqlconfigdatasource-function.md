@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLConfigDataSource
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f8d6e342-c010-434e-b1cd-f5371fb50a14
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8849ce5528380e4164a420227395bce5aa436eaa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ddcfac8f1f211884aa3f46db3f56a2762778ed92
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448747"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165335"
 ---
 # <a name="sqlconfigdatasource-function"></a>SQLConfigDataSource, функция
 **Соответствия**  
@@ -78,7 +78,7 @@ BOOL SQLConfigDataSource(
  Функция возвращает TRUE, если она успешна, и FALSE в случае сбоя. Если при вызове этой функции в системной информации не существует записи, функция возвращает значение FALSE.  
   
 ## <a name="diagnostics"></a>Диагностика  
- Когда **SQLConfigDataSource** возвращает значение false, связанное значение * \* пферроркоде* может быть получено путем вызова **склинсталлереррор**. В следующей таблице перечислены значения * \* пферроркоде* , которые могут быть возвращены **склинсталлереррор** , и объясняется каждый из них в контексте этой функции.  
+ Когда **SQLConfigDataSource** возвращает значение false, связанное значение *\* пферроркоде* может быть получено путем вызова **склинсталлереррор**. В следующей таблице перечислены значения *\* пферроркоде* , которые могут быть возвращены **склинсталлереррор** , и объясняется каждый из них в контексте этой функции.  
   
 |*\*пферроркоде*|Ошибка|Описание|  
 |---------------------|-----------|-----------------|  
@@ -96,7 +96,7 @@ BOOL SQLConfigDataSource(
   
  **SQLConfigDataSource** возвращает значение false, если не удается найти или загрузить библиотеку DLL установки или если пользователь отменяет диалоговое окно. В противном случае возвращается состояние, полученное от **ConfigDSN**.  
   
- **SQLConfigDataSource** СОПОСТАВЛЯЕТ системный DSN *Фрекуест*s с пользовательским dsn *фрекуест*s (ODBC_ADD_SYS_DSN для ODBC_ADD_DSN, ODBC_CONFIG_SYS_DSN ODBC_CONFIG_DSN и ODBC_REMOVE_SYS_DSN в ODBC_REMOVE_DSN). Чтобы отличать пользовательские и системные имена DSN, **SQLConfigDataSource** устанавливает режим конфигурации установщика в соответствии со следующей таблицей. Перед возвратом **SQLConfigDataSource** режим конфигурации сбрасывается в босдсн. **ConfigDSN** (реализованные драйверами) должны вызывать **склвритедснтоини** и **склвритеприватепрофилестринг** для поддержки системного имени DSN. Дополнительные сведения см. в разделе [функция ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md).  
+ **SQLConfigDataSource** СОПОСТАВЛЯЕТ системный DSN *Фрекуест* s с пользовательским dsn *фрекуест* s (ODBC_ADD_SYS_DSN для ODBC_ADD_DSN, ODBC_CONFIG_SYS_DSN ODBC_CONFIG_DSN и ODBC_REMOVE_SYS_DSN в ODBC_REMOVE_DSN). Чтобы отличать пользовательские и системные имена DSN, **SQLConfigDataSource** устанавливает режим конфигурации установщика в соответствии со следующей таблицей. Перед возвратом **SQLConfigDataSource** режим конфигурации сбрасывается в босдсн. **ConfigDSN** (реализованные драйверами) должны вызывать **склвритедснтоини** и **склвритеприватепрофилестринг** для поддержки системного имени DSN. Дополнительные сведения см. в разделе [функция ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md).  
   
 |*фрекуест*|Режим конфигурации|  
 |----------------|------------------------|  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 258bdce3-1819-44a2-9217-105879c789ef
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2740ed58b5592c0f57519de12c9a518af024c3e8
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 5aaa3c02210e548e2e2081a1a5728eecda7543ab
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975975"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164818"
 ---
 # <a name="attributes-and-name-properties-example-vb"></a>Примеры свойств Attributes и Name (Visual Basic)
 В этом примере отображается значение свойства [Attributes](./attributes-property-ado.md) для объектов [соединения](./connection-object-ado.md), [поля](./field-object.md)и [Свойства](./property-object-ado.md) . В нем используется свойство [Name](./name-property-ado.md) для вывода имени каждого **поля** и объекта **Свойства** .  
@@ -127,7 +127,7 @@ End Sub
 ' EndAttributesVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство Attributes (ADO)](./attributes-property-ado.md)   
  [Объект Connection (ADO)](./connection-object-ado.md)   
  [Объект Field](./field-object.md)   

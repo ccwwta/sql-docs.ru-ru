@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::Move
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b394d64a9d1b1f403137e9875db83fdd82c2ac1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f870db346e384f4c131ec24bf6c15a5d15a009c1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990595"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167122"
 ---
 # <a name="move-method-ado"></a>Метод Move (ADO)
 Перемещает текущую запись в объекте [набора записей](./recordset-object-ado.md) .  
@@ -38,17 +38,17 @@ recordset.Move NumRecords, Start
  *нумрекордс*  
  Выражение типа **Long** со знаком, указывающее количество записей, перемещаемых текущей позицией записи.  
   
- *Начало*  
- Необязательный элемент. **Строковое** значение или **вариант** , результатом которого является закладка. Можно также использовать значение [букмаркенум](./bookmarkenum.md) .  
+ *Запуск*  
+ Необязательный параметр. **Строковое** значение или **вариант** , результатом которого является закладка. Можно также использовать значение [букмаркенум](./bookmarkenum.md) .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Метод **Move** поддерживается для всех объектов **Recordset** .  
   
  Если аргумент *нумрекордс* больше нуля, текущее расположение записи перемещается вперед (к концу **набора записей**). Если значение *нумрекордс* меньше нуля, текущее расположение записи перемещается назад (в направлении начала **набора записей**).  
   
  Если при вызове **Move** положение текущей записи перемещается в точку до первой записи, ADO устанавливает текущую запись в позицию перед первой записью в наборе записей ([BOF](./bof-eof-properties-ado.md) имеет **значение true**). Попытка перемещения назад, если свойство **BOF** уже имеет **значение true** , приводит к ошибке.  
   
- Если при вызове **Move** положение текущей записи перемещается в точку после последней записи, ADO устанавливает текущую запись в позицию после последней записи в наборе записей (значение[EOF](./bof-eof-properties-ado.md) равно **true**). Попытка перемещения вперед, если свойство **EOF** уже имеет **значение true** , приводит к ошибке.  
+ Если при вызове **Move** положение текущей записи перемещается в точку после последней записи, ADO устанавливает текущую запись в позицию после последней записи в наборе записей (значение [EOF](./bof-eof-properties-ado.md) равно **true**). Попытка перемещения вперед, если свойство **EOF** уже имеет **значение true** , приводит к ошибке.  
   
  Вызов метода **Move** из пустого объекта **Recordset** приводит к ошибке.  
   
@@ -64,7 +64,7 @@ recordset.Move NumRecords, Start
 ## <a name="applies-to"></a>Применение  
  [Объект Recordset (ADO)](./recordset-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример метода Move (Visual Basic)](./move-method-example-vb.md)   
  [Пример метода Move (VBScript)](./move-method-example-vbscript.md)   
  [Пример метода Move (Visual c++)](./move-method-example-vc.md)   

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Hierarchy
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 60d779ec3ed3393417725c9f574a798e5efc0efd
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a1370f83c4214047038eadf4b84813f0b48c3b72
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88986655"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164543"
 ---
 # <a name="hierarchy-object-ado-md"></a>Объект Hierarchy (многомерные объекты ADO)
 Представляет один из способов, с помощью которых элементы [измерения](./dimension-object-ado-md.md) могут быть объединены или сведены. Измерение можно объединить по одной или нескольким иерархиям.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  С помощью коллекций и свойств объекта **Hierarchy** можно выполнять следующие действия.  
   
 -   Определяет **иерархию** с помощью свойств [Name](./name-property-ado-md.md) и [UniqueName](./uniquename-property-ado-md.md) .  
@@ -39,7 +39,7 @@ ms.locfileid: "88986655"
   
  Коллекция **Properties** содержит свойства, предоставляемые поставщиком. В следующей таблице перечислены свойства, которые могут быть доступны. Фактический список свойств может отличаться в зависимости от реализации поставщика. Более полный список доступных свойств см. в документации поставщика.  
   
-|Имя|Описание|  
+|name|Описание|  
 |----------|-----------------|  
 |AllMember|Элемент на высшем уровне свертки в иерархии.|  
 |CatalogName|Имя каталога, которому принадлежит куб.|  
@@ -59,7 +59,7 @@ ms.locfileid: "88986655"
   
 -   [Свойства, методы и события](./hierarchy-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример CubeDef (VBScript)](./cubedef-example-vbscript.md)   
  [Объект Dimension (объекты данных ActiveX (MD))](./dimension-object-ado-md.md)   
  [Коллекция иерархий (объекты данных ActiveX (MD))](./hierarchies-collection-ado-md.md)   

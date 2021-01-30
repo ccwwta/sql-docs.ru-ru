@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - data types [ODBC], identifiers
 - identifiers [ODBC], data types
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f0077c9b-8eb2-4b5f-8c4c-7436fdef37ab
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dce52118099ff4be572231e7f44f28a4cfca5ea7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0537c2b4f76814dfedf2750fa72ee0a13ed61175
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466224"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165345"
 ---
 # <a name="data-type-identifiers-and-descriptors"></a>Идентификаторы и дескрипторы типа данных
 Типы данных, перечисленные в разделах " [типы данных SQL](../../../odbc/reference/appendixes/sql-data-types.md) " и " [типы данных C](../../../odbc/reference/appendixes/c-data-types.md) ", приведенных выше в этом приложении, являются "лаконичными" типами данных: каждый идентификатор ссылается на один тип данных. Между идентификатором и типом данных существует соответствие "один к одному". Однако дескрипторы не во всех случаях используют одно значение для обнаружения типов данных. В некоторых случаях они используют тип данных "verbose" и код типа. Для всех типов данных, кроме типов данных DateTime и Interval, идентификатор подробного типа совпадает с идентификатором краткого типа, а значение в SQL_DESC_DATETIME_INTERVAL_CODE равно 0. Однако для типов данных DateTime и Interval тип Verbose (SQL_DATETIME или SQL_INTERVAL) хранится в SQL_DESC_TYPE, а сокращенный тип хранится в SQL_DESC_CONCISE_TYPE, а код для каждого краткого типа хранится в SQL_DESC_DATETIME_INTERVAL_CODE. Установка одного из этих полей влияет на другие. Дополнительные сведения об этих полях см. в описании функции [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) .  

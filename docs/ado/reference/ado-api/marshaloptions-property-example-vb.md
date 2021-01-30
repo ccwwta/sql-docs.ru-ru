@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ae576b2c-65aa-4838-872a-85e618806dc8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 08ac6a07341c37e412a6bc030e37e04a8ff8e787
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: edfc6abf85e1d703ff175032acb65a5652df1ae7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990665"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167152"
 ---
 # <a name="marshaloptions-property-example-vb"></a>Пример свойства MarshalOptions (Visual Basic)
 В этом примере свойство [MarshalOptions](./marshaloptions-property-ado.md) используется для указания того, какие строки отправляются обратно на сервер — все строки или только измененные строки.  
@@ -132,6 +132,6 @@ End Sub
 'EndMarshalOptionsVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство MarshalOptions (ADO)](./marshaloptions-property-ado.md)   
  [MarshalOptionsEnum](./marshaloptionsenum.md)

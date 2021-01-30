@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_filestream_force_garbage_collection
 - sp_filestream_force_garbage_collection_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 627793d900903a28ce4e4b7ee6a3272b4c63ee32
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: 0c234c5c03b00b25babbec0a4fbc197f235c966d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753850"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165245"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +69,7 @@ sp_filestream_force_garbage_collection
 |*num_unprocessed_items*|Указывает число подлежащих сборке мусора элементов FILESTREAM (файлов и каталогов), для которых сборка в данном контейнере не была выполнена. Это может произойти по разным причинам, включая следующие.<br /><br /> Файлы закреплены, так как еще не создана резервная копия журналов или контрольной точки.<br /><br /> Файлы относятся к модели восстановления FULL или BULK_LOGGED.<br /><br /> Существует длительно выполняющаяся активная транзакция.<br /><br /> Задание чтения журнала репликации не запущено. Дополнительные сведения см. в техническом документе [хранилище FILESTREAM в SQL Server 2008](/previous-versions/sql/sql-server-2008/hh461480(v=msdn.10)) .|  
 |*last_collected_xact_seqno*|Возвращает последний соответствующий номер последовательности LSN, до которого для файлов была выполнена сборка мусора в указанном контейнере FILESTREAM.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Явным образом запускает задачу сборщика мусора FILESTREAM для указанной базы данных (и контейнера FILESTREAM). Файлы, которые больше не требуются, удаляются процессом сборки мусора. Время, необходимое на выполнение этой операции, зависит от объема данных FILESTREAM в базе данных или контейнере, а также от объема операций DML, произведенных в последнее время над данными FILESTREAM. Хотя эта операция может выполняться и при режиме работы базы данных в сети, но в таком случае производительность базы данных может понизиться, так как во время сборки мусора выполняются различные операции ввода-вывода.  
   
 > [!NOTE]  
@@ -88,7 +88,7 @@ sp_filestream_force_garbage_collection
 ## <a name="examples"></a>Примеры  
  В следующих примерах сборщик мусора запускается для контейнеров FILESTREAM в базе данных `FSDB`.  
   
-### <a name="a-specifying-no-container"></a>А. Без указания контейнера  
+### <a name="a-specifying-no-container"></a>A. Без указания контейнера  
   
 ```sql  
 USE FSDB;  
@@ -105,8 +105,8 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB',
     @filename = N'FSContainer';  
 ```  
   
-## <a name="see-also"></a>См. также  
-[Файловый поток](../../relational-databases/blob/filestream-sql-server.md)
+## <a name="see-also"></a>См. также:  
+[Потока](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Таблицы FileTable](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Динамические административные представления Filestream и FileTable (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
 <br>[Представления каталога Filestream и FileTable (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)

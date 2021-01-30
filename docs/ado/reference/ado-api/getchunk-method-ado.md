@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Field20::raw_GetChunk
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fc268e22-205b-44a3-9038-ffed51e23e10
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 196f41f7828be16c7c38b281edb85774569580a1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 7d9e47713f3bd4d86f35cff2acac0255ed4ab5c7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88972915"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164582"
 ---
 # <a name="getchunk-method-ado"></a>Метод GetChunk (ADO)
 Возвращает все или часть содержимого большого текстового или двоичного объекта [поля](./field-object.md) данных.  
@@ -38,10 +38,10 @@ variable = field.GetChunk(Size)
  Возвращает **значение типа Variant**.  
   
 #### <a name="parameters"></a>Параметры  
- *Размер*  
+ *Size*  
  **Длинное** выражение, равное количеству байтов или символов, которое необходимо получить.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Используйте метод **GetObject** для объекта **field** , чтобы получить часть или все его длинные двоичные или символьные данные. В ситуациях, когда память системы ограничена, можно использовать метод " **блока** " для обработки длинных значений в частях, а не полностью.  
   
  Данные, возвращаемые вызовом методаического **блока** , назначаются *переменной*. Если *Размер* больше остальных данных **, метод WebMethod** возвращает только оставшиеся данные без *переменной* заполнения пустыми пробелами. Если поле пустое **, метод WebMethod** возвращает значение null.  
@@ -58,7 +58,7 @@ variable = field.GetChunk(Size)
 ## <a name="applies-to"></a>Применение  
  [Объект Field](./field-object.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Примеры методов AppendChunk и-блока (Visual Basic)](./appendchunk-and-getchunk-methods-example-vb.md)   
  [Примеры методов AppendChunk и-блока (Visual c++)](./appendchunk-and-getchunk-methods-example-vc.md)   
  [Метод AppendChunk (ADO)](./appendchunk-method-ado.md)   

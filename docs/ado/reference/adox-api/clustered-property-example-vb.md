@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1cd30769-c8af-43e7-be27-12ed0434daa1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c8e0d1b03b4aa56d0db19d1d692f459bc7d9f613
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 22769970b35d2a038061d79058edffab201311fd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985185"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164278"
 ---
 # <a name="clustered-property-example-vb"></a>Пример свойства Clustered (Visual Basic)
 В этом примере демонстрируется свойство [Clustered](./clustered-property-adox.md) [индекса](./index-object-adox.md). Обратите внимание, что базы данных Microsoft Jet не поддерживают кластеризованные индексы, поэтому в этом примере будет возвращено **значение false** для свойства **Clustered** всех индексов в базе данных **Northwind** .  
@@ -73,7 +73,7 @@ End Sub
 ' EndClusteredVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект каталога (ADOX)](./catalog-object-adox.md)   
  [Свойство Clustered (ADOX)](./clustered-property-adox.md)   
  [Объект index (ADOX)](./index-object-adox.md)   

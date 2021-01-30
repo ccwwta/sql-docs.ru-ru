@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: f156aa48-bfc2-40d1-962b-7b08855776c6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1b651d20173659052a6958b9ce561081f9aff9b3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 3896ec0e36fb5416d97cf3e6e6ad8409843cae3a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975045"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164634"
 ---
 # <a name="comparebookmarks-method-example-vb"></a>Пример метода CompareBookmarks (Visual Basic)
 В этом примере демонстрируется метод [CompareBookmarks](./comparebookmarks-method-ado.md) . Относительное значение закладок редко требуется, если конкретная закладка не является каким-либо специальным.  
   
- Назначьте случайную строку [набора записей](./recordset-object-ado.md) , производного от таблицы ***authors*** , в качестве цели поиска. Затем отобразить расположение каждой строки относительно этого целевого объекта.  
+ Назначьте случайную строку [набора записей](./recordset-object-ado.md) , полученную из таблицы ***authors** _, в качестве цели поиска. Затем отобразить расположение каждой строки относительно этого целевого объекта.  
   
 ```  
 'BeginCompareBookmarksVB  
@@ -59,7 +59,7 @@ Public Sub Main()
   
      ' Open recordset as a static cursor type recordset  
     Set rstAuthors = New ADODB.Recordset  
-    strSQLAuthors = "SELECT * FROM Authors"  
+    strSQLAuthors = "SELECT _ FROM Authors"  
     rstAuthors.Open strSQLAuthors, Cnxn, adOpenStatic, adLockReadOnly, adCmdText  
   
     count = rstAuthors.RecordCount  
@@ -133,7 +133,7 @@ End Sub
 'EndCompareBookmarksVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод CompareBookmarks (ADO)](./comparebookmarks-method-ado.md)   
  [компаринум](./compareenum.md)   
  [Объект Recordset (ADO)](./recordset-object-ado.md)

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Column
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 6e772783-1bc8-4ea7-94b2-7d7a52ea5c47
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b6cc15e82091da2161a01c1c0a468e86095dd0d6
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 7501381174ddf522b60a596cd5846f012d59d88e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985105"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164256"
 ---
 # <a name="column-object-adox"></a>Объект Column (ADOX)
 Представляет столбец из таблицы, индекса или ключа.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Следующий код создает новый **столбец**:  
   
  `Dim obj As New Column`  
@@ -62,7 +62,7 @@ ms.locfileid: "88985105"
   
 -   [Свойства, методы и события объекта Column](./column-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы добавления столбцов и таблиц, пример свойства Name (Visual Basic)](./columns-and-tables-append-methods-name-property-example-vb.md)   
  [Пример метода Close соединения, свойство типа таблицы (Visual Basic)](./connection-close-method-table-type-property-example-vb.md)   
  [Пример свойств для добавления ключей, типа ключа, RelatedColumn, RelatedTable и UpdateRule (Visual Basic)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f74a81fd-cbcc-4143-b9f8-774c88dd4fad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2d1846203e4650048378d5fb41c4d2ff198f462
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f8c76615971b00bdd492d20178933cea15a638da
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990355"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167001"
 ---
 # <a name="open-and-close-methods-example-vc"></a>Примеры методов Open и Close (Visual C++)
 В этом примере используются методы **Open** и [Close](./close-method-ado.md) как для [набора записей](./recordset-object-ado.md) , так и для объектов [соединения](./connection-object-ado.md) , которые были открыты.  
@@ -206,7 +206,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Close (ADO)](./close-method-ado.md)   
  [Объект Connection (ADO)](./connection-object-ado.md)   
  [Метод Open (подключение ADO)](./open-method-ado-connection.md)   

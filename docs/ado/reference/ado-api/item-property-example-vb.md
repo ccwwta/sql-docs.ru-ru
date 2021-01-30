@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5b862f9f3a8479ad6d1eb68060be068e91a66c58
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 5e666705f64897baa769dd453cbbb962c883fe0b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990745"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167191"
 ---
 # <a name="item-property-example-vb"></a>Пример свойства Item (Visual Basic)
-В этом примере показано, как свойство [Item](./item-property-ado.md) получает доступ к членам коллекции. В примере открывается таблица ***authors*** базы данных ***pubs*** с параметризованной командой.  
+В этом примере показано, как свойство [Item](./item-property-ado.md) получает доступ к членам коллекции. В этом примере открывается таблица ***authors** _ базы данных _*_pubs_*_ с параметризованной командой.  
   
  Доступ к параметру в команде, выданной для базы данных, осуществляется из коллекции [параметров](./parameters-collection-ado.md) объекта [Command](./command-object-ado.md) по индексу и имени. Затем к полям возвращенного [набора записей](./recordset-object-ado.md) осуществляется доступ из коллекции [полей](./fields-collection-ado.md) этого объекта по индексу и имени.  
   
@@ -63,7 +63,7 @@ Public Sub Main()
     Column(7) = "zip"  
     Column(8) = "contract"  
   
-    cmd.CommandText = "SELECT * FROM Authors WHERE state = ?"  
+    cmd.CommandText = "SELECT _ FROM Authors WHERE state = ?"  
     Set prm = cmd.CreateParameter("ItemXparm", adChar, adParamInput, 2, "CA")  
     cmd.Parameters.Append prm  
      ' set connection  
@@ -135,7 +135,7 @@ End Sub
 'EndItemVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Command (ADO)](./command-object-ado.md)   
  [Коллекция Fields (ADO)](./fields-collection-ado.md)   
  [Свойство Item (ADO)](./item-property-ado.md)   

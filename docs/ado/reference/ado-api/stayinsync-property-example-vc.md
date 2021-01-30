@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3a5db5f0-094b-46e1-939b-d9fa9417a406
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cfb2f054e81bf2f34e3bc62331a573b626d713bd
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d15933fec72109c58206c43dfc4b57db1ac29288
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988635"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166442"
 ---
 # <a name="stayinsync-property-example-vc"></a>Пример свойства StayInSync (Visual C++)
 В этом примере показано, как свойство [StayInSync](./stayinsync-property.md) упрощает доступ к строкам в иерархическом [наборе записей](./recordset-object-ado.md).  
@@ -144,7 +144,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Коллекция Fields (ADO)](./fields-collection-ado.md)   
  [Объект Recordset (ADO)](./recordset-object-ado.md)   
  [Свойство StayInSync](./stayinsync-property.md)

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: aa7de324-cd71-4bd0-8043-24229f4a785e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ac6978aba505110066229bc13f359e9215a25611
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 02b1296a81bed339071995d66bc9c1454ae86aa8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975925"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164801"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vb"></a>Примеры методов примеры BeginTrans, CommitTrans и RollbackTrans (Visual Basic)
-В этом примере изменяется тип книги всех книг психологии в таблице ***titles*** базы данных. После того как метод [примеры BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) запускает транзакцию, которая изолирует все изменения, внесенные в таблицу ***titles*** , метод [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) сохраняет изменения. Для отмены изменений, сохраненных с помощью метода [Update](./update-method.md) , можно использовать метод [RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) .  
+В этом примере изменяется тип книги всех книг психологии в таблице ***titles** _ базы данных. После того как метод [примеры BeginTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) запускает транзакцию, которая изолирует все изменения, внесенные в таблицу _ *_titles_*, метод [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) сохраняет изменения. Для отмены изменений, сохраненных с помощью метода [Update](./update-method.md) , можно использовать метод [RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) .  
   
 ```  
 'BeginBeginTransVB  
@@ -132,6 +132,6 @@ End Sub
 'EndBeginTransVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы примеры BeginTrans, CommitTrans и RollbackTrans (ADO)](./begintrans-committrans-and-rollbacktrans-methods-ado.md)   
  [Объект Connection (ADO)](./connection-object-ado.md)

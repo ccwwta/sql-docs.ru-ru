@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Groups::raw_Append
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 56b94fc6-7ef0-4e4a-82a3-033b94c46036
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5890ffa77884927574f10edeb0d2acc3a428185e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 859e3dea7f5dbdb84efd44aebc766eb2d195a7e3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985495"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164312"
 ---
 # <a name="append-method-adox-groups"></a>Метод Append (коллекция Groups ADOX)
 Добавляет новый объект [группы](./group-object-adox.md) в коллекцию [Groups](./groups-collection-adox.md) .  
@@ -38,7 +38,7 @@ Groups.Append Group
  *Группа*  
  Добавляемый объект **группы** или имя группы для создания и добавления.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Коллекция **Groups** [каталога](./catalog-object-adox.md) представляет все учетные записи групп каталога. Коллекция **Groups** для [пользователя](./user-object-adox.md) представляет только группу, к которой принадлежит пользователь.  
   
  Если поставщик не поддерживает создание групп, возникнет ошибка.  
@@ -49,7 +49,7 @@ Groups.Append Group
 ## <a name="applies-to"></a>Применение  
  [Коллекция Groups (ADOX)](./groups-collection-adox.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример добавления групп и пользователей, методы ChangePassword (Visual Basic)](./groups-and-users-append-changepassword-methods-example-vb.md)   
  [Метод Append (столбцы ADOX)](./append-method-adox-columns.md)   
  [Метод Append (индексы ADOX)](./append-method-adox-indexes.md)   

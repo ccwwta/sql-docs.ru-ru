@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 14668aba6cbc6817b951820bbdee4d5c69a51bc5
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c76d26032d9986cba52442d62bb7ef8c10db5419
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989365"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166607"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Примеры методов Save и Open (Visual Basic)
 В этих трех примерах показано, как можно совместно использовать методы [Save](./save-method.md) и [Open](./open-method-ado-recordset.md) .  
   
  Предположим, что вы собираетесь в командировку и хотите взять таблицу из базы данных. Прежде чем перейти, вы получите доступ к данным в качестве [набора записей](./recordset-object-ado.md) и сохраните их в переносимой форме. Когда вы приступите к назначению, вы получите доступ к **набору записей** как к локальному, отключенному **набору записей**. Вы вносите изменения в **набор записей**, а затем сохраняете его снова. Наконец, когда вы вернетесь домой, вы снова подключитесь к базе данных и обновите ее, внеся изменения, внесенные в дороге.  
   
- Сначала получите доступ к таблице ***authors*** и сохраните ее.  
+ Сначала получите доступ к таблице **_authors_* _ и сохраните ее.  
   
 ```  
 'BeginSaveVB  
@@ -85,7 +85,7 @@ End Sub
 'EndSaveVB  
 ```  
   
- На этом этапе вы приступили к месту назначения. Вы будете обращаться к таблице ***authors*** как к локальному, отключенному **набору записей**. Необходимо иметь поставщик **мсперсист** на компьютере, который используется для доступа к сохраненному файлу, a:\Pubs.xml.  
+ На этом этапе вы приступили к месту назначения. Вы получите доступ к таблице _*_authors_*_ как к локальному, отключенному набору записей _ *. Необходимо иметь поставщик **мсперсист** на компьютере, который используется для доступа к сохраненному файлу, a:\Pubs.xml.  
   
 ```  
 Attribute VB_Name = "Save"  
@@ -97,7 +97,7 @@ Attribute VB_Name = "Save"
 Attribute VB_Name = "Save"  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Open (набор записей ADO)](./open-method-ado-recordset.md)   
  [Объект Recordset (ADO)](./recordset-object-ado.md)   
  [Дополнительные сведения о сохраняемости в наборе записей](../../guide/data/more-about-recordset-persistence.md)   

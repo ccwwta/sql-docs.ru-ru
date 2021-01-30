@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2ee8e4c5-1d66-4a77-8892-6dad7e07e611
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e826903c37ca436f73bd82abc93afdd0568fc9e6
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e01df93f4f7f5db2b534c0c3458482ccd06c2b1f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988245"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166355"
 ---
 # <a name="type-property-example-property-vb"></a>Пример свойства Type (объект Property) (Visual Basic)
 В этом примере демонстрируется свойство [Type](./type-property-ado.md) . Это модель служебной программы для перечисления имен и типов коллекций, таких как [Свойства](./properties-collection-ado.md), [поля](./fields-collection-ado.md)и т. д.  
@@ -148,6 +148,6 @@ End Sub
 'EndTypePropertyVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Property (ADO)](./property-object-ado.md)   
  [Свойство Type (ADO)](./type-property-ado.md)

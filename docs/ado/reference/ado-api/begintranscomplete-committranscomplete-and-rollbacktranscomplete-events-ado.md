@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - CommitTransComplete
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: ec4e4b38-e9c6-4757-b2ef-4e468ae5f1d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 91f5d573d62ef5000cdd6ed85a52866a0ee7f544
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 013df2c56a973d8df6b51434f016ee7642fc4f71
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975875"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164784"
 ---
 # <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>События Бегинтранскомплете, Коммиттранскомплете и Роллбакктранскомплете (ADO)
 Эти события будут вызываться после завершения выполнения связанной операции над объектом [Connection](./connection-object-ado.md) .  
@@ -63,12 +63,12 @@ RollbackTransComplete pError, adStatus, pConnection
  *пконнектион*  
  Объект **соединения** , для которого произошло это событие.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  В Visual C++ несколько **соединений** могут совместно использовать один и тот же метод обработки событий. Метод использует возвращенный объект **соединения** , чтобы определить, какой объект вызывал событие.  
   
  Если свойство [Attributes](./attributes-property-ado.md) имеет значение **адксакткоммитретаининг** или **адксактабортретаининг**, Новая транзакция начинается после фиксации или отката транзакции. Используйте событие **бегинтранскомплете** , чтобы пропустить все события начала транзакции, кроме первого.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример модели событий ADO (Visual c++)](./ado-events-model-example-vc.md)   
  [Примеры методов примеры BeginTrans, CommitTrans и RollbackTrans (Visual Basic)](./begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
  [Сводка по обработчику событий ADO](../../guide/data/ado-event-handler-summary.md)   

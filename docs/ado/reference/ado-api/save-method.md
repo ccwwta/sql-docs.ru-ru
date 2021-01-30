@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Recordset::Save
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a32419db6e4dd04cc57b31b1d9267e80a30db41d
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 54e75b3ed86a1522c7334f6948b2a5a105971c9f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97638134"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166596"
 ---
 # <a name="save-method"></a>Метод Save
 Сохраняет [набор записей](./recordset-object-ado.md) в объекте File или [Stream](./stream-object-ado.md) .  
@@ -41,7 +41,7 @@ recordset.Save Destination, PersistFormat
  *персистформат*  
  Необязательный параметр. Значение [персистформатенум](./persistformatenum.md) , указывающее формат, в котором сохраняется **набор записей** (XML или адтг). Значение по умолчанию — **адперсистадтг**.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Метод **Save** можно вызвать только для открытого **набора записей**. Используйте метод [Open Method (ADO Recordset)](./open-method-ado-recordset.md) для последующего восстановления **набора записей** из *места назначения*.  
   
  Если свойство [фильтра](./filter-property.md) для **набора записей** действует, сохраняются только те строки, которые доступны в фильтре. Если **набор записей** является иерархическим, текущий дочерний **набор записей** и его дочерние элементы сохраняются, включая родительский **набор записей**. Если вызывается метод Save дочернего **набора записей** , дочерний элемент и все его дочерние элементы сохраняются, но родительский элемент не является.  

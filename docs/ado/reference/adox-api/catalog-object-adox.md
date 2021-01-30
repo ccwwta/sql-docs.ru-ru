@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Catalog
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: bb651639-a488-4e38-b6de-0ed99fa4dd92
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8329c4a94a6c9e01f0730b3244eabc6c74511cfa
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cfb44f5e35b1f30e504cfbf83a85c5a61aceb987
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985315"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164301"
 ---
 # <a name="catalog-object-adox"></a>Объект Catalog (ADOX)
 Содержит коллекции ([таблицы](./tables-collection-adox.md), [представления](./views-collection-adox.md), [пользователей](./users-collection-adox.md), [группы](./groups-collection-adox.md)и [процедуры](./procedures-collection-adox.md)), которые описывают Каталог схемы источника данных.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Объект **каталога** можно изменить, добавив или удалив объекты или изменив существующие объекты. Некоторые поставщики могут не поддерживать все объекты **каталога** или могут поддерживать только просмотр сведений о схеме.  
   
  Свойства и методы объекта **каталога** позволяют:  
@@ -41,7 +41,7 @@ ms.locfileid: "88985315"
   
 -   [Свойства, методы и события объекта Catalog](./catalog-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойства ActiveConnection каталога (Visual Basic)](./catalog-activeconnection-property-example-vb.md)   
  [Пример свойств Command и CommandText (Visual Basic)](./command-and-commandtext-properties-example-vb.md)   
  [Пример метода Close соединения, свойство типа таблицы (Visual Basic)](./connection-close-method-table-type-property-example-vb.md)   

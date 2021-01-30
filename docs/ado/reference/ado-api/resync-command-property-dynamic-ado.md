@@ -1,25 +1,25 @@
 ---
 description: Свойство Resync Command (динамическое) (ADO)
-title: Свойство "команда повторной синхронизации" — Dynamic (ADO) | Документация Майкрософт
+title: Property-Dynamic команды повторной синхронизации (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Resync Command property [ADO]
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2e882a9c65bf0d54dc9bd9e160edbc67f4e7996b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: bb5652e61cb798f4e8710c5fc22da151d1a972d8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989515"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166644"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Свойство Resync Command (динамическое) (ADO)
 Указывает указанную пользователем строку команды, которая выдается методом повторной [синхронизации](./resync-method.md) для обновления данных в таблице, указанной в динамическом свойстве [уникальной таблицы](./unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) .  
@@ -27,7 +27,7 @@ ms.locfileid: "88989515"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает **строковое** значение, представляющее собой командную строку.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Объект [Recordset](./recordset-object-ado.md) является результатом операции JOIN, выполняемой над несколькими базовыми таблицами. Затронутые строки зависят от параметра *аффектрекордс* метода [Resync](./resync-method.md) . Стандартный метод повторной **синхронизации** выполняется, если не заданы свойства " [уникальная таблица](./unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) " и " **Повторная синхронизация** ".  
   
  Командная строка свойства Command повторной **синхронизации** — это параметризованная команда или хранимая процедура, которая однозначно определяет обновляемую строку и возвращает одну строку, содержащую то же число и порядок столбцов, что и обновляемая строка. Командная строка содержит параметр для каждого первичного ключевого столбца в **уникальной таблице**; в противном случае возвращается ошибка времени выполнения. Параметры автоматически заполняются значениями первичного ключа из обновляемой строки.  

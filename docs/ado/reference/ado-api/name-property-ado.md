@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Parameter::Name
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0636b77959a003248ee798684fc74c6309145737
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 384c1e96eb735d8cf9569039f45c2d420679ce0e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990485"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167068"
 ---
 # <a name="name-property-ado"></a>Свойство Name (ADO)
 Указывает имя объекта.  
@@ -30,8 +30,8 @@ ms.locfileid: "88990485"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает **строковое** значение, указывающее имя объекта.  
   
-## <a name="remarks"></a>Remarks  
- Используйте свойство **Name** , чтобы присвоить имя или получить имя **команды**, **Свойства**, **поля**или объекта **параметра** .  
+## <a name="remarks"></a>Замечания  
+ Используйте свойство **Name** , чтобы присвоить имя или получить имя **команды**, **Свойства**, **поля** или объекта **параметра** .  
   
  Значение доступно для чтения и записи в объекте **Command** и доступно только для чтения в объекте **Property** .  
   
@@ -54,6 +54,6 @@ ms.locfileid: "88990485"
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример атрибутов и свойств имени (Visual Basic)](./attributes-and-name-properties-example-vb.md)   
  [Пример атрибутов и свойств имени (Visual c++)](./attributes-and-name-properties-example-vc.md)

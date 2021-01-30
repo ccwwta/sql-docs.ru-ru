@@ -7,19 +7,19 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - SQL property [RDS]
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 325f739e55bcb2b7d3e7440e9906fad341c01078
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c24b191e11f95428b80a9ecfb3cced4f605e3e76
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724200"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166094"
 ---
 # <a name="sql-property"></a>Свойство SQL
 Указывает строку запроса, используемую для получения [набора записей](../ado-api/recordset-object-ado.md).  
@@ -44,7 +44,7 @@ Run time: DataControl.SQL = "QueryString"
  *DataControl*  
  Объектная переменная, представляющая **RDS. Объект элемента управления** .  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Как правило, это инструкция SQL (с использованием диалекта сервера базы данных), например `"Select * from NewTitles"` . Чтобы гарантировать точное сопоставление и обновление записей, обновляемый запрос должен содержать поле, отличное от длинного бинарного поля или вычисленного поля.  
   
  Свойство **SQL** является необязательным, если пользовательский бизнес-объект на стороне сервера получает данные для клиента.  
@@ -52,7 +52,7 @@ Run time: DataControl.SQL = "QueryString"
 ## <a name="applies-to"></a>Применение  
  [Объект DataControl (служба удаленных рабочих столов)](./datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойства SQL (VBScript)](./sql-property-example-vbscript.md)   
  [Свойство Connect (RDS)](./connect-property-rds.md)   
  [Метод query (RDS)](./query-method-rds.md)   

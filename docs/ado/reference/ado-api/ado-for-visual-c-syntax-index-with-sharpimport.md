@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 dev_langs:
 - C++
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d60cb7594592133eb19f7a9aa42ad25fb1fc1a38
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b75865809a93f3c0f7cc0e10cde576ed403af5c0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976365"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164921"
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>ADO для Visual C++ индекса синтаксиса с #import
 Этот индекс является перекрестной ссылкой на справочник по языку ADO на основе Microsoft Visual C++ и директивы **#import** .  
@@ -58,5 +58,5 @@ ms.locfileid: "88976365"
   
 -   [События набора записей](./recordsetevents-visual-c-syntax-index-with-sharpimport.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Индекс синтаксиса ADO для Visual C++ для модели COM](./ado-for-visual-c-syntax-index-for-com.md)

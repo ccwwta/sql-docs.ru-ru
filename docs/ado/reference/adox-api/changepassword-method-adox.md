@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _User25::raw_ChangePassword
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d187fbc6-5fac-4abb-803d-bf344dcf0302
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e51037f9838e9aef279351c822e6c35ffb25f0fb
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4347cb856b1fcb4d76ef6133024335404e32ad5b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88985205"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164283"
 ---
 # <a name="changepassword-method-adox"></a>Метод ChangePassword (ADOX)
 Изменяет пароль для учетной записи [пользователя](./user-object-adox.md) .  
@@ -41,7 +41,7 @@ User.ChangePassword OldPassword, NewPassword
  *NewPassword*  
  **Строковое** значение, указывающее новый пароль.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  По соображениям безопасности старый пароль должен быть указан в дополнение к новому паролю.  
   
  Если поставщик не поддерживает администрирование свойств доверенного лица, возникнет ошибка.  
@@ -49,5 +49,5 @@ User.ChangePassword OldPassword, NewPassword
 ## <a name="applies-to"></a>Применение  
  [Объект User (ADOX)](./user-object-adox.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Примеры методов Append коллекций Groups и Users, а также пример метода ChangePassword (Visual Basic)](./groups-and-users-append-changepassword-methods-example-vb.md)
