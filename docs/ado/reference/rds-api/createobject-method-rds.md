@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - CreateObject method [ADO]
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ae158d217437184be4ead71beeb2d2404248396f
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 5fa625a75bbcadffb37064c04adc7ebd57a48994
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722440"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163864"
 ---
 # <a name="createobject-method-rds"></a>Метод CreateObject (служба удаленных рабочих столов)
 Создает прокси-сервер для целевого бизнес-объекта и возвращает указатель на него. Прокси-пакеты и маршалирует данные в заглушку на стороне сервера для взаимодействия с бизнес-объектом для отправки запросов и данных через Интернет. Для объектов внутрипроцессного компонента прокси-серверы не используются, предоставляется только указатель на объект.  
@@ -50,13 +50,13 @@ ms.locfileid: "91722440"
  *авебсрвр* или *ComputerName*  
  **Строковое** значение, представляющее URL-адрес, обозначающий сервер службы IIS (IIS), на котором создается экземпляр бизнес-объекта сервера.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  *Протокол HTTP* является стандартным веб-протоколом. *HTTPS* — это защищенный веб-протокол. Используйте *протокол DCOM* при запуске локальной сети без HTTP. *Внутрипроцессный* протокол — это локальная библиотека динамической КОМПОНОВКИ (DLL); Он не использует сеть.  
   
 ## <a name="applies-to"></a>Применение  
  [Объект DataSpace (служба удаленных рабочих столов)](./dataspace-object-rds.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример объекта факта, метода запроса и метода CreateObject (VBScript)](./datafactory-object-query-method-and-createobject-method-example-vbscript.md)   
  [Пример объекта пространства и метода CreateObject (VBScript)](./dataspace-object-and-createobject-method-example-vbscript.md)   
  [Метод CreateRecordset (служба удаленных рабочих столов)](./createrecordset-method-rds.md)

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f46b06f5167995b00513832d1dec59de5b9637f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 0e87c17de8cc9b5fcede937c3678cb5b7b499712
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976925"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161795"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vc"></a>Пример свойств ActualSize и DefinedSize (Visual c++)
 В этом примере используются свойства [ActualSize](./actualsize-property-ado.md) и [DefinedSize](./definedsize-property.md) для вывода определенного размера и фактического размера поля.  
@@ -147,6 +147,6 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 **Имя хранилища: Букбеат**  
 **Определенный размер: 40**  
 **Фактический размер: 8**   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство ActualSize (ADO)](./actualsize-property-ado.md)   
  [Свойство DefinedSize](./definedsize-property.md)

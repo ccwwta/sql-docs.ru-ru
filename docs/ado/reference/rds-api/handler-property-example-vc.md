@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8f8815ce6d607de39861f56bdcecca6c37e9dcc6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 757679e99f9f4de7b7c1c96abf367ad5df5daee1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722164"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163761"
 ---
 # <a name="handler-property-example-vc"></a>Пример свойства Handler (Visual C++)
 > [!IMPORTANT]
@@ -38,7 +38,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- Код выглядит следующим образом. Команда, назначенная свойству [SQL](./sql-property.md) , будет соответствовать идентификатору ***аусорбид*** и будет получать строку для автора Ивана о'леари. Несмотря на то, что свойство [Connect](./connect-property-rds.md) в коде указывает источник данных Northwind, этот источник данных будет перезаписан с помощью раздела Msdfmap.ini *Connect* . Свойство [Recordset](./recordset-sourcerecordset-properties-rds.md) объекта **элемента управления** данных назначается несвязанному объекту [Recordset](../ado-api/recordset-object-ado.md) исключительно в качестве удобства для написания кода.  
+ Код выглядит следующим образом. Команда, назначенная свойству [SQL](./sql-property.md) , будет соответствовать идентификатору ***аусорбид** _ и будет получать строку для автора Ивана о'леари. Несмотря на то, что свойство [Connect](./connect-property-rds.md) в коде указывает источник данных Northwind, этот источник данных будет перезаписан в разделе Msdfmap.ini _connect *. Свойство [Recordset](./recordset-sourcerecordset-properties-rds.md) объекта **элемента управления** данных назначается несвязанному объекту [Recordset](../ado-api/recordset-object-ado.md) исключительно в качестве удобства для написания кода.  
   
 ```  
 // BeginHandlerCpp.cpp  
@@ -129,6 +129,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект элемента управления (RDS)](./datacontrol-object-rds.md)   
  [Свойство Handler (служба удаленных рабочих столов)](./handler-property-rds.md)

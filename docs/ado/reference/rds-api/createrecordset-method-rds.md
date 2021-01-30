@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - DataControl::CreateRecordset
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad1c9b0f36922f29ce015fd459a1be3e788e07f5
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4a88898c884cbaf0a9c82a882b15ef48c1e3e3a8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721205"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163855"
 ---
 # <a name="createrecordset-method-rds"></a>Метод CreateRecordset (служба удаленных рабочих столов)
 Создает пустой, отключенный [набор записей](../ado-api/recordset-object-ado.md).  
@@ -49,7 +49,7 @@ object.CreateRecordset(ColumnInfos)
   
 |attribute|Описание|  
 |---------------|-----------------|  
-|Имя|Имя заголовка столбца.|  
+|name|Имя заголовка столбца.|  
 |Тип|Целое число типа данных.|  
 |Размер|Целочисленное значение ширины в символах, независимо от типа данных.|  
 |Допускает значения NULL|.|  
@@ -57,7 +57,7 @@ object.CreateRecordset(ColumnInfos)
   
  Затем набор массивов столбцов будет сгруппирован в массив, который определяет **набор записей**.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Бизнес-объект на стороне сервера может заполнить результирующий **набор записей** данными из поставщика данных, не относящегося к OLE DB, например с помощью файла операционной системы, содержащего котировки котировок.  
   
  В следующей таблице перечислены значения [дататипинум](../ado-api/datatypeenum.md) , поддерживаемые методом **CreateRecordset** . В списке указывается номер ссылки, используемый для определения полей.  
@@ -110,7 +110,7 @@ object.CreateRecordset(ColumnInfos)
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример метода CreateRecordset (Visual Basic)](../ado-api/createrecordset-method-example-vb.md)   
  [Пример метода CreateRecordset (VBScript)](./createrecordset-method-example-vbscript.md)   
  [Метод CreateObject (служба удаленных рабочих столов)](./createobject-method-rds.md)

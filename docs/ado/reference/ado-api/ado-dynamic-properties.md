@@ -6,19 +6,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - dynamic properties [ADO]
 - properties [ADO], dynamic
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9dd0186fba696d2fe3528f113bd0e07aeadd801f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f815c82b16ef31bc64e5524ec7114779b2ba3234
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976515"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161661"
 ---
 # <a name="ado-dynamic-properties"></a>Динамические свойства ADO
 Динамические свойства могут быть добавлены к коллекциям [свойств](./properties-collection-ado.md) [соединения](./connection-object-ado.md), [команды](./command-object-ado.md)или объектов [набора записей](./recordset-object-ado.md) . Источником этих свойств является либо поставщик данных, например [поставщик OLE DB для SQL Server](../../guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), либо поставщик услуг, например [Служба курсора Майкрософт для OLE DB](../../guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md). Дополнительные сведения о конкретном динамическом свойстве см. в документации соответствующего поставщика данных или поставщика услуг.  
@@ -37,7 +37,7 @@ ms.locfileid: "88976515"
 |[Повторная синхронизация обновлений](./update-resync-property-dynamic-ado.md)|Указывает, следует ли за методом **UpdateBatch** выполнить неявную операцию повторной **синхронизации** , и если да, то область действия этой операции.|
 | &nbsp; | &nbsp; |
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по API ADO](./ado-api-reference.md)   
  [Коллекции ADO](./ado-collections.md)   
  [Перечислимые константы ADO](./ado-enumerated-constants.md)   

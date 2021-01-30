@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Catalog::Tables
@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: 38d750e7-f3fb-426e-b4b4-55eea4f1a654
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0b6d580dd6f56f78947ff1a881db1bff28c3e2b8
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e30bb754332d52f02d2857dc80d572e227e819ed
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983265"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164003"
 ---
 # <a name="tables-collection-adox"></a>Коллекция Tables (ADOX)
 Содержит все [табличные](./table-object-adox.md) объекты каталога.  
   
-## <a name="remarks"></a>Remarks  
- Метод [append](./append-method-adox-tables.md) для коллекции **ТАБЛИЦ** уникален для ADOX. Вы можете:  
+## <a name="remarks"></a>Замечания  
+ Метод [append](./append-method-adox-tables.md) для коллекции **ТАБЛИЦ** уникален для ADOX. Вы можете выполнить следующие действия:  
   
 -   Добавьте новую таблицу в коллекцию с помощью метода **append** .  
   
- Остальные свойства и методы являются стандартными для коллекций ADO. Вы можете:  
+ Остальные свойства и методы являются стандартными для коллекций ADO. Вы можете выполнить следующие действия:  
   
 -   Доступ к таблице в коллекции со свойством [Item](../ado-api/item-property-ado.md) .  
   
@@ -48,7 +48,7 @@ ms.locfileid: "88983265"
   
 -   [Свойства, методы и события коллекции Tables](./tables-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойства ActiveConnection каталога (Visual Basic)](./catalog-activeconnection-property-example-vb.md)   
  [Методы добавления столбцов и таблиц, пример свойства Name (Visual Basic)](./columns-and-tables-append-methods-name-property-example-vb.md)   
  [Пример метода Close соединения, свойство типа таблицы (Visual Basic)](./connection-close-method-table-type-property-example-vb.md)   

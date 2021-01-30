@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_update_collection_set_TSQL
 - sp_syscollector_update_collection_set
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fd55d65173d190d1c28708bfae46b10eaa0030a4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 207d5b2f02bce0a3c9a9e89cdccdb5fe80790f20
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534844"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161887"
 ---
 # <a name="sp_syscollector_update_collection_set-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +60,7 @@ sp_syscollector_update_collection_set
   
 `[ @name = ] 'name'` Имя набора элементов сбора. Аргумент *Name* имеет тип **sysname** и должен иметь значение, если *collection_set_id* имеет значение null.  
   
-`[ @new_name = ] 'new_name'` Новое имя набора сбора. Аргумент *new_name* имеет тип **sysname**и, если он используется, не может быть пустой строкой. *new_name* должны быть уникальными. Чтобы получить список имен текущего набора сбора, выполните запрос системного представления syscollector_collection_sets.  
+`[ @new_name = ] 'new_name'` Новое имя набора сбора. Аргумент *new_name* имеет тип **sysname** и, если он используется, не может быть пустой строкой. *new_name* должны быть уникальными. Чтобы получить список имен текущего набора сбора, выполните запрос системного представления syscollector_collection_sets.  
   
 `[ @target = ] 'target'` Зарезервировано для будущего использования.  
   
@@ -113,7 +113,7 @@ sp_syscollector_update_collection_set
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Функция sp_syscollector_update_collection_set должна выполняться в контексте системной базы данных msdb.  
   
  Либо *collection_set_id* , либо *имя* должны иметь значение, которое не может быть null. Чтобы получить эти значения, выполните запрос системного представления syscollector_collection_sets.  
@@ -179,7 +179,7 @@ EXEC dbo.sp_syscollector_update_collection_set
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)   
  [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   

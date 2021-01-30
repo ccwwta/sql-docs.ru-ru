@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 17df2a83-4166-4df8-8c17-0a33aaac8582
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b68a1937bff74767134568152d62ac8ffe032057
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 42f295244da75a1ab41f5ea9b566faae9449332e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88982825"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163906"
 ---
 # <a name="views-delete-method-example-vb"></a>Пример метода Delete коллекции Views (Visual Basic)
 В следующем коде показано, как использовать метод [Delete](./delete-method-adox-collections.md) для удаления представления из каталога.  
@@ -54,6 +54,6 @@ End Sub
 ' EndDeleteViewVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Delete (ADOX Collections)](./delete-method-adox-collections.md)   
  [Коллекция Views (ADOX)](./views-collection-adox.md)

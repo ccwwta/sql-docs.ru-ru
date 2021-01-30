@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Key::RelatedTable
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: cb54c6bc-2be2-40b1-bc11-90c10651b878
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f7fdbe6977ee2ddfc586e152b02b4994697a39db
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: dc2eb95c9ae35d2abe697a6f5e0231633ded8fec
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88983455"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164055"
 ---
 # <a name="relatedtable-property-adox"></a>Свойство RelatedTable (ADOX)
 Указывает имя связанной таблицы.  
@@ -33,7 +33,7 @@ ms.locfileid: "88983455"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает и возвращает **строковое** значение.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Значение по умолчанию — пустая строка.  
   
  Если ключ является внешним ключом, **RelatedTable** — имя таблицы, содержащей ключ.  
@@ -41,5 +41,5 @@ ms.locfileid: "88983455"
 ## <a name="applies-to"></a>Применение  
  [Объект Key (ADOX)](./key-object-adox.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Примеры метода Append коллекции Keys, свойства Type объекта Key, а также примеры свойств RelatedColumn, RelatedTable и UpdateRule (Visual Basic)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)

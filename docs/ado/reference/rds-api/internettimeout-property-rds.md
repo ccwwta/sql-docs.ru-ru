@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - InternetTimeout property [ADO]
 ms.assetid: 4d1c8892-4bbc-4e71-bf4b-ba52c0ea9549
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43ab46eefcb897511a2990655362ecb10527be19
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 7eab888961a49b257d0dd408362545332454554e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724505"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163731"
 ---
 # <a name="internettimeout-property-rds"></a>Свойство InternetTimeout (служба удаленных рабочих столов)
 Указывает количество миллисекунд ожидания перед истечением времени ожидания запроса.  
@@ -30,7 +30,7 @@ ms.locfileid: "91724505"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает значение **типа Long** , представляющее количество миллисекунд до истечения времени ожидания запроса.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Это свойство применяется только к запросам, отправленным с помощью протоколов HTTP или HTTPS.  
   
  Выполнение запросов в трехуровневой среде может занять несколько минут. Используйте это свойство, чтобы указать дополнительное время для долго выполняющихся запросов.  
@@ -46,6 +46,6 @@ ms.locfileid: "91724505"
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойства InternetTimeout (Visual Basic)](./internettimeout-property-example-vb.md)   
  [Пример свойства InternetTimeout (Visual C++)](./internettimeout-property-example-vc.md)

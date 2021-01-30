@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syspolicy_set_log_on_success_TSQL
 - sp_syspolicy_set_log_on_success
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6b33383b-5949-488a-a911-59299a270f46
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cb17728ab1ac9c063f2198ec707254bf6b2f8eed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 268ef1970ba38befb87801cef0098c99f0c9f2bf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485613"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161321"
 ---
 # <a name="sp_syspolicy_set_log_on_success-transact-sql"></a>sp_syspolicy_set_log_on_success (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ sp_syspolicy_set_log_on_success [ @value = ] value
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @value = ] value` Определяет, регистрируются ли успешные оценки политик. *значение* равно **SQLVARIANT**и может принимать одно из следующих значений:  
+`[ @value = ] value` Определяет, регистрируются ли успешные оценки политик. *значение* равно **SQLVARIANT** и может принимать одно из следующих значений:  
   
 -   0 или false = успешное выполнение политик не заносится в журнал;  
   
@@ -50,7 +50,7 @@ sp_syspolicy_set_log_on_success [ @value = ] value
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Процедура sp_syspolicy_set_log_on_success должна выполняться в контексте системной базы данных msdb.  
   
  Если *параметру value* присвоено значение 0 или false, то регистрируются только оценки политик, не прошедшие проверку.  
@@ -69,7 +69,7 @@ EXEC msdb.dbo.sp_syspolicy_set_log_on_success @value = 1;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранимые процедуры управления на основе политик &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-configure-transact-sql.md)  
   
