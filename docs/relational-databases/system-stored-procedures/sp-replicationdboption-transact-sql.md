@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replicationdboption_TSQL
 - sp_replicationdboption
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 65839ea899d001c42478e1eb3d1e54cad0f53f52
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e56271516d9ef2df60e993cd73963d074b503d42
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485717"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211878"
 ---
 # <a name="sp_replicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,9 +42,9 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @dbname = ] 'dbname'` База данных, для которой задается параметр базы данных репликации. Аргумент *db_name* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @dbname = ] 'dbname'` База данных, для которой задается параметр базы данных репликации. Аргумент *db_name* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @optname = ] 'optname'` Параметр базы данных репликации для включения или отключения. *optname* имеет тип **sysname**и может принимать одно из следующих значений.  
+`[ @optname = ] 'optname'` Параметр базы данных репликации для включения или отключения. *optname* имеет тип **sysname** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -62,7 +62,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  **sp_replicationdboption** используется в репликации моментальных снимков, репликации транзакций и репликации слиянием.  
   
  Эта процедура создает или удаляет определенные системные таблицы репликации, учетные записи безопасности и так далее в зависимости от указанного аргумента. Задает соответствующее **is_published** (репликация трансакатионал или моментального снимка), **is_merge_published** (репликация слиянием) или **is_distributor** бит в системной таблице **master. databases** и создает необходимые системные таблицы.  

@@ -7,24 +7,24 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQLSetPos function [ODBC], Cursor Library
 ms.assetid: 574399c3-2bb2-4d19-829c-7c77bd82858d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d35f1461f6a5da3ee894d9275c6ca112bfabab44
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bf97529f4fd411581738459accffc805a444a8ea
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88339240"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202621"
 ---
 # <a name="sqlsetpos-cursor-library"></a>SQLSetPos (библиотека курсоров)
 > [!IMPORTANT]  
 >  Эта функция будет удалена в следующей версии Windows. Избегайте использования этой функции в новых разработках и запланируйте изменение приложений, которые в настоящее время используют эту функцию. Корпорация Майкрософт рекомендует использовать функцию курсора драйвера.  
   
- В этом разделе рассматривается использование функции **SQLSetPos** в библиотеке курсоров. Общие сведения о функции **SQLSetPos**см. в разделе [Функция SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md).  
+ В этом разделе рассматривается использование функции **SQLSetPos** в библиотеке курсоров. Общие сведения о функции **SQLSetPos** см. в разделе [Функция SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md).  
   
  Библиотека курсоров поддерживает операцию SQL_POSITION только для аргумента *операции* в **SQLSetPos**. Он поддерживает значение SQL_LOCK_NO_CHANGE только для аргумента *LockType* .  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_delete_profileaccount_sp
 - sysmail_delete_profileaccount_sp_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b58d06f2-d6c9-4c8e-95bd-027c50f4621a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d5cc2643440544a3b1e65bc6fbb07df0b95e5594
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d364dfb4de4408da2f424185e6cad4f62b0c54cf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89525854"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181989"
 ---
 # <a name="sysmail_delete_profileaccount_sp-transact-sql"></a>sysmail_delete_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,13 +41,13 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @profile_id = ] profile_id` Идентификатор профиля удаляемого профиля. *profile_id* имеет **тип int**и значение по умолчанию NULL. Можно указать либо *profile_id* , либо *profile_name* .  
+`[ @profile_id = ] profile_id` Идентификатор профиля удаляемого профиля. *profile_id* имеет **тип int** и значение по умолчанию NULL. Можно указать либо *profile_id* , либо *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'` Имя профиля удаляемого профиля. Аргумент *profile_name* имеет тип **sysname**и значение по умолчанию NULL. Можно указать либо *profile_id* , либо *profile_name* .  
+`[ @profile_name = ] 'profile_name'` Имя профиля удаляемого профиля. Аргумент *profile_name* имеет тип **sysname** и значение по умолчанию NULL. Можно указать либо *profile_id* , либо *profile_name* .  
   
-`[ @account_id = ] account_id` Идентификатор удаляемой учетной записи. *account_id* имеет **тип int**и значение по умолчанию NULL. Можно указать либо *account_id* , либо *account_name* .  
+`[ @account_id = ] account_id` Идентификатор удаляемой учетной записи. *account_id* имеет **тип int** и значение по умолчанию NULL. Можно указать либо *account_id* , либо *account_name* .  
   
-`[ @account_name = ] 'account_name'` Имя удаляемой учетной записи. Аргумент *account_name* имеет тип **sysname**и значение по умолчанию NULL. Можно указать либо *account_id* , либо *account_name* .  
+`[ @account_name = ] 'account_name'` Имя удаляемой учетной записи. Аргумент *account_name* имеет тип **sysname** и значение по умолчанию NULL. Можно указать либо *account_id* , либо *account_name* .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -76,7 +76,7 @@ EXECUTE msdb.dbo.sysmail_delete_profileaccount_sp
     @account_name = 'Audit Account' ;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [Создание учетной записи Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Database Mail объекты конфигурации](../../relational-databases/database-mail/database-mail-configuration-objects.md)   

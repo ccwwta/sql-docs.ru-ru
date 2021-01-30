@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_add_log_shipping_secondary_primary_TSQL
 - sp_add_log_shipping_secondary_primary
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e1123bfa1ce465989322c3b76a48da96c1fed7f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7675de9f5d3e322511af474fcf9495dad3e4454a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464642"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179773"
 ---
 # <a name="sp_add_log_shipping_secondary_primary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ sp_add_log_shipping_secondary_primary
 ## <a name="arguments"></a>Аргументы  
 `[ @primary_server = ] 'primary_server'` Имя основного экземпляра в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] конфигурации доставки журналов. *primary_server* имеет тип **sysname** и не может иметь значение null.  
   
-`[ @primary_database = ] 'primary_database'` Имя базы данных на сервере-источнике. Аргумент *primary_database* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @primary_database = ] 'primary_database'` Имя базы данных на сервере-источнике. Аргумент *primary_database* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 `[ @backup_source_directory = ] 'backup_source_directory'` Каталог, в котором хранятся файлы резервных копий журналов транзакций с сервера источника. *backup_source_directory* имеет тип **nvarchar (500)** и не может иметь значение null.  
   
@@ -66,7 +66,7 @@ sp_add_log_shipping_secondary_primary
   
 `[ @restore_job_name = ] 'restore_job_name'` Имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задания агента на сервере-получателе, которое восстанавливает резервные копии в базе данных-получателе. *restore_job_name* имеет тип **sysname** и не может иметь значение null.  
   
-`[ @file_retention_period = ] 'file_retention_period'` Продолжительность времени в минутах, в течение которого файл резервной копии сохраняется на сервере-получателе по пути, указанному @backup_destination_directory параметром, перед удалением. *history_retention_period* имеет **тип int**и значение по умолчанию NULL. Если ничего не указано, подразумевается значение 14420.  
+`[ @file_retention_period = ] 'file_retention_period'` Продолжительность времени в минутах, в течение которого файл резервной копии сохраняется на сервере-получателе по пути, указанному @backup_destination_directory параметром, перед удалением. *history_retention_period* имеет **тип int** и значение по умолчанию NULL. Если ничего не указано, подразумевается значение 14420.  
   
 `[ @monitor_server = ] 'monitor_server'` Имя сервера мониторинга. Аргумент *Monitor_server* имеет тип **sysname**, не имеет значения по умолчанию и не может иметь значение null.  
   

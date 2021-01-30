@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_update_profileaccount_sp_TSQL
 - sysmail_update_profileaccount_sp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ccfcd3627627dd2fca78ba02b74f89f2bea07116
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 140256e73adee3593c620b17f81ac10c163030f3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473356"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181845"
 ---
 # <a name="sysmail_update_profileaccount_sp-transact-sql"></a>sysmail_update_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,15 +43,15 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @profile_id = ] profile_id` Идентификатор профиля для обновления. *profile_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать либо *profile_id* , либо *profile_name* .  
+`[ @profile_id = ] profile_id` Идентификатор профиля для обновления. *profile_id* имеет **тип int** и значение по умолчанию NULL. Необходимо указать либо *profile_id* , либо *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'` Имя профиля для обновления. Аргумент *profile_name* имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *profile_id* , либо *profile_name* .  
+`[ @profile_name = ] 'profile_name'` Имя профиля для обновления. Аргумент *profile_name* имеет тип **sysname** и значение по умолчанию NULL. Необходимо указать либо *profile_id* , либо *profile_name* .  
   
-`[ @account_id = ] account_id` Идентификатор учетной записи для обновления. *account_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать либо *account_id* , либо *account_name* .  
+`[ @account_id = ] account_id` Идентификатор учетной записи для обновления. *account_id* имеет **тип int** и значение по умолчанию NULL. Необходимо указать либо *account_id* , либо *account_name* .  
   
-`[ @account_name = ] 'account_name'` Имя учетной записи для обновления. Аргумент *account_name* имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *account_id* , либо *account_name* .  
+`[ @account_name = ] 'account_name'` Имя учетной записи для обновления. Аргумент *account_name* имеет тип **sysname** и значение по умолчанию NULL. Необходимо указать либо *account_id* , либо *account_name* .  
   
-`[ @sequence_number = ] sequence_number` Новый порядковый номер для учетной записи. *sequence_number* имеет **тип int**и не имеет значения по умолчанию. Порядковый номер определяет порядок, в соответствии с которым учетные записи используются в профиле.  
+`[ @sequence_number = ] sequence_number` Новый порядковый номер для учетной записи. *sequence_number* имеет **тип int** и не имеет значения по умолчанию. Порядковый номер определяет порядок, в соответствии с которым учетные записи используются в профиле.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -81,7 +81,7 @@ EXECUTE msdb.dbo.sysmail_update_profileaccount_sp
     ,@sequence_number = 3;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [Создание учетной записи Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Database Mail объекты конфигурации](../../relational-databases/database-mail/database-mail-configuration-objects.md)   

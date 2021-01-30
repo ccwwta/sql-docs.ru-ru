@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_altermessage_TSQL
 - sp_altermessage
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 726ad7eed8f306321bce16880abe93befee4e2c5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c5f7a871967c854376e9601373e4e28c3532cf9a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542034"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203262"
 ---
 # <a name="sp_altermessage-transact-sql"></a>sp_altermessage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,15 +42,15 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [** @message_id =** ] *message_number*  
+ [**@message_id =** ] *message_number*  
  Номер ошибки сообщения, которое необходимо изменить из **sys. messages**. *message_number* имеет **тип int** и не имеет значения по умолчанию.  
   
-`[ @parameter = ] 'write\_to\_log_'`Используется с ** \@ parameter_value** , чтобы указать, что сообщение должно быть записано в [!INCLUDE[msCoName](../../includes/msconame-md.md)] журнал приложений Windows. *write_to_log* имеет тип **sysname** и не имеет значения по умолчанию. для *write_to_log* должно быть задано значение WITH_LOG или null. Если параметру *write_to_log* присвоено значение WITH_LOG или null, а для ** \@ parameter_value** — **true**, сообщение записывается в журнал приложений Windows. Если параметру *write_to_log* присвоено значение WITH_LOG или null, а для ** \@ parameter_value** — **false**, сообщение не всегда записывается в журнал приложений Windows, но может быть записано в зависимости от того, как возникла ошибка. Если указано *write_to_log* , необходимо также указать значение для ** \@ parameter_value** .  
+`[ @parameter = ] 'write\_to\_log_'`Используется с **\@ parameter_value** , чтобы указать, что сообщение должно быть записано в [!INCLUDE[msCoName](../../includes/msconame-md.md)] журнал приложений Windows. *write_to_log* имеет тип **sysname** и не имеет значения по умолчанию. для *write_to_log* должно быть задано значение WITH_LOG или null. Если параметру *write_to_log* присвоено значение WITH_LOG или null, а для **\@ parameter_value** — **true**, сообщение записывается в журнал приложений Windows. Если параметру *write_to_log* присвоено значение WITH_LOG или null, а для **\@ parameter_value** — **false**, сообщение не всегда записывается в журнал приложений Windows, но может быть записано в зависимости от того, как возникла ошибка. Если указано *write_to_log* , необходимо также указать значение для **\@ parameter_value** .  
   
 > [!NOTE]  
 >  Если сообщение заносится в журнал приложений Windows, оно также заносится и в журнал ошибок компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-`[ @parameter_value = ]'value_'`Используется с ** \@ параметром** , чтобы указать, что ошибка должна быть записана в [!INCLUDE[msCoName](../../includes/msconame-md.md)] журнал приложений Windows. *значение* имеет тип **varchar (5)** и не имеет значения по умолчанию. Если **значение — true**, ошибка всегда записывается в журнал приложений Windows. Если **значение равно false**, то ошибка не всегда записывается в журнал приложений Windows, но может быть записана в зависимости от того, как возникла ошибка. Если указано *значение* , необходимо также указать *write_to_log* для ** \@ параметра** .  
+`[ @parameter_value = ]'value_'`Используется с **\@ параметром** , чтобы указать, что ошибка должна быть записана в [!INCLUDE[msCoName](../../includes/msconame-md.md)] журнал приложений Windows. *значение* имеет тип **varchar (5)** и не имеет значения по умолчанию. Если **значение — true**, ошибка всегда записывается в журнал приложений Windows. Если **значение равно false**, то ошибка не всегда записывается в журнал приложений Windows, но может быть записана в зависимости от того, как возникла ошибка. Если указано *значение* , необходимо также указать *write_to_log* для **\@ параметра** .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

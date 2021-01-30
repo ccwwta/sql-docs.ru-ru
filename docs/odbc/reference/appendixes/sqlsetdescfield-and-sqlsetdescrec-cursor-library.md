@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQLSetDescField function [ODBC], Cursor Library
 - SQLSetDescRec function [ODBC], Cursor Library
 ms.assetid: 4ccff067-85cd-4bfa-a6cd-7f28051fb5b9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cef4967a81a78e08dee733072359459c864b9627
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c97bbb38b5050461d3ca305d8ac895d693567be3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476946"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202648"
 ---
 # <a name="sqlsetdescfield-and-sqlsetdescrec-cursor-library"></a>SQLSetDescField и SQLSetDescRec (библиотека курсоров)
 > [!IMPORTANT]  
@@ -61,7 +61,7 @@ ms.locfileid: "88476946"
   
  Библиотека курсоров не выполняет **SQLSetDescField** для изменения любого поля дескриптора, Кроме упомянутых ранее полей. Если приложение вызывает **SQLSetDescField** для установки любого другого поля во время загрузки библиотеки курсора, вызов передается в драйвер.  
   
- Библиотека курсоров поддерживает изменение полей SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR и SQL_DESC_OCTET_LENGTH_PTR в любой строке дескриптора строки приложения динамически (после вызова **SQLExtendedFetch**, **SQLFetch**или **SQLFetchScroll**). Поле SQL_DESC_OCTET_LENGTH_PTR может быть изменено на указатель null только для отмены привязки буфера длины для столбца.  
+ Библиотека курсоров поддерживает изменение полей SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR и SQL_DESC_OCTET_LENGTH_PTR в любой строке дескриптора строки приложения динамически (после вызова **SQLExtendedFetch**, **SQLFetch** или **SQLFetchScroll**). Поле SQL_DESC_OCTET_LENGTH_PTR может быть изменено на указатель null только для отмены привязки буфера длины для столбца.  
   
  Библиотека курсоров не поддерживает изменение поля SQL_DESC_BIND_TYPE в APD или АРД при открытом курсоре. Поле SQL_DESC_BIND_TYPE можно изменить только после закрытия курсора и до открытия нового курсора. Единственными полями дескриптора, которые библиотека курсоров поддерживает для изменения при открытом курсоре, являются SQL_DESC_ARRAY_STATUS_PTR, SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, SQL_DESC_OCTET_LENGTH_PTR и SQL_DESC_ROWS_PROCESSED_PTR.  
   

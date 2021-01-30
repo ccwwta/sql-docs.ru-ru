@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_update_notification_TSQL
 - sp_update_notification
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 103e697c8aad38fa19769358372b31d89d3b5978
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7e1f54c6933945c6031e48d4f97ab89f0f966779
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549549"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184315"
 ---
 # <a name="sp_update_notification-transact-sql"></a>sp_update_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,11 +44,11 @@ sp_update_notification
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @alert_name = ] 'alert'` Имя предупреждения, связанного с этим уведомлением. Аргумент *Alert* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @alert_name = ] 'alert'` Имя предупреждения, связанного с этим уведомлением. Аргумент *Alert* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @operator_name = ] 'operator'` Оператор, который будет получать уведомления при возникновении предупреждения. Аргумент *operator* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @operator_name = ] 'operator'` Оператор, который будет получать уведомления при возникновении предупреждения. Аргумент *operator* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @notification_method = ] notification` Метод, по которому оператор получает уведомления. *уведомление*имеет тип **tinyint**, не имеет значения по умолчанию и может быть одним или несколькими из этих значений.  
+`[ @notification_method = ] notification` Метод, по которому оператор получает уведомления. *уведомление* имеет тип **tinyint**, не имеет значения по умолчанию и может быть одним или несколькими из этих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -60,7 +60,7 @@ sp_update_notification
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_update_notification** должны запускаться из базы данных **msdb** .  
   
  Вы можете обновить уведомление для оператора, который не имеет необходимых сведений об адресе, используя указанный *notification_method*. Если при отправке сообщения по электронной почте или пейджеру происходит ошибка, она заносится в журнал ошибок агента Microsoft SQL Server.  
@@ -82,7 +82,7 @@ EXEC dbo.sp_update_notification
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_add_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
  [sp_delete_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
  [sp_help_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   

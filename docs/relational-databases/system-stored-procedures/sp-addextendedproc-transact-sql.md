@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addextendedproc_TSQL
 - sp_addextendedproc
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4e8c7ffebae9f082a6a579a6cb6643ad2fc44d1b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5d3ca884a585b76eb62d9af20bf09757d7d3c84e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548412"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182788"
 ---
 # <a name="sp_addextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
   
  Эту процедуру можно выполнить только в базе данных **master** . Для выполнения расширенной хранимой процедуры из базы данных, отличной от **master**, следует определить имя расширенной хранимой процедуры с помощью **master**.  
   
- **sp_addextendedproc** добавляет записи в представление каталога [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) , регистрируя имя новой расширенной хранимой процедуры с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Он также добавляет запись в представление каталога [sys. extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) .  
+ **sp_addextendedproc** добавляет записи в представление каталога [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) , регистрируя имя новой расширенной хранимой процедуры с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Он также добавляет запись в представление каталога [sys.extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) .  
   
 > [!IMPORTANT]  
 >  Существующие DLL-библиотеки, которые зарегистрированы без указания полного пути, перестанут работать после обновления до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Чтобы устранить эту проблему, используйте **sp_dropextendedproc** , чтобы отменить регистрацию библиотеки DLL, а затем повторно зарегистрируйте ее с помощью **sp_addextendedproc**, указав полный путь.  

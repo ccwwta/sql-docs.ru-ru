@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_change_log_shipping_primary_database
 - sp_change_log_shipping_primary_database_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 070065ae6e621c5ea52bf4be50ac0cc99af089f3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e1bcd150ff810f5a4a16deb09a7ea72956ccd681
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474525"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181354"
 ---
 # <a name="sp_change_log_shipping_primary_database-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @database = ] 'database'` Имя базы данных на сервере-источнике. Аргумент *primary_database* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @database = ] 'database'` Имя базы данных на сервере-источнике. Аргумент *primary_database* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 `[ @backup_directory = ] 'backup_directory'` Путь к папке резервного копирования на сервере-источнике. *backup_directory* имеет тип **nvarchar (500)**, не имеет значения по умолчанию и не может иметь значение null.  
   
@@ -71,7 +71,7 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
 `[ @monitor_server_password = ] 'monitor_server_password'` Пароль учетной записи, используемой для доступа к серверу мониторинга.  
   
-`[ @backup_threshold = ] 'backup_threshold'` Продолжительность времени (в минутах) после создания последней резервной копии до возникновения ошибки *threshold_alert* . *backup_threshold* имеет **тип int**и значение по умолчанию 60 минут.  
+`[ @backup_threshold = ] 'backup_threshold'` Продолжительность времени (в минутах) после создания последней резервной копии до возникновения ошибки *threshold_alert* . *backup_threshold* имеет **тип int** и значение по умолчанию 60 минут.  
   
 `[ @threshold_alert = ] 'threshold_alert'` Предупреждение, создаваемое при превышении порогового значения резервного копирования. *threshold_alert* имеет **тип int** и не может иметь значение null.  
   
@@ -130,7 +130,7 @@ EXEC master.dbo.sp_change_log_shipping_primary_database
   
 ## <a name="see-also"></a>См. также:  
  [Сведения о доставке журналов (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [log_shipping_primary_databases (Transact-SQL)](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
   
   

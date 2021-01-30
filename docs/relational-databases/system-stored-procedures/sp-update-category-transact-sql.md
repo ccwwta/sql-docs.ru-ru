@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_update_category
 - sp_update_category_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 117f146c4ceea988d5817785494bf2af4dc11814
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c771e031254821562933cd2e7f4d9f51903edba6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543018"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184728"
 ---
 # <a name="sp_update_category-transact-sql"></a>sp_update_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,22 +43,22 @@ sp_update_category
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @class = ] 'class'` Класс обновляемой категории. *класс*имеет тип **varchar (8)**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
+`[ @class = ] 'class'` Класс обновляемой категории. *класс* имеет тип **varchar (8)**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**ПОЛУЧАЕТЕ**|Обновляет категорию предупреждений.|  
+|**ALERT**|Обновляет категорию предупреждений.|  
 |**ДОЛЖНО**|Обновляет категорию заданий.|  
 |**СТАНЦИИ**|Обновляет категорию операторов.|  
   
-`[ @name = ] 'old_name'` Текущее имя категории. Аргумент *old_name*имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @name = ] 'old_name'` Текущее имя категории. Аргумент *old_name* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @new_name = ] 'new_name'` Новое имя категории. Аргумент *new_name*имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @new_name = ] 'new_name'` Новое имя категории. Аргумент *new_name* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_update_category** должны запускаться из базы данных **msdb** .  
   
 ## <a name="permissions"></a>Разрешения  
@@ -78,7 +78,7 @@ EXEC dbo.sp_update_category
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
  [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
  [sp_help_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   

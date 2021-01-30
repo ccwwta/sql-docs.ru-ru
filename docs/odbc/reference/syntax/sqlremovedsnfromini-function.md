@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLRemoveDSNFromIni
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: bb2e8273-7b61-4113-bfc8-f7ccc607c811
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f49646881539d7c90c057633e7151b31cfe52b52
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 26bbcf3bf68dda172220323cb7d9b0dc39e3178d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499617"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192488"
 ---
 # <a name="sqlremovedsnfromini-function"></a>Функция SQLRemoveDSNFromIni
 **Соответствия**  
@@ -39,7 +39,7 @@ ms.locfileid: "88499617"
 ```cpp  
   
 BOOL SQLRemoveDSNFromIni(  
-     LPCSTR   lpszDSN);  
+     LPCSTR   lpszDSN);  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
@@ -50,7 +50,7 @@ BOOL SQLRemoveDSNFromIni(
  Функция возвращает значение TRUE, если удаляет источник данных, или источник данных отсутствовал в файле Odbc.ini. Он возвращает значение FALSE, если не удается удалить источник данных.  
   
 ## <a name="diagnostics"></a>Диагностика  
- Когда **склремоведснфромини** возвращает значение false, связанное значение * \* пферроркоде* может быть получено путем вызова **склинсталлереррор**. В следующей таблице перечислены значения * \* пферроркоде* , которые могут быть возвращены **склинсталлереррор** , и объясняется каждый из них в контексте этой функции.  
+ Когда **склремоведснфромини** возвращает значение false, связанное значение *\* пферроркоде* может быть получено путем вызова **склинсталлереррор**. В следующей таблице перечислены значения *\* пферроркоде* , которые могут быть возвращены **склинсталлереррор** , и объясняется каждый из них в контексте этой функции.  
   
 |*\*пферроркоде*|Ошибка|Описание|  
 |---------------------|-----------|-----------------|  

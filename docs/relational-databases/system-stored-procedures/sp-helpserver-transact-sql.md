@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpserver
 - sp_helpserver_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6dace48b51c971095b136190ab1094ea8db79984
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 83d212a6cfb817f3aa28c87ab0999d0488cec5e9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89526793"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211922"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @server = ] 'server'` — Это сервер, о котором сообщается информация. Если параметр *Server* не указан, отчеты обо всех серверах в **master.sys. Servers**. *Server* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @server = ] 'server'` — Это сервер, о котором сообщается информация. Если параметр *Server* не указан, отчеты обо всех серверах в **master.sys. Servers**. *Server* имеет тип **sysname** и значение по умолчанию NULL.  
   
 `[ @optname = ] 'option'` Параметр, описывающий сервер. *параметр имеет тип* **varchar (** 35 **)** и значение по умолчанию NULL и должен иметь одно из следующих значений.  
   
@@ -72,12 +72,12 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**name**|**sysname**|Имя сервера.|  
 |**network_name**|**sysname**|Сетевое имя сервера.|  
 |**status**|**varchar (** 70 **)**|Состояние сервера.|  
-|**идентификатор**|**char (** 4 **)**|Идентификационный номер сервера.|  
+|**id**|**char (** 4 **)**|Идентификационный номер сервера.|  
 |**collation_name**|**sysname**|Параметры сортировки сервера.|  
 |**connect_timeout**|**int**|Значение времени ожидания для подключения к связанному серверу.|  
 |**query_timeout**|**int**|Значение времени ожидания для запросов к связанному серверу.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  У сервера может быть несколько состояний.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -103,7 +103,7 @@ GO
 EXEC sp_helpserver 'SEATTLE2';  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   

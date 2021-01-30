@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_update_principalprofile_sp
 - sysmail_update_principalprofile_sp_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bba3f6ca7046825f4bdd13e062b67b554b636405
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 85bab8892a9459ee5de954596ffea2be2a5aed92
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492827"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181865"
 ---
 # <a name="sysmail_update_principalprofile_sp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,15 +42,15 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @principal_id = ] principal_id` Идентификатор пользователя или роли базы данных в базе данных **msdb** для изменения взаимосвязи. *principal_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать либо *principal_id* , либо *principal_name* .  
+`[ @principal_id = ] principal_id` Идентификатор пользователя или роли базы данных в базе данных **msdb** для изменения взаимосвязи. *principal_id* имеет **тип int** и значение по умолчанию NULL. Необходимо указать либо *principal_id* , либо *principal_name* .  
   
-`[ @principal_name = ] 'principal_name'` Имя пользователя или роли базы данных в базе данных **msdb** для обновления взаимосвязи. Аргумент *principal_name* имеет тип **sysname**и значение по умолчанию NULL. Можно указать либо *principal_id* , либо *principal_name* .  
+`[ @principal_name = ] 'principal_name'` Имя пользователя или роли базы данных в базе данных **msdb** для обновления взаимосвязи. Аргумент *principal_name* имеет тип **sysname** и значение по умолчанию NULL. Можно указать либо *principal_id* , либо *principal_name* .  
   
-`[ @profile_id = ] profile_id` Идентификатор профиля для изменения взаимосвязи. *profile_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать либо *profile_id* , либо *profile_name* .  
+`[ @profile_id = ] profile_id` Идентификатор профиля для изменения взаимосвязи. *profile_id* имеет **тип int** и значение по умолчанию NULL. Необходимо указать либо *profile_id* , либо *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'` Имя профиля для изменения взаимосвязи. Аргумент *profile_name* имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *profile_id* , либо *profile_name* .  
+`[ @profile_name = ] 'profile_name'` Имя профиля для изменения взаимосвязи. Аргумент *profile_name* имеет тип **sysname** и значение по умолчанию NULL. Необходимо указать либо *profile_id* , либо *profile_name* .  
   
-`[ @is_default = ] 'is_default'` Указывает, является ли этот профиль профилем по умолчанию для пользователя базы данных. Пользователь базы данных может иметь только один профиль по умолчанию. *is_default* имеет **бит**и не имеет значения по умолчанию.  
+`[ @is_default = ] 'is_default'` Указывает, является ли этот профиль профилем по умолчанию для пользователя базы данных. Пользователь базы данных может иметь только один профиль по умолчанию. *is_default* имеет **бит** и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -63,7 +63,7 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
   
  Если имя участника для ассоциации является **открытым** или идентификатор субъекта для ассоциации равен **0**, эта хранимая процедура изменяет открытый профиль. Может быть только один открытый (public) профиль по умолчанию.  
   
- Если ** \@ is_default** имеет значение**1**и участник связан с более чем одним профилем, указанный профиль становится профилем по умолчанию для участника. Профиль, который ранее был профилем по умолчанию, все еще связан с участником, но не является более профилем по умолчанию.  
+ Если **\@ is_default** имеет значение **1** и участник связан с более чем одним профилем, указанный профиль становится профилем по умолчанию для участника. Профиль, который ранее был профилем по умолчанию, все еще связан с участником, но не является более профилем по умолчанию.  
   
  Хранимая процедура **sysmail_update_principalprofile_sp** находится в базе данных **msdb** и принадлежит схеме **dbo** . Процедура должна быть выполнена с именем, сопоставленным с тремя частями, если текущей базой данных не является **msdb**.  
   
@@ -93,7 +93,7 @@ EXECUTE msdb.dbo.sysmail_update_principalprofile_sp
     @is_default = '1' ;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [Database Mail объекты конфигурации](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [Database Mail хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  

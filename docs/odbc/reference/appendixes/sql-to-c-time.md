@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - converting data from SQL to C types [ODBC], time
 - time data type [ODBC]
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6dc59973-7bb5-40f1-87c8-5bf68b3bf2ee
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0516cc970238e9535c340c14282be1640ba78513
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: db1882befdb1b295ce247cb62601bbec4ba3db5f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429556"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203012"
 ---
 # <a name="sql-to-c-time"></a>Преобразование данных из SQL в C: время
 Идентификатор для типа данных ODBC SQL:  
@@ -31,11 +31,11 @@ ms.locfileid: "88429556"
   
 |Идентификатор типа C|Тест|**таржетвалуептр*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* длина байта > символов<br /><br /> *9*  <=  *BufferLength* <= Длина байтового символа<br /><br /> *BufferLength* < 9|Данные<br /><br /> Усеченные данные [a]<br /><br /> Не определено.|Длина данных в байтах<br /><br /> Длина данных в байтах<br /><br /> Не определено.|Недоступно<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|Длина *BufferLength* > символов<br /><br /> *9*  <=  *BufferLength* <= длина символа<br /><br /> *BufferLength* < 9|Данные<br /><br /> Усеченные данные [a]<br /><br /> Не определено.|Длина данных в символах<br /><br /> Длина данных в символах<br /><br /> Не определено.|Недоступно<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|Длина данных в байтах <= *BufferLength*<br /><br /> Длина байта данных > *BufferLength*|Данные<br /><br /> Не определено.|Длина данных в байтах<br /><br /> Не определено.|Недоступно<br /><br /> 22003|  
-|SQL_C_TYPE_TIME|Нет [b]|Данные|6 [d]|Недоступно|  
-|SQL_C_TYPE_TIMESTAMP|Нет [b]|Данные [c]|16 [d]|Недоступно|  
+|SQL_C_CHAR|*BufferLength* длина байта > символов<br /><br /> *9*  <=  *BufferLength* <= Длина байтового символа<br /><br /> *BufferLength* < 9|Данные<br /><br /> Усеченные данные [a]<br /><br /> Не определено.|Длина данных в байтах<br /><br /> Длина данных в байтах<br /><br /> Не определено.|н/д<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|Длина *BufferLength* > символов<br /><br /> *9*  <=  *BufferLength* <= длина символа<br /><br /> *BufferLength* < 9|Данные<br /><br /> Усеченные данные [a]<br /><br /> Не определено.|Длина данных в символах<br /><br /> Длина данных в символах<br /><br /> Не определено.|н/д<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_BINARY|Длина данных в байтах <= *BufferLength*<br /><br /> Длина байта данных > *BufferLength*|Данные<br /><br /> Не определено.|Длина данных в байтах<br /><br /> Не определено.|н/д<br /><br /> 22003|  
+|SQL_C_TYPE_TIME|Нет [b]|Данные|6 [d]|н/д|  
+|SQL_C_TYPE_TIMESTAMP|Нет [b]|Данные [c]|16 [d]|н/д|  
   
  [a] доли секунды времени усекаются.  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpsubscription_TSQL
 - sp_helpsubscription
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5ff06497437017fd6771a7402c18d16a5ee6f94b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 73fc43bf20a9306d0224392d984b3f2bff74ec6f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543269"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192902"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,15 +43,15 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` Имя связанной публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает все сведения о подписке для этого сервера.  
+`[ @publication = ] 'publication'` Имя связанной публикации. Аргумент *publication* имеет тип **sysname** и значение по умолчанию **%** , которое возвращает все сведения о подписке для этого сервера.  
   
-`[ @article = ] 'article'` Имя статьи. Аргумент *article* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает все сведения о подписке для выбранных публикаций и подписчиков. В **этом случае для**полной подписки на публикацию возвращается только одна запись.  
+`[ @article = ] 'article'` Имя статьи. Аргумент *article* имеет тип **sysname** и значение по умолчанию **%** , которое возвращает все сведения о подписке для выбранных публикаций и подписчиков. В **этом случае для** полной подписки на публикацию возвращается только одна запись.  
   
-`[ @subscriber = ] 'subscriber'` Имя подписчика, для которого необходимо получить сведения о подписке. Аргумент *Subscriber* имеет тип **sysname**и значение по умолчанию **%** , которое возвращает все сведения о подписке для выбранных публикаций и статей.  
+`[ @subscriber = ] 'subscriber'` Имя подписчика, для которого необходимо получить сведения о подписке. Аргумент *Subscriber* имеет тип **sysname** и значение по умолчанию **%** , которое возвращает все сведения о подписке для выбранных публикаций и статей.  
   
-`[ @destination_db = ] 'destination_db'` Имя целевой базы данных. Аргумент *destination_db* имеет тип **sysname**и значение по умолчанию **%** .  
+`[ @destination_db = ] 'destination_db'` Имя целевой базы данных. Аргумент *destination_db* имеет тип **sysname** и значение по умолчанию **%** .  
   
-`[ @found = ] 'found'OUTPUT` Флаг, указывающий возвращаемые строки. Аргумент *Found*имеет **тип int** и выходной параметр и значение по умолчанию 23456.  
+`[ @found = ] 'found'OUTPUT` Флаг, указывающий возвращаемые строки. Аргумент *Found* имеет **тип int** и выходной параметр и значение по умолчанию 23456.  
   
  **1** указывает, что публикация найдена.  
   
@@ -98,13 +98,13 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_helpsubscription** используется в моментальных снимках и репликации транзакций.  
   
 ## <a name="permissions"></a>Разрешения  
  Разрешения на выполнение по умолчанию имеют роль **Public** . Пользователям всего лишь возвращаются сведения о подписках, которые они создали. Сведения обо всех подписках возвращаются членам предопределенной роли сервера **sysadmin** на издателе или членам предопределенной роли базы данных **db_owner** в базе данных публикации.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_changesubstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
  [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   

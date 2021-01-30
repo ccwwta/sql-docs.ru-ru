@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_getqueuedrows_TSQL
 - sp_getqueuedrows
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8aae51ed8d3806fb32375ddebd6d09c1c6c37d1f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ad904065a8270266e7010ff49889d04a8625296f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548043"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183140"
 ---
 # <a name="sp_getqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,9 +40,9 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @tablename = ] 'tablename'` Имя таблицы. *TableName* имеет тип **sysname**и не имеет значения по умолчанию. Таблица должна быть частью очереди подписок.  
+`[ @tablename = ] 'tablename'` Имя таблицы. *TableName* имеет тип **sysname** и не имеет значения по умолчанию. Таблица должна быть частью очереди подписок.  
   
-`[ @owner = ] 'owner'` Владелец подписки. Аргумент *owner* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @owner = ] 'owner'` Владелец подписки. Аргумент *owner* имеет тип **sysname** и значение по умолчанию NULL.  
   
 `[ @tranid = ] 'transaction_id'` Позволяет фильтровать выходные данные по ИДЕНТИФИКАТОРу транзакции. *transaction_id* имеет тип **nvarchar (70)** и значение по умолчанию NULL. Если указан, будет отображен идентификатор транзакции, связанный с командой в очереди. Если указать значение NULL, будут отображены все команды в очереди.  
   
@@ -59,7 +59,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 |**table column1...n**||Значение для каждого столбца таблицы, указанного в *TableName*.|  
 |**msrepl_tran_version**|**uniqueidentifier**|Этот столбец используется для отслеживания изменений для реплицируемых данных и для обнаружения конфликтов на издателе. Этот столбец добавлен к таблице автоматически.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_getqueuedrows** используется на подписчиках, участвующих в обновлении посредством очередей.  
   
  **sp_getqueuedrows** находит строки заданной таблицы в базе данных подписки, которая участвовала в обновлении в очереди, но в настоящее время не разрешено агентом чтения очереди.  

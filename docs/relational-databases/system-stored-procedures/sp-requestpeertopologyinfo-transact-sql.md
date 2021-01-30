@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_requestpeertopologyinfo
 - sp_requestpeertopologyinfo_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 15cd28bd-5a72-41fb-ae1b-726baaa6fad5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2c096777323df0bc2fd02360991df8d527c0dfb7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5cd33688e4a3d5ba5f1b849580f9c180a1ad4d98
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543118"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182055"
 ---
 # <a name="sp_requestpeertopologyinfo-transact-sql"></a>sp_requestpeertopologyinfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,15 +40,15 @@ sp_requestpeertopologyinfo [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>Аргументы  
  [ @publication =] "*Публикация*"  
- Имя публикации, для которой должен быть выполнен запрос состояния всей топологии. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+ Имя публикации, для которой должен быть выполнен запрос состояния всей топологии. Аргумент *publication* имеет тип **sysname** и не имеет значения по умолчанию.  
   
  [ @request_id =] *request_id*  
- Идентификатор, назначенный запросу состояния топологии. *request_id* имеет **тип int**и значение по умолчанию NULL. Этот идентификатор может использоваться [sp_gettopologyinfo](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md).  
+ Идентификатор, назначенный запросу состояния топологии. *request_id* имеет **тип int** и значение по умолчанию NULL. Этот идентификатор может использоваться [sp_gettopologyinfo](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md).  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Процедура sp_requestpeertopologyinfo используется в одноранговой репликации транзакций. Перед выполнением [sp_gettopologyinfo](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md)выполните sp_requestpeertopologyinfo. Эти процедуры используются мастером настройки одноранговой топологии, однако ими можно также воспользоваться напрямую, если необходимо получить сведения о топологии в формате XML. Если вы предпочитаете табличные результаты, запросите системную таблицу [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md) .  
   
 ## <a name="permissions"></a>Разрешения  

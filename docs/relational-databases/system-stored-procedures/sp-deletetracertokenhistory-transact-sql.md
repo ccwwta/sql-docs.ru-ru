@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_deletetracertokenhistory
 - sp_deletetracertokenhistory_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c08b5373109ab3ea6174aac190ed8fb7b04b2e0e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5bc5a6d5191f89d8b31b48939c83674bf0302e15
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543544"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99178153"
 ---
 # <a name="sp_deletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
 
@@ -68,11 +68,11 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
 
 **0** (успешное завершение) или **1** (сбой)
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Замечания
 
 **sp_deletetracertokenhistory** используется в репликации транзакций.  
 
-При указании обоих параметров *tracer_id* и *cutoff_date*возникает ошибка.
+При указании обоих параметров *tracer_id* и *cutoff_date* возникает ошибка.
 
 Если не выполнить **sp_deletetracertokenhistory** для удаления метаданных трассировочного токена, информация будет удалена при регулярном запланированном очистке журнала.
 
