@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_enumcustomresolvers
 - sp_enumcustomresolvers_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 81bd0d3a-48dc-42b1-b662-c630f61fc630
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2971d44f61076191addb74a701bb03069d06bc4c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8972aa1aaa4e567c60efb9653a75e6fa196211b4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549785"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99156780"
 ---
 # <a name="sp_enumcustomresolvers-transact-sql"></a>sp_enumcustomresolvers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @distributor = ] 'distributor'` Имя распространителя, в котором находится пользовательский сопоставитель. Аргумент *распространитель* имеет тип **sysname**и значение по умолчанию NULL. *Этот аргумент является устаревшим и будет удален в следующем выпуске.*  
+`[ @distributor = ] 'distributor'` Имя распространителя, в котором находится пользовательский сопоставитель. Аргумент *распространитель* имеет тип **sysname** и значение по умолчанию NULL. *Этот аргумент является устаревшим и будет удален в следующем выпуске.*  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -53,7 +53,7 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_enumcustomresolvers** используется в репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Groups
@@ -18,24 +18,24 @@ helpviewer_keywords:
 ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9624a30970e5a6f6a0186d2cb9e2390c98968d9e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e0cbcc0941c3c2c7158d15bc73f07e4b835db4f3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88984375"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164224"
 ---
 # <a name="groups-collection-adox"></a>Коллекция Groups (ADOX)
 Содержит все сохраненные объекты [групп](./group-object-adox.md) каталога или пользователя.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Коллекция **Groups** [каталога](./catalog-object-adox.md) представляет все учетные записи групп каталога. Коллекция **Groups** для [пользователя](./user-object-adox.md) представляет только группу, к которой принадлежит пользователь.  
   
- Метод [append](./append-method-adox-groups.md) для коллекции **GROUPS** уникален для ADOX. Вы можете:  
+ Метод [append](./append-method-adox-groups.md) для коллекции **GROUPS** уникален для ADOX. Вы можете выполнить следующие действия:  
   
 -   Добавьте новую группу безопасности в коллекцию с помощью метода **append** .  
   
- Остальные свойства и методы являются стандартными для коллекций ADO. Вы можете:  
+ Остальные свойства и методы являются стандартными для коллекций ADO. Вы можете выполнить следующие действия:  
   
 -   Доступ к группе в коллекции со свойством [Item](../ado-api/item-property-ado.md) .  
   
@@ -52,6 +52,6 @@ ms.locfileid: "88984375"
   
 -   [Свойства, методы и события коллекции Groups](./groups-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект каталога (ADOX)](./catalog-object-adox.md)   
  [Объект Group (ADOX)](./group-object-adox.md)

@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Record
@@ -16,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6066d43bfa52d65ee133fd748f76fc651fac7379
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b6064030bd26ab6abb0bb003b2fcf26e72c4f24d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989865"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166746"
 ---
 # <a name="record-object-ado"></a>Объект Record (ADO)
 Представляет строку из [набора записей](./recordset-object-ado.md) или поставщика данных или объекта, возвращаемого частично структурированным поставщиком данных, например файла или каталога.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Объект **Record** представляет одну строку данных и имеет некоторые концептуальные сходства с однострочным **набором записей**. В зависимости от возможностей поставщика объекты **записи** могут возвращаться непосредственно от поставщика вместо однострочного **набора записей**, например при выполнении SQL-запроса, выбирающего только одну строку. Или объект **Record** можно получить непосредственно из объекта **Recordset** . Или же **запись** может возвращаться непосредственно от поставщика к частично структурированным данным, например к поставщику Microsoft Exchange OLE DB.  
   
- Поля, связанные с объектом **Record** , можно просмотреть с помощью коллекции [Fields](./fields-collection-ado.md) объекта **Record** . ADO допускает объектно-ориентированные столбцы, включая **набор записей**, **SAFEARRAY**и скалярные значения в коллекции **полей** объектов **Record** .  
+ Поля, связанные с объектом **Record** , можно просмотреть с помощью коллекции [Fields](./fields-collection-ado.md) объекта **Record** . ADO допускает объектно-ориентированные столбцы, включая **набор записей**, **SAFEARRAY** и скалярные значения в коллекции **полей** объектов **Record** .  
   
  Если объект **Record** представляет строку в **наборе записей**, то можно вернуться к этому исходному **набору записей** с помощью свойства [Source](./source-property-ado-record.md) .  
   
@@ -60,7 +60,7 @@ ms.locfileid: "88989865"
   
 -   Указывает текущее состояние **записи** со свойством [State](./state-property-ado.md) .  
   
--   Указывает тип **записи**  -  *Simple*, *Collection*или *структурированный документ* с помощью свойства [RecordType](./recordtype-property-ado.md).  
+-   Указывает тип **записи**  -  *Simple*, *Collection* или *структурированный документ* с помощью свойства [RecordType](./recordtype-property-ado.md).  
   
 -   Остановить выполнение асинхронной операции с помощью метода [Cancel](./cancel-method-ado.md) .  
   
@@ -82,7 +82,7 @@ ms.locfileid: "88989865"
   
 -   [Свойства, методы и события объекта Record](./record-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Коллекция Fields (ADO)](./fields-collection-ado.md)   
  [Коллекция Properties (ADO)](./properties-collection-ado.md)   
  [Записи и потоки](../../guide/data/records-and-streams.md)   

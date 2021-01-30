@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Record::raw_GetChildren
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b3f09bac-4f66-49f6-aa5a-6fbb4fb28338
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ea59a94f095a438be8fc7009a58179d488af20a2
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cb49de0d3613cca9d24991e67ee8787c0d863b8c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88972835"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167284"
 ---
 # <a name="getchildren-method-ado"></a>Метод GetChildren (ADO)
 Возвращает [набор записей](./recordset-object-ado.md) , строки которого представляют дочерние элементы [записи](./record-object-ado.md)коллекции.  
@@ -37,8 +37,8 @@ Set recordset = record.GetChildren
 ## <a name="return-value"></a>Возвращаемое значение  
  Объект **Recordset** , для которого каждая строка представляет дочерний объект текущего объекта **Record** . Например, дочерние элементы **записи** , представляющей каталог, представляют собой файлы и подкаталоги, содержащиеся в родительском каталоге.  
   
-## <a name="remarks"></a>Remarks  
- Поставщик определяет, какие столбцы существуют в возвращенном **наборе записей**. Например, поставщик источника документов всегда возвращает **набор записей**ресурсов.  
+## <a name="remarks"></a>Замечания  
+ Поставщик определяет, какие столбцы существуют в возвращенном **наборе записей**. Например, поставщик источника документов всегда возвращает **набор записей** ресурсов.  
   
 ## <a name="applies-to"></a>Применение  
 

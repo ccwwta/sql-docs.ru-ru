@@ -9,7 +9,7 @@ ms.reviewer: vanto
 ms.suite: sql
 ms.technology: system-objects
 ms.tgt_pltfrm: ''
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_enclave_send_keys
 - sp_enclave_send_keys_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: 0fc33aa4e45e742f50321336bd01ab136c8e966a
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 22d7f8b86d5cd247691c0d7527287c901845cb58
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97462705"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99157307"
 ---
 # <a name="sp_enclave_send_keys-transact-sql"></a>sp_enclave_send_keys (Transact-SQL)
 [!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "97462705"
 `sp_enclave_send_keys` предоставляет простой способ отправки ключей в анклава и заполнения кэша ключей шифрования столбцов для последующих операций индексирования. Используйте `sp_enclave_send_keys` , чтобы включить:
 - DBA для перестроения или изменения индексов или статистики по зашифрованным столбцам базы данных, если DBA не имеет доступа к главным ключам столбцов. См. раздел [вызов операций индексирования с использованием кэшированных ключей шифрования столбцов](../security/encryption/always-encrypted-enclaves-create-use-indexes.md#invoke-indexing-operations-using-cached-column-encryption-keys).
 - [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)] для завершения восстановления индексов в зашифрованных столбцах. См. раздел [Восстановление базы данных](../security/encryption/always-encrypted-enclaves.md#database-recovery).
-- Приложение, использующее .NET Framework поставщик данных для SQL Server для выполнения групповой загрузки данных в зашифрованные столбцы.
+- Приложение, использующее платформа .NET Framework поставщик данных для SQL Server для выполнения групповой загрузки данных в зашифрованные столбцы.
 
 Для успешного вызова необходимо `sp_enclave_send_keys` подключиться к базе данных, используя Always encrypted и вычисления анклава, включенные для подключения к базе данных. Кроме того, необходимо иметь доступ к главным ключам столбцов, защищать ключи шифрования столбцов, отправку, а также разрешения на доступ к метаданным ключа Always Encrypted в базе данных. 
 
@@ -75,4 +75,4 @@ EXEC sp_enclave_send_keys;
  
 - [Создание и использование индексов в столбцах с помощью Always Encrypted с безопасными анклавами](../security/encryption/always-encrypted-enclaves-create-use-indexes.md)
 
-- [Учебник. Создание и использование индексов в столбцах с поддержкой анклава с использованием случайного шифрования](../security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)
+- [Руководство по Создание и использование индексов в столбцах с поддержкой анклава с помощью случайного шифрования](../security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md)

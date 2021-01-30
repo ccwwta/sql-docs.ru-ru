@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7ac96c1d-d0d8-4bf8-b165-533818d0f590
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b1c39561044936d0ed8ffa1bdd6982efa9e46d99
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 019282bb5926a1bae4c409a98158b56a86bfabd2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975415"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164700"
 ---
 # <a name="clone-method-example-vc"></a>Пример метода Clone (Visual C++)
 В этом примере используется метод [clone](./clone-method-ado.md) для создания копий [набора записей](./recordset-object-ado.md) , а затем пользователь помещает указатель записи каждой копии независимо друг от друга.  
@@ -220,5 +220,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Recordset (ADO)](./recordset-object-ado.md)

@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - select [ODBC]
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2b5fb0e3d38a2e5594cacf77b116844bcce219d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3fc6ae552bc4e6e8bd681aa3d47ffadeaf81fd0a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466426"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99153522"
 ---
 # <a name="select---sql-command"></a>SELECT (команда SQL)
 Извлекает данные из одной или нескольких таблиц.  
@@ -167,7 +167,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  `customer.postalcode BETWEEN 90000 AND 99999`  
   
- В следующем примере проверяется, соответствует ли хотя бы одна строка критериям вложенного запроса. Если условие фильтра содержит, условие фильтра принимает значение true (. T.), если вложенный запрос не возвращает пустой набор.  
+ В следующем примере проверяется, соответствует ли хотя бы одна строка критериям вложенного запроса. Если условие фильтра содержит, условие фильтра принимает значение true (. T.), если только вложенный запрос не возвращает пустой набор.  
   
  **Пример 6** [NOT] Exists (*вложенный запрос*)  
   
@@ -254,7 +254,7 @@ WHERE customer.cust_id NOT IN ;
   
 -   Предложение WHERE находит все номера клиентов в таблице Customer, которых нет в таблице Orders. Поскольку первый раздел команды предоставляет все компании с номером клиента в таблице Orders, все компании в таблице Customer теперь включаются в результаты запроса.  
   
--   Поскольку структуры таблиц, включаемых в объединение, должны быть идентичны, в второй инструкции SELECT есть два заполнителя для представления *Orders. order_id* и *orders. emp_id* из первой инструкции SELECT.  
+-   Поскольку структуры таблиц, включаемых в объединение, должны быть идентичны, в второй инструкции SELECT есть два заполнителя для представления *Orders.order_id* и *Orders.emp_id* из первой инструкции SELECT.  
   
     > [!NOTE]  
     >  Заполнители должны быть того же типа, что и поля, которые они представляют. Если поле имеет тип Date, заполнитель должен быть {//}. Если поле является полем символов, заполнитель должен быть пустой строкой ("").  
@@ -272,16 +272,16 @@ WHERE customer.cust_id NOT IN ;
   
  Результаты запроса отображаются неупорядоченными, если порядок не указан с помощью предложения ORDER BY.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  SELECT — это команда SQL, встроенная в Visual FoxPro, как и любая другая команда Visual FoxPro. При использовании SELECT для представления запроса Visual FoxPro интерпретирует запрос и извлекает указанные данные из таблиц. Запрос SELECT можно создать либо в окне командной строки, либо в программе Visual FoxPro (как и в любой другой команде Visual FoxPro).  
   
 > [!NOTE]  
 >  SELECT не учитывает текущее условие фильтра, указанное с помощью SET FILTER.  
   
 ## <a name="driver-remarks"></a>Примечания к драйверам  
- Когда приложение отправляет инструкцию ODBC SQL SELECT в источник данных, драйвер ODBC для Visual FoxPro преобразует команду в команду Visual FoxPro SELECT без преобразования, если команда не содержит escape-последовательность ODBC. Элементы, заключенные в escape-последовательность ODBC, преобразуются в синтаксис Visual FoxPro. Дополнительные сведения об использовании escape-последовательностей ODBC см. в разделе [функции времени и даты](../../odbc/microsoft/time-and-date-functions-visual-foxpro-odbc-driver.md) , а также в *справочнике программиста Microsoft ODBC*см. [в разделе Escape-последовательности в ODBC](../../odbc/reference/develop-app/escape-sequences-in-odbc.md).  
+ Когда приложение отправляет инструкцию ODBC SQL SELECT в источник данных, драйвер ODBC для Visual FoxPro преобразует команду в команду Visual FoxPro SELECT без преобразования, если команда не содержит escape-последовательность ODBC. Элементы, заключенные в escape-последовательность ODBC, преобразуются в синтаксис Visual FoxPro. Дополнительные сведения об использовании escape-последовательностей ODBC см. в разделе [функции времени и даты](../../odbc/microsoft/time-and-date-functions-visual-foxpro-odbc-driver.md) , а также в *справочнике программиста Microsoft ODBC* см. [в разделе Escape-последовательности в ODBC](../../odbc/reference/develop-app/escape-sequences-in-odbc.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [CREATE TABLE-SQL](../../odbc/microsoft/create-table-sql-command.md)   
  [INSERT-SQL](../../odbc/microsoft/insert-sql-command.md)   
  [ЗАДАТЬ ANSI](../../odbc/microsoft/set-ansi-command.md)   

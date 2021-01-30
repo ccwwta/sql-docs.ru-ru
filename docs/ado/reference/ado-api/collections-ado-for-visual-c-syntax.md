@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 dev_langs:
 - C++
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6a0109a0-f2d9-4f7c-8e1e-42763f9acaea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b4bc59facd753bf6d36c3a79d06a4efe29e7c235
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9cda61fc0d1d206a75059263c5450c813a9e5ddb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975385"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164686"
 ---
 # <a name="collections-ado-for-visual-c-syntax"></a>Collections (синтаксис ADO для Visual C++)
 ## <a name="parameters"></a>Параметры  
@@ -88,7 +88,7 @@ get_Item(VARIANT Index, ADOField **ppvObject);
   
 -   [Свойство Item (ADO)](./item-property-ado.md)  
   
-## <a name="errors"></a>Ошибки  
+## <a name="errors"></a>ошибки  
   
 ### <a name="methods"></a>Методы  
   
@@ -141,7 +141,7 @@ get_Item(VARIANT Index, ADOProperty **ppvObject);
   
 -   [Свойство Item (ADO)](./item-property-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Коллекция Errors (ADO)](./errors-collection-ado.md)   
  [Коллекция Fields (ADO)](./fields-collection-ado.md)   
  [Коллекция Parameters (ADO)](./parameters-collection-ado.md)   

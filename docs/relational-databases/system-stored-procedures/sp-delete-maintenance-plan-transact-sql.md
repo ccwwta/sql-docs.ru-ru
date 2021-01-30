@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_maintenance_plan
 - sp_delete_maintenance_plan_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f36b63f-3d18-4d42-9469-2febb6926530
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 79f746fd1fccb81688b42994aa1d5fe57502261e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2fdb608b7d3e6887d809388ae28203d68bc09d14
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546212"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99158115"
 ---
 # <a name="sp_delete_maintenance_plan-transact-sql"></a>sp_delete_maintenance_plan (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,12 +45,12 @@ sp_delete_maintenance_plan [ @plan_id = ] 'plan_id'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @plan_id = ] 'plan\_id'` Указывает идентификатор плана обслуживания, который необходимо удалить. *plan_id* имеет тип **uniqueidentifier**и должен быть допустимым идентификатором.  
+`[ @plan_id = ] 'plan\_id'` Указывает идентификатор плана обслуживания, который необходимо удалить. *plan_id* имеет тип **uniqueidentifier** и должен быть допустимым идентификатором.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_delete_maintenance_plan** должны запускаться из базы данных **msdb** .  
   
 ## <a name="permissions"></a>Разрешения  

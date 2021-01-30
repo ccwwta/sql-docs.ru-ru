@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 08e5c5bf-f7de-4bf9-97a9-f214c128ad8c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 012d0bc96f50919b02e11329f4aebc5bb3ecb269
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f7116806c9c308257328cca001571b1a397a11c5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990885"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99167261"
 ---
 # <a name="getrows-method-example-vc"></a>Пример метода GetRows (Visual C++)
 В этом примере метод [GetRows](./getrows-method-ado.md) используется для получения указанного числа строк из [набора записей](./recordset-object-ado.md) и для заполнения массива результирующими данными. Метод **GetRows** возвратит меньше требуемого числа строк в двух случаях: либо при достижении [конца файла](./bof-eof-properties-ado.md) , либо при попытке **GetRows** получить запись, удаленную другим пользователем. Функция возвращает **значение false** только в том случае, если происходит второй вариант. Для выполнения этой процедуры требуется функция Жетровсок.  
@@ -244,7 +244,7 @@ Paolo Accorti, 8/27/1992
 Pedro Afonso, 12/24/1990  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойства BOF, EOF (ADO)](./bof-eof-properties-ado.md)   
  [Метод GetRows (ADO)](./getrows-method-ado.md)   
  [Объект Recordset (ADO)](./recordset-object-ado.md)

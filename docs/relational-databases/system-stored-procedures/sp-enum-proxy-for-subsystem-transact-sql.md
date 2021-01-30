@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_enum_proxy_for_subsystem_TSQL
 - sp_enum_proxy_for_subsystem
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: f484764e05a23594c32494934a9c366154e02aeb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bac523afb9f802e3f6feb8a23c47835c82bac807
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489449"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99157072"
 ---
 # <a name="sp_enum_proxy_for_subsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
 
@@ -44,13 +44,13 @@ sp_enum_proxy_for_subsystem
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @proxy_id = ] proxy_id` Идентификационный номер учетной записи-посредника для получения списка сведений. *Proxy_id* имеет **тип int**и значение по умолчанию NULL. Можно указать либо *идентификатор* , либо *proxy_name* .  
+`[ @proxy_id = ] proxy_id` Идентификационный номер учетной записи-посредника для получения списка сведений. *Proxy_id* имеет **тип int** и значение по умолчанию NULL. Можно указать либо *идентификатор* , либо *proxy_name* .  
   
-`[ @proxy_name = ] 'proxy_name'` Имя учетной записи-посредника для получения списка сведений. Аргумент *proxy_name* имеет тип **sysname**и значение по умолчанию NULL. Можно указать либо *идентификатор* , либо *proxy_name* .  
+`[ @proxy_name = ] 'proxy_name'` Имя учетной записи-посредника для получения списка сведений. Аргумент *proxy_name* имеет тип **sysname** и значение по умолчанию NULL. Можно указать либо *идентификатор* , либо *proxy_name* .  
   
-`[ @subsystem_id = ] subsystem_id` Идентификационный номер подсистемы, для которой необходимо вывести сведения. *Subsystem_id* имеет **тип int**и значение по умолчанию NULL. Можно указать либо *subsystem_id* , либо *subsystem_name* .  
+`[ @subsystem_id = ] subsystem_id` Идентификационный номер подсистемы, для которой необходимо вывести сведения. *Subsystem_id* имеет **тип int** и значение по умолчанию NULL. Можно указать либо *subsystem_id* , либо *subsystem_name* .  
   
-`[ @subsystem_name = ] 'subsystem_name'` Имя подсистемы, для которой необходимо вывести сведения. Аргумент *subsystem_name* имеет тип **sysname**и значение по умолчанию NULL. Можно указать либо *subsystem_id* , либо *subsystem_name* .  
+`[ @subsystem_name = ] 'subsystem_name'` Имя подсистемы, для которой необходимо вывести сведения. Аргумент *subsystem_name* имеет тип **sysname** и значение по умолчанию NULL. Можно указать либо *subsystem_id* , либо *subsystem_name* .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -65,7 +65,7 @@ sp_enum_proxy_for_subsystem
 |**proxy_name**|**sysname**|Имя учетной записи-посредника.|  
 | &nbsp; | &nbsp; | &nbsp; |
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Если параметры не указаны, **sp_enum_proxy_for_subsystem** выводит сведения обо всех учетных записях-посредниках в экземпляре для каждой подсистемы.  
   
  При указании идентификатора прокси-сервера или имени прокси-сервера **sp_enum_proxy_for_subsystem** перечисляет подсистемы, к которым прокси-сервер имеет доступ. Если указано имя подсистемы или подсистемы, **sp_enum_proxy_for_subsystem** выводит список учетных записей-посредников, имеющих доступ к этой подсистеме.  
@@ -103,7 +103,7 @@ EXEC dbo.sp_enum_proxy_for_subsystem
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_grant_proxy_to_subsystem &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
   
   

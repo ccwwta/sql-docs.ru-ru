@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - _Stream::raw_ReadText
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2e55657dc0bf2e5cd508897196138e842e23b8e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e0d88fba7389c40442fccf006afc03020004d928
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88989875"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166757"
 ---
 # <a name="readtext-method"></a>Метод ReadText
 Считывает указанное количество символов из объекта текстового [потока](./stream-object-ado.md) .  
@@ -36,12 +36,12 @@ String = Stream.ReadText ( NumChars)
   
 #### <a name="parameters"></a>Параметры  
  *NumChars*  
- Необязательный элемент. Значение **типа Long** , указывающее количество символов, считываемых из файла, или значение [стреамреаденум](./streamreadenum.md) . Значение по умолчанию — **адреадалл**.  
+ Необязательный параметр. Значение **типа Long** , указывающее количество символов, считываемых из файла, или значение [стреамреаденум](./streamreadenum.md) . Значение по умолчанию — **адреадалл**.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Метод **ReadText** считывает указанное число символов, целую строку или весь поток из объекта **потока** и возвращает результирующую строку.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Если *нумчар* больше, чем количество символов, оставшихся в потоке, возвращаются только оставшиеся символы. Чтение строки не дополняется в соответствии с длиной, заданной параметром *нумчар*. Если не осталось ни одного символа для чтения, возвращается Variant со значением NULL. **ReadText** нельзя использовать для чтения в обратном направлении.  
   
 > [!NOTE]
@@ -52,5 +52,5 @@ String = Stream.ReadText ( NumChars)
 ## <a name="applies-to"></a>Применение  
  [Объект Stream (ADO)](./stream-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Read](./read-method.md)

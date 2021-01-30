@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Errors::raw_Clear
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0a61ba7a-20b8-426a-91a0-9040e7c5a98a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d78980c1baee5aed1280f69c0d5224622a217ea0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1f79e81947a549057db5dbff7f6715492d08923a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975475"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164715"
 ---
 # <a name="clear-method-ado"></a>Метод Clear (ADO)
 Удаляет все объекты [Error](./error-object.md) из коллекции [ошибок](./errors-collection-ado.md) .  
@@ -42,7 +42,7 @@ Errors.Clear
 ## <a name="applies-to"></a>Применение  
  [Коллекция Errors (ADO)](./errors-collection-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Примеры методов Execute, Requery и Clear (Visual Basic)](./execute-requery-and-clear-methods-example-vb.md)   
  [Пример методов Execute, Requery и Clear (VBScript)](./execute-requery-and-clear-methods-example-vbscript.md)   
  [Пример методов Execute, Requery и Clear (Visual c++)](./execute-requery-and-clear-methods-example-vc.md)   
