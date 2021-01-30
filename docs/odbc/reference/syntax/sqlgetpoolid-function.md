@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQLGetPoolID function [ODBC]
 ms.assetid: 95a8666a-ad68-4d89-bf65-f2cc797f8820
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2cd38008b90a1299bdd78c4a56d7394f85876ab0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e7bd06a289eab6499995e40a3c6ad9ea56c747e3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421258"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99180922"
 ---
 # <a name="sqlgetpoolid-function"></a>Функция SQLGetPoolID
 **Соответствия**  
@@ -49,12 +49,12 @@ SQLRETURN  SQLGetPoolID (
 ## <a name="diagnostics"></a>Диагностика  
  Когда **склжетпулид** возвращает SQL_ERROR или SQL_SUCCESS_WITH_INFO, диспетчер драйверов будет использовать **параметром handletype** SQL_HANDLE_DBC_INFO_TOKEN и **обработчик** *хдбЦинфотокен*.  
   
-## <a name="remarks"></a>Remarks  
- **Склжетпулид** используется для получения идентификатора пула с учетом набора сведений о соединении (из **склсетконнектаттрфордбЦинфо**, **склсетдриверконнектинфо**и **склсетконнектинфо**). Этот идентификатор пула используется для идентификации набора соединений, которые могут быть взаимозаменяемы (возможно, требуется дополнительный сброс). Идентификатор пула будет использоваться для идентификации пула подключений для этой группы соединений.  
+## <a name="remarks"></a>Замечания  
+ **Склжетпулид** используется для получения идентификатора пула с учетом набора сведений о соединении (из **склсетконнектаттрфордбЦинфо**, **склсетдриверконнектинфо** и **склсетконнектинфо**). Этот идентификатор пула используется для идентификации набора соединений, которые могут быть взаимозаменяемы (возможно, требуется дополнительный сброс). Идентификатор пула будет использоваться для идентификации пула подключений для этой группы соединений.  
   
  Всякий раз, когда драйвер возвращает SQL_ERROR или SQL_INVALID_HANDLE, диспетчер драйверов возвращает ошибку приложению (в [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) или [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
   
- Всякий раз, когда драйвер возвращает SQL_SUCCESS_WITH_INFO, диспетчер драйверов получает диагностические сведения от *хдбЦинфотокен*и возвращает SQL_SUCCESS_WITH_INFO приложению в [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) и [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
+ Всякий раз, когда драйвер возвращает SQL_SUCCESS_WITH_INFO, диспетчер драйверов получает диагностические сведения от *хдбЦинфотокен* и возвращает SQL_SUCCESS_WITH_INFO приложению в [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) и [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
  Приложения не должны вызывать эту функцию напрямую. Драйвер ODBC, поддерживающий пулы соединений с учетом драйверов, должен реализовывать эту функцию.  
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpdbfixedrole
 - sp_helpdbfixedrole_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e0b72a64d8d895956273a7c76e21dbb88152b546
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 817947901ca7f35ba2972004d23ed8d7f85215ed
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538809"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176423"
 ---
 # <a name="sp_helpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @rolename = ] 'role'` Имя предопределенной роли базы данных. Аргумент *Role* имеет тип **sysname**и значение по умолчанию NULL. Если указан параметр *Role* , возвращаются только сведения об этой роли. в противном случае возвращается список и описание всех предопределенных ролей базы данных.  
+`[ @rolename = ] 'role'` Имя предопределенной роли базы данных. Аргумент *Role* имеет тип **sysname** и значение по умолчанию NULL. Если указан параметр *Role* , возвращаются только сведения об этой роли. в противном случае возвращается список и описание всех предопределенных ролей базы данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -52,7 +52,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 |**DbFixedRole**|**sysname**|Имя предопределенной роли базы данных.|  
 |**Описание**|**nvarchar (70)**|Описание **дбфикседроле.**|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Предопределенные роли базы данных, как показано в таблице, определены на уровне базы данных и обладают специальными разрешениями для выполнения определенных административных функций. Предопределенные роли базы данных не могут быть добавлены или удалены. Нельзя изменить разрешения, предоставленные предопределенной роли базы данных.  
   
 |Предопределенная роль базы данных|Описание|  

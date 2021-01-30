@@ -7,22 +7,22 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apitype: dllExport
 ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1627838d3f34f8092dce2806a1b1d8f885b9bf6a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 60dab6c50856d9f4132b9ec3d066d15c99194814
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476185"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174661"
 ---
 # <a name="odbc-api-reference"></a>Справочник по API ODBC
 В подразделах этого раздела описывается каждая функция ODBC в алфавитном порядке. Каждая функция определена как функция языка программирования C. К описаниям относятся следующие.  
   
--   Назначение  
+-   Цель  
   
 -   Версия ODBC  
   
@@ -79,7 +79,7 @@ ms.locfileid: "88476185"
   
 -   [Функция SQLColumnPrivileges](../../../odbc/reference/syntax/sqlcolumnprivileges-function.md)  
   
--   [Функция SQLColumns](../../../odbc/reference/syntax/sqlcolumns-function.md)  
+-   [SQLColumns, функция](../../../odbc/reference/syntax/sqlcolumns-function.md)  
   
 -   [Функция SQLCompleteAsync](../../../odbc/reference/syntax/sqlcompleteasync-function.md)  
   
@@ -89,7 +89,7 @@ ms.locfileid: "88476185"
   
 -   [Функция SQLDataSources](../../../odbc/reference/syntax/sqldatasources-function.md)  
   
--   [Функция SQLDescribeCol](../../../odbc/reference/syntax/sqldescribecol-function.md)  
+-   [SQLDescribeCol, функция](../../../odbc/reference/syntax/sqldescribecol-function.md)  
   
 -   [Функция SQLDescribeParam](../../../odbc/reference/syntax/sqldescribeparam-function.md)  
   
@@ -121,7 +121,7 @@ ms.locfileid: "88476185"
   
 -   [SQLFreeHandle, функция](../../../odbc/reference/syntax/sqlfreehandle-function.md)  
   
--   [Функция SQLFreeStmt](../../../odbc/reference/syntax/sqlfreestmt-function.md)  
+-   [SQLFreeStmt, функция](../../../odbc/reference/syntax/sqlfreestmt-function.md)  
   
 -   [Функция SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)  
   
@@ -141,11 +141,11 @@ ms.locfileid: "88476185"
   
 -   [Функция SQLGetEnvAttr](../../../odbc/reference/syntax/sqlgetenvattr-function.md)  
   
--   [Функция SQLGetFunctions](../../../odbc/reference/syntax/sqlgetfunctions-function.md)  
+-   [SQLGetFunctions, функция](../../../odbc/reference/syntax/sqlgetfunctions-function.md)  
   
 -   [SQLGetInfo, функция](../../../odbc/reference/syntax/sqlgetinfo-function.md)  
   
--   [Функция SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)  
+-   [SQLGetStmtAttr, функция](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)  
   
 -   [Функция SQLGetStmtOption](../../../odbc/reference/syntax/sqlgetstmtoption-function.md)  
   
@@ -167,11 +167,11 @@ ms.locfileid: "88476185"
   
 -   [Функция SQLPrimaryKeys](../../../odbc/reference/syntax/sqlprimarykeys-function.md)  
   
--   [Функция SQLProcedureColumns](../../../odbc/reference/syntax/sqlprocedurecolumns-function.md)  
+-   [SQLProcedureColumns, функция](../../../odbc/reference/syntax/sqlprocedurecolumns-function.md)  
   
 -   [Функция SQLProcedures](../../../odbc/reference/syntax/sqlprocedures-function.md)  
   
--   [Функция SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)  
+-   [SQLPutData, функция](../../../odbc/reference/syntax/sqlputdata-function.md)  
   
 -   [Функция SQLRowCount](../../../odbc/reference/syntax/sqlrowcount-function.md)  
   
@@ -185,7 +185,7 @@ ms.locfileid: "88476185"
   
 -   [Функция SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)  
   
--   [Функция SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md)  
+-   [SQLSetEnvAttr, функция](../../../odbc/reference/syntax/sqlsetenvattr-function.md)  
   
 -   [Функция SQLSetParam](../../../odbc/reference/syntax/sqlsetparam-function.md)  
   
@@ -199,7 +199,7 @@ ms.locfileid: "88476185"
   
 -   [SQLSpecialColumns, функция](../../../odbc/reference/syntax/sqlspecialcolumns-function.md)  
   
--   [Функция SQLStatistics](../../../odbc/reference/syntax/sqlstatistics-function.md)  
+-   [SQLStatistics, функция](../../../odbc/reference/syntax/sqlstatistics-function.md)  
   
 -   [Функция SQLTablePrivileges](../../../odbc/reference/syntax/sqltableprivileges-function.md)  
   

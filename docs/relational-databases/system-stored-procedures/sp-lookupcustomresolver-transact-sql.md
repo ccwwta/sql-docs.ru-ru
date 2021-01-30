@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_lookupcustomresolver_TSQL
 - sp_lookupcustomresolver
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 54e2f1f4237e169637c7d73085dc29cbffe3e720
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bdafb84d97bad1672780008ae845287ce105bb14
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541750"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185360"
 ---
 # <a name="sp_lookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,21 +47,21 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
   
 `[ @resolver_clsid = ] 'resolver_clsid' OUTPUT` Значение CLSID объекта COM, связанного с именем пользовательской бизнес-логики, указанной в параметре *article_resolver* . *resolver_clsid* имеет тип **nvarchar (50)** и значение по умолчанию NULL.  
   
-`[ @is_dotnet_assembly = ] 'is_dotnet_assembly' OUTPUT` Указывает тип регистрируемой пользовательской бизнес-логики. *is_dotnet_assembly* имеет **бит**и значение по умолчанию 0. значение **1** указывает, что регистрируемая настраиваемая бизнес-логика является сборкой обработчика бизнес-логики. значение **0** указывает, что это COM-компонент.  
+`[ @is_dotnet_assembly = ] 'is_dotnet_assembly' OUTPUT` Указывает тип регистрируемой пользовательской бизнес-логики. *is_dotnet_assembly* имеет **бит** и значение по умолчанию 0. значение **1** указывает, что регистрируемая настраиваемая бизнес-логика является сборкой обработчика бизнес-логики. значение **0** указывает, что это COM-компонент.  
   
 `[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT` Имя сборки, реализующей обработчик бизнес-логики. *dotnet_assembly_name* имеет тип **nvarchar (255)** и значение по умолчанию NULL.  
   
 `[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT` Имя класса, переопределяющего <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> для реализации обработчика бизнес-логики. *dotnet_class_name* имеет тип **nvarchar (255)** и значение по умолчанию NULL.  
   
-`[ @publisher = ] 'publisher'` Имя издателя. параметр *Publisher* имеет тип **sysname**и значение по умолчанию NULL. Используйте данный аргумент, если хранимая процедура не вызвана из издателя. Если этот аргумент не указан, то издателем считается локальный сервер.  
+`[ @publisher = ] 'publisher'` Имя издателя. параметр *Publisher* имеет тип **sysname** и значение по умолчанию NULL. Используйте данный аргумент, если хранимая процедура не вызвана из издателя. Если этот аргумент не указан, то издателем считается локальный сервер.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_lookupcustomresolver** используется в репликации слиянием.  
   
- **sp_lookupcustomresolver** ВОЗВРАЩАЕТ значение NULL для *resolver_clsid* , если компонент не зарегистрирован в распределении, и значение "00000000-0000-0000-0000-000000000000", если регистрация относится к .NET Framework сборке, зарегистрированной в качестве обработчика бизнес-логики.  
+ **sp_lookupcustomresolver** ВОЗВРАЩАЕТ значение NULL для *resolver_clsid* , если компонент не зарегистрирован в распределении, и значение "00000000-0000-0000-0000-000000000000", если регистрация относится к платформа .NET Framework сборке, зарегистрированной в качестве обработчика бизнес-логики.  
   
  **sp_lookupcustomresolver** вызывается [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) и [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) для проверки указанного *article_resolver*.  
   

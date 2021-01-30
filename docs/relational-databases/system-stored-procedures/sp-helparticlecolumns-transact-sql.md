@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helparticlecolumns
 - sp_helparticlecolumns_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 10382cd2daa15848bfc8454000ac23762f52e272
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 96e4f5508af16314312d2add0a7cdb8dd07a3921
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543316"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176475"
 ---
 # <a name="sp_helparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -40,11 +40,11 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` Имя публикации, содержащей статью. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации, содержащей статью. Аргумент *publication* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @article = ] 'article'` Имя статьи, для которой возвращены столбцы. Аргумент *article* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @article = ] 'article'` Имя статьи, для которой возвращены столбцы. Аргумент *article* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @publisher = ] 'publisher'` Указывает издателя, отличного от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'` Указывает издателя, отличного от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname** и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  не следует указывать *Издатель* , если запрошенная статья опубликована [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателем.  
@@ -62,7 +62,7 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 |**тип издателя**|**sysname**|Тип данных столбца на издателе.|  
 |**Тип подписчика**|**sysname**|Тип данных столбца на подписчике.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_helparticlecolumns** используется в моментальных снимках и репликации транзакций.  
   
  **sp_helparticlecolumns** удобно использовать для проверки вертикальной секции.  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_marksubscriptionvalidation
 - sp_marksubscriptionvalidation_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c85f1fbfd603cc671368519716764d2642864fe
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1fadb2c21aacab18741576d5809c28df989a67d6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541682"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185322"
 ---
 # <a name="sp_marksubscriptionvalidation-transact-sql"></a>sp_marksubscriptionvalidation (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,13 +41,13 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 `[ @subscriber = ] 'subscriber'` Имя подписчика. Аргумент *Subscriber* имеет тип sysname и не имеет значения по умолчанию.  
   
-`[ @destination_db = ] 'destination_db'` Имя целевой базы данных. Аргумент *destination_db* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @destination_db = ] 'destination_db'` Имя целевой базы данных. Аргумент *destination_db* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @publisher = ] 'publisher'` Указывает издателя, отличного от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'` Указывает издателя, отличного от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname** и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  *Издатель* не следует использовать для публикации, которая принадлежит [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателю.  
@@ -55,14 +55,14 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_marksubscriptionvalidation** используется в репликации транзакций.  
   
  **sp_marksubscriptionvalidation** не поддерживает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков, отличных от.  
   
  Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, отличных от, нельзя выполнять **sp_marksubscriptionvalidation** в явной транзакции. Это обусловлено тем, что явные транзакции не поддерживаются через соединение связанного сервера, через которое осуществляется подключение к издателю.  
   
- **sp_marksubscriptionvalidation** необходимо использовать вместе с [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md), указав значение **1** для *subscription_level*и можно использовать с другими вызовами в **sp_marksubscriptionvalidation** , чтобы отметить текущую открытую транзакцию для других подписчиков.  
+ **sp_marksubscriptionvalidation** необходимо использовать вместе с [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md), указав значение **1** для *subscription_level* и можно использовать с другими вызовами в **sp_marksubscriptionvalidation** , чтобы отметить текущую открытую транзакцию для других подписчиков.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_marksubscriptionvalidation**.  
@@ -100,7 +100,7 @@ exec sp_article_validation @publication = 'pub1', @article = 'art2',
 commit tran  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Проверка реплицированных данных](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   

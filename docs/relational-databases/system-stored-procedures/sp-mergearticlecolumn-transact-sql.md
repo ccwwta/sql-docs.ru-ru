@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_mergearticlecolumn
 - sp_mergearticlecolumn_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4be1d2544225a5317ea6af60598a57c958ce14a7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b5d8d2f63afd421081058dd1b53ec8084f4b5e13
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541656"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185315"
 ---
 # <a name="sp_mergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,20 +44,20 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @article = ] 'article'` Имя статьи в публикации. Аргумент *article* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @article = ] 'article'` Имя статьи в публикации. Аргумент *article* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @column = ] 'column'` Определяет столбцы, по которым создается вертикальная секция. *столбец* имеет тип **sysname**и значение по умолчанию NULL. Если значение равно NULL и `@operation = N'add'`, все столбцы исходной таблицы по умолчанию добавятся к статье. *столбец* не может иметь значение null, если для *операции* задано значение **Drop**. Чтобы исключить столбцы из статьи, выполните **sp_mergearticlecolumn** и укажите *Column* и `@operation = N'drop'` для каждого столбца, который необходимо удалить из указанной *статьи*.  
+`[ @column = ] 'column'` Определяет столбцы, по которым создается вертикальная секция. *столбец* имеет тип **sysname** и значение по умолчанию NULL. Если значение равно NULL и `@operation = N'add'`, все столбцы исходной таблицы по умолчанию добавятся к статье. *столбец* не может иметь значение null, если для *операции* задано значение **Drop**. Чтобы исключить столбцы из статьи, выполните **sp_mergearticlecolumn** и укажите *Column* и `@operation = N'drop'` для каждого столбца, который необходимо удалить из указанной *статьи*.  
   
 `[ @operation = ] 'operation'` Состояние репликации. *Операция* имеет тип **nvarchar (4)** и значение по умолчанию Add. **Добавить** помечает столбец для репликации. **Drop** очищает столбец.  
   
 `[ @schema_replication = ] 'schema_replication'` Указывает, что изменение схемы будет распространяться при выполнении агент слияния. *schema_replication* имеет тип **nvarchar (5)** и значение по умолчанию false.  
   
 > [!NOTE]  
->  Для *schema_replication*поддерживается только **значение false** .  
+>  Для *schema_replication* поддерживается только **значение false** .  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Включает или отключает возможность недействительности моментального снимка. *force_invalidate_snapshot* является **битом**и имеет значение по умолчанию **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Включает или отключает возможность недействительности моментального снимка. *force_invalidate_snapshot* является **битом** и имеет значение по умолчанию **0**.  
   
  **0** указывает, что изменения в статье слияния не приведут к недействительности моментального снимка.  
   
@@ -72,7 +72,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_mergearticlecolumn** используется в репликации слиянием.  
   
  Если осуществляется автоматическое управление диапазоном идентификаторов, столбец идентификаторов не может быть сброшен из статьи. Дополнительные сведения см. в статье [Репликация столбцов идентификаторов](../../relational-databases/replication/publish/replicate-identity-columns.md).  

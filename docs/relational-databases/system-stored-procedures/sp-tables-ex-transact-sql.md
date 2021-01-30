@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_tables_ex
 - sp_tables_ex_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0156f75940cf5e0d2186625d148850dcfb181ad0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0126cfd14adde25d88d6990a5d7e78c2141ea21e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544742"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182768"
 ---
 # <a name="sp_tables_ex-transact-sql"></a>sp_tables_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,13 +45,13 @@ sp_tables_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @table_server = ] 'table_server'` Имя связанного сервера, для которого возвращаются сведения о таблице. Аргумент *table_server* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @table_server = ] 'table_server'` Имя связанного сервера, для которого возвращаются сведения о таблице. Аргумент *table_server* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-``[ , [ @table_name = ] 'table_name']`` Имя таблицы, для которой возвращаются сведения о типе данных. Аргумент *table_name*имеет тип **sysname**и значение по умолчанию NULL.  
+``[ , [ @table_name = ] 'table_name']`` Имя таблицы, для которой возвращаются сведения о типе данных. Аргумент *table_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @table_schema = ] 'table_schema']` Схема таблицы. Аргумент *table_schema*имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @table_schema = ] 'table_schema']` Схема таблицы. Аргумент *table_schema* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @table_catalog = ] 'table_catalog'` Имя базы данных, в которой находится указанный *table_name* . Аргумент *table_catalog* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @table_catalog = ] 'table_catalog'` Имя базы данных, в которой находится указанный *table_name* . Аргумент *table_catalog* имеет тип **sysname** и значение по умолчанию NULL.  
   
 `[ @table_type = ] 'table_type'` Тип возвращаемой таблицы. Аргумент *TABLE_TYPE* имеет тип **sysname**, значение по умолчанию NULL и может иметь одно из следующих значений.  
   
@@ -66,7 +66,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**TABLE**|Имя пользовательской таблицы.|  
 |**VIEW**|Имя представления.|  
   
-`[ @fUsePattern = ] 'fUsePattern'` Определяет, будут ли символы **_**, **%** , **[** и **]** интерпретироваться как подстановочные знаки. Допустимые значения: 0 (сопоставление с шаблоном отключено) и 1 (сопоставление с шаблоном включено). *фусепаттерн* имеет **бит**и значение по умолчанию 1.  
+`[ @fUsePattern = ] 'fUsePattern'` Определяет, будут ли символы **_**, **%** , **[** и **]** интерпретироваться как подстановочные знаки. Допустимые значения: 0 (сопоставление с шаблоном отключено) и 1 (сопоставление с шаблоном включено). *фусепаттерн* имеет **бит** и значение по умолчанию 1.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  Нет  
@@ -81,8 +81,8 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**TABLE_TYPE**|**varchar(32)**|Таблица, системная таблица или представление.|  
 |**ЗАМЕЧАНИЯ**|**varchar (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не возвращает значение для этого столбца.|  
   
-## <a name="remarks"></a>Примечания  
- **sp_tables_ex** выполняется путем запроса набора строк TABLES интерфейса **IDBSchemaRowset** поставщика OLE DB, соответствующего *table_server*. Параметры *table_name*, *table_schema*, *table_catalog*и *столбцов* передаются этому интерфейсу для ограничения возвращаемых строк.  
+## <a name="remarks"></a>Замечания  
+ **sp_tables_ex** выполняется путем запроса набора строк TABLES интерфейса **IDBSchemaRowset** поставщика OLE DB, соответствующего *table_server*. Параметры *table_name*, *table_schema*, *table_catalog* и *столбцов* передаются этому интерфейсу для ограничения возвращаемых строк.  
   
  **sp_tables_ex** возвращает пустой результирующий набор, если поставщик OLE DB указанного связанного сервера не поддерживает набор строк TABLES интерфейса **IDBSchemaRowset** .  
   
@@ -99,7 +99,7 @@ EXEC sp_tables_ex @table_server = 'LONDON2',
 @table_type = 'TABLE';  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранимые процедуры распределенных запросов &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
  [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [sp_columns_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)   

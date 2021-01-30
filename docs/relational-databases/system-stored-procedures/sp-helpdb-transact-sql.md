@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpdb
 - sp_helpdb_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b1b2055f810be69949f72dd97364ccfb47bfa22f
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: efb199d0fc846bc37a8f7c1272563de99507c795
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809170"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176439"
 ---
 # <a name="sp_helpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @dbname = ] 'name'` Имя базы данных, для которой сообщается информация. Аргумент *Name* имеет тип **sysname**и не имеет значения по умолчанию. Если параметр *Name* не указан, **sp_helpdb** отчеты по всем базам данных в представлении каталога **sys. databases** .  
+`[ @dbname = ] 'name'` Имя базы данных, для которой сообщается информация. Аргумент *Name* имеет тип **sysname** и не имеет значения по умолчанию. Если параметр *Name* не указан, **sp_helpdb** отчеты по всем базам данных в представлении каталога **sys. databases** .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -70,7 +70,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**квот**|**nvarchar (18)**|Значение прироста размера файла. Размер пространства, добавляемого в файл каждый раз, когда требуется новое пространство.|  
 |**Загрузка**|**varchar (9)**|Применение файла. Для файла данных значением является **"только данные"** , а для файла журнала — **"только журнал"**.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Столбец **Status** в результирующем наборе сообщает, какие параметры были установлены в значение ON в базе данных. Столбец **Status** не сообщает обо всех параметрах базы данных. Чтобы просмотреть полный список текущих настроек параметров базы данных, используйте представление каталога **sys. databases** .  
   
 ## <a name="permissions"></a>Разрешения  

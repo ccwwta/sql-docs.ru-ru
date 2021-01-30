@@ -7,25 +7,25 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - functions [ODBC], listed by task
 ms.assetid: 7aa635da-e6b7-439f-8e9b-c3860e24de5e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 50a0b9146acd71f87b4dd65bbdd34c67725e9948
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d5d27a6093947ba4e29e43f4970848780cbf4e8e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487377"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174644"
 ---
 # <a name="odbc-function-summary"></a>Сводка по функциям ODBC
 В следующей таблице перечислены функции ODBC, сгруппированные по типам задач, а также указано обозначение соответствия и краткое описание назначения каждой функции. Дополнительные сведения о соотношении соответствия см. [в разделе ODBC и стандартную CLI](../../../odbc/reference/odbc-and-the-standard-cli.md). Дополнительные сведения о синтаксисе и семантике для каждой функции см. в [справочнике по API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md).  
   
  Приложение может вызвать функцию **SQLGetInfo** для получения сведений о согласованности драйвера. Чтобы получить сведения о поддержке определенной функции в драйвере, приложение может вызвать **SQLGetFunctions**.  
   
-|Задача|Имя функции|Соответствия|Назначение|  
+|Задача|Имя функции|Соответствия|Цель|  
 |----------|-------------------|-----------------|-------------|  
 |Подключение к источнику данных|[Функцию SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)|ISO 92|Получает дескриптор среды, соединения, инструкции или дескриптора.|  
 ||[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|ISO 92|Подключается к определенному драйверу по имени источника данных, ИДЕНТИФИКАТОРу пользователя и паролю.|  

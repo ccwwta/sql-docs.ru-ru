@@ -6,7 +6,7 @@ ms.date: 08/04/2017
 ms.service: sql-database
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_set_database_firewall_rule
 - sp_set_database_firewall_rule_TSQL
@@ -22,17 +22,17 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: edbe51dc6694a94fcf68b012153e065906ce2208
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 5aca09db0b26d15826547c3fb9847614ad5aa722
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472645"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184741"
 ---
 # <a name="sp_set_database_firewall_rule-azure-sql-database"></a>sp_set_database_firewall_rule (база данных SQL Azure)
 [!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
-  Создает или обновляет правила брандмауэра уровня базы данных для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] . Правила брандмауэра базы данных можно настроить для базы данных **master** и для пользовательских баз данных на [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Правила брандмауэра базы данных особенно полезны при использовании пользователей автономной базы данных. Дополнительные сведения см. в статье [Пользователи автономной базы данных — создание переносимой базы данных](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+  Создает или обновляет правила брандмауэра уровня базы данных для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] . Правила брандмауэра базы данных можно настроить для базы данных **master** и для пользовательских баз данных на [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Правила брандмауэра базы данных особенно полезны при использовании пользователей автономной базы данных. Дополнительные сведения см. в разделе [Пользователи автономной базы данных — создание переносимой базы данных](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -56,7 +56,7 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
 > [!NOTE]  
 >  Попытки подключения к Azure разрешены, если это поле и поле *start_ip_address* равны `0.0.0.0` .  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Имена настроек брандмауэра на уровне базы данных должны быть уникальными. Если имя параметра брандмауэра на уровне базы данных, указанного для хранимой процедуры, уже существует в таблице параметров брандмауэра уровня базы данных, начальный и конечный IP-адреса будут обновлены. В противном случае будет создан новый параметр брандмауэра на уровне базы данных.  
   
  При добавлении параметра брандмауэра уровня базы данных, в котором начальный и конечный IP-адреса равны `0.0.0.0` , вы включаете доступ к базе данных на [!INCLUDE[ssSDS](../../includes/sssds-md.md)] сервере из любого ресурса Azure. Укажите значение параметра *Name* , которое поможет вспомнить, для чего предназначен параметр брандмауэра.  

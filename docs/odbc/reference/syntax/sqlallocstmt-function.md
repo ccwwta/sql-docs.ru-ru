@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLAllocStmt
 apilocation:
@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 7bb38a06-e3d5-4c9a-a0e8-7b59b2ec6927
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 28eea4b64b8c94c0db83352a5bcbeafe8263bf60
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 557c5165e1b81c2072d6392023e0811d1abb8dee
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487287"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181104"
 ---
 # <a name="sqlallocstmt-function"></a>Функция SQLAllocStmt
 **Соответствия**  
  Введенная версия: соответствие стандартам ODBC 1,0: не рекомендуется  
   
  **Сводка**  
- В ODBC 3. *x*, ODBC 2. *x* функция x **SQLAllocStmt** была заменена на **функцию SQLAllocHandle**. Дополнительные сведения см. в разделе [функция функцию SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md).  
+ В ODBC 3. *x*, ODBC 2.  функция x **SQLAllocStmt** была заменена на **функцию SQLAllocHandle**. Дополнительные сведения см. в разделе [функция функцию SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md).  
   
 > [!NOTE]  
 >  Дополнительные сведения о том, что диспетчер драйверов сопоставляет эту функцию при использовании ODBC 2. Приложение *x* работает с ODBC 3. драйвер *x* см. в разделе [сопоставление устаревших функций](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) в приложении G: рекомендации по драйверу для обеспечения обратной совместимости.  

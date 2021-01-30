@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_mergedummyupdate_TSQL
 - sp_mergedummyupdate
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 39558295ad31cfccd1f4df70e89580e2615fea56
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7c64a3acd9dae0797a70ed8c167010f2d32479b2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545981"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185290"
 ---
 # <a name="sp_mergedummyupdate-transact-sql"></a>sp_mergedummyupdate (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,14 +38,14 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @source_object = ] 'source_object'` Имя исходного объекта. *source_object*имеет тип **nvarchar (386)** и не имеет значения по умолчанию.  
+`[ @source_object = ] 'source_object'` Имя исходного объекта. *source_object* имеет тип **nvarchar (386)** и не имеет значения по умолчанию.  
   
-`[ @rowguid = ] 'rowguid'` Идентификатор строки. *rowguid* имеет тип **uniqueidentifier**и не имеет значения по умолчанию.  
+`[ @rowguid = ] 'rowguid'` Идентификатор строки. *rowguid* имеет тип **uniqueidentifier** и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_mergedummyupdate** используется в репликации слиянием.  
   
  **sp_mergedummyupdate** удобно использовать при написании собственной альтернативы средство просмотра конфликтов репликации (Wzcnflct.exe).  

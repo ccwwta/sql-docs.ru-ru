@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syscollector_delete_collector_type
 - sp_syscollector_delete_collector_type_TSQL
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cc4cdc682ec2230b7d0f3136feb683789b38c06b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: aa80b1d9574d707d714781716290f3b62e3fd229
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547368"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183064"
 ---
 # <a name="sp_syscollector_delete_collector_type-transact-sql"></a>sp_syscollector_delete_collector_type (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Либо *collector_type_uid* , либо *имя* должны иметь значение, которое не может быть null.  
   
  Эта процедура вызовет ошибку, если существуют элементы сбора этого типа сборщика.  
@@ -66,7 +66,7 @@ GO
 EXEC sp_syscollector_delete_collector_type @collector_type_uid = '302E93D1-3424-4be7-AA8E-84813ECF2419';  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)  
   

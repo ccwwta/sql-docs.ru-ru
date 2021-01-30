@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_OAMethod
 - sp_OAMethod_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7442e3af4bf0233e51f32d7c8e6f034d69598046
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: da84a59353baffa92ac0fa30e55bfa4b248379f7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89527097"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182408"
 ---
 # <a name="sp_oamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ sp_OAMethod objecttoken , methodname
  *имя_метода*  
  Имя вызываемого метода OLE-объекта.  
   
- _returnvalue_**выходные данные** ReturnValue    
+ **выходные данные** ReturnValue    
  Возвращаемое значение метода OLE-объекта. Если значение указано, оно должно быть локальной переменной соответствующего типа данных.  
   
  Если метод возвращает одно значение, укажите локальную переменную для *ReturnValue*, возвращающую возвращаемое значение метода в локальной переменной, или не указывайте *ReturnValue*, которая возвращает возвращаемое значение метода клиенту в виде однострочного результирующего набора с одним столбцом.  
@@ -69,13 +69,13 @@ sp_OAMethod objecttoken , methodname
   
  Чтобы получить возвращаемое значение выходного параметра, параметр должен быть локальной переменной соответствующего типа данных, а *аргумент* **Output** должен быть указан. Если указан постоянный параметр или если **Output** не указан, то любые возвращаемые значения из выходного параметра игнорируются.  
   
- Если аргумент имеет значение, параметр *ParameterName* должен быть именем [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] именованного параметра. Обратите внимание, что **@** _parametername_is не [!INCLUDE[tsql](../../includes/tsql-md.md)] Локальная переменная. Удаляется знак at ( **@** ), а параметр *ParameterName*передается в объект OLE в качестве имени параметра. Все именованные параметры должны указываться после указания всех позиционных параметров.  
+ Если аргумент имеет значение, параметр *ParameterName* должен быть именем [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] именованного параметра. Обратите внимание, что **@** _parametername_is не [!INCLUDE[tsql](../../includes/tsql-md.md)] Локальная переменная. Удаляется знак at ( **@** ), а параметр *ParameterName* передается в объект OLE в качестве имени параметра. Все именованные параметры должны указываться после указания всех позиционных параметров.  
   
  *n*  
  Заполнитель, указывающий на возможность указания нескольких параметров.  
   
 > [!NOTE]
->  * \@ ParameterName* может быть именованным параметром, так как он является частью указанного метода и передается в объект. Другие параметры для такой хранимой процедуры задаются позицией, а не именем.  
+>  *\@ ParameterName* может быть именованным параметром, так как он является частью указанного метода и передается в объект. Другие параметры для такой хранимой процедуры задаются позицией, а не именем.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или ненулевое число (неуспешное завершение), которое является целочисленным значением типа HRESULT, возвращаемого объектом OLE-автоматизации.  
@@ -137,7 +137,7 @@ END;
 PRINT @property;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранимые процедуры OLE-автоматизации &#40;&#41;Transact — SQL ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Пример скрипта OLE-автоматизации](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   

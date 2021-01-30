@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_mergemetadataretentioncleanup
 - sp_mergemetadataretentioncleanup_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4e8d6343-2a38-421d-a3f3-c37d437a0f88
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6f18a4f9357e3af6d9b120195dd13e187de95fd3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3dc35044aedd9a4bd541e93a412fd1e5f5cb0fc5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535137"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99178092"
 ---
 # <a name="sp_mergemetadataretentioncleanup-transact-sql"></a>sp_mergemetadataretentioncleanup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,18 +41,18 @@ sp_mergemetadataretentioncleanup [ [ @num_genhistory_rows = ] num_genhistory_row
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @num_genhistory_rows = ] num_genhistory_rows OUTPUT` Возвращает число очищенных строк из таблицы [MSmerge_genhistory](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md) . *num_genhistory_rows* имеет **тип int**и значение по умолчанию **0**.  
+`[ @num_genhistory_rows = ] num_genhistory_rows OUTPUT` Возвращает число очищенных строк из таблицы [MSmerge_genhistory](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md) . *num_genhistory_rows* имеет **тип int** и значение по умолчанию **0**.  
   
-`[ @num_contents_rows = ] num_contents_rows OUTPUT` Возвращает число очищенных строк из таблицы [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) . *num_contents_rows* имеет **тип int**и значение по умолчанию **0**.  
+`[ @num_contents_rows = ] num_contents_rows OUTPUT` Возвращает число очищенных строк из таблицы [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) . *num_contents_rows* имеет **тип int** и значение по умолчанию **0**.  
   
-`[ @num_tombstone_rows = ] num_tombstone_rows OUTPUT` Возвращает число очищенных строк из таблицы [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) . *num_tombstone_rows* имеет **тип int**и значение по умолчанию **0**.  
+`[ @num_tombstone_rows = ] num_tombstone_rows OUTPUT` Возвращает число очищенных строк из таблицы [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) . *num_tombstone_rows* имеет **тип int** и значение по умолчанию **0**.  
   
 `[ @aggressive_cleanup_only = ] aggressive_cleanup_only` Только для внутреннего использования.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
   
 > [!IMPORTANT]  
 >  Если в базе данных имеется несколько публикаций, а в любой из этих публикаций используется бесконечный срок хранения публикации, то выполнение **sp_mergemetadataretentioncleanup** не очищает метаданные отслеживания изменений репликации слиянием для базы данных. По этой причине, при использовании неограниченного срока хранения публикации необходимо помнить об осторожности. Чтобы определить, имеет ли публикация бесконечный срок хранения, выполните [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) на издателе и обратите внимание на все публикации в результирующем наборе со значением **0** для параметра **retention**.  
@@ -60,7 +60,7 @@ sp_mergemetadataretentioncleanup [ [ @num_genhistory_rows = ] num_genhistory_row
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли базы данных **db_owner** или пользователи из списка доступа к публикации для опубликованной базы данных могут выполнять **sp_mergemetadataretentioncleanup**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

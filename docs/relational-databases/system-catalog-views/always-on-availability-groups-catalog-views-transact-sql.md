@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: ff53e873-8ff6-4628-af84-4ec52fa4951c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 9c1210f5aa1932b9ebfe8f46a8b5e23963bbc8e5
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: d52e974018434325459d1e798d247f61926ca0dc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98102174"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176513"
 ---
 # <a name="always-on-availability-groups-catalog-views-transact-sql"></a>Always On представления каталога групп доступности (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Этот раздел содержит представления каталога и функции, которые связаны с [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
 
 :::row:::
     :::column:::

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_msx_get_account_TSQL
 - sp_msx_get_account
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7b478049-e2d0-4bac-865a-b97fd1d8dfbc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7a6b910559b9ad36d598227abc7ee935a2e16a31
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 932fd01c930878902eb1636ed8d42083e2dcad10
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543199"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99180227"
 ---
 # <a name="sp_msx_get_account-transact-sql"></a>sp_msx_get_account (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ sp_msx_get_account
 |msx_credential_name|**sysname**|Имя учетных данных, используемых для данного соединения с главным сервером.|  
 |msx_login_name|**nvarchar(4000)**|Имя домена и имя пользователя Windows для учетных данных.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Возвращает пустой результирующий набор, если для целевого сервера не указаны учетные данные. Для задания учетных данных следует использовать процедуру sp_msx_set_account.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -77,7 +77,7 @@ GO
   
  `1              65538             MsxAccount           AdventureWorks2012\MsxAccount`  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Агент SQL Server хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [CREATE CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-credential-transact-sql.md)   
  [sp_msx_set_account &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-set-account-transact-sql.md)  

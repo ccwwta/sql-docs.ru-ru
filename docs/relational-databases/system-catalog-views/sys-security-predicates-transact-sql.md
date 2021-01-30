@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SYS.SECURITY_PREDICATES
 - SECURITY_PREDICATES
@@ -22,12 +22,12 @@ ms.assetid: c7a2f28c-98da-463d-8b8a-8e5619e2c6a6
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 629d2eb6cc4bd9451800be12f9739209548c1df2
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8220ca6cefc82682201e3b06244cbed5a7f27db1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97484726"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182489"
 ---
 # <a name="syssecurity_predicates-transact-sql"></a>sys.security_predicates (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "97484726"
 |object_id|**int**|Идентификатор политики безопасности, содержащей этот предикат.|  
 |security_predicate_id|**int**|Идентификатор предиката в этой политике безопасности.|  
 |target_object_id|**int**|Идентификатор объекта, к которому привязан этот предикат безопасности.|  
-|predicate_definition|**nvarchar(max)**|Полное имя функции, которая будет использоваться в качестве предиката безопасности, включая аргументы. Обратите внимание, что имя `schema.function` может быть нормализовано (т. е. экранировано), как и любой другой элемент в тексте, для обеспечения согласованности. Пример:<br /><br /> `[dbo].[fn_securitypredicate]([wing], [startTime], [endTime])`|  
+|predicate_definition|**nvarchar(max)**|Полное имя функции, которая будет использоваться в качестве предиката безопасности, включая аргументы. Обратите внимание, что имя `schema.function` может быть нормализовано (т. е. экранировано), как и любой другой элемент в тексте, для обеспечения согласованности. Например:<br /><br /> `[dbo].[fn_securitypredicate]([wing], [startTime], [endTime])`|  
 |predicate_type|**int**|Тип предиката, используемый политикой безопасности:<br /><br /> 0 = ПРЕДИКАТ ФИЛЬТРА<br /><br /> 1 = ПРЕДИКАТ БЛОКИРОВКИ|  
 |predicate_type_desc|**nvarchar(60)**|Тип предиката, используемый политикой безопасности:<br /><br /> FILTER<br /><br /> ЗАБЛОКИРОВАТЬ|  
 |Операция|**int**|Тип операции, указанной для предиката:<br /><br /> NULL = все применимые операции<br /><br /> 1 = ПОСЛЕ ВСТАВКИ<br /><br /> 2 = ПОСЛЕ ОБНОВЛЕНИЯ<br /><br /> 3 = ПЕРЕД ОБНОВЛЕНИЕМ<br /><br /> 4 = ПЕРЕД УДАЛЕНИЕМ|  

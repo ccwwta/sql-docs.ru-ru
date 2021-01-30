@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sysaltfiles_TSQL
 - sys.sysaltfiles
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 698dec23-5336-4108-87a5-f8e407f8da09
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: f6139fb221ab1d960d8cfb455e592ac16fbcee09
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 1482980471675563417943366eef233396f6f902
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097810"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99180730"
 ---
 # <a name="syssysaltfiles-transact-sql"></a>sys.sysaltfiles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "98097810"
 |**квот**|**int**|Предельный размер базы данных.<br /><br /> 0 = не возрастает. В зависимости от значения состояния может представлять собой либо процент от размера файла, либо число страниц: Если **Status** имеет значение 0x100000, то **рост** — это процент размера файла; в противном случае это число страниц.|  
 |**status**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**Счетчик**|**int**|Зарезервировано.|  
-|**dbid**|**smallint**|Идентификационный номер базы данных, которой принадлежит данный файл.|  
+|**DBID**|**smallint**|Идентификационный номер базы данных, которой принадлежит данный файл.|  
 |**name**|**sysname**|Логическое имя файла.|  
 |**filename**|**nvarchar(260)**|Имя физического устройства. Включает полный путь к файлу.|  
   

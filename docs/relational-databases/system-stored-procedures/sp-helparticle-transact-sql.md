@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helparticle_TSQL
 - sp_helparticle
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7bc639fef551b78dd73da39cd404999e39219b2d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 14baf63cc2944396a13bbc911fb6be7670244216
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538800"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99176491"
 ---
 # <a name="sp_helparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,13 +42,13 @@ sp_helparticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @article = ] 'article'` Имя статьи в публикации. Аргумент *article* имеет тип **sysname**и значение по умолчанию **%** . Если *статья* не указана, возвращаются сведения обо всех статьях для указанной публикации.  
+`[ @article = ] 'article'` Имя статьи в публикации. Аргумент *article* имеет тип **sysname** и значение по умолчанию **%** . Если *статья* не указана, возвращаются сведения обо всех статьях для указанной публикации.  
   
-`[ @returnfilter = ] returnfilter` Указывает, должно ли возвращаться предложение фильтра. *ретурнфилтер* имеет **бит**и значение по умолчанию **1**, которое возвращает предложение фильтра.  
+`[ @returnfilter = ] returnfilter` Указывает, должно ли возвращаться предложение фильтра. *ретурнфилтер* имеет **бит** и значение по умолчанию **1**, которое возвращает предложение фильтра.  
   
-`[ @publisher = ] 'publisher'` Указывает издателя, отличного от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'` Указывает издателя, отличного от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname** и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  не следует указывать *Издатель* при запросе сведений о статье, опубликованной [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателем.  
@@ -93,7 +93,7 @@ sp_helparticle [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_helparticle** используется в репликации моментальных снимков и репликации транзакций.  
   
 ## <a name="permissions"></a>Разрешения  

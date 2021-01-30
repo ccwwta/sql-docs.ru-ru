@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_help_queue_sp
 - sysmail_help_queue_sp_TSQL
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 18e7e8d96a766f628f15dfc747fc3154bc95ea57
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6aece593fd32d5ee563c7b1fe37dc039aa3eec5c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547270"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181924"
 ---
 # <a name="sysmail_help_queue_sp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Существует две очереди в компоненте Database Mail: очередь почты и очередь состояний. Очередь почты содержит почтовые сообщения, ожидающие отправки. Очередь состояний содержит информацию о состоянии сообщений, которые уже были отправлены. Эта хранимая процедура позволяет просмотреть состояние очередей почты и состояний. Если параметр ** \@ queue_type** не указан, хранимая процедура возвращает по одной строке для каждой из очередей.  
+  Существует две очереди в компоненте Database Mail: очередь почты и очередь состояний. Очередь почты содержит почтовые сообщения, ожидающие отправки. Очередь состояний содержит информацию о состоянии сообщений, которые уже были отправлены. Эта хранимая процедура позволяет просмотреть состояние очередей почты и состояний. Если параметр **\@ queue_type** не указан, хранимая процедура возвращает по одной строке для каждой из очередей.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,7 +55,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 |**last_empty_rowset_time**|**DATETIME**|Дата и время, когда очередь в последний раз была пуста. Указывается в военном формате времени относительно часового пояса GMT.|  
 |**last_activated_time**|**DATETIME**|Дата и время, когда очередь в последний раз была активирована. Указывается в военном формате времени относительно часового пояса GMT.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  При устранении неполадок Database Mail используйте **sysmail_help_queue_sp** , чтобы увидеть количество элементов в очереди, состояние очереди и время последней активации.  
   
 ## <a name="permissions"></a>Разрешения  

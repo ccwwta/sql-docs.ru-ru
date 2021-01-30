@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - cdc
 - cdc_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 7fa737644611f24d9d0858fd04066d3ba0571ee3
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: db855911d000c9d39c738f39aec0fa8486912957
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98102734"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183377"
 ---
 # <a name="cdcltcapture_instancegt_ct-transact-sql"></a>CDC. &lt; &gt;_CT capture_instance (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "98102734"
 |*\<captured source table columns>*|непостоянно|Остальные столбцы в таблице изменений — это столбцы из исходной таблицы, определенные, как отслеживаемые при создании экземпляра отслеживания. Если в списке отслеживаемых столбцов не указано ни одного столбца, в эту таблицу включаются все столбцы из исходной таблицы.|  
 |**__ $ command_id** |**int** |Отслеживает порядок операций в рамках транзакции. |  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
 
 Столбец `__$command_id` был представлен в накопительном обновлении в версиях 2012 – 2016. Сведения о версии и загрузке см. в статье базы знаний 3030352 в [исправлении: таблица изменений неправильно упорядочивается для обновленных строк после включения системы отслеживания измененных данных для Microsoft SQL Server базы данных](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  Дополнительные сведения см. в разделе [функция CDC может прерываться после обновления до последней версии Cu для SQL Server 2012, 2014 и 2016](/archive/blogs/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016).
 

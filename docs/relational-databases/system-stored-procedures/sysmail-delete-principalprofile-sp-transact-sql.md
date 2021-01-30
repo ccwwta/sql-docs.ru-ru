@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_delete_principalprofile_sp_TSQL
 - sysmail_delete_principalprofile_sp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8fc14700-e17a-4073-9a96-7fc23e775c69
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e5cfe34ff4bebc2e21517e6515b5ea2ebee3a37f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a80485aca8c7f0adb6a539f57540952ccd758a31
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538499"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182019"
 ---
 # <a name="sysmail_delete_principalprofile_sp-transact-sql"></a>sysmail_delete_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,18 +41,18 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @principal_id = ] principal_id` Идентификатор пользователя или роли базы данных в базе данных **msdb** для удаления связи. *principal_id* имеет **тип int**и значение по умолчанию NULL. Чтобы сделать открытый профиль частным, укажите идентификатор участника **0** или имя участника **"Public"**. Необходимо указать либо *principal_id* , либо *principal_name* .  
+`[ @principal_id = ] principal_id` Идентификатор пользователя или роли базы данных в базе данных **msdb** для удаления связи. *principal_id* имеет **тип int** и значение по умолчанию NULL. Чтобы сделать открытый профиль частным, укажите идентификатор участника **0** или имя участника **"Public"**. Необходимо указать либо *principal_id* , либо *principal_name* .  
   
-`[ @principal_name = ] 'principal_name'` Имя пользователя или роли базы данных в базе данных **msdb** для удаления связи. Аргумент *principal_name* имеет тип **sysname**и значение по умолчанию NULL. Чтобы сделать открытый профиль частным, укажите идентификатор участника **0** или имя участника **"Public"**. Необходимо указать либо *principal_id* , либо *principal_name* .  
+`[ @principal_name = ] 'principal_name'` Имя пользователя или роли базы данных в базе данных **msdb** для удаления связи. Аргумент *principal_name* имеет тип **sysname** и значение по умолчанию NULL. Чтобы сделать открытый профиль частным, укажите идентификатор участника **0** или имя участника **"Public"**. Необходимо указать либо *principal_id* , либо *principal_name* .  
   
-`[ @profile_id = ] profile_id` Идентификатор профиля для удаляемой связи. *profile_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать либо *profile_id* , либо *profile_name* .  
+`[ @profile_id = ] profile_id` Идентификатор профиля для удаляемой связи. *profile_id* имеет **тип int** и значение по умолчанию NULL. Необходимо указать либо *profile_id* , либо *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'` Имя профиля для удаления связи. Аргумент *profile_name* имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *profile_id* , либо *profile_name* .  
+`[ @profile_name = ] 'profile_name'` Имя профиля для удаления связи. Аргумент *profile_name* имеет тип **sysname** и значение по умолчанию NULL. Необходимо указать либо *profile_id* , либо *profile_name* .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Чтобы создать общий профиль в частном профиле, укажите для имени участника значение **"Public"** или **0** для идентификатора участника.  
   
  Будьте осторожны, удаляя разрешения для частного профиля пользователя по умолчанию или открытого профиля по умолчанию. Если профиль по умолчанию недоступен, **sp_send_dbmail** требует имя профиля в качестве аргумента. Поэтому удаление профиля по умолчанию может привести к сбою вызовов **sp_send_dbmail** . Дополнительные сведения см. в разделе [sp_send_dbmail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).  
@@ -71,7 +71,7 @@ EXECUTE msdb.dbo.sysmail_delete_principalprofile_sp
     @profile_name = 'AdventureWorks Administrator' ;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [Database Mail объекты конфигурации](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [Database Mail хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  

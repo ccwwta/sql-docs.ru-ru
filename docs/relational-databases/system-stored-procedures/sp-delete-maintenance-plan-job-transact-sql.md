@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_maintenance_plan_job
 - sp_delete_maintenance_plan_job_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1c2148c3-2928-4d9b-b1c8-3512cfbd6a63
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0b06c9c385d85c1b1a4cb4df79ebb22f70d5abee
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 090fc42c20612f737bd0ed7b0be910d59dd1eb12
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536574"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183412"
 ---
 # <a name="sp_delete_maintenance_plan_job-transact-sql"></a>sp_delete_maintenance_plan_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,14 +46,14 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @plan_id = ] 'plan\_id'` Указывает идентификатор плана обслуживания. *plan_id* имеет тип **uniqueidentifier**и должен быть допустимым идентификатором.  
+`[ @plan_id = ] 'plan\_id'` Указывает идентификатор плана обслуживания. *plan_id* имеет тип **uniqueidentifier** и должен быть допустимым идентификатором.  
   
-`[ @job_id = ] 'job\_id'` Указывает идентификатор задания, с которым связан план обслуживания. *job_id* имеет тип **uniqueidentifier**и должен быть допустимым идентификатором.  
+`[ @job_id = ] 'job\_id'` Указывает идентификатор задания, с которым связан план обслуживания. *job_id* имеет тип **uniqueidentifier** и должен быть допустимым идентификатором.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_delete_maintenance_plan_job** должны запускаться из базы данных **msdb** .  
   
  Когда все задания были удалены из плана обслуживания, рекомендуется выполнить **sp_delete_maintenance_plan_db** , чтобы удалить оставшиеся базы данных из плана.  

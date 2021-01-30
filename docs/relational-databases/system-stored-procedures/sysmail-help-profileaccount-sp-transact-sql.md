@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_help_profileaccount_sp_TSQL
 - sysmail_help_profileaccount_sp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6894b44d7a09fa8f49ffa1d76a8613f930db7d18
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 45b542047875527a26d9c4854b223e626efda5ea
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541078"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181936"
 ---
 # <a name="sysmail_help_profileaccount_sp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,13 +44,13 @@ sysmail_help_profileaccount_sp
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @profile_id = ] profile_id` Идентификатор профиля для перечисления. *profile_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать либо *profile_id* , либо *profile_name* .  
+`[ @profile_id = ] profile_id` Идентификатор профиля для перечисления. *profile_id* имеет **тип int** и значение по умолчанию NULL. Необходимо указать либо *profile_id* , либо *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'` Имя профиля для списка. Аргумент *profile_name* имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *profile_id* , либо *profile_name* .  
+`[ @profile_name = ] 'profile_name'` Имя профиля для списка. Аргумент *profile_name* имеет тип **sysname** и значение по умолчанию NULL. Необходимо указать либо *profile_id* , либо *profile_name* .  
   
-`[ @account_id = ] account_id` Идентификатор учетной записи для перечисления. *account_id* имеет **тип int**и значение по умолчанию NULL. Если *account_id* и *account_name* равны NULL, выводит список всех учетных записей в профиле.  
+`[ @account_id = ] account_id` Идентификатор учетной записи для перечисления. *account_id* имеет **тип int** и значение по умолчанию NULL. Если *account_id* и *account_name* равны NULL, выводит список всех учетных записей в профиле.  
   
-`[ @account_name = ] 'account_name'` Имя учетной записи для перечисления. Аргумент *account_name* имеет тип **sysname**и значение по умолчанию NULL. Если *account_id* и *account_name* равны NULL, выводит список всех учетных записей в профиле.  
+`[ @account_name = ] 'account_name'` Имя учетной записи для перечисления. Аргумент *account_name* имеет тип **sysname** и значение по умолчанию NULL. Если *account_id* и *account_name* равны NULL, выводит список всех учетных записей в профиле.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -66,7 +66,7 @@ sysmail_help_profileaccount_sp
 |**account_name**|**sysname**|Имя учетной записи.|  
 |**sequence_number**|**int**|Порядковый номер учетной записи в профиле.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Если *profile_id* или *profile_name* не указаны, эта хранимая процедура возвращает сведения для каждого профиля в экземпляре.  
   
  Хранимая процедура **sysmail_help_profileaccount_sp** находится в базе данных **msdb** и принадлежит схеме **dbo** . Процедура должна быть выполнена с именем, сопоставленным с тремя частями, если текущей базой данных не является **msdb**.  
@@ -129,7 +129,7 @@ profile_id  profile_name                 account_id  account_name         sequen
 106         AdventureWorks Operator      210         Operator-MainServer  1  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [Создание учетной записи Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Database Mail объекты конфигурации](../../relational-databases/database-mail/database-mail-configuration-objects.md)   

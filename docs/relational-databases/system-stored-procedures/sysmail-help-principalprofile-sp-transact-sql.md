@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_help_principalprofile_sp_TSQL
 - sysmail_help_principalprofile_sp
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5fb578b0af1e51e8e8ca4bb37bc82b3949cb33be
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: efb4b5cd655bf4a401d530e4c9bd52cbc9660a65
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541076"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181963"
 ---
 # <a name="sysmail_help_principalprofile_sp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,13 +42,13 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @principal_id = ] principal_id` Идентификатор пользователя или роли базы данных в базе данных **msdb** для списка взаимосвязей. *principal_id* имеет **тип int**и значение по умолчанию NULL. Можно указать либо *principal_id* , либо *principal_name* .  
+`[ @principal_id = ] principal_id` Идентификатор пользователя или роли базы данных в базе данных **msdb** для списка взаимосвязей. *principal_id* имеет **тип int** и значение по умолчанию NULL. Можно указать либо *principal_id* , либо *principal_name* .  
   
-`[ @principal_name = ] 'principal_name'` Имя пользователя или роли базы данных в базе данных **msdb** для списка взаимосвязей. Аргумент *principal_name* имеет тип **sysname**и значение по умолчанию NULL. Можно указать либо *principal_id* , либо *principal_name* .  
+`[ @principal_name = ] 'principal_name'` Имя пользователя или роли базы данных в базе данных **msdb** для списка взаимосвязей. Аргумент *principal_name* имеет тип **sysname** и значение по умолчанию NULL. Можно указать либо *principal_id* , либо *principal_name* .  
   
-`[ @profile_id = ] profile_id` Идентификатор профиля для списка взаимосвязей. *profile_id* имеет **тип int**и значение по умолчанию NULL. Можно указать либо *profile_id* , либо *profile_name* .  
+`[ @profile_id = ] profile_id` Идентификатор профиля для списка взаимосвязей. *profile_id* имеет **тип int** и значение по умолчанию NULL. Можно указать либо *profile_id* , либо *profile_name* .  
   
-`[ @profile_name = ] 'profile_name'` Имя профиля для списка взаимосвязей. Аргумент *profile_name* имеет тип **sysname**и значение по умолчанию NULL. Можно указать либо *profile_id* , либо *profile_name* .  
+`[ @profile_name = ] 'profile_name'` Имя профиля для списка взаимосвязей. Аргумент *profile_name* имеет тип **sysname** и значение по умолчанию NULL. Можно указать либо *profile_id* , либо *profile_name* .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -64,7 +64,7 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 |**profile_name**|**sysname**|Имя профиля компонента Database Mail.|  
 |**is_default**|**bit**|Флаг, который указывает, является ли профиль профилем по умолчанию для пользователя.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Если **sysmail_help_principalprofile_sp** вызывается без параметров, то возвращаемый результирующий набор перечисляет все ассоциации в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В противном случае результирующий набор содержит сведения об ассоциациях, которые удовлетворяют предоставленным параметрам. Например, если представлено имя профиля, процедура приводит список всех взаимосвязей для профиля.  
   
  **sysmail_help_principalprofile_sp** находится в базе данных **msdb** и принадлежит схеме **dbo** . Процедура должна быть выполнена с именем, сопоставленным с тремя частями, если текущей базой данных не является **msdb**.  
@@ -107,7 +107,7 @@ principal_id principal_name     profile_id  profile_name                   is_de
 5            danw               9           AdventureWorks Administrator   1  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [Database Mail хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   

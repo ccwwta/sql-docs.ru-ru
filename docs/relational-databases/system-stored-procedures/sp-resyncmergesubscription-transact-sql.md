@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_resyncmergesubscription_TSQL
 - sp_resyncmergesubscription
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 86e1aaf4ee97447518e09a9b0b08a2624015cbef
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 530c93cbb99db63c7ced6e454ea78b4f6a0f1ebf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540489"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183082"
 ---
 # <a name="sp_resyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,17 +44,17 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'` Имя издателя. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL. Значение NULL допустимо, если хранимая процедура выполняется на издателе. Если хранимая процедура выполняется на подписчике, то надо указать издатель.  
+`[ @publisher = ] 'publisher'` Имя издателя. Аргумент *Publisher* имеет тип **sysname** и значение по умолчанию NULL. Значение NULL допустимо, если хранимая процедура выполняется на издателе. Если хранимая процедура выполняется на подписчике, то надо указать издатель.  
   
-`[ @publisher_db = ] 'publisher_db'` Имя базы данных публикации. Аргумент *publisher_db* имеет тип **sysname**и значение по умолчанию NULL. Значение NULL допустимо, если хранимая процедура выполняется на издателе в базе данных публикации. Если хранимая процедура выполняется на подписчике, то надо указать издатель.  
+`[ @publisher_db = ] 'publisher_db'` Имя базы данных публикации. Аргумент *publisher_db* имеет тип **sysname** и значение по умолчанию NULL. Значение NULL допустимо, если хранимая процедура выполняется на издателе в базе данных публикации. Если хранимая процедура выполняется на подписчике, то надо указать издатель.  
   
-`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication*имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @subscriber = ] 'subscriber'` Имя подписчика. Аргумент *Subscriber* имеет тип **sysname**и значение по умолчанию NULL. Значение NULL допустимо, если хранимая процедура выполняется на подписчике. Если хранимая процедура выполняется на издателе, то надо указать подписчик.  
+`[ @subscriber = ] 'subscriber'` Имя подписчика. Аргумент *Subscriber* имеет тип **sysname** и значение по умолчанию NULL. Значение NULL допустимо, если хранимая процедура выполняется на подписчике. Если хранимая процедура выполняется на издателе, то надо указать подписчик.  
   
-`[ @subscriber_db = ] 'subscriber_db'` Имя базы данных подписки. Аргумент *subscription_db* имеет тип **sysname**и значение по умолчанию NULL. Значение NULL допустимо, если хранимая процедура выполняется на подписчике в базе данных подписки. Если хранимая процедура выполняется на издателе, то надо указать подписчик.  
+`[ @subscriber_db = ] 'subscriber_db'` Имя базы данных подписки. Аргумент *subscription_db* имеет тип **sysname** и значение по умолчанию NULL. Значение NULL допустимо, если хранимая процедура выполняется на подписчике в базе данных подписки. Если хранимая процедура выполняется на издателе, то надо указать подписчик.  
   
-`[ @resync_type = ] resync_type` Определяет, когда должна начаться повторная синхронизация. *resync_type* имеет **тип int**и может принимать одно из следующих значений.  
+`[ @resync_type = ] resync_type` Определяет, когда должна начаться повторная синхронизация. *resync_type* имеет **тип int** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -67,7 +67,7 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_resyncmergesubscription** используется в репликации слиянием.  
   
  Значение **0** для параметра *resync_type* , которое повторно применяет все изменения с момента создания исходного моментального снимка, может быть ресурсоемким, но, возможно, намного меньше, чем полная повторная инициализация. Например, если исходный моментальный снимок был отправлен месяц назад, это значение приведет к повторному применению данных прошедшего месяца. Если исходный моментальный снимок содержал 1 ГБ данных, а объем изменений за последний месяц составил 2 МБ измененных данных, более эффективным будет повторное применение данных, а не полного моментального снимка размером в 1 ГБ.  
@@ -75,7 +75,7 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_resyncmergesubscription**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

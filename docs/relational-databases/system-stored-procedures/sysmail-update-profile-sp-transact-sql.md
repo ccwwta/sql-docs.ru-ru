@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sysmail_update_profile_sp
 - sysmail_update_profile_sp_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 78a123514e990499f191cbc6742870647adebc5e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf631b1acd099d8d7821a49163b80d643331ec28
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454762"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181879"
 ---
 # <a name="sysmail_update_profile_sp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,16 +41,16 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @profile_id = ] profile_id` Идентификатор обновляемого профиля. *profile_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать хотя бы один *profile_id* или *profile_name* . Если заданы оба параметра, процедура изменяет имя профиля.  
+`[ @profile_id = ] profile_id` Идентификатор обновляемого профиля. *profile_id* имеет **тип int** и значение по умолчанию NULL. Необходимо указать хотя бы один *profile_id* или *profile_name* . Если заданы оба параметра, процедура изменяет имя профиля.  
   
-`[ @profile_name = ] 'profile_name'` Имя обновляемого профиля или новое имя профиля. Аргумент *profile_name* имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать хотя бы один *profile_id* или *profile_name* . Если заданы оба параметра, процедура изменяет имя профиля.  
+`[ @profile_name = ] 'profile_name'` Имя обновляемого профиля или новое имя профиля. Аргумент *profile_name* имеет тип **sysname** и значение по умолчанию NULL. Необходимо указать хотя бы один *profile_id* или *profile_name* . Если заданы оба параметра, процедура изменяет имя профиля.  
   
 `[ @description = ] 'description'` Новое описание профиля. *Description* имеет тип **nvarchar (256)** и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Если одновременно указаны идентификатор и имя профиля, то процедура изменяет имя профиля на введенное и обновляет описание профиля. Если указан только один из этих аргументов, то процедура обновляет описание профиля.  
   
  Хранимая процедура **sysmail_update_profile_sp** находится в базе данных **msdb** и принадлежит схеме **dbo** . Процедура должна быть выполнена с именем, сопоставленным с тремя частями, если текущей базой данных не является **msdb**.  
@@ -80,7 +80,7 @@ EXECUTE msdb.dbo.sysmail_update_profile_sp
     ,@description = 'Profile to send alert e-mail to operators.';  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [Database Mail объекты конфигурации](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [Создание учетной записи Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md)   
