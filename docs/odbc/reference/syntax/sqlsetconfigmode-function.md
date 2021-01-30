@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLSetConfigMode
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 09eb88ea-b6f6-4eca-b19d-0951cebc6c0a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5aab5274403a654362c5732d8ec3f6eccae3be96
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a136a476b56f108bef77395f0ee4b13ae23b10a0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499587"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192461"
 ---
 # <a name="sqlsetconfigmode-function"></a>Функция SQLSetConfigMode
 **Соответствия**  
@@ -39,7 +39,7 @@ ms.locfileid: "88499587"
 ```cpp  
   
 BOOL SQLSetConfigMode(  
-     UWORD     wConfigMode);  
+     UWORD     wConfigMode);  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
@@ -56,7 +56,7 @@ BOOL SQLSetConfigMode(
  Функция возвращает TRUE, если она успешна, и FALSE в случае сбоя.  
   
 ## <a name="diagnostics"></a>Диагностика  
- Когда **склсетконфигмоде** возвращает значение false, связанное значение * \* пферроркоде* может быть получено путем вызова **склинсталлереррор**. В следующей таблице перечислены значения * \* пферроркоде* , которые могут быть возвращены **склинсталлереррор** , и объясняется каждый из них в контексте этой функции.  
+ Когда **склсетконфигмоде** возвращает значение false, связанное значение *\* пферроркоде* может быть получено путем вызова **склинсталлереррор**. В следующей таблице перечислены значения *\* пферроркоде* , которые могут быть возвращены **склинсталлереррор** , и объясняется каждый из них в контексте этой функции.  
   
 |*\*пферроркоде*|Ошибка|Описание|  
 |---------------------|-----------|-----------------|  

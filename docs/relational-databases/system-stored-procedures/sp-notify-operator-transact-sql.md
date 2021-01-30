@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_notify_operator_TSQL
 - sp_notify_operator
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 946a2adf54435499ae72d12ed10e984892295533
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 954a314760a22d9b00996dc460062fcc75af16aa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541644"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191995"
 ---
 # <a name="sp_notify_operator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ sp_notify_operator
 ## <a name="arguments"></a>Аргументы  
 `[ @profile_name = ] 'profilename'` Имя профиля Database Mail, используемого для отправки сообщения. *filename* имеет тип **nvarchar (128)**. Если параметр *filename* не указан, используется профиль Database Mail по умолчанию.  
   
-`[ @id = ] id` Идентификатор оператора, которому отправляется сообщение. *ID* имеет **тип int**и значение по умолчанию NULL. Необходимо указать один из *идентификаторов* или *имя* .  
+`[ @id = ] id` Идентификатор оператора, которому отправляется сообщение. *ID* имеет **тип int** и значение по умолчанию NULL. Необходимо указать один из *идентификаторов* или *имя* .  
   
 `[ @name = ] 'name'` Имя оператора, которому отправляется сообщение. *имя* имеет тип **nvarchar (128)** и значение по умолчанию NULL. Необходимо указать один из *идентификаторов* или *имя* .  
   
@@ -67,7 +67,7 @@ sp_notify_operator
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Отправляет данное сообщение на адрес электронной почты указанного оператора. Если оператор не имеет настроенного адреса электронной почты, возвращается ошибка.  
   
  Компонент Database Mail и базы данных обслуживания почты должны быть сконфигурированы до отправки уведомления оператору.  

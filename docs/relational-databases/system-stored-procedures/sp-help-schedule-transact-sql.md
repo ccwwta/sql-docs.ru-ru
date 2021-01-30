@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_schedule
 - sp_help_schedule_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9e6dbddc56d00732495bce71b7c05c79f76adb20
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 24a0d594e02fad844d651933bab8d89bc9d35bb2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538822"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193524"
 ---
 # <a name="sp_help_schedule-transact-sql"></a>sp_help_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,13 +44,13 @@ sp_help_schedule
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @schedule_id = ] id` Идентификатор расписания для перечисления. *schedule_name* имеет **тип int**и не имеет значения по умолчанию. Можно указать либо *schedule_id* , либо *schedule_name* .  
+`[ @schedule_id = ] id` Идентификатор расписания для перечисления. *schedule_name* имеет **тип int** и не имеет значения по умолчанию. Можно указать либо *schedule_id* , либо *schedule_name* .  
   
-`[ @schedule_name = ] 'schedule_name'` Имя расписания для перечисления. Аргумент *schedule_name* имеет тип **sysname**и не имеет значения по умолчанию. Можно указать либо *schedule_id* , либо *schedule_name* .  
+`[ @schedule_name = ] 'schedule_name'` Имя расписания для перечисления. Аргумент *schedule_name* имеет тип **sysname** и не имеет значения по умолчанию. Можно указать либо *schedule_id* , либо *schedule_name* .  
   
-`[ @attached_schedules_only = ] attached_schedules_only ]` Указывает, следует ли отображать только расписания, к которым присоединено задание. *attached_schedules_only* имеет **бит**и значение по умолчанию **0**. Если значение *attached_schedules_only* равно **0**, отображаются все расписания. Если *attached_schedules_only* равен **1**, результирующий набор содержит только те расписания, которые присоединены к заданию.  
+`[ @attached_schedules_only = ] attached_schedules_only ]` Указывает, следует ли отображать только расписания, к которым присоединено задание. *attached_schedules_only* имеет **бит** и значение по умолчанию **0**. Если значение *attached_schedules_only* равно **0**, отображаются все расписания. Если *attached_schedules_only* равен **1**, результирующий набор содержит только те расписания, которые присоединены к заданию.  
   
-`[ @include_description = ] include_description` Указывает, следует ли включать описания в результирующий набор. *include_description* имеет **бит**и значение по умолчанию **0**. Если значение *include_description* равно **0**, столбец *schedule_description* результирующего набора содержит заполнитель. Если *include_description* равен **1**, описание расписания включается в результирующий набор.  
+`[ @include_description = ] include_description` Указывает, следует ли включать описания в результирующий набор. *include_description* имеет **бит** и значение по умолчанию **0**. Если значение *include_description* равно **0**, столбец *schedule_description* результирующего набора содержит заполнитель. Если *include_description* равен **1**, описание расписания включается в результирующий набор.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -78,7 +78,7 @@ sp_help_schedule
 |**schedule_description**|**nvarchar(4000)**|Описание расписания на английском языке (если запрошено).|  
 |**job_count**|**int**|Число заданий, ссылающихся на данное расписание.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Если параметры не указаны, **sp_help_schedule** выводит сведения обо всех расписаниях в экземпляре.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -119,7 +119,7 @@ EXEC dbo.sp_help_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   

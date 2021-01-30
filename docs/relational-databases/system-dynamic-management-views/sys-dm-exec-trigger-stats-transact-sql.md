@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_exec_trigger_stats
 - dm_exec_trigger_stats_TSQL
@@ -21,12 +21,12 @@ ms.assetid: 863498b4-849c-434d-b748-837411458738
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 04a931ffe95e58f0db20de619df48f16464f1e01
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: eef7f4d6a9dd20dd12d5248ba4b09b1f7031e237
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097695"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192925"
 ---
 # <a name="sysdm_exec_trigger_stats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "98097695"
 |**max_page_server_reads**|**bigint**|Максимальное количество операций чтения сервера, которое этот триггер выполнял во время одного выполнения.<br /><br /> Область **применения**: масштабирование базы данных SQL Azure|  
 
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Динамические административные представления в среде [!INCLUDE[ssSDS](../../includes/sssds-md.md)] не могут предоставлять информацию, которая может повлиять на автономность базы данных, или информацию о других базах данных, к которым имеет доступ пользователь. Во избежание раскрытия этой информации все строки, содержащие данные, не принадлежащие подключенному клиенту, отфильтровываются.  
 
 Статистика в представлении обновляется после завершения выполнения запроса.  

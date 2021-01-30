@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLWriteDSNToIni
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: dc7018b2-18d4-4657-96d0-086479a47474
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 08a1094d29bbba9dc52974bd1cef5cd6645aa5dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 58e09c90ef785d1c851a1b95ef9a861277f47db7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421018"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191695"
 ---
 # <a name="sqlwritedsntoini-function"></a>Функция SQLWriteDSNToIni
 **Соответствия**  
@@ -54,7 +54,7 @@ BOOL SQLWriteDSNToIni(
  Функция возвращает TRUE, если она успешна, и FALSE в случае сбоя.  
   
 ## <a name="diagnostics"></a>Диагностика  
- Когда **склвритедснтоини** возвращает значение false, связанное значение * \* пферроркоде* может быть получено путем вызова **склинсталлереррор**. В следующей таблице перечислены значения * \* пферроркоде* , которые могут быть возвращены **склинсталлереррор** , и объясняется каждый из них в контексте этой функции.  
+ Когда **склвритедснтоини** возвращает значение false, связанное значение *\* пферроркоде* может быть получено путем вызова **склинсталлереррор**. В следующей таблице перечислены значения *\* пферроркоде* , которые могут быть возвращены **склинсталлереррор** , и объясняется каждый из них в контексте этой функции.  
   
 |*\*пферроркоде*|Ошибка|Описание|  
 |---------------------|-----------|-----------------|  

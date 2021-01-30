@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_OACreate
 - sp_OACreate_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: efcdc5094183143d3f45bc5a0174c0bead5381d2
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bd6d44aedf1328234cf51366c3e81bcfb2d6dc94
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541156"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191991"
 ---
 # <a name="sp_oacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  Например, {00026BA1-0000-0000-C000-000000000046} является идентификатором CLSID объекта **SQLServer** SQL-DMO.  
   
- _objecttoken_ **выходные данные** обжекттокен  
+  **выходные данные** обжекттокен  
  Возвращаемый токен объекта, который должен быть локальной переменной типа данных **int**. Этот маркер объекта определяет созданный OLE-объект и используется в вызовах других хранимых процедур OLE-автоматизации.  
   
  *context*  
@@ -78,7 +78,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  Дополнительные сведения о кодах возврата HRESULT см. в разделе [коды возврата OLE Automation и сведения об ошибке](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Если включены процедуры OLE-автоматизации, вызов **sp_OACreate** запустит общую среду выполнения OLE-автоматизации. Дополнительные сведения о включении OLE Automation см. в разделе [параметр конфигурации сервера «процедуры OLE Automation](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)».  
   
  Созданный OLE-объект автоматически уничтожается по завершении пакета инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -123,7 +123,7 @@ END;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранимые процедуры OLE-автоматизации &#40;&#41;Transact — SQL ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [Параметр конфигурации сервера «процедуры OLE Automation»](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)   
  [Пример скрипта OLE-автоматизации](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  

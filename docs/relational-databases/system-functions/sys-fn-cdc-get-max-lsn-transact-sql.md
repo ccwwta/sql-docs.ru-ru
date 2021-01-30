@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.fn_cdc_get_max_lsn
 - fn_cdc_get_max_lsn
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 93f3a4c8-b91f-4ebb-8e96-9397bb3a1c43
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 59613b93de2a086bfd4d0bac7fa0f8a8983d8ce5
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7768843beb46e16f819b5ae3ec6fa16c95d2a2f3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095001"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194451"
 ---
 # <a name="sysfn_cdc_get_max_lsn-transact-sql"></a>sys.fn_cdc_get_max_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ sys.fn_cdc_get_max_lsn ()
 ## <a name="return-types"></a>Типы возвращаемых данных  
  **binary(10)**  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Эта функция возвращает максимальный номер LSN в столбце start_lsn таблицы [CDC.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) . Этот последний номер LSN, обрабатываемый процессом отслеживания, когда изменения передаются в таблицы изменений базы данных. Он служит в качестве верхней конечной точки для любой временной шкалы, связанной с экземплярами отслеживания, определенными для базы данных.  
   
  Эта функция обычно используется, чтобы получить подходящую верхнюю конечную точку для интервала запроса.  

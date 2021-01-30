@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_stored_procedures_TSQL
 - sp_stored_procedures
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 41c28dd8a9dff8c95f6656aace6d80eb8d289e7c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3266b5619701d28a4fc65eb79d3f3e16c75e40b6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541162"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193214"
 ---
 # <a name="sp_stored_procedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 
@@ -56,9 +56,9 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   Схема **dbo** в текущей базе данных.  
   
-`[ @qualifier = ] 'qualifier'` Имя квалификатора процедуры. *квалификатор* имеет тип **sysname**и значение по умолчанию NULL. Различные продукты СУБД поддерживают имена таблиц в формате, состоящие из трех частей (_квалификатор_**.** _схема_**.** _имя_. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *квалификатор* представляет имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, в которой находится таблица.  
+`[ @qualifier = ] 'qualifier'` Имя квалификатора процедуры. *квалификатор* имеет тип **sysname** и значение по умолчанию NULL. Различные продукты СУБД поддерживают имена таблиц в формате, состоящие из трех частей (_квалификатор_**.** _схема_**.** _имя_. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *квалификатор* представляет имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, в которой находится таблица.  
   
-`[ @fUsePattern = ] 'fUsePattern'` Определяет, будут ли символы подчеркивания (_), процента (%) или квадратных скобок []) интерпретироваться как подстановочные знаки. *фусепаттерн* имеет **бит**и значение по умолчанию 1.  
+`[ @fUsePattern = ] 'fUsePattern'` Определяет, будут ли символы подчеркивания (_), процента (%) или квадратных скобок []) интерпретироваться как подстановочные знаки. *фусепаттерн* имеет **бит** и значение по умолчанию 1.  
   
  **0** = сопоставление шаблонов отключено.  
   
@@ -80,12 +80,12 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 |**ЗАМЕЧАНИЯ**|**varchar (254)**|Описание процедуры. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не возвращает значение для этого столбца.|  
 |**PROCEDURE_TYPE**|**smallint**|Тип процедуры. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всегда возвращает 2.0. Значение может быть одним из следующих.<br /><br /> 0 = SQL_PT_UNKNOWN;<br /><br /> 1 = SQL_PT_PROCEDURE;<br /><br /> 2 = SQL_PT_FUNCTION.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Для максимальной совместимости клиент шлюза должен принимать только сопоставление шаблонов стандарта SQL (символы-шаблоны «%» и «_»).  
   
  Сведения о разрешении на выполнение определенной хранимой процедуры для текущего пользователя не обязательно проверяются, поэтому доступ не гарантируется. Обратите внимание, что используются только трехкомпонентные имена. Это означает, что возвращаются только локальные хранимые процедуры, а не удаленные хранимые процедуры (которые используют четырехкомпонентные имена), выполняемые на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если атрибут сервера ACCESSIBLE_SPROC имеет значение Y в результирующем наборе для **sp_server_info**, возвращаются только хранимые процедуры, которые могут быть выполнены текущим пользователем.  
   
- **sp_stored_procedures** эквивалентен **SQLProcedures** в ODBC. Возвращаемые результаты упорядочиваются по **PROCEDURE_QUALIFIER**, **PROCEDURE_OWNER**и **procedure_name**.  
+ **sp_stored_procedures** эквивалентен **SQLProcedures** в ODBC. Возвращаемые результаты упорядочиваются по **PROCEDURE_QUALIFIER**, **PROCEDURE_OWNER** и **procedure_name**.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение SELECT для схемы.  
@@ -110,7 +110,7 @@ GO
 sp_stored_procedures N'uspLogError', N'dbo', N'AdventureWorks2012', 1;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранимые процедуры каталога &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

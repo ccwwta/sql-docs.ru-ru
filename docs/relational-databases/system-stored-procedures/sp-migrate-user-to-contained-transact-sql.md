@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_migrate_user_to_contained
 - sp_migrate_user_to_contained_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: edabb8a59a672c3ebfe04a799df7901b402fb5b3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 81450361252fcdc2d02a9d9e118839db3c5af64c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543207"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195485"
 ---
 # <a name="sp_migrate_user_to_contained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,19 +43,19 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [** @username =** ] **N '***пользователь***'**  
- Имя пользователя в текущей автономной базе данных, сопоставленное с именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], прошедшим проверку подлинности. Аргумент имеет тип **sysname**и значение по умолчанию **null**.  
+ [**@username =** ] **N '**_пользователь_*_'_*  
+ Имя пользователя в текущей автономной базе данных, сопоставленное с именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], прошедшим проверку подлинности. Аргумент имеет тип **sysname** и значение по умолчанию **null**.  
   
- [** @rename =** ] **N '***copy_login_name***'**  |  **N "***keep_name***"**  
+ [**@rename =** ] **N '**_copy_login_name_*_'_*  |  **N "**_keep_name_*_"_*  
  Если пользователь базы данных, основанный на имени входа, имеет имя, отличное от имени входа, используйте *keep_name* , чтобы во время миграции имя пользователя базы данных сохранялось. Используйте *copy_login_name* , чтобы создать нового пользователя автономной базы данных с именем входа, а не пользователя. Если пользователь базы данных, созданный на основе имени входа, имеет имя, совпадающее с именем входа, то в обоих вариантах будет создан пользователь автономной базы данных без изменения имени.  
   
- [** @disablelogin =** ] **N '***disable_login***'**  |  **N "***do_not_disable_login***"**  
+ [**@disablelogin =** ] **N '**_disable_login_*_'_*  |  **N "**_do_not_disable_login_*_"_*  
  *disable_login* отключает имя входа в базе данных master. Чтобы подключиться, если имя входа отключено, соединение должно предоставить имя автономной базы данных в качестве **первоначального каталога** в строке подключения.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_migrate_user_to_contained** создает пользователя автономной базы данных с паролем независимо от свойств или разрешений имени входа. Например, процедура может быть выполнена, если имя входа отключено или если пользователю отказано **в** доступе к базе данных.  
   
  **sp_migrate_user_to_contained** имеет следующие ограничения.  

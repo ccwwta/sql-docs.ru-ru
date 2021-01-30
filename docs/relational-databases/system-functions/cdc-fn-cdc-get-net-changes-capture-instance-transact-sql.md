@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 7dee462b6b4a66b61d790bb06673d36f0907ef73
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 1b16d1da947970652be4879880ce1cfccf7ca796
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099711"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99196205"
 ---
 # <a name="cdcfn_cdc_get_net_changes_ltcapture_instancegt-transact-sql"></a>&lt;capture_instance CDC.fn_cdc_get_net_changes_ &gt; (TRANSACT-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -66,7 +66,7 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  *<row_filter_option>* :: = {все | все с маской | все с помощью Merge}  
  Параметр, управляющий содержимым столбцов метаданных, а также строк, возвращаемых в результирующем наборе. Может быть одним из следующих:  
   
- все  
+ all  
  Возвращает номер LSN последнего изменения в строке и операцию, необходимую для применения строки в столбцах метаданных __ $ start_lsn и \_ \_ $Operation. Столбец \_ \_ $Update _Mask всегда имеет значение null.  
   
  all with mask  
@@ -89,7 +89,7 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 ## <a name="permissions"></a>Разрешения  
  Необходимо членство в предопределенной роли сервера sysadmin или предопределенной роли базы данных db_owner. Всем остальным пользователям необходимо разрешение SELECT для всех отслеживаемых столбцов в исходной таблице. Кроме того, если для экземпляра отслеживания была определена шлюзовая роль, требуется членство в этой роли базы данных. Если вызывающий объект не располагает разрешением на просмотр исходных данных, функция возвращает ошибку 208 (недопустимое имя объекта).  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Если указанный диапазон номеров LSN выходит за пределы временной шкалы для отслеживания изменений в экземпляре отслеживания, функция возвращает ошибку 208 (недопустимое имя объекта).
 
  Изменения в уникальном идентификаторе строки приведут к тому, что в fn_cdc_get_net_changes будет отображаться команда начального обновления с помощью команды DELETE, а затем вставить.  Это поведение необходимо для отслеживания ключа как до, так и после изменения.

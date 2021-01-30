@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - syspolicy_policies_TSQL
 - syspolicy_policies
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: aecf35bb-187e-4f80-870f-48081b88974e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e56ab498d2502bcb7130ab2406a390d8bbd1055a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8547fa15c966e6835c0b100e628217bc0281991e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419808"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192986"
 ---
 # <a name="syspolicy_policies-transact-sql"></a>syspolicy_policies (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,13 +50,13 @@ ms.locfileid: "88419808"
 |modified_by|**sysname**|Имя пользователя, изменившего эту политику последним. Содержит значение NULL, если изменений не было.|  
 |date_modified|**datetime**|Дата и время создания политики. Содержит значение NULL, если изменений не было.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  При устранении неполадок управления на основе политик запросите представление [syspolicy_conditions](../../relational-databases/system-catalog-views/syspolicy-conditions-transact-sql.md) , чтобы определить, включена ли политика. В этом представлении также содержатся сведения о создателе политики и о том, кто ее последний раз изменял.  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в роли PolicyAdministratorRole базы данных msdb.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [Административные представления на основе политик (Transact-SQL)](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   

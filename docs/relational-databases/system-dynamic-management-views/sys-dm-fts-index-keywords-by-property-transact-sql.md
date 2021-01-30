@@ -1,12 +1,12 @@
 ---
 description: sys.dm_fts_index_keywords_by_property (Transact-SQL)
-title: sys. dm_fts_index_keywords_by_property (Transact-SQL) | Документация Майкрософт
+title: sys.dm_fts_index_keywords_by_property (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_fts_index_keywords_by_property
 - dm_fts_index_keywords_by_property_TSQL
@@ -22,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: fa41e052-a79a-4194-9b1a-2885f7828500
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: bcb2864644941786244b19f0a3aa08dc25f7dca6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9052c7d64ab78c2e6eca1388ed08903365b6e129
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447586"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99196259"
 ---
 # <a name="sysdm_fts_index_keywords_by_property-transact-sql"></a>sys.dm_fts_index_keywords_by_property (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает данные, связанные со свойством, в полнотекстовом индексе данной таблицы. Сюда включаются все данные, принадлежащие любому свойству, зарегистрированному списком свойств поиска, связанным с этим полнотекстовым индексом.  
   
- sys. dm_fts_index_keywords_by_property — это функция динамического управления, позволяющая видеть, какие зарегистрированные свойства были выданы фильтрами IFilter во время индексирования, а также точное содержимое каждого свойства в каждом индексированном документе.  
+ sys.dm_fts_index_keywords_by_property — это функция динамического управления, позволяющая видеть, какие зарегистрированные свойства были выданы фильтрами IFilter во время индексирования, а также точное содержимое каждого свойства в каждом индексированном документе.  
   
  **Просмотр всего содержимого на уровне документов (включая содержимое, связанное со свойством)**  
   
@@ -60,7 +60,7 @@ OBJECT_ID('table_name')
   
 ## <a name="arguments"></a>Аргументы  
  db_id ("*database_name*")  
- Вызов функции [DB_ID ()](../../t-sql/functions/db-id-transact-sql.md) . Эта функция принимает имя базы данных и возвращает идентификатор базы данных, который sys. dm_fts_index_keywords_by_property использует для поиска указанной базы данных. Если аргумент *database_name* не указан, возвращается идентификатор текущей базы данных.  
+ Вызов функции [DB_ID ()](../../t-sql/functions/db-id-transact-sql.md) . Эта функция принимает имя базы данных и возвращает идентификатор базы данных, который sys.dm_fts_index_keywords_by_property использует для поиска указанной базы данных. Если аргумент *database_name* не указан, возвращается идентификатор текущей базы данных.  
   
  object_id ("*table_name*")  
  Вызов функции [object_id ()](../../t-sql/functions/object-id-transact-sql.md) . Эта функция принимает имя таблицы и возвращает идентификатор таблицы, содержащей полнотекстовый индекс для проверки.  
@@ -75,7 +75,7 @@ OBJECT_ID('table_name')
 |document_id|**int**|Идентификатор документа или строки, содержащей текущий термин, индексированный полнотекстовым индексом. Данный идентификатор соответствует значению полнотекстового ключа этого документа или строки.|  
 |property_id|**int**|Внутренний идентификатор свойства свойства поиска в полнотекстовом индексе таблицы, указанной в параметре OBJECT_ID ("*table_name*").<br /><br /> После добавления свойства к списку свойств поиска механизм полнотекстового поиска регистрирует это свойство и назначает ему внутренний идентификатор свойства, относящийся к указанному списку свойств. Внутренний идентификатор свойства, являющийся целым числом, не повторяется в заданном списке свойств поиска. Если данное свойство зарегистрировано в нескольких списках свойств поиска, каждому списку свойств поиска может быть назначен отдельный внутренний идентификатор свойств.<br /><br /> Примечание. идентификатор внутреннего свойства отличается от целочисленного идентификатора свойства, указанного при добавлении свойства в список свойств поиска. Дополнительные сведения см. в статье [Поиск свойств документа с использованием списков свойств поиска](../../relational-databases/search/search-document-properties-with-search-property-lists.md).<br /><br /> Для просмотра связи между property_id и именем свойства:<br />                    [sys.registered_search_properties (Transact-SQL)](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Динамическое административное представление может давать ответы на вопросы. Например:  
   
 -   Какое содержимое хранится в данном свойстве данного DocID?  
@@ -110,7 +110,7 @@ GO
  Необходимо разрешение CREATE FULLTEXT CATALOG, а также разрешение SELECT на столбцы, включенные в полнотекстовый индекс.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере производится возвращение ключевых слов из свойства `Author` полнотекстового индекса для таблицы `Production.Document` в образце базы данных `AdventureWorks`. В примере используется псевдоним `KWBPOP` для таблицы, возвращаемой **sys. dm_fts_index_keywords_by_property**. В примере используются внутренние объединения для объединения столбцов из [sys. registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) и [sys. fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
+ В следующем примере производится возвращение ключевых слов из свойства `Author` полнотекстового индекса для таблицы `Production.Document` в образце базы данных `AdventureWorks`. В примере используется псевдоним `KWBPOP` для таблицы, возвращаемой **sys.dm_fts_index_keywords_by_property**. В примере используются внутренние объединения для объединения столбцов из [sys.registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) и [sys.fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
 ```  
 -- Once the full-text index is configured to support property searching  
@@ -133,12 +133,12 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [Компонент Full-text Search](../../relational-databases/search/full-text-search.md)   
- [Повышение производительности полнотекстовых индексов](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)   
+ [Повышение производительности индексов Full-Text](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)   
  [sp_fulltext_keymappings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)   
- [sys. dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)   
- [sys. dm_fts_index_keywords &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   
- [sys. registered_search_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   
- [sys. registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
+ [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)   
+ [sys.dm_fts_index_keywords &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   
+ [sys.registered_search_properties (Transact-SQL)](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   
+ [sys.registered_search_property_lists (Transact-SQL)](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
  [Поиск свойств документа с помощью списков свойств поиска](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
   

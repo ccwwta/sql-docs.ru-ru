@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_jobschedule
 - sp_delete_jobschedule_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 82fbb48b-603a-4016-a7fb-1ce17fb76919
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 89687d99aa2a8d020b64e9bedb1fcc4e10fc5364
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c06030d2cc646dd269a0b3cb6bf564ce9248c9de
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541851"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195513"
 ---
 # <a name="sp_delete_jobschedule-transact-sql"></a>sp_delete_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "89541851"
  **sp_delete_jobschedule** предоставляется только для обратной совместимости.  
   
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Расписанием задач теперь можно управлять независимо от них самих. Чтобы удалить расписание из задания, используйте **sp_detach_schedule**. Чтобы удалить расписание, используйте **sp_delete_schedule**.  
   
 > **Примечание. sp_delete_jobschedule** не поддерживает расписания, присоединенные к нескольким заданиям. Если существующий скрипт вызывает **sp_delete_jobschedule** для удаления расписания, присоединенного к нескольким заданиям, процедура возвращает ошибку.  
@@ -51,7 +51,7 @@ ms.locfileid: "89541851"
   
  Члены роли **sysadmin** могут удалять любые расписания заданий. Пользователи, не являющиеся членами роли **sysadmin** , могут удалять только те расписания заданий, которыми они владеют.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_detach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
  [Просмотр или изменение заданий](../../ssms/agent/view-or-modify-jobs.md)   

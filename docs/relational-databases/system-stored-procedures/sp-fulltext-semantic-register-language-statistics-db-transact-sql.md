@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_fulltext_semantic_register_language_statistics_db
 - sp_fulltext_semantic_register_language_statistics_db_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bef1b104-5a44-4327-9ae4-45eae3000f7e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: deb1973dcff95f79d70ca3f458c38208db3b1f47
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dba0092fdad469c7ce8d762cfd16efcf5f75d6ef
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548050"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193545"
 ---
 # <a name="sp_fulltext_semantic_register_language_statistics_db-transact-sql"></a>sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,13 +44,13 @@ GO
   
 ##  <a name="arguments"></a><a name="Arguments"></a> Аргументы  
  [ @dbname =] "*database_name*"  
- Имя базы данных семантической статистики языка, регистрируемой в текущем экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. База данных должна быть уже присоединена. Аргумент *database_name* имеет тип **sysname**и не может иметь значение null.  
+ Имя базы данных семантической статистики языка, регистрируемой в текущем экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. База данных должна быть уже присоединена. Аргумент *database_name* имеет тип **sysname** и не может иметь значение null.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-set"></a>Результирующий набор  
- Отсутствует.  
+ Нет.  
   
 ## <a name="general-remarks"></a>Общие замечания  
  База данных семантической статистики языка содержит статистическую информацию, связанную с языком и необходимую для семантической обработки текстового содержимого.  
@@ -74,7 +74,7 @@ GO
  Дополнительные сведения см. в разделе [Установка и настройка семантического поиска](../../relational-databases/search/install-and-configure-semantic-search.md).  
   
 ## <a name="metadata"></a>Метаданные  
- Для получения сведений о Семантическая статистика языка базе данных, установленной на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , запросите представление каталога [sys. Fulltext_semantic_language_statistics_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md).  
+ Чтобы получить сведения о базе данных Семантическая статистика языка, установленной на экземпляре служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , запросите представление каталога [sys.fulltext_semantic_language_statistics_database &#40;&#41;TRANSACT-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md).  
   
 ## <a name="security"></a>Безопасность  
   

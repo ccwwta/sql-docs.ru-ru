@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropmessage_TSQL
 - sp_dropmessage
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cb4480908dc508fb82e591b2a9dbab448f951961
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 41971224ec830b1fbc17fdc8f754d7ae99e8731e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536529"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99197634"
 ---
 # <a name="sp_dropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,9 +41,9 @@ sp_dropmessage [ @msgnum = ] message_number
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @msgnum = ] message_number` Номер сообщения для удаления. *message_number* должно быть определяемым пользователем сообщением, имеющим номер сообщения, превышающий 50000. *message_number* имеет **тип int**и значение по умолчанию NULL.  
+`[ @msgnum = ] message_number` Номер сообщения для удаления. *message_number* должно быть определяемым пользователем сообщением, имеющим номер сообщения, превышающий 50000. *message_number* имеет **тип int** и значение по умолчанию NULL.  
   
-`[ @lang = ] 'language'` Язык сообщения для удаления. Если указано значение **ALL** , то все языковые версии *message_number* удаляются. *Language* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @lang = ] 'language'` Язык сообщения для удаления. Если указано значение **ALL** , то все языковые версии *message_number* удаляются. *Language* имеет тип **sysname** и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -54,8 +54,8 @@ sp_dropmessage [ @msgnum = ] message_number
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в предопределенных ролях сервера **sysadmin** и **serveradmin** .  
   
-## <a name="remarks"></a>Примечания  
- Если для *языка*не указано значение **ALL** , все локализованные версии сообщения должны быть удалены до тех пор, пока не будет удалена версия сообщения для английского языка (США).  
+## <a name="remarks"></a>Замечания  
+ Если для *языка* не указано значение **ALL** , все локализованные версии сообщения должны быть удалены до тех пор, пока не будет удалена версия сообщения для английского языка (США).  
   
 ## <a name="examples"></a>Примеры  
   
@@ -131,7 +131,7 @@ EXEC sp_dropmessage
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [sp_addmessage (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
  [sp_altermessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   

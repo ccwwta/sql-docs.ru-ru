@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_enumeratependingschemachanges
 - sp_enumeratependingschemachanges_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5ccc1959644d5f286907abc2240245d88978b55c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7a75e22f94688d4d8819b22b1b478bd3a3a66ce1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541796"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193570"
 ---
 # <a name="sp_enumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 `[ @starting_schemaversion = ] starting_schemaversion` Наименьшее число изменений схемы, которое необходимо включить в результирующий набор.  
   
@@ -57,7 +57,7 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_enumeratependingschemachanges** используется в репликации слиянием.  
   
  **sp_enumeratependingschemachanges**, используемый с [sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md), предназначен для поддержки репликации слиянием и должен использоваться только в том случае, если другие корректирующие действия, такие как повторная инициализация, не могли исправить ситуацию.  

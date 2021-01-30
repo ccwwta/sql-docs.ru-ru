@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.objects_TSQL
 - objects
@@ -23,12 +23,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d674f5fe00eab61d73720ff35ab7e4a96a8d5113
-ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
+ms.openlocfilehash: f6d73a9e561e686ab3c106db1fd2ebe9e356fc63
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98813323"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191309"
 ---
 # <a name="sysobjects-transact-sql"></a>sys.objects (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "98813323"
 |is_published|**bit**|Объект опубликован.|  
 |is_schema_published|**bit**|Опубликована только схема объекта.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  К объектам, отображаемым в представлении sys. Objects, можно применить встроенные функции [object_id](../../t-sql/functions/object-id-transact-sql.md), [object_name](../../t-sql/functions/object-name-transact-sql.md)и [OBJECTPROPERTY](../../t-sql/functions/objectproperty-transact-sql.md)().  
   
  Существует версия этого представления с той же схемой, которая называется [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md), которая показывает системные объекты. Существует другое представление, именуемое [sys.all_objects](../../relational-databases/system-catalog-views/sys-all-objects-transact-sql.md) , которое показывает как системные, так и пользовательские объекты. Все три представления каталогов имеют одну и ту же структуру.  

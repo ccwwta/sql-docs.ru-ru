@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syspolicy_add_policy_category_subscription
 - sp_syspolicy_add_policy_category_subscription_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4284f550-9a3f-4726-8181-15e407fbf08f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ba22b7025aa30216d94804440fec2c86eea5fc09
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 279cec943ce0e93556442c3ec29c2139764e078c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485692"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195967"
 ---
 # <a name="sp_syspolicy_add_policy_category_subscription-transact-sql"></a>sp_syspolicy_add_policy_category_subscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,18 +45,18 @@ sp_syspolicy_add_policy_category_subscription [ @target_type = ] 'target_type'
 ## <a name="arguments"></a>Аргументы  
 `[ @target_type = ] 'target_type'` Тип целевого объекта подписки на категорию. Аргумент *target_type* имеет тип **sysname**, является обязательным и должен иметь значение "Database".  
   
-`[ @target_object = ] 'target_object'` Имя базы данных, которая будет подписываться на категорию. Аргумент *target_object* имеет тип **sysname**и является обязательным.  
+`[ @target_object = ] 'target_object'` Имя базы данных, которая будет подписываться на категорию. Аргумент *target_object* имеет тип **sysname** и является обязательным.  
   
-`[ @policy_category = ] 'policy_category'` Имя категории политики для подписки. Аргумент *policy_category* имеет тип **sysname**и является обязательным.  
+`[ @policy_category = ] 'policy_category'` Имя категории политики для подписки. Аргумент *policy_category* имеет тип **sysname** и является обязательным.  
   
  Чтобы получить значения для *policy_category*, запросите msdb.dbo.syspolicy_policy_categories системное представление.  
   
-`[ @policy_category_subscription_id = ] policy_category_subscription_id` Идентификатор подписки на категорию. *policy_category_subscription_id* имеет **тип int**и возвращается в виде выходных данных.  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id` Идентификатор подписки на категорию. *policy_category_subscription_id* имеет **тип int** и возвращается в виде выходных данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Процедура sp_syspolicy_add_policy_category_subscription должна выполняться в контексте системной базы данных msdb.  
   
  Если указать несуществующую категорию политики, то во время выполнения хранимой процедуры будет создана новая категория политики и подписка будет обязательной для всех баз данных. Если затем очистить обязательную подписку для новой категории, то подписка будет применяться только к базе данных, указанной в аргументе *target_object*. Дополнительные сведения об изменении параметра обязательной подписки см. в разделе [sp_syspolicy_update_policy_category (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-transact-sql.md).  
@@ -75,7 +75,7 @@ EXEC msdb.dbo.sp_syspolicy_add_policy_category_subscription @target_type = N'DAT
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранимые процедуры управления на основе политик &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_update_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)   
  [sp_syspolicy_unsubscribe_from_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-unsubscribe-from-policy-category-transact-sql.md)  

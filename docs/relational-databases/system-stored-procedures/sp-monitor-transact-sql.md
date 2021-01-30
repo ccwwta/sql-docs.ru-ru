@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_monitor_TSQL
 - sp_monitor
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f214abb7b20c42ec62f1bc35d85222e0033798d1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f046c3e6fe81c7dac489fcdd88237ecb2d3747d0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544761"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195471"
 ---
 # <a name="sp_monitor-transact-sql"></a>Хранимая процедура sp_monitor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,10 +60,10 @@ sp_monitor
 |**total_errors**|Количество ошибок, с которыми столкнулся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] во время чтения и записи.|  
 |**соединение**|Количество входов или попыток входа в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью набора функций отслеживает объем проделанной работы. При выполнении **sp_monitor** отображаются текущие значения, возвращаемые этими функциями, и показывается, насколько они изменились с момента последнего выполнения процедуры.  
   
- Для каждого столбца Статистика распечатывается в форме *номер*(*номер*) —*номер*% или *номер*(*число*). Первое *число* обозначает количество секунд (для **CPU_BUSY**, **io_busy**и **бездействие**) или общее число (для других переменных) с момента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перезапуска. *Число* в круглых скобках обозначает количество секунд или общее число с момента последнего выполнения **sp_monitor** . Процентное значение — это процент времени, прошедших с момента последнего запуска **sp_monitor** . Например, если в отчете отображается **CPU_BUSY** как 4250 (215) — 68%, цп занят 4250 секунд с момента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] последнего запуска, 215 секунды с момента последнего запуска **sp_monitor** и 68 процента от общего времени с момента **sp_monitor** последнего запуска.  
+ Для каждого столбца Статистика распечатывается в форме *номер*(*номер*) —*номер*% или *номер*(*число*). Первое *число* обозначает количество секунд (для **CPU_BUSY**, **io_busy** и **бездействие**) или общее число (для других переменных) с момента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перезапуска. *Число* в круглых скобках обозначает количество секунд или общее число с момента последнего выполнения **sp_monitor** . Процентное значение — это процент времени, прошедших с момента последнего запуска **sp_monitor** . Например, если в отчете отображается **CPU_BUSY** как 4250 (215) — 68%, цп занят 4250 секунд с момента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] последнего запуска, 215 секунды с момента последнего запуска **sp_monitor** и 68 процента от общего времени с момента **sp_monitor** последнего запуска.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо членство в предопределенной роли сервера **sysadmin** .  
@@ -96,7 +96,7 @@ total_read     total_write   total_errors    connections
 141(0)         54920(127)    0(0)            4(0)
 ```
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

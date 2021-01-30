@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CONTAINSTABLE
 - CONTAINSTABLE_TSQL
@@ -34,12 +34,12 @@ ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8222058b5e26dd8e2d1c932705889ec0ee6d68c6
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0884b34e2da3eaa6a081da8bebaae06f4d16ddc7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482523"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99196146"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -145,7 +145,7 @@ CONTAINSTABLE
  <contains_search_condition>  
  Текст, который необходимо найти в столбце *column_name*, и условия соответствия. Дополнительные сведения об условиях поиска см. в разделе [CONTAINS &#40;&#41;Transact-SQL ](../../t-sql/queries/contains-transact-sql.md).  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Полнотекстовые предикаты и функции работают в одной таблице, что следует из наличия предиката FROM. Для поиска в нескольких таблицах используйте в предложении FROM соединенную таблицу, чтобы выполнять поиск в результирующем наборе, который получен в результате соединения нескольких таблиц.  
   
  Возвращаемая таблица содержит столбец с именем **Key** , содержащий значения полнотекстовых ключей. Каждая таблица с полнотекстовым индексом содержит столбец, значения которого гарантированно уникальны, а значения, возвращаемые в **ключевом** столбце, являются значениями полнотекстового ключа строк, соответствующих условию выбора, указанному в условии поиска CONTAINS. Свойство **TableFulltextKeyColumn** , полученное из функции OBJECTPROPERTYEX, предоставляет идентификатор этого уникального ключевого столбца. Чтобы получить идентификатор столбца, связанного с полнотекстовым ключом полнотекстового индекса, используйте **sys.fulltext_indexes**. Дополнительные сведения см. в разделе [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  

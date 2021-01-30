@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_exec_sessions_TSQL
 - sys.dm_exec_sessions
@@ -21,12 +21,12 @@ ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 49f04a21e95c0cc7a63b97fd9fd4add1729b25a7
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c9cfe8d7d41a56b216fdb5598173ac252ca989a1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099005"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192962"
 ---
 # <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -98,7 +98,7 @@ ms.locfileid: "98099005"
 **[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] :** Требуется `VIEW DATABASE STATE` для просмотра всех подключений к текущей базе данных. `VIEW DATABASE STATE` не может быть предоставлено в `master` базе данных. 
   
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Если включен параметр конфигурации сервера « **стандартные условия соответствия** », статистика входа отображается в следующих столбцах.  
   
 -   last_successful_logon  
@@ -115,7 +115,7 @@ ms.locfileid: "98099005"
   
 ## <a name="relationship-cardinalities"></a>Количество элементов связей  
   
-|От|Кому|Подключить/Применить|Relationship|  
+|От|Кому|Подключить/Применить|Связь|  
 |----------|--------|---------------|------------------|  
 |sys.dm_exec_sessions|[sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|session_id|Один к нулю или один ко многим.|  
 |sys.dm_exec_sessions|[sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)|session_id|Один к нулю или один ко многим.|  

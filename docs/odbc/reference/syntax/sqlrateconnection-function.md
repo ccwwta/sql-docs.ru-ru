@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQLRateConnection function [ODBC]
 ms.assetid: e8da2ffb-d6ef-4ca7-824f-57afd29585d8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cc6b217e8d9e06c4ab011d15cfe016dfefc91d76
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 40aec3459e43d2684bd80f0ced55171314551d92
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487125"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192551"
 ---
 # <a name="sqlrateconnection-function"></a>Функция SQLRateConnection
 **Соответствия**  
@@ -53,7 +53,7 @@ SQLRETURN  SQLRateConnection(
  Входной Если *фрекуиредтрансактионенлистмент* имеет значение true, *ТрансИд* представляет транзакцию DTC, которую будет прикреплять запрос. Если *фрекуиредтрансактионенлистмент* имеет значение false, *ТрансИд* будет игнорироваться.  
   
  *пратинг*  
- Проверки Оценка повторного использования *хкандидатеконнектион*для *хрекуест*. Эта оценка будет находиться в диапазоне от 0 до 100 (включительно).  
+ Проверки Оценка повторного использования *хкандидатеконнектион* для *хрекуест*. Эта оценка будет находиться в диапазоне от 0 до 100 (включительно).  
   
 ## <a name="returns"></a>Возвращаемое значение  
  SQL_SUCCESS, SQL_ERROR или SQL_INVALID_HANDLE.  
@@ -61,7 +61,7 @@ SQLRETURN  SQLRateConnection(
 ## <a name="diagnostics"></a>Диагностика  
  Диспетчер драйверов не будет обрабатывать диагностические данные, возвращаемые этой функцией.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **Склратеконнектион** Возвращает оценку от 0 до 100 (включительно), указывая, насколько хорошо существующее соединение соответствует запросу.  
   
 |Оценка|Значение (при возвращении SQL_SUCCESS)|  

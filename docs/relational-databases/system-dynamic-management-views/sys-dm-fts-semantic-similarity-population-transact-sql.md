@@ -1,11 +1,11 @@
 ---
 description: sys.dm_fts_semantic_similarity_population (Transact-SQL)
-title: sys. dm_fts_semantic_similarity_population (Transact-SQL) | Документация Майкрософт
+title: sys.dm_fts_semantic_similarity_population (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_fts_semantic_similarity_population_TSQL
 - sys.dm_fts_semantic_similarity_population
@@ -19,23 +19,23 @@ ms.assetid: 33666f28-c370-47e2-a932-190316ed5f69
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 2857896ffefb5591482a44051081aa1034f3fee0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c031c0794dc541d0363edb8e0c1102bc885882d4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88398490"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99196247"
 ---
 # <a name="sysdm_fts_semantic_similarity_population-transact-sql"></a>sys.dm_fts_semantic_similarity_population (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает по одной строке сведений о состоянии заполнения индекса подобия документов для каждого индекса подобия в каждой таблице, имеющей связанный семантический индекс.  
   
- Шаг заполнения следует за шагом извлечения. Сведения о состоянии шага извлечения подобия см. в разделе [sys. dm_fts_index_population &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md).  
+ Шаг заполнения следует за шагом извлечения. Сведения о состоянии шага извлечения подобия см. в разделе [sys.dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md).  
     
 ||||  
 |-|-|-|  
-|**Имя столбца**|**Тип**|**Описание**|  
+|**Имя столбца**|**Type**|**Описание**|  
 |**database_id**|**int**|Идентификатор базы данных, в которой содержится заполняемый полнотекстовый индекс.|  
 |**catalog_id**|**int**|Идентификатор полнотекстового каталога, в котором содержится полнотекстовый индекс.|  
 |**table_id**|**int**|Идентификатор таблицы, в которой содержится заполняемый полнотекстовый индекс.|  
@@ -53,7 +53,7 @@ ms.locfileid: "88398490"
  Дополнительные сведения см. в разделе [Управление семантическим поиском и наблюдение за](../../relational-databases/search/manage-and-monitor-semantic-search.md)ним.  
   
 ## <a name="metadata"></a>Метаданные  
- Дополнительные сведения о состоянии семантического индексирования см. в статье [sys. dm_fts_index_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md).  
+ Для получения дополнительных сведений о состоянии семантического индексирования [sys.dm_fts_index_population запросов &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md).  
   
 ## <a name="security"></a>Безопасность  
   
@@ -68,7 +68,7 @@ SELECT * FROM sys.dm_fts_semantic_similarity_population;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Управление и наблюдение за семантическим поиском](../../relational-databases/search/manage-and-monitor-semantic-search.md)  
   
   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_copysubscription
 - sp_copysubscription_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e4a80092356c6508c7ef1f8408d5573c8014fdc0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b7377048df6d32715b8f91e26b5b21617c22a0d1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89528169"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192016"
 ---
 # <a name="sp_copysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -48,12 +48,12 @@ sp_copysubscription [ @filename = ] 'file_name'
   
 `[ @temp_dir = ] 'temp_dir'` Имя каталога, содержащего временные файлы. *temp_dir* имеет тип **nvarchar (260)** и значение по умолчанию NULL. Если значение равно NULL, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет использоваться каталог данных по умолчанию. Каталог должен включать достаточно свободного места для хранения файла с размером, равным суммарному размеру всех файлов баз данных подписчика.  
   
-`[ @overwrite_existing_file = ] 'overwrite_existing_file'`Необязательный логический флаг, указывающий, следует ли перезаписывать существующий файл с тем же именем, указанным в поле ** \@ filename**. *overwrite_existing_file*имеет **бит**и значение по умолчанию **0**. Если значение равно **1**, то файл, указанный параметром ** \@ filename**, перезаписывается, если он существует. Если значение **равно 0**, хранимая процедура завершается ошибкой, если файл существует, а файл не перезаписывается.  
+`[ @overwrite_existing_file = ] 'overwrite_existing_file'`Необязательный логический флаг, указывающий, следует ли перезаписывать существующий файл с тем же именем, указанным в поле **\@ filename**. *overwrite_existing_file* имеет **бит** и значение по умолчанию **0**. Если значение равно **1**, то файл, указанный параметром **\@ filename**, перезаписывается, если он существует. Если значение **равно 0**, хранимая процедура завершается ошибкой, если файл существует, а файл не перезаписывается.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_copysubscription** используется во всех типах репликации для копирования базы данных подписки в файл в качестве альтернативы применению моментального снимка на подписчике. База данных должна быть настроена так, чтобы она поддерживала только подписки по запросу. Пользователи, имеющие необходимые разрешения, могут создать копии базы данных подписки, после чего отправить файл подписки (MSF-файл) по электронной почте, скопировать его или доставить другому подписчику, где этот файл можно будет подключить как подписку.  
   
  Размер копируемой базы данных подписки должен быть меньше 2 ГБ.  
@@ -63,7 +63,7 @@ sp_copysubscription [ @filename = ] 'file_name'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_copysubscription**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Альтернативные расположения папки моментальных снимков](../../relational-databases/replication/snapshot-options.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

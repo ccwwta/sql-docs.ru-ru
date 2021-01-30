@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_estimate_data_compression_savings_TSQL
 - sp_estimate_data_compression_savings
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4615bc9a30d28224ee3d1ed906a704af923d046d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 938e6994f5d19f59023009cf9806ca62280dc5b9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543514"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193561"
 ---
 # <a name="sp_estimate_data_compression_savings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,10 +63,10 @@ sp_estimate_data_compression_savings
  Имя таблицы или индексированного представления, к которым относится индекс. Аргумент *object_name* имеет тип **sysname**.  
   
  [ @index_id =] *index_id*  
- Идентификатор индекса. *index_id* имеет **тип int**и может принимать одно из следующих значений: идентификационный номер индекса, null или 0, если *object_id* является кучей. Чтобы вернуть данные для всех индексов базовой таблицы или представления, укажите значение NULL. Если указано значение NULL, необходимо также указать значение NULL для *partition_number*.  
+ Идентификатор индекса. *index_id* имеет **тип int** и может принимать одно из следующих значений: идентификационный номер индекса, null или 0, если *object_id* является кучей. Чтобы вернуть данные для всех индексов базовой таблицы или представления, укажите значение NULL. Если указано значение NULL, необходимо также указать значение NULL для *partition_number*.  
   
  [ @partition_number =] *partition_number*  
- Номер секции в объекте. *partition_number* имеет **тип int**и может принимать одно из следующих значений: номер секции индекса или кучи, null или 1 для несекционированного индекса или кучи.  
+ Номер секции в объекте. *partition_number* имеет **тип int** и может принимать одно из следующих значений: номер секции индекса или кучи, null или 1 для несекционированного индекса или кучи.  
   
  Чтобы указать секцию, можно также указать функцию [$Partition](../../t-sql/functions/partition-transact-sql.md) . Чтобы получить сведения обо всех секциях объекта, укажите значение NULL.  
   
@@ -90,7 +90,7 @@ sp_estimate_data_compression_savings
 |sample_size_with_current_compression_setting (КБ)|**bigint**|Размер образца с текущими настройками сжатия. К этим настройкам относится любая фрагментация.|  
 |sample_size_with_requested_compression_setting (КБ)|**bigint**|Размер образца, созданного с использованием запрошенных настроек сжатия, и, если применимо, существующего коэффициента заполнения при отсутствии фрагментации.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Используется `sp_estimate_data_compression_savings` для оценки экономии, которая может возникнуть при включении таблицы или секции для сжатия архива строк, страниц, columnstore или columnstore. Например, если средний размер строки можно уменьшить на 40%, то размер самого объекта также можно потенциально уменьшить на 40%. Но выигрыша можно не получить, поскольку экономия места зависит от коэффициента заполнения и размера строки. Например, если имеется строка размером 8 000 байт и уменьшение ее размера на 40 процентов, можно по-прежнему разместить только одну строку на странице данных. При этом экономия отсутствует.  
   
  Если результаты выполнения хранимой процедуры `sp_estimate_data_compression_savings` показывают, что размер таблицы будет увеличиваться, это означает, что в таблице используется почти полная точность типов данных, а небольшой объем затрат, необходимый для использования сжатого формата, превышает экономию места от самого сжатия. В этом редком случае сжатие включать не следует.  
@@ -110,7 +110,7 @@ sp_estimate_data_compression_savings
  До SQL Server 2019 эта процедура не была применена к индексам columnstore и поэтому не принимает параметры сжатия данных COLUMNSTORE и COLUMNSTORE_ARCHIVE.  Начиная с SQL Server 2019, индексы columnstore можно использовать как в качестве исходного объекта для оценки, так и в качестве требуемого типа сжатия.
 
  > [!IMPORTANT]
- > Если [метаданные tempdb, оптимизированные для памяти](../databases/tempdb-database.md#memory-optimized-tempdb-metadata) , включены в [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] , создание индексов columnstore во временных таблицах не поддерживается. Из-за этого ограничения sp_estimate_data_compression_savings не поддерживаются с параметрами сжатия данных COLUMNSTORE и COLUMNSTORE_ARCHIVE, если включены метаданные TempDB, оптимизированные для памяти.
+ > Если [метаданные tempdb, оптимизированные для памяти](../databases/tempdb-database.md#memory-optimized-tempdb-metadata) , включены в [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] , создание индексов columnstore во временных таблицах не поддерживается. Из-за этого ограничения sp_estimate_data_compression_savings не поддерживает параметры сжатия данных COLUMNSTORE и COLUMNSTORE_ARCHIVE, если включены метаданные Memory-Optimized TempDB.
 
 ## <a name="considerations-for-columnstore-indexes"></a>Рекомендации для индексов columnstore
  Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] , `sp_estimate_compression_savings` поддерживает оценку сжатия архива columnstore и columnstore. В отличие от сжатия страниц и строк, применение сжатия columnstore к объекту требует создания нового индекса columnstore. По этой причине при использовании параметров COLUMNSTORE и COLUMNSTORE_ARCHIVE этой процедуры тип исходного объекта, предоставляемого для процедуры, определяет тип индекса COLUMNSTORE, используемого для оценки сжатого размера. В следующей таблице показаны ссылочные объекты, используемые для оценки сжатия каждого типа исходного объекта, если @data_compression для параметра задано значение COLUMNSTORE или COLUMNSTORE_ARCHIVE.

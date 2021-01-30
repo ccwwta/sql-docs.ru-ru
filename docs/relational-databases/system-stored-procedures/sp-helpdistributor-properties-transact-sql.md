@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helpdistributor_properties_TSQL
 - sp_helpdistributor_properties
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ee267724-3244-49eb-84c9-f38dbefdd639
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 51dc2311b4fffae164d0b1ac789289f1638c3b36
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7229533780107de72f09163745dcfa5fdc858332
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543314"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99197628"
 ---
 # <a name="sp_helpdistributor_properties-transact-sql"></a>Хранимая процедура sp_helpdistributor_properties (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,7 +46,7 @@ sp_helpdistributor_properties
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_helpdistributor_properties** используется со всеми типами репликации.  
   
 ## <a name="permissions"></a>Разрешения  

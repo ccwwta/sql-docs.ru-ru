@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_password
 - sp_password_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f0675634050234b00cadccf63c0f44295a21e56a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f154661d7cd03edfde83dd7774685e73e79aeb69
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481112"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195432"
 ---
 # <a name="sp_password-transact-sql"></a>sp_password (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,9 +45,9 @@ sp_password [ [ @old = ] 'old_password' , ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @old = ] 'old_password'` Старый пароль. Аргумент *old_password* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @old = ] 'old_password'` Старый пароль. Аргумент *old_password* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @new = ] 'new_password'` Новый пароль. Аргумент *new_password* имеет тип **sysname**и не имеет значения по умолчанию. необходимо указать *old_password* , если именованные параметры не используются.  
+`[ @new = ] 'new_password'` Новый пароль. Аргумент *new_password* имеет тип **sysname** и не имеет значения по умолчанию. необходимо указать *old_password* , если именованные параметры не используются.  
   
 > [!IMPORTANT]  
 >  Не используйте пароль со значением NULL. Выбирайте надежные пароли. Дополнительные сведения см. в разделе [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
@@ -57,7 +57,7 @@ sp_password [ [ @old = ] 'old_password' , ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  **sp_password** вызывает инструкцию ALTER LOGIN. Эта инструкция поддерживает дополнительные параметры. Сведения об изменении паролей см. в разделе [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md).  
   
  **sp_password** не может быть выполнена в пользовательской транзакции.  
@@ -88,13 +88,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [ALTER LOGIN (Transact-SQL)](../../t-sql/statements/alter-login-transact-sql.md)   
  [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_addlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [sp_adduser (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
- [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
- [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
+ [Хранимая процедура sp_grantlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
+ [Хранимая процедура sp_revokelogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

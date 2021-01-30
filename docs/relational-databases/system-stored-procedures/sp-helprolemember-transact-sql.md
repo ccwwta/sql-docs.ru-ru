@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helprolemember_TSQL
 - sp_helprolemember
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 42797510-aa5d-4564-85ac-27418419af9c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bbfec9641e543b4774a8d8d6f7a288bd2fe23c8a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 223d0fe0a72ed72f312e1aba5402ee9c14e9db63
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541722"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195090"
 ---
 # <a name="sp_helprolemember-transact-sql"></a>sp_helprolemember (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @rolename = ] ' role '` Имя роли в текущей базе данных. Аргумент *Role* имеет тип **sysname**и значение по умолчанию NULL. *роль* должна существовать в текущей базе данных. Если *роль* не указана, возвращаются все роли, содержащие по крайней мере один член из текущей базы данных.  
+`[ @rolename = ] ' role '` Имя роли в текущей базе данных. Аргумент *Role* имеет тип **sysname** и значение по умолчанию NULL. *роль* должна существовать в текущей базе данных. Если *роль* не указана, возвращаются все роли, содержащие по крайней мере один член из текущей базы данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -53,7 +53,7 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
 |**MemberName**|**sysname**|Имя члена **дброле.**|  
 |**MemberSID**|**varbinary(85)**|Идентификатор безопасности **MemberName.**|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Если база данных содержит вложенные роли, то параметр **MemberName** может быть именем роли. **sp_helprolemember** не показывает членство, полученное с помощью вложенных ролей. Например, если пользователь User1 является членом роли Role1, а роль Role1 — членом роли Role2, `EXEC sp_helprolemember 'Role2'`, происходит возврат роли Role1, но не членов роли Role1 (в этом примере — пользователя User1). Чтобы вернуть вложенные членства, необходимо многократно выполнить **sp_helprolemember** для каждой вложенной роли.  
   
  Используйте **sp_helpsrvrolemember** для вывода членов предопределенной роли сервера.  

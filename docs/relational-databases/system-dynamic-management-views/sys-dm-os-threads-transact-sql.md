@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_os_threads_TSQL
 - sys.dm_os_threads
@@ -21,12 +21,12 @@ ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0163e4176202f4bfe8b55ecca0fe4812ec5d26b
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 91c0b28d2b30cc7e7d5f11eed8fe25f4c4907198
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096509"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193792"
 ---
 # <a name="sysdm_os_threads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,9 +51,9 @@ ms.locfileid: "98096509"
 |stack_bytes_committed|**int**|Число байтов, сохраненных в стеке.|  
 |stack_bytes_used|**int**|Число байтов, используемых потоком в данный момент.|  
 |affinity|**bigint**|Маска ЦП, на которой выполняется данный поток. Это зависит от значения, настроенного инструкцией **ALTER Server Configuration Set Process сходства** . Может отличаться от планировщика в случае мягкой привязки.|  
-|Priority|**int**|Приоритет данного потока.|  
+|Приоритет|**int**|Приоритет данного потока.|  
 |Locale|**int**|Кэшированное значение идентификатора локали (LCID) для данного потока.|  
-|Маркер|**varbinary(8)**|Кэшированный дескриптор токена олицетворения для данного потока.|  
+|Токен|**varbinary(8)**|Кэшированный дескриптор токена олицетворения для данного потока.|  
 |is_impersonating|**int**|Указывает, использует ли данный поток олицетворение Win32:<br /><br /> 1 = поток использует учетные данные для обеспечения безопасности, отличающиеся от данных для процесса по умолчанию. Это значит, что поток олицетворяет сущность, отличную от созданной процессом.|  
 |is_waiting_on_loader_lock|**int**|Состояние операционной системы, указывающее, ожидает ли поток завершения блокировки загрузчика.|  
 |fiber_data|**varbinary(8)**|Текущее волокно Win32, запущенное для потока. Применимо только в случае, если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен для использования упрощенных пулов.|  

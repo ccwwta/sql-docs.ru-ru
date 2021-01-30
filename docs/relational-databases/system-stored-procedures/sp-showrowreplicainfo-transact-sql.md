@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_showrowreplicainfo_TSQL
 - sp_showrowreplicainfo
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5a46fd42c9caa69e808635fc9dcc5125403697a6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f2a66e8e6123adef864ca2beadef31cd4a9cbffe
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543044"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193484"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,13 +41,13 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @ownername = ] 'ownername'` Имя владельца таблицы. *ownerName* имеет тип **sysname**и значение по умолчанию NULL. Этот аргумент полезен для различения таблиц, если база данных содержит несколько таблиц с одним и тем же именем, у каждой из которых свой владелец.  
+`[ @ownername = ] 'ownername'` Имя владельца таблицы. *ownerName* имеет тип **sysname** и значение по умолчанию NULL. Этот аргумент полезен для различения таблиц, если база данных содержит несколько таблиц с одним и тем же именем, у каждой из которых свой владелец.  
   
-`[ @tablename = ] 'tablename'` Имя таблицы, содержащей строку, для которой возвращаются сведения. *TableName* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @tablename = ] 'tablename'` Имя таблицы, содержащей строку, для которой возвращаются сведения. *TableName* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @rowguid = ] rowguid` Уникальный идентификатор строки. *rowguid* имеет тип **uniqueidentifier**и не имеет значения по умолчанию.  
+`[ @rowguid = ] rowguid` Уникальный идентификатор строки. *rowguid* имеет тип **uniqueidentifier** и не имеет значения по умолчанию.  
   
-`[ @show = ] 'show'` Определяет объем данных, возвращаемых в результирующем наборе. параметр *Показывать* имеет тип **nvarchar (20)** и значение по умолчанию. Если **строка**, возвращаются только сведения о версии строки. Если **столбцы**, возвращаются только сведения о версии столбца. Если **оба**значения, возвращаются как сведения о строках, так и о столбцах.  
+`[ @show = ] 'show'` Определяет объем данных, возвращаемых в результирующем наборе. параметр *Показывать* имеет тип **nvarchar (20)** и значение по умолчанию. Если **строка**, возвращаются только сведения о версии строки. Если **столбцы**, возвращаются только сведения о версии столбца. Если **оба** значения, возвращаются как сведения о строках, так и о столбцах.  
   
 ## <a name="result-sets-for-row-information"></a>Результирующие наборы сведений о строках  
   
@@ -75,13 +75,13 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ## <a name="result-set-for-both"></a>Результирующий набор для значения both  
  Если значение **обоих** параметров выбрано для параметра *Показывать*, возвращаются результирующие наборы строк и столбцов.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_showrowreplicainfo** используется в репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  
  **sp_showrowreplicainfo** могут быть выполнены только членами предопределенной роли базы данных **db_owner** в базе данных публикации или членами списка доступа к публикации (PAL) в базе данных публикации.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обнаружение и разрешение конфликтов репликации слиянием](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

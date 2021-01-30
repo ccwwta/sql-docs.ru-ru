@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replmonitorhelppublication_TSQL
 - sp_replmonitorhelppublication
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7928c50c-617f-41c5-9e0f-4e42e8be55dc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 964f32d4158e8159a65a79eac35415c34c35289c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 70f401f52926fc389232b82167a94f9a4ded1e0e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543142"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193752"
 ---
 # <a name="sp_replmonitorhelppublication-transact-sql"></a>sp_replmonitorhelppublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,13 +42,13 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'` Имя издателя, состояние которого отслеживается. параметр *Publisher* имеет тип **sysname**и значение по умолчанию NULL. Если **значение равно NULL**, информация будет возвращена для всех издателей, использующих распространитель.  
+`[ @publisher = ] 'publisher'` Имя издателя, состояние которого отслеживается. параметр *Publisher* имеет тип **sysname** и значение по умолчанию NULL. Если **значение равно NULL**, информация будет возвращена для всех издателей, использующих распространитель.  
   
-`[ @publisher_db = ] 'publisher_db'` Имя опубликованной базы данных. Аргумент *publisher_db* имеет тип **sysname**и значение по умолчанию NULL. Если значение равно NULL, возвращаются сведения для всех баз данных, публикуемых данным издателем.  
+`[ @publisher_db = ] 'publisher_db'` Имя опубликованной базы данных. Аргумент *publisher_db* имеет тип **sysname** и значение по умолчанию NULL. Если значение равно NULL, возвращаются сведения для всех баз данных, публикуемых данным издателем.  
   
-`[ @publication = ] 'publication'` Имя отслеживаемой публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publication = ] 'publication'` Имя отслеживаемой публикации. Аргумент *publication* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @publication_type = ] publication_type` Тип публикации. *publication_type* имеет **тип int**и может принимать одно из следующих значений.  
+`[ @publication_type = ] publication_type` Тип публикации. *publication_type* имеет **тип int** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -90,7 +90,7 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_replmonitorhelppublication** используется со всеми типами репликации.  
   
 ## <a name="permissions"></a>Разрешения  

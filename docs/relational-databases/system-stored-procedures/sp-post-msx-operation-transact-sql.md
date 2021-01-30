@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_post_msx_operation
 - sp_post_msx_operation_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 304eef1c0e707ecb77fb8d13d5e2b524eb9e9e00
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: be9ef622f686044800f634837819b4cba92821a6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546013"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99196042"
 ---
 # <a name="sp_post_msx_operation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,23 +46,23 @@ sp_post_msx_operation
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @operation = ] 'operation'` Тип операции для опубликованной операции. *Операция*имеет тип **varchar (64)** и не имеет значения по умолчанию. Допустимые операции зависят от *object_type*.  
+`[ @operation = ] 'operation'` Тип операции для опубликованной операции. *Операция* имеет тип **varchar (64)** и не имеет значения по умолчанию. Допустимые операции зависят от *object_type*.  
   
 |Тип объекта|Операция|  
 |-----------------|---------------|  
-|**ДОЛЖНО**|INSERT<br /><br /> UPDATE<br /><br /> DELETE<br /><br /> СТАРТ<br /><br /> STOP|  
+|**ДОЛЖНО**|INSERT<br /><br /> UPDATE<br /><br /> DELETE<br /><br /> START<br /><br /> STOP|  
 |**СЕРВЕРОМ**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
 |**Расписание**|INSERT<br /><br /> UPDATE<br /><br /> DELETE|  
   
-`[ @object_type = ] 'object'` Тип объекта, для которого необходимо опубликовать операцию. Допустимые типы: **Job**, **Server**и **Schedule**. *объект* имеет тип **varchar (64)** и значение по умолчанию **Job**.  
+`[ @object_type = ] 'object'` Тип объекта, для которого необходимо опубликовать операцию. Допустимые типы: **Job**, **Server** и **Schedule**. *объект* имеет тип **varchar (64)** и значение по умолчанию **Job**.  
   
-`[ @job_id = ] job_id` Идентификационный номер задания, к которому применяется операция. *job_id* имеет тип **uniqueidentifier**и не имеет значения по умолчанию. **0x00** означает все задания. Если *объект* является **сервером**, *job_id*не требуется.  
+`[ @job_id = ] job_id` Идентификационный номер задания, к которому применяется операция. *job_id* имеет тип **uniqueidentifier** и не имеет значения по умолчанию. **0x00** означает все задания. Если *объект* является **сервером**, *job_id* не требуется.  
   
 `[ @specific_target_server = ] 'target_server'` Имя целевого сервера, к которому применяется указанная операция. Если указан параметр *job_id* , но *target_server* не указаны, операции публикуются для всех серверов заданий задания. *target_server* имеет тип **nvarchar (30)** и значение по умолчанию NULL.  
   
-`[ @value = ] value` Интервал опроса в секундах. Аргумент*value* имеет тип **int**и значение по умолчанию NULL. Этот параметр следует указывать только в том случае, если для параметра *Operation* задано **значение poll**.  
+`[ @value = ] value` Интервал опроса в секундах. Аргумент *value* имеет тип **int** и значение по умолчанию NULL. Этот параметр следует указывать только в том случае, если для параметра *Operation* задано **значение poll**.  
   
-`[ @schedule_uid = ] schedule_uid` Уникальный идентификатор расписания, к которому применяется операция. *schedule_uid* имеет тип **uniqueidentifier**и не имеет значения по умолчанию.  
+`[ @schedule_uid = ] schedule_uid` Уникальный идентификатор расписания, к которому применяется операция. *schedule_uid* имеет тип **uniqueidentifier** и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -73,7 +73,7 @@ sp_post_msx_operation
 ## <a name="remarks"></a>Remarks  
  **sp_post_msx_operation** должны запускаться из базы данных **msdb** .  
   
- **sp_post_msx_operation** всегда можно вызвать безопасно, так как он сначала определяет, является ли текущий сервер агентом многосерверного Microsoft SQL Server и, если да *, это*многосерверное задание.  
+ **sp_post_msx_operation** всегда можно вызвать безопасно, так как он сначала определяет, является ли текущий сервер агентом многосерверного Microsoft SQL Server и, если да *, это* многосерверное задание.  
   
  После публикации операции она появляется в таблице **sysdownloadlist** . После создания и отправки задания все его дальнейшие изменения должны отправляться на целевые серверы (TSX). Для этого необходимо использовать список загрузки.  
   

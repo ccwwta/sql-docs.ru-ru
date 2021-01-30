@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - display size of data types [ODBC]
 - size of data types [ODBC]
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9f7f766f-2492-463c-aab7-f2476e222042
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 747c2076c528df8c312c9b3ed45e45a165299d59
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a39a0f986164cf6bc14e8be6e221232dd936e4bb
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456589"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194877"
 ---
 # <a name="display-size"></a>Отображаемый размер
 Отображаемый размер столбца — это максимальное число символов, необходимых для вывода данных в символьной форме. В следующей таблице определяется размер экрана для каждого типа данных ODBC SQL.  
@@ -39,8 +39,8 @@ ms.locfileid: "88456589"
 |SQL_FLOAT SQL_DOUBLE|24 (знак, 15 цифр, десятичный разделитель, буква *E*, знак и 3 цифры).|  
 |Все двоичные типы [a]|Заданное или максимальное значение (для типов переменных), равное времени для столбца 2. (Каждый двоичный байт представлен четырехзначным шестнадцатеричным числом.)|  
 |SQL_TYPE_DATE|10 (Дата в формате *гггг-мм-дд*).|  
-|SQL_TYPE_TIME|8 (время в формате *чч: мм: СС*)<br /><br /> — или —<br /><br /> 9 + *s* (время в формате *чч: мм: СС*[. FFF...], где *s* — точность доли секунды).|  
-|SQL_TYPE_TIMESTAMP|19 (для отметки времени в формате *гггг-мм-дд чч: мм: СС* )<br /><br /> — или —<br /><br /> 20 + *s* (для отметки времени в формате *гггг-мм-дд чч: мм: СС*[. FFF...], где *s* — точность в долях секунды).|  
+|SQL_TYPE_TIME|8 (время в формате *чч: мм: СС*)<br /><br /> -или-<br /><br /> 9 + *s* (время в формате *чч: мм: СС*[. FFF...], где *s* — точность доли секунды).|  
+|SQL_TYPE_TIMESTAMP|19 (для отметки времени в формате *гггг-мм-дд чч: мм: СС* )<br /><br /> -или-<br /><br /> 20 + *s* (для отметки времени в формате *гггг-мм-дд чч: мм: СС*[. FFF...], где *s* — точность в долях секунды).|  
 |Все типы данных интервала|См. раздел [Длина типа данных интервала](../../../odbc/reference/appendixes/interval-data-type-length.md).|  
 |SQL_GUID|36 (число символов в формате *аааааааа-бббб-КККК-дддд-ииииии*|  
   

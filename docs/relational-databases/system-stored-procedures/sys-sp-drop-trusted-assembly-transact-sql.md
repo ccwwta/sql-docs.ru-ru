@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_drop_trusted_assembly_TSQL
 - sp_drop_trusted_assembly
@@ -21,12 +21,12 @@ ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ff9015d6f7799a8d3d32ccf9fa6ec3f5a739ae5
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 4f9eef43fbd837bdeb675e7ac2a90abba8e57c84
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482324"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191920"
 ---
 # <a name="syssp_drop_trusted_assembly-transact-sql"></a>sys.sp_drop_trusted_assembly (Transact-SQL)  
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -47,7 +47,7 @@ sp_drop_trusted_assembly
 [ @hash =] "*значение*"  
 SHA2_512 значение хэша сборки, которое нужно удалить из списка доверенных сборок для сервера. Доверенные сборки могут загружаться, когда включена строгая безопасность CLR, даже если сборка не подписана или база данных не помечена как заслуживающая доверия.
 
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
 
 Эта процедура удаляет сборку из [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md).
 

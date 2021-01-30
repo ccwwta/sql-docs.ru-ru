@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.internal_tables
 - internal_tables
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: ecc601c3eec509258cdac61a9c9216077f36f712
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 2064e987a92d42422ddfd7ba33104c6f5558e424
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094522"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191395"
 ---
 # <a name="sysinternal_tables-transact-sql"></a>sys.internal_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "98094522"
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Внутренние таблицы размещаются в той же файловой группе, что и родительская сущность. С помощью запроса к каталогу, проиллюстрированного далее в примере Е, можно узнать количество страниц, занимаемых внутренними таблицами под хранение данных «в строке», «вне строки» и данных больших объектов (LOB).  
   
  Для возврата данных об использовании места для внутренних таблиц можно использовать системную процедуру [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) . **sp_spaceused** сообщает внутреннее табличное пространство следующими способами:  

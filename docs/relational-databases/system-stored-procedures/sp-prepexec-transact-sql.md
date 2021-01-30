@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_cursor_prepexec
 - sp_cursor_prepexec_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f9141850-a62b-43bf-8e46-b2f92b75ca56
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c5df94e84c602e03d5ead3e2ce36a29d5d314791
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: df6a482aeca510fde3d89dd74ddafc0ebe713287
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535043"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99196009"
 ---
 # <a name="sp_prepexec-transact-sql"></a>sp_prepexec (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,10 +45,10 @@ sp_prepexec handle OUTPUT, params , stmt
  — Это [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] созданный идентификатор *маркера* . *Handle* является обязательным параметром с возвращаемым значением **int** .  
   
  *params*  
- Указывает параметризованные инструкции. Определение переменных *params* подставляется для маркеров параметров в инструкции. *params* — это обязательный параметр, который вызывает для входного значения **ntext**, **nchar**или **nvarchar** . Если инструкция не параметризована, необходимо ввести значение NULL.  
+ Указывает параметризованные инструкции. Определение переменных *params* подставляется для маркеров параметров в инструкции. *params* — это обязательный параметр, который вызывает для входного значения **ntext**, **nchar** или **nvarchar** . Если инструкция не параметризована, необходимо ввести значение NULL.  
   
  *stmt*  
- Определяет результирующий набор курсора. Параметр *stmt* является обязательным и вызывает для входного значения **ntext**, **nchar**или **nvarchar** .  
+ Определяет результирующий набор курсора. Параметр *stmt* является обязательным и вызывает для входного значения **ntext**, **nchar** или **nvarchar** .  
   
  *bound_param*  
  Означает необязательное использование дополнительных параметров. *bound_param* вызывает входное значение любого типа данных для обозначения дополнительных используемых параметров.  
