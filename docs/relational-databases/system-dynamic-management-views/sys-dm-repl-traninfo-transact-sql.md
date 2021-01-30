@@ -6,7 +6,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_repl_traninfo
 - dm_repl_traninfo
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: f8a0613d83cebfed56ba5202a6c3535ef31c8a84
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: e3c062d6a8aafffc9621a0932e38d9c190877b72
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98098855"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203388"
 ---
 # <a name="sysdm_repl_traninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "98098855"
 |**fsinfo_address**|**varbinary(8)**|Адрес в памяти структуры кэшированных данных о файловых потоках.|  
 |**begin_lsn**|**nvarchar (64)**|Регистрационный номер (LSN) начальной записи транзакции в журнале.|  
 |**commit_lsn**|**nvarchar (64)**|Номер LSN записи в журнале фиксирования транзакции.|  
-|**dbid**|**smallint**|Идентификатор базы данных.|  
+|**DBID**|**smallint**|Идентификатор базы данных.|  
 |**rows**|**int**|Идентификатор реплицированной команды в транзакции.|  
 |**xdesid**|**nvarchar (64)**|Идентификатор транзакции.|  
 |**artcache_table_address**|**varbinary(8)**|Адрес в памяти структуры кэшированной таблицы статьи, использованной в последний раз для данной транзакции.|  
@@ -71,7 +71,7 @@ ms.locfileid: "98098855"
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение VIEW DATABASE STATE на базу данных публикации или базу данных, для которой включена система отслеживания измененных данных.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Сведения возвращаются только для объектов или таблиц реплицированной базы данных, для которых включена система отслеживания измененных данных и которые загружены в данный момент времени в кэш статьи.  
   
 ## <a name="see-also"></a>См. также:  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 840668495c620ca3cb7a403d3775238b12a52ec8
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: f9faf0901643b07420f8627d6afda4b9713d034a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809730"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201761"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>Хранимые процедуры пространственного индекса — аргументы и свойства
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,13 +60,13 @@ ms.locfileid: "91809730"
 `[ @xml_output = ] 'xml_output'` Выходной параметр, возвращающий результирующий набор в XML-фрагменте. *xml_output* имеет **Формат XML** и не имеет значения по умолчанию.  
   
 ## <a name="properties"></a>Свойства  
- Задайте ** \@ verboseoutput** = 0, чтобы возвращать основные свойства, как показано в таблице ниже. ** \@ verboseoutput** > 0, чтобы получить все свойства пространственного индекса.  
+ Задайте **\@ verboseoutput** = 0, чтобы возвращать основные свойства, как показано в таблице ниже. **\@ verboseoutput** > 0, чтобы получить все свойства пространственного индекса.  
   
  **Base_Table_Rows**  
  Количество строк в базовой таблице. Значение равно **bigint**.  
   
  **Bounding_Box_xmin**  
- Свойства ограничивающего прямоугольника по оси X для пространственного индекса типа **Geometry** . Для типа **Geography**значение этого свойства равно null. Значение равно **float**.  
+ Свойства ограничивающего прямоугольника по оси X для пространственного индекса типа **Geometry** . Для типа **Geography** значение этого свойства равно null. Значение равно **float**.  
   
  **Bounding_Box_ymin**  
  Свойства ограничивающего прямоугольника по оси Y для пространственного индекса типа **Geometry** . Для типа **Geography** значение этого свойства равно null. Значение равно **float**.  
@@ -301,7 +301,7 @@ ms.locfileid: "91809730"
 ## <a name="permissions"></a>Разрешения  
  Пользователь должен быть членом роли **Public** . Необходимо разрешение READ ACCESS на сервере и объекте. Это относится ко всем хранимым процедурам пространственного индекса.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Свойства, которые содержат значения NULL, не включаются в набор возвращаемых значений.  
   
 ## <a name="examples"></a>Примеры  

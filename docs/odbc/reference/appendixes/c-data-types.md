@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - data types [ODBC], C data types
 - C data types [ODBC], about C data types
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6dadd93f13418d520c4ab908ba0d9402d07c893a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5dbce167ea65daa030030bd32a909c5af3d06262
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421528"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212461"
 ---
 # <a name="c-data-types"></a>Типы данных C
 Типы данных ODBC C указывают тип данных буферов C, используемых для хранения данных в приложении.  
@@ -109,7 +109,7 @@ struct tagSQL_NUMERIC_STRUCT {
    SQLCHAR precision;  
    SQLSCHAR scale;  
    SQLCHAR sign[g];  
-   SQLCHAR val[SQL_MAX_NUMERIC_LEN];[e], [f]   
+   SQLCHAR val[SQL_MAX_NUMERIC_LEN];[e], [f]   
 } SQL_NUMERIC_STRUCT;  
 ```  
   
@@ -136,9 +136,9 @@ struct tagSQLGUID {
   
  [d] приложения ODBC 3 *. x* должны использовать SQL_C_VARBOOKMARK, а не SQL_C_BOOKMARK. Когда приложение ODBC 3 *. x* работает с ODBC 2. драйвер *x* , диспетчер драйверов ODBC 3 *. x* будет сопоставлять SQL_C_VARBOOKMARK SQL_C_BOOKMARK.  
   
- [e] число хранится в поле *Val* структуры SQL_NUMERIC_STRUCT как масштабируемое целое число, в режиме с прямым порядком байтов (самый левый байт является наименьшим значащим байтом). Например, число 10,001 с основанием 10 и масштабом 4, масштабируется до целого числа 100010. Так как это 186AA в шестнадцатеричном формате, значение в SQL_NUMERIC_STRUCT будет равно "AA 86 01 00 00... 00 ", с числом байтов, определенным **#defineом**SQL_MAX_NUMERIC_LEN.  
+ [e] число хранится в поле *Val* структуры SQL_NUMERIC_STRUCT как масштабируемое целое число, в режиме с прямым порядком байтов (самый левый байт является наименьшим значащим байтом). Например, число 10,001 с основанием 10 и масштабом 4, масштабируется до целого числа 100010. Так как это 186AA в шестнадцатеричном формате, значение в SQL_NUMERIC_STRUCT будет равно "AA 86 01 00 00... 00 ", с числом байтов, определенным **#defineом** SQL_MAX_NUMERIC_LEN.  
   
- Дополнительные сведения о **SQL_NUMERIC_STRUCT**см. [в разделе Практическое руководство. Извлечение числовых данных с помощью SQL_NUMERIC_STRUCT](retrieve-numeric-data-sql-numeric-struct-kb222831.md).  
+ Дополнительные сведения о **SQL_NUMERIC_STRUCT** см. [в разделе Практическое руководство. Извлечение числовых данных с помощью SQL_NUMERIC_STRUCT](retrieve-numeric-data-sql-numeric-struct-kb222831.md).  
   
  [f] поля точности и масштаба SQL_C_NUMERIC типа данных ареусед для ввода из приложения и для вывода из драйвера в приложение. Когда драйвер записывает числовое значение в SQL_NUMERIC_STRUCT, оно будет использовать собственное значение по умолчанию, зависящее от драйвера, в качестве значения для поля *точность* , и будет использовать значения в поле SQL_DESC_SCALE дескриптора приложения (значение по умолчанию — 0) для поля *Scale* . Приложение может предоставлять собственные значения точности и масштаба, устанавливая поля SQL_DESC_PRECISION и SQL_DESC_SCALE дескриптора приложения.  
   

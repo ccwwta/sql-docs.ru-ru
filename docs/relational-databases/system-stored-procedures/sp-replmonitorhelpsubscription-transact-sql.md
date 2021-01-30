@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replmonitorhelpsubscription_TSQL
 - sp_replmonitorhelpsubscription
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dab0e5d4f8f655b0e3140878279a8abca090d262
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 898104516115207bd0cee45bf05f187922c13f6e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543136"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204371"
 ---
 # <a name="sp_replmonitorhelpsubscription-transact-sql"></a>Хранимая процедура sp_replmonitorhelpsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,13 +45,13 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'` Имя издателя, состояние которого отслеживается. параметр *Publisher* имеет тип **sysname**и значение по умолчанию NULL. Если **значение равно NULL**, то возвращаются сведения для всех издателей, использующих распространитель.  
+`[ @publisher = ] 'publisher'` Имя издателя, состояние которого отслеживается. параметр *Publisher* имеет тип **sysname** и значение по умолчанию NULL. Если **значение равно NULL**, то возвращаются сведения для всех издателей, использующих распространитель.  
   
-`[ @publisher_db = ] 'publisher_db'` Имя опубликованной базы данных. Аргумент *publisher_db* имеет тип **sysname**и значение по умолчанию NULL. Если значение равно NULL, возвращаются сведения для всех баз данных, публикуемых данным издателем.  
+`[ @publisher_db = ] 'publisher_db'` Имя опубликованной базы данных. Аргумент *publisher_db* имеет тип **sysname** и значение по умолчанию NULL. Если значение равно NULL, возвращаются сведения для всех баз данных, публикуемых данным издателем.  
   
-`[ @publication = ] 'publication'` Имя отслеживаемой публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publication = ] 'publication'` Имя отслеживаемой публикации. Аргумент *publication* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @publication_type = ] publication_type` Тип публикации. *publication_type* имеет **тип int**и может принимать одно из следующих значений.  
+`[ @publication_type = ] publication_type` Тип публикации. *publication_type* имеет **тип int** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -60,7 +60,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**2**|Публикация слиянием.|  
 |NULL (по умолчанию)|Репликация пытается определить тип публикации.|  
   
-`[ @mode = ] mode` Режим фильтрации, используемый при возврате сведений мониторинга подписки. *mode* имеет **тип int**и может принимать одно из следующих значений.  
+`[ @mode = ] mode` Режим фильтрации, используемый при возврате сведений мониторинга подписки. *mode* имеет **тип int** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -73,7 +73,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**6**|Возвращать подписки, синхронизируемые в данный момент.|  
 |**7**|Возвращать подписки, не синхронизируемые в данный момент.|  
   
-`[ @topnum = ] topnum` Ограничит результирующий набор только указанным числом подписок в верхней части возвращенных данных. *топнум* имеет **тип int**и не имеет значения по умолчанию.  
+`[ @topnum = ] topnum` Ограничит результирующий набор только указанным числом подписок в верхней части возвращенных данных. *топнум* имеет **тип int** и не имеет значения по умолчанию.  
   
 `[ @exclude_anonymous = ] exclude_anonymous` Имеет значение, если анонимные подписки по запросу исключаются из результирующего набора. *exclude_anonymous* имеет **бит**, значение по умолчанию **0**; значение **1** означает, что анонимные подписки исключаются, а значение **0** означает, что они включены.  
   
@@ -90,7 +90,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**publisher_db**|**sysname**|Имя базы данных публикации.|  
 |**публикации**|**sysname**|Имя публикации.|  
 |**publication_type**|**int**|Тип публикации, может принимать одно из следующих значений:<br /><br /> **0** = публикация транзакций<br /><br /> **1** = публикация моментальных снимков<br /><br /> **2** = публикация слиянием|  
-|**subtype**|**int**|Тип подписки может принимать одно из следующих значений:<br /><br /> **0** = принудительная отправка<br /><br /> **1** = по запросу<br /><br /> **2** = анонимный|  
+|**Подтип**|**int**|Тип подписки может принимать одно из следующих значений:<br /><br /> **0** = принудительная отправка<br /><br /> **1** = по запросу<br /><br /> **2** = анонимный|  
 |**явно**|**int**|Наибольшая задержка (в секундах) при изменении данных, зафиксированная для публикации транзакций агентом чтения журнала или агентом распространителя.|  
 |**latencythreshold**|**int**|Максимальная задержка для публикации транзакций, при превышении которой создается предупреждение.|  
 |**agentnotrunning**|**int**|Время в часах, в течение которого агент не был запущен.|  
@@ -117,7 +117,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_replmonitorhelpsubscription** используется со всеми типами репликации.  
   
  **sp_replmonitorhelpsubscription** упорядочивает результирующий набор на основе серьезности состояния подписки, которая определяется значением *мониторранкинг*. Например, строки всех подписок в состоянии ошибки находятся выше строк подписок с предупреждениями.  
@@ -125,7 +125,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли базы данных **db_owner** или **replmonitor** в базе данных распространителя могут выполнять **sp_replmonitorhelpsubscription**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Наблюдение за репликацией программным образом](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

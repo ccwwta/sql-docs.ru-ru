@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQLSetConnectOption function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLSetConnectOption
 ms.assetid: a1b325cf-0c42-41c1-b141-b5a4fee7e708
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6c1f1379bfd2bbc2faccf719d68009ed63b350fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 919220fed87878bf0bcf23359f0714f702f9a6a8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476966"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202662"
 ---
 # <a name="sqlsetconnectoption-mapping"></a>Сопоставление SQLSetConnectOption
 При использовании ODBC 2. Приложение *x* вызывает **SQLSETCONNECTOPTION** через драйвер ODBC 3 *. x* , вызов  
@@ -50,9 +50,9 @@ SQLSetConnectOption(hdbc, fOption, vParam)
   
  В предыдущих трех случаях аргументу *коннектионхандле* присваивается значение в *хдбк*, аргументу *атрибута* присваивается значение в *параметром fOption*, а аргументу *ValuePtr* присваивается то же значение, что и *впарам*.  
   
- Так как диспетчер драйверов не знает, что для атрибута соединения, определяемого драйвером, требуется строка или 32-разрядное целое число, ему необходимо передать допустимое значение *BufferLength* аргумента BufferLength **SQLSetConnectAttr**. Если драйвер определил специальную семантику для атрибутов подключения, определенных драйвером, и должен вызываться с помощью **SQLSetConnectOption**, он должен поддерживать **SQLSetConnectOption**.  
+ Так как диспетчер драйверов не знает, что для атрибута соединения, определяемого драйвером, требуется строка или 32-разрядное целое число, ему необходимо передать допустимое значение  аргумента BufferLength **SQLSetConnectAttr**. Если драйвер определил специальную семантику для атрибутов подключения, определенных драйвером, и должен вызываться с помощью **SQLSetConnectOption**, он должен поддерживать **SQLSetConnectOption**.  
   
- Если ODBC 2. Приложение *x* вызывает **SQLSetConnectOption** , чтобы установить параметр инструкции для конкретного драйвера в драйвере ODBC 3 *. x* , а параметр был определен в ODBC 2. *x* версия драйвера, для параметра в драйвере ODBC 3 *. x* должна быть определена новая константа манифеста. Если в вызове **SQLSetConnectOption**используется старая константа манифеста, диспетчер драйверов выдаст **SQLSetConnectAttr** с аргументом **StringLength** , для которого установлено значение 0.  
+ Если ODBC 2. Приложение *x* вызывает **SQLSetConnectOption** , чтобы установить параметр инструкции для конкретного драйвера в драйвере ODBC 3 *. x* , а параметр был определен в ODBC 2. *x* версия драйвера, для параметра в драйвере ODBC 3 *. x* должна быть определена новая константа манифеста. Если в вызове **SQLSetConnectOption** используется старая константа манифеста, диспетчер драйверов выдаст **SQLSetConnectAttr** с аргументом **StringLength** , для которого установлено значение 0.  
   
  Для драйвера ODBC 3 *. x* диспетчер драйверов больше не проверяет, находится ли *параметром fOption* между SQL_CONN_OPT_MIN и SQL_CONN_OPT_MAX или больше, чем SQL_CONNECT_OPT_DRVR_START.  
   

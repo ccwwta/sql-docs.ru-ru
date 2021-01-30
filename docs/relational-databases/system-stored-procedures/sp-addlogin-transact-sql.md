@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addlogin
 - sp_addlogin_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 585461904b68f26d3ea71e255b24e9ed6d38786a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a85da6cb0e9f0d2a490c802e4d67f8096999f217
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474566"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202402"
 ---
 # <a name="sp_addlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,19 +53,19 @@ sp_addlogin [ @loginame = ] 'login'
   
 ## <a name="arguments"></a>Аргументы  
  [ @loginame =] "*Login*"  
- Имя входа. Аргумент *Login* имеет тип **sysname**и не имеет значения по умолчанию.  
+ Имя входа. Аргумент *Login* имеет тип **sysname** и не имеет значения по умолчанию.  
   
  [ @passwd =] "*пароль*"  
- Пароль имени входа. Аргумент *Password* имеет тип **sysname**и значение по умолчанию NULL.  
+ Пароль имени входа. Аргумент *Password* имеет тип **sysname** и значение по умолчанию NULL.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
  [ @defdb =] "*база данных*"  
- База данных, используемая по умолчанию именем входа (база данных, к которой подключается пользователь с этим именем после входа в систему). Аргумент *Database* имеет тип **sysname**и значение по умолчанию **master**.  
+ База данных, используемая по умолчанию именем входа (база данных, к которой подключается пользователь с этим именем после входа в систему). Аргумент *Database* имеет тип **sysname** и значение по умолчанию **master**.  
   
  [ @deflanguage =] "*язык*"  
- Язык по умолчанию для имени входа. *Language* имеет тип **sysname**и значение по умолчанию NULL. Если *язык* не указан, в качестве *языка* по умолчанию для нового имени входа устанавливается текущий язык по умолчанию сервера.  
+ Язык по умолчанию для имени входа. *Language* имеет тип **sysname** и значение по умолчанию NULL. Если *язык* не указан, в качестве *языка* по умолчанию для нового имени входа устанавливается текущий язык по умолчанию сервера.  
   
  [ @sid =] "*SID*"  
  Идентификатор безопасности (SID). *идентификатор безопасности* имеет тип **varbinary (16)** и значение по умолчанию NULL. Если *SID* имеет значение null, система создает идентификатор безопасности для нового имени входа. Несмотря на использование типа данных **varbinary** , значения, отличные от NULL, должны иметь длину ровно 16 байт и не должны существовать. Указание *идентификатора безопасности* полезно, например, при создании скриптов или при перемещении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имен входа с одного сервера на другой, если имена входа должны иметь одинаковый идентификатор безопасности на разных серверах.  
@@ -82,7 +82,7 @@ sp_addlogin [ @loginame = ] 'login'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут содержать от 1 до 128 символов, включая буквы, символы и цифры. Имена входа не могут содержать обратную косую черту ( \\ ); быть зарезервированным именем для входа, например SA или public или уже существует; либо иметь значение null или быть пустой строкой ( `''` ).  
   
  Если предоставлено имя базы данных по умолчанию, к ней можно подключиться, не выполняя инструкцию USE. Однако нельзя использовать базу данных по умолчанию, пока владелец базы данных не получит доступ к этой базе данных (с помощью [sp_adduser](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md) или [sp_addrolemember](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)) или [sp_addrole](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md).  
@@ -141,9 +141,9 @@ EXEC sp_addlogin 'Michael', 'B548bmM%f6', 'AdventureWorks2012', 'us_english', 0x
   
 ## <a name="see-also"></a>См. также:  
  [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)   
- [sp_droplogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
+ [sp_droplogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
  [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
- [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
+ [Хранимая процедура sp_revokelogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [xp_logininfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
   
   

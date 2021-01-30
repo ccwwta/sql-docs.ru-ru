@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.resource_governor
 - sys.resource_governor_TSQL
@@ -21,12 +21,12 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current
-ms.openlocfilehash: 32082b09a5e583e68f2f06794d80d1d3f21b4e76
-ms.sourcegitcommit: 11ca2305a8d7e420daf772eb97861706c9e08e31
+ms.openlocfilehash: 998777c9a6cbe8a4194997210f1938b09f98df3f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97928443"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203292"
 ---
 # <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)
 
@@ -104,7 +104,7 @@ ms.locfileid: "97928443"
 
 Для этого представления требуется разрешение VIEW SERVER STATE.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Замечания
 
 Пользователи могут получить доступ к этому динамическому административному представлению, чтобы отслеживать потребление ресурсов практически в реальном времени для пула рабочей нагрузки пользователей, а также системных внутренних пулов экземпляра базы данных SQL Azure.
 

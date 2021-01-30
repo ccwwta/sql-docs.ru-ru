@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_refreshview
 - sp_refreshview_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d7cd57443df571183381b6dc15bc8674920fef0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: da179448924381de2dddbf5613194c30df1f01bd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541159"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201268"
 ---
 # <a name="sp_refreshview-transact-sql"></a>sp_refreshview (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,12 +40,12 @@ sp_refreshview [ @viewname = ] 'viewname'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @viewname = ] 'viewname'` Имя представления. *ViewName* имеет тип **nvarchar**и не имеет значения по умолчанию. *ViewName* может быть составным идентификатором, но может ссылаться только на представления в текущей базе данных.  
+`[ @viewname = ] 'viewname'` Имя представления. *ViewName* имеет тип **nvarchar** и не имеет значения по умолчанию. *ViewName* может быть составным идентификатором, но может ссылаться только на представления в текущей базе данных.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или ненулевое значение (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Если представление не создано с параметром SCHEMABINDING, то **sp_refreshview** должны выполняться при внесении изменений в объекты, лежащие в основе представления, влияющие на определение представления. В противном случае результат запроса представления может быть непредвиденным.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -75,7 +75,7 @@ INNER JOIN sys.sql_expression_dependencies AS sed
 WHERE so.type = 'V' AND sed.referenced_id = OBJECT_ID('Person.Person');  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   

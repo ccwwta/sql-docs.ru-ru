@@ -6,19 +6,19 @@ ms.date: 11/26/2019
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: a43ce9a2-5261-41e3-97f0-555ba05ebed9
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: 95e974c7a62722ea63510504d057b2e67370925b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f6685853de3fed6397886d654135bb6ce499e7da
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440733"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203396"
 ---
 # <a name="sysdm_pdw_resource_waits-transact-sql"></a>sys.dm_pdw_resource_waits (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "97440733"
 |wait_id|**bigint**|Расположение запроса в списке ожидания.|порядковый номер, основанный на 0. Оно не является уникальным для всех записей ожидания.|  
 |session_id|**nvarchar(32)**|Идентификатор сеанса, в котором произошло состояние ожидания.|См. session_id в [sys.dm_pdw_exec_sessions &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
 |тип|**nvarchar(255)**|Тип ожидания, который представляет эта запись.|Возможные значения:<br /><br /> Подключение<br /><br /> Параллельные локальные запросы<br /><br /> Параллелизм распределенных запросов<br /><br /> Параллелизм DMS<br /><br /> Параллелизм резервного копирования|  
-|object_type|**nvarchar(255)**|Тип объекта, на который влияет ожидание.|Возможные значения:<br /><br /> **ОБЪЕКТАМИ**<br /><br /> **DATABASE**<br /><br /> **СИСТЕМОЙ**<br /><br /> **SCHEMA**<br /><br /> **ПРИКЛАД**|  
+|object_type|**nvarchar(255)**|Тип объекта, на который влияет ожидание.|Возможные значения:<br /><br /> **ОБЪЕКТАМИ**<br /><br /> **СУБД**<br /><br /> **СИСТЕМОЙ**<br /><br /> **SCHEMA**<br /><br /> **ПРИКЛАД**|  
 |object_name|**nvarchar (386)**|Имя или идентификатор GUID указанного объекта, на который влияет ожидание.|Таблицы и представления отображаются с именами из трех частей.<br /><br /> Индексы и статистика отображаются с именами из четырех частей.<br /><br /> Имена, участники и базы данных являются строковыми именами.|  
 |request_id|**nvarchar(32)**|Идентификатор запроса, для которого произошло состояние ожидания.|Идентификатор Кид запроса.<br /><br /> Идентификатор GUID для запросов загрузки.|  
 |request_time|**datetime**|Время запроса блокировки или ресурса.||  

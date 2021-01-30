@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_validatelogins
 - sp_validatelogins_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6ac52e21-e20d-469b-ad40-5aa091e06b61
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b3237ed7a7d585e128b678772ec6d3a010fe3d00
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 46ed2b0577918630cc9c938047b740618eda45a3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473448"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201844"
 ---
 # <a name="sp_validatelogins-transact-sql"></a>sp_validatelogins (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,10 +46,10 @@ sp_validatelogins
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**ТРАНСЛЯЦИЮ**|**varbinary(85)**|Идентификатор защиты (SID) пользователя или группы Windows.|  
+|**SID**|**varbinary(85)**|Идентификатор защиты (SID) пользователя или группы Windows.|  
 |**NT Login**|**sysname**|Имя пользователя или группы Windows.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Если потерянный участник уровня сервера владеет пользователем базы данных, этот пользователь должен быть удален, прежде чем станет возможным удаление потерянного участника. Чтобы удалить пользователя базы данных, используйте [инструкцию DROP USER](../../t-sql/statements/drop-user-transact-sql.md). Если участник уровня сервера владеет защищаемыми сущностями в базе данных, владение этими сущностями должно быть передано другому участнику или их следует удалить. Чтобы передавать владение защищаемыми объектами базы данных, используйте [инструкцию ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
  Чтобы удалить сопоставления пользователей и групп Windows, которые больше не существуют, используйте [инструкцию DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md).  
@@ -65,9 +65,9 @@ EXEC sp_validatelogins;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [DROP USER (Transact-SQL)](../../t-sql/statements/drop-user-transact-sql.md)   
  [DROP LOGIN &#40;&#41;Transact-SQL ](../../t-sql/statements/drop-login-transact-sql.md)   
  [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md)  

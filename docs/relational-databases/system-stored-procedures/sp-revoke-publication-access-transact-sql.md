@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_revoke_publication_access_TSQL
 - sp_revoke_publication_access
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 84ed9e77-991f-4fa5-a21f-7c6bfec1b3e3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0be8037325faba0cecb0988903677c14260b8a47
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 287f696d9e68cbef8bbe180f287952206ef755bc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446798"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211843"
 ---
 # <a name="sp_revoke_publication_access-transact-sql"></a>sp_revoke_publication_access (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,14 +38,14 @@ sp_revoke_publication_access [ @publication = ] 'publication' , [ @login = ] 'lo
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` Имя публикации, к которой осуществляется доступ. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации, к которой осуществляется доступ. Аргумент *publication* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @login = ] 'login'` Идентификатор входа. Аргумент *Login* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @login = ] 'login'` Идентификатор входа. Аргумент *Login* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **sp_revoke_publication_access** используется в репликации моментальных снимков, транзакций и репликация слиянием.  
   
  **sp_revoke_publication_access** можно вызывать повторно.  

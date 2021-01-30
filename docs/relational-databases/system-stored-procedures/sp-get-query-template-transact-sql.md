@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_get_query_template
 - sp_get_query_template_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 97a6b25d2a0a4d927f060fe8d693cb478b7b2977
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 89e30950c072cbfe5737a65934155276bbf6a27d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543367"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99204782"
 ---
 # <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ sp_get_query_template
  @parameters  
  Является выходным параметром типа **nvarchar (max)**, который указан как указанный, для получения строкового литерала имен параметров и типов данных, которые были параметризованы в @templatetext .  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Процедура sp_get_query_template возвращает ошибку, если:  
   
 -   Он не выполняет параметризацию значений констант литерала в *query_text*.  
@@ -113,7 +113,7 @@ SELECT @my_parameters;
 > [!NOTE]  
 >  Порядок и имена параметров, возвращаемых из процедуры sp_get_query_template, могут измениться при наложении исправлений, пакетов обновлений и обновлениях версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Обновление версии может также стать причиной получения отличающегося набора параметризуемых констант для того же запроса и изменения формата выдачи результатов для обоих выходных параметров.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Указание механизма параметризации запросов с помощью структур плана](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)  

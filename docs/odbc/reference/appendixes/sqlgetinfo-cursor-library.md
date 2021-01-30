@@ -7,26 +7,26 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQLGetInfo function [ODBC], Cursor Library
 ms.assetid: 1b4d220d-2c07-4f56-987e-36813bb1a6ce
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 08fbc40dfc7245e6f72349acc2ac63de8f0838bd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9fc11d16d145a37db4fdc50ad7f9907532fe747c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88339320"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202758"
 ---
 # <a name="sqlgetinfo-cursor-library"></a>SQLGetInfo (библиотека курсоров)
 > [!IMPORTANT]  
 >  Эта функция будет удалена в следующей версии Windows. Избегайте использования этой функции в новых разработках и запланируйте изменение приложений, которые в настоящее время используют эту функцию. Корпорация Майкрософт рекомендует использовать функцию курсора драйвера.  
   
- В этом разделе обсуждается использование функции **SQLGetInfo** в библиотеке курсоров. Общие сведения о **SQLGetInfo**см. в разделе [функция SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).  
+ В этом разделе обсуждается использование функции **SQLGetInfo** в библиотеке курсоров. Общие сведения о **SQLGetInfo** см. в разделе [функция SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).  
   
- Библиотека курсоров возвращает значения для следующих значений *инфотипе* (&#124; представляет БИТОВУЮ операцию OR); для всех остальных значений *инфотипе*вызывается **SQLGetInfo** в драйвере.  
+ Библиотека курсоров возвращает значения для следующих значений *инфотипе* (&#124; представляет БИТОВУЮ операцию OR); для всех остальных значений *инфотипе* вызывается **SQLGetInfo** в драйвере.  
   
 |*инфотипе*|Возвращаемое значение|  
 |----------------|--------------------|  

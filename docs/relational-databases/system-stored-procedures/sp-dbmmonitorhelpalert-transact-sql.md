@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dbmmonitorhelpalert_TSQL
 - sp_dbmmonitorhelpalert
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9483733ddcaca469ea162ff9dba884ef857a9493
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: edcf719e5778ebe7cd2f224c14f53552a2f28325
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548174"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212376"
 ---
 # <a name="sp_dbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +72,7 @@ sp_dbmmonitorhelpalert database_name
 |**threshold**|**int**|Пороговое значение для предупреждения. Если при обновлении состояния зеркального отображения возвращено значение выше данного порога, в журнал событий Windows будет внесена запись. Это значение измеряется в килобайтах, минутах или миллисекундах, в зависимости от типа предупреждения. Если порог в данный момент не установлен, значение принимается равным NULL.<br /><br /> **Примечание.** Чтобы просмотреть текущие значения, выполните хранимую процедуру [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) .|  
 |**доступной**|**bit**|0 = событие отключено.<br /><br /> 1 = событие включено.<br /><br /> **Примечание.** Срок хранения всегда включен.|  
   
-|Значение|Метрика производительности|Единицы|  
+|Значение|Метрика производительности|Unit|  
 |-----------|------------------------|----------|  
 |1|Самая старая неотправленная транзакция|Минуты|  
 |2|Неотправленный журнал|КБ|  

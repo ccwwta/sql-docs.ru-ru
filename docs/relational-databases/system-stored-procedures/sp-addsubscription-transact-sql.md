@@ -7,7 +7,7 @@ ms.prod_service: database-engine
 ms.reviewer: ''
 ms.custom: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_addsubscription
 - sp_addsubscription_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1cf622748da040060681dac848273238f73c66a5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a4bb033d4817fcf08a7816f8c6598802e9ac3f8c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548356"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211955"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -77,19 +77,19 @@ sp_addsubscription [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>Аргументы  
  [ @publication =] "*Публикация*"  
- Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+ Имя публикации. Аргумент *publication* имеет тип **sysname** и не имеет значения по умолчанию.  
   
  [ @article =] "*статья*"  
- Статья, на которую подписана публикация. Аргумент *article* имеет тип **sysname**и значение по умолчанию ALL. Если значение равно ALL, то подписка добавляется ко всем статьям в данной публикации. Издателями Oracle поддерживаются только значения ALL и NULL.  
+ Статья, на которую подписана публикация. Аргумент *article* имеет тип **sysname** и значение по умолчанию ALL. Если значение равно ALL, то подписка добавляется ко всем статьям в данной публикации. Издателями Oracle поддерживаются только значения ALL и NULL.  
   
  [ @subscriber =] '*подписчик*'  
- Имя подписчика. Аргумент *Subscriber* имеет тип **sysname**и значение по умолчанию NULL.  
+ Имя подписчика. Аргумент *Subscriber* имеет тип **sysname** и значение по умолчанию NULL.  
 
 > [!NOTE]
 > Имя сервера можно указать как `<Hostname>,<PortNumber>` . Может потребоваться указать номер порта для подключения, если SQL Server развертывается в Linux или Windows с помощью настраиваемого порта, а служба браузера отключена.
   
  [ @destination_db =] "*destination_db*"  
- Имя целевой базы данных, в которую помещаются реплицированные данные. Аргумент *destination_db* имеет тип **sysname**и значение по умолчанию NULL. Если значение равно NULL, *destination_db* присваивается имя базы данных публикации. Для издателей Oracle *destination_db* должны быть указаны. Для подписчика, не являющегося SQL Server, укажите значение (назначение по умолчанию) для *destination_db*.  
+ Имя целевой базы данных, в которую помещаются реплицированные данные. Аргумент *destination_db* имеет тип **sysname** и значение по умолчанию NULL. Если значение равно NULL, *destination_db* присваивается имя базы данных публикации. Для издателей Oracle *destination_db* должны быть указаны. Для подписчика, не являющегося SQL Server, укажите значение (назначение по умолчанию) для *destination_db*.  
   
  [ @sync_type =] "*sync_type*"  
  Тип синхронизации подписки. *sync_type* имеет тип **nvarchar (255)** и может принимать одно из следующих значений:  
@@ -106,7 +106,7 @@ sp_addsubscription [ @publication = ] 'publication'
 >  Системные таблицы и данные переносятся всегда.  
   
  [ @status =] "*состояние*"  
- Состояние подписки. Аргумент *Status* имеет тип **sysname**и значение по умолчанию NULL. Если этот параметр не задан явно, при репликации ему устанавливается одно из следующих значений.  
+ Состояние подписки. Аргумент *Status* имеет тип **sysname** и значение по умолчанию NULL. Если этот параметр не задан явно, при репликации ему устанавливается одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -137,7 +137,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|Да|Агент распространителя не отправляет транзакции, изначально созданные у подписчика, обратно. Используется с двунаправленной репликацией транзакций. Дополнительные сведения см. в статье [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
+|true|Агент распространителя не отправляет транзакции, изначально созданные у подписчика, обратно. Используется с двунаправленной репликацией транзакций. Дополнительные сведения см. в статье [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
 |false|Агент распространителя отправляет транзакции, изначально созданные у подписчика, обратно.|  
 |NULL (по умолчанию)|Автоматически устанавливается значение true для подписчика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и значение false для подписчика, не относящегося к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
@@ -156,48 +156,48 @@ sp_addsubscription [ @publication = ] 'publication'
 |128|Повторяющееся задание|  
   
  [ @frequency_interval =] *frequency_interval*  
- Значение, применяемое к частоте, установленной *frequency_type*. *frequency_interval* имеет **тип int**и значение по умолчанию NULL.  
+ Значение, применяемое к частоте, установленной *frequency_type*. *frequency_interval* имеет **тип int** и значение по умолчанию NULL.  
   
  [ @frequency_relative_interval =] *frequency_relative_interval*  
- Дата агента распространителя. Этот параметр используется, если *frequency_type* установлен в значение 32 (ежемесячное относительное расписание). *frequency_relative_interval* имеет **тип int**и может принимать одно из следующих значений.  
+ Дата агента распространителя. Этот параметр используется, если *frequency_type* установлен в значение 32 (ежемесячное относительное расписание). *frequency_relative_interval* имеет **тип int** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |1|First|  
-|2|Second|  
+|2|Секунда|  
 |4|Третье|  
 |8|Четвертая|  
 |16|Последний|  
 |NULL (по умолчанию)||  
   
  [ @frequency_recurrence_factor =] *frequency_recurrence_factor*  
- Коэффициент повторения, используемый *frequency_type*. *frequency_recurrence_factor* имеет **тип int**и значение по умолчанию NULL.  
+ Коэффициент повторения, используемый *frequency_type*. *frequency_recurrence_factor* имеет **тип int** и значение по умолчанию NULL.  
   
  [ @frequency_subday =] *frequency_subday*  
- Частота повторного планирования в течение определенного периода, в минутах. *frequency_subday* имеет **тип int**и может принимать одно из следующих значений.  
+ Частота повторного планирования в течение определенного периода, в минутах. *frequency_subday* имеет **тип int** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |1|Однократно|  
-|2|Second|  
+|2|Секунда|  
 |4|Минута|  
 |8|Час|  
 |NULL||  
   
  [ @frequency_subday_interval =] *frequency_subday_interval*  
- Интервал для *frequency_subday*. *frequency_subday_interval* имеет **тип int**и значение по умолчанию NULL.  
+ Интервал для *frequency_subday*. *frequency_subday_interval* имеет **тип int** и значение по умолчанию NULL.  
   
  [ @active_start_time_of_day =] *active_start_time_of_day*  
- Время суток, на которое запланирован первый запуск агента распространителя, в формате ЧЧММСС. *active_start_time_of_day* имеет **тип int**и значение по умолчанию NULL.  
+ Время суток, на которое запланирован первый запуск агента распространителя, в формате ЧЧММСС. *active_start_time_of_day* имеет **тип int** и значение по умолчанию NULL.  
   
  [ @active_end_time_of_day =] *active_end_time_of_day*  
- Время суток, на которое запланирован останов агента распространителя, в формате ЧЧММСС. *active_end_time_of_day* имеет **тип int**и значение по умолчанию NULL.  
+ Время суток, на которое запланирован останов агента распространителя, в формате ЧЧММСС. *active_end_time_of_day* имеет **тип int** и значение по умолчанию NULL.  
   
  [ @active_start_date =] *active_start_date*  
- Дата, когда запланирован первый запуск агента распространителя, в формате ГГГГММДД. *active_start_date* имеет **тип int**и значение по умолчанию NULL.  
+ Дата, когда запланирован первый запуск агента распространителя, в формате ГГГГММДД. *active_start_date* имеет **тип int** и значение по умолчанию NULL.  
   
  [ @active_end_date =] *active_end_date*  
- Дата, когда запланирован останов агента распространителя, в формате ГГГГММДД. *active_end_date* имеет **тип int**и значение по умолчанию NULL.  
+ Дата, когда запланирован останов агента распространителя, в формате ГГГГММДД. *active_end_date* имеет **тип int** и значение по умолчанию NULL.  
   
  [ @optional_command_line =] "*optional_command_line*"  
  Необязательное приглашение к вводу команды. *optional_command_line* имеет тип **nvarchar (4000)** и значение по умолчанию NULL.  
@@ -215,7 +215,7 @@ sp_addsubscription [ @publication = ] 'publication'
 >  Этот аргумент является устаревшим и сохраняется только для поддержки обратной совместимости скриптов.  
   
  [ @offloadserver =] "*remote_agent_server_name*"  
- Указывает сетевое имя сервера, используемого для удаленной активации. Аргумент *remote_agent_server_name*имеет тип **sysname**и значение по умолчанию NULL.  
+ Указывает сетевое имя сервера, используемого для удаленной активации. Аргумент *remote_agent_server_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
  [ @dts_package_name =] "*dts_package_name*"  
  Указывает имя пакета служб DTS. *dts_package_name* имеет тип **sysname** и значение по умолчанию NULL. Например, для задания пакета DTSPub_Package параметр должен быть равен `@dts_package_name = N'DTSPub_Package'`. Этот аргумент доступен для принудительных подписок. Для добавления сведений о пакете служб DTS к подписке по запросу используется процедура sp_addpullsubscription_agent.  
@@ -233,7 +233,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @publisher =] '*Издатель*'  
- Указывает издателя, отличного от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+ Указывает издателя, отличного от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname** и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  для издателя не следует указывать *издателя* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -247,37 +247,37 @@ sp_addsubscription [ @publication = ] 'publication'
 |disk|Устройство резервного копирования является жестким диском.|  
 |tape|Устройство резервного копирования является накопителем на магнитной ленте.|  
   
- *backupdevicetype* используется только в том случае, если *sync_method*имеет значение initialize_with_backup.  
+ *backupdevicetype* используется только в том случае, если *sync_method* имеет значение initialize_with_backup.  
   
  [ @backupdevicename =] '*backupdevicename*'  
  Указывает имя устройства, используемого при инициализации подписчика из резервной копии. *backupdevicename* имеет тип **nvarchar (1000)** и значение по умолчанию NULL.  
   
  [ @mediapassword =] '*MEDIAPASSWORD*'  
- Указывает пароль для набора носителей, если при форматировании носителя был задан пароль. *MEDIAPASSWORD* имеет тип **sysname**и значение по умолчанию NULL.  
+ Указывает пароль для набора носителей, если при форматировании носителя был задан пароль. *MEDIAPASSWORD* имеет тип **sysname** и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
  [ @password =] "*пароль*"  
- Указывает пароль для резервной копии, если при создании резервной копии был задан пароль. Аргумент *Password* имеет тип **sysname**и значение по умолчанию NULL.  
+ Указывает пароль для резервной копии, если при создании резервной копии был задан пароль. Аргумент *Password* имеет тип **sysname** и значение по умолчанию NULL.  
   
  [ @fileidhint =] *fileidhint*  
- Определяет порядковый номер восстанавливаемого резервного набора данных. *fileidhint* имеет **тип int**и значение по умолчанию NULL.  
+ Определяет порядковый номер восстанавливаемого резервного набора данных. *fileidhint* имеет **тип int** и значение по умолчанию NULL.  
   
  [ @unload =] *выгрузить*  
- Определяет, должно ли быть выгружено ленточное устройство резервного копирования после завершения инициализации из резервной копии. *unload* имеет **бит**и значение по умолчанию 1. 1 указывает, что лента должна быть выгружена. *выгрузка* используется, только если *backupdevicetype* является лентой.  
+ Определяет, должно ли быть выгружено ленточное устройство резервного копирования после завершения инициализации из резервной копии. *unload* имеет **бит** и значение по умолчанию 1. 1 указывает, что лента должна быть выгружена. *выгрузка* используется, только если *backupdevicetype* является лентой.  
   
  [ @subscriptionlsn =] *subscriptionlsn*  
  Задает регистрационный номер транзакции в журнале (LSN), начиная с которого подписка должна доставлять изменения на узел в одноранговой топологии репликации транзакций. Используется со @sync_type значением Initialize из LSN, чтобы убедиться, что все соответствующие транзакции реплицируются на новый узел. Дополнительные сведения см. в разделе [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
  [ @subscriptionstreams =] *SubscriptionStreams*  
- Число соединений на каждого агента распространителя для параллельного применения пакетов изменений на подписчике при сохранении многих характеристик транзакций, имеющихся для однопоточного выполнения. *SubscriptionStreams* имеет тип **tinyint**и значение по умолчанию NULL. Поддерживаются значения в диапазоне от 1 до 64. Этот параметр не поддерживается для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков, отличных от, издателей Oracle или одноранговых подписок. При каждом использовании потоков подписки в таблицу msreplication_subscriptions добавляются дополнительные строки (по одной на поток) с параметром agent_id, установленным в значение NULL.  
+ Число соединений на каждого агента распространителя для параллельного применения пакетов изменений на подписчике при сохранении многих характеристик транзакций, имеющихся для однопоточного выполнения. *SubscriptionStreams* имеет тип **tinyint** и значение по умолчанию NULL. Поддерживаются значения в диапазоне от 1 до 64. Этот параметр не поддерживается для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков, отличных от, издателей Oracle или одноранговых подписок. При каждом использовании потоков подписки в таблицу msreplication_subscriptions добавляются дополнительные строки (по одной на поток) с параметром agent_id, установленным в значение NULL.  
   
 > [!NOTE]  
 >  Потоки подписки не работают для статей, настроенных для доставки [!INCLUDE[tsql](../../includes/tsql-md.md)]. Для использования потоков подписки настройте в статьях доставку вызовов хранимых процедур.  
   
  [ @subscriber_type =] *subscriber_type*  
- Тип подписчика. *subscriber_type* имеет тип **tinyint**и может принимать одно из следующих значений.  
+ Тип подписчика. *subscriber_type* имеет тип **tinyint** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -292,7 +292,7 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Процедура sp_addsubscription используется в репликации моментальных снимков и репликации транзакций.  
   
  При выполнении процедуры sp_addsubscription членом предопределенной роли сервера sysadmin для создания принудительной подписки задание агента распространителя явно создается и запускается под учетной записью службы агента SQL Server. Рекомендуется выполнить [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) и указать учетные данные другой учетной записи Windows, зависящей от агента, для @job_login и @job_password . Дополнительные сведения см. в статье [Модель безопасности агента репликации](../../relational-databases/replication/security/replication-agent-security-model.md).  
@@ -311,7 +311,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
  Если подписка не использует пакет служб DTS, она не может подписаться на публикацию, для которой задано значение *allow_transformable_subscriptions*. Если таблицу из публикации нужно реплицировать как в подписку служб DTS, так и в подписку, отличную от подписки служб DTS, необходимо создать две разные публикации: одну для каждого типа подписки.  
   
- При выборе параметров **sync_type***replication support only*, *initialize with backup*или *initialize from lsn*агент чтения журнала необходимо запустить после выполнения процедуры **sp_addsubscription**, чтобы скрипты установки были записаны в базу данных распространителя. Агент чтения журнала должен работать под учетной записью, которая является членом предопределенной роли сервера **sysadmin** . Если параметр **sync_type** установлен в значение *Automatic*, никаких специальных действий агента чтения журнала не требуется.  
+ При выборе параметров **sync_type***replication support only*, *initialize with backup* или *initialize from lsn* агент чтения журнала необходимо запустить после выполнения процедуры **sp_addsubscription**, чтобы скрипты установки были записаны в базу данных распространителя. Агент чтения журнала должен работать под учетной записью, которая является членом предопределенной роли сервера **sysadmin** . Если параметр **sync_type** установлен в значение *Automatic*, никаких специальных действий агента чтения журнала не требуется.  
   
 ## <a name="permissions"></a>Разрешения  
  Процедуру sp_addsubscription могут выполнять только члены предопределенной роли сервера sysadmin или предопределенной роли базы данных db_owner. Для подписок по запросу пользователи, имеющие имена входа в списке доступа к публикации, могут выполнять процедуру sp_addsubscription.  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_spatial_geography_histogram_TSQL
 - sp_help_spatial_geography_histogram
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0c7368b8991fe442cab30b724532e8899502e18f
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 3554c8b385a14f588c4f7f8dd6248ba36ad7b16d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809396"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212066"
 ---
 # <a name="sp_help_spatial_geography_histogram-transact-sql"></a>sp_help_spatial_geography_histogram (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,11 +43,11 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 ## <a name="arguments"></a>Аргументы  
 `[ @tabname = ] 'tabname'` Полное или неполное имя таблицы, для которой был указан пространственный индекс.  
   
- Кавычки требуются, только если определяется уточненная таблица. Если предоставлено полное имя таблицы, включая имя базы данных, в качестве последнего должно использоваться имя текущей базы данных. *табнаме* имеет тип **sysname**и не имеет значения по умолчанию.  
+ Кавычки требуются, только если определяется уточненная таблица. Если предоставлено полное имя таблицы, включая имя базы данных, в качестве последнего должно использоваться имя текущей базы данных. *табнаме* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @colname = ] 'columnname'` Имя указанного пространственного столбца. *ColumnName* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @colname = ] 'columnname'` Имя указанного пространственного столбца. *ColumnName* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @resolution = ] 'resolution'` Разрешение ограничивающего прямоугольника. Допустимые значения: от 10 до 5000. метод *Resolution* имеет тип **tinyint**и не имеет значения по умолчанию.  
+`[ @resolution = ] 'resolution'` Разрешение ограничивающего прямоугольника. Допустимые значения: от 10 до 5000. метод *Resolution* имеет тип **tinyint** и не имеет значения по умолчанию.  
   
 `[ @sample = ] 'sample'` Процент используемой таблицы. Допустимые значения: от 0 до 100. *TABLESAMPLE* — это **float**. По умолчанию установлено значение 100.  
   
@@ -63,7 +63,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Разрешения  
  Пользователь должен быть членом роли **Public** . Необходимо разрешение READ ACCESS на сервере и объекте.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  В пространственной таблице среды SSMS отображается графическое представление результатов. Можно повторно отправить запрос результатов с использованием пространственного окна для определения приблизительного количества элементов результатов.  
   
 > [!NOTE]  

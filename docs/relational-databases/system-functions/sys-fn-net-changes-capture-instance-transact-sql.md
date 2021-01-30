@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.fn_net_changes_TSQL
 - fn_net_changes_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: eb0c58b3544afd5fa529db0c95af7c2f6ba3e6d3
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: fdaa7d3a2f741ba480443a997fe561c4aa5c3a50
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096356"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201906"
 ---
 # <a name="sysfn_net_changes_ltcapture_instancegt-transact-sql"></a>&lt;capture_instance sys.fn_net_changes_ &gt; (TRANSACT-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -75,7 +75,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
  *<row_filter_option>* :: = {все | все с маской | все с помощью Merge}  
  Параметр, управляющий содержимым столбцов метаданных, а также строк, возвращаемых в результирующем наборе. Может быть одним из следующих:  
   
- все  
+ all  
  Возвращает окончательное содержимое измененной строки в столбцах содержимого и операцию, необходимую, чтобы применить строку в столбце метаданных __CDC_OPERATION.  
   
  all with mask  
@@ -100,7 +100,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
 |__CDC_OPERATION|**nvarchar (2)**|Код операции, указывающий операцию, необходимую для применения строки к целевой среде. Операция будет зависеть от значения аргумента, *row_filter_option* , переданного в следующем вызове:<br /><br /> *row_filter_option* = "все", "все с маской"<br /><br /> «D» — операция удаления<br /><br /> «I» — операция вставки<br /><br /> 'UN' — операция обновления<br /><br /> *row_filter_option* = "все с слиянием"<br /><br /> «D» — операция удаления<br /><br /> 'M' — операция вставки либо обновления|  
 |\<columns from @update_flag_list>|**bit**|Битовый флаг, имя которого образуется добавлением _uflag к имени столбца. Флаг принимает значение, не равное NULL, только если *row_filter_option* **= "все с маской"** и \_ _CDC_OPERATION **= "UN"**. Если соответствующий столбец изменялся в окне запроса, флагу присваивается значение 1. В противном случае флагу присваивается значение 0.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Функция fn_net_changes_<capture_instance> служит оболочкой для функции запроса cdc.fn_cdc_get_net_changes_<capture_instance>. Для формирования скрипта, создающего оболочку, используется хранимая процедура sys.sp_cdc_generate_wrapper.  
   
  Функции-оболочки не создаются автоматически. Чтобы создать функции-оболочки, нужно выполнить две операции:  

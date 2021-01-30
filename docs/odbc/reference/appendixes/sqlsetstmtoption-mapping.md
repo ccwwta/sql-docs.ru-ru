@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLSetStmtOption
 - SQLSetStmtOption function [ODBC], mapping
 ms.assetid: 6a9921aa-8a53-4668-9b13-87164062f1e5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f2c4a65ade202003d454988372895ba40fb6eeef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8907de6d6ac80737ba0bb47ca3c6954a482c857f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88424884"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202579"
 ---
 # <a name="sqlsetstmtoption-mapping"></a>Сопоставление SQLSetStmtOption
 Когда приложение вызывает **SQLSetStmtOption** через драйвер ODBC *3. x* , вызов метода  
@@ -50,9 +50,9 @@ SQLSetStmtOption(StatementHandle, fOption, vParam)
   
  В предыдущих трех случаях аргументу **статеменсандле** присваивается значение в *хстмт*, аргументу *атрибута* присваивается значение в *параметром fOption*, а аргументу *ValuePtr* присваивается значение, равное *впарам*.  
   
- Поскольку диспетчер драйверов не знает, требуется ли атрибуту инструкции, определяемому драйвером, строковое или 32-разрядное целое число, оно должно передавать допустимое значение *StringLength* аргумента StringLength **SQLSetStmtAttr**. Если драйвер определил специальную семантику для атрибутов инструкций, определяемых драйвером, и должен вызываться с помощью **SQLSetStmtOption**, он должен поддерживать **SQLSetStmtOption**.  
+ Поскольку диспетчер драйверов не знает, требуется ли атрибуту инструкции, определяемому драйвером, строковое или 32-разрядное целое число, оно должно передавать допустимое значение  аргумента StringLength **SQLSetStmtAttr**. Если драйвер определил специальную семантику для атрибутов инструкций, определяемых драйвером, и должен вызываться с помощью **SQLSetStmtOption**, он должен поддерживать **SQLSetStmtOption**.  
   
- Если приложение вызывает **SQLSetStmtOption** для задания параметра инструкции для конкретного драйвера в драйвере ODBC *3. x* и параметр был определен в версии драйвера ODBC *2. x* , для параметра в драйвере ODBC *3. x* должна быть определена новая константа манифеста. Если в вызове **SQLSetStmtOption**используется старая константа манифеста, диспетчер драйверов выдаст **SQLSetStmtAttr** с аргументом *StringLength* , для которого установлено значение 0.  
+ Если приложение вызывает **SQLSetStmtOption** для задания параметра инструкции для конкретного драйвера в драйвере ODBC *3. x* и параметр был определен в версии драйвера ODBC *2. x* , для параметра в драйвере ODBC *3. x* должна быть определена новая константа манифеста. Если в вызове **SQLSetStmtOption** используется старая константа манифеста, диспетчер драйверов выдаст **SQLSetStmtAttr** с аргументом *StringLength* , для которого установлено значение 0.  
   
  Когда приложение вызывает **SQLSetStmtAttr** , чтобы задать для SQL_ATTR_USE_BOOKMARKS SQL_UB_ON в драйвере ODBC *3. x* , атрибуту инструкции SQL_ATTR_USE_BOOKMARKS присваивается значение SQL_UB_FIXED. SQL_UB_ON — это та же самая константа, что и SQL_UB_FIXED. Диспетчер драйверов передает SQL_UB_FIXED в драйвер. SQL_UB_FIXED не рекомендуется использовать в ODBC *3. x*, но драйвер ODBC *3. x* должен реализовать его для работы с приложениями ODBC *2. x* , использующими закладки фиксированной длины.  
   

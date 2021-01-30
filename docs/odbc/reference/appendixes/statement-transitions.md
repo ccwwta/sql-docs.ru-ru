@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - transitioning states [ODBC], statement
 - state transitions [ODBC], statement
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3d70e0e3-fe83-4b4d-beac-42c82495a05b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3515b1d6aea4cab66bc01ee3d071727e6cb8f447
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7fb43bb8aa7ad9bd71906036a081dac4ec91c794
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88386520"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202546"
 ---
 # <a name="statement-transitions"></a>Переходы инструкций
 Инструкции ODBC имеют следующие состояния.  
@@ -62,7 +62,7 @@ ms.locfileid: "88386520"
   
  [4] в этой строке отображаются переходы, когда *параметром handletype* был SQL_HANDLE_DESC.  
   
- [5] вызов **функцию SQLAllocHandle** с *аутпусандлептр* , указывающим на допустимый маркер, перезаписывает этот обработчик без учета предыдущего содержимого в этот обработчик и может вызвать проблемы с драйверами ODBC. Неправильное программирование приложений ODBC для вызова **функцию SQLAllocHandle** дважды с той же переменной приложения, определенной для * \* Аутпусандлептр* , без вызова **SQLFreeHandle** для освобождения обработчика перед перераспределением. Перезапись дескрипторов ODBC таким образом может привести к несогласованному поведению или ошибкам в части драйверов ODBC.  
+ [5] вызов **функцию SQLAllocHandle** с *аутпусандлептр* , указывающим на допустимый маркер, перезаписывает этот обработчик без учета предыдущего содержимого в этот обработчик и может вызвать проблемы с драйверами ODBC. Неправильное программирование приложений ODBC для вызова **функцию SQLAllocHandle** дважды с той же переменной приложения, определенной для *\* Аутпусандлептр* , без вызова **SQLFreeHandle** для освобождения обработчика перед перераспределением. Перезапись дескрипторов ODBC таким образом может привести к несогласованному поведению или ошибкам в части драйверов ODBC.  
   
 ## <a name="sqlbindcol"></a>SQLBindCol  
   
@@ -108,7 +108,7 @@ ms.locfileid: "88386520"
   
  [4] функция   **SQLSetPos** вернула SQL_NEED_DATA.  
   
- [5]   **SQLFetch**, **SQLFetchScroll**или **SQLExtendedFetch** не были вызваны.  
+ [5]   **SQLFetch**, **SQLFetchScroll** или **SQLExtendedFetch** не были вызваны.  
   
  были вызваны [6]   **SQLFetch** или **SQLFetchScroll** .  
   

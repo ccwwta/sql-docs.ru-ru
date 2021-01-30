@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_db_vardecimal_storage_format
 - sp_db_vardecimal_storage_format_TSQL
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4c521931a96701101c7db2eac8027dc0223b53f3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: aad29b6722f748051f085f10a25a38b59e6ae424
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543580"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201286"
 ---
 # <a name="sp_db_vardecimal_storage_format-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
   
 ## <a name="arguments"></a>Аргументы  
  [ @dbname =] "*database_name*"  
- Имя базы данных, формат хранения которой нужно изменить. Аргумент *database_name* имеет тип **sysname**и не имеет значения по умолчанию. Если имя базы данных пропущено, то возвращаются состояния формата хранения vardecimal для всех баз данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Имя базы данных, формат хранения которой нужно изменить. Аргумент *database_name* имеет тип **sysname** и не имеет значения по умолчанию. Если имя базы данных пропущено, то возвращаются состояния формата хранения vardecimal для всех баз данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [ @vardecimal_storage_format =] {' На ' | ' OFF "}  
  Указывает, включен ли формат хранения vardecimal. Аргумент @vardecimal_storage_format может иметь значение ON или OFF. Параметр имеет тип **varchar (3)** и не имеет значения по умолчанию. Если имя базы данных указано, но аргумент @vardecimal_storage_format пропущен, то возвращается текущий параметр указанной базы данных. Этот аргумент не действует в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздних версиях.  
@@ -62,7 +62,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
   
  Если @vardecimal_storage_format аргумент не указан, возвращает имя базы данных Columns и состояние vardecimal.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Процедура sp_db_vardecimal_storage_format возвращает состояние vardecimal, но не может изменить его.  
   
  Хранимая процедура sp_db_vardecimal_storage_format завершается неуспешно в следующих случаях:  
@@ -109,7 +109,7 @@ EXEC sp_tableoption 'Sales.SalesOrderDetail', 'vardecimal storage format', 1 ;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

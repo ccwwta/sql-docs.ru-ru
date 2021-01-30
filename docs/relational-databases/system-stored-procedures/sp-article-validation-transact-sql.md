@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_article_validation_TSQL
 - sp_article_validation
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 111b11b9563373f972ba6d30338e67075f992bed
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1b2dda5e359b062716c9c0fead89b4ad2628488a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536746"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203232"
 ---
 # <a name="sp_article_validation-transact-sql"></a>sp_article_validation (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -45,11 +45,11 @@ sp_article_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` Имя публикации, в которой находится статья. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации, в которой находится статья. Аргумент *publication* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @article = ] 'article'` Имя статьи для проверки. Аргумент *article* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @article = ] 'article'` Имя статьи для проверки. Аргумент *article* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @rowcount_only = ] type_of_check_requested` Указывает, возвращается ли только количество строк для таблицы. *type_of_check_requested* имеет значение **smallint**и значение по умолчанию **1**.  
+`[ @rowcount_only = ] type_of_check_requested` Указывает, возвращается ли только количество строк для таблицы. *type_of_check_requested* имеет значение **smallint** и значение по умолчанию **1**.  
   
  Если значение **равно 0**, то необходимо выполнить [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] контрольную сумму количества строк и 7,0.  
   
@@ -57,7 +57,7 @@ sp_article_validation [ @publication = ] 'publication'
   
  Если значение равно **2**, то выполняется проверка количества строк и двоичной контрольной суммы.  
   
-`[ @full_or_fast = ] full_or_fast` Метод, используемый для вычисления количества строк. *full_or_fast* имеет тип **tinyint**и может принимать одно из следующих значений.  
+`[ @full_or_fast = ] full_or_fast` Метод, используемый для вычисления количества строк. *full_or_fast* имеет тип **tinyint** и может принимать одно из следующих значений.  
   
 |**Значение**|**Описание**|  
 |---------------|---------------------|  
@@ -65,13 +65,13 @@ sp_article_validation [ @publication = ] 'publication'
 |**1**|Выполняет быстрое подсчет из **sysindexes. Rows**. Подсчет строк в **sysindexes** выполняется быстрее, чем подсчет строк в реальной таблице. Однако **sysindexes** обновляется с отложенным обновлением, и количество строк может быть неточным.|  
 |**2** (по умолчанию)|Выполняет условный быстрый подсчет, при котором сначала применяется быстрый метод, Если быстрый метод дает неточные результаты, переключается на полный подсчет. Если *expected_rowcount* имеет значение NULL и хранимая процедура используется для получения значения, всегда используется полный счетчик (*).|  
   
-`[ @shutdown_agent = ] shutdown_agent` Указывает, должен ли агент распространителя немедленно завершить работу после завершения проверки. *shutdown_agent* имеет **бит**и значение по умолчанию **0**. Если значение **равно 0**, агент распространения не завершает работу. Если значение равно **1**, агент распространения завершает работу после проверки статьи.  
+`[ @shutdown_agent = ] shutdown_agent` Указывает, должен ли агент распространителя немедленно завершить работу после завершения проверки. *shutdown_agent* имеет **бит** и значение по умолчанию **0**. Если значение **равно 0**, агент распространения не завершает работу. Если значение равно **1**, агент распространения завершает работу после проверки статьи.  
   
-`[ @subscription_level = ] subscription_level` Указывает, выбрана ли проверка набором подписчиков. *subscription_level* имеет **бит**и значение по умолчанию **0**. Если значение **равно 0**, то проверка применяется ко всем подписчикам. Если значение равно **1**, проверка применяется только к подмножеству подписчиков, указанных в вызовах метода **sp_marksubscriptionvalidation** в текущей открытой транзакции.  
+`[ @subscription_level = ] subscription_level` Указывает, выбрана ли проверка набором подписчиков. *subscription_level* имеет **бит** и значение по умолчанию **0**. Если значение **равно 0**, то проверка применяется ко всем подписчикам. Если значение равно **1**, проверка применяется только к подмножеству подписчиков, указанных в вызовах метода **sp_marksubscriptionvalidation** в текущей открытой транзакции.  
   
 `[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @publisher = ] 'publisher'` Указывает издателя, отличного от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'` Указывает издателя, отличного от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname** и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  *Издатель* не должен использоваться при запросе проверки на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателе.  
@@ -79,15 +79,15 @@ sp_article_validation [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_article_validation** используется в репликации транзакций.  
   
  **sp_article_validation** приводит к сбору сведений о проверке в указанной статье и отправляет запрос проверки в журнал транзакций. Когда агент распространителя получает этот запрос, он сравнивает сведения для проверки, указанные в запросе, с таблицей подписчика. Результаты проверки отображаются в мониторе репликации и в виде предупреждений агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="permissions"></a>Разрешения  
- **Sp_article_validation**могут выполняться только пользователи, имеющие разрешения SELECT ALL на исходную таблицу для проверяемой статьи.  
+ **Sp_article_validation** могут выполняться только пользователи, имеющие разрешения SELECT ALL на исходную таблицу для проверяемой статьи.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Проверка реплицированных данных](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)   
  [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   

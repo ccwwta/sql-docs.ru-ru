@@ -1,12 +1,12 @@
 ---
-title: sys. dm_db_rda_schema_update_status (Transact-SQL) | Документация Майкрософт
-description: Узнайте, как sys. dm_db_rda_schema_update_status содержит строку для каждой задачи обновления схемы для архива удаленных данных каждой таблицы с поддержкой Stretch в базе данных.
+title: sys.dm_db_rda_schema_update_status (Transact-SQL) | Документация Майкрософт
+description: Узнайте, как sys.dm_db_rda_schema_update_status содержит строку для каждой задачи обновления схемы для архива удаленных данных каждой таблицы с поддержкой растяжения в базе данных.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: stored-procedures
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_db_rda_schema_update_status
 - sys.dm_db_rda_schema_update_status_TSQL
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 364e3caa-a7c6-4be5-a029-0b19da34de3e
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 313eb868a49507b96e31bcd1966165175bf96f0a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 955f06ba0a7ad991ffe979fc927dfabe6e5a8dd0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243795"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202414"
 ---
-# <a name="stretch-database---sysdm_db_rda_schema_update_status"></a>Stretch Database-sys. dm_db_rda_schema_update_status
+# <a name="stretch-database---sysdm_db_rda_schema_update_status"></a>Stretch Database sys.dm_db_rda_schema_update_status
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Содержит по одной строке для каждой задачи обновления схемы для архива удаленных данных каждой таблицы с поддержкой растяжения в текущей базе данных. Задачи идентифицируются по идентификаторам задач.  

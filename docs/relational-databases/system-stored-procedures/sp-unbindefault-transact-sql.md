@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_unbindefault_TSQL
 - sp_unbindefault
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b8a0ee77c73c6edcee17d6baad363c6c02eb52c3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ecc8a6c7a012a36da4deeacf8b4e66e6096c8227
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543013"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202346"
 ---
 # <a name="sp_unbindefault-transact-sql"></a>Хранимая процедура sp_unbindefault (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +56,7 @@ sp_unbindefault [ @objname = ] 'object_name'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Чтобы отобразить текст значения по умолчанию, выполните **sp_helptext** с именем по умолчанию в качестве параметра.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -100,7 +100,7 @@ EXEC sp_bindefault 'default2', '[t.3].c1' ;
 EXEC sp_unbindefault '[t.3].c1';  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE DEFAULT (Transact-SQL)](../../t-sql/statements/create-default-transact-sql.md)   

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_apply_job_to_targets
 - sp_apply_job_to_targets_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a164569a5a62e24dabe0d47839eaa084b32e2efa
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f9fdc4cffdbe21d1c6c502aa813db55e0444d696
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89529065"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203240"
 ---
 # <a name="sp_apply_job_to_targets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,23 +43,23 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_id = ] job_id` Идентификационный номер задания, применяемого к указанным целевым серверам или группам целевых серверов. *job_id* имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
+`[ @job_id = ] job_id` Идентификационный номер задания, применяемого к указанным целевым серверам или группам целевых серверов. *job_id* имеет тип **uniqueidentifier** и значение по умолчанию NULL.  
   
-`[ @job_name = ] 'job_name'` Имя задания, применяемого к указанным целевым серверам или группам целевых серверов. Аргумент *job_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` Имя задания, применяемого к указанным целевым серверам или группам целевых серверов. Аргумент *job_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения.  
   
 `[ @target_server_groups = ] 'target_server_groups'` Разделенный запятыми список групп целевых серверов, к которым должно применяться указанное задание. *target_server_groups* имеет тип **nvarchar (2048)** и значение по умолчанию NULL.  
   
-`[ @target_servers = ] 'target_servers'` Разделенный запятыми список целевых серверов, к которым будет применено указанное задание. *target_servers*имеет тип **nvarchar (2048)** и значение по умолчанию NULL.  
+`[ @target_servers = ] 'target_servers'` Разделенный запятыми список целевых серверов, к которым будет применено указанное задание. *target_servers* имеет тип **nvarchar (2048)** и значение по умолчанию NULL.  
   
-`[ @operation = ] 'operation'` Указывает, должно ли указанное задание быть применено или удалено из указанных целевых серверов или групп целевых серверов. *Операция*имеет тип **varchar (7)** и значение по умолчанию Apply. Допустимые операции: **Apply** и **Remove**.  
+`[ @operation = ] 'operation'` Указывает, должно ли указанное задание быть применено или удалено из указанных целевых серверов или групп целевых серверов. *Операция* имеет тип **varchar (7)** и значение по умолчанию Apply. Допустимые операции: **Apply** и **Remove**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_apply_job_to_targets** предоставляет простой способ применения (или удаления) задания с нескольких целевых серверов и является альтернативой вызову **sp_add_jobserver** (или **sp_delete_jobserver**) один раз для каждого требуемого целевого сервера.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -79,7 +79,7 @@ EXEC dbo.sp_apply_job_to_targets
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_add_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql.md)   
  [sp_delete_jobserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
  [sp_remove_job_from_targets &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remove-job-from-targets-transact-sql.md)   

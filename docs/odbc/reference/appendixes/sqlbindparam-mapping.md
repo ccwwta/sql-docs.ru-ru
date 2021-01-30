@@ -7,24 +7,24 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQLBindparam function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLBindParam
 ms.assetid: 375f8f24-36de-4946-916e-c75abc6f070d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f998fd30716e479cb4dd0650af53c5a24483f2f5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 62951dc5ae69e86eb5cbc2fba21407d63952e74b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456465"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202935"
 ---
 # <a name="sqlbindparam-mapping"></a>Сопоставление SQLBindParam
 **Склбиндпарам** нельзя выключать как устаревший, так как он никогда не СУЩЕСТВОВАЛ в ODBC; Однако он по-прежнему представляет собой дублирующуюся функциональность. диспетчеру драйверов необходимо экспортировать его, так как ISO и открытые приложения, соответствующие группам, будут использовать его. Поскольку **SQLBindParameter** содержит все функции **склбиндпарам**, **Склбиндпарам** будет сопоставляться с **SQLBindParameter** (если базовый драйвер является драйвером ODBC *3. x* ). Драйверу ODBC *3. x* не требуется реализовывать **склбиндпарам**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  При следующем вызове **склбиндпарам** :  
   
 ```  

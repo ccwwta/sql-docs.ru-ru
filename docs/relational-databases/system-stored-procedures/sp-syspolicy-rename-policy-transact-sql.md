@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syspolicy_rename_policy_TSQL
 - sp_syspolicy_rename_policy
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ce2b07f5-23b1-4f49-8e7b-c18cf3f3d45b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 782128b1d41f94c63f4e9de22e618378c4ec6e6a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 962e15744221175abd5732df7fe4e29d7b924ae0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481030"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211834"
 ---
 # <a name="sp_syspolicy_rename_policy-transact-sql"></a>sp_syspolicy_rename_policy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,16 +42,16 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @name = ] 'name'` — Имя политики, которую необходимо переименовать. Аргумент *Name* имеет тип **sysname**и должен быть указан, если *policy_id* имеет значение null.  
+`[ @name = ] 'name'` — Имя политики, которую необходимо переименовать. Аргумент *Name* имеет тип **sysname** и должен быть указан, если *policy_id* имеет значение null.  
   
-`[ @policy_id = ] policy_id` Идентификатор политики, которую необходимо переименовать. *policy_id* имеет **тип int**и должен быть указан, если *Name* имеет значение null.  
+`[ @policy_id = ] policy_id` Идентификатор политики, которую необходимо переименовать. *policy_id* имеет **тип int** и должен быть указан, если *Name* имеет значение null.  
   
-`[ @new_name = ] 'new_name'` Новое имя политики. Аргумент *new_name* имеет тип **sysname**и является обязательным. Не может быть пустой строкой и не может принимать значение NULL.  
+`[ @new_name = ] 'new_name'` Новое имя политики. Аргумент *new_name* имеет тип **sysname** и является обязательным. Не может быть пустой строкой и не может принимать значение NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Процедура sp_syspolicy_rename_policy должна выполняться в контексте системной базы данных msdb.  
   
  Необходимо указать значение для *имени* или *policy_id*. Они не могут одновременно иметь значения NULL. Чтобы получить эти значения, запросите системное представление msdb.dbo.syspolicy_policies.  
@@ -72,7 +72,7 @@ EXEC msdb.dbo.sp_syspolicy_rename_policy @name = N'Test Policy 1'
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранимые процедуры управления на основе политик &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
   
   

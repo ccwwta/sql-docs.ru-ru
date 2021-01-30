@@ -7,24 +7,24 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQLGetStmtAttr function [ODBC], Cursor Library
 ms.assetid: 6c34e1ef-4273-4afb-a7d3-f9017ab69c5e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1181347636bd687dcf9ac32d48e14134fef808d9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 19f40228dea31ccd3c3491aa522877464983870b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88411130"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202735"
 ---
 # <a name="sqlgetstmtattr-cursor-library"></a>SQLGetStmtAttr (библиотека курсоров)
 > [!IMPORTANT]  
 >  Эта функция будет удалена в следующей версии Windows. Избегайте использования этой функции в новых разработках и запланируйте изменение приложений, которые в настоящее время используют эту функцию. Корпорация Майкрософт рекомендует использовать функцию курсора драйвера.  
   
- В этом разделе обсуждается использование функции **SQLGetStmtAttr** в библиотеке курсоров. Общие сведения о **SQLGetStmtAttr**см. в разделе [функция SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md).  
+ В этом разделе обсуждается использование функции **SQLGetStmtAttr** в библиотеке курсоров. Общие сведения о **SQLGetStmtAttr** см. в разделе [функция SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md).  
   
  Библиотека курсоров поддерживает следующие атрибуты инструкции с **SQLGetStmtAttr**:  
 

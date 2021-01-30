@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_datatype_info_TSQL
 - sp_datatype_info
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ff2af6626004412a028777634269c6dc13e4fa8c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 22d01167f9dbe1a268dc436efb506507e1fbe7f9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546134"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201299"
 ---
 # <a name="sp_datatype_info-transact-sql"></a>Хранимая процедура sp_datatype_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -41,9 +41,9 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @data_type = ] data_type` Номер кода для указанного типа данных. Для получения списка всех типов данных пропустите этот аргумент. *data_type* имеет **тип int**и значение по умолчанию 0.  
+`[ @data_type = ] data_type` Номер кода для указанного типа данных. Для получения списка всех типов данных пропустите этот аргумент. *data_type* имеет **тип int** и значение по умолчанию 0.  
   
-`[ @ODBCVer = ] odbc_version` Используемая версия ODBC. *odbc_version* имеет тип **tinyint**и значение по умолчанию 2.  
+`[ @ODBCVer = ] odbc_version` Используемая версия ODBC. *odbc_version* имеет тип **tinyint** и значение по умолчанию 2.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  Нет  
@@ -73,7 +73,7 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 |INTERVAL_PRECISION|**smallint**|Значение для начальной точности интервала, если *data_type* — **интервал**; в противном случае — NULL.|  
 |USERTYPE|**smallint**|значение **usertype** из таблицы systypes.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  sp_datatype_info эквивалентен SQLGetTypeInfo в ODBC. Возвращаемые этой процедурой результаты упорядочиваются по значению DATA_TYPE, а затем по степени соответствия типа данных аналогичному типу данных ODBC SQL.  
   
 ## <a name="permissions"></a>Разрешения  
