@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_articleview
 - sp_articleview_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e2d0efe52bb7f187ebfc981008610be81bc9528e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 014ccf37727534d16fa5b16bc280da5b76dfb76e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89528874"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203198"
 ---
 # <a name="sp_articleview-transact-sql"></a>sp_articleview (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -47,17 +47,17 @@ sp_articleview [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` Имя публикации, содержащей статью. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации, содержащей статью. Аргумент *publication* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @article = ] 'article'` Имя статьи. Аргумент *article* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @article = ] 'article'` Имя статьи. Аргумент *article* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 `[ @view_name = ] 'view_name'` Имя представления, определяющего опубликованную статью. *view_name* имеет тип **nvarchar (386)** и значение по умолчанию NULL.  
   
-`[ @filter_clause = ] 'filter_clause'` Предложение ограничения (WHERE), определяющее горизонтальный фильтр. При вводе предложения ограничения опустите ключевое слово WHERE. *filter_clause* является типом **ntext**и ЗНАЧЕНИЕМ по умолчанию NULL.  
+`[ @filter_clause = ] 'filter_clause'` Предложение ограничения (WHERE), определяющее горизонтальный фильтр. При вводе предложения ограничения опустите ключевое слово WHERE. *filter_clause* является типом **ntext** и ЗНАЧЕНИЕМ по умолчанию NULL.  
   
-`[ @change_active = ] change_active` Позволяет изменять столбцы в публикациях, у которых есть подписки. *change_active* имеет **тип int**и значение по умолчанию **0**. Если значение **равно 0**, столбцы не изменяются. Если значение равно **1**, то можно создать или повторно создать представления в активных статьях с подписками.  
+`[ @change_active = ] change_active` Позволяет изменять столбцы в публикациях, у которых есть подписки. *change_active* имеет **тип int** и значение по умолчанию **0**. Если значение **равно 0**, столбцы не изменяются. Если значение равно **1**, то можно создать или повторно создать представления в активных статьях с подписками.  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Подтверждает, что действие, выполняемое этой хранимой процедурой, может сделать существующий моментальный снимок недействительным. *force_invalidate_snapshot* является **битом**и имеет значение по умолчанию **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Подтверждает, что действие, выполняемое этой хранимой процедурой, может сделать существующий моментальный снимок недействительным. *force_invalidate_snapshot* является **битом** и имеет значение по умолчанию **0**.  
   
  **0** указывает, что изменения в статье не приводят к недействительности моментального снимка. Если хранимая процедура определяет, что изменение требует создания нового моментального снимка, возникает ошибка и изменения не выполняются.  
   
@@ -69,12 +69,12 @@ sp_articleview [ @publication = ] 'publication'
   
  **1** указывает, что изменения в статье приводят к повторной инициализации существующей подписки и предоставляют разрешение на повторную инициализацию подписки.  
   
-`[ @publisher = ] 'publisher'` Указывает издателя, отличного от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'` Указывает издателя, отличного от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname** и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  При публикации с издателя не следует использовать *Издатель* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-`[ @refreshsynctranprocs = ] refreshsynctranprocs` Имеет значение, если хранимые процедуры, используемые для синхронизации репликации, автоматически создаются повторно. *рефрешсинктранпрокс* имеет **бит**и значение по умолчанию 1.  
+`[ @refreshsynctranprocs = ] refreshsynctranprocs` Имеет значение, если хранимые процедуры, используемые для синхронизации репликации, автоматически создаются повторно. *рефрешсинктранпрокс* имеет **бит** и значение по умолчанию 1.  
   
  **1** означает, что хранимые процедуры созданы повторно.  
   
@@ -85,7 +85,7 @@ sp_articleview [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_articleview** создает представление, определяющее опубликованную статью, и вставляет идентификатор этого представления в столбец **sync_objid** таблицы [sysarticles &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md) , а также вставляет текст предложения ограничения в столбец **filter_clause** . Если все столбцы реплицируются и отсутствует **filter_clause**, **sync_objid** в таблице [sysarticles &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md) задается идентификатор базовой таблицы, а использование **sp_articleview** не является обязательным.  
   
  Для публикации вертикально фильтруемой таблицы (то есть для фильтрации столбцов) сначала выполняется **sp_addarticle** без параметра *sync_object* , запустите [sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) один раз для каждого столбца, который будет реплицирован (определение вертикального фильтра), а затем запустите **sp_articleview** , чтобы создать представление, определяющее опубликованную статью.  
@@ -96,7 +96,7 @@ sp_articleview [ @publication = ] 'publication'
   
  Если статья уже содержит представление, определяющее опубликованную статью, **sp_articleview** удаляет существующее представление и автоматически создает новый. Если представление было создано вручную (**введите** [sysarticles &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md) имеет значение **5**), существующее представление не удаляется.  
   
- Если вы создаете хранимую процедуру настраиваемого фильтра и представление, которое определяет опубликованную статью вручную, не запускайте **sp_articleview**. Вместо этого укажите параметры *Filter* и *sync_object* , чтобы [SP_ADDARTICLE &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), а также соответствующее значение *типа* .  
+ Если вы создаете хранимую процедуру настраиваемого фильтра и представление, которое определяет опубликованную статью вручную, не запускайте **sp_articleview**. Вместо этого укажите параметры *Filter* и *sync_object* , чтобы [SP_ADDARTICLE &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md), а также соответствующее значение *типа* .  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-articleview-transact-_1.sql)]  

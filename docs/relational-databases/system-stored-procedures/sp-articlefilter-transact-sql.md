@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_articlefilter_TSQL
 - sp_articlefilter
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4c3fee32-a43f-4757-a029-30aef4696afb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1adb46ae5954c0cbb2b401625869e4e1cb431484
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 6e39f67440e57c2c4a725db45e6e8d8deda3c8b3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548305"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203243"
 ---
 # <a name="sp_articlefilter-transact-sql"></a>sp_articlefilter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,27 +44,27 @@ sp_articlefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publication = ] 'publication'` Имя публикации, содержащей статью. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации, содержащей статью. Аргумент *publication* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @article = ] 'article'` Имя статьи. Аргумент *article* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @article = ] 'article'` Имя статьи. Аргумент *article* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 `[ @filter_name = ] 'filter_name'` Имя хранимой процедуры фильтра, создаваемой на основе *filter_name*. *filter_name* имеет тип **nvarchar (386)** и значение по умолчанию NULL. Необходимо указать уникальное имя для фильтра статьи.  
   
-`[ @filter_clause = ] 'filter_clause'` Предложение ограничения (WHERE), определяющее горизонтальный фильтр. При вводе предложения ограничения опустите ключевое слово WHERE. *filter_clause* является типом **ntext**и ЗНАЧЕНИЕМ по умолчанию NULL.  
+`[ @filter_clause = ] 'filter_clause'` Предложение ограничения (WHERE), определяющее горизонтальный фильтр. При вводе предложения ограничения опустите ключевое слово WHERE. *filter_clause* является типом **ntext** и ЗНАЧЕНИЕМ по умолчанию NULL.  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Подтверждает, что действие, выполняемое этой хранимой процедурой, может сделать существующий моментальный снимок недействительным. *force_invalidate_snapshot* является **битом**и имеет значение по умолчанию **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Подтверждает, что действие, выполняемое этой хранимой процедурой, может сделать существующий моментальный снимок недействительным. *force_invalidate_snapshot* является **битом** и имеет значение по умолчанию **0**.  
   
  **0** указывает, что изменения в статье не приводят к недействительности моментального снимка. Если хранимая процедура определяет, что изменение требует создания нового моментального снимка, возникает ошибка и изменения не выполняются.  
   
  значение **1** указывает, что изменения в статье могут привести к недействительности моментального снимка, и если существуют подписки, требующие создания нового моментального снимка, предоставляет разрешение на пометку существующего моментального снимка как устаревшего и создание нового моментального снимка.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription` Подтверждает, что действие, выполняемое этой хранимой процедурой, может потребовать повторной инициализации существующих подписок. *force_reinit_subscription* является **битом**и имеет значение по умолчанию **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Подтверждает, что действие, выполняемое этой хранимой процедурой, может потребовать повторной инициализации существующих подписок. *force_reinit_subscription* является **битом** и имеет значение по умолчанию **0**.  
   
  **0** указывает, что изменения в статье не приводят к необходимости повторной инициализации подписок. Если хранимая процедура определяет, что изменение потребует повторной инициализации подписки, то выдается сообщение об ошибке, и изменения не производится.  
   
  **1** указывает, что изменения в статье приводят к повторной инициализации существующих подписок и предоставляют разрешение на повторную инициализацию подписки.  
   
-`[ @publisher = ] 'publisher'` Указывает издателя, отличного от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @publisher = ] 'publisher'` Указывает издателя, отличного от [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *Publisher* имеет тип **sysname** и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  *Издатель* не должен использоваться с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателем.  
@@ -72,12 +72,12 @@ sp_articlefilter [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_articlefilter** используется в репликации моментальных снимков и репликации транзакций.  
   
  Для исполнения **sp_articlefilter** статьи с существующими подписками необходимо повторно инициализировать эти подписки.  
   
- **sp_articlefilter** создает фильтр, вставляет идентификатор хранимой процедуры Filter в столбец **Filter** таблицы [&#41;sysarticles &#40;Transact-SQL ](../../relational-databases/system-tables/sysarticles-transact-sql.md) , а затем вставляет текст предложения ограничения в столбец **filter_clause** .  
+ **sp_articlefilter** создает фильтр, вставляет идентификатор хранимой процедуры Filter в столбец **Filter** таблицы [&#41;sysarticles &#40;Transact-SQL](../../relational-databases/system-tables/sysarticles-transact-sql.md) , а затем вставляет текст предложения ограничения в столбец **filter_clause** .  
   
  Чтобы создать статью с горизонтальным фильтром, выполните [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) без параметра *фильтра* . Выполните **sp_articlefilter**, указав все параметры, *включая filter_clause*, а затем выполните [sp_articleview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md), указав все параметры, включая идентичные *filter_clause*. Если фильтр уже существует и **тип** в **sysarticles** равен **1** (статья на основе журнала), то предыдущий фильтр удаляется и создается новый фильтр.  
   

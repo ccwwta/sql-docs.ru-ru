@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_db_missing_index_groups
 - sys.dm_db_missing_index_groups_TSQL
@@ -22,12 +22,12 @@ ms.assetid: 9cc00acd-d83d-49f8-be72-5b2aebed246b
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e5b131a14ace8281fc7201a3b01ac5f12c3c6baf
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: fb82dc8e3a8d47c6f497c7caebc8c0aca24f5b34
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097761"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99180605"
 ---
 # <a name="sysdm_db_missing_index_groups-transact-sql"></a>sys.dm_db_missing_index_groups (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "98097761"
 |**index_group_handle**|**int**|Идентифицирует группу отсутствующих индексов.|  
 |**index_handle**|**int**|Идентифицирует отсутствующий индекс, принадлежащий к группе, указанной в столбце **index_group_handle**.<br /><br /> Группа индексов содержит только один индекс.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Сведения, возвращаемые представлением **sys.dm_db_missing_index_groups**, обновляются при оптимизации запроса оптимизатором запроса и не сохраняются. Сведения об отсутствующих индексах хранятся только до перезапуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Администраторы базы данных должны периодически делать резервные копии сведений об отсутствующих индексах, чтобы сохранить их после перезагрузки сервера.  
   
  Ни один из столбцов выходного результирующего набора не установлен в качестве ключа, но вместе они формируют ключ индекса.  

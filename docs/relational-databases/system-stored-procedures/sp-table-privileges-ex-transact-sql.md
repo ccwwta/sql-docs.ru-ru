@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_table_privileges_ex
 - sp_table_privileges_ex_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 33deb78c83c59599540b6ed91893b11bc1ae201e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 41c9548f0c4841b6a9c1845a22c7883cd42ad88b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551185"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203677"
 ---
 # <a name="sp_table_privileges_ex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,15 +44,15 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @table_server = ] 'table_server'` Имя связанного сервера, для которого возвращаются сведения. Аргумент *table_server* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @table_server = ] 'table_server'` Имя связанного сервера, для которого возвращаются сведения. Аргумент *table_server* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @table_name = ] 'table_name']` Имя таблицы, для которой предоставляются сведения о правах доступа к таблице. Аргумент *table_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @table_name = ] 'table_name']` Имя таблицы, для которой предоставляются сведения о правах доступа к таблице. Аргумент *table_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @table_schema = ] 'table_schema'` Схема таблицы. В некоторых средах СУБД является владельцем таблицы. Аргумент *table_schema* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @table_schema = ] 'table_schema'` Схема таблицы. В некоторых средах СУБД является владельцем таблицы. Аргумент *table_schema* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @table_catalog = ] 'table_catalog'` Имя базы данных, в которой находится указанный *table_name* . Аргумент *table_catalog* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @table_catalog = ] 'table_catalog'` Имя базы данных, в которой находится указанный *table_name* . Аргумент *table_catalog* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @fUsePattern = ] 'fUsePattern'` Определяет, должны ли символы "_", "%", "[" и "]" интерпретироваться как подстановочные знаки. Допустимые значения: 0 (сопоставление с шаблоном отключено) и 1 (сопоставление с шаблоном включено). *фусепаттерн* имеет **бит**и значение по умолчанию 1.  
+`[ @fUsePattern = ] 'fUsePattern'` Определяет, должны ли символы "_", "%", "[" и "]" интерпретироваться как подстановочные знаки. Допустимые значения: 0 (сопоставление с шаблоном отключено) и 1 (сопоставление с шаблоном включено). *фусепаттерн* имеет **бит** и значение по умолчанию 1.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  Нет  
@@ -69,8 +69,8 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 |**PRIVILEGE**|**varchar (** 32 **)**|Одно из доступных разрешений на таблицу. Разрешения на таблицу могут быть одним из следующих значений или другими значениями, поддерживаемыми источником данных, если определена реализация.<br /><br /> SELECT = **участник** может получать данные для одного или нескольких столбцов.<br /><br /> INSERT = **GRANTEE** может предоставлять данные для новых строк в одном или нескольких столбцах.<br /><br /> UPDATE = **участник** может изменять существующие данные для одного или нескольких столбцов.<br /><br /> DELETE = **получатель** прав может удалять строки из таблицы.<br /><br /> REFERENCEs = **участник** может ссылаться на столбец во внешней таблице в связи "первичный ключ — внешний ключ". В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] связи «первичный-внешний ключ» определяются с помощью ограничений таблицы.<br /><br /> Область действия, предоставленного **участнику** определенным правом доступа к таблице, зависит от источника данных. Например, разрешение UPDATE может позволить **участнику** обновить все столбцы в таблице в одном источнике данных, а только те столбцы, для которых **предоставлено** право на обновление другого источника данных.|  
 |**IS_GRANTABLE**|**varchar (** 3 **)**|Указывает, разрешено ли **участнику** предоставлять разрешения другим пользователям. Часто это называется разрешение «grant with grant». Может иметь значение YES, NO или NULL. Неизвестное значение (или NULL) свидетельствует о том, что разрешение «grant with grant» к источнику данных неприменимо.|  
   
-## <a name="remarks"></a>Примечания  
- Возвращаемые результаты упорядочиваются по **TABLE_QUALIFIER**, **table_owner**, **table_name**и **привилегии**.  
+## <a name="remarks"></a>Замечания  
+ Возвращаемые результаты упорядочиваются по **TABLE_QUALIFIER**, **table_owner**, **table_name** и **привилегии**.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение SELECT для схемы.  

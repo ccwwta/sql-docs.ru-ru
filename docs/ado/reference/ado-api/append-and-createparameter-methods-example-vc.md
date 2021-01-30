@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b57d144c-0a34-49c8-94cf-e5981edfcca6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18807c13606404718180421177f0175ffef6d822
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d07db05ed457f52616fa78e6c354c944719aff0f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88976105"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164846"
 ---
 # <a name="append-and-createparameter-methods-example-vc"></a>Пример методов Append и CreateParameter (Visual c++)
 В этом примере используются методы [append](./append-method-ado.md) и [CreateParameter](./createparameter-method-ado.md) для выполнения хранимой процедуры с входным параметром.  
@@ -203,6 +203,6 @@ Authors with 25 percent royalty
 899-46-2035, Anne  Ringer  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Append (ADO)](./append-method-ado.md)   
  [Метод CreateParameter (ADO)](./createparameter-method-ado.md)

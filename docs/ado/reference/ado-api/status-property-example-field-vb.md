@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 23a6ebaa724e06ce4a8283b95e3d7a982c8deef1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 69e80f025c29e379495507447ef78af5bcc8868f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988700"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166461"
 ---
 # <a name="status-property-example-field-vb"></a>Пример свойства Status (объект Field) (Visual Basic)
 В следующем примере документ открывается из папки для чтения и записи с помощью [поставщика публикации в Интернете](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Для свойства [Status](./status-property-ado-field.md) объекта [поля](./field-object.md) [записи](./record-object-ado.md) сначала будет задано значение **адфиелдпендингинсерт**, а затем оно будет обновлено на **адфиелдок**.  
@@ -86,13 +86,13 @@ End Sub
 Attribute VB_Name = "StatusField"  
 ```  
   
- Следующий код удаляет **поле** из **записи** , открытой в документе, доступном только для чтения. Для параметра **Status** будет задано значение **адфиелдпендингделете**. Во время [обновления](./update-method.md)удаление завершится ошибкой и **Status** будет отображаться состояние **адфиелдпендингделете** Plus **адфиелдпермиссиондениед**. [CancelUpdate](./cancelupdate-method-ado.md) очищает параметр **состояния** "ожидание".  
+ Следующий код удаляет **поле** из **записи** , открытой в документе, доступном только для чтения. Для параметра **Status** будет задано значение **адфиелдпендингделете**. Во время [обновления](./update-method.md)удаление завершится ошибкой и  будет отображаться состояние **адфиелдпендингделете** Plus **адфиелдпермиссиондениед**. [CancelUpdate](./cancelupdate-method-ado.md) очищает параметр **состояния** "ожидание".  
   
 ```  
 Attribute VB_Name = "StatusField"  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Field](./field-object.md)   
  [Объект Record (ADO)](./record-object-ado.md)   
  [Свойство Status (объект Field ADO)](./status-property-ado-field.md)

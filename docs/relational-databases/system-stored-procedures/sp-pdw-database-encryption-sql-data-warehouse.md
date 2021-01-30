@@ -5,19 +5,19 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.service: sql-data-warehouse
 ms.reviewer: ''
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 ms.assetid: f5ccb424-7a95-4557-b774-c69de33c1545
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest'
-ms.openlocfilehash: 73d1eb9fe27fa060a8bfcd13341a3908545aeed3
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0c1d6af9bb11e4078314f27d9fd69346568204d5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468345"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211870"
 ---
 # <a name="sp_pdw_database_encryption-azure-synapse-analytics"></a>sp_pdw_database_encryption (Azure синапсе Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -46,7 +46,7 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Если TDE включен с помощью **sp_pdw_database_encryption**, база данных tempdb удаляется, создается повторно и шифруется. По этой причине TDE нельзя включить на устройстве, пока имеются другие активные сеансы, использующие базу данных tempdb. Включение или отключение TDE на устройстве — это действие, которое изменяет состояние устройства. в большинстве случаев ожидается, что оно будет выполняться один раз в течение времени существования устройства и должно выполняться при отсутствии трафика на устройстве.  
   
 ## <a name="permissions"></a>Разрешения  

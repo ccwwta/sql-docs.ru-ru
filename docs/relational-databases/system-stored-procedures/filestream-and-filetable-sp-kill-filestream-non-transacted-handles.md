@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_kill_filestream_non_transacted_handles_TSQL
 - sp_kill_filestream_non_transacted_handles
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7188353e-ab29-49a0-8f25-7fb8ab122589
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ba045dc68e5e032478d26caaa7790ed357f4e087
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dd3ba3d653b8f1626f89c7bb979580c666dd830a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550101"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99165236"
 ---
 # <a name="sp_kill_filestream_non_transacted_handles-transact-sql"></a>sp_kill_filestream_non_transacted_handles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,7 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] 'table_name', [[ @h
  Можно передать значение NULL для значения *table_name* , чтобы закрыть все открытые нетранзакционные дескрипторы для всех таблиц FileTable в текущей базе данных. Значением по умолчанию является NULL.  
   
  *handle_id*  
- Дополнительный код отдельного дескриптора, который будет закрыт. *Handle_id* можно получить из динамического административного представления [sys. dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md) . Каждый идентификатор уникален в пределах экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если указано *handle_id*, необходимо также указать значение для *table_name*.  
+ Дополнительный код отдельного дескриптора, который будет закрыт. *Handle_id* можно получить из sys.dm_filestream_non_transacted_handles &#40;динамическое административное представление [Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md) . Каждый идентификатор уникален в пределах экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если указано *handle_id*, необходимо также указать значение для *table_name*.  
   
  Можно передать NULL в качестве значения *handle_id* , чтобы закрыть все открытые нетранзакционные дескрипторы для таблицы FileTable, указанной в *table_name*. Значением по умолчанию является NULL.  
   
@@ -53,7 +53,7 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] 'table_name', [[ @h
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-set"></a>Результирующий набор  
- Отсутствует.  
+ Нет.  
   
 ## <a name="general-remarks"></a>Общие замечания  
  *Handle_id* , необходимые **sp_kill_filestream_non_transacted_handles** , не связаны с session_id или единицей работы, используемыми в других командах **Kill** .  
@@ -61,12 +61,12 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] 'table_name', [[ @h
  Дополнительные сведения см. в статье [Управление таблицами FileTable](../../relational-databases/blob/manage-filetables.md).  
   
 ## <a name="metadata"></a>Метаданные  
- Для получения сведений об открытых нетранзакционных дескрипторах файлов запросите динамическое административное представление [sys. dm_filestream_non_transacted_handles &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).  
+ Для получения сведений об открытых нетранзакционных дескрипторах файлов запросите динамическое административное представление [sys.dm_filestream_non_transacted_handles &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).  
   
 ## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
- Чтобы получить дескрипторы файлов из динамического административного представления **sys. dm_FILESTREAM_non_transacted_handles** и запуска **sp_kill_filestream_non_transacted_handles**, необходимо иметь разрешение **Просмотр состояния базы данных** .  
+ Для получения дескрипторов файлов из динамического административного представления **sys.dm_FILESTREAM_non_transacted_handles** и запуска **sp_kill_filestream_non_transacted_handles** необходимо иметь разрешение **Просмотр состояния базы данных** .  
   
 ## <a name="examples"></a>Примеры  
  В следующих примерах показано, как вызвать **sp_kill_filestream_non_transacted_handles** , чтобы закрыть нетранзакционные дескрипторы файлов для данных FileTable.  

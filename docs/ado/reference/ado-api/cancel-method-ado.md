@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset20::Cancel
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e0db4e15-6787-41e2-8f13-9e9b524d620a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 75829400fbb1beb838b9254acf7db129980046c3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: adc282492b4c6d9a21683693154e43f1177bdca0
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88975655"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164750"
 ---
 # <a name="cancel-method-ado"></a>Метод Cancel (ADO)
 Отменяет выполнение ожидающего асинхронного вызова метода.  
@@ -38,13 +38,13 @@ object.Cancel
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Используйте метод **Cancel** для завершения выполнения асинхронного вызова метода, то есть метода, вызываемого с параметром **адасинкконнект**, **адасинцексекуте**или **адасинкфетч** .  
+ Используйте метод **Cancel** для завершения выполнения асинхронного вызова метода, то есть метода, вызываемого с параметром **адасинкконнект**, **адасинцексекуте** или **адасинкфетч** .  
   
  В следующей таблице показано, какая задача завершается при использовании метода **Cancel** для определенного типа объекта.  
   
 |Если *объект* является|Последний асинхронный вызов этого метода завершен|  
 |----------------------|-------------------------------------------------------------|  
-|[Команда](./command-object-ado.md)|[Execute](./execute-method-ado-command.md)|  
+|[Command](./command-object-ado.md)|[Execute](./execute-method-ado-command.md)|  
 |[Соединение](./connection-object-ado.md)|[Выполнить](./execute-method-ado-connection.md) или [Открыть](./open-method-ado-connection.md)|  
 |[Запись](./record-object-ado.md)|[Копирекорд](./copyrecord-method-ado.md), [делетерекорд](./deleterecord-method-ado.md), [MoveRecord](./moverecord-method-ado.md)или [Open](./open-method-ado-record.md)|  
 |[набор записей](./recordset-object-ado.md)|[Открыть](./open-method-ado-recordset.md)|  
@@ -66,7 +66,7 @@ object.Cancel
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример метода Cancel (Visual Basic)](./cancel-method-example-vb.md)   
  [Пример метода Cancel (VBScript)](../rds-api/cancel-method-example-vbscript.md)   
  [Пример метода Cancel (Visual c++)](./cancel-method-example-vc.md)   

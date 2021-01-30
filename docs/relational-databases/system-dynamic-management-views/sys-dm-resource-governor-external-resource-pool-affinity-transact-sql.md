@@ -6,7 +6,7 @@ ms.date: 11/13/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_resource_governor_external_resource_pool_affinity
 - sys.dm_resource_governor_external_resource_pool_affinity_TSQL
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e32fac49-5161-47c0-8540-af3fe730c00c
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: c93e9c33174172311a7378219440b7c60b7ab4b8
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 1dbbbbfacabb47fc1c18bfce9930ae93bc0f266b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172486"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203374"
 ---
 # <a name="sysdm_resource_governor_external_resource_pool_affinity-transact-sql"></a>sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "98172486"
 |processor_group|**smallint**|Идентификатор логической группы процессоров Windows. Не допускает значение NULL.|
 |cpu_mask|**bigint**|Двоичная маска, представляющая процессоры, связанные с этим пулом. Не допускает значение NULL.|
   
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Замечания
 
 Пулы, созданные с помощью сходства, `AUTO` не отображаются в этом представлении, так как они не имеют сходства. Дополнительные сведения см. в статьях [Создание пула внешних ресурсов &#40;Transact-sql&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md) и [Изменение внешнего пула ресурсов &#40;инструкций transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md) .
 

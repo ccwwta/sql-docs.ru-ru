@@ -7,7 +7,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - RDS::IBindMgr21::Server
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad10cbb434c1fda57f684438499bf6e4b885cf9b
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 373b43f3540d0dcb99349ca34d0a424bc6235f73
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724242"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166128"
 ---
 # <a name="server-property-rds"></a>Свойство Server (служба удаленных рабочих столов)
 Указывает имя службы IIS (IIS) и протокол связи.  
   
- Свойство **сервера** можно задать во время разработки в тегах объектов[RDS. Объект элемента управления](./datacontrol-object-rds.md) , или во время выполнения в коде скрипта.  
+ Свойство **сервера** можно задать во время разработки в тегах объектов [RDS. Объект элемента управления](./datacontrol-object-rds.md) , или во время выполнения в коде скрипта.  
   
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
@@ -108,22 +108,22 @@ DataControl.Server=""
 ```  
   
 ## <a name="parameters"></a>Параметры  
- *авебсрвр*или *ComputerName*  
+ *авебсрвр* или *ComputerName*  
  **Строковое** значение, содержащее путь к Интернету или интрасети, или имя компьютера, если сервер находится на удаленном компьютере. или пустая строка, если сервер находится на локальном компьютере.  
   
  *port*  
- Необязательный элемент. Порт, используемый для подключения к серверу, на котором выполняются службы IIS. Номер порта задается в Internet Explorer (в меню **вид** выберите пункт **Параметры**, а затем перейдите на вкладку **Подключение** ) или в IIS.  
+ Необязательный параметр. Порт, используемый для подключения к серверу, на котором выполняются службы IIS. Номер порта задается в Internet Explorer (в меню **вид** выберите пункт **Параметры**, а затем перейдите на вкладку **Подключение** ) или в IIS.  
   
  *DataControl*  
  Объектная переменная, представляющая **RDS. Объект элемента управления** .  
   
-## <a name="remarks"></a>Комментарии  
- Сервер — это расположение, в котором **RDS. ** Обрабатывается запрос элемента управления (т. е. запрос или обновление). По умолчанию все запросы обрабатываются объектом [RDSServer.](./datafactory-object-rdsserver.md) DataObject, [мсдфмап. Компонент обработчика](../../guide/remote-data-service/datafactory-customization.md) и файл [MSDFMAP.INI](../../guide/remote-data-service/understanding-the-customization-file.md) на указанном сервере. Помните, что при изменении серверов для согласования параметров в старых и новых **MSDFMAP.INI** файлах. Несовместимость может привести к сбою запросов, успешно находящегося на одном сервере, на другом. Если для свойства сервера задана пустая строка "", эти объекты будут использоваться на локальном компьютере.  
+## <a name="remarks"></a>Замечания  
+ Сервер — это расположение, в котором **RDS.** Обрабатывается запрос элемента управления (т. е. запрос или обновление). По умолчанию все запросы обрабатываются объектом [RDSServer.](./datafactory-object-rdsserver.md) DataObject, [мсдфмап. Компонент обработчика](../../guide/remote-data-service/datafactory-customization.md) и файл [MSDFMAP.INI](../../guide/remote-data-service/understanding-the-customization-file.md) на указанном сервере. Помните, что при изменении серверов для согласования параметров в старых и новых **MSDFMAP.INI** файлах. Несовместимость может привести к сбою запросов, успешно находящегося на одном сервере, на другом. Если для свойства сервера задана пустая строка "", эти объекты будут использоваться на локальном компьютере.  
   
 ## <a name="applies-to"></a>Применение  
  [Объект DataControl (служба удаленных рабочих столов)](./datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойства сервера (VBScript)](./server-property-example-vbscript.md)   
  [Свойство Connect (RDS)](./connect-property-rds.md)   
  [Свойство SQL](./sql-property.md)   

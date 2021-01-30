@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Connection15::GetVersion
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: db4cb894-9bd9-422d-a58a-cef6941a5784
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f3fa292fbc10ea57dbca6e4aa958ad0e625298d5
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6b4ed042d847ab250386857560bcbc232660fcd9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987955"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166300"
 ---
 # <a name="version-property-ado"></a>Свойство Version (ADO)
 Указывает номер версии ADO.  
@@ -31,7 +31,7 @@ ms.locfileid: "88987955"
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает **строковое** значение, указывающее версию.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Используйте свойство **Version** , чтобы получить номер версии реализации ADO.  
   
  Версия поставщика будет доступна как динамическое свойство в коллекции [свойств](./properties-collection-ado.md) .  
@@ -39,6 +39,6 @@ ms.locfileid: "88987955"
 ## <a name="applies-to"></a>Применение  
  [Объект Connection (ADO)](./connection-object-ado.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойства Version (Visual Basic)](./version-property-example-vb.md)   
  [Пример свойства Version (Visual C++)](./version-property-example-vc.md)

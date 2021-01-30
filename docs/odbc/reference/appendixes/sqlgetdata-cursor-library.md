@@ -7,24 +7,24 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQLGetData function [ODBC], Cursor Library
 ms.assetid: ff40c9c0-b847-4426-a099-1bff47e6e872
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5288c46dc731f1bee8727e3825c95ccae663f871
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1e0cb6a73fb294e8b47ab82c988f8d07a4a220df
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421468"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202789"
 ---
 # <a name="sqlgetdata-cursor-library"></a>SQLGetData (библиотека курсоров)
 > [!IMPORTANT]  
 >  Эта функция будет удалена в следующей версии Windows. Избегайте использования этой функции в новых разработках и запланируйте изменение приложений, которые в настоящее время используют эту функцию. Корпорация Майкрософт рекомендует использовать функцию курсора драйвера.  
   
- В этом разделе обсуждается использование функции **SQLGetData** в библиотеке курсоров. Общие сведения о **SQLGetData**см. в разделе [функция SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md).  
+ В этом разделе обсуждается использование функции **SQLGetData** в библиотеке курсоров. Общие сведения о **SQLGetData** см. в разделе [функция SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md).  
   
  Библиотека курсоров реализует **SQLGetData** , сначала создавая инструкцию **SELECT** с предложением **WHERE** , которое перечисляет значения, хранящиеся в его кэше для каждого привязанного столбца в текущей строке. Затем она выполняет инструкцию **SELECT** для повторного выбора строки и вызывает **SQLGetData** в драйвере для получения данных из источника данных (в отличие от кэша).  
   

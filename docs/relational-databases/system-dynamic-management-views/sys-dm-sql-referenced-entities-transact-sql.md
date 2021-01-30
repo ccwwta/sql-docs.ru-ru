@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_sql_referenced_entities_TSQL
 - dm_sql_referenced_entities
@@ -21,12 +21,12 @@ ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5b90048297d0573749f4751a3730beb87d56ddb
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 1ed4aebeaf422b47dd94531c5d0a8a491cf9490e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094014"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203336"
 ---
 # <a name="sysdm_sql_referenced_entities-transact-sql"></a>Функция динамического управления sys.dm_sql_referenced_entities (Transact-SQL)
 
@@ -115,7 +115,7 @@ sys.dm_sql_referenced_entities (
   
  Возвращает ошибку 2020, когда не удается разрешить зависимости столбца. Эта ошибка не препятствует возврату запросом зависимостей на уровне объектов.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Данная функция может выполняться в контексте любой базы данных и осуществляет отображение списка сущностей, ссылающихся на триггер DDL уровня сервера.  
   
  В следующей таблице перечислены типы сущностей, для которых созданы и обновляются данные о зависимостях. Данные о зависимостях не создаются и не обновляются для правил, значений по умолчанию, временных таблиц, временных хранимых процедур и системных объектов.  
@@ -123,7 +123,7 @@ sys.dm_sql_referenced_entities (
 |Тип сущности|Ссылающаяся сущность|Упоминаемая сущность|  
 |-----------------|------------------------|-----------------------|  
 |Таблица|Да*|Да|  
-|Вид|Да|Да|  
+|Представление|Да|Да|  
 |Хранимая процедура [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Да|Да|  
 |Хранимая процедура CLR|Нет|Да|  
 |Определяемая пользователем функция [!INCLUDE[tsql](../../includes/tsql-md.md)]|Да|Да|  

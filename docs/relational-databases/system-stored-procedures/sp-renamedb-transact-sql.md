@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_renamedb
 - sp_renamedb_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7dd9d4ff-20e1-4857-9a8e-a5bff767cf76
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 85ded9c74077436ccf94c33350b4193726819068
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5b2e0ceff1889df17d1ab5ca62c6819c41679374
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538576"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99179201"
 ---
 # <a name="sp_renamedb-transact-sql"></a>sp_renamedb (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,9 +43,9 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @dbname = ] 'old_name'` Текущее имя базы данных. Аргумент *old_name* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @dbname = ] 'old_name'` Текущее имя базы данных. Аргумент *old_name* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @newname = ] 'new_name'` Новое имя базы данных. *new_name* должны соответствовать правилам для идентификаторов. Аргумент *new_name* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @newname = ] 'new_name'` Новое имя базы данных. *new_name* должны соответствовать правилам для идентификаторов. Аргумент *new_name* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или ненулевое значение (неуспешное завершение)  
@@ -69,7 +69,7 @@ WHERE name = N'Financial';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [sp_changedbowner (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   

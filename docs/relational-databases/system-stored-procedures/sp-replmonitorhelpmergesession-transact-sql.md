@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replmonitorhelpmergesession_TSQL
 - sp_replmonitorhelpmergesession
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9544a1d11efbd3d956821784257619bb45b7a5cc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d81a500eccbc8d969e9e0ef957ae4db09616d768
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89526316"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211887"
 ---
 # <a name="sp_replmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -53,18 +53,18 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |**0** (по умолчанию)|Возвращает сведения обо всех последних запусках агента.|  
 |> **0,0**|Возвращает сведения о запусках агента, произошедших за последние *часы* (в часах).|  
   
-`[ @session_type = ] session_type` Фильтрует результирующий набор на основе конечного результата сеанса. *session_type* имеет **тип int**и может принимать одно из следующих значений.  
+`[ @session_type = ] session_type` Фильтрует результирующий набор на основе конечного результата сеанса. *session_type* имеет **тип int** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |**1** (по умолчанию)|Сеанс агента с успешным результатом или с требованием повторения.|  
 |**0**|Сеанс агента с неудачным результатом.|  
   
-`[ @publisher = ] 'publisher'` Имя издателя. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL. Этот параметр используется при выполнении **sp_replmonitorhelpmergesession** на подписчике.  
+`[ @publisher = ] 'publisher'` Имя издателя. Аргумент *Publisher* имеет тип **sysname** и значение по умолчанию NULL. Этот параметр используется при выполнении **sp_replmonitorhelpmergesession** на подписчике.  
   
-`[ @publisher_db = ] 'publisher_db'` Имя базы данных публикации. Аргумент *publisher_db* имеет тип **sysname**и значение по умолчанию NULL. Этот параметр используется при выполнении **sp_replmonitorhelpmergesession** на подписчике.  
+`[ @publisher_db = ] 'publisher_db'` Имя базы данных публикации. Аргумент *publisher_db* имеет тип **sysname** и значение по умолчанию NULL. Этот параметр используется при выполнении **sp_replmonitorhelpmergesession** на подписчике.  
   
-`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и значение по умолчанию NULL. Этот параметр используется при выполнении **sp_replmonitorhelpmergesession** на подписчике.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname** и значение по умолчанию NULL. Этот параметр используется при выполнении **sp_replmonitorhelpmergesession** на подписчике.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -87,7 +87,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_replmonitorhelpmergesession** используется для наблюдения за репликацией слиянием.  
   
  При выполнении на подписчике **sp_replmonitorhelpmergesession** возвращает сведения только о последних пяти сеансах агент слияния.  
@@ -95,7 +95,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли базы данных **db_owner** или **replmonitor** в базе данных распространителя на распространителе или в базе данных подписки на подписчике могут выполнять **sp_replmonitorhelpmergesession**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Наблюдение за репликацией программным образом](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

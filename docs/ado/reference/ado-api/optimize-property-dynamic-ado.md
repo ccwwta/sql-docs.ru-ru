@@ -1,25 +1,25 @@
 ---
 description: Свойство Optimize (динамическое) (ADO)
-title: Свойство optimize — Dynamic (ADO) | Документация Майкрософт
+title: Оптимизация Property-Dynamic (ADO) | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - Optimize property [ADO]
 ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3393bbfbfbaeb50c6a608db92dae42bb29fb3b1d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 839c2cb27fc14546523272c1c5b6d69f233557fa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990265"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166946"
 ---
 # <a name="optimize-property-dynamic-ado"></a>Свойство Optimize (динамическое) (ADO)
 Указывает, должен ли быть создан индекс для [поля](./field-object.md).  
@@ -27,7 +27,7 @@ ms.locfileid: "88990265"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает **логическое** значение, указывающее, должен ли быть создан индекс.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Индекс может повысить производительность операций, которые находят или сортируют значения в [наборе записей](./recordset-object-ado.md). Индекс является внутренним по отношению к ADO; Вы не можете явно получить доступ к нему или использовать его в своем приложении.  
   
  Чтобы создать индекс для поля, задайте для свойства **optimize** значение **true**. Чтобы удалить индекс, присвойте этому свойству значение **false**.  
@@ -50,7 +50,7 @@ fld.Properties("Optimize") = False   'Delete an index
 ## <a name="applies-to"></a>Применение  
  [Объект Field](./field-object.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойства optimize (Visual Basic)](./optimize-property-example-vb.md)   
  [Пример свойства optimize (Visual c++)](./optimize-property-example-vc.md)   
  [Свойство Filter](./filter-property.md)   

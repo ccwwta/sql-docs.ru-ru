@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQLSetConnectAttrForDbcInfo function [ODBC]
 ms.assetid: a28fadb9-b998-472a-b252-709507e92005
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7380ba8682deb7424c363b28d42ecf3980755daf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2ca64e1309c939f4b39b8b9a020a1debb1cc10b9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499564"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192437"
 ---
 # <a name="sqlsetconnectattrfordbcinfo-function"></a>Функция SQLSetConnectAttrForDbcInfo
 **Соответствия**  
@@ -69,10 +69,10 @@ SQLRETURN  SQLSetConnectAttrForDbcInfo(
 ## <a name="diagnostics"></a>Диагностика  
  То же, что и [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), за исключением того, что диспетчер драйверов будет использовать **параметром handletype** SQL_HANDLE_DBC_INFO_TOKEN и **маркер** *хдбЦинфотокен*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  **СклсетконнектаттрфордбЦинфо** совпадает с **SQLSetConnectAttr**, но он задает атрибут для маркера сведений о соединении, а не для маркера подключения. Например, если **SQLSetConnectAttr** не распознает атрибут, **склсетконнектаттрфордбЦинфо** должен также возвращать SQL_ERROR для этого атрибута.  
   
- Всякий раз, когда драйвер возвращает SQL_ERROR или SQL_INVALID_HANDLE, драйвер должен игнорировать этот атрибут, чтобы вычислить идентификатор пула. Кроме того, диспетчер драйверов будет получать диагностические сведения от *хдбЦинфотокен*и возвращать SQL_SUCCESS_WITH_INFO приложению в [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) и [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md). Поэтому приложение может получить сведения о том, почему не удается установить некоторые атрибуты.  
+ Всякий раз, когда драйвер возвращает SQL_ERROR или SQL_INVALID_HANDLE, драйвер должен игнорировать этот атрибут, чтобы вычислить идентификатор пула. Кроме того, диспетчер драйверов будет получать диагностические сведения от *хдбЦинфотокен* и возвращать SQL_SUCCESS_WITH_INFO приложению в [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) и [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md). Поэтому приложение может получить сведения о том, почему не удается установить некоторые атрибуты.  
   
  Приложения не должны вызывать эту функцию напрямую. Драйвер ODBC, поддерживающий пулы соединений с учетом драйверов, должен реализовывать эту функцию.  
   

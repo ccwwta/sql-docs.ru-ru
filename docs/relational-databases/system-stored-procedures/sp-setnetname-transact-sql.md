@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_setnetname
 - sp_setnetname_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 71584754f3b175201623a222feae6722f39809ce
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f84120579d3eae3b2755eaab89eff137af6190db
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543078"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193494"
 ---
 # <a name="sp_setnetname-transact-sql"></a>Хранимая процедура sp_setnetname (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +42,11 @@ sp_setnetname
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- ** @server = '** *сервер* **'**  
- Имя удаленного сервера в синтаксисе вызова удаленных хранимых процедур, написанных пользователем. Для использования этого *сервера*уже должна существовать ровно одна строка в **sys.** Servers. Аргумент*server* имеет тип **sysname**и не имеет значения по умолчанию.  
+ **@server = '** *сервер* **'**  
+ Имя удаленного сервера в синтаксисе вызова удаленных хранимых процедур, написанных пользователем. Для использования этого *сервера* уже должна существовать ровно одна строка в **sys.** Servers. Аргумент *server* имеет тип **sysname** и не имеет значения по умолчанию.  
   
- ** @netname = '** *network_name* **'**  
- Сетевое имя компьютера, на который направляются вызовы удаленных хранимых процедур. Аргумент *network_name* имеет тип **sysname**и не имеет значения по умолчанию.  
+ **@netname = '** *network_name* **'**  
+ Сетевое имя компьютера, на который направляются вызовы удаленных хранимых процедур. Аргумент *network_name* имеет тип **sysname** и не имеет значения по умолчанию.  
   
  Это имя должно совпадать с именем компьютера [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows и может содержать символы, использование которых в качестве идентификаторов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запрещено.  
   
@@ -88,7 +88,7 @@ EXEC sp_setnetname 'Win_1','Win-1';
 EXEC Win_1.master.dbo.sp_who;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   

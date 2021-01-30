@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_replqueuemonitor
 - sp_replqueuemonitor_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: db91c3bef035398fa98d8eeb88f68bbd1c5cf09a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8fa6635b4f31692e5f45e848043e44496e2d702f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89534935"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211665"
 ---
 # <a name="sp_replqueuemonitor-transact-sql"></a>sp_replqueuemonitor (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,15 +42,15 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'` Имя издателя. Аргумент *Publisher* имеет тип **sysname**и значение по умолчанию NULL. На этом сервере должна быть настроена публикация. Значение NULL означает для всех издателей.  
+`[ @publisher = ] 'publisher'` Имя издателя. Аргумент *Publisher* имеет тип **sysname** и значение по умолчанию NULL. На этом сервере должна быть настроена публикация. Значение NULL означает для всех издателей.  
   
-`[ @publisherdb = ] 'publisher_db' ]` Имя базы данных публикации. Аргумент *publisher_db* имеет тип **sysname**и значение по умолчанию NULL. Значение NULL означает для всех баз данных публикаций.  
+`[ @publisherdb = ] 'publisher_db' ]` Имя базы данных публикации. Аргумент *publisher_db* имеет тип **sysname** и значение по умолчанию NULL. Значение NULL означает для всех баз данных публикаций.  
   
-`[ @publication = ] 'publication' ]` Имя публикации. Аргумент *publication*имеет тип **sysname**и значение по умолчанию NULL. Значение NULL означает для всех публикаций.  
+`[ @publication = ] 'publication' ]` Имя публикации. Аргумент *publication* имеет тип **sysname** и значение по умолчанию NULL. Значение NULL означает для всех публикаций.  
   
-`[ @tranid = ] 'tranid' ]` Идентификатор транзакции. *транид*имеет тип **sysname**и значение по умолчанию NULL. Значение NULL означает для всех транзакций.  
+`[ @tranid = ] 'tranid' ]` Идентификатор транзакции. *транид* имеет тип **sysname** и значение по умолчанию NULL. Значение NULL означает для всех транзакций.  
   
-`[ @queuetype = ] 'queuetype' ]` Тип очереди, в которой хранятся транзакции. *значение queuetype* имеет тип **tinyint** со значением по умолчанию **0**и может принимать одно из следующих значений.  
+`[ @queuetype = ] 'queuetype' ]` Тип очереди, в которой хранятся транзакции. *значение queuetype* имеет тип **tinyint** со значением по умолчанию **0** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -61,7 +61,7 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_replqueuemonitor** используется в репликации моментальных снимков или репликации транзакций с подписками, обновляемыми посредством очередей. Сообщения очереди, не содержащие команд SQL или являющиеся частью команды SQL, не отображаются.  
   
 ## <a name="permissions"></a>Разрешения  

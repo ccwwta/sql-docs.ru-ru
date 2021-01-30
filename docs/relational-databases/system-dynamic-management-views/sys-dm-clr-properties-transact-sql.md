@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_clr_properties
 - sys.dm_clr_properties_TSQL
@@ -21,12 +21,12 @@ ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34dfbfbecf82df79520fc5a530bcb8c18c544c77
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c23c8d624a9670cdb309d43f645831b5e09fab5a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98095293"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212096"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -41,9 +41,9 @@ ms.locfileid: "98095293"
 |**value**|**nvarchar(128)**|Значение свойства.|  
   
 ## <a name="properties"></a>Свойства  
- Свойство **Directory** указывает каталог, на который была установлена .NET Framework на сервере. На серверном компьютере может быть несколько установок платформы .NET Framework, и значение этого свойства определяет установку, которую использует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Свойство **Directory** указывает каталог, на который была установлена платформа .NET Framework на сервере. На серверном компьютере может быть несколько установок платформы .NET Framework, и значение этого свойства определяет установку, которую использует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Свойство **Version** указывает версию .NET Framework и РАЗМЕЩЕННУЮ среду CLR на сервере.  
+ Свойство **Version** указывает версию платформа .NET Framework и РАЗМЕЩЕННУЮ среду CLR на сервере.  
   
  Динамическое управляемое представление **sys.dm_clr_properties** может возвращать шесть разных значений для свойства **State** , которое отражает состояние [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] размещенной среды CLR. К ним относятся:  
   
@@ -69,7 +69,7 @@ ms.locfileid: "98095293"
   
  **Состояние CLR остановлено** , только если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] находится в процессе завершения работы.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Свойства и значения этого представления могут измениться в будущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из-за улучшений функций интеграции со средой CLR.  
   
 ## <a name="permissions"></a>Разрешения  

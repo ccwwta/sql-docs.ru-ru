@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9da6db50-d9bb-47e1-ae8b-be3c9b88cf9a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8778e5f79f7f733508c680e2922a7005ea9ca26
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 05c746f3e9419fe4b6e674991376a02af1c00563
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988835"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166478"
 ---
 # <a name="state-property-example-vb"></a>Пример свойства State (Visual Basic)
 В этом примере свойство [State](./state-property-ado.md) используется для отображения сообщения, в то время как асинхронные соединения открываются и выполняются асинхронные команды.  
@@ -108,6 +108,6 @@ End Sub
 'EndStateVB  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Recordset (ADO)](./recordset-object-ado.md)   
  [Свойство State (ADO)](./state-property-ado.md)

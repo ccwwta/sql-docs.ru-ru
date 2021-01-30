@@ -1,12 +1,12 @@
 ---
-title: sys. sp_rda_reconcile_columns (Transact-SQL) | Документация Майкрософт
-description: Дополнительные сведения о sys. sp_rda_reconcile_columns. Используйте эту хранимую процедуру для согласования столбцов в удаленных таблицах Azure и таблицах SQL Server с поддержкой растяжения.
+title: sys.sp_rda_reconcile_columns (Transact-SQL) | Документация Майкрософт
+description: Дополнительные сведения о sys.sp_rda_reconcile_columns. Используйте эту хранимую процедуру для согласования столбцов в удаленных таблицах Azure и таблицах SQL Server с поддержкой растяжения.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: stored-procedures
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sp_rda_reconcile_columns
 - sys.sp_rda_reconcile_columns_TSQL
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1788e373c8bab330182df9338e447946cda87bd3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8eb33cbb1fd2975d96a727f6a7fde457c9827cc8
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538450"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211779"
 ---
-# <a name="syssp_rda_reconcile_columns-transact-sql"></a>sys. sp_rda_reconcile_columns (Transact-SQL)
+# <a name="syssp_rda_reconcile_columns-transact-sql"></a>sys.sp_rda_reconcile_columns (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Согласовывает столбцы в удаленной таблице Azure со столбцами в таблице SQL Server с поддержкой растяжения.  
@@ -45,7 +45,7 @@ sp_rda_reconcile_columns @objname = '@objname'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- \@objname = '* \@ objname*'  
+ \@objname = '*\@ objname*'  
  Имя таблицы SQL Server с поддержкой растяжения.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -54,7 +54,7 @@ sp_rda_reconcile_columns @objname = '@objname'
 ## <a name="permissions"></a>Разрешения  
  Требуются db_owner разрешения.  
    
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Если в удаленной таблице Azure есть столбцы, которых больше нет в таблице SQL Server с поддержкой Stretch Database, эти лишние столбцы не препятствуют нормальной работе службы Stretch Database. При желании вы можете удалить такие столбцы вручную.  
   
 ## <a name="example"></a>Пример  

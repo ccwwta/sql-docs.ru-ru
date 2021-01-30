@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_change_users_login
 - sp_change_users_login_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c82241030646e2ef20c978cb1905cf836f9a589b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 109b2a6aa015f8f66a327714264aa986060f9a0c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447419"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203721"
 ---
 # <a name="sp_change_users_login-transact-sql"></a>sp_change_users_login (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,18 +53,18 @@ sp_change_users_login [ @Action = ] 'action'
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**Auto_Fix**|Связывает запись пользователя в системном представлении каталога sys.database_principals в текущей базе данных с именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], имеющим такое же имя. Если имени входа с таким же именем не существует, оно будет создано. Проверьте результат инструкции **Auto_Fix** , чтобы убедиться в том, что фактическая ссылка создана. Старайтесь не использовать **Auto_Fix** в ситуациях с учетом безопасности.<br /><br /> При использовании **Auto_Fix**необходимо указать *User* и *Password* , если имя входа еще не существует, в противном случае необходимо указать *User* , но *пароль* будет проигнорирован. *имя для входа* должно быть равно null. *пользователь* должен быть допустимым пользователем в текущей базе данных. Не может быть еще одного пользователя, сопоставленного с именем входа.|  
-|**Отчет**|Перечисляет пользователей и соответствующие идентификаторы безопасности (SID) в текущей базе данных, которые не связаны ни с каким именем входа. *пользователь*, *имя для входа*и *пароль* должны быть равны null или не указаны.<br /><br /> Чтобы заменить параметр отчета запросом, использующим системные таблицы, сравните записи в **sys. server_prinicpals** с записями в **sys. database_principals**.|  
+|**Auto_Fix**|Связывает запись пользователя в системном представлении каталога sys.database_principals в текущей базе данных с именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], имеющим такое же имя. Если имени входа с таким же именем не существует, оно будет создано. Проверьте результат инструкции **Auto_Fix** , чтобы убедиться в том, что фактическая ссылка создана. Старайтесь не использовать **Auto_Fix** в ситуациях с учетом безопасности.<br /><br /> При использовании **Auto_Fix** необходимо указать *User* и *Password* , если имя входа еще не существует, в противном случае необходимо указать *User* , но *пароль* будет проигнорирован. *имя для входа* должно быть равно null. *пользователь* должен быть допустимым пользователем в текущей базе данных. Не может быть еще одного пользователя, сопоставленного с именем входа.|  
+|**Отчет**|Перечисляет пользователей и соответствующие идентификаторы безопасности (SID) в текущей базе данных, которые не связаны ни с каким именем входа. *пользователь*, *имя для входа* и *пароль* должны быть равны null или не указаны.<br /><br /> Чтобы заменить параметр отчета запросом, использующим системные таблицы, сравните записи в **sys.server_prinicpals** с записями в **sys.database_principals**.|  
 |**Update_One**|Связывает указанного *пользователя* в текущей базе данных с существующим [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *именем входа*. необходимо указать *пользователя* и *имя для входа* . *пароль* должен быть равен null или не указан.|  
   
  [ @UserNamePattern =] "*пользователь*"  
- Имя пользователя в текущей базе данных. Аргумент *User* имеет тип **sysname**и значение по умолчанию NULL.  
+ Имя пользователя в текущей базе данных. Аргумент *User* имеет тип **sysname** и значение по умолчанию NULL.  
   
  [ @LoginName =] "*Login*"  
  Имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL.  
   
  [ @Password =] "*пароль*"  
- Пароль, назначенный новому [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имени входа, которое создается путем указания **Auto_Fix**. Если совпадающее имя входа уже существует, пользователь и имя входа сопоставляются, а *пароль* игнорируется. Если соответствующее имя входа не существует, sp_change_users_login создает новое [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа и присваивает ему пароль *в* качестве пароля для нового имени входа. Аргумент *Password* имеет тип **sysname**и не должен иметь значение null.  
+ Пароль, назначенный новому [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имени входа, которое создается путем указания **Auto_Fix**. Если совпадающее имя входа уже существует, пользователь и имя входа сопоставляются, а *пароль* игнорируется. Если соответствующее имя входа не существует, sp_change_users_login создает новое [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа и присваивает ему пароль *в* качестве пароля для нового имени входа. Аргумент *Password* имеет тип **sysname** и не должен иметь значение null.  
   
 > **ВАЖНО!** Всегда используйте [надежный пароль!](../../relational-databases/security/strong-passwords.md)
   
@@ -78,7 +78,7 @@ sp_change_users_login [ @Action = ] 'action'
 |UserName|**sysname**|Имя пользователя базы данных.|  
 |UserSID|**varbinary(85)**|Идентификатор защиты пользователя.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Используйте процедуру sp_change_users_login, чтобы связать пользователя базы данных в текущей базе данных с именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если имя входа для пользователя изменилось, используйте процедуру sp_change_users_login, чтобы связать пользователя с новым именем входа без потери пользовательских разрешений. Новое *имя входа* не может быть SA, а *пользователь* не может быть dbo, Guest или INFORMATION_SCHEMA пользователем.  
   
  Процедура sp_change_users_login не может использоваться для сопоставления пользователей базы данных с участниками уровня Windows, сертификатами или асимметричными ключами.  
@@ -123,12 +123,12 @@ EXEC sp_change_users_login 'Auto_Fix', 'Mary', NULL, 'B3r12-3x$098f6';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [Хранимые процедуры безопасности (Transact-SQL)](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE LOGIN (Transact-SQL)](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_adduser (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
  [sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
- [Системные хранимые процедуры &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.database_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
   
   

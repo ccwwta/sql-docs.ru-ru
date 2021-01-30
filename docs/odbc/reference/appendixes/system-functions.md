@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - system functions [ODBC]
 - functions [ODBC], system functions
 ms.assetid: 36614b4c-e037-43ef-8692-67f4861b144d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1be058f5021c3f03242a09500150acd98cac8e70
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 469d77de424b69bf5b3bab0f6cea301ad23e3af2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88386410"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202512"
 ---
 # <a name="system-functions"></a>Системные функции
 В следующей таблице перечислены системные функции, которые включены в набор скалярных функций ODBC. Вызывая **SQLGetInfo** с *типом сведений* SQL_SYSTEM_FUNCTIONS, приложение может определить, какие системные функции поддерживаются драйвером.  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - SQL-92 functions [ODBC]
 - scalar functions [ODBC]
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 59c7cd5e-32d6-43ab-bac3-7010322d105a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4a814de22df4a97e3c3b3abd0ddc30266fe02a30
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 94ad0914477de0e2dfd25667755757bbc36a8b29
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88411440"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99212536"
 ---
 # <a name="appendix-e-scalar-functions"></a>Приложение Д. Скалярные функции
 ODBC определяет следующие типы скалярных функций с подробными сведениями о каждом из этих типов функций, представленных в соответствующих разделах этого приложения. Описания функций включают в себя соответствующий синтаксис.  

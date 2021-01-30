@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLRemoveTranslator
 apilocation:
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c6feda49-0359-4224-8de9-77125cf2397b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 92042d1a29720d8fcca32d3fb7127f24a0566b7e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cc8d1c7340d548276f462512bf2b52a3deb37b79
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499607"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192474"
 ---
 # <a name="sqlremovetranslator-function"></a>Функция SQLRemoveTranslator
 **Соответствия**  
@@ -54,7 +54,7 @@ BOOL SQLRemoveTranslator(
  Функция возвращает TRUE, если она успешна, и FALSE в случае сбоя. Если при вызове этой функции в системной информации не существует записи, функция возвращает значение FALSE.  
   
 ## <a name="diagnostics"></a>Диагностика  
- Когда **склремоветранслатор** возвращает значение false, связанное значение * \* пферроркоде* может быть получено путем вызова **склинсталлереррор**. В следующей таблице перечислены значения * \* пферроркоде* , которые могут быть возвращены **склинсталлереррор** , и объясняется каждый из них в контексте этой функции.  
+ Когда **склремоветранслатор** возвращает значение false, связанное значение *\* пферроркоде* может быть получено путем вызова **склинсталлереррор**. В следующей таблице перечислены значения *\* пферроркоде* , которые могут быть возвращены **склинсталлереррор** , и объясняется каждый из них в контексте этой функции.  
   
 |*\*пферроркоде*|Ошибка|Описание|  
 |---------------------|-----------|-----------------|  

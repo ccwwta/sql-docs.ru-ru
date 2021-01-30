@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_backup_config_basic_TSQL
 - sp_backup_config_basic
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 428dff3f22b5a924f7a208a988334c14ece752a3
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: 0ef304af8088ee35aeb19022f5d7f6cf539f554d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753738"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193599"
 ---
 # <a name="managed_backupsp_backup_config_basic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -66,7 +66,7 @@ EXEC managed_backup.sp_backup_config_basic
  Имя учетных данных SQL, используемых для проверки подлинности в учетной записи хранения Azure. @credentail_name Аргумент имеет тип **sysname**. Если этот параметр указан, резервная копия сохраняется в страничном BLOB-объекте. Если этот параметр имеет значение NULL, резервная копия будет храниться как блочный BLOB-объект. Резервное копирование на страничный BLOB-объект является устаревшим, поэтому рекомендуется использовать новые функции резервного копирования блочных больших двоичных объектов. При использовании для изменения конфигурации [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] этот параметр не обязателен. Если этот параметр не указан, существующие значения конфигурации сохраняются.  
   
 > [!WARNING]
->  В настоящее время параметр ** \@ credential_name** не поддерживается. Поддерживается только резервное копирование в блочный BLOB-объект, для которого этот параметр должен иметь значение NULL.  
+>  В настоящее время параметр **\@ credential_name** не поддерживается. Поддерживается только резервное копирование в блочный BLOB-объект, для которого этот параметр должен иметь значение NULL.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -109,7 +109,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [managed_backup managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)   
  [managed_backup.sp_backup_config_schedule (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
   

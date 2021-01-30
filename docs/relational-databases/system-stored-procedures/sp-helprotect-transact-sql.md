@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_helprotect
 - sp_helprotect_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fff150e26e7342beda98b2eb362e1fbb310cdab0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f64ca2d34d11811bec87c1e4e378b424065299c4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538748"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211925"
 ---
 # <a name="sp_helprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "89538748"
   Возвращает отчет со сведениями о разрешениях пользователя на объект или инструкцию в текущей базе данных.  
   
 > [!IMPORTANT]  
->  **sp_helprotect** не возвращает сведения о защищаемых объектах, которые появились в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Вместо этого используйте представление [sys. database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) и [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) .  
+>  **sp_helprotect** не возвращает сведения о защищаемых объектах, которые появились в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Вместо этого используйте [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) и [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) .  
   
  Не включает разрешения, которые всегда присваиваются предопределенным ролям сервера или базы данных. Не включает имена входа и пользователей, которые получают разрешения на основе своего членства в роли.  
   
@@ -52,11 +52,11 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
   
  Если *object_statement* является инструкцией, это может быть инструкция CREATE.  
   
-`[ @username = ] 'security_account'` Имя участника, для которого возвращаются разрешения. Аргумент *security_account* имеет тип **sysname**и значение по умолчанию NULL, которое возвращает все субъекты в текущей базе данных. *security_account* должен существовать в текущей базе данных.  
+`[ @username = ] 'security_account'` Имя участника, для которого возвращаются разрешения. Аргумент *security_account* имеет тип **sysname** и значение по умолчанию NULL, которое возвращает все субъекты в текущей базе данных. *security_account* должен существовать в текущей базе данных.  
   
-`[ @grantorname = ] 'grantor'` Имя участника, которому предоставлены разрешения. *Grant* имеет тип **sysname**и значение по умолчанию NULL, которое возвращает всю информацию о разрешениях, предоставленных любым участником в базе данных.  
+`[ @grantorname = ] 'grantor'` Имя участника, которому предоставлены разрешения. *Grant* имеет тип **sysname** и значение по умолчанию NULL, которое возвращает всю информацию о разрешениях, предоставленных любым участником в базе данных.  
   
-`[ @permissionarea = ] 'type'` Символьная строка, указывающая, следует ли отображать разрешения объекта (символьная строка **o**), разрешения инструкции (символьные **строки) или**оба (**ОС**). *Type имеет тип* **varchar (10)** и значение по умолчанию **OS**. *тип* может быть любым сочетанием **o** и **s**, с запятыми или пробелами между **o** и **s**или без них.  
+`[ @permissionarea = ] 'type'` Символьная строка, указывающая, следует ли отображать разрешения объекта (символьная строка **o**), разрешения инструкции (символьные **строки) или** оба (**ОС**). *Type имеет тип* **varchar (10)** и значение по умолчанию **OS**. *тип* может быть любым сочетанием **o** и **s**, с запятыми или пробелами между **o** и **s** или без них.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -73,7 +73,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 |**Действие**|**nvarchar(60)**|Имя разрешения. Инструкции с допустимыми разрешениями зависят от типа объекта.|  
 |**Столбец**|**sysname**|Тип разрешения:<br /><br /> All = разрешение затрагивает все текущие столбцы объекта.<br /><br /> New = разрешение затрагивает все новые столбцы, которые могут быть изменены для объекта в будущем (с помощью инструкции ALTER).<br /><br /> All+New = сочетание All и New.<br /><br /> Возвращает точку, если тип разрешения не применяется к столбцам.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Все аргументы в следующей процедуре являются необязательными. При выполнении без аргументов процедура `sp_helprotect` отображает все разрешения, которые были предоставлены или запрещены в текущей базе данных.  
   
  При указании некоторых, но не всех аргументов используйте именованные аргументы либо указывайте `NULL` в качестве заполнителя опущенных аргументов. Например, для получения отчета обо всех разрешениях, которые может предоставить участник, владеющий базой данных (`dbo`), выполните следующее:  

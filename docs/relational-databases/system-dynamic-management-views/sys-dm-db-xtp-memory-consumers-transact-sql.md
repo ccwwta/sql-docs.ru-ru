@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_db_xtp_memory_consumers
 - dm_db_xtp_memory_consumers
@@ -21,12 +21,12 @@ ms.assetid: f7ab2eaf-e627-464d-91fe-0e170b3f37bc
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b27a5202f20e6ced2ad73734688702cfbb7e7a2
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 28968656d3efbb5a9cc658168944b75e93350d44
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099894"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193615"
 ---
 # <a name="sysdm_db_xtp_memory_consumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "98099894"
 |memory_consumer_address|**varbinary**|Внутренний адрес потребителя памяти. Только для внутреннего использования.|  
 |xtp_object_id|**bigint**|Идентификатор объекта выполняющейся в памяти OLTP, соответствующий таблице, оптимизированной для памяти.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  На выходе выделения пространства на уровнях базы данных представляют собой пользовательские таблицы, индексы и системные таблицы. VARHEAP с object_id = NULL относится к памяти, выделенной для таблицы со столбцами переменной длины.  
   
 ## <a name="permissions"></a>Разрешения  

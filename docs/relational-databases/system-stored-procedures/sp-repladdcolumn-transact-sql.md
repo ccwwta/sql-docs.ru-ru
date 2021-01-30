@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_repladdcolumn_TSQL
 - sp_repladdcolumn
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9f4405bd222ee097d052d18648122313d9872329
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3579b68a229bd939be61bdb233e5d429dd0ca4c7
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538629"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193541"
 ---
 # <a name="sp_repladdcolumn-transact-sql"></a>sp_repladdcolumn (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -51,7 +51,7 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
  Имя табличной статьи, в которую будет добавлен столбец. *source_object* имеет тип **nvarchar (358**) и не имеет значения по умолчанию.  
   
  [ @column =] "*столбец*"  
- Имя столбца таблицы, добавляемого для репликации. *столбец* имеет тип **sysname**и не имеет значения по умолчанию.  
+ Имя столбца таблицы, добавляемого для репликации. *столбец* имеет тип **sysname** и не имеет значения по умолчанию.  
   
  [ @typetext = ] '*TypeText*'  
  Определение добавляемого столбца. *TypeText* имеет тип **nvarchar (3000)** и не имеет значения по умолчанию. Например, если добавляется столбец order_filled и это поле с одним символом, а не NULL, и имеет значение по умолчанию **N**, order_filled будет параметром *столбца* , а определение столбца, **char (1) NOT NULL constraint_name значением по умолчанию "N"** будет значение параметра *TypeText* .  
@@ -60,17 +60,17 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
  Имя публикации, к которой добавляется новый столбец. *publication_to_add* имеет тип **nvarchar (4000)** и значение по умолчанию **ALL**. Если **все**, то затрагиваются все публикации, содержащие эту таблицу. Если указан *publication_to_add* , то только эта публикация добавляет новый столбец.  
   
  [ @from_agent =] *from_agent*  
- Выполняется ли хранимая процедура агентом репликации. *from_agent* является **типом int**и значением по умолчанию **0**, где значение **1** используется, если хранимая процедура выполняется агентом репликации, а во всех остальных случаях используется значение по умолчанию **0**.  
+ Выполняется ли хранимая процедура агентом репликации. *from_agent* является **типом int** и значением по умолчанию **0**, где значение **1** используется, если хранимая процедура выполняется агентом репликации, а во всех остальных случаях используется значение по умолчанию **0**.  
   
  [ @schema_change_script =] "*schema_change_script*"  
  Указывает имя и путь к скрипту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используемому для изменения пользовательских хранимых процедур, сформированных системой. *schema_change_script* имеет тип **nvarchar (4000)** и значение по умолчанию NULL. При репликации транзакций допустимо заменять одну или несколько хранимых процедур по умолчанию пользовательскими. *schema_change_script* выполняется после изменения схемы в реплицированной статье таблицы с помощью sp_repladdcolumn и может использоваться для выполнения одного из следующих действий.  
   
 -   Если пользовательские хранимые процедуры автоматически создаются повторно, *schema_change_script* можно использовать для удаления этих пользовательских хранимых процедур и замены их пользовательскими хранимыми процедурами, которые поддерживают новую схему.  
   
--   Если пользовательские хранимые процедуры не формируются автоматически, *schema_change_script*можно использовать для повторного создания этих хранимых процедур или для создания пользовательских хранимых процедур, определяемых пользователем.  
+-   Если пользовательские хранимые процедуры не формируются автоматически, *schema_change_script* можно использовать для повторного создания этих хранимых процедур или для создания пользовательских хранимых процедур, определяемых пользователем.  
   
  [ @force_invalidate_snapshot =] *force_invalidate_snapshot*  
- Определяет возможность недействительности моментального снимка. *force_invalidate_snapshot* является **битом**и имеет значение по умолчанию **1**.  
+ Определяет возможность недействительности моментального снимка. *force_invalidate_snapshot* является **битом** и имеет значение по умолчанию **1**.  
   
  **1** указывает, что изменения в статье могут привести к недействительности моментального снимка, и, если это так, значение **1** дает разрешение на создание нового моментального снимка.  
   
@@ -89,7 +89,7 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера sysadmin и предопределенной роли базы данных db_owner могут выполнять процедуру sp_repladdcolumn.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Устаревшие функции в Репликация SQL Server](../../relational-databases/replication/deprecated-features-in-sql-server-replication.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

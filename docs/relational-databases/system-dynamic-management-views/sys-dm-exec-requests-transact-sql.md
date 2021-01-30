@@ -6,7 +6,7 @@ ms.date: 10/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_exec_requests_TSQL
 - sys.dm_exec_requests
@@ -21,12 +21,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a1ad13d4cdbcf8820a318a87f4ef9f52c488a406
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 79fdfc18a80ebff0e6e737db4efcdc81e5ae265d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171266"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192977"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -39,7 +39,7 @@ ms.locfileid: "98171266"
 |session_id|**smallint**|Идентификатор сеанса, к которому относится данный запрос. Не допускает значение NULL.|  
 |request_id|**int**|Идентификатор запроса. Уникален в контексте сеанса. Не допускает значение NULL.|  
 |start_time|**datetime**|Метка времени поступления запроса. Не допускает значение NULL.|  
-|status|**nvarchar(30)**|Состояние запроса. Оно может быть одним из следующих.<br /><br /> История<br />Запущен<br />Готово к запуску<br />В режиме ожидания<br />Приостановлена<br /><br /> Не допускает значение NULL.|  
+|status|**nvarchar(30)**|Состояние запроса. Оно может быть одним из следующих.<br /><br /> Фон<br />Запущен<br />Готово к запуску<br />В режиме ожидания<br />Приостановлена<br /><br /> Не допускает значение NULL.|  
 |.|**nvarchar(32)**|Тип выполняемой в данный момент команды. Основные типы команд:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> Текст запроса можно получить при помощи функции sys.dm_exec_sql_text, передав ей значение столбца sql_handle. Внутренние системные процессы устанавливают команду в соответствии с выполняемой задачей. Например:<br /><br /> LOCK MONITOR;<br />CHECKPOINTLAZY;<br />WRITER.<br /><br /> Не допускает значение NULL.|  
 |sql_handle|**varbinary (64)**|Токен, однозначно определяющий пакет или хранимую процедуру, частью которой является запрос. Допускает значение NULL.| 
 |statement_start_offset|**int**|Указывает, что в байтах, начиная с 0, начальной позицией выполняемой в данный момент инструкции для выполняемого в данный момент пакета или сохраненного объекта. Можно использовать вместе с `sql_handle` `statement_end_offset` функциями, и `sys.dm_exec_sql_text` динамической функцией управления, чтобы получить текущую выполняемую инструкцию для запроса. Допускает значение NULL.|  
@@ -99,7 +99,7 @@ ms.locfileid: "98171266"
 |page_server_reads|**bigint**|Область **применения**: масштабирование базы данных SQL Azure<br /><br /> Число операций чтения сервера страниц, выполненных этим запросом. Не допускает значение NULL.|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>Примечания 
+## <a name="remarks"></a>Замечания 
 Чтобы выполнить код, внешний по отношению к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (например, расширенную хранимую процедуру или распределенный запрос), поток должен выйти из-под управления планировщика, работающего в режиме без вытеснения. Для этого исполнитель переходит в режим с вытеснением. Значения времени, возвращаемые этим динамическим административным представлением, не включают время, затраченное в режиме с вытеснением.
 
 При выполнении параллельных запросов в [режиме строки](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] назначает рабочий поток для координации рабочих потоков, ответственных за выполнение назначенных им задач. В этом динамическом административном отображении для запроса отображается только поток координатора. Столбцы **операций чтения**, **записи**, **logical_reads** и **row_count** **не обновляются** для потока координатора. Столбцы **wait_type**, **wait_time**, **last_wait_type**, **wait_resource** и **granted_query_memory** **обновляются только** для потока координатора. Дополнительные сведения см. в статье [Руководство по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md).

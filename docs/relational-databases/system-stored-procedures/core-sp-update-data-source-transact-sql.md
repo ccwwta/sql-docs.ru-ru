@@ -1,13 +1,13 @@
 ---
 description: core.sp_update_data_source (Transact-SQL)
-title: Core. sp_update_data_source (Transact-SQL) | Документация Майкрософт
+title: core.sp_update_data_source (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_update_data_source
 - sp_update_data_source_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2ad50aaa81cb61b6ead9388e41e025993e54c364
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 45bfb2c042ea491516aa4d3caadff72c45451202
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550109"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99180596"
 ---
 # <a name="coresp_update_data_source-transact-sql"></a>core.sp_update_data_source (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,13 +48,13 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
   
 ## <a name="arguments"></a>Аргументы  
  [ @collection_set_uid =] "*collection_set_uid*"  
- Имеет значение GUID для набора элементов сбора. *collection_set_uid* имеет тип **uniqueidentifier**и не имеет значения по умолчанию. Чтобы получить идентификатор GUID, запросите представление dbo.syscollector_collection_sets в базе данных msdb.  
+ Имеет значение GUID для набора элементов сбора. *collection_set_uid* имеет тип **uniqueidentifier** и не имеет значения по умолчанию. Чтобы получить идентификатор GUID, запросите представление dbo.syscollector_collection_sets в базе данных msdb.  
   
  [ @machine_name =] "*machine_name*"  
  Имя сервера, на котором находится набор элементов сбора. *machine_name* имеет тип **sysname** и не имеет значения по умолчанию.  
   
  [ @named_instance =] "*named_instance*"  
- Имя экземпляра набора элементов сбора. Аргумент *named_instance* имеет тип **sysname**и не имеет значения по умолчанию.  
+ Имя экземпляра набора элементов сбора. Аргумент *named_instance* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 > [!NOTE]  
 >  *named_instance* должно быть полным именем экземпляра, состоящим из имени компьютера и имени экземпляра в формате *ComputerName* \\ *имя_экземпляра*.  
@@ -68,7 +68,7 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Каждый раз, когда пакет передачи начинает загружать данные в хранилище данных управления, исполняемый компонент сборщика данных вызывает функцию core.sp_update_data_source. Таблица core.source_info_internal обновляется, если со времени последней передачи данных произошло одно из следующих изменений.  
   
 -   Был добавлен новый набор элементов сбора.  

@@ -7,19 +7,19 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 helpviewer_keywords:
 - URL property [ADO]
 ms.assetid: 8c56b233-1be8-442c-8d0e-a4c96465bc99
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d693aab0c01e1a65715597c6f8905569aebbcae
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 1a780d7790568950833cb177f6ba87bd18ebd409
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724676"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166068"
 ---
 # <a name="url-property-rds"></a>Свойство URL (служба удаленных рабочих столов)
 Указывает строку, содержащую относительный или абсолютный URL-адрес.  
@@ -38,13 +38,13 @@ Run time: DataControl.URL="Server"
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Server*  
+ *Сервер*  
  **Строковое** значение, содержащее допустимый URL-адрес.  
   
  *DataControl*  
  Объектная переменная, представляющая объект- **элемент управления** .  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Как правило, URL-адрес определяет файл Active Server страницы (. ASP), который может создавать и возвращать [набор записей](../ado-api/recordset-object-ado.md). Таким образом, пользователь может получить **набор записей** , не выполняя серверный объект [факта](./datafactory-object-rdsserver.md) на стороне сервера, или запрограммировать пользовательский бизнес-объект.  
   
  Если свойство **URL** задано, [SubmitChanges](./submitchanges-method-rds.md) отправит изменения в расположение, указанное URL-адресом.  
@@ -52,5 +52,5 @@ Run time: DataControl.URL="Server"
 ## <a name="applies-to"></a>Применение  
  [Объект DataControl (служба удаленных рабочих столов)](./datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример свойства URL (VBScript)](./url-property-example-vbscript.md)

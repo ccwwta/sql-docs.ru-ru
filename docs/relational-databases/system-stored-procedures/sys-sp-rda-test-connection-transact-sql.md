@@ -1,12 +1,12 @@
 ---
-title: sys. sp_rda_test_connection (Transact-SQL) | Документация Майкрософт
-description: Узнайте, как использовать sys. sp_rda_test_connection для проверки подключения из SQL Server к удаленному серверу Azure и сообщает о проблемах, которые могут препятствовать миграции данных.
+title: sys.sp_rda_test_connection (Transact-SQL) | Документация Майкрософт
+description: Узнайте, как использовать sys.sp_rda_test_connection для проверки подключения SQL Server к удаленному серверу Azure и сообщает о проблемах, которые могут препятствовать миграции данных.
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: stored-procedures
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.sp_rda_test_connection
 - sys.sp_rda_test_connection_TSQL
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 031e3abe622a4a15fa9656e65bce80b5eaf27365
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e584604a0229e3e2e0c213b70d8fd4bca0321c2b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540410"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211717"
 ---
-# <a name="syssp_rda_test_connection-transact-sql"></a>sys. sp_rda_test_connection (Transact-SQL)
+# <a name="syssp_rda_test_connection-transact-sql"></a>sys.sp_rda_test_connection (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Проверяет подключение SQL Server к удаленному серверу Azure и сообщает о проблемах, которые могут препятствовать миграции данных.  
@@ -49,9 +49,9 @@ EXECUTE sys.sp_rda_test_connection
  @server_address = N '*azure_server_fully_qualified_address*'  
  Полный адрес сервера Azure.  
   
--   Если вы указали значение для ** \@ database_name**, но указанная база данных не поддерживает Stretch, необходимо указать значение для ** \@ server_address**.  
+-   Если вы указали значение для **\@ database_name**, но указанная база данных не поддерживает Stretch, необходимо указать значение для **\@ server_address**.  
   
--   Если указать значение для ** \@ database_name**и для указанной базы данных включено растяжение, то не нужно указывать значение для ** \@ server_address**. Если указать значение для ** \@ server_address**, хранимая процедура пропускает ее и использует существующий сервер Azure, уже связанный с базой данных с поддержкой Stretch.  
+-   Если указать значение для **\@ database_name** и для указанной базы данных включено растяжение, то не нужно указывать значение для **\@ server_address**. Если указать значение для **\@ server_address**, хранимая процедура пропускает ее и использует существующий сервер Azure, уже связанный с базой данных с поддержкой Stretch.  
   
  @azure_username = N '*azure_username*  
  Имя пользователя для удаленного сервера Azure.  
@@ -63,9 +63,9 @@ EXECUTE sys.sp_rda_test_connection
  Вместо указания имени пользователя и пароля можно указать имя учетных данных, хранящихся в базе данных с поддержкой Stretch.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- В случае **успеха**sp_rda_test_connection возвращает ошибку 14855 (STRETCH_MAJOR, STRETCH_CONNECTION_TEST_PROC_SUCCEEDED) с уровнем серьезности EX_INFO и кодом возврата успешного выполнения.  
+ В случае **успеха** sp_rda_test_connection возвращает ошибку 14855 (STRETCH_MAJOR, STRETCH_CONNECTION_TEST_PROC_SUCCEEDED) с уровнем серьезности EX_INFO и кодом возврата успешного выполнения.  
   
- В случае **сбоя**sp_rda_test_connection возвращает ошибку 14856 (STRETCH_MAJOR, STRETCH_CONNECTION_TEST_PROC_FAILED) с уровнем серьезности EX_USER и кодом возврата ошибки.  
+ В случае **сбоя** sp_rda_test_connection возвращает ошибку 14856 (STRETCH_MAJOR, STRETCH_CONNECTION_TEST_PROC_FAILED) с уровнем серьезности EX_USER и кодом возврата ошибки.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   

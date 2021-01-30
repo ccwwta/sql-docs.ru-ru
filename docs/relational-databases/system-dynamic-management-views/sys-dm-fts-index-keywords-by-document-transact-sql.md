@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_fts_index_keywords_by_document_TSQL
 - dm_fts_index_keywords_by_document_TSQL
@@ -23,12 +23,12 @@ ms.assetid: 793b978b-c8a1-428c-90c2-a3e49d81b5c9
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 353fcb321549546ff1b44956d5ebc20826e6c0e3
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: c11b68f45ef5f42cb4e46fdfb7c2c975df5483c5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97484706"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99193801"
 ---
 # <a name="sysdm_fts_index_keywords_by_document-transact-sql"></a>sys.dm_fts_index_keywords_by_document (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -72,7 +72,7 @@ sys.dm_fts_index_keywords_by_document
 |document_id|**int**|Идентификатор документа или строки, содержащей текущий термин, индексированный полнотекстовым индексом. Данный идентификатор соответствует значению полнотекстового ключа этого документа или строки.|  
 |occurrence_count|**int**|Количество вхождений текущего ключевого слова в документе или строке, которое указывается **document_id**. Если указан параметр "*search_property_name*", occurrence_count отображает только число вхождений текущего ключевого слова в указанном свойстве поиска в документе или строке.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Данные, возвращаемые функцией sys.dm_fts_index_keywords_by_document, позволяют, в частности, выяснить следующее:  
   
 -   общее число ключевых слов, содержащихся в полнотекстовом индексе;  

@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sys.dm_tran_transactions_snapshot
 - dm_tran_transactions_snapshot
@@ -21,12 +21,12 @@ ms.assetid: 03f64883-07ad-4092-8be0-31973348c647
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c6596b92ecd000b0742886ab6565caf2521f701
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: d83a8329f59c1e5b44ab952f8520733d0d14526b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101439"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203265"
 ---
 # <a name="sysdm_tran_transactions_snapshot-transact-sql"></a>sys.dm_tran_transactions_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -72,7 +72,7 @@ transaction_sequence_num snapshot_id snapshot_sequence_num
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
 В базах данных SQL Basic, S0 и S1, а также для баз данных в эластичных пулах `Server admin` `Azure Active Directory admin` требуется учетная запись или. Для всех остальных целей службы базы данных SQL `VIEW DATABASE STATE` разрешение требуется в базе данных.   
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  При запуске транзакции моментальных снимков компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] регистрирует все активные транзакции. **sys.dm_tran_transactions_snapshot** сообщает эти сведения обо всех активных транзакциях моментальных снимков.  
   
  Каждая транзакция имеет последовательный номер, который назначается ей при запуске. Запуск транзакций начинается с вызова инструкции BEGIN TRANSACTION или BEGIN WORK. Однако последовательный номер транзакции назначается компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] при выполнении первой инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], следующей за инструкцией BEGIN TRANSACTION или BEGIN WORK. Последовательные номера транзакций увеличиваются с единичным интервалом.  

@@ -7,19 +7,19 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - properties [ADOX]
 - ADOX, properties
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cbc72515c3ba8bcee52bff213ba11bd0b4bc2140
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 85f6cb74b25d7664bdf7b87c4290edd19a49dcd3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641153"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99164330"
 ---
 # <a name="adox-properties"></a>Свойства ADOX
 
@@ -27,16 +27,16 @@ ms.locfileid: "97641153"
 |-|-|  
 |[ActiveConnection](./activeconnection-property-adox.md)|Указывает объект **соединения** ADO, к которому принадлежит каталог.|  
 |[Атрибуты](./attributes-property-adox.md)|Описывает характеристики столбцов.|  
-|[Кластеризованный](./clustered-property-adox.md)|Указывает, является ли индекс кластеризованным.|  
+|[кластеризация](./clustered-property-adox.md).|Указывает, является ли индекс кластеризованным.|  
 |[Command](./command-property-adox.md)|Указывает объект **команды** ADO, который может быть использован для создания или выполнения процедуры.|  
-|[Count](../ado-api/count-property-ado.md)|Указывает количество объектов в коллекции.|  
+|[Количество](../ado-api/count-property-ado.md)|Указывает количество объектов в коллекции.|  
 |[DateCreated](./datecreated-property-adox.md)|Указывает дату создания объекта.|  
 |[DateModified](./datemodified-property-adox.md)|Указывает дату последнего изменения объекта.|  
 |[DefinedSize](./definedsize-property-adox.md)|Указывает указанный максимальный размер столбца.|  
 |[DeleteRule](./deleterule-property-adox.md)|Указывает действие, выполняемое при удалении первичного ключа.|  
 |[IndexNulls](./indexnulls-property-adox.md)|Указывает, имеют ли записи индекса элементы, имеющие значения NULL в полях индекса.|  
 |[Элемент](../ado-api/item-property-ado.md)|Указывает конкретный элемент коллекции по имени или порядковому номеру.|  
-|[имя](./name-property-adox.md);|Указывает имя объекта.|  
+|[Имя](./name-property-adox.md)|Указывает имя объекта.|  
 |[NumericScale](./numericscale-property-adox.md)|Указывает Масштаб числового значения в столбце.|  
 |[ParentCatalog](./parentcatalog-property-adox.md)|Указывает родительский каталог таблицы или столбца, чтобы предоставить доступ к свойствам, зависящим от поставщика.|  
 |[Точность](./precision-property-adox.md)|Указывает максимальную точность значений данных в столбце.|  

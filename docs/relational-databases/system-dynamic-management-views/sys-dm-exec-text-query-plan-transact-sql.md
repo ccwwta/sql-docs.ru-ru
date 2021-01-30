@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - dm_exec_text_query_plan
 - sys.dm_exec_text_query_plan_TSQL
@@ -21,12 +21,12 @@ ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a085041b90652dbdaa3408b0780338df88322751
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 95259700c5235ebe748ae4eaaa0f320df8c7a595
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98096582"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192952"
 ---
 # <a name="sysdm_exec_text_query_plan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -94,7 +94,7 @@ sys.dm_exec_text_query_plan
 |**Шифрование**|**bit**|Указывает, зашифрована ли соответствующая хранимая процедура.<br /><br /> 0 = не зашифрована<br /><br /> 1 = зашифрована<br /><br /> Столбец не может содержать значение NULL.|  
 |**query_plan**|**nvarchar(max)**|Содержит представление Showplan времени компиляции для плана выполнения запроса, указанного в *plan_handle*. Инструкция Showplan имеет текстовый формат. Для каждого пакета, содержащего, например нерегламентированные инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)], вызовы хранимых процедур и вызовы определяемых пользователем функций, формируется один план.<br /><br /> Столбец может содержать значение NULL.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  При следующих условиях вывод инструкции Showplan не возвращается в столбец **plan** возвращаемой таблицы для функции **sys.dm_exec_text_query_plan**.  
   
 -   Если план запроса, указанный с помощью *plan_handle* , был исключен из кэша планов, то **query_plan** столбец возвращаемой таблицы имеет значение null. Например, такое условие может возникнуть при наличии задержки между принятием и использованием дескриптора плана функции **sys.dm_exec_text_query_plan**.  
