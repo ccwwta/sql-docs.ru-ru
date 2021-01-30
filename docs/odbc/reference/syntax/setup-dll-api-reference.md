@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ODBC drivers [ODBC], driver setup DLL
 - driver setup DLL [ODBC]
 ms.assetid: f9d03f17-1c0d-4e7c-9c04-8c316e07ef25
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5cb3e20a1c25d206a1dd27367bbe4a128af0818f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d80d6315227013d2de149d6847eb0ed5b8fa223a
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487337"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174605"
 ---
 # <a name="setup-dll-api-reference"></a>Справочник по API библиотеки DLL установки
 В этом разделе описывается синтаксис API библиотеки DLL установки драйвера, который состоит из двух функций (**конфигдривер** и **ConfigDSN**). **Конфигдривер** и **ConfigDSN** могут быть либо в библиотеке DLL драйвера, либо в отдельной библиотеке DLL установки.  

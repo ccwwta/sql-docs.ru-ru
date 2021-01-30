@@ -7,18 +7,18 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - functions [ODBC], setup DLL functions
 ms.assetid: d18169eb-89f7-4079-be70-a85713030191
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8729cb681a7518125e218bac08874e8fd02cd7c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b41d7aca777fd2f010a75871c1a6a060336457a1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487327"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174594"
 ---
 # <a name="setup-dll-function-summary"></a>Сводка по функциям библиотеки DLL установки
 В следующей таблице описаны функции библиотеки DLL программы установки. Дополнительные сведения о синтаксисе и семантике для каждой функции см. в [справочнике по API DLL установки](../../../odbc/reference/syntax/setup-dll-api-reference.md).  

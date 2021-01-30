@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_columns_ex
 - sp_columns_ex_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9ea62e350628099685b372362a3d6d075a90367b
-ms.sourcegitcommit: b3a711a673baebb2ff10d7142b209982b46973ae
+ms.openlocfilehash: 6696187b8f2b85b8a7ed179bfe406490e2c650aa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "93364849"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174485"
 ---
 # <a name="sp_columns_ex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +64,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Имя квалификатора таблицы или представления. Различные продукты СУБД поддерживают имена таблиц ( _Квалификаторы_**,** состоящие из трех частей). _владелец_**.** _имя_ ). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, где находится таблица. Это поле может иметь значение NULL.|  
+|**TABLE_CAT**|**sysname**|Имя квалификатора таблицы или представления. Различные продукты СУБД поддерживают имена таблиц (_Квалификаторы_**,** состоящие из трех частей). _владелец_**.** _имя_). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, где находится таблица. Это поле может иметь значение NULL.|  
 |**TABLE_SCHEM**|**sysname**|Имя владельца таблицы или представления. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя пользователя базы данных, который создал таблицу. Это поле всегда возвращает значение.|  
 |**TABLE_NAME**|**sysname**|Имя таблицы или представления. Это поле всегда возвращает значение.|  
 |**COLUMN_NAME**|**sysname**|Имя столбца для каждого столбца возвращаемого **table_name** . Это поле всегда возвращает значение.|  
@@ -86,8 +86,8 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
  Дополнительные сведения см. в документации по Microsoft ODBC.  
   
-## <a name="remarks"></a>Комментарии  
-- **sp_columns_ex** выполняется путем запроса набора строк COLUMNS интерфейса **IDBSchemaRowset** поставщика OLE DB, соответствующего *table_server*. Параметры *table_name* , *table_schema* , *table_catalog* и *столбцов* передаются этому интерфейсу для ограничения возвращаемых строк.  
+## <a name="remarks"></a>Замечания  
+- **sp_columns_ex** выполняется путем запроса набора строк COLUMNS интерфейса **IDBSchemaRowset** поставщика OLE DB, соответствующего *table_server*. Параметры *table_name*, *table_schema*, *table_catalog* и *столбцов* передаются этому интерфейсу для ограничения возвращаемых строк.  
   
 - **sp_columns_ex** возвращает пустой результирующий набор, если поставщик OLE DB указанного связанного сервера не поддерживает набор строк COLUMNS интерфейса **IDBSchemaRowset** .  
   

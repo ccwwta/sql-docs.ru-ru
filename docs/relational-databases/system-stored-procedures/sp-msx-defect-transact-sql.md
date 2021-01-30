@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_msx_defect
 - sp_msx_defect_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a1b5ea1139e0cfc1b27d7b79df29e6c1b1381b4d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2ca7f1d044ddfe0730052ff811e6084d5c070b6d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541556"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174451"
 ---
 # <a name="sp_msx_defect-transact-sql"></a>sp_msx_defect (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,9 +43,9 @@ sp_msx_defect [@forced_defection =] forced_defection
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @forced_defection = ] forced_defection` Указывает, следует ли принудительно вызывать исключение в случае окончательного потери главного SQLServerAgent из-за необратимой поврежденной базы данных **msdb** или отсутствия резервной копии базы данных **msdb** . *forced_defection*имеет **бит**и значение по умолчанию **0**, что означает, что принудительное исключение не должно выполняться. Значение **1** вызывает исключение.  
+`[ @forced_defection = ] forced_defection` Указывает, следует ли принудительно вызывать исключение в случае окончательного потери главного SQLServerAgent из-за необратимой поврежденной базы данных **msdb** или отсутствия резервной копии базы данных **msdb** . *forced_defection* имеет **бит** и значение по умолчанию **0**, что означает, что принудительное исключение не должно выполняться. Значение **1** вызывает исключение.  
   
- После принудительного исключения путем выполнения **sp_msx_defect**член предопределенной роли сервера **sysadmin** на главном SQLServerAgent должен выполнить следующую команду, чтобы завершить исключение:  
+ После принудительного исключения путем выполнения **sp_msx_defect** член предопределенной роли сервера **sysadmin** на главном SQLServerAgent должен выполнить следующую команду, чтобы завершить исключение:  
   
 ```  
 EXECUTE msdb.dbo.sp_delete_targetserver @server_name = 'tsx-server', @post_defection =  0;  
@@ -63,7 +63,7 @@ EXECUTE msdb.dbo.sp_delete_targetserver @server_name = 'tsx-server', @post_defec
 ## <a name="permissions"></a>Разрешения  
  Для выполнения этой хранимой процедуры пользователь должен быть членом предопределенной роли сервера **sysadmin** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_msx_enlist &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

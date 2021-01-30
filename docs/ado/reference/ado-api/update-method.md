@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Recordset15::Update
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb673de86d48143a8869460eeab3377f3c0ec0d2
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 279d0e82bff4d71a2c3b18bbdc7ff88f0b9581a9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88988105"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172426"
 ---
 # <a name="update-method"></a>Метод Update
 Сохраняет любые изменения, внесенные в текущую строку объекта [набора записей](./recordset-object-ado.md) , или коллекцию [Fields](./fields-collection-ado.md) объекта [Record](./record-object-ado.md) .  
@@ -35,13 +35,13 @@ record.Fields.Update
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Поля*  
- Необязательный элемент. **Вариант** , представляющий одно имя или массив **Variant** , представляющий имена или порядковые позиции поля или полей, которые требуется изменить.  
+ *Fields*  
+ Необязательный параметр. **Вариант** , представляющий одно имя или массив **Variant** , представляющий имена или порядковые позиции поля или полей, которые требуется изменить.  
   
  *Значения*  
- Необязательный элемент. **Вариант** , представляющий одиночное значение, или массив **Variant** , представляющий значения для поля или полей в новой записи.  
+ Необязательный параметр. **Вариант** , представляющий одиночное значение, или массив **Variant** , представляющий значения для поля или полей в новой записи.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
   
 ## <a name="recordset"></a>набор записей  
  Используйте метод **Update** , чтобы сохранить изменения, внесенные в текущую запись объекта **набора записей** , с момента вызова метода [AddNew](./addnew-method-ado.md) или изменения любых значений полей в существующей записи. Объект **набора записей** должен поддерживать обновления.  
@@ -62,7 +62,7 @@ record.Fields.Update
   
  Текущая запись остается текущей после вызова метода **Update** .  
   
-## <a name="record"></a>Записей  
+## <a name="record"></a>Record  
  Метод **Update** завершает Добавление, удаление и обновление полей в коллекции [Fields](./fields-collection-ado.md) объекта **Record** .  
   
  Например, поля, удаленные с помощью метода **Delete** , помечаются для удаления немедленно, но остаются в коллекции. Для фактического удаления этих полей из коллекции поставщика необходимо вызвать метод **Update** .  
@@ -78,7 +78,7 @@ record.Fields.Update
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Примеры методов Update и CancelUpdate (Visual Basic)](./update-and-cancelupdate-methods-example-vb.md)   
  [Примеры методов Update и CancelUpdate (Visual c++)](./update-and-cancelupdate-methods-example-vc.md)   
  [Метод AddNew (ADO)](./addnew-method-ado.md)   

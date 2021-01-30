@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_MSchange_snapshot_agent_properties_TSQL
 - sp_MSchange_snapshot_agent_properties
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7947a788-3fd7-469f-84db-b03ba89a153c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2baf36e4f2eb4d4b16fa441969fdbbb6ba4f1e10
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f07673e9dd7b613e34a5f56d6fa4c3629d3e1540
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89535081"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174502"
 ---
 # <a name="sp_mschange_snapshot_agent_properties-transact-sql"></a>sp_MSchange_snapshot_agent_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,13 +57,13 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @publisher = ] 'publisher'` Имя издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher = ] 'publisher'` Имя издателя. параметр *Publisher* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @publisher_db = ] 'publisher_db'` Имя базы данных публикации. Аргумент *publisher_db* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publisher_db = ] 'publisher_db'` Имя базы данных публикации. Аргумент *publisher_db* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @publication = ] 'publication'` Имя публикации. Аргумент *publication* имеет тип **sysname** и не имеет значения по умолчанию.  
   
-`[ @frequency_type = ] frequency_type` Частота, с которой выполняется агент моментальных снимков. *frequency_type* имеет **тип int**и может принимать одно из следующих значений.  
+`[ @frequency_type = ] frequency_type` Частота, с которой выполняется агент моментальных снимков. *frequency_type* имеет **тип int** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -75,36 +75,36 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 |**20**|Ежемесячно, в соответствии с заданным интервалом|  
 |**40**|При запуске агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
   
-`[ @frequency_interval = ] frequency_interval` Значение, применяемое к частоте, установленной *frequency_type*. *frequency_interval* имеет **тип int**и не имеет значения по умолчанию.  
+`[ @frequency_interval = ] frequency_interval` Значение, применяемое к частоте, установленной *frequency_type*. *frequency_interval* имеет **тип int** и не имеет значения по умолчанию.  
   
-`[ @frequency_subday = ] frequency_subday` Единицы измерения для *freq_subday_interval*. *frequency_subday* имеет **тип int**и может принимать одно из следующих значений.  
+`[ @frequency_subday = ] frequency_subday` Единицы измерения для *freq_subday_interval*. *frequency_subday* имеет **тип int** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |**1**|Однократно|  
-|**2**|Second|  
+|**2**|Секунда|  
 |**4**|Минута|  
 |**8**|Час|  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval` Интервал для *frequency_subday*. *frequency_subday_interval* имеет **тип int**и не имеет значения по умолчанию.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Интервал для *frequency_subday*. *frequency_subday_interval* имеет **тип int** и не имеет значения по умолчанию.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval` Дата выполнения агент моментальных снимков. *frequency_relative_interval* имеет **тип int**и не имеет значения по умолчанию.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` Дата выполнения агент моментальных снимков. *frequency_relative_interval* имеет **тип int** и не имеет значения по умолчанию.  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Коэффициент повторения, используемый *frequency_type*. *frequency_recurrence_factor* имеет **тип int**и не имеет значения по умолчанию.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Коэффициент повторения, используемый *frequency_type*. *frequency_recurrence_factor* имеет **тип int** и не имеет значения по умолчанию.  
   
-`[ @active_start_date = ] active_start_date` Дата первого запланированного запуска агент моментальных снимков в формате ГГГГММДД. *active_start_date* имеет **тип int**и не имеет значения по умолчанию.  
+`[ @active_start_date = ] active_start_date` Дата первого запланированного запуска агент моментальных снимков в формате ГГГГММДД. *active_start_date* имеет **тип int** и не имеет значения по умолчанию.  
   
-`[ @active_end_date = ] active_end_date` Дата прекращения расписания агент моментальных снимков в формате ГГГГММДД. *active_end_date* имеет **тип int**и не имеет значения по умолчанию.  
+`[ @active_end_date = ] active_end_date` Дата прекращения расписания агент моментальных снимков в формате ГГГГММДД. *active_end_date* имеет **тип int** и не имеет значения по умолчанию.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day` Время первого запланированного агент моментальных снимков в формате ЧЧММСС. *active_start_time_of_day* имеет **тип int**и не имеет значения по умолчанию.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Время первого запланированного агент моментальных снимков в формате ЧЧММСС. *active_start_time_of_day* имеет **тип int** и не имеет значения по умолчанию.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day` Время суток, когда запланировать агент моментальных снимков прекращается в формате ЧЧММСС. *active_end_time_of_day* имеет **тип int**и не имеет значения по умолчанию.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Время суток, когда запланировать агент моментальных снимков прекращается в формате ЧЧММСС. *active_end_time_of_day* имеет **тип int** и не имеет значения по умолчанию.  
   
 `[ @snapshot_job_name = ] 'snapshot_agent_name'` Имя существующего агент моментальных снимков имени задания, если используется существующее задание. *snapshot_agent_name* имеет тип **nvarchar (100)** и не имеет значения по умолчанию.  
   
-`[ @publisher_security_mode = ] publisher_security_mode` Режим безопасности, используемый агентом при соединении с издателем. *publisher_security_mode* имеет **тип int**и не имеет значения по умолчанию. **0** — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности, а **1** — проверка подлинности Windows. Значение **0** должно быть указано для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, отличных от. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode` Режим безопасности, используемый агентом при соединении с издателем. *publisher_security_mode* имеет **тип int** и не имеет значения по умолчанию. **0** — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности, а **1** — проверка подлинности Windows. Значение **0** должно быть указано для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, отличных от. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @publisher_login = ] 'publisher_login'` Имя входа, используемое при соединении с издателем. Аргумент *publisher_login* имеет тип **sysname**и не имеет значения по умолчанию. необходимо указать *publisher_login* , если *publisher_security_mode* равен **0**. Если *publisher_login* имеет значение NULL и издатель *_ * * security_mode* равен **1**, то при соединении с издателем будет использоваться учетная запись Windows, указанная в *job_login* .  
+`[ @publisher_login = ] 'publisher_login'` Имя входа, используемое при соединении с издателем. Аргумент *publisher_login* имеет тип **sysname** и не имеет значения по умолчанию. необходимо указать *publisher_login* , если *publisher_security_mode* равен **0**. Если *publisher_login* имеет значение NULL и издатель *_ * * security_mode* равен **1**, то при соединении с издателем будет использоваться учетная запись Windows, указанная в *job_login* .  
   
 `[ @publisher_password = ] 'publisher_password'` Пароль, используемый при соединении с издателем. *publisher_password* имеет тип **nvarchar (524)** и не имеет значения по умолчанию.  
   
@@ -113,12 +113,12 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
   
 `[ @job_login = ] 'job_login'` Имя входа для учетной записи Windows, под которой запускается агент. *job_login* имеет тип **nvarchar (257)** и не имеет значения по умолчанию. Для соединения агента с распространителем всегда используется эта учетная запись Windows. Необходимо указывать этот аргумент при создании нового задания агента моментальных снимков. *Его нельзя изменить для не относящегося к* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Издатель.*  
   
-`[ @job_password = ] 'job_password'` Пароль для учетной записи Windows, под которой запускается агент. Аргумент *job_password* имеет тип **sysname**и не имеет значения по умолчанию. Необходимо указывать этот аргумент при создании нового задания агента моментальных снимков.  
+`[ @job_password = ] 'job_password'` Пароль для учетной записи Windows, под которой запускается агент. Аргумент *job_password* имеет тип **sysname** и не имеет значения по умолчанию. Необходимо указывать этот аргумент при создании нового задания агента моментальных снимков.  
   
 > [!IMPORTANT]  
 >  Не храните данные проверки подлинности в файлах скриптов. В целях повышения безопасности рекомендуется вводить имена входа и пароли во время выполнения.  
   
-`[ @publisher_type = ] 'publisher_type'` Указывает тип издателя, если издатель не выполняется в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *publisher_type* имеет тип **sysname**и может принимать одно из следующих значений.  
+`[ @publisher_type = ] 'publisher_type'` Указывает тип издателя, если издатель не выполняется в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *publisher_type* имеет тип **sysname** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -131,17 +131,17 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_MSchange_snapshot_agent_properties** используется в репликации моментальных снимков, репликации транзакций и репликации слиянием.  
   
- При выполнении **sp_MSchange_snapshot_agent_properties**необходимо указать все параметры. Выполните [sp_helppublication_snapshot](../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md) , чтобы получить текущие свойства задания агент моментальных снимков.  
+ При выполнении **sp_MSchange_snapshot_agent_properties** необходимо указать все параметры. Выполните [sp_helppublication_snapshot](../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md) , чтобы получить текущие свойства задания агент моментальных снимков.  
   
  При запуске издателя на экземпляре [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней версии следует использовать [sp_changepublication_snapshot](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) для изменения свойств задания агент моментальных снимков.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** на распространителе могут выполнять **sp_MSchange_snapshot_agent_properties**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_addpublication_snapshot (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)  
   
   

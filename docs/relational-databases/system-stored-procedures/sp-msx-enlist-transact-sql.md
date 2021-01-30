@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_msx_enlist_TSQL
 - sp_msx_enlist
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9435c4b8628bb119b0ac81126e50e37a67650532
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 13a8c58ffa932199452db856b04e880dbbe2ff95
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541646"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174438"
 ---
 # <a name="sp_msx_enlist-transact-sql"></a>sp_msx_enlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ sp_msx_enlist [@msx_server_name =] 'msx_server'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @msx_server_name = ] 'msx_server'` Имя сервера администрирования многосерверной версии (Master). Аргумент *msx_server* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @msx_server_name = ] 'msx_server'` Имя сервера администрирования многосерверной версии (Master). Аргумент *msx_server* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 `[ @location = ] 'location'` Расположение добавляемого целевого сервера. *Location* имеет тип **nvarchar (100)** и значение по умолчанию NULL.  
   
@@ -69,7 +69,7 @@ EXEC dbo.sp_msx_enlist N'AdventureWorks1',
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_msx_defect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [xp_cmdshell &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-cmdshell-transact-sql.md)  

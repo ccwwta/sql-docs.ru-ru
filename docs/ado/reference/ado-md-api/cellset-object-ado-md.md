@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - Cellset
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 411ed21d5fecf5c9791a5d96aac60724e7446958
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 5c9324c76a515a4b6ca300cdf15d23174ff8935c
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987155"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174311"
 ---
 # <a name="cellset-object-ado-md"></a>Объект Cellset (многомерные объекты ADO)
 Представляет результаты многомерного запроса. Это коллекция ячеек, выбранных из кубов или других наборы ячеек.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Данные в наборе **ячеек** извлекаются с помощью прямого доступа к массиву, подобного. Можно выполнить детализацию до определенного элемента, чтобы получить данные об этом элементе. Например, следующий код возвращает заголовок первого элемента в первой на первой оси в наборе ячеек с именем `cst` :  
   
 ```  
@@ -59,7 +59,7 @@ cst.Axes(0).Positions(0).Members(0).Caption
   
 -   [Свойства, методы и события](./cellset-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример набора ячеек (Visual Basic)](./cellset-example-vb.md)   
  [Коллекция осей (объекты данных ActiveX (MD))](./axes-collection-ado-md.md)   
  [Объект Cell (объекты данных ActiveX (MD))](./cell-object-ado-md.md)   

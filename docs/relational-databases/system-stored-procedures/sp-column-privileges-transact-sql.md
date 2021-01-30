@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_column_privileges_TSQL
 - sp_column_privileges
@@ -19,12 +19,12 @@ ms.assetid: a3784301-2517-4b1d-bbd9-47404483fad0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 279789c40dbc79dd3d7b2d421d757a936b0e6126
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: db99cb2e9acb8ede62a066291cce68d209e495c3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482403"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174526"
 ---
 # <a name="sp_column_privileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -72,7 +72,7 @@ sp_column_privileges [ @table_name = ] 'table_name'
 |PRIVILEGE|**varchar (** 32 **)**|Одно из доступных разрешений на доступ к столбцу. Разрешениями для столбца может быть одно из следующих значений (или другие значения, поддерживаемые источником данных для определенных реализаций):<br /><br /> SELECT = пользователь GRANTEE может получать данные для столбцов;<br /><br /> INSERT = пользователь GRANTEE может предоставлять данные для этого столбца, когда новые строки вставляются (этим пользователем) в таблицу;<br /><br /> UPDATE = пользователь GRANTEE может изменять существующие данные в столбце;<br /><br /> REFERENCES = GRANTEE — может ссылаться на столбец во внешней таблице в связи «первичный-внешний ключ». Связи «первичный/внешний ключ» определяются с помощью ограничений таблицы.|  
 |IS_GRANTABLE|**varchar (** 3 **)**|Указывает, разрешено ли пользователю GRANTEE предоставлять разрешения другим пользователям (часто обозначается как разрешение «право передачи»). Может иметь значение YES, NO или NULL. Неизвестное значение или значение NULL, указывает на источник данных, для которого не применимо разрешение «право передачи».|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разрешения предоставляются инструкцией GRANT и отзываются инструкцией REVOKE.  
   
 ## <a name="permissions"></a>Разрешения  

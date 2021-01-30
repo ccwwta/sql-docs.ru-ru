@@ -7,7 +7,7 @@ ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.topic: conceptual
+ms.topic: reference
 apitype: COM
 f1_keywords:
 - CubeDef
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: de22ce013d94b1830ba220c318c06bbe716423bd
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: bae255b0de860a1caee016d5e8867c7fb9b3ffee
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987025"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174319"
 ---
 # <a name="cubedef-object-ado-md"></a>Объект CubeDef (многомерные объекты ADO)
 Представляет куб из многомерной схемы, содержащий набор связанных измерений.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  С помощью коллекций и свойств объекта **CubeDef** можно выполнять следующие действия.  
   
 -   Найдите **CubeDef** с помощью свойства [Name](./name-property-ado-md.md) .  
@@ -39,7 +39,7 @@ ms.locfileid: "88987025"
   
  Коллекция **Properties** содержит свойства, предоставляемые поставщиком. В следующей таблице перечислены свойства, которые могут быть доступны. Фактический список свойств может отличаться в зависимости от реализации поставщика. Более полный список доступных свойств см. в документации поставщика.  
   
-|Имя|Описание|  
+|name|Описание|  
 |----------|-----------------|  
 |CatalogName|Имя каталога, которому принадлежит куб.|  
 |CreatedOn|Дата и время создания куба.|  
@@ -56,7 +56,7 @@ ms.locfileid: "88987025"
   
 -   [Свойства, методы и события](./cubedef-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример CubeDef (VBScript)](./cubedef-example-vbscript.md)   
  [Объект каталога (объекты данных ActiveX (MD))](./catalog-object-ado-md.md)   
  [Коллекция Кубедефс (объекты данных ActiveX (MD))](./cubedefs-collection-ado-md.md)   

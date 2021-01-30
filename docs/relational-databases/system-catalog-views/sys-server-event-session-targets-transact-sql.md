@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - server_event_session_targets_TSQL
 - sys.server_event_session_targets_TSQL
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: dda4879d-57ae-4267-b410-1ef5c37404c7
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: a3b36cfd632ec01ab483021f7ee9705d7871540d
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: d69b9273cbcf67484568300793ece0cb8f0c05e9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097915"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99172639"
 ---
 # <a name="sysserver_event_session_targets-transact-sql"></a>sys.server_event_session_targets (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -44,10 +44,10 @@ ms.locfileid: "98097915"
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Это представление имеет следующее количество элементов связей.  
   
-| От | Кому | Relationship |
+| От | Кому | Связь |
 | ---- | -- | ------------ |
 |sys.server_event_session_targets.event_session_id|sys.server_event_sessions sys.server_event_sessions.event_session_id|Многие к одному|  
   

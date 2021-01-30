@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_syspolicy_update_policy_category_subscription_TSQL
 - sp_syspolicy_update_policy_category_subscription
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0769566-8f5c-4c8a-84d3-ee17ea6e0cb4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 78f2b47d687c695c50710d045e99494ac61598b8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 493da853bc06eb1c56986a99a0b2a2aac9c2e5c1
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493003"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99174402"
 ---
 # <a name="sp_syspolicy_update_policy_category_subscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,20 +43,20 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @policy_category_subscription_id = ] policy_category_subscription_id` — Это идентификатор подписки на категорию политики, которую необходимо обновить. *policy_category_subscription_id* имеет **тип int**и является обязательным.  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id` — Это идентификатор подписки на категорию политики, которую необходимо обновить. *policy_category_subscription_id* имеет **тип int** и является обязательным.  
   
-`[ @target_type = ] 'target_type'` Тип целевого объекта подписки на категорию. Аргумент *target_type* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @target_type = ] 'target_type'` Тип целевого объекта подписки на категорию. Аргумент *target_type* имеет тип **sysname** и значение по умолчанию NULL.  
   
- При указании *target_type*значение должно быть равно "Database".  
+ При указании *target_type* значение должно быть равно "Database".  
   
-`[ @target_object = ] 'target_object'` Имя базы данных, которая будет подписываться на категорию политики. Аргумент *target_object* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @target_object = ] 'target_object'` Имя базы данных, которая будет подписываться на категорию политики. Аргумент *target_object* имеет тип **sysname** и значение по умолчанию NULL.  
   
-`[ @policy_category = ] 'policy_category'` Имя категории политики, на которую должна подписываться база данных. Аргумент *policy_category* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @policy_category = ] 'policy_category'` Имя категории политики, на которую должна подписываться база данных. Аргумент *policy_category* имеет тип **sysname** и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Процедура sp_syspolicy_update_policy_category_subscription должна выполняться в контексте системной базы данных msdb.  
   
  Чтобы получить значения для *policy_category_subscription_id* и для *policy_category*, можно использовать следующий запрос:  
