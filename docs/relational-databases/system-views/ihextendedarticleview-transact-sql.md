@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - IHextendedArticleView_TSQL
 - IHextendedArticleView
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 19ef0a12-3214-4bb0-9c25-a665897e65a2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8a56d2e7b96464866f0216e1f93ef6eb3d1066df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c91f65a94e0eb2699b4146d1bafdeebc0c4201d6
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463876"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186203"
 ---
 # <a name="ihextendedarticleview-transact-sql"></a>IHextendedArticleView (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88463876"
 |**description**|**nvarchar(255)**|Описание статьи.|  
 |**creation_script**|**nvarchar(255)**|Скрипт создания схемы для статьи.|  
 |**del_cmd**|**nvarchar(255)**|Команда, выполняемая для инструкции DELETE.|  
-|**Фильтрация**|**int**|Идентификатор хранимой процедуры, с помощью которого определяется горизонтальная секция.|  
+|**filter**|**int**|Идентификатор хранимой процедуры, с помощью которого определяется горизонтальная секция.|  
 |**filter_clause**|**ntext**|Предложение WHERE, которое применяется для горизонтальной фильтрации статьи.|  
 |**ins_cmd**|**nvarchar(255)**|Команда, выполняемая для инструкции INSERT.|  
 |**pre_creation_cmd**|**tinyint**|Команда, выполняемая перед инструкциями DROP TABLE, DELETE TABLE или TRUNCATE:<br /><br /> **0** = нет.<br /><br /> **1** = удалить.<br /><br /> **2** = удалить.<br /><br /> **3** = усечение.|  

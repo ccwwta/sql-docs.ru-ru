@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - log_shipping_monitor_history_detail_TSQL
 - log_shipping_monitor_history_detail
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7080c888-323b-4206-a1ab-e6c51f9e2579
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 3cd8f1b5c42d62ed508527b46d4a3705ad63dd09
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: a2b97aaf55c31f7ae79468d4cfa16fbff947f1fd
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98094853"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186930"
 ---
 # <a name="log_shipping_monitor_history_detail-transact-sql"></a>log_shipping_monitor_history_detail (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "98094853"
 |**log_time_utc**|**datetime**|Дата и время создания записи по Гринвичу.|  
 |**message**|**nvarchar(max)**|Текст сообщения.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Эта таблица содержит подробное описание агентов доставки журналов. Для обнаружения сеанса агента используйте столбцы **agent_id**, **agent_type** и **session_id**. Чтобы просмотреть данные журнала для сеанса агента, отсортируйте по **log_time**.  
   
  Помимо хранения на удаленном сервере мониторинга, сведения, относящиеся к основному серверу, хранятся на сервере-источнике в его **log_shipping_monitor_history_detail** таблице, а сведения, связанные с сервером-получателем, также хранятся на сервере-получателе в своей **log_shipping_monitor_history_detail** таблице.  

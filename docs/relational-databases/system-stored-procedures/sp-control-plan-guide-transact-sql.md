@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_control_plan_guide
 - sp_control_plan_guide_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5a66806fa3c4865da7486a7ada3c46a9691be6d7
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: 0b4f5d1adbdadf9d8291257708a3098fb50ce175
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753908"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185788"
 ---
 # <a name="sp_control_plan_guide-transact-sql"></a>Хранимая процедура sp_control_plan_guide (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +72,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  ENABLE ALL  
  Включает все структуры планов в текущей базе данных. Невозможно указать **N "**_plan_guide_name_**"**, если задан параметр "включить все".  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Попытка удаления или изменения функции, хранимой процедуры или триггера DML, на которые имеется ссылка в структуре плана (как включенных, так и отключенных), приводит к ошибке.  
   
  Отключение уже отключенной структуры плана или включение включенной не имеет силы и не вызывает ошибки.  
@@ -80,7 +80,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  Руководства планов доступны не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md). Однако можно выполнить **sp_control_plan_guide** с параметром DROP или Drop ALL в любом выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="permissions"></a>Разрешения  
- Для выполнения **sp_control_plan_guide** в структуре плана типа Object (созданная с указанием ** @type "** Object **"** ) требуется разрешение ALTER на объект, на который ссылается структура плана. Все остальные структуры планов требуют разрешения ALTER DATABASE.  
+ Для выполнения **sp_control_plan_guide** в структуре плана типа Object (созданная с указанием **@type "** Object **"** ) требуется разрешение ALTER на объект, на который ссылается структура плана. Все остальные структуры планов требуют разрешения ALTER DATABASE.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -134,7 +134,7 @@ GO
 EXEC sp_control_plan_guide N'DISABLE ALL';  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_create_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   

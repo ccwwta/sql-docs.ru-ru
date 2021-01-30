@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_delete_job
 - sp_delete_job_TSQL
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3d4ded9ec986afc467534c3053e17831147bc404
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ef2fdfc32a0b8b076037b3d75d2c88df9a5883aa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541854"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186348"
 ---
 # <a name="sp_delete_job-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,20 +43,20 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @job_id = ] job_id` Идентификационный номер удаляемого задания. *job_id* имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
+`[ @job_id = ] job_id` Идентификационный номер удаляемого задания. *job_id* имеет тип **uniqueidentifier** и значение по умолчанию NULL.  
   
-`[ @job_name = ] 'job_name'` Имя удаляемого задания. Аргумент *job_name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @job_name = ] 'job_name'` Имя удаляемого задания. Аргумент *job_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
 > [!NOTE]  
 >  Необходимо указать либо *job_id* , либо *job_name*. нельзя указывать оба значения.  
   
 `[ @originating_server = ] 'server'` Для внутреннего использования.  
   
-`[ @delete_history = ] delete_history` Указывает, следует ли удалить журнал задания. *delete_history* имеет **бит**и значение по умолчанию **1**. Если *delete_history* равен **1**, журнал заданий для задания удаляется. Если значение *delete_history* равно **0**, журнал заданий не удаляется.  
+`[ @delete_history = ] delete_history` Указывает, следует ли удалить журнал задания. *delete_history* имеет **бит** и значение по умолчанию **1**. Если *delete_history* равен **1**, журнал заданий для задания удаляется. Если значение *delete_history* равно **0**, журнал заданий не удаляется.  
   
  Обратите внимание, что при удалении задания, если журнал не удаляется, исторические данные для задания не будут отображаться в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] журнале заданий графического пользовательского интерфейса агента, но информация по-прежнему будет находиться в таблице **sysjobhistory** базы данных **msdb** .  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule` Указывает, следует ли удалять расписания, присоединенные к этому заданию, если они не присоединены к другим заданиям. *delete_unused_schedule* имеет **бит**и значение по умолчанию **1**. Если *delete_unused_schedule* равен **1**, то расписания, прикрепленные к этому заданию, удаляются, если другие задания не ссылаются на расписание. Если *delete_unused_schedule* равен **0**, расписания не удаляются.  
+`[ @delete_unused_schedule = ] delete_unused_schedule` Указывает, следует ли удалять расписания, присоединенные к этому заданию, если они не присоединены к другим заданиям. *delete_unused_schedule* имеет **бит** и значение по умолчанию **1**. Если *delete_unused_schedule* равен **1**, то расписания, прикрепленные к этому заданию, удаляются, если другие задания не ссылаются на расписание. Если *delete_unused_schedule* равен **0**, расписания не удаляются.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -65,9 +65,9 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  None  
   
 ## <a name="remarks"></a>Remarks  
- Аргумент ** \@ originating_server** зарезервирован для внутреннего использования.  
+ Аргумент **\@ originating_server** зарезервирован для внутреннего использования.  
   
- Аргумент ** \@ delete_unused_schedule** обеспечивает обратную совместимость с предыдущими версиями SQL Server путем автоматического удаления расписаний, не присоединенных к какому бы то ни было заданию. Обратите внимание, что поведение этого параметра по умолчанию обеспечивает обратную совместимость. Чтобы хранить расписания, которые не присоединены к заданию, необходимо указать значение **0** в качестве аргумента ** \@ delete_unused_schedule** .  
+ Аргумент **\@ delete_unused_schedule** обеспечивает обратную совместимость с предыдущими версиями SQL Server путем автоматического удаления расписаний, не присоединенных к какому бы то ни было заданию. Обратите внимание, что поведение этого параметра по умолчанию обеспечивает обратную совместимость. Чтобы хранить расписания, которые не присоединены к заданию, необходимо указать значение **0** в качестве аргумента **\@ delete_unused_schedule** .  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] обеспечивает доступный графический способ управления заданиями и рекомендуется для создания и управления инфраструктурой заданий.  
   

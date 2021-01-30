@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_enum_login_for_proxy_TSQL
 - sp_enum_login_for_proxy
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 7707843979bd0c741ade8e4ae6759d265eb13d06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b51d02a66833df04a82a970319bab4e62f462a33
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486065"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186966"
 ---
 # <a name="sp_enum_login_for_proxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 
@@ -45,9 +45,9 @@ sp_enum_login_for_proxy
 ## <a name="arguments"></a>Аргументы  
 `[ @name = ] 'name'` Имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] участника, имя входа, роль сервера или роль базы данных **msdb** , для которой перечисляются учетные записи-посредники. Имя имеет тип **nvarchar (256)** и значение по умолчанию NULL.  
   
-`[ @proxy_id = ] id` Идентификационный номер прокси-сервера, для которого необходимо получить список сведений. *Proxy_id* имеет **тип int**и значение по умолчанию NULL. Можно указать либо *идентификатор* , либо *proxy_name* .  
+`[ @proxy_id = ] id` Идентификационный номер прокси-сервера, для которого необходимо получить список сведений. *Proxy_id* имеет **тип int** и значение по умолчанию NULL. Можно указать либо *идентификатор* , либо *proxy_name* .  
   
-`[ @proxy_name = ] 'proxy_name'` Имя учетной записи-посредника для получения списка сведений. Аргумент *proxy_name* имеет тип **sysname**и значение по умолчанию NULL. Можно указать либо *идентификатор* , либо *proxy_name* .  
+`[ @proxy_name = ] 'proxy_name'` Имя учетной записи-посредника для получения списка сведений. Аргумент *proxy_name* имеет тип **sysname** и значение по умолчанию NULL. Можно указать либо *идентификатор* , либо *proxy_name* .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -62,7 +62,7 @@ sp_enum_login_for_proxy
 |**flags**|**int**|Тип субъекта безопасности.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа<br /><br /> **1** = предопределенная системная роль<br /><br /> **2** = роль базы данных в **msdb**|  
 | &nbsp; | &nbsp; | &nbsp; |
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Замечания  
  Если параметры не указаны, **sp_enum_login_for_proxy** выводит сведения обо всех именах входа в экземпляре для каждого прокси-сервера.  
   
  При указании идентификатора прокси-сервера или имени прокси-сервера **sp_enum_login_for_proxy** список имен входа, имеющих доступ к учетной записи-посреднику. Если указано имя входа, **sp_enum_login_for_proxy** выводит список учетных записей-посредников, к которым у имени входа есть доступ.  
@@ -99,7 +99,7 @@ EXEC dbo.sp_enum_login_for_proxy
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_help_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)   
  [sp_grant_login_to_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
  [sp_revoke_login_from_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  

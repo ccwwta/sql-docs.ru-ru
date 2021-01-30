@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: system-objects
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_help_targetservergroup_TSQL
 - sp_help_targetservergroup
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ea33d20e35938561489f27a14c834da002a7408d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 200b6b0a8d6a6700f7aa98db0cde45cfc278dc53
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89527231"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186705"
 ---
 # <a name="sp_help_targetservergroup-transact-sql"></a>sp_help_targetservergroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ sp_help_targetservergroup
 ```  
   
 ## <a name="argument"></a>Аргумент  
-`[ @name = ] 'name'` Имя группы целевых серверов, для которой возвращаются сведения. Аргумент *Name* имеет тип **sysname**и значение по умолчанию NULL.  
+`[ @name = ] 'name'` Имя группы целевых серверов, для которой возвращаются сведения. Аргумент *Name* имеет тип **sysname** и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -81,7 +81,7 @@ EXEC dbo.sp_help_targetservergroup
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_add_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql.md)   
  [sp_delete_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-targetservergroup-transact-sql.md)   
  [sp_update_targetservergroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-targetservergroup-transact-sql.md)   

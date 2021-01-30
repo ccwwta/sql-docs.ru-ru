@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dsninfo
 - sp_dsninfo_TSQL
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 451d19531bbee4814fe9335bc4aaba7707263a10
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 65a3f12555d1dbb0e26702229fdcc47664cc4c82
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536123"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186977"
 ---
 # <a name="sp_dsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,9 +55,9 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 `[ @login = ] 'login'` Имя входа для источника данных. Если источник данных содержит имя входа, то следует установить значение NULL или опустить этот параметр. *имя для входа*— **varchar (128)** и значение по умолчанию NULL.  
   
-`[ @password = ] 'password'` Пароль для имени входа. Если источник данных содержит имя входа, то следует установить значение NULL или опустить этот параметр. *Password*имеет тип **varchar (128)** и значение по умолчанию NULL.  
+`[ @password = ] 'password'` Пароль для имени входа. Если источник данных содержит имя входа, то следует установить значение NULL или опустить этот параметр. *Password* имеет тип **varchar (128)** и значение по умолчанию NULL.  
   
-`[ @dso_type = ] dso_type` Тип источника данных. *dso_type* имеет **тип int**и может принимать одно из следующих значений.  
+`[ @dso_type = ] dso_type` Тип источника данных. *dso_type* имеет **тип int** и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
 |-----------|-----------------|  
@@ -74,7 +74,7 @@ sp_dsninfo [ @dsn =] 'dsn'
 |**Тип сведений**|**nvarchar (64)**|Типы данных, например: DBMS_NAME, DBMS_VERSION, DATABASE_NAME, SQL_SUBSCRIBER.|  
 |**Значение**|**nvarchar(512)**|Значение связанного типа данных.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_dsninfo** используется во всех типах репликации.  
   
  **sp_dsninfo** извлекает сведения об источнике данных ODBC или OLE DB, которые показывают, может ли база данных использоваться для репликации или выполнения запросов.  
@@ -82,7 +82,7 @@ sp_dsninfo [ @dsn =] 'dsn'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_dsninfo**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_enumdsn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumdsn-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

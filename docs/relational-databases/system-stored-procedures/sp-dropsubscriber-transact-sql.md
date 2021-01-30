@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: replication
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - sp_dropsubscriber_TSQL
 - sp_dropsubscriber
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8c6eb282-81b5-4ec4-b691-aa061d9267dc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7849603dc288bf4e40e5b4067f9098b6c5ebc0ca
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 96ba954cf4674c370b33e783c8f71dd4da69277b
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538910"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187006"
 ---
 # <a name="sp_dropsubscriber-transact-sql"></a>sp_dropsubscriber (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,7 +43,7 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @subscriber = ] 'subscriber'` Имя удаляемого подписчика. Аргумент *Subscriber* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @subscriber = ] 'subscriber'` Имя удаляемого подписчика. Аргумент *Subscriber* имеет тип **sysname** и не имеет значения по умолчанию.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -52,7 +52,7 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  **sp_dropsubscriber** используется во всех типах репликации.  
   
  Эта хранимая процедура удаляет **подпараметр сервера** и удаляет сопоставление удаленного имени входа системного администратора для **repl_subscriber**.  
@@ -60,7 +60,7 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_dropsubscriber**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Удаление принудительной подписки](../../relational-databases/replication/delete-a-push-subscription.md)   
  [Удаление подписки по запросу](../../relational-databases/replication/delete-a-pull-subscription.md)   
  [sp_addsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   
