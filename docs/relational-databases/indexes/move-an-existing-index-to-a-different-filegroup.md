@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: abbd77be3e20cc69bc12cd69f07fa82ec99d95db
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 4ccacb2b46b609b61485821f250644596f0e3955
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88470474"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048887"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>Перемещение существующего индекса в другую файловую группу
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  В этом разделе описывается, как переместить текущий индекс из текущей файловой группы в другую файловую группу в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  В этом разделе описывается, как переместить текущий индекс из текущей файловой группы в другую файловую группу в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **В этом разделе**  
   
@@ -98,7 +98,7 @@ ms.locfileid: "88470474"
   
      если перемещается кластеризованный индекс, можно использовать обработку в сети. Обработка в сети разрешает одновременный доступ пользователей к основным данным и к некластеризованным индексам в течение операции с индексами. Дополнительные сведения см. в статье [Выполнение операции с индексами в сети](../../relational-databases/indexes/perform-index-operations-online.md).  
   
-     На многопроцессорных компьютерах с [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]можно настроить количество ЦП, используемых для выполнения инструкции индекса, указав значение максимальной степени параллелизма. Параллельные операции с индексами доступны не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье "Возможности, поддерживаемые выпусками SQL Server 2016". Дополнительные сведения о параллельных операциях с индексами см. в статье [Настройка параллельных операций с индексами](../../relational-databases/indexes/configure-parallel-index-operations.md).  
+     На многопроцессорных компьютерах с [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]можно настроить количество ЦП, используемых для выполнения инструкции индекса, указав значение максимальной степени параллелизма. Параллельные операции с индексами доступны не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье "Возможности, поддерживаемые выпусками SQL Server 2016". Дополнительные сведения о параллельных операциях с индексами см. в статье [Настройка параллельных операций с индексами](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 8.  Нажмите кнопку **ОК**.  
   

@@ -17,17 +17,17 @@ ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbad843d482945a29cb03fde9545b1c19fb354f9
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: cd8b60ec5b302183fdb1a0713e71568821dae2fe
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98098403"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813099"
 ---
 # <a name="contained-databases"></a>Автономные базы данных
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  *Автономная база данных* — это база данных, изолированная от других баз данных и от экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором размещена эта база данных.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] помогает пользователю изолировать свою базу данных от экземпляра четырьмя способами.  
+  *Автономная база данных* — это база данных, изолированная от других баз данных и от экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором размещена эта база данных.  [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] помогает пользователю изолировать свою базу данных от экземпляра четырьмя способами.  
   
 -   Большая часть метаданных, описывающих базу данных, ведется в базе данных. (В дополнение или вместо хранения метаданных в базе данных master.)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "98098403"
   
 -   Среда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (динамические административные представления, XEvents и т. д.) предоставляет отчеты об автономности и может работать с ней.  
   
- Некоторые особенности частично автономных баз данных, например хранение метаданных в самой базе данных, относятся ко всем базам данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Некоторые преимущества частично автономных баз данных, например проверка подлинности на уровне базы данных или сортировка каталогов, необходимо включить, чтобы воспользоваться ими. Частичная автономность включается с помощью инструкций **CREATE DATABASE** и **ALTER DATABASE** или с использованием [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения о включении частичной автономности базы данных см. в разделе [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md).  
+ Некоторые особенности частично автономных баз данных, например хранение метаданных в самой базе данных, относятся ко всем базам данных [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] . Некоторые преимущества частично автономных баз данных, например проверка подлинности на уровне базы данных или сортировка каталогов, необходимо включить, чтобы воспользоваться ими. Частичная автономность включается с помощью инструкций **CREATE DATABASE** и **ALTER DATABASE** или с использованием [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения о включении частичной автономности базы данных см. в разделе [Migrate to a Partially Contained Database](../../relational-databases/databases/migrate-to-a-partially-contained-database.md).  
   
 ##  <a name="partially-contained-database-concepts"></a><a name="Concepts"></a> Основные понятия частично автономных баз данных  
  Полностью автономная база данных содержит все параметры и метаданные, необходимые для определения базы данных, а ее конфигурация не зависит от экземпляра компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , на котором устанавливается база данных. В предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]отделение базы данных от экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] было трудоемким и требовало детальных знаний о взаимосвязи между базой данных и экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Частично автономные базы данных упрощают отделение базы данных от экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и других баз данных.  

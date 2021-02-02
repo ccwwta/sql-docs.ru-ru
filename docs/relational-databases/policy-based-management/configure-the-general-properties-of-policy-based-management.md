@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 6d1e0e37-29ea-408a-a055-384984d884be
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 694094bd1290742ae0644c72d5d7620ebcfc0a44
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 453ed74f518c248caac2540540eefbba3c1718b5
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85654856"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048844"
 ---
 # <a name="configure-the-general-properties-of-policy-based-management"></a>Настройка общих свойств управления на основе политик
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  В этом разделе описывается настройка свойств для управления на основе политик в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  В этом разделе описывается настройка свойств для управления на основе политик в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **В этом разделе**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "85654856"
   
 #### <a name="to-configure-policy-based-management"></a>Настройка управления на основе политик  
   
-1.  В **обозревателе объектов**щелкните знак "плюс", чтобы развернуть сервер, на котором необходимо настроить свойства управления на основе политик.  
+1.  В **обозревателе объектов** щелкните знак "плюс", чтобы развернуть сервер, на котором необходимо настроить свойства управления на основе политик.  
   
 2.  Щелкните знак «плюс», чтобы развернуть папку **Управление** .  
   
@@ -76,7 +76,7 @@ ms.locfileid: "85654856"
   
 #### <a name="to-configure-policy-based-management"></a>Настройка управления на основе политик  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

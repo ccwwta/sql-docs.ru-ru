@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d0229c5fb1166d49c8e4db2e80fbed03c0ea95a9
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 89a470964db8b0475a6c5d4f20a5007337645cb1
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868306"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076156"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>Создание моментального снимка для публикации слиянием с параметризованными фильтрами
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-В данном разделе описывается процесс создания моментального снимка для публикации слиянием с параметризованными фильтрами в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO.  
+В данном разделе описывается процесс создания моментального снимка для публикации слиянием с параметризованными фильтрами в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO.  
 
 Когда в публикации слиянием применяются параметризованные фильтры строк, репликация инициализирует каждую подписку с помощью моментального снимка, состоящего из двух частей. В первую очередь создается моментальный снимок схемы, содержащий все объекты, требуемые репликацией, и схемы опубликованных объектов, но не данные. Затем каждая подписка инициализируется с помощью моментального снимка, включающего объекты и схему из моментального снимка схемы, а также данные, принадлежащие секции подписки. Если несколько подписок получают заданную секцию (другими словами, они получают ту же схему и данные), моментальный снимок для этой секции создается один раз; несколько подписок инициализируются из одного и того же моментального снимка. Дополнительные сведения о параметризованных фильтрах строк см. в разделе [Параметризованные фильтры строк](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   

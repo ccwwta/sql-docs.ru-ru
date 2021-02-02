@@ -16,16 +16,16 @@ ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 630b6a3c00d3bd4fccdb13acaadad64279a460c1
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: d5f90439c622e9740ffe5d58789ce3d950be0279
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97465525"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049297"
 ---
 # <a name="xml-format-files-sql-server"></a>XML-файлы форматирования (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] предоставляет схему XML, которая определяет синтаксис для написания *XML-файлов форматирования* в целях использования при массовом импорте данных в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . XML-файлы форматирования должны придерживаться этой схемы, которая определена при помощи языка XML Schema Definition Language (XSDL). XML-файлы форматирования поддерживаются только при установке средств [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вместе с собственным клиентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] предоставляет схему XML, которая определяет синтаксис для написания *XML-файлов форматирования* в целях использования при массовом импорте данных в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . XML-файлы форматирования должны придерживаться этой схемы, которая определена при помощи языка XML Schema Definition Language (XSDL). XML-файлы форматирования поддерживаются только при установке средств [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вместе с собственным клиентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Можно использовать XML-файл форматирования с командой **bcp**, инструкциями BULK INSERT или INSERT... Инструкция SELECT \* FROM OPENROWSET(BULK...). Команда **bcp** позволяет автоматически создать XML-файл форматирования для таблицы. Дополнительные сведения см. в разделе [bcp Utility](../../tools/bcp-utility.md).  
   

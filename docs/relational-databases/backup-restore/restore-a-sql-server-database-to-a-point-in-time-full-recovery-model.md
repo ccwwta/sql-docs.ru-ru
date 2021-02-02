@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 05f3dd9658ca51e1208476f8d11b387a79eb0234
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 4038ba678af8635f3ac2bd12f68c818a61e2c87f
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "96125563"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075637"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Восстановление базы данных SQL Server до определенного момента времени (модель полного восстановления)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  В данном разделе содержатся инструкции по восстановлению базы данных на определенный момент времени в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Сведения в этом разделе относятся только к тем базам данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые используют полную модель восстановления или модель восстановления с неполным протоколированием.  
+  В данном разделе содержатся инструкции по восстановлению базы данных на определенный момент времени в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] при помощи [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Сведения в этом разделе относятся только к тем базам данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые используют полную модель восстановления или модель восстановления с неполным протоколированием.  
   
 > [!IMPORTANT]  
 >  Если в модели восстановления с неполным протоколированием резервная копия журнала содержит изменения с неполным протоколированием, то в пределах этой резервной копии восстановление до момента времени невозможно. База данных должна быть восстановлена к концу резервной копии журнала транзакций.  

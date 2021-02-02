@@ -19,17 +19,17 @@ ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 46b70b81745047bc85f2d7bbc677321dde618c81
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e2c41e97ad36387fe1f3644e5039eb5cd2b6a61d
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480065"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048962"
 ---
 # <a name="create-unique-indexes"></a>Создание уникальных индексов
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  В данном разделе описывается создание уникальных индексов в таблице в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Уникальный индекс гарантирует, что ключ индекса не будет содержать одинаковых значений, а значит, каждая строка в таблице будет уникальна. Нет существенных различий между созданием ограничения UNIQUE и созданием уникального индекса, не зависящего от ограничения. Проверка данных происходит подобным же образом, и оптимизатор запросов не делает различия между уникальным индексом, который создан ограничением, и индексом, созданным вручную. Однако при создании ограничения UNIQUE для столбца назначение индекса становится очевидным. Дополнительные сведения об ограничениях UNIQUE см. в разделе [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
+  В данном разделе описывается создание уникальных индексов в таблице в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Уникальный индекс гарантирует, что ключ индекса не будет содержать одинаковых значений, а значит, каждая строка в таблице будет уникальна. Нет существенных различий между созданием ограничения UNIQUE и созданием уникального индекса, не зависящего от ограничения. Проверка данных происходит подобным же образом, и оптимизатор запросов не делает различия между уникальным индексом, который создан ограничением, и индексом, созданным вручную. Однако при создании ограничения UNIQUE для столбца назначение индекса становится очевидным. Дополнительные сведения об ограничениях UNIQUE см. в разделе [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   
  При создании уникального индекса можно установить параметр пропуска дублирующихся ключей. Если для этого параметра установлено значение **Да** , то при попытке создать дублирующиеся ключи путем добавления данных, которые влияют на несколько строк (при помощи инструкции INSERT), строка, содержащая дубликат, добавлена не будет. Если для параметра установлено значение **Нет**, вся операция вставки завершится неудачно и будет выполнен откат всех данных.  
   

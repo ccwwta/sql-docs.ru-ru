@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e97723d6ea047aa86641c9074ff235c682519e7a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 6eb1586c38283d695e96d4640d37c261314a339f
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245210"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048929"
 ---
 # <a name="maintenance-plans"></a>Планы обслуживания
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "87245210"
 ## <a name="benefits-of-maintenance-plans"></a>Преимущества планов обслуживания  
  В компоненте [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)]планы обслуживания создают пакет служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , выполняемый заданием агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Планы обслуживания можно запускать вручную или автоматически через заданные интервалы.  
   
- Планы обслуживания [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] обеспечивают следующие функциональные возможности.  
+ Планы обслуживания [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] обеспечивают следующие функциональные возможности.  
   
 -   Создание рабочего процесса различных типовых задач обслуживания. Можно создавать и пользовательские скрипты [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   

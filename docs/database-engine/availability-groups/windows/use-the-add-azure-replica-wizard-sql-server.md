@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 7fb9c44c90dbedbdc0a123f4b8c09088f7392d50
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 91f906b996c44cd9798d9754ca0345ca8892db10
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97641832"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076366"
 ---
 # <a name="configure-azure-vm-as-a-secondary-replica-in-an-availability-group"></a>Настройка виртуальной машины Azure в качестве вторичной реплики в группе доступности
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "97641832"
   
 1.  Сначала загрузите сертификат управления для подписки Azure. Нажмите кнопку **Загрузить** , чтобы открыть страницу входа.  
   
-2.  Войдите в Microsoft Azure, используя учетную запись Майкрософт или учетную запись вашей организации. Учетная запись Майкрософт или организации имеет формат адреса электронной почты, например "mailto:patc@contoso.com" patc@contoso.com. Дополнительные сведения об учетных данных Azure см. в разделах [Часто задаваемые вопросы об учетной записи Майкрософт для организаций](/previous-versions/jj592903(v=msdn.10)) и [Устранение проблем с входом при использовании учетной записи организации](https://support.microsoft.com/kb/2756852).  
+2.  Войдите в Microsoft Azure, используя учетную запись Майкрософт или учетную запись вашей организации. Учетная запись Майкрософт или организации имеет формат адреса электронной почты, например "mailto:patc@contoso.com" patc@contoso.com. Дополнительные сведения об учетных данных Azure см. в разделах [Часто задаваемые вопросы об учетной записи Майкрософт для организаций](/previous-versions/jj592903(v=msdn.10)) и [Устранение проблем с входом при использовании учетной записи организации](http://web.archive.org/web/20121016005434/http://support.microsoft.com:80/kb/2756852).  
   
 3.  Затем подключитесь к подписке, нажав кнопку **Подключиться**. После подключения раскрывающиеся списки заполняются параметрами Azure, такими как **Виртуальная сеть** и **Подсеть виртуальной сети**.  
   

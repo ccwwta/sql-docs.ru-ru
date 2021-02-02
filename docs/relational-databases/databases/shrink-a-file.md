@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: ce5c8798-c039-4ab2-81e7-90a8d688b893
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 14fe5218577618cea4957fc819879374233210a7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 077f7d98470c385b8333fc9db2f55d04bd13bb44
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715497"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98812968"
 ---
 # <a name="shrink-a-file"></a>Сжатие файла
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  В этом подразделе описывается сжатие данных или файла журнала в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  В этом подразделе описывается сжатие данных или файла журнала в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Сжатие файлов данных позволяет освободить неиспользуемое пространство путем перемещения страниц данных с конца файла в незанятое пространство ближе к началу файла. Когда в конце файла образуется достаточно свободного места, страницы данных в конце файла могут быть освобождены и возвращены в файловую систему.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "85715497"
   
 2.  Разверните узел **Базы данных** и щелкните правой кнопкой мыши базу данных, которую нужно сжать.  
   
-3.  Укажите пункты **Задачи**и **Сжать**, затем выберите пункт **Файлы**.  
+3.  Укажите пункты **Задачи** и **Сжать**, затем выберите пункт **Файлы**.  
   
      **База данных**  
      Отображает имя выбранной базы данных.  

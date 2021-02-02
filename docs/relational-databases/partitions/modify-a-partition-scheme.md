@@ -11,16 +11,16 @@ ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb261e69d3491f717be8b34bb2b0f699a4d37840
-ms.sourcegitcommit: 629229a7c33a3ed99db63b89127bb016449f7d3d
+ms.openlocfilehash: 1cba23d0d043004f1f5a71d8e4af4844470ff163
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "97952041"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049110"
 ---
 # <a name="modify-a-partition-scheme"></a>Изменение схемы секционирования
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  Можно изменить схему секционирования в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , назначив файловую группу для размещения следующей секции, которая добавляется в секционированную таблицу, с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Это делается путем присваивания файловой группе свойства NEXT USED. Можно присвоить свойство NEXT USED пустой файловой группе или группе, уже хранящей секцию. Другими словами, файловая группа может содержать несколько секций.  
+  Можно изменить схему секционирования в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] , назначив файловую группу для размещения следующей секции, которая добавляется в секционированную таблицу, с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Это делается путем присваивания файловой группе свойства NEXT USED. Можно присвоить свойство NEXT USED пустой файловой группе или группе, уже хранящей секцию. Другими словами, файловая группа может содержать несколько секций.  
   
  **В этом разделе**  
   

@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 4fddf58b0f7473ea2ae46812d9908dcbbafb7b66
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 304dbec65d26c1d7daa63ca127a545a587f76bd1
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195729"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813598"
 ---
 # <a name="create-a-database"></a>Создание базы данных
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  В этом разделе описывается создание базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  В этом разделе описывается создание базы данных в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
 
 > [!NOTE]
 > Сведения о создании базы данных в службе Базы данных SQL Azure с помощью T-SQL см. в статье [CREATE DATABASE (база данных SQL Azure)](../../t-sql/statements/create-database-transact-sql.md).
@@ -74,11 +74,11 @@ ms.locfileid: "92195729"
   
 #### <a name="to-create-a-database"></a>Создание базы данных  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и разверните его.  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и разверните его.  
   
 2.  Щелкните правой кнопкой мыши элемент **Базы данных**, а затем выберите пункт **Создать базу данных**.  
   
-3.  В поле **Новая база данных**введите имя базы данных.  
+3.  В поле **Новая база данных** введите имя базы данных.  
   
 4.  Чтобы создать базу данных, приняв все значения по умолчанию, нажмите кнопку **ОК**; иначе продолжайте выполнение следующих дополнительных шагов.  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2e0f6d3f-0536-46d9-8630-835e199515bf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2189f7aeb37901b176de4afbec28dd29090e4118
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: 225d746b5b86f3e0a4dbd2fb122ecdbfb11bf02f
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88426086"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813149"
 ---
 # <a name="high-availability-support"></a>Поддержка высокого уровня доступности
 
@@ -29,7 +29,7 @@ ms.locfileid: "88426086"
   
 -   Служба CDC для Oracle может использовать кластеризованные экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для восстановления после сбоя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и последующей отработки отказа на другом узле кластера. Администратору компьютера, на котором запущена служба Oracle CDC, при создании службы Oracle CDC Service необходимо лишь указать сведения о подключении к кластеризованному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Служба CDC для Oracle может использовать функцию зеркального отображения базы данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**AlwaysOn** . Поддержка этой функции требует, чтобы MSXDBCDC и все остальные базы данных CDC находились в одной группе доступности. Также необходимо, чтобы администратор компьютера, на котором запущена служба Oracle CDC, указал необходимые сведения о подключении к группе доступности **AlwaysOn**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (например, свойства подключения `Failover_Partner and Network=dbmssocn`). Это позволяет службе CDC автоматически возобновить обработку на вторичной реплике баз данных после отработки отказа.  
+-   Служба CDC для Oracle может использовать функцию зеркального отображения базы данных [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]**AlwaysOn** . Поддержка этой функции требует, чтобы MSXDBCDC и все остальные базы данных CDC находились в одной группе доступности. Также необходимо, чтобы администратор компьютера, на котором запущена служба Oracle CDC, указал необходимые сведения о подключении к группе доступности **AlwaysOn**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (например, свойства подключения `Failover_Partner and Network=dbmssocn`). Это позволяет службе CDC автоматически возобновить обработку на вторичной реплике баз данных после отработки отказа.  
   
 -   Службу CDC для Oracle можно настроить как ресурс общей службы, расположенный на отказоустойчивом кластере Windows (совместно или отдельно от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]), что упрощает отработку отказа, и повторить обработку CDC при помощи ресурсов кластера. Чтобы настроить службу CDC для Oracle в качестве ресурса отказоустойчивого кластера, системному администратору необходимо настроить службу CDC для Oracle в качестве ресурса общей службы — для каждого узла отказоустойчивого кластера.  
   

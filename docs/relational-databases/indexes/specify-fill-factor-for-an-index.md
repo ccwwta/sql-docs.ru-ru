@@ -15,17 +15,17 @@ ms.assetid: 237a577e-b42b-4adb-90cf-aa7fb174f3ab
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azuresqldb-current || >= sql-server-2016
-ms.openlocfilehash: d80ece2cf3b8974f203bf03601dd9c41bfc9bf79
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e1e0a2b406d6817c43a5a4a51bea90b556c5cea6
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478145"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048779"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Укажите коэффициент заполнения для индекса
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  В этом разделе приведено описание коэффициента заполнения и описываются способы указания значения коэффициента заполнения в индексе в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  В этом разделе приведено описание коэффициента заполнения и описываются способы указания значения коэффициента заполнения в индексе в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Коэффициент заполнения (параметр fill factor) служит для точной настройки хранения и производительности индекса. При создании или перестроении индекса коэффициент заполнения отображает процент заполнения пространства каждой страницы конечного уровня, что позволяет зарезервировать для будущего расширения оставшееся на каждой странице пространство как свободное. Например, при указании для коэффициента заполнения значения 80 на каждой странице конечного уровня будет зарезервировано 20 процентов занимаемого ею дискового пространства. Данное дисковое пространство будет использовано для расширения индекса при добавлении в базовую таблицу новых данных. Пустое место резервируется не в конце индекса, а между строками индекса.  
   

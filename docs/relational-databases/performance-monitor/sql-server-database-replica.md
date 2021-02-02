@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 3dff6cb9b3a65ea5f38a97786e10701bc1f31749
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 0544531bf30bc99781c51b7664f4f5a756f5b00f
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170306"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049200"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server, реплика базы данных
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Объект производительности **SQLServer:Database Replica** содержит счетчики производительности, которые сообщают сведения о базах данных-получателях групп доступности AlwaysOn в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Этот объект действителен только на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором размещена вторичная реплика.  
+  Объект производительности **SQLServer:Database Replica** содержит счетчики производительности, которые сообщают сведения о базах данных-получателях групп доступности AlwaysOn в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Этот объект действителен только на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором размещена вторичная реплика.  
   
 |Имя счетчика|Описание|Просмотр в…|  
 |------------------|-----------------|--------------|  

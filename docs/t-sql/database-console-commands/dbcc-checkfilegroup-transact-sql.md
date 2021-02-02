@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 885a40a622f70649e004226fdfb9f317bad6bbdf
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: f95e730dac286be230c27a8e0fc14aa52d07cfee
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98597093"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813029"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -94,7 +94,7 @@ DBCC CHECKFILEGROUP
 >  Указание аргумента PHYSICAL_ONLY приводит к пропуску инструкцией DBCC CHECKFILEGROUP всех проверок данных FILESTREAM.  
   
  MAXDOP  
- **Область применения**: с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 с пакетом обновления 2 (SP2) до [текущей версии](../../sql-server/what-s-new-in-sql-server-2016.md).  
+ **Область применения**: с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 с пакетом обновления 2 (SP2) до [текущей версии](/troubleshoot/sql/general/determine-version-edition-update-level).  
   
  Переопределяет параметр конфигурации, задающий **максимальный уровень параллелизма**, в **sp_configure** для инструкции. Значение MAXDOP может превышать значение, настроенное с помощью sp_configure. Если MAXDOP превышает значение, настроенное с помощью Resource Governor, ядро СУБД использует значение MAXDOP из Resource Governor, как описано в статье "ALTER WORKLOAD GROUP (Transact-SQL)". Все семантические правила, используемые параметром конфигурации max degree of parallelism, применимы при использовании указания запроса MAXDOP. Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   

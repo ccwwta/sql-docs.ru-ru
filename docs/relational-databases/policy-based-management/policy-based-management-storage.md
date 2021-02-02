@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: d0cbf214-fc2e-4917-8d31-1d71c9ffa61d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: abd24579c34b11332e235d29a5f7b89a6dc183e3
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: fed38dee8c9b8d242ea223c8c0d0576959a2e83d
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "88475645"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076496"
 ---
 # <a name="policy-based-management-storage"></a>Хранение политик управления на основе политик
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Политики хранятся в базе данных msdb. После изменения политики или условия необходимо выполнить резервное копирование базы данных msdb. Дополнительные сведения см. в статье [Резервное копирование и восстановление системных баз данных (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   
 ## <a name="storing-policies"></a>Политики хранения  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] предусмотрены политики, которые можно использовать для наблюдения за экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. По умолчанию эти политики не устанавливаются в компоненте [!INCLUDE[ssDE](../../includes/ssde-md.md)], но их можно импортировать из места установки по умолчанию — каталога C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Policies\DatabaseEngine\1033.  
+ [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] предусмотрены политики, которые можно использовать для наблюдения за экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. По умолчанию эти политики не устанавливаются в компоненте [!INCLUDE[ssDE](../../includes/ssde-md.md)], но их можно импортировать из места установки по умолчанию — каталога C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Policies\DatabaseEngine\1033.  
   
  Можно создавать политики напрямую, при помощи меню **Файл/Создать** , и сохранять их в файл. Это позволяет создавать политики при отсутствии подключения к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

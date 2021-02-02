@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 392de21a-57fa-4a69-8237-ced8ca86ed1d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f3f275d1f2c5ce4142bb357a1c1b314b694ef589
-ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.openlocfilehash: f0e4c13745057b1276f06f3bc77ace266921a43d
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98783044"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076276"
 ---
 # <a name="hide-an-instance-of-sql-server-database-engine"></a>Скрытие экземпляра компонента SQL Server Database Engine
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "98783044"
   
 ## <a name="see-also"></a>См. также:  
  [Сетевая конфигурация сервера](../../database-engine/configure-windows/server-network-configuration.md)   
- [Описание клиентских подключений виртуального сервера SQL](https://support.microsoft.com/kb/273673)   
+ [Описание клиентских подключений виртуального сервера SQL](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/273673)   
  [Назначение статического порта именованному экземпляру SQL Server: как избежать распространенных ошибок](https://deep.data.blog/2012/09/08/how-to-assign-a-static-port-to-a-sql-server-named-instance-and-avoid-a-common-pitfall/)  
   
   

@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: e0c103fba0dae4f6e31d976c151b7c01c487f658
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 3eb0b33f2891c8f48d63b4446d31c1918fcb7aab
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96129286"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076116"
 ---
 # <a name="create-a-full-database-backup"></a>Создание полной резервной копии базы данных
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-В этом разделе описывается создание полной резервной копии базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или PowerShell.
+В этом разделе описывается создание полной резервной копии базы данных в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или PowerShell.
 
 Сведения о резервном копировании SQL Server в службу хранилища BLOB-объектов Azure см. в разделах [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов  Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) и [Резервное копирование SQL Server по URL-адресу](../../relational-databases/backup-restore/sql-server-backup-to-url.md).
 

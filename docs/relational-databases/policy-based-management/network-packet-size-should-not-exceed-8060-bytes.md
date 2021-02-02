@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 86db5da1-afe4-4fbb-8bf8-33cedc7e4361
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ec56bc58723d14f0997da2ce5c69a2a81451a90c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 737bad4dd5994bebdf23ea8ebab5f4ed6f788266
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88406440"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076416"
 ---
 # <a name="network-packet-size-should-not-exceed-8060-bytes"></a>Размер сетевого пакета не должен превышать 8060 байт
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88406440"
  Размер сетевого пакета не должен превышать 8 060 байт.  
   
 ## <a name="for-more-information"></a>Дополнительные сведения см. в разделе  
- [Статья 903002 базы знаний Майкрософт](https://go.microsoft.com/fwlink/?linkid=117749)  
+ [Статья 903002 базы знаний Майкрософт](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/903002)  
   
 ## <a name="see-also"></a>См. также:  
  [Наблюдение с помощью управления на основе политик и принудительное применение рекомендаций с помощью управления на основе политик](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0b3214bd-d0ab-45ab-9281-3d95507abe54
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 28b605b52600fe9855fb9e96f9f2dbc99bbc6a20
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d2df2f0ea2c9f582053c10330931ed88e92bd172
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760531"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049050"
 ---
 # <a name="evaluate-a-policy-based-management-policy-from-that-policy"></a>Вычисление политики управления на основе политик по этой политике
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  В этом разделе описано вычисление политики в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  В этом разделе описано вычисление политики в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **В этом разделе**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "85760531"
   
 #### <a name="to-evaluate-a-policy"></a>Вычисление политики  
   
-1.  В **обозревателе объектов**щелкните знак «плюс», чтобы развернуть сервер, содержащий политику, которую нужно вычислить.  
+1.  В **обозревателе объектов** щелкните знак «плюс», чтобы развернуть сервер, содержащий политику, которую нужно вычислить.  
   
 2.  Щелкните знак «плюс», чтобы развернуть папку **Управление** .  
   

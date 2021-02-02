@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: aa4d3188-6927-43de-a3e3-90fc16eeaca7
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 17e2c32fbf7f26ecb0e3044e248f3b52469dad5e
-ms.sourcegitcommit: 0e0cd9347c029e0c7c9f3fe6d39985a6d3af967d
+ms.openlocfilehash: 7cce974a4c35f25ca3cccda92b54912d9e3bed30
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "96505308"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99048975"
 ---
 # <a name="delete-a-plan-guide"></a>Удаление структуры плана
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  Удалить структуру плана в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. С помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]также можно удалить все структуры планов в базе данных.  
+  Удалить структуру плана в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] можно с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. С помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]также можно удалить все структуры планов в базе данных.  
   
  **В этом разделе**  
   

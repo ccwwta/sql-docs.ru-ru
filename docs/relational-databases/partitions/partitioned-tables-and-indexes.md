@@ -17,19 +17,19 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8471695cfde49d36ba107264fa23654757d8c2ab
-ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
+ms.openlocfilehash: 8a8f1575cab349c6c501f6aa98509e8595efeb77
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98241885"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049142"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает секционирование таблиц и индексов. Данные секционированных таблиц и индексов делятся на блоки, которые могут распределяться между несколькими файловыми группами в базе данных. Данные секционируются горизонтально, поэтому группы строк сопоставляются с отдельными секциями. Все секции одного индекса или таблицы должны находиться в одной и той же базе данных. Таблица или индекс рассматриваются как единая логическая сущность при выполнении над данными запросов или обновлений. До версии [!INCLUDE[ssSQL15_md](../../includes/sssql16-md.md)] SP1 секционированные таблицы и индексы были доступны не в каждом выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 > [!IMPORTANT]  
-> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживает по умолчанию до 15 000 секций. В версиях, предшествующих [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], количество секций по умолчанию было равно 1000.  
+> [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] поддерживает по умолчанию до 15 000 секций. В версиях, предшествующих [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], количество секций по умолчанию было равно 1000.  
   
 ## <a name="benefits-of-partitioning"></a>Преимущества секционирования  
  Секционирование больших таблиц или индексов может дать следующие преимущества в управляемости и производительности.  

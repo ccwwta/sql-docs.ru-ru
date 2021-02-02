@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 5362d3ddde85b21c5450a162fff0fdc5f23cda7f
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 5a59b05df4805b580aade70a9d2bf11cc3399f04
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96130464"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076126"
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>Создание разностной резервной копии базы данных (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Создание разностной резервной копии в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  Создание разностной резервной копии в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Подразделы этого раздела**  
   

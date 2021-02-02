@@ -15,12 +15,12 @@ ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5159591eeafc76ca16fde95f8a7b9789acc084e1
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 48d4d4b9602049c0c09e9e60ac8991c5c9a74154
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97485316"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049261"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Определение, должна ли таблица или хранимая процедура быть перенесена в In-Memory OLTP
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "97485316"
     > [!IMPORTANT]  
     >  Производительность системы базы данных зависит от многих факторов, которые не все могут отслеживаться и измеряться сборщиком данных о производительности транзакции. Поэтому отчет анализа производительности транзакции не гарантирует, что фактическое улучшение производительности будет соответствовать прогнозируемому, если были сделаны какие-либо прогнозы.  
   
- Отчет об анализе производительности транзакции и помощники миграции устанавливаются в составе SQL Server Management Studio (SSMS) при выборе **Средства управления — основные** или **Средства управления — расширенные** при установке [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] либо при [скачивании SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).    
+ Отчет об анализе производительности транзакции и помощники миграции устанавливаются в составе SQL Server Management Studio (SSMS) при выборе **Средства управления — основные** или **Средства управления — расширенные** при установке [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] либо при [скачивании SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).    
   
 ## <a name="transaction-performance-analysis-reports"></a>Отчеты об анализе производительности транзакции  
  Отчеты об анализе производительности транзакции можно создать в **обозревателе объектов** , щелкнув правой кнопкой мыши базу данных и выбрав пункт **Отчеты**, затем — **Стандартные отчеты** и **Обзор анализа производительности транзакций**. Для создания эффективного отчета об анализе у базы данных должна быть активная или недавно выполненная рабочая нагрузка.  

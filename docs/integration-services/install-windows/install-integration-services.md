@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6721d36159003077cf771fbff6a0e7a50a182ed2
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: abb62aec3a712ace96d6db82ea8eb0085d8a9e74
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97490014"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049283"
 ---
 # <a name="install-integration-services-ssis"></a>Установка служб Integration Services (SSIS)
 
@@ -81,7 +81,7 @@ ms.locfileid: "97490014"
 
 ### <a name="configuring-ssis-event-logging"></a>Настройка ведения журнала событий SSI
 
-По умолчанию в новой установке службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] настроены таким образом, чтобы не заносить в журнал событий приложений события, связанные с запуском пакетов. Это позволяет избежать слишком большого количества записей в журнале событий при использовании компонента сборщика данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. События, которые не заносятся в журнал: EventID 12288, "Package started" и EventID 12289, "Package finished successfully". Чтобы эти события заносились в журнал событий приложений, откройте реестр для изменения. Затем найдите в реестре узел HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS и измените значение DWORD для параметра LogPackageExecutionToEventLog с 0 на 1.
+По умолчанию в новой установке службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] настроены таким образом, чтобы не заносить в журнал событий приложений события, связанные с запуском пакетов. Это позволяет избежать слишком большого количества записей в журнале событий при использовании компонента сборщика данных [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. События, которые не заносятся в журнал: EventID 12288, "Package started" и EventID 12289, "Package finished successfully". Чтобы эти события заносились в журнал событий приложений, откройте реестр для изменения. Затем найдите в реестре узел HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS и измените значение DWORD для параметра LogPackageExecutionToEventLog с 0 на 1.
 
 ## <a name="install-additional-components-for-integration-services"></a>Установка дополнительных компонентов для Integration Services
 

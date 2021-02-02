@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 0db4018c-ce2c-4ba1-bb29-1e4f3791c925
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d7f24f353cf65c864ecce2b372deaf4d35708538
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 062ac3ee839f62a2e789be180484d3d3e8a18d44
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756211"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98812959"
 ---
 # <a name="delete-data-or-log-files-from-a-database"></a>Удаление файлов данных или журнала из базы данных
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  В данном разделе содержатся инструкции по удалению файлов данных или журналов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  В данном разделе содержатся инструкции по удалению файлов данных или журналов в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] при помощи [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **В этом разделе**  
   
@@ -59,7 +59,7 @@ ms.locfileid: "85756211"
   
 #### <a name="to-delete-data-or-log-files-from-a-database"></a>Удаление файлов данных или журнала из базы данных  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и разверните его.  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и разверните его.  
   
 2.  Раскройте список **Базы данных**, щелкните правой кнопкой мыши базу данных, из которой удаляется файл, а затем выберите пункт **Свойства**.  
   
