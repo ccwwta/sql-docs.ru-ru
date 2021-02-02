@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e066a82da2994c14a23ad647c103402232a7d1c0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 397ecaba4cf6b8e56f3dbcb6366dca8121ae345d
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882093"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076792"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>Определение связи логических записей между статьями таблиц слияния
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  В данном разделе описывается процесс определения связи логических записей между статьями таблиц слияния в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или объектов RMO.  
+  В данном разделе описывается процесс определения связи логических записей между статьями таблиц слияния в [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или объектов RMO.  
   
  Репликация слиянием позволяет определить связь между связанными строками в различных таблицах. Эти строки затем могут быть обработаны во время синхронизации как элементы транзакции. Логическая запись может быть определена между двумя статьями независимо от наличия связи фильтров соединения между ними. Дополнительные сведения см. в статье [Группирование изменений в связанных строках с помощью логических записей](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
@@ -62,7 +62,7 @@ ms.locfileid: "85882093"
   
      Связь логических записей ассоциирована с фильтром соединения, который расширяет фильтр строк. Поэтому необходимо определить фильтр строк, прежде чем можно будет расширить фильтр с помощью фильтра соединения и применить связь логических записей. После того как определен один фильтр соединения, можно расширить этот фильтр соединения с помощью еще одного фильтра соединения. Дополнительные сведения об определении фильтров соединения см. в разделе [Определение и изменение фильтра соединения между статьями публикации слиянием](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
-2.  Щелкните **Добавить**и выберите **Добавить соединение для расширения выбранного фильтра**.  
+2.  Щелкните **Добавить** и выберите **Добавить соединение для расширения выбранного фильтра**.  
   
 3.  Определите фильтр соединения в диалоговом окне **Добавление соединения** , а затем установите флажок **Логическая запись**.  
   

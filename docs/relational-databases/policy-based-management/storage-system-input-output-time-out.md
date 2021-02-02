@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ff921952-b935-4bb0-b587-bba6cd15a090
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d212a0ae0f42877340ff16acdb8e3b0adc00bb83
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3a78ff89c0017c4e4091bbf9a6ed1b0a9518c3de
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482562"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076802"
 ---
 # <a name="storage-system-input-output-time-out"></a>Время ожидания ввода-вывода для системы хранения
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "88482562"
 ## <a name="best-practices-recommendations"></a>Рекомендации  
  Дополнительные сведения об устранении этой ошибки см. в следующих статьях базы знаний Майкрософт:  
   
--   [Статья 259237 базы знаний Майкрософт](https://go.microsoft.com/fwlink/?linkid=117746)  
+-   [Статья 259237 базы знаний Майкрософт](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/259237)  
   
--   [Статья 154690 базы знаний Майкрософт](https://go.microsoft.com/fwlink/?LinkId=117747)  
+-   [Статья 154690 базы знаний Майкрософт](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/154690)  
   
 ## <a name="for-more-information"></a>Дополнительные сведения см. в разделе  
  [Основные операции ввода-вывода в SQL Server, раздел 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10))  

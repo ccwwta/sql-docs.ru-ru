@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 481f534c719d188d108ee1d9edd0776ee8b2bc9d
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 7ae8429bb51ec2a58a167784b701b7ae0532bb92
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92192458"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076932"
 ---
 # <a name="performance-counters"></a>Счетчики производительности
 
@@ -78,7 +78,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 -   Видео [Измерение и основные сведения о показателях пакетов служб SSIS на предприятии (видеоматериал SQL Server)](/previous-versions/sql/sql-server-2008/dd795223(v=sql.100))на сайте msdn.microsoft.com.  
   
--   Статья поддержки [Счетчик производительности служб SSIS больше недоступен в системном мониторе после обновления до Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=235319)на узле support.microsoft.com.  
+-   Статья поддержки [Счетчик производительности служб SSIS больше недоступен в системном мониторе после обновления до Windows Server 2008](https://web.archive.org/web/20111112202346/http://support.microsoft.com:80/kb/955632)на узле support.microsoft.com.  
 
 ## <a name="add-a-log-for-data-flow-performance-counters"></a>Добавление журнала для счетчиков производительности потока данных
   В этой процедуре описывается добавление журнала для счетчиков производительности, поставляемых подсистемой обработки потока данных.  
@@ -92,7 +92,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 2.  Выберите **Производительность**.  
   
-3.  В диалоговом окне **Производительность** разверните **Оповещения и журналы производительности**, щелкните правой кнопкой мыши **Журналы счетчиков**и выберите **Новые параметры журнала**. Введите имя журнала. Например, введите **Мой_журнал**.  
+3.  В диалоговом окне **Производительность** разверните **Оповещения и журналы производительности**, щелкните правой кнопкой мыши **Журналы счетчиков** и выберите **Новые параметры журнала**. Введите имя журнала. Например, введите **Мой_журнал**.  
   
 4.  Нажмите кнопку **ОК**.  
   

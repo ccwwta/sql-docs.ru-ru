@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 85373b2e-d9fe-42ef-9653-6e22fe5ecab0
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3a6b1654d673759b949eb24fee0ec9c905054579
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bbeea21b271175608973f3d3d42134113377d6b8
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470300"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99077022"
 ---
 # <a name="detect-failed-input-and-output-requests"></a>Detect Failed Input and Output Requests
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,8 +27,8 @@ ms.locfileid: "88470300"
 ## <a name="best-practices-recommendations"></a>Рекомендации  
  Дополнительные сведения об устранении этой ошибки см. в следующих статьях базы знаний [!INCLUDE[msCoName](../../includes/msconame-md.md)] :  
   
--   [Статья 311081 базы знаний Майкрософт](https://go.microsoft.com/fwlink/?linkid=117744)  
+-   [Статья 311081 базы знаний Майкрософт](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/311081)  
   
--   [Статья 885688 базы знаний Майкрософт](https://go.microsoft.com/fwlink/?linkid=117745)  
+-   [Статья 885688 базы знаний Майкрософт](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/885688)  
   
   

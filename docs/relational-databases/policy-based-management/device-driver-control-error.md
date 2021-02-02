@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7101d77a-84ca-4c00-af1c-17679234e9fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2631fc0d816766c175be0254b24fd47dd2a20e46
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4ee0b7b6ee2bbc792ab737e443813234a167d204
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475626"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99077002"
 ---
 # <a name="device-driver-control-error"></a>Ошибка управления драйвером устройства
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,8 +27,8 @@ ms.locfileid: "88475626"
 ## <a name="best-practices-recommendations"></a>Рекомендации  
  Дополнительные сведения об устранении этой ошибки см. в следующих статьях базы знаний Майкрософт:  
   
--   [Статья 259237 базы знаний Майкрософт](https://go.microsoft.com/fwlink/?linkid=117746)  
+-   [Статья 259237 базы знаний Майкрософт](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/259237)  
   
--   [Статья 154690 базы знаний Майкрософт](https://go.microsoft.com/fwlink/?linkid=117747)  
+-   [Статья 154690 базы знаний Майкрософт](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/154690)  
   
   

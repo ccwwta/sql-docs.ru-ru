@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 69ad35549678772fc0da1c834ba4064beeb19ed7
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: fd5fa04b32d9c00f810b61bbca81963e21bd5697
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125609"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076882"
 ---
 # <a name="file-restores-full-recovery-model"></a>Файлы из резервных копий (модель полного восстановления)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "96125609"
   
      При *автономном восстановлении файлов* база данных находится в режиме «вне сети», в то время как происходит восстановление поврежденных файлов или файловых групп. В конце последовательности восстановления база данных переходит в режим «в сети».  
   
-     Автономное восстановление файлов поддерживают все выпуски [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+     Автономное восстановление файлов поддерживают все выпуски [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] .  
   
 -   Восстановление файлов в сети  
   
