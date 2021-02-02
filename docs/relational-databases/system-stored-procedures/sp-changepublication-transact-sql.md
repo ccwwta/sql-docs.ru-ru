@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a0e183d97b17936d5d7e1b414c2d492910a8a8b3
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d6d44a187862903181cb19ee2eabafc1fd26ec91
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99207076"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237222"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -112,7 +112,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**одновременных**|Используется собственный программный вывод для массового копирования всех таблиц, не блокирующий таблицы во время формирования моментальных снимков. Недопустимо для репликации моментальных снимков.|  
 ||**concurrent_c**|Используется символьный программный вывод для массового копирования всех таблиц, не блокирующий таблицы во время формирования моментальных снимков. Недопустимо для репликации моментальных снимков.|  
 |**taskid**||Это свойство устарело и больше не поддерживается.|  
-|**allow_drop**|**true**|Включает `DROP TABLE` поддержку DLL для статей, которые являются частью репликации транзакций. Минимальная поддерживаемая версия: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 или выше, с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] пакетом обновления 1 или более поздней версии. Дополнительная ссылка: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
+|**allow_drop**|**true**|Включает `DROP TABLE` поддержку DLL для статей, которые являются частью репликации транзакций. Минимальная поддерживаемая версия: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 или выше, с [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] пакетом обновления 1 или более поздней версии. Дополнительная ссылка: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
 ||**false**|Отключает `DROP TABLE` поддержку библиотек DLL для статей, которые являются частью репликации транзакций. Это значение **по умолчанию** для этого свойства.|
 |**Null** (по умолчанию)||Возвращает список поддерживаемых значений для *Свойства*.|  
   
@@ -134,7 +134,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **sp_changepublication** используется в репликации моментальных снимков и репликации транзакций.  
   
  После изменения любого из следующих свойств необходимо создать новый моментальный снимок, а для параметра *force_invalidate_snapshot* необходимо указать значение **1** .  

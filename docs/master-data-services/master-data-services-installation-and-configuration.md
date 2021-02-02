@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 92511a835a8a9a6f899f7597900fec6707f6dada
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: ca05529c9b4ce1d9ec603989af81f0d2aeebf76b
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96129424"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236403"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Установка и настройка Master Data Services
 
@@ -130,11 +130,11 @@ ms.locfileid: "96129424"
   
 3.  На странице **сервер базы данных** укажите экземпляр SQL Server. 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] добавляет поддержку Управляемый экземпляр SQL Server. Установите значение **SQL Server экземпляра** на узел управляемого экземпляра. Например, `xxxxxx.xxxxxx.database.windows.net`.
+    >  [!INCLUDE[sqlv15](../includes/sssql19-md.md)] добавляет поддержку Управляемый экземпляр SQL Server. Установите значение **SQL Server экземпляра** на узел управляемого экземпляра. Например, `xxxxxx.xxxxxx.database.windows.net`.
 
-4. Выберите **тип проверки подлинности** и нажмите кнопку **проверить подключение** , чтобы убедиться, что можно подключиться к базе данных, используя учетные данные для выбранного типа проверки подлинности. Щелкните **Далее**.
+4. Выберите **тип проверки подлинности** и нажмите кнопку **проверить подключение** , чтобы убедиться, что можно подключиться к базе данных, используя учетные данные для выбранного типа проверки подлинности. Нажмите кнопку **Далее**.
 
-    >Для для [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] подключения к управляемому экземпляру используйте один из следующих типов проверки подлинности:
+    >Для для [!INCLUDE[sqlv15](../includes/sssql19-md.md)] подключения к управляемому экземпляру используйте один из следующих типов проверки подлинности:
     >
     >- Встроенная проверка подлинности Azure Active Directory: **текущий пользователь — встроенная Active Directory**
     >- SQL Server проверка подлинности: **учетная запись SQL Server**.
@@ -146,7 +146,7 @@ ms.locfileid: "96129424"
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   
-4.  Введите имя в поле **Имя базы данных** . Если необходимо выбрать параметры сортировки Windows, снимите флажок **Параметры сортировки SQL Server по умолчанию** и укажите один или несколько доступных параметров, например **С учетом регистра**. Щелкните **Далее**.
+4.  Введите имя в поле **Имя базы данных** . Если необходимо выбрать параметры сортировки Windows, снимите флажок **Параметры сортировки SQL Server по умолчанию** и укажите один или несколько доступных параметров, например **С учетом регистра**. Нажмите кнопку **Далее**.
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   

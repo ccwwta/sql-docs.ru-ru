@@ -21,12 +21,12 @@ ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 240737da03fa21d1076251062d99f64b46aecad8
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 5225498eda8ccba4b32b8889062282a6c7d9f3cd
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98168333"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236065"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 
@@ -35,7 +35,7 @@ ms.locfileid: "98168333"
 Возвращает гистограмму статистики для указанного объекта базы данных (таблицы или индексированного представления) в текущей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базе данных. Аналогично `DBCC SHOW_STATISTICS WITH HISTOGRAM`.
 
 > [!NOTE] 
-> Этот DMF доступен начиная с с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] пакетом обновления 1 (SP1) CU2
+> Этот DMF доступен начиная с с [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] пакетом обновления 1 (SP1) CU2
 
 ## <a name="syntax"></a>Синтаксис  
   
@@ -63,7 +63,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 |distinct_range_rows |**bigint** |Предполагаемое количество строк с различающимся значением столбца в пределах шага гистограммы, исключая верхнюю границу. |
 |average_range_rows |**real** |Среднее число строк с повторяющимися значениями столбца в пределах шага гистограммы, за исключением верхней границы ( `RANGE_ROWS / DISTINCT_RANGE_ROWS` для `DISTINCT_RANGE_ROWS > 0` ). |
   
- ## <a name="remarks"></a>Примечания  
+ ## <a name="remarks"></a>Remarks  
  
  ResultSet для `sys.dm_db_stats_histogram` возвращает сведения, аналогичные `DBCC SHOW_STATISTICS WITH HISTOGRAM` и, а также включает `object_id` , `stats_id` и `step_number` .
 

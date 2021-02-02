@@ -21,12 +21,12 @@ author: savjani
 ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12fe1e95cbb1c7ad26025ee52ce111cb3f835704
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 171cada53538f8e5b615e6096a169b0976b57532
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97440829"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236052"
 ---
 # <a name="sysdm_db_log_info-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -61,9 +61,9 @@ sys.dm_db_log_info ( database_id )
 |vlf_parity|**tinyint** |Четность [виртуального файла журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). Используется внутренне для определения конца журнала в VLF.|
 |vlf_first_lsn|**nvarchar (48)** |Регистрационный [номер транзакции в журнале (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) первой записи журнала в [виртуальном файле журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
 |vlf_create_lsn|**nvarchar (48)** |Регистрационный [номер транзакции в журнале (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) для записи журнала, создавшей [виртуальный файл журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
-|vlf_encryptor_thumbprint|**varbinary(20)**| **Применимо к:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> Показывает отпечаток шифратора VLF, если VLF шифруется с помощью [прозрачное шифрование данных](../../relational-databases/security/encryption/transparent-data-encryption.md), в противном случае — null. |
+|vlf_encryptor_thumbprint|**varbinary(20)**| **Применимо к:** [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] <br><br> Показывает отпечаток шифратора VLF, если VLF шифруется с помощью [прозрачное шифрование данных](../../relational-databases/security/encryption/transparent-data-encryption.md), в противном случае — null. |
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Remarks
 `sys.dm_db_log_info`Функция динамического управления заменяет `DBCC LOGINFO` инструкцию.    
  
 ## <a name="permissions"></a>Разрешения  

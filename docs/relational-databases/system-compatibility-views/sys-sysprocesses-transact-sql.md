@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 6b0a49e257760e44398da7426933f6a9050a62f2
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8cf9c34360cfabff16dd4823738168b9611a90ba
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99160670"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235883"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,9 +70,9 @@ ms.locfileid: "99160670"
 |stmt_start|**int**|Начальное смещение текущей инструкции SQL для заданной sql_handle.|  
 |stmt_end|**int**|Конечное смещение текущей инструкции SQL для заданной sql_handle.<br /><br /> -1 = текущая инструкция переходит к концу результатов, возвращаемому функцией fn_get_sql для заданной sql_handle.|  
 |request_id|**int**|Идентификатор запроса. Применяется для идентификаций запросов, выполняемых в текущем сеансе.|
-|page_resource |**Binary (8)** |**Область применения**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br /><br /> 8-байтовое шестнадцатеричное представление ресурса страницы, если `waitresource` столбец содержит страницу. |  
+|page_resource |**Binary (8)** |**Область применения**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] <br /><br /> 8-байтовое шестнадцатеричное представление ресурса страницы, если `waitresource` столбец содержит страницу. |  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если пользователь имеет разрешение VIEW SERVER STATE на сервере, он увидит все выполняющиеся сеансы на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В противном случае пользователь увидит только текущий сеанс.  
   
 ## <a name="see-also"></a>См. также:  

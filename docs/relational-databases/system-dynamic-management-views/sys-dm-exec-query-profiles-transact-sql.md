@@ -21,12 +21,12 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b1f8aa494a01a8fc99fc48efc79a66b80458524
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 4777dea76c24aaeab7f64a761c4d13b49c644af0
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99161366"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235872"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "99161366"
   
 -   Если есть параллельное сканирование, данное динамическое административное представление выдает счетчики для каждого из параллельных потоков, выполняющих сканирование.
  
-Начиная с с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] пакетом обновления 1 (SP1) *Стандартная инфраструктура профилирования статистики выполнения запросов* существует параллельно с *инфраструктурой профилирования статистики выполнения упрощенных запросов*. `SET STATISTICS XML ON` и `SET STATISTICS PROFILE ON` всегда используйте *стандартную инфраструктуру профилирования статистики выполнения запросов*. Для `sys.dm_exec_query_profiles` заполнения необходимо включить одну из инфраструктур профилирования запросов. Дополнительные сведения см. в разделе [Инфраструктура профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md).    
+Начиная с с [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] пакетом обновления 1 (SP1) *Стандартная инфраструктура профилирования статистики выполнения запросов* существует параллельно с *инфраструктурой профилирования статистики выполнения упрощенных запросов*. `SET STATISTICS XML ON` и `SET STATISTICS PROFILE ON` всегда используйте *стандартную инфраструктуру профилирования статистики выполнения запросов*. Для `sys.dm_exec_query_profiles` заполнения необходимо включить одну из инфраструктур профилирования запросов. Дополнительные сведения см. в разделе [Инфраструктура профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md).    
 
 >[!NOTE]
 > Запрос в процессе расследования должен начаться **после** включения инфраструктуры профилирования запросов, после того как запрос не будет давать результаты в `sys.dm_exec_query_profiles` . Дополнительные сведения о том, как включить инфраструктуру профилирования запросов, см. в разделе [инфраструктура профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md).

@@ -21,12 +21,12 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017
-ms.openlocfilehash: 7261cde3df2e1aa31e7a7ab0d5ccbd5f8e8d3e54
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a37a592866c8fcfdc12e5b84657bc7fa7166ee81
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99161395"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237889"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "99161395"
 |**server_id**|**int**|Локальный идентификатор связанного сервера.|  
 |**name**|**sysname**|Если **server_id** = 0, возвращаемое значение является именем сервера.<br /><br /> Если **server_id** > 0, возвращаемое значение является локальным именем связанного сервера.|  
 |**product**|**sysname**|Имя продукта связанного сервера. Значение "SQL Server" указывает на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|**поставщики**|**sysname**|Имя поставщика OLE DB для соединения со связанным сервером.<br /><br />Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] , значение SQLNCLI сопоставляется с [драйвером Microsoft OLE DB для SQL Server (мсоледбскл)](../../connect/oledb/oledb-driver-for-sql-server.md) по умолчанию. В более ранних версиях значение SQLNCLI сопоставляется с [поставщиком SQL Server Native Client OLE DB (SQLNCLI11)](../../relational-databases/native-client/sql-server-native-client.md).|  
+|**поставщики**|**sysname**|Имя поставщика OLE DB для соединения со связанным сервером.<br /><br />Начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] , значение SQLNCLI сопоставляется с [драйвером Microsoft OLE DB для SQL Server (мсоледбскл)](../../connect/oledb/oledb-driver-for-sql-server.md) по умолчанию. В более ранних версиях значение SQLNCLI сопоставляется с [поставщиком SQL Server Native Client OLE DB (SQLNCLI11)](../../relational-databases/native-client/sql-server-native-client.md).|  
 |**data_source**|**nvarchar(4000)**|Свойство соединения источника данных OLE DB.|  
 |**расположение**|**nvarchar(4000)**|Свойство соединения местоположения OLE DB. NULL — если нет.|  
 |**provider_string**|**nvarchar(4000)**|Свойство соединения строки поставщика OLE DB.<br /><br /> Имеет значение NULL, если у вызывающего объекта нет `ALTER ANY LINKED SERVER` разрешения.|  
@@ -60,7 +60,7 @@ ms.locfileid: "99161395"
 |**is_nonsql_subscriber**|**bit**|Сервер является подписчиком репликации, отличным от SQL Server.|  
 |**is_remote_proc_transaction_promotion_enabled**|**bit**|Если 1, вызов удаленной хранимой процедуры приводит к запуску распределенной транзакции и привлекает к выполнению транзакции MS DTC. Дополнительные сведения см. в статье [sp_serveroption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md).|  
 |**modify_date**|**datetime**|Дата последнего изменения сведений о сервере.|  
-|**is_rda_server**|**bit**|**Применимо к:** Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] .<br /><br />Сервер является удаленным архивом данных включить (Stretch-Enabled). Дополнительные сведения см. в разделе [включение Stretch Database на сервере](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).|
+|**is_rda_server**|**bit**|**Применимо к:** Начиная с [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] .<br /><br />Сервер является удаленным архивом данных включить (Stretch-Enabled). Дополнительные сведения см. в разделе [включение Stretch Database на сервере](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).|
   
 ## <a name="permissions"></a>Разрешения  
  Значение в **provider_string** всегда равно null, если у вызывающего объекта нет разрешения ALTER ANY Linked Server.  
@@ -71,7 +71,7 @@ ms.locfileid: "99161395"
   
  Если сопоставление удалено, только те пользователи, которые добавлены явно со связанным или удаленным именем входа, могут просматривать связанные или удаленные сервера соответственно.  Следующие разрешения необходимы для просмотра всех связанных и удаленных серверов после сопоставления имени входа по умолчанию:  
   
-- `ALTER ANY LINKED SERVER` или `ALTER ANY LOGIN ON SERVER`  
+- `ALTER ANY LINKED SERVER` либо `ALTER ANY LOGIN ON SERVER`  
 - Членство в предопределенных ролях сервера **setupadmin** или **sysadmin**  
   
 ## <a name="see-also"></a>См. также:  

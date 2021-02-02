@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: a08b50c897735183d2b3ac39a11cba09b11102e7
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: fc0253df9c1f9c593ef2169f03cb3ff98382cdad
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99202461"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236837"
 ---
 # <a name="stretch-database---sysdm_db_rda_migration_status"></a>Stretch Database sys.dm_db_rda_migration_status
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "99202461"
   
  **sys.dm_db_rda_migration_status** ограничивается контекстом текущей базы данных. Убедитесь, что вы находитесь в контексте базы данных таблиц с растяжением, для которых требуется просмотреть состояние миграции.  
   
- В [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] выходные данные **sys.dm_db_rda_migration_status** ограничены 200 строками.  
+ В [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] выходные данные **sys.dm_db_rda_migration_status** ограничены 200 строками.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  

@@ -21,12 +21,12 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15'
-ms.openlocfilehash: 429f8049ef0b92168be5e3e0fc90c91e3d37224e
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 10756b0297cdc731468ea8983c5378d5b380fef9
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472815"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236023"
 ---
 # <a name="sysdm_db_page_info-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
 
@@ -35,7 +35,7 @@ ms.locfileid: "97472815"
 Возвращает сведения о странице в базе данных.  Функция возвращает одну строку, содержащую сведения о заголовке со страницы, включая `object_id` , `index_id` и `partition_id` .  В большинстве случаев эта функция заменяет потребность в использовании `DBCC PAGE`.
 
 > [!NOTE]
-> `sys.dm_db_page_info` в настоящее время поддерживается только в [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и более поздних версиях.
+> `sys.dm_db_page_info` в настоящее время поддерживается только в [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] и более поздних версиях.
 
 
 ## <a name="syntax"></a>Синтаксис   
@@ -114,7 +114,7 @@ sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )
 |xdes_id |nvarchar (64) |Последняя транзакция, созданная m_reserved <br> Только в целях отладки |
 ||||
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Remarks
 `sys.dm_db_page_info`Функция динамического управления возвращает сведения о странице, такие как `page_id` ,, `file_id` `index_id` и `object_id` т. д., которые находятся в заголовке страницы. Эта информация полезна для устранения неполадок и отладки различных показателей производительности (состязание за блокировки и кратковременные блокировки) и проблем повреждения.
 
 `sys.dm_db_page_info` может использоваться вместо `DBCC PAGE` инструкции во многих случаях, но она возвращает только сведения о заголовке страницы, а не текст страницы. `DBCC PAGE` по-прежнему потребуется для случаев использования, когда все содержимое страницы является обязательным.

@@ -21,12 +21,12 @@ ms.assetid: c768b67c-82a4-47f5-850b-0ea282358d50
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 98a753e6eb1a61aa4be832188919ed1ed0e8bb36
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e0b0252dc739f688e88575f11715594a3972e256
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99190170"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235845"
 ---
 # <a name="sysdm_os_nodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "99190170"
 Внутренний компонент с именем SQLOS создает структуры узлов, имитирующие аппаратное размещение ЦП. Эти структуры можно изменить с помощью [программной архитектуры NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md) для создания пользовательских макетов узлов.  
 
 > [!NOTE]
-> Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] , [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] будет автоматически использовать Soft-NUMA для определенных конфигураций оборудования. Дополнительные сведения см. в разделе [Автоматический программный NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa).
+> Начиная с [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] , [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] будет автоматически использовать Soft-NUMA для определенных конфигураций оборудования. Дополнительные сведения см. в разделе [Автоматический программный NUMA](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa).
   
 Сведения об указанных узлах приведены в следующей таблице.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "99190170"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |node_id|**smallint**|Идентификатор узла.|  
-|node_state_desc|**nvarchar(256)**|Описание состояния узла. Сначала отображаются взаимоисключающие значения, затем все их комбинации. Например:<br /> «В сети», «Недостаток ресурсов потоков», «Отложенный с вытеснением»<br /><br />Существует четыре взаимоисключающих node_state_desc значений. Ниже перечислены их описания.<br /><ul><li>В сети: узел находится в режиме "в сети"<li>ВНЕ сети: узел находится в автономном режиме<li>Бездействие: узел не имеет ожидающих рабочих запросов и перешел в состояние простоя.<li>IDLE_READY: узел не имеет ожидающих рабочих запросов и готов к переходу в состояние простоя.</li></ul><br />Ниже приведены три значения, которые могут быть node_state_desc.<br /><ul><li>DAC: этот узел зарезервирован для [выделенного административного соединения](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).<li>THREAD_RESOURCES_LOW: на этом узле невозможно создать новые потоки из-за нехватки памяти.<li>"ГОРЯЧее" Добавление: указывает, что узлы были добавлены в ответ на событие ЦП "горячего" добавления.</li></ul>|  
+|node_state_desc|**nvarchar(256)**|Описание состояния узла. Сначала отображаются взаимоисключающие значения, затем все их комбинации. Пример:<br /> «В сети», «Недостаток ресурсов потоков», «Отложенный с вытеснением»<br /><br />Существует четыре взаимоисключающих node_state_desc значений. Ниже перечислены их описания.<br /><ul><li>В сети: узел находится в режиме "в сети"<li>ВНЕ сети: узел находится в автономном режиме<li>Бездействие: узел не имеет ожидающих рабочих запросов и перешел в состояние простоя.<li>IDLE_READY: узел не имеет ожидающих рабочих запросов и готов к переходу в состояние простоя.</li></ul><br />Ниже приведены три значения, которые могут быть node_state_desc.<br /><ul><li>DAC: этот узел зарезервирован для [выделенного административного соединения](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).<li>THREAD_RESOURCES_LOW: на этом узле невозможно создать новые потоки из-за нехватки памяти.<li>"ГОРЯЧее" Добавление: указывает, что узлы были добавлены в ответ на событие ЦП "горячего" добавления.</li></ul>|  
 |memory_object_address|**varbinary(8)**|Адрес объекта памяти, связанного с данным узлом. Отношение "один к одному" к .memory_object_addressу [sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
 |memory_clerk_address|**varbinary(8)**|Адрес клерка памяти, связанного с данным узлом. Отношение "один к одному" к .memory_clerk_addressу [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).|  
 |io_completion_worker_address|**varbinary(8)**|Адрес исполнителя, связанного с завершением сеанса ввода-вывода для данного узла. Отношение "один к одному" к .worker_addressу [sys.dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
