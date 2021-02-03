@@ -16,12 +16,12 @@ ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba2d4bc789c324e3e6153dc971a983638af603f4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 2b2d569c3f37370bd132485e843da005b1769b17
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97482340"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99211535"
 ---
 # <a name="use-sparse-columns"></a>Использование разреженных столбцов
 
@@ -39,7 +39,7 @@ ms.locfileid: "97482340"
   
      Поскольку разреженные столбцы имеют много строк со значениями NULL, они особенно подходят для фильтруемых индексов. Фильтруемый индекс на основе разреженного столбца может индексировать только те строки, значения которых заполнены. Таким образом создается более компактный и эффективный индекс. Дополнительные сведения см. в разделе [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
- Разреженные столбцы и фильтруемые индексы позволяют приложениям, таким как [!INCLUDE[winSPServ](../../includes/winspserv-md.md)], эффективно хранить и получать доступ к большому числу определяемых пользователем свойств с помощью [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Разреженные столбцы и фильтруемые индексы позволяют приложениям, таким как [!INCLUDE[winSPServ](../../includes/winspserv-md.md)], эффективно хранить и получать доступ к большому числу определяемых пользователем свойств с помощью [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="properties-of-sparse-columns"></a>Свойства разреженных столбцов  
  Разреженные столбцы имеют следующие характеристики.  

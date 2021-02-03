@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ea6799570df43f5d49cadd93b98dc89528acacdd
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: f95b2c815fabdc4e4c0d7c544e8c8fb5ad96deef
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171056"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99233989"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>Критические изменения в функциях ядра СУБД в SQL Server 2016
 
@@ -28,7 +28,7 @@ ms.locfileid: "98171056"
 
   В этом разделе описаны критические изменения в [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] и предыдущих версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Эти изменения могут нарушать работу приложений, скриптов или механизмов, основанных на более ранних версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. При обновлении могут возникнуть следующие проблемы.  
   
-##  <a name="breaking-changes-in-sssql15"></a><a name="SQL15"></a> Критические изменения в [!INCLUDE[ssSQL15](../includes/sssql16-md.md)]  
+##  <a name="breaking-changes-in-sssql15-md"></a><a name="SQL15"></a> Критические изменения в [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]  
   
 -   Столбец *sample_ms* таблицы `sys.dm_io_virtual_file_stats` был расширен с типа данных **int** до **bigint**.  
   
