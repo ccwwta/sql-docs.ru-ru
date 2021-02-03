@@ -6,18 +6,18 @@ ms.date: 04/04/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: reference
 helpviewer_keywords:
 - 3313 (Database Engine error)
 ms.assetid: a244227b-8553-42df-9435-034f906c4c74
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d176bcd729ca1d72b8f1e6b3d3951cb94ca000e9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 54d19e8b37d0cf4154bb14b3909c1af60afb0743
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456256"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99208387"
 ---
 # <a name="mssqlserver_3313"></a>MSSQLSERVER_3313
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88456256"
 ## <a name="user-action"></a>Действие пользователя  
 Эта ошибка может вызываться временным состоянием, существовавшим в системе во время данной попытки запуска экземпляра сервера или восстановления базы данных. Эта ошибка может быть также вызвана неустранимым сбоем, который возникает при каждой попытке запуска базы данных. Для выяснения причины проверьте журнал событий Windows, в котором должна содержаться предшествующая ошибка, которая указывает на конкретный сбой.  
   
-Следует отметить, что при возникновении этой ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обычно создает три файла в папке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **LOG**. Файл SQLDump*nnnn*.txt содержит дополнительные данные диагностики, относящиеся к сбоям, включая сведения о транзакции и о странице, на которой возникла проблема. Эти сведения обычно используются группой поддержки продукта для анализа причины сбоя.  
+Следует отметить, что при возникновении этой ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обычно создает три файла в папке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **LOG**. Файл SQLDump *nnnn*.txt содержит дополнительные данные диагностики, относящиеся к сбоям, включая сведения о транзакции и о странице, на которой возникла проблема. Эти сведения обычно используются группой поддержки продукта для анализа причины сбоя.  
   
 Чтобы получить сведения о причине возникновения ошибки 3313, изучите в журнале событий Windows предшествующее сообщение об ошибке, в котором указан конкретный сбой. Соответствующее действие пользователя зависит от того, что указывают сведения в журнале событий Windows: ошибка [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] была вызвана временным состоянием или неустранимым сбоем. Сведения о действиях пользователя по устранению ошибки 3313 приведены в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

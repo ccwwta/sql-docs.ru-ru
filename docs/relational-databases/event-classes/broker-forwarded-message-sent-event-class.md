@@ -6,19 +6,19 @@ ms.date: 05/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Broker:Forwarded Message Sent event class
 ms.assetid: d0ef74d9-a4ef-4918-aa21-6b267e85569f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb738df03a1e4ea5e9472a6bf0ff2646756d500d
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: eb714e530973b719cf89a860534af7799ad31d31
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97476235"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99205684"
 ---
 # <a name="brokerforwarded-message-sent-event-class"></a>Broker:Forwarded Message Sent, класс событий
 
@@ -38,7 +38,7 @@ ms.locfileid: "97476235"
 |EventClass|**int**|Тип захваченного класса событий. Для класса событий Broker:Forwarded Message Sent всегда равен 139.|27|Нет|  
 |EventSequence|**int**|Порядковый номер этого события.|51|Нет|  
 |FileName|**nvarchar**|Имя службы, для которой предназначено сообщение.|36|нет|  
-|Код GUID|**uniqueidentifier**|Идентификатор диалога. Этот идентификатор передается в составе сообщения и является общим для обоих участников диалога.|54|Нет|  
+|Идентификатор GUID|**uniqueidentifier**|Идентификатор диалога. Этот идентификатор передается в составе сообщения и является общим для обоих участников диалога.|54|Нет|  
 |HostName|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Заполнение этого столбца данных производится в том случае, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |IndexID|**int**|Число прыжков, оставшихся у перенаправленного сообщения.|24|Нет|  
 |IntegerData|**int**|Номер фрагмента перенаправленного сообщения.|25|Нет|  
@@ -53,7 +53,7 @@ ms.locfileid: "97476235"
 |ServerName|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , подвергаемого трассировке.|26|Нет|  
 |SPID|**int**|Идентификатор процесса сервера, который [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] присвоил процессу, связанному с клиентом.|12|Да|  
 |StartTime|**datetime**|Время начала события, если доступно.|14|Да|  
-|Success|**int**|Количество времени, затраченного на процесс перенаправления.|23|Нет|  
+|Успешное завершение|**int**|Количество времени, затраченного на процесс перенаправления.|23|Нет|  
 |TargetLoginName|**nvarchar**|Сетевой адрес, по которому экземпляр отправляет сообщение. Обратите внимание, что он может отличаться от конечного места назначения сообщения.|42|Нет|  
 |TargetUserName|**nvarchar**|Имя вызывающей службы для сообщения.|39|нет|  
 |TransactionID|**bigint**|Назначенный системой идентификатор транзакции.|4|нет|  

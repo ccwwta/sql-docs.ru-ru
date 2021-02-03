@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - FOR
 - FOR CLAUSE
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a3f8fb497c95bd7f1df6f1ea8a51be938bc1a555
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 99b47c3d47e7403e04cfff4b62ff5c1d78bb6071
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479481"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99207544"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - FOR, предложение (Transact-SQL)
 
@@ -265,7 +265,7 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
   
  PATH  
  Чтобы сохранить полный контроль над форматом выходных данных JSON, используйте   
-            **FOR JSON PATH**. Режим**PATH** позволяет создавать объекты-оболочки и вкладывать сложные свойства друг в друга. Дополнительные сведения и примеры см. в разделе [Форматирование вложенных выходных данных JSON в режиме PATH (SQL Server)](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md).  
+            **FOR JSON PATH**. Режим **PATH** позволяет создавать объекты-оболочки и вкладывать сложные свойства друг в друга. Дополнительные сведения и примеры см. в разделе [Форматирование вложенных выходных данных JSON в режиме PATH (SQL Server)](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md).  
   
  INCLUDE_NULL_VALUES  
  Включайте значения NULL в выходные данные JSON, указав параметр **INCLUDE_NULL_VALUES** для предложения **FOR JSON**. Если не указать этот параметр, в выходные данные не будут включены свойства JSON для значений NULL в результатах запроса. Дополнительные сведения и примеры см. в статье [Использование параметра INCLUDE_NULL_VALUES для включения значений NULL в выходные данные JSON (SQL Server)](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md).  
