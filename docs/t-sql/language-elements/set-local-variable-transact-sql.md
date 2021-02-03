@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -19,12 +19,12 @@ ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: caf0fcb2a9b00c8f391280395629348f055d4039
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 0cf40a6b16c1a2750180a5646e17ad317fe3c1bf
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100965"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99194286"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -184,7 +184,7 @@ READ ONLY
   
 Вы можете использовать составной оператор присваивания во всех случаях, когда выполняется присваивание с выражением справа от оператора, включающим переменные, а также инструкцию SET в инструкциях UPDATE, SELECT и RECEIVE.  
   
-Не используйте переменную в инструкции SELECT для сцепления значений (то есть для вычисления статистических значений). Запрос может вернуть непредвиденные результаты. Это связано с тем, что все выражения в списке SELECT (включая назначения) могут быть выполнены несколько раз для каждой строки вывода. Дополнительные сведения см. в [этой статье базы знаний](https://support.microsoft.com/kb/287515).  
+Не используйте переменную в инструкции SELECT для сцепления значений (то есть для вычисления статистических значений). Запрос может вернуть непредвиденные результаты. Это связано с тем, что все выражения в списке SELECT (включая назначения) могут быть выполнены несколько раз для каждой строки вывода. Дополнительные сведения см. в [этой статье базы знаний](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/287515).  
   
 ## <a name="permissions"></a>Разрешения  
 Требуется членство в роли public. Все пользователи могут использовать SET **@** _local_variable_.  
