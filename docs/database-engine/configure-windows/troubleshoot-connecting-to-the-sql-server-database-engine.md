@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: sqlfreshmay19
 ms.date: 11/25/2019
-ms.openlocfilehash: 2ef49ed5d3d46e4f5c5602972ea87347b686d9bb
-ms.sourcegitcommit: 8a8c89b0ff6d6dfb8554b92187aca1bf0f8bcc07
+ms.openlocfilehash: cd4dae49fb19532e9aee082e4046c4d79dbf0a82
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97617573"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237998"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Устранение неполадок при соединении с ядром СУБД SQL Server.
 
@@ -108,7 +108,7 @@ ms.locfileid: "97617573"
    > [!NOTE]
    > В некоторых сообщениях об ошибках, передаваемых клиенту, намеренно не приведены достаточные сведения для устранения неполадок. Это связано с обеспечением безопасности, так как в этом случае злоумышленник не может получить данные о SQL Server. Чтобы просмотреть полные сведения об ошибке, обратитесь к журналу ошибок SQL Server. Там вы найдете все подробности. 
 
-4. Если возникает ошибка `18456 Login failed for user`, дополнительные сведения о кодах ошибки см. в описании ошибки [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md). Подробный список кодов ошибок приведен в блоке Аарона Бертрана (Aaron Bertrand) в статье [Troubleshooting Error 18456](https://sqlblog.org/2011/01/14/troubleshooting-error-18456) (Устранение ошибки 18456). Журнал ошибок можно просмотреть помощью среды SSMS (при наличии соединения) в разделе "Управление" обозревателя объектов. В противном случае журнал можно просмотреть с помощью программы Блокнот Windows. Расположение по умолчанию зависит от версии и может быть изменено во время установки. Расположением по умолчанию для [!INCLUDE[ssSQL15_md](../../includes/sssqlv15-md.md)] является `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log\ERRORLOG`. 
+4. Если возникает ошибка `18456 Login failed for user`, дополнительные сведения о кодах ошибки см. в описании ошибки [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md). Подробный список кодов ошибок приведен в блоке Аарона Бертрана (Aaron Bertrand) в статье [Troubleshooting Error 18456](https://sqlblog.org/2011/01/14/troubleshooting-error-18456) (Устранение ошибки 18456). Журнал ошибок можно просмотреть помощью среды SSMS (при наличии соединения) в разделе "Управление" обозревателя объектов. В противном случае журнал можно просмотреть с помощью программы Блокнот Windows. Расположение по умолчанию зависит от версии и может быть изменено во время установки. Расположением по умолчанию для [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] является `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Log\ERRORLOG`. 
 
 5. Если соединение устанавливается с помощью общей памяти, проверьте его с использованием TCP. Вы можете принудительно задать TCP-подключение, указав `tcp:` перед именем. Пример:
 

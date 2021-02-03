@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - time_TSQL
 - time
@@ -23,12 +23,12 @@ ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f86da3e041d4edea7c6fcb71869414ba75544752
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 7425622f808eccb983b73670b57ec3295de15fb3
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472165"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237353"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
 
@@ -108,7 +108,7 @@ ms.locfileid: "97472165"
   
  При преобразовании в тип **time(n)** копируются часы, минуты и секунды. Если целевая точность меньше исходной точности, доли секунд будут округлены в сторону увеличения, чтобы соответствовать целевой точности. Следующий пример показывает результаты преобразования значения `time(4)` в значение `time(3)`.  
   
-```  
+```sql
 DECLARE @timeFrom time(4) = '12:34:54.1237';  
 DECLARE @timeTo time(3) = @timeFrom;  
   
@@ -126,7 +126,7 @@ SELECT @timeTo AS 'time(3)', @timeFrom AS 'time(4)';
   
  При преобразовании в тип **datetime** значения часов, минут и секунд копируются; для компонента даты устанавливается значение "1900-01-01". Если точность в долях секунды значения типа **time(n)** больше трех цифр, результат типа **datetime** будет усечен. Следующий код демонстрирует результаты преобразования значения `time(4)` в значение `datetime`.  
   
-```  
+```sql
 DECLARE @time time(4) = '12:15:04.1237';  
 DECLARE @datetime datetime= @time;  
 SELECT @time AS '@time', @datetime AS '@datetime';  
@@ -142,7 +142,7 @@ SELECT @time AS '@time', @datetime AS '@datetime';
   
  При преобразовании в тип **smalldatetime** значения часов и минут округляются в сторону увеличения, и для даты устанавливается значение "1900-01-01". Секунды и доли секунд устанавливаются в значение 0. Следующий код демонстрирует результаты преобразования значения `time(4)` в значение `smalldatetime`.  
   
-```  
+```sql
 -- Shows rounding up of the minute value.  
 DECLARE @time time(4) = '12:15:59.9999';   
 DECLARE @smalldatetime smalldatetime= @time;    
@@ -169,7 +169,7 @@ SELECT @time AS '@time', @smalldatetime AS '@smalldatetime';
   
  При преобразовании в **datetimeoffset(n)** время копируется, а для даты устанавливается значение "1900-01-01". Для смещения часового пояса устанавливается значение +00:00. Если точность в долях секунды значения типа **time(n)** больше, чем точность значения типа **datetimeoffset(n)**, значение округляется в сторону увеличения. В следующем примере демонстрируются результаты преобразования значения типа `time(4)` в тип `datetimeoffset(3)`.  
   
-```  
+```sql
 DECLARE @time time(4) = '12:15:04.1237';  
 DECLARE @datetimeoffset datetimeoffset(3) = @time;  
   
@@ -186,7 +186,7 @@ SELECT @time AS '@time', @datetimeoffset AS '@datetimeoffset';
   
  При преобразовании в тип **datetime2(n)** для даты устанавливается значение 1900-01-01, компонент времени копируется, а для смещения часового пояса устанавливается значение 00:00. Если точность в долях секунды значения типа **datetime2(n)** больше точности значения типа **time(n)**, доли секунды округляются в сторону увеличения.  Следующий пример показывает результаты преобразования значения `time(4)` в значение `datetime2(2)`.  
   
-```  
+```sql
 DECLARE @time time(4) = '12:15:04.1237';  
 DECLARE @datetime2 datetime2(3) = @time;  
   
@@ -221,7 +221,7 @@ SELECT @datetime2 AS '@datetime2', @time AS '@time';
 ### <a name="a-comparing-date-and-time-data-types"></a>A. Сравнение типов данных даты и времени  
  В приведенном ниже примере сравниваются результаты приведения строкового типа к каждому из типов данных **date** и **time**.  
   
-```  
+```sql
 SELECT   
      CAST('2007-05-08 12:35:29. 1234567 +12:15' AS time(7)) AS 'time'   
     ,CAST('2007-05-08 12:35:29. 1234567 +12:15' AS date) AS 'date'   

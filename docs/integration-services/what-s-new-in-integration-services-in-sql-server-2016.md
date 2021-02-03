@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 838b01e2fd4f09b787b11f146143fc6c327504b7
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: aa2736f06ad57ec6fca8ff0af8a07625265e296a
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172216"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237256"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Новые возможности служб Integration Services в SQL Server 2016
 
@@ -368,7 +368,7 @@ ms.locfileid: "98172216"
 ####  <a name="rich-xml-validation-output-in-the-xml-task"></a><a name="ValidateXML"></a> Подробные данные о проверке XML в задачах XML  
  Активировав в задаче XML свойство **ValidationDetails** , вы сможете получить подробные результаты проверки XML-документа. До появления свойства **ValidationDetails** проверка XML в задачах XML возвращала информацию только о том, есть ошибка в документе или нет. Сведения о самих ошибках и их расположении были недоступны. Теперь, если для свойства **ValidationDetails** задать значение True, выходной файл будет содержать подробные сведения обо всех ошибках, включая номера строк и позиции. Эти сведения можно использовать для анализа, поиска и исправления ошибок в XML-документах. Дополнительные сведения см. в разделе [Validate XML with the XML Task](../integration-services/control-flow/validate-xml-with-the-xml-task.md).  
   
- В[!INCLUDE[ssIS](../includes/ssis-md.md)] появилось свойство **ValidationDetails** в пакете обновления 2 (SP2) для [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] . В то время о новом свойстве не было никакой информации. Кроме того, свойство **ValidationDetails** доступно в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] и [!INCLUDE[ssSQL15](../includes/sssql16-md.md)].   
+ В[!INCLUDE[ssIS](../includes/ssis-md.md)] появилось свойство **ValidationDetails** в пакете обновления 2 (SP2) для [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] . В то время о новом свойстве не было никакой информации. Кроме того, свойство **ValidationDetails** доступно в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] и [!INCLUDE[sssql15-md](../includes/sssql16-md.md)].   
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

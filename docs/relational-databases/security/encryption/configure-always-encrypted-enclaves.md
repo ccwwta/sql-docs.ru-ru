@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: 481493a50fdefc22f6eb4d77feb13cfc4848388d
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: 73a1c9f3a39ce51ce6ecc347af2e2eb0fb173fb6
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534653"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237303"
 ---
 # <a name="configure-and-use-always-encrypted-with-secure-enclaves"></a>Настройка и использование Always Encrypted с безопасными анклавами 
 
@@ -33,7 +33,7 @@ ms.locfileid: "98534653"
 
 Прежде чем использовать Always Encrypted с безопасными анклавами, необходимо настроить среду, которая обеспечит доступность безопасного анклава для базы данных. Кроме того, необходимо настроить [аттестацию анклава](always-encrypted-enclaves.md#secure-enclave-attestation). 
 
-Процесс настройки среды зависит от того, используете вы [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] или [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
+Процесс настройки среды зависит от того, используете вы [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] или [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].
 
 ### <a name="set-up-the-secure-enclave-and-attestation-in-ssnoversion-md"></a>Настройка безопасного анклава и аттестации в [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]
 
@@ -46,9 +46,9 @@ ms.locfileid: "98534653"
 ### <a name="set-up-the-secure-enclave-and-attestation-in-sssdsfull"></a>Настройка безопасного анклава и аттестации в [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]
 
 Подробности см. в следующих статьях:
-- [Планирование использования анклавов Intel SGX и аттестация в [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]](/azure/azure-sql/database/always-encrypted-enclaves-sqldbmi-plan)
-- [Включение Intel SGX для Базы данных SQL Azure](/azure/azure-sql/database/always-encrypted-enclaves-sqldbmi-enable-sgx)
-- [Настройка Аттестации Azure для логического сервера Базы данных SQL Azure](/azure/azure-sql/database/always-encrypted-enclaves-sqldbmi-configure-attestation)
+- [Планирование использования анклавов Intel SGX и аттестация в [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]](/azure/azure-sql/database/always-encrypted-enclaves-plan)
+- [Включение Intel SGX для Базы данных SQL Azure](/azure/azure-sql/database/always-encrypted-enclaves-enable-sgx)
+- [Настройка Аттестации Azure для логического сервера Базы данных SQL Azure](/azure/azure-sql/database/always-encrypted-enclaves-configure-attestation)
 
 ## <a name="manage-keys-for-always-encrypted-with-secure-enclaves"></a>Управление ключами для Always Encrypted с безопасными анклавами
 Подробные сведения см. в следующих разделах:

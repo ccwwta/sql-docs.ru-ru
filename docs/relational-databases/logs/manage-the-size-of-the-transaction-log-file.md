@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e0d5c070d961e71711189b9b32ad12508812b277
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 699052eedf2a32faac9f3bf849f5f4aaa4c43b4c
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171546"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237695"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Управление размером файла журнала транзакций
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "98171546"
   
       |Версия|Значения по умолчанию|  
       |-------------|--------------------|  
-      |Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]|Данные — 64 МБ. Файлы журналов — 64 МБ.|  
+      |Начиная с [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]|Данные — 64 МБ. Файлы журналов — 64 МБ.|  
       |Начиная с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Данные — 1 МБ. Файлы журналов — 10 %.|  
       |До [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Данные — 10 %. Файлы журналов — 10 %.|  
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8ff53ca4e4118b105eabac256663a8b052e218fa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a5e968978dd641f78dfb17d515ab07e3b7e27485
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88429056"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250160"
 ---
 # <a name="data-collector-security"></a>Безопасность сборщика данных
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88429056"
  В следующих разделах в общих чертах описывается безопасность сбора данных, а также те роли, которые необходимо предоставлять пользователям, чтобы они могли настроить и использовать сборщик данных и осуществлять выполнение задач, связанных с хранилищем управляющих данных.  
   
 ## <a name="general-security"></a>Общая безопасность  
- Сборщик данных устанавливается в соответствии с документированными стандартами для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Сборщик данных устанавливается в соответствии с документированными стандартами для [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="network-security"></a>Безопасность сети  
  Конфиденциальные данные могут передаваться между целевыми экземплярами, реляционным экземпляром, связанным с сервером конфигурации, на котором работают наборы сбора, и сервером, на котором расположено хранилище управляющих данных.  

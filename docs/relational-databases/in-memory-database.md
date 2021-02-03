@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: briancarrig
 ms.author: brcarrig
-ms.openlocfilehash: 88f965eadf0defbd75c859fa2308dd255f5c1486
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6625022360c93da5cbc43224572908738f6d430c
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470454"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236445"
 ---
 # <a name="in-memory-database-systems-and-technologies"></a>Системы и технологии баз данных в памяти
 
@@ -39,13 +39,13 @@ ms.locfileid: "88470454"
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-[Гибридный буферный пул](../database-engine/configure-windows/hybrid-buffer-pool.md) расширяет буферный пул для файлов базы данных, размещенных на устройствах хранения энергонезависимой памяти с байтовой адресацией для платформ Windows и Linux с [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+[Гибридный буферный пул](../database-engine/configure-windows/hybrid-buffer-pool.md) расширяет буферный пул для файлов базы данных, размещенных на устройствах хранения энергонезависимой памяти с байтовой адресацией для платформ Windows и Linux с [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)].
 
 ## <a name="memory-optimized-tempdb-metadata"></a>Оптимизированные для памяти метаданные `tempdb`
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-В [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] появилась новая функция — [оптимизированные для памяти метаданные tempdb](./databases/tempdb-database.md#memory-optimized-tempdb-metadata), которая эффективно устраняет некоторые узкие места состязаний и открывает новый уровень масштабируемости для рабочих нагрузок, активно использующих tempdb.
+В [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] появилась новая функция — [оптимизированные для памяти метаданные tempdb](./databases/tempdb-database.md#memory-optimized-tempdb-metadata), которая эффективно устраняет некоторые узкие места состязаний и открывает новый уровень масштабируемости для рабочих нагрузок, активно использующих tempdb.
 
 ## <a name="in-memory-oltp"></a>Выполняющаяся в памяти OLTP
 
@@ -57,7 +57,7 @@ ms.locfileid: "88470454"
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-В статье [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] описано, как настроить энергонезависимую память (PMEM) с помощью служебной программы `ndctl`[энергонезависимая память](../linux/sql-server-linux-configure-pmem.md).
+В статье [!INCLUDE[sqlv15](../includes/sssql19-md.md)] описано, как настроить энергонезависимую память (PMEM) с помощью служебной программы `ndctl`[энергонезависимая память](../linux/sql-server-linux-configure-pmem.md).
 
 ## <a name="persisted-log-buffer"></a>Буфер сохраненного журнала
 

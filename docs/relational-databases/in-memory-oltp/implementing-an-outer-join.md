@@ -12,17 +12,17 @@ ms.assetid: 67084043-6b23-4975-b9db-6e49923d4bab
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0cfec2936893c18749e2e3a4667214130e4a223d
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 85805aa9b64bc1b6dea22337dd885e8db82e99ad
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172016"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237958"
 ---
 # <a name="implementing-an-outer-join"></a>Создание внешнего соединения
 
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Процедуры LEFT и RIGHT OUTER JOIN поддерживаются в скомпилированных в собственном коде модулях T-SQL, начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)].  
+  Процедуры LEFT и RIGHT OUTER JOIN поддерживаются в скомпилированных в собственном коде модулях T-SQL, начиная с версии [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)].  
   
 Дополнительные сведения об OUTER JOIN см. в разделе [Предложение FROM и JOIN, APPLY, PIVOT](../../t-sql/queries/from-transact-sql.md).

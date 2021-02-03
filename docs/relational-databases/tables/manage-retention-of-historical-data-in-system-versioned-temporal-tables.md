@@ -12,12 +12,12 @@ ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c0dac2b5d344969f96016a86622ee4e07ab8c23d
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 2e37f8234a1b8ee2ab72c76a423ea72ac9d3f14a
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98168188"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235829"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Управление хранением данных журнала в темпоральных таблицах с системным управлением версиями
 
@@ -51,9 +51,9 @@ ms.locfileid: "98168188"
 ## <a name="using-stretch-database-approach"></a>Использование базы данных Stretch
 
 > [!NOTE]
-> Использование Stretch Database применимо только к [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и не может применяться к [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+> Использование Stretch Database применимо только к [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] и не может применяться к [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
-[база данных Stretch;](../../sql-server/stretch-database/stretch-database.md) в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] прозрачно переносит данных журнала в Azure. Для обеспечения дополнительной защиты можно зашифровать передаваемые данные с помощью функции SQL Server [Постоянное шифрование](../security/encryption/always-encrypted-database-engine.md) . Кроме того, для защиты данных можно использовать [защиту на уровне строк](../../relational-databases/security/row-level-security.md) и другие дополнительные функции безопасности SQL Server с помощью средств Temporal и базы данных Stretch.
+[база данных Stretch;](../../sql-server/stretch-database/stretch-database.md) в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] прозрачно переносит данных журнала в Azure. Для обеспечения дополнительной защиты можно зашифровать передаваемые данные с помощью функции SQL Server [Постоянное шифрование](../security/encryption/always-encrypted-database-engine.md) . Кроме того, для защиты данных можно использовать [защиту на уровне строк](../../relational-databases/security/row-level-security.md) и другие дополнительные функции безопасности SQL Server с помощью средств Temporal и базы данных Stretch.
 
 Используя базу данных Stretch, можно растянуть часть таблиц или все темпоральные таблицы журнала в Azure, и сервер SQL Server автоматически переместит данные журнала в Azure. Использование технологии Stretch для таблицы журнала не влияет на взаимодействие с темпоральной таблицей в части изменения данных и темпоральных запросов.
 
@@ -70,7 +70,7 @@ ms.locfileid: "98168188"
 
 ### <a name="using-the-stretch-wizard-to-stretch-the-entire-history-table"></a>Использование мастера растяжения для растяжения всей таблицы журнала
 
-Самым простым способом для начинающих является использование мастера растяжения для включения растяжения для всей базы данных. Затем нужно выбрать темпоральную таблицу журнала в мастере растяжения (в этом примере предполагается, что таблица Department определена в качестве темпоральной таблицы с системным управлением версиями в изначально пустой базе данных). В [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]нельзя щелкнуть правой кнопкой мыши саму темпоральную таблицу журнала и выбрать команду "Растяжение".
+Самым простым способом для начинающих является использование мастера растяжения для включения растяжения для всей базы данных. Затем нужно выбрать темпоральную таблицу журнала в мастере растяжения (в этом примере предполагается, что таблица Department определена в качестве темпоральной таблицы с системным управлением версиями в изначально пустой базе данных). В [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]нельзя щелкнуть правой кнопкой мыши саму темпоральную таблицу журнала и выбрать команду "Растяжение".
 
 1. Щелкните базу данных правой кнопкой мыши и наведите указатель на пункт **Задачи**, затем на пункт **Растяжение** и выберите пункт **Включить** , чтобы запустить мастер.
 2. В окне **Выбор таблиц** установите флажок рядом с темпоральной таблицей журнала и нажмите кнопку "Далее".

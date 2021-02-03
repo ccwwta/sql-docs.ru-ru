@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: f2aa24e3ebd335251ad2721444e9f9d8645ef221
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: e6e6dfd3092f4602f652af81e547b63fc1ddc3df
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534908"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236092"
 ---
 # <a name="configure-the-secure-enclave-in-sql-server"></a>Настройка безопасного анклава в SQL Server
 
@@ -27,7 +27,7 @@ ms.locfileid: "98534908"
 > [!NOTE]
 > Ответственным за настройку безопасного анклава является администратор баз данных. См. раздел о [ролях и обязанностях при настройке аттестации с помощью HGS](always-encrypted-enclaves-host-guardian-service-plan.md#roles-and-responsibilities-when-configuring-attestation-with-hgs).
 
-Поддерживаемым типом безопасного анклава для [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] является безопасность на основе виртуализации (VBS). Перед настройкой типа анклава VBS рекомендуется настроить аттестацию с помощью службы защиты узла (HGS) на компьютере, где размещается экземпляр. Сведения о начале работы с HGS см. в статье [Планирование аттестации службы защиты узла](always-encrypted-enclaves-host-guardian-service-plan.md). При настройке аттестации также включается функция безопасности на основе виртуализации, которая необходима для правильной инициализации анклава VBS. Дополнительные сведения см. в разделе [Проверка выполнения функции безопасности на основе виртуализации](always-encrypted-enclaves-host-guardian-service-register.md#step-2-verify-virtualization-based-security-is-running).
+Поддерживаемым типом безопасного анклава для [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] является безопасность на основе виртуализации (VBS). Перед настройкой типа анклава VBS рекомендуется настроить аттестацию с помощью службы защиты узла (HGS) на компьютере, где размещается экземпляр. Сведения о начале работы с HGS см. в статье [Планирование аттестации службы защиты узла](always-encrypted-enclaves-host-guardian-service-plan.md). При настройке аттестации также включается функция безопасности на основе виртуализации, которая необходима для правильной инициализации анклава VBS. Дополнительные сведения см. в разделе [Проверка выполнения функции безопасности на основе виртуализации](always-encrypted-enclaves-host-guardian-service-register.md#step-2-verify-virtualization-based-security-is-running).
 
 Подробные инструкции о настройке типа анклава см. в статье [Настройка типа анклава для параметра конфигурации сервера Always Encrypted](../../../database-engine/configure-windows/configure-column-encryption-enclave-type.md).
 

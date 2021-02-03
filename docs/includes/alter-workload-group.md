@@ -46,7 +46,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  REQUEST_MAX_MEMORY_GRANT_PERCENT = *value*     
  Указывает максимальное количество памяти, которое может понадобиться одному запросу из пула. *value* — это процентное соотношение относительно размера пула ресурсов, указанное в MAX_MEMORY_PERCENT.  
 
-*value* является целым числом в версиях до [!INCLUDE[ssSQL17](sssql17-md.md)] и числом с плавающей точкой начиная с [!INCLUDE[sql-server-2019](sssqlv15-md.md)]. Значение по умолчанию равно 25. Диапазон допустимых значений для *value* — от 1 до 100.
+*value* является целым числом в версиях до [!INCLUDE[ssSQL17](sssql17-md.md)] и числом с плавающей точкой начиная с [!INCLUDE[sql-server-2019](sssql19-md.md)]. Значение по умолчанию равно 25. Диапазон допустимых значений для *value* — от 1 до 100.
   
 > [!NOTE]  
 > Указанное значение ссылается только на доступную для выполнения запроса память.  
@@ -72,7 +72,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > По умолчанию по истечении лимита времени Resource Governor не прекращает выполнение запроса. Однако будет сформировано событие. Дополнительные сведения см. в разделе [Класс событий CPU Threshold Exceeded](../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md). 
 
 > [!IMPORTANT]
-> Начиная с [!INCLUDE[ssSQL15](sssql16-md.md)] с пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](sssql17-md.md)] с накопительным пакетом обновления 3 и в случае использования [флага трассировки 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) при превышении максимального значения времени Resource Governor прервет запрос.
+> Начиная с [!INCLUDE[sssql16-md](sssql16-md.md)] с пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](sssql17-md.md)] с накопительным пакетом обновления 3 и в случае использования [флага трассировки 2422](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) при превышении максимального значения времени Resource Governor прервет запрос.
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  Задает максимальное время (в секундах), которое запрос может ожидать предоставления памяти (памяти рабочего буфера).  

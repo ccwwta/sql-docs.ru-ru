@@ -19,12 +19,12 @@ author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 06288dc0bc6e16ab8928322005254f5fac1ddc61
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: adc1affe33d1172b3e648c510b2dbc1d00326849
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171486"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237981"
 ---
 # <a name="transparent-data-encryption-tde"></a>Прозрачное шифрование данных (TDE)
 
@@ -227,7 +227,7 @@ GO
 
 Чтобы включить TDE в базе данных, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] должен выполнить проверку шифрования. Проверка считывает каждую страницу из файлов данных в буферный пул, а затем записывает зашифрованные страницы обратно на диск.
 
-Чтобы обеспечить более полный контроль над проверкой шифрования, [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] вводит сканирование TDE, которое имеет синтаксис приостановки и возобновления. Вы можете приостановить сканирование, когда рабочая нагрузка в системе будет очень высокой или в течение критически важного для бизнеса периода, а затем возобновить сканирование позже.
+Чтобы обеспечить более полный контроль над проверкой шифрования, [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] вводит сканирование TDE, которое имеет синтаксис приостановки и возобновления. Вы можете приостановить сканирование, когда рабочая нагрузка в системе будет очень высокой или в течение критически важного для бизнеса периода, а затем возобновить сканирование позже.
 
 Чтобы приостановить сканирование шифрования TDE, используйте следующий синтаксис:
 
@@ -314,7 +314,7 @@ ALTER DATABASE <db_name> SET ENCRYPTION OFF;
 
 ## <a name="tde-and-in-memory-oltp"></a>TDE и выполняющаяся в памяти OLTP
 
-Прозрачное шифрование данных можно включить в базе данных, которая содержит объекты OLTP в памяти. В [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] и [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] записи журнала выполняющейся в памяти OLTP шифруются, если включено TDE. В [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] записи журнала выполняющейся в памяти OLTP шифруются, если включено TDE, однако файлы в файловой группе MEMORY_OPTIMIZED_DATA не шифруются.
+Прозрачное шифрование данных можно включить в базе данных, которая содержит объекты OLTP в памяти. В [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] и [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] записи журнала выполняющейся в памяти OLTP шифруются, если включено TDE. В [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] записи журнала выполняющейся в памяти OLTP шифруются, если включено TDE, однако файлы в файловой группе MEMORY_OPTIMIZED_DATA не шифруются.
 
 ## <a name="related-tasks"></a>Связанные задачи
 

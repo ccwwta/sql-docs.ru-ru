@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - INSERT_TSQL
 - INSERT
@@ -33,12 +33,12 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 206aefdd3cd58b94124a0840cef7e788c5a29390
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: b5a6fd7131b63741a82c120e1e0b222405865a9d
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171276"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237180"
 ---
 # <a name="insert-transact-sql"></a>Инструкция INSERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -319,7 +319,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
   
 В отличие от инструкции `BULK INSERT`, которая удерживает менее строгую блокировку массового обновления, инструкция `INSERT INTO … SELECT` с указанием `TABLOCK` удерживает монопольную блокировку (X) таблицы. Это означает, что отсутствует возможность вставки строк с помощью нескольких операций вставки, которые выполняются одновременно. 
 
-Но начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и уровня совместимости базы данных 130, одну инструкцию `INSERT INTO … SELECT` можно выполнять параллельно при вставке в кучи или кластеризованные индексы columnstore (CCI). При использовании указания `TABLOCK` можно выполнять вставку параллельно.  
+Но начиная с [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] и уровня совместимости базы данных 130, одну инструкцию `INSERT INTO … SELECT` можно выполнять параллельно при вставке в кучи или кластеризованные индексы columnstore (CCI). При использовании указания `TABLOCK` можно выполнять вставку параллельно.  
 
 Требования к параллелизму для указанной выше инструкции (аналогичны требованиям для минимального ведения журнала):  
 -   целевой таблицей должны быть пустая или непустая куча;  
@@ -785,7 +785,7 @@ GO
 #### <a name="p-inserting-into-an-external-table-created-using-polybase"></a>Т. Вставка во внешнюю таблицу, созданную с помощью PolyBase  
  Вы можете экспортировать данные из SQL Server в службу хранилища Azure или Hadoop. Для этого сначала необходимо создать внешнюю таблицу, которая указывает на целевой файл или каталог. Затем используйте инструкцию INSERT INTO, чтобы экспортировать данные из локальной таблицы SQL Server во внешний источник данных. При выполнении инструкции INSERT INTO создается целевой файл или каталог (если его не существует), а результаты выполнения инструкции SELECT экспортируются в указанное расположение в заданном формате.  Дополнительные сведения см. в разделе [Приступая к работе с PolyBase](../../relational-databases/polybase/polybase-guide.md).  
   
-**Применимо к**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**Применимо к**: [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 ```sql
 -- Create an external table.   

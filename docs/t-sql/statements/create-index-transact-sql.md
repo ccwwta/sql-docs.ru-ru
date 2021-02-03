@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CREATE INDEX
 - INDEX
@@ -55,12 +55,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f1322f21ed7ad3f09f30a0f5a5e71e5614a8d47
-ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.openlocfilehash: 8591620ce92aca8a6c272539721f20a8a64fd9ae
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98766238"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237102"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -90,7 +90,7 @@ CREATE UNIQUE INDEX i1 ON t1 (col1 DESC, col2 ASC, col3 DESC);
 
 **Основной сценарий.**
 
-Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и [!INCLUDE[ssSDS](../../includes/sssds-md.md)], некластеризованный индекс используется в индексе columnstore для повышения производительности запросов хранилища данных. Дополнительные сведения см. в статье [Хранилище данных для индексов columnstore](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md).
+Начиная с [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] и [!INCLUDE[ssSDS](../../includes/sssds-md.md)], некластеризованный индекс используется в индексе columnstore для повышения производительности запросов хранилища данных. Дополнительные сведения см. в статье [Хранилище данных для индексов columnstore](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md).
 
 Дополнительные типы индексов описаны в следующих статьях:
 
@@ -250,7 +250,7 @@ NONCLUSTERED
 *column*      
  Столбец или столбцы, на которых основан индекс. Имена одного или нескольких столбцов для создания комбинированного индекса. Столбцы, которые должны быть включены в составной индекс, указываются в скобках за аргументом *table_or_view_name* в порядке сортировки.
 
-В один ключ составного индекса могут входить до 32 столбцов. Все столбцы ключа составного индекса должны находиться в одной таблице или одном и том же представлении. Максимально допустимый размер значений составного индекса составляет 900 байтов для кластеризованного индекса или 1700 для некластеризованного индекса. Ограничениями являются 16 столбцов и 900 байт для версий до [!INCLUDE[ssSDS](../../includes/sssds-md.md)] и [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)].
+В один ключ составного индекса могут входить до 32 столбцов. Все столбцы ключа составного индекса должны находиться в одной таблице или одном и том же представлении. Максимально допустимый размер значений составного индекса составляет 900 байтов для кластеризованного индекса или 1700 для некластеризованного индекса. Ограничениями являются 16 столбцов и 900 байт для версий до [!INCLUDE[ssSDS](../../includes/sssds-md.md)] и [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)].
 
 Столбцы с типами данных LOB **ntext**, **text**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml** или **image** нельзя указать в качестве столбцов для индекса. Кроме того, определение представления не может включать столбцы типов **ntext**, **text** или **image**, даже если они не указаны в инструкции CREATE INDEX.
 
@@ -351,7 +351,7 @@ _database_name_
 
 Чтобы создать индекс для представления, это представление оно должно быть определено с параметром SCHEMABINDING. Прежде чем создавать любой некластеризованный индекс для представления, необходимо создать уникальный кластеризованный индекс. Дополнительные сведения об индексированных представлениях см. в разделе "Примечания".
 
-Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], объект может быть таблицей, хранящейся в кластеризованном индексе.
+Начиная с версии [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], объект может быть таблицей, хранящейся в кластеризованном индексе.
 
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] поддерживает формат трехкомпонентного имени _database_name_.[_schema_name_]._object_name_, если *database_name* обозначает текущую базу данных или _database_name_ имеет значение `tempdb` и _object_name_ начинается с символа #.
 
@@ -498,7 +498,7 @@ OFF
 
 RESUMABLE **=** { ON | **OFF**}      
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
  Указывает, является ли операция с индексами в режиме "в сети" возобновляемой.
 
@@ -510,7 +510,7 @@ RESUMABLE **=** { ON | **OFF**}
 
 MAX_DURATION **=** *time* [**MINUTES**] используется с **RESUMABLE = ON** (требуется **ONLINE = ON**)   
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Указывает время (целочисленное значение минутах), в течение которого выполняется возобновляемая операция с индексами в сети до приостановки.
 
@@ -543,7 +543,7 @@ OFF
 Блокировки страниц не используются.
 
 OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }      
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Определяет, следует ли выполнять оптимизацию, связанную с состязанием при операциях вставки на последнюю страницу. Значение по умолчанию — OFF. См. подробнее раздел о [последовательных ключах](#sequential-keys).
 
@@ -621,7 +621,7 @@ REBUILD WITH
 Чтобы создать кластеризованный индекс для таблицы (кучи) или удалить и повторно создать существующий кластеризованный индекс, требуется дополнительная рабочая область в базе данных для сортировки и временного копирования данных исходной таблицы или существующего кластеризованного индекса. Дополнительные сведения о кластеризованных индексах см. в статьях [Создание кластеризованных индексов](../../relational-databases/indexes/create-clustered-indexes.md) и [Руководство по архитектуре и разработке индексов SQL Server](../../relational-databases/sql-server-index-design-guide.md).
 
 ## <a name="nonclustered-indexes"></a>Некластеризованные индексы
-Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], вы можете создавать некластеризованный индекс в таблице, сохраненной в виде кластеризованного индекса columnstore. Если сначала создать некластеризованный индекс в таблице, сохраненной в виде кучи или кластеризованного индекса, индекс сохранится после дальнейшего преобразования таблицы в кластеризованный индекс columnstore. Кроме того, необязательно удалять некластеризованный индекс при перестройке кластеризованного индекса columnstore.
+Начиная с [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], вы можете создавать некластеризованный индекс в таблице, сохраненной в виде кластеризованного индекса columnstore. Если сначала создать некластеризованный индекс в таблице, сохраненной в виде кучи или кластеризованного индекса, индекс сохранится после дальнейшего преобразования таблицы в кластеризованный индекс columnstore. Кроме того, необязательно удалять некластеризованный индекс при перестройке кластеризованного индекса columnstore.
 
 Ограничения
 
@@ -682,7 +682,7 @@ REBUILD WITH
 Сведения об XML-индексах см. в описании [CREATE XML INDEX](../../t-sql/statements/create-xml-index-transact-sql.md) и статье [XML-индексы (SQL Server)](../../relational-databases/xml/xml-indexes-sql-server.md).
 
 ## <a name="index-key-size"></a>Размер ключа индекса
-Максимальный размер ключа индекса составляет 900 байт для кластеризованного индекса и 1700 байт для некластеризованного индекса. (До [!INCLUDE[ssSDS](../../includes/sssds-md.md)] и [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] это ограничение всегда составляло 900 байт.) Индексы в столбцах **varchar**, размер которых превышает максимальный, могут быть созданы, если в момент создания индекса объем существующих данных в столбцах не превышает максимальный, но последующие операции вставки или обновления, вызывающие превышение общего максимального размера, будут заканчиваться ошибкой. Ключ кластеризованного индекса не может включать в себя столбцы **varchar** , для которых существуют данные в единице размещения ROW_OVERFLOW_DATA. Если кластеризованный индекс создается для столбца типа **varchar** и существующие данные располагаются в единице размещения IN_ROW_DATA, то все последующие операции вставки или обновления для данного столбца, выталкивающие данные за пределы строки, будут завершаться ошибкой.
+Максимальный размер ключа индекса составляет 900 байт для кластеризованного индекса и 1700 байт для некластеризованного индекса. (До [!INCLUDE[ssSDS](../../includes/sssds-md.md)] и [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] это ограничение всегда составляло 900 байт.) Индексы в столбцах **varchar**, размер которых превышает максимальный, могут быть созданы, если в момент создания индекса объем существующих данных в столбцах не превышает максимальный, но последующие операции вставки или обновления, вызывающие превышение общего максимального размера, будут заканчиваться ошибкой. Ключ кластеризованного индекса не может включать в себя столбцы **varchar** , для которых существуют данные в единице размещения ROW_OVERFLOW_DATA. Если кластеризованный индекс создается для столбца типа **varchar** и существующие данные располагаются в единице размещения IN_ROW_DATA, то все последующие операции вставки или обновления для данного столбца, выталкивающие данные за пределы строки, будут завершаться ошибкой.
 
 Некластеризованные индексы могут включать неключевые столбцы на конечном уровне индекса. При вычислении размера ключа индекса компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] эти столбцы не рассматривает. Дополнительные сведения см. в статьях [Создание индексов с включенными столбцами](../../relational-databases/indexes/create-indexes-with-included-columns.md) и [Руководство по архитектуре и разработке индексов SQL Server](../../relational-databases/sql-server-index-design-guide.md).
 
@@ -754,7 +754,7 @@ INSERT INTO t1 VALUES (1, 0);
 Дополнительные сведения см. в статье [Выполнение операции с индексами в сети](../../relational-databases/indexes/perform-index-operations-online.md).
 
 ### <a name="resumable-index-operations"></a><a name="resumable-indexes"></a> Возобновляемые операции с индексами
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Следующие правила применяются к операциям с возобновляемыми индексами.
 
@@ -797,7 +797,7 @@ INSERT INTO t1 VALUES (1, 0);
 Если присвоены значения `ALLOW_ROW_LOCKS = OFF` и `ALLOW_PAGE_LOCK = OFF`, при доступе к индексу допустима только блокировка на уровне таблиц.
 
 ## <a name="sequential-keys"></a>Последовательные ключи
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
 
 Состязание операций вставки на последнюю страницу — это распространенная проблема, влияющая на производительность. Она возникает, когда множество параллельных запросов пытается вставить строки в индекс с последовательным ключом. Индекс считается последовательным, если ведущий ключевой столбец содержит значения, которые всегда увеличиваются (или уменьшаются), например столбец идентификаторов или даты, в котором по умолчанию используется текущее значение даты и времени. Так как ключи вставляются последовательно, все новые строки будут вставляться в конце структуры индекса, т. е. на одной и той же странице. Это приводит к состязанию за страницы в памяти. В этой ситуации несколько потоков ожидают PAGELATCH_EX для указанной страницы.
 
@@ -1104,7 +1104,7 @@ GO
 ```
 
 ### <a name="m-create-resume-pause-and-abort-resumable-index-operations"></a>Н. Создание, возобновление, приостановка и прерывание операций с возобновляемыми индексами
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1
@@ -1133,7 +1133,7 @@ ALTER INDEX test_idx2 ON test_table ABORT;
 ### <a name="n-basic-syntax"></a>О. Базовый синтаксис
 Создание, возобновление, приостановка и прерывание операций с возобновляемыми индексами       
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1

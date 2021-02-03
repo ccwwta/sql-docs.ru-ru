@@ -15,12 +15,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22e1a4832e3ef02d2b596ecd0dd4af3a08a7ec6e
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: ae2204f4d4562b35cde84b66608efee9dc727562
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171876"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236481"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Руководство по архитектуре страниц и экстентов
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -92,19 +92,19 @@ ms.locfileid: "98171876"
 
 До и включая [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не размещает целые экстенты в таблицы с небольшим объемом данных. Новая таблица или индекс обычно выделяет страницы из смешанных экстентов. При увеличении размера таблицы или индекса до восьми страниц эти таблица или индекс переходят на использование однородных экстентов для последовательных единиц распределения. При создании индекса для существующей таблицы, в которой содержится достаточно строк, чтобы сформировать восемь страниц в индексе, все единицы распределения для индекса находятся в однородных экстентах. 
 
-Начиная с [!INCLUDE[ssSQL15](../includes/sssql16-md.md)], по умолчанию для большей части распределений в пользовательской базе данных и базе данных tempdb используются однородные экстенты. Это не касается распределений, принадлежащих первым восьми страницам [цепочки IAM](#IAM). Для распределений баз данных master и msdb, а также шаблона базы данных сохраняется предыдущее поведение. 
+Начиная с [!INCLUDE[sssql15-md](../includes/sssql16-md.md)], по умолчанию для большей части распределений в пользовательской базе данных и базе данных tempdb используются однородные экстенты. Это не касается распределений, принадлежащих первым восьми страницам [цепочки IAM](#IAM). Для распределений баз данных master и msdb, а также шаблона базы данных сохраняется предыдущее поведение. 
 
 > [!NOTE]
 > До и включая [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], флаг трассировки 1118 может использоваться для изменения распределения по умолчанию таким образом, чтобы всегда использовать однородные экстенты. Дополнительные сведения об этом флаге трассировки см. в статье [DBCC TRACEON — флаги трассировки (Transact-SQL)](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 >   
-> Начиная с [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] возможности, предоставляемые TF 1118, автоматически включаются для tempdb и всех пользовательских баз данных. Для пользовательских баз данных этим поведением управляет параметр `SET MIXED_PAGE_ALLOCATION` команды `ALTER DATABASE` с присвоенным значением OFF (по умолчанию), и флаг трассировки 1118 не действует. Дополнительные сведения см. в статье [Параметры ALTER DATABASE SET (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md).
+> Начиная с [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] возможности, предоставляемые TF 1118, автоматически включаются для tempdb и всех пользовательских баз данных. Для пользовательских баз данных этим поведением управляет параметр `SET MIXED_PAGE_ALLOCATION` команды `ALTER DATABASE` с присвоенным значением OFF (по умолчанию), и флаг трассировки 1118 не действует. Дополнительные сведения см. в статье [Параметры ALTER DATABASE SET (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md).
 
 Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], системная функция `sys.dm_db_database_page_allocations` может передавать сведения о распределении страниц для базы данных, таблицы, индекса и секции.
 
 > [!IMPORTANT]
 > Системная функция `sys.dm_db_database_page_allocations` не задокументирована и может быть изменена. Совместимость не гарантируется. 
 
-Начиная с [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], доступна системная функция [sys.dm_db_page_info](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md), которая возвращает сведения о странице в базе данных. Эта функция возвращает одну строку, которая содержит данные заголовка страницы, включая object_id, index_id и partition_id. В большинстве случаев эта функция заменяет потребность в использовании `DBCC PAGE`.
+Начиная с [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)], доступна системная функция [sys.dm_db_page_info](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md), которая возвращает сведения о странице в базе данных. Эта функция возвращает одну строку, которая содержит данные заголовка страницы, включая object_id, index_id и partition_id. В большинстве случаев эта функция заменяет потребность в использовании `DBCC PAGE`.
 
 ## <a name="managing-extent-allocations-and-free-space"></a>Управление размещением экстента и свободным местом 
 

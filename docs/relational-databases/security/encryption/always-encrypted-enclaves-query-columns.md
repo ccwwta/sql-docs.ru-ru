@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8aecf4b22cf02ae91d259f45daff1d2cd8414f97
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: bc92b0af972236b588369869afc5b023735ae699
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534693"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237133"
 ---
 # <a name="run-transact-sql-statements-using-secure-enclaves"></a>Выполнение инструкций Transact-SQL с помощью безопасных анклавов
 
@@ -45,15 +45,15 @@ ms.locfileid: "98534693"
   - [IN (Transact-SQL)](../../../t-sql/language-elements/in-transact-sql.md)
   - [LIKE (Transact-SQL)](../../../t-sql/language-elements/like-transact-sql.md)
   - [DISTINCT](../../../t-sql/queries/select-transact-sql.md#c-using-distinct-with-select)
-  - [Joins](../../performance/joins.md) - [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] поддерживает только соединения вложенных циклов. [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] поддерживает соединения вложенных циклов, хэшей и объединений.
-  - [SELECT — предложение ORDER BY (Transact-SQL)](../../../t-sql/queries/select-order-by-clause-transact-sql.md). Поддерживается в [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]. В [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]не поддерживается.
-  - [SELECT — предложение GROUP BY (Transact-SQL)](../../../t-sql/queries/select-group-by-transact-sql.md). Поддерживается в [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]. В [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]не поддерживается.
+  - [Joins](../../performance/joins.md) - [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] поддерживает только соединения вложенных циклов. [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] поддерживает соединения вложенных циклов, хэшей и объединений.
+  - [SELECT — предложение ORDER BY (Transact-SQL)](../../../t-sql/queries/select-order-by-clause-transact-sql.md). Поддерживается в [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]. В [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)]не поддерживается.
+  - [SELECT — предложение GROUP BY (Transact-SQL)](../../../t-sql/queries/select-group-by-transact-sql.md). Поддерживается в [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]. В [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)]не поддерживается.
 - Запросы, которые вставляют, обновляют или удаляют строки, которые, в свою очередь, инициируют вставку ключа индекса в столбец с поддержкой анклава или удаление ключа из столбца. Дополнительные сведения см. в статье [Создание и использование индексов в столбцах с помощью Always Encrypted с безопасными анклавами](always-encrypted-enclaves-create-use-indexes.md).
 
 > [!NOTE]
 > Операции с индексами и конфиденциальными запросами DML, использующими анклавы, поддерживаются только в столбцах с поддержкой анклава, применяющих случайное шифрование. Детерминированное шифрование не поддерживается.
 >
-> В [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] конфиденциальным запросам, использующим анклавы в столбцах строк символов (`char`, `nchar`), требуются параметры сортировки binary2 (BIN2), настроенные для столбца. В [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] требуется использовать параметры сортировки BIN2 или UTF-8.
+> В [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)] конфиденциальным запросам, использующим анклавы в столбцах строк символов (`char`, `nchar`), требуются параметры сортировки binary2 (BIN2), настроенные для столбца. В [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] требуется использовать параметры сортировки BIN2 или UTF-8.
 
 ### <a name="dbcc-commands-using-secure-enclaves"></a>Команды DBCC, использующие безопасные анклавы
 
@@ -67,7 +67,7 @@ ms.locfileid: "98534693"
 - Необходимо получить URL-адрес аттестации для имеющейся среды у администратора службы аттестации.
 
   - Если вы используете [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] и службу защитника узлов (HGS), см. сведения в разделе об [определении и совместном использовании URL-адреса аттестации HGS](always-encrypted-enclaves-host-guardian-service-deploy.md#step-6-determine-and-share-the-hgs-attestation-url).
-  - Если вы используете [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] и Аттестацию Microsoft Azure, см. сведения об [определении URL-адреса аттестации для политики аттестации](/azure-sql/database/always-encrypted-enclaves-configure-attestation#determine-the-attestation-url-for-your-attestation-policy).
+  - Если вы используете [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] и Аттестацию Microsoft Azure, см. сведения об [определении URL-адреса аттестации для политики аттестации](/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sql-server-ver15#secure-enclave-attestation).
 
 - Если подключение к базе данных осуществляется с помощью приложения, необходимо использовать драйвер клиента, который поддерживает Always Encrypted с безопасными анклавами. Приложение должно подключаться к базе данных с включенной функцией Always Encrypted для подключения к базе данных и использовать правильно настроенные протокол аттестации и URL-адрес аттестации. Подробные сведения см. в статье [Разработка приложений с помощью Always Encrypted с безопасными анклавами](always-encrypted-enclaves-client-development.md).
 - Если вы используете SQL Server Management Studio (SSMS) или Azure SQL Data Studio, при подключении к базе данных необходимо включить Always Encrypted и настроить протокол аттестации и URL-адрес аттестации. Дополнительные сведения см. в следующих разделах.
@@ -104,7 +104,7 @@ ms.locfileid: "98534693"
 1. В диалоговом окне **Подключения** нажмите кнопку **Дополнительно...** .
 2. Чтобы включить Always Encrypted для подключения, задайте для поля **Always Encrypted** значение **Включено**.
 3. Укажите протокол аттестации и URL-адрес аттестации.
-    - Если вы используете [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)], укажите в поле **Протокол аттестации** значение **Служба защиты узла** и введите URL-адрес аттестации службы защиты узла в поле **URL-адрес аттестации анклава**.
+    - Если вы используете [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)], укажите в поле **Протокол аттестации** значение **Служба защиты узла** и введите URL-адрес аттестации службы защиты узла в поле **URL-адрес аттестации анклава**.
     - Если вы используете [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], укажите в поле **Протокол аттестации**  значение **Аттестация Azure** и введите URL-адрес аттестации, ссылающийся на политику в Аттестации Microsoft Azure, в поле **URL-адрес аттестации анклава**.
 
     ![Подключение к серверу с аттестацией с помощью Azure Data Studio](./media/always-encrypted-enclaves/azure-data-studio-connect-with-enclaves.png)
@@ -191,7 +191,7 @@ GO
 
 В приведенном ниже запросе сортируются записи сотрудников на основе зашифрованного столбца `Salary` и выводятся 10 сотрудников с самыми высокими окладами.
 > [!NOTE]
-> Сортировка зашифрованных столбцов поддерживается в [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], но не в [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)].
+> Сортировка зашифрованных столбцов поддерживается в [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], но не в [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)].
 
 ```sql
 SELECT TOP(10) * FROM [HR].[Employees]

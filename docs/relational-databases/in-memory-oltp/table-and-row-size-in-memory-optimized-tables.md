@@ -12,17 +12,17 @@ ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ddc8c6bf630994b66ecd2977edc44bec888a0e8e
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 733b2ba63ba6236ae1df955dafd31ce18260214c
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172676"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237552"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Размер строк и таблицы для таблиц, оптимизированных для памяти
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-До выхода [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] размер данных "в строке" для таблицы, оптимизированной для памяти, не мог превышать [8060 байт](?viewFallbackFrom=sql-server-2014). Но в [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и более поздних версиях, а также в базе данных SQL Azure появилась возможность создать таблицу, оптимизированную для памяти, с несколькими большими столбцами (например, несколькими столбцами varbinary(8000)) и столбцами LOB (т. е. varbinary(max), varchar(max) и nvarchar(max)), и выполнять с ними операции, используя типы таблиц и модули T-SQL, скомпилированные в собственном коде. 
+До выхода [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] размер данных "в строке" для таблицы, оптимизированной для памяти, не мог превышать [8060 байт](?viewFallbackFrom=sql-server-2014). Но в [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] и более поздних версиях, а также в базе данных SQL Azure появилась возможность создать таблицу, оптимизированную для памяти, с несколькими большими столбцами (например, несколькими столбцами varbinary(8000)) и столбцами LOB (т. е. varbinary(max), varchar(max) и nvarchar(max)), и выполнять с ними операции, используя типы таблиц и модули T-SQL, скомпилированные в собственном коде. 
   
 Столбцы, превышающие максимальный размер строки в 8060 байт, размещаются вне строки в специальной внутренней таблице. У каждого такого столбца имеется соответствующая внутренняя таблица, которая, в свою очередь, имеет один некластеризованный индекс. Дополнительные сведения о внутренних таблицах, используемых для столбцов "вне строки", см. в статье [sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md). 
  

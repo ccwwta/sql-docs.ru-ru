@@ -11,12 +11,12 @@ ms.topic: how-to
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: c7bffa36b256b959048953a5438fec6a336c3acc
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: dc6bcbecdb29cdf0cf1fca8c41e971463bb0d6b9
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534888"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236359"
 ---
 # <a name="troubleshoot-common-issues-for-always-encrypted-with-secure-enclaves"></a>Устранение распространенных неполадок Always Encrypted с безопасными анклавами
 
@@ -29,7 +29,7 @@ ms.locfileid: "98534888"
 Чтобы выполнить инструкции с использованием безопасного анклава, необходимо включить Always Encrypted и указать URL-адрес аттестации для подключения к базе данных, как это описано в разделе [Необходимые условия для выполнения инструкций, использующих безопасные анклавы](always-encrypted-enclaves-query-columns.md#prerequisites-for-running-statements-using-secure-enclaves). Однако подключение завершится ошибкой, если указать URL-адрес аттестации, но база данных в [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] или целевом экземпляре [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] не поддерживает безопасные анклавы или настройка выполнена неверно.
 
 - Если вы используете [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)], убедитесь, что в базе данных используется конфигурация оборудования [серии DC](https://docs.microsoft.com/azure/azure-sql/database/service-tiers-vcore?tabs=azure-portal#dc-series). Дополнительные сведения см. в статье [Включение Intel SGX для базы данных SQL Azure](/azure/azure-sql/database/always-encrypted-enclaves-enable-sgx).
-- Если вы используете [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], проверьте правильность настройки безопасного анклава для вашего экземпляра. Дополнительные сведения см. в статье [Настройка безопасного анклава в SQL Server](always-encrypted-enclaves-configure-enclave-type.md).
+- Если вы используете [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)], проверьте правильность настройки безопасного анклава для вашего экземпляра. Дополнительные сведения см. в статье [Настройка безопасного анклава в SQL Server](always-encrypted-enclaves-configure-enclave-type.md).
 
 ## <a name="attestation-errors-when-using-microsoft-azure-attestation"></a>Ошибки аттестации при использовании Аттестации Microsoft Azure
 
@@ -61,7 +61,7 @@ ms.locfileid: "98534888"
 ## <a name="attestation-errors-when-using-host-guardian-service"></a>Ошибки аттестации при использовании службы защиты узла
 
 > [!NOTE]
-> Этот раздел применим только к [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)].
+> Этот раздел применим только к [!INCLUDE[sql-server-2019](../../../includes/sssql19-md.md)].
 
 Прежде чем драйвер клиента отправит инструкцию T-SQL на [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] для выполнения, драйвер активирует следующий рабочий процесс аттестации анклава с помощью службы защиты узла (HGS).
 

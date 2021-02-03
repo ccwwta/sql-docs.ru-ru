@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - SERVERPROPERTY_TSQL
 - SERVERPROPERTY
@@ -25,12 +25,12 @@ ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aed106ed3915c779c558ff919128320f97174c8d
-ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
+ms.openlocfilehash: cd1ebb88dc0a3cad6ae8712ec68f7d63fc0c655a
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98241895"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237405"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 
@@ -70,20 +70,20 @@ SERVERPROPERTY ( 'propertyname' )
 |FilestreamEffectiveLevel|Действующий уровень доступа FILESTREAM. Это значение может отличаться от значения FilestreamConfiguredLevel, если уровень был изменен и ожидается перезапуск экземпляра или перезагрузка компьютера. Дополнительные сведения см. в разделе [Уровень доступа к файловому потоку](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md).<br /><br /> Базовый тип данных: **int**|  
 |FilestreamShareName|Имя общего ресурса, используемое FILESTREAM.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.<br /><br /> Базовый тип данных: **nvarchar(128)**| 
 |HadrManagerStatus|**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> Показывает, запущен ли диспетчер [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].<br /><br /> 0 = не запущен, ожидает связи.<br /><br /> 1 = запущен и выполняется.<br /><br /> 2 = не запущен и завершился неудачно.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.<br /><br /> Базовый тип данных: **int**|  
-|InstanceDefaultBackupPath|**Применимо к**: [!INCLUDE[ssSQL2019](../../includes/sssqlv15-md.md)] и более поздних версий.<br /><br /> Имя пути по умолчанию к файлам резервных копий экземпляра.|  
+|InstanceDefaultBackupPath|**Применимо к**: [!INCLUDE[ssSQL2019](../../includes/sssql19-md.md)] и более поздних версий.<br /><br /> Имя пути по умолчанию к файлам резервных копий экземпляра.|  
 |InstanceDefaultDataPath|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до текущей версии в обновлениях, выпущенных начиная с конца 2015 г.<br /><br /> Имя пути по умолчанию к файлам данных экземпляра.<br /><br /> Базовый тип данных: **nvarchar(128)**|  
 |InstanceDefaultLogPath|**Применимо к**: с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до текущей версии в обновлениях, выпущенных начиная с конца 2015 г.<br /><br /> Имя пути по умолчанию к файлам журналов экземпляра.<br /><br /> Базовый тип данных: **nvarchar(128)**|  
 |InstanceName|Имя экземпляра, к которому подключен пользователь.<br /><br /> Возвращает значение NULL в случае, если имя экземпляра установлено по умолчанию, при возникновении ошибки и в случае, если входные данные оказываются недопустимы.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.<br /><br /> Базовый тип данных: **nvarchar(128)**|  
 |IsAdvancedAnalyticsInstalled|Возвращает значение 1, если компонент расширенной аналитики был установлен во время установки системы, или значение 0, если компонент расширенной аналитики не был установлен.<br /><br /> Базовый тип данных: **int**|  
-|IsBigDataCluster| Появился в [!INCLUDE[ssSQL2019](../../includes/sssqlv15-md.md)], начиная с накопительного пакета обновления 4 (CU4).<br /><br />Возвращает значение 1, если экземпляр является кластером больших данных SQL Server, в противном случае — значение 0.<br /><br /> Базовый тип данных: **int**|  
+|IsBigDataCluster| Появился в [!INCLUDE[ssSQL2019](../../includes/sssql19-md.md)], начиная с накопительного пакета обновления 4 (CU4).<br /><br />Возвращает значение 1, если экземпляр является кластером больших данных SQL Server, в противном случае — значение 0.<br /><br /> Базовый тип данных: **int**|  
 |IsClustered|Экземпляр сервера настроен для работы в отказоустойчивом кластере.<br /><br /> 1 = в кластере.<br /><br /> 0 = не в кластере.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.<br /><br /> Базовый тип данных: **int**|  
 |IsFullTextInstalled|На текущем экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлены компоненты полнотекстового и семантического индексирования.<br /><br /> 1 = компоненты полнотекстового и семантического индексирования установлены.<br /><br /> 0 = компоненты полнотекстового и семантического индексирования не установлены.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.<br /><br /> Базовый тип данных: **int**|  
 |IsHadrEnabled|**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> Служба [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] включена на этом экземпляре сервера.<br /><br /> 0 = компонент [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] отключен.<br /><br /> 1 = компонент [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] включен.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.<br /><br /> Базовый тип данных: **int**<br /><br /> Для реплик доступности, создаваемых и запускаемых на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на экземпляре сервера должна быть включена служба [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Дополнительные сведения см. в статье [Включение и отключение групп доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).<br /><br /> **Примечание.** Свойство IsHadrEnabled относится только к [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Другие возможности высокого уровня доступности или аварийного восстановления, такие как зеркальное отображение базы данных или доставка журналов, не затрагиваются этим свойством сервера.|  
 |IsIntegratedSecurityOnly|Сервер запущен во встроенном режиме безопасности.<br /><br /> 1 = встроенная безопасность (проверка подлинности Windows)<br /><br /> 0 = без встроенного режима безопасности. (Как проверка подлинности Windows, так и проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.<br /><br /> Базовый тип данных: **int**|  
 |IsLocalDB|**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> Сервер является экземпляром [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.<br /><br /> Базовый тип данных: **int**|  
-|IsPolybaseInstalled|**Применимо к**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Возвращает значение, показывающее, установлен ли компонент PolyBase в экземпляре сервера.<br /><br /> 0 = компонент PolyBase не установлен.<br /><br /> 1 = компонент PolyBase установлен.<br /><br /> Базовый тип данных: **int**|  
+|IsPolybaseInstalled|**Применимо к**: [!INCLUDE[ssSQL2016](../../includes/sssql16-md.md)].<br /><br /> Возвращает значение, показывающее, установлен ли компонент PolyBase в экземпляре сервера.<br /><br /> 0 = компонент PolyBase не установлен.<br /><br /> 1 = компонент PolyBase установлен.<br /><br /> Базовый тип данных: **int**|  
 |IsSingleUser|Server запущен в однопользовательском режиме.<br /><br /> 1 = однопользовательский режим.<br /><br /> 0 = не однопользовательский режим.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.<br /><br /> Базовый тип данных: **int**|  
-|IsTempDbMetadataMemoryOptimized|**Область применения**: [!INCLUDE[ssSQL2019](../../includes/sssqlv15-md.md)] и более поздних версий.<br /><br />Возвращает значение 1, если в базе данных tempdb включено использование оптимизированных для памяти таблиц для метаданных, или значение 0, если база данных tempdb использует обычные дисковые таблицы для метаданных. Дополнительные сведения см. в статье [tempdb Database](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).<br /><br /> Базовый тип данных: **int**|  
+|IsTempDbMetadataMemoryOptimized|**Область применения**: [!INCLUDE[ssSQL2019](../../includes/sssql19-md.md)] и более поздних версий.<br /><br />Возвращает значение 1, если в базе данных tempdb включено использование оптимизированных для памяти таблиц для метаданных, или значение 0, если база данных tempdb использует обычные дисковые таблицы для метаданных. Дополнительные сведения см. в статье [tempdb Database](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).<br /><br /> Базовый тип данных: **int**|  
 |IsXTPSupported|**Область применения**: SQL Server ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].<br /><br /> Сервер поддерживает компонент In-Memory OLTP.<br /><br /> 1 = сервер поддерживает компонент In-Memory OLTP.<br /><br /> 0= сервер не поддерживает компонент In-Memory OLTP.<br /><br /> NULL = недопустимый ввод, ошибка или неприменимо.<br /><br /> Базовый тип данных: **int**|  
 |LCID|Код локали Windows для параметров сортировки.<br /><br /> Базовый тип данных: **int**|  
 |LicenseType|Не используется. В продукте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не сохраняются сведения о лицензии. Всегда возвращает DISABLED.<br /><br /> Базовый тип данных: **nvarchar(128)**|  

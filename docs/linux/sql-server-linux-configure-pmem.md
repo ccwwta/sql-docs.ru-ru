@@ -9,22 +9,22 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15'
-ms.openlocfilehash: 4630a96f1abf961174ece179aabfd160a5784ad9
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 5b99f12aebc27d04b384ff0b8d51b5359ca76d19
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471615"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236923"
 ---
 # <a name="configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Настройка энергонезависимой памяти (PMEM) для SQL Server на Linux
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-В этой статье описывается настройка энергонезависимой памяти (PMEM) для [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] на Linux.
+В этой статье описывается настройка энергонезависимой памяти (PMEM) для [!INCLUDE[sqlv15](../includes/sssql19-md.md)] на Linux.
 
 ## <a name="overview"></a>Обзор
 
-[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] имеет ряд функций в памяти, использующих энергонезависимую память. В этом документе рассматриваются шаги, необходимые для настройки энергонезависимой памяти для SQL Server на Linux.
+[!INCLUDE[sqlv15](../includes/sssql19-md.md)] имеет ряд функций в памяти, использующих энергонезависимую память. В этом документе рассматриваются шаги, необходимые для настройки энергонезависимой памяти для SQL Server на Linux.
 
 > [!NOTE]
 > Термин _просвещение_ был введен для того, чтобы описать понятие работы с файловой системой, поддерживающей энергонезависимую память. Прямой доступ к файловой системе из приложений в пользовательском пространстве упрощается с помощью сопоставления памяти (`mmap()`). При создании сопоставления памяти для файла приложение может выдавать инструкции по загрузке или хранению, полностью обходя стек ввода-вывода. Это "просвещенный" метод доступа к файлам с точки зрения приложения расширения узла (оно является "черным ящиком", который позволяет SQLPAL взаимодействовать с ОС Windows или Linux).

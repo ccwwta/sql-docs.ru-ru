@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -17,12 +17,12 @@ ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a33a9bfe6409c08eba3d3f212c95619634699a55
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 038cb4e80af0423a5581ef2b7b51c1bbc54bb5cc
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480545"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237627"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar и nvarchar (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "97480545"
   
 Для типов данных **nchar** и **nvarchar** параметр SET ANSI_PADDING всегда принимает значение ON. Параметр SET ANSI_PADDING OFF не применяется к типам данных **nchar** или **nvarchar**.
   
-Префикс N в строковых константах с символами Юникода указывает на входные данные в кодировке UCS-2 или UTF-16 (в зависимости от того, используются ли параметры сортировки с поддержкой дополнительных символов). Без префикса N строка преобразуется в стандартную кодовую страницу базы данных, и определенные символы могут не распознаваться. Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] при использовании параметров сортировки с поддержкой UTF-8 стандартная кодовая страница может хранить символы Юникода в кодировке UTF-8. 
+Префикс N в строковых константах с символами Юникода указывает на входные данные в кодировке UCS-2 или UTF-16 (в зависимости от того, используются ли параметры сортировки с поддержкой дополнительных символов). Без префикса N строка преобразуется в стандартную кодовую страницу базы данных, и определенные символы могут не распознаваться. Начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] при использовании параметров сортировки с поддержкой UTF-8 стандартная кодовая страница может хранить символы Юникода в кодировке UTF-8. 
  
 > [!NOTE]  
 > Когда строковая константа имеет префикс N и ее длина не превышает максимальную длину строкового типа данных nvarchar (4000), результатом неявного преобразования будет строка в кодировке UCS-2 или UTF-16. В противном случае результатом неявного преобразования будет большое значение nvarchar(max).

@@ -13,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 506abf476e04ab1a40059d04031949fa80b31acf
-ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
+ms.openlocfilehash: 7a42972d4a0cd5e6b456d72ccdba6786ad66c734
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97559326"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237107"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-a-dac-package"></a>Настройка шифрования столбцов с помощью Always Encrypted с пакетом приложения уровня данных 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "97559326"
 ::: moniker range=">=sql-server-ver15"
 
 > [!NOTE]
-> Если вы используете [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] и для экземпляра SQL Server настроен безопасный анклав, можно выполнять криптографические операции на месте без перемещения данных из базы данных. См. статью [Настройка шифрования столбцов на месте с помощью Always Encrypted с безопасными анклавами](always-encrypted-enclaves-configure-encryption.md). Обратите внимание, что шифрование на месте недоступно для развертываний DACPAC.
+> Если вы используете [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] и для экземпляра SQL Server настроен безопасный анклав, можно выполнять криптографические операции на месте без перемещения данных из базы данных. См. статью [Настройка шифрования столбцов на месте с помощью Always Encrypted с безопасными анклавами](always-encrypted-enclaves-configure-encryption.md). Обратите внимание, что шифрование на месте недоступно для развертываний DACPAC.
 
 ::: moniker-end
 

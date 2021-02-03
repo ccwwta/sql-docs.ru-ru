@@ -11,12 +11,12 @@ ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c88fd07e9af86a3c12561935364514b23bc2ea91
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 3bce064f00aa3f16a9fc4710fc9dd7dcd53e1534
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172286"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236865"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Доступ к таблицам, оптимизированным для памяти, с помощью интерпретируемых инструкций Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "98172286"
   
 Интерпретируемый [!INCLUDE[tsql](../../includes/tsql-md.md)] — это пакеты или хранимые процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)] , отличные от скомпилированных в собственном коде хранимых процедур. Доступ интерпретированного [!INCLUDE[tsql](../../includes/tsql-md.md)] к оптимизированным для памяти таблицам называется доступом взаимодействия.  
 
-Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], запросы в интерпретируемом [!INCLUDE[tsql](../../includes/tsql-md.md)] могут сканировать оптимизированные для памяти таблицы не только в последовательном, но и в параллельном режиме.
+Начиная с версии [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], запросы в интерпретируемом [!INCLUDE[tsql](../../includes/tsql-md.md)] могут сканировать оптимизированные для памяти таблицы не только в последовательном, но и в параллельном режиме.
 
 Доступ к оптимизированным для памяти таблицам можно также осуществлять с помощью скомпилированной в собственном коде хранимой процедуры. Скомпилированные в собственном коде хранимые процедуры рекомендуется использовать для важных с точки зрения производительности операций OLTP.  
   

@@ -12,17 +12,17 @@ ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: 73f4abc0c1b2a7cd6943ab6b216133812c145d19
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ccf508d0415bc6baabc9c054a95ec26cf7989880
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772428"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236516"
 ---
 # <a name="hybrid-buffer-pool"></a>Гибридный буферный пул
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Гибридный буферный пул позволяет объектам буферного пула ссылаться на страницы данных в файлах базы данных, находящихся на устройствах энергонезависимой памяти (PMEM), а не в копиях страниц данных, кэшированных в непостоянной DRAM. Эта функция появилась в [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)].
+Гибридный буферный пул позволяет объектам буферного пула ссылаться на страницы данных в файлах базы данных, находящихся на устройствах энергонезависимой памяти (PMEM), а не в копиях страниц данных, кэшированных в непостоянной DRAM. Эта функция появилась в [!INCLUDE[sqlv15](../../includes/sssql19-md.md)].
 
 ![Гибридный буферный пул](./media/hybrid-buffer-pool.png)
 
@@ -42,7 +42,7 @@ ms.locfileid: "85772428"
 
 ## <a name="enable-hybrid-buffer-pool"></a>Включение гибридного буферного пула
 
-[!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)] представляет язык DDL для управления гибридным буферным пулом.
+[!INCLUDE[sqlv15](../../includes/sssql19-md.md)] представляет язык DDL для управления гибридным буферным пулом.
 
 В следующем примере гибридный буферный пул включается для экземпляра SQL Server:
 

@@ -16,12 +16,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 35f08a014fd1abbc8af6db994ba4c2d9b85a0bd4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f31a17d3f8bf2285bc41c7462deec4e53008efd1
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97405719"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237080"
 ---
 # <a name="provision-always-encrypted-keys-using-sql-server-management-studio"></a>Подготовка к работе ключей Always Encrypted с помощью SQL Server Management Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "97405719"
    
     Дополнительные сведения о хранилищах ключей см. в разделе [Создание и хранение главных ключей столбцов для Always Encrypted](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
-5. Если вы используете [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)], и для экземпляра SQL Server настроен безопасный анклав, можно установить флажок **Разрешить вычисления анклава**, чтобы включить для главного ключа поддержку анклава. Дополнительные сведения см. в статье [Always Encrypted с безопасными анклавами](always-encrypted-enclaves.md). 
+5. Если вы используете [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)], и для экземпляра SQL Server настроен безопасный анклав, можно установить флажок **Разрешить вычисления анклава**, чтобы включить для главного ключа поддержку анклава. Дополнительные сведения см. в статье [Always Encrypted с безопасными анклавами](always-encrypted-enclaves.md). 
 
     > [!NOTE]
     > Флажок **Разрешить вычисления анклава** не отображается, если в экземпляре SQL Server не выполнена правильная настройка безопасных анклавов.

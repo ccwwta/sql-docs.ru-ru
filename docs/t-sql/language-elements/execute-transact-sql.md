@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - EXEC
 - EXECUTE_TSQL
@@ -32,12 +32,12 @@ ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ed27623969b2390f1d5b5b36b51a4c2eb5129e7
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 32a9e7f42747c6ddf5ef92f8bde260b4a0b234f0
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100431"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236006"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -374,7 +374,7 @@ Execute a character string
  WITH \<execute_option>  
  Возможные параметры выполнения. Параметры RESULT SETS нельзя указывать в инструкции INSERT...EXEC.  
  
-AT DATA_SOURCE data_source_name **Применимо к**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] и более поздних версий.
+AT DATA_SOURCE data_source_name **Применимо к**: [!INCLUDE[sssql19](../../includes/sssql19-md.md)] и более поздних версий.
   
  Указывает, что *command_string* выполняется для *data_source_name*, а результаты, при их наличии, возвращаются клиенту. *data_source_name* должно ссылаться на существующее определение EXTERNAL DATA SOURCE (внешнего источника данных) в базе данных. Поддерживаются только источники данных, указывающие на SQL Server. Кроме того, для SQL Server поддерживаются источники данных кластера больших данных, которые указывают на пул вычислений, пул данных или пул носителей. Источники данных определяются с помощью [CREATE EXTERNAL DATA SOURCE](../statements/create-external-data-source-transact-sql.md) (создание внешнего источника данных).  
   
@@ -744,7 +744,7 @@ WITH RESULT SETS
   
  В следующем примере командная строка передается во внешний источник данных, указывающий на экземпляр SQL Server. 
   
-**Область применения**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] и более поздних версий
+**Область применения**: [!INCLUDE[sssql19](../../includes/sssql19-md.md)] и более поздних версий
   
 ```sql    
 EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE my_sql_server;  
@@ -755,7 +755,7 @@ GO
 
  В следующем примере командная строка передается во внешний источник данных, указывающий на вычислительный пул в кластере больших данных SQL Server. В примере создается источник данных `SqlComputePool` для вычислительного пула в кластере больших данных SQL Server и выполняется инструкция `SELECT` к источнику данных. 
   
-**Область применения**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] и более поздних версий
+**Область применения**: [!INCLUDE[sssql19](../../includes/sssql19-md.md)] и более поздних версий
   
 ```sql  
 CREATE EXTERNAL DATA SOURCE SqlComputePool 
@@ -767,7 +767,7 @@ GO
 ### <a name="q-using-execute-with-at-data_source-data_source_name-to-query-data-pool-in-sql-server-big-data-cluster"></a>У. Использование инструкции EXECUTE с data_source_name AT DATA_SOURCE для запроса пула данных в кластере больших данных SQL Server 
  В следующем примере командная строка передается во внешний источник данных, указывающий на вычислительный пул в кластере больших данных SQL Server. В примере создается источник данных `SqlDataPool` для пула данных в кластере больших данных SQL Server и выполняется инструкция `SELECT` к источнику данных. 
   
-**Область применения**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] и более поздних версий
+**Область применения**: [!INCLUDE[sssql19](../../includes/sssql19-md.md)] и более поздних версий
   
 ```sql  
 CREATE EXTERNAL DATA SOURCE SqlDataPool 
@@ -780,7 +780,7 @@ GO
 
  В следующем примере командная строка передается во внешний источник данных, указывающий на вычислительный пул в кластере больших данных SQL Server. В примере создается источник данных `SqlStoragePool` для пула данных в кластере больших данных SQL Server и выполняется инструкция `SELECT` к источнику данных. 
   
-**Область применения**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] и более поздних версий
+**Область применения**: [!INCLUDE[sssql19](../../includes/sssql19-md.md)] и более поздних версий
   
 ```sql  
 CREATE EXTERNAL DATA SOURCE SqlStoragePool

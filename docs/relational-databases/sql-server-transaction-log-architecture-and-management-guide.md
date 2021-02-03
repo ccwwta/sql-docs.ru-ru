@@ -22,12 +22,12 @@ ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a445552a69033bec7564e05d7fc86d7416a5ff47
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: ed532d22800cd10530ecc7db8595fcf75e3737da
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97461835"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237934"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>Руководство по архитектуре журнала транзакций SQL Server и управлению им
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -239,7 +239,7 @@ ms.locfileid: "97461835"
 * Если система будет выключена после того, как транзакцией было выполнено много незафиксированных изменений, этап восстановления при последующем перезапуске может занять гораздо больше времени, чем задано параметром **recovery interval** .
 * Журнал может достичь очень большого объема, потому что после номера MinLSN усечь его нельзя. Это справедливо даже в том случае, если используется простая модель восстановления, когда журнал транзакций обычно усекается при каждой автоматической контрольной точке.
 
-Начиная с [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] и в [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)], восстановления длительных транзакций и описанных выше проблем можно избежать с помощью [ускоренного восстановления базы данных](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr).  
+Начиная с [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] и в [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)], восстановления длительных транзакций и описанных выше проблем можно избежать с помощью [ускоренного восстановления базы данных](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr).  
 
 ### <a name="replication-transactions"></a>Транзакции репликации
 Агент чтения журнала следит за журналом транзакций всех баз данных, на которых настроена репликация транзакций, и копирует отмеченные для репликации транзакции из журнала транзакций в базу данных распространителя. Активный журнал должен содержать все транзакции, отмеченные для репликации, но еще не доставленные базе данных распространителя. Если эти транзакции не реплицировать в допустимый срок, усечение журнала может оказаться невозможным. Дополнительные сведения см. в статье [Репликация транзакций](../relational-databases/replication/transactional/transactional-replication.md).

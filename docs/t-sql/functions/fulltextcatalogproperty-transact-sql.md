@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - FULLTEXTCATALOGPROPERTY_TSQL
 - FULLTEXTCATALOGPROPERTY
@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 57e53c26b7f1797daf6a1ccc53f7578eabda734a
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: d49757197a66a0af05a0115cf4b16d6d589acc13
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98087434"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237496"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Возвращает сведения о свойствах полнотекстовых каталогов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+Возвращает сведения о свойствах полнотекстовых каталогов в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -71,7 +71,7 @@ _property_
 ## <a name="exceptions"></a>Исключения  
 Возвращает значение NULL в случае ошибки или если вызывающий объект не имеет разрешений для просмотра текущего объекта.  
   
-В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] пользователь может просматривать только метаданные защищаемых объектов. Пользователь владеет этими защищаемыми объектами или на них пользователю были предоставлены разрешения. Таким образом, встроенные функции, такие как FULLTEXTCATALOGPROPERTY, создающие метаданные, могут вернуть значение NULL, если пользователь не имеет разрешений на объект. Дополнительные сведения см. в статье [sp_help_fulltext_catalogs (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md).  
+В [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] пользователь может просматривать только метаданные защищаемых объектов. Пользователь владеет этими защищаемыми объектами или на них пользователю были предоставлены разрешения. Таким образом, встроенные функции, такие как FULLTEXTCATALOGPROPERTY, создающие метаданные, могут вернуть значение NULL, если пользователь не имеет разрешений на объект. Дополнительные сведения см. в статье [sp_help_fulltext_catalogs (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md).  
   
 ## <a name="remarks"></a>Комментарии  
 Функция FULLTEXTCATALOGPROPERTY (_catalog\_name_, **IndexSize**) анализирует только фрагменты с состоянием 4 или 6, указанным в представлении [sys.fulltext_index_fragments](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md). Данные фрагменты являются частью логического индекса. Таким образом, свойство **IndexSize** возвращает только логический размер индекса. 

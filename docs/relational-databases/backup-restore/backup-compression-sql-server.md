@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: a98aaaea7d243853f31d19c0e7c3aa824ee2cc4e
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: f083aff61ad674e0190a8789c9d8c19b0f4a9821
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171476"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236150"
 ---
 # <a name="backup-compression-sql-server"></a>Сжатие резервных копий (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -94,9 +94,9 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
 
 ## <a name="backup-compression-with-tde"></a>Сжатие резервных копий с использованием TDE
 
-Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], установка `MAXTRANSFERSIZE` на **размер более 65536 (64 KB)** включает оптимизированный алгоритм сжатия для баз данных с [прозрачным шифрованием данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md), который сначала расшифровывает страницу, сжимает ее, а затем зашифровывает снова. Если `MAXTRANSFERSIZE` не указан или при использовании `MAXTRANSFERSIZE = 65536` (64 КБ) сжатие резервных копий в базах данных с включенным шифрованием TDE напрямую сжимает зашифрованные страницы и может не обеспечивать хорошее сжатие. Дополнительные сведения см. в разделе [Сжатие резервных копий для баз данных с включенным шифрованием TDE](/archive/blogs/sqlcat/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases).
+Начиная с [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], установка `MAXTRANSFERSIZE` на **размер более 65536 (64 KB)** включает оптимизированный алгоритм сжатия для баз данных с [прозрачным шифрованием данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md), который сначала расшифровывает страницу, сжимает ее, а затем зашифровывает снова. Если `MAXTRANSFERSIZE` не указан или при использовании `MAXTRANSFERSIZE = 65536` (64 КБ) сжатие резервных копий в базах данных с включенным шифрованием TDE напрямую сжимает зашифрованные страницы и может не обеспечивать хорошее сжатие. Дополнительные сведения см. в разделе [Сжатие резервных копий для баз данных с включенным шифрованием TDE](/archive/blogs/sqlcat/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases).
 
-Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5, параметр `MAXTRANSFERSIZE` больше не требуется для включения этого оптимизированного алгоритма сжатия с помощью TDE. Если команда резервного копирования указана `WITH COMPRESSION` или конфигурация сервера по умолчанию для *сжатия резервных копий* имеет значение 1, `MAXTRANSFERSIZE` автоматически увеличится до 128 КБ, чтобы включить оптимизированный алгоритм. Если в команде резервного копирования указано `MAXTRANSFERSIZE` со значением > 64 KБ, будет учитываться указанное значение. Иными словами, SQL Server никогда не будет автоматически уменьшать значение, а только увеличивать его. Если необходимо создать резервную копию зашифрованной базы данных TDE с `MAXTRANSFERSIZE = 65536`, необходимо указать `WITH NO_COMPRESSION` или убедиться, что в конфигурации сервера по умолчанию для *сжатия резервных копий* сервера задано значение 0.
+Начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] CU5, параметр `MAXTRANSFERSIZE` больше не требуется для включения этого оптимизированного алгоритма сжатия с помощью TDE. Если команда резервного копирования указана `WITH COMPRESSION` или конфигурация сервера по умолчанию для *сжатия резервных копий* имеет значение 1, `MAXTRANSFERSIZE` автоматически увеличится до 128 КБ, чтобы включить оптимизированный алгоритм. Если в команде резервного копирования указано `MAXTRANSFERSIZE` со значением > 64 KБ, будет учитываться указанное значение. Иными словами, SQL Server никогда не будет автоматически уменьшать значение, а только увеличивать его. Если необходимо создать резервную копию зашифрованной базы данных TDE с `MAXTRANSFERSIZE = 65536`, необходимо указать `WITH NO_COMPRESSION` или убедиться, что в конфигурации сервера по умолчанию для *сжатия резервных копий* сервера задано значение 0.
 
 Дополнительные сведения см. в разделе [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md).
 
