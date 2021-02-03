@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CREATE PARTITION FUNCTION
 - PARTITION
@@ -28,17 +28,17 @@ helpviewer_keywords:
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: d1bb72ca6736a49874050043b84a961928aed370
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7e1c2b7c6c3b6e12ae3865a5c35ad8f9904cba4f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98093494"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99188563"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Создает функцию в текущей базе данных, которая сопоставляет строки таблицы или индекса с секциями, основываясь на значениях элементов заданного столбца. Инструкция CREATE PARTITION FUNCTION используется на начальной стадии создания секционированной таблицы или индекса. Таблица или индекс в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] могут содержать до 15 000 секций.  
+  Создает функцию в текущей базе данных, которая сопоставляет строки таблицы или индекса с секциями, основываясь на значениях элементов заданного столбца. Инструкция CREATE PARTITION FUNCTION используется на начальной стадии создания секционированной таблицы или индекса. Таблица или индекс в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] могут содержать до 15 000 секций.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

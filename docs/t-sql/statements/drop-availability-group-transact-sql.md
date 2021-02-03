@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - DROP_AVAILABILITY_GROUP_TSQL
 - DROP AVAILABILITY GROUP
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c1600289-c990-454a-b279-dba0ebd5d63e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d2335b8015f0eb88821e94231ac8cf48d9bc0471
-ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
+ms.openlocfilehash: d50eae15352e3de39b17c9ea57b5422bf41b5438
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "92300387"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99191012"
 ---
 # <a name="drop-availability-group-transact-sql"></a>DROP AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,12 +64,12 @@ DROP AVAILABILITY GROUP group_name
     > [!IMPORTANT]  
     >  Старайтесь не удалять группу доступности, если отказоустойчивый кластер Windows Server (WSFC) не имеет кворума. Если необходимо удалить группу доступности, когда нет кворума кластера, то группа доступности метаданных, хранимая в кластере, не удаляется. После того как кластер снова получит кворум, необходимо будет удалить группу доступности еще раз, чтобы удалить ее из кластера WSFC.  
   
--   На вторичной реплике команда **DROP AVAILABILITY GROUP** должна использоваться только в экстренных случаях. Это связано с тем, что удаление группы доступности переводит группу в режим «вне сети». При удалении группы доступности из вторичной реплики первичная реплика не может определить, возникло состояние **OFFLINE** из-за потери кворума, принудительного перехода на другой ресурс или команды **DROP AVAILABILITY GROUP** . Первичная реплика переходит в состояние **RESTORING** , чтобы избежать возможной ситуации с дроблением. Дополнительные сведения см. в статье [Поведение инструкции DROP AVAILABILITY GROUP](/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors) (блог инженеров CSS SQL Server).  
+-   На вторичной реплике команда **DROP AVAILABILITY GROUP** должна использоваться только в экстренных случаях. Это связано с тем, что удаление группы доступности переводит группу в режим «вне сети». При удалении группы доступности из вторичной реплики первичная реплика не может определить, возникло состояние **OFFLINE** из-за потери кворума, принудительного перехода на другой ресурс или команды **DROP AVAILABILITY GROUP**. Первичная реплика переходит в состояние **RESTORING**, чтобы избежать возможной ситуации с дроблением. Дополнительные сведения см. в статье [Поведение инструкции DROP AVAILABILITY GROUP](/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors) (блог инженеров CSS SQL Server).  
   
 ## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
- Необходимо разрешение **ALTER AVAILABILITY GROUP** для группы доступности, разрешение **CONTROL AVAILABILITY GROUP** , разрешение **ALTER ANY AVAILABILITY GROUP** или разрешение **CONTROL SERVER** . Для удаления группы доступности, которая не размещена на экземпляре локального сервера, необходимо разрешение **CONTROL SERVER** или разрешение **CONTROL** для этой группы доступности.  
+ Необходимо разрешение **ALTER AVAILABILITY GROUP** для группы доступности, разрешение **CONTROL AVAILABILITY GROUP**, разрешение **ALTER ANY AVAILABILITY GROUP** или разрешение **CONTROL SERVER**. Для удаления группы доступности, которая не размещена на экземпляре локального сервера, необходимо разрешение **CONTROL SERVER** или разрешение **CONTROL** для этой группы доступности.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере удаляется группа доступности `AccountsAG`.  
