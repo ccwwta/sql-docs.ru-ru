@@ -6,18 +6,18 @@ ms.date: 04/04/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: reference
 helpviewer_keywords:
 - 4846 (Database Engine error)
 ms.assetid: a455e809-1883-4c7d-b3e3-835ee5bfe258
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9654cb637d07bb8bbf658e0daecc4361c195b81d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 789b6220c0b3b61fba1567c88ca5405d7b1e8895
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471046"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99185587"
 ---
 # <a name="mssqlserver_4846"></a>MSSQLSERVER_4846
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "88471046"
   
     -   **min memory per query**  
   
-    Обращайте внимание на любые необычные настройки. При необходимости измените их. Учтите требования [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] к объему памяти. Параметры по умолчанию приведены в разделе «Настройка параметров конфигурации сервера» электронной документации по SQL Server.  
+    Обращайте внимание на любые необычные настройки. При необходимости измените их. Учтите требования [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] к объему памяти. Параметры по умолчанию приведены в разделе «Настройка параметров конфигурации сервера» электронной документации по SQL Server.  
   
 4.  Обратите внимание на сообщения инструкции DBCC MEMORYSTATUS и способ их изменения при появлении сообщений об ошибках.  
   

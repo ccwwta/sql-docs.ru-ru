@@ -2,11 +2,11 @@
 description: CREATE EXTERNAL LIBRARY (Transact-SQL) — SQL Server
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) — SQL Server | Документация Майкрософт
 ms.custom: ''
-ms.date: 08/26/2020
+ms.date: 01/28/2021
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CREATE EXTERNAL LIBRARY
 - CREATE_EXTERNAL_LIBRARY_TSQL
@@ -20,12 +20,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current'
-ms.openlocfilehash: 9839a6fa8bd678afdce426f9dcd5657500c5a6cd
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 1cb25ebe0b24e2656f6b206b8a56eb24b81f45af
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98100797"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99186848"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -98,8 +98,7 @@ WITH ( LANGUAGE = 'R' )
 
 <file_spec> ::=  
 {  
-    (CONTENT = { <client_library_specifier> | <library_bits> }  
-    [, PLATFORM = WINDOWS ])  
+    (CONTENT = { <client_library_specifier> | <library_bits> })  
 }  
 
 <client_library_specifier> :: = 
@@ -171,6 +170,8 @@ WITH ( LANGUAGE = <language> )
 
 При попытке доступа к файлу, указанному в **<client_library_specifier>** , SQL Server олицетворяет разрешения контекста безопасности текущего имени входа Windows. Если **<client_library_specifier>** задает расположение в сети (UNC-путь), олицетворение текущего имени входа не распространяется на это расположение в сети из-за ограничений передачи прав. В этом случае доступ осуществляется при помощи контекста безопасности учетной записи службы SQL Server. Дополнительные сведения см. в статье [Учетные данные (компонент Database Engine)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
 
+::: moniker-end
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 При необходимости можно указать платформу операционной системы для файла. Для каждой платформы операционной системы для конкретного языка или среды выполнения разрешен только один артефакт файла или содержимое.
 ::: moniker-end
 
@@ -179,13 +180,6 @@ WITH ( LANGUAGE = <language> )
 Задает содержимое пакета как шестнадцатеричный литерал, аналогично сборкам. 
 
 Этот параметр полезен, если необходимо создать библиотеку или изменить существующую библиотеку (и у вас есть необходимые разрешения), но файловая система на сервере ограничена, и не удается скопировать файлы библиотеки в место, доступное для сервера.
-
-::: moniker range="=sql-server-2017"
-**PLATFORM = WINDOWS**
-
-Указывает платформу для содержимого библиотеки. Является значением по умолчанию для платформы узла, на которой выполняется SQL Server. Поэтому пользователю не нужно указывать это значение. Оно необходимо в случае, когда поддерживается несколько платформ или пользователь хочет указать другую платформу.
-В SQL Server 2017 поддерживается только платформа Windows.
-::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15"
 **PLATFORM**
@@ -211,8 +205,6 @@ WITH ( LANGUAGE = <language> )
 
 Задает язык пакета. Значением может быть `R`, `Python` или название внешнего языка (см. раздел [CREATE EXTERNAL LANGUAGE](create-external-language-transact-sql.md)).
 ::: moniker-end
-
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="remarks"></a>Remarks
 

@@ -19,12 +19,12 @@ ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bd89afe79f1e6cf7a5745b04378c1b403142c56e
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 6f78a502be14ffcf51937823d61bd61c144777f5
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97426427"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99187260"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Использование таблиц inserted и deleted
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "97426427"
 > [!NOTE]  
 >  Если действия триггера зависят от числа строк, данные в которых были изменены, воспользуйтесь проверками (например, проверкой параметра @@ROWCOUNT) при изменении данных в нескольких строках (инструкции INSERT, DELETE или UPDATE с инструкцией SELECT), а затем предпринимайте соответствующие действия. Дополнительные сведения см. в статье [Создание триггеров DML для обработки нескольких строк данных](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] не позволяет ссылаться на столбцы типов **text**, **ntext** или **image** в таблицах inserted и deleted триггеров AFTER. Однако эти типы данных включены в целях обратной совместимости. Для хранения больших данных рекомендуется использовать типы данных **varchar(max)** , **nvarchar(max)** и **varbinary(max)** . Как триггеры AFTER, так и триггеры INSTEAD OF поддерживают данные типов **varchar(max)** , **nvarchar(max)** и **varbinary(max)** в таблицах inserted и deleted. Дополнительные сведения см. в разделе [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md).  
+ [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] не позволяет ссылаться на столбцы типов **text**, **ntext** или **image** в таблицах inserted и deleted триггеров AFTER. Однако эти типы данных включены в целях обратной совместимости. Для хранения больших данных рекомендуется использовать типы данных **varchar(max)** , **nvarchar(max)** и **varbinary(max)** . Как триггеры AFTER, так и триггеры INSTEAD OF поддерживают данные типов **varchar(max)** , **nvarchar(max)** и **varbinary(max)** в таблицах inserted и deleted. Дополнительные сведения см. в разделе [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md).  
   
  **Примеры использования таблицы inserted в триггере для выполнения бизнес-правил**  
   

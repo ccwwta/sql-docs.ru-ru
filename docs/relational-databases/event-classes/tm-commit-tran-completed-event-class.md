@@ -6,19 +6,19 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - 'TM: Commit Tran Completed event class'
 ms.assetid: c102de15-f312-42a7-b52a-fc4879cc43aa
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ab6066ba9f9732d66df73125acc56c3a79ca98ce
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 17a7488242304c12b64b5f7890cd4f42326a5e23
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97483556"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183188"
 ---
 # <a name="tm-commit-tran-completed-event-class"></a>TM. Класс события Commit Tran Completed
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "97483556"
 |SessionLoginName|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Login1 и при выполнении инструкции под именем Login2 SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |SPID|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |StartTime|**datetime**|Время начала события, если оно известно.|14|Да|  
-|Success|**int**|1 = успешное завершение. 0 = неуспешное завершение (например, 1 означает, что проверка разрешений проходит, а 0 — что не проходит).|23|Да|  
+|Успешное завершение|**int**|1 = успешное завершение. 0 = ошибка (например, 1 означает успешную проверку наличия разрешений, а 0 означает ошибку при этой проверке).|23|Да|  
 |TextData|**ntext**|Текстовое значение, зависящее от класса событий, фиксируемых при трассировке.|1|Да|  
 |TransactionID|**bigint**|Назначенный системой идентификатор транзакции.|4|Да|  
 |XactSequence|**bigint**|Токен, который описывает текущую транзакцию.|50|Да|  

@@ -12,16 +12,16 @@ ms.assetid: db1d668a-23b7-4757-a9c5-1bd848ba7f6d
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 839a4f9e6cbba0b3ac1e966de7cf63ef6dd21c59
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9b532481a55f23116d0fd90760d1a940f4cd82f4
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466725"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99184295"
 ---
 # <a name="delete-user-defined-functions"></a>Удаление определенных пользователем функций
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  Определяемые пользователем функции в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно удалить с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+  Определяемые пользователем функции в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] можно удалить с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **В этом разделе**  
   

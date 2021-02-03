@@ -6,19 +6,19 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - ErrorLog event class
 ms.assetid: b0153a31-5794-410b-8816-d9f1290a5b36
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1494ff28838f587aa8da80c9f34b458c948b0102
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 923429255d3256f65118af89932ce8be310f633f
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97469705"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99182871"
 ---
 # <a name="errorlog-event-class"></a>ErrorLog, класс событий
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "97469705"
 |RequestID|**int**|Идентификатор запроса, содержащего инструкцию.|49|Да|  
 |ServerName|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|Нет|  
 |SessionLoginName|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Login1 и при выполнении инструкции под именем Login2 SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
-|Severity|**int**|Степень серьезности исключения.|20|Да|  
+|Severity|**int**|Уровень серьезности исключения.|20|Да|  
 |SPID|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |StartTime|**datetime**|Время начала события, если оно известно.|14|Да|  
 |TextData|**ntext**|Текст сообщения об ошибке.|1|Да|  
