@@ -23,18 +23,18 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016'
-ms.openlocfilehash: 59d15d0f056a757fea1545025832990254a7e4ae
-ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.openlocfilehash: 79a7a0fa7932f058218359b8bbe607b45f567a6b
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98766351"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251159"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Включение сжатия таблицы или индекса
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  В этой статье описывается включение [сжатия данных](../../relational-databases/data-compression/data-compression.md) для таблицы или индекса в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+В этой статье описывается включение [сжатия данных](../../relational-databases/data-compression/data-compression.md) для таблицы или индекса в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
  **В этой статье:**  
   

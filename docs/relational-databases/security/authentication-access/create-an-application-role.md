@@ -16,16 +16,16 @@ ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df42c1651d460b0be7b0e2900338982168ebd597
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: b9d77743864b3b5425379ec7b5c570629b470e04
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468565"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250759"
 ---
 # <a name="create-an-application-role"></a>Создание роли приложения
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
-  В этом разделе описывается создание роли приложения в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Роли приложения ограничивают доступ пользователя к базе данных за исключением указанных приложений. Роли приложения не имеют пользователей: список **Члены роли** не отображается, когда выбран пункт **Роль приложения** .  
+  В этом разделе описывается создание роли приложения в [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Роли приложения ограничивают доступ пользователя к базе данных за исключением указанных приложений. Роли приложения не имеют пользователей: список **Члены роли** не отображается, когда выбран пункт **Роль приложения** .  
   
 > [!IMPORTANT]  
 >  Сложность пароля проверяется при установке паролей для роли приложения. Приложения, которые используют роли приложения, должны хранить свои пароли. Пароли ролей приложения всегда должны храниться в зашифрованном виде.  

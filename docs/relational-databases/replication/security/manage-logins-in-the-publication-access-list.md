@@ -18,16 +18,16 @@ ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016
-ms.openlocfilehash: 041a305f31bc1a50065135c97f5cbcd7495ff5e5
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 526d46149bbafccf8592a20b8a592012e3d6b6aa
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468855"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250653"
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>Управление именами входа в списке доступа к публикации
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
-  В этом разделе описывается управление именами входа в списке доступа к публикации в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Доступом к публикации управляет список доступа к публикации (PAL). Имена входа и группы можно добавлять в список доступа к публикации и удалять из него.  
+  В этом разделе описывается управление именами входа в списке доступа к публикации в [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Доступом к публикации управляет список доступа к публикации (PAL). Имена входа и группы можно добавлять в список доступа к публикации и удалять из него.  
   
  **В этом разделе**  
   

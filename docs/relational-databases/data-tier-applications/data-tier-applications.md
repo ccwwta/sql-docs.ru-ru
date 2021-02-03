@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5b13b4fcc5fd0071a5b008f4fa8186379ffecf41
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 562769cc1f9ce3e895b59811a61026747c0a3724
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193054"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251108"
 ---
 # <a name="data-tier-applications"></a>Приложения уровня данных
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,14 +50,14 @@ ms.locfileid: "92193054"
   
     -   Наряду с базами данных SQL 2016 эти средства, поставляемые в составе SQL Server 2016, могут читать файлы DACPAC, созданные средствами приложения уровня данных, входящими в состав SQL Server 2008 R2 или SQL Server 2012. В том числе базы данных SQL Server 2014, 2012, 2008 R2, 2008 и 2005, но **не** SQL Server 2000.  
   
-    -   Средства приложения уровня данных в SQL Server 2008 R2 не могут читать файлы DACPAC, созданные средствами из [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+    -   Средства приложения уровня данных в SQL Server 2008 R2 не могут читать файлы DACPAC, созданные средствами из [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 -   Пакет DAC — это файл Windows с расширением DACPAC. Этот файл имеет открытый формат, состоящий из нескольких XML-разделов, которые отображают сведения об исходном объекте пакета DAC, объектах базы данных и других характеристиках. Опытный пользователь может распаковать файл с помощью служебной программы DacUnpack.exe, которая входит в состав продукта для подробного исследования каждого раздела.  
   
 -   Для создания базы данных, в том числе с помощью развертывания пакета DAC, пользователь должен быть членом роли **dbmanager** или иметь разрешения **CREATE DATABASE**. Для удаления базы данных пользователь должен быть членом роли **dbmanager** или иметь разрешения **DROP DATABASE**.  
   
 ## <a name="dac-tools"></a>Средства приложения уровня данных  
- Файл DACPAC может свободно использоваться в нескольких средствах, поставляемых с [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Эти средства удовлетворяют потребности различных пользователей с помощью пакета DAC в качестве единицы взаимодействия.  
+ Файл DACPAC может свободно использоваться в нескольких средствах, поставляемых с [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Эти средства удовлетворяют потребности различных пользователей с помощью пакета DAC в качестве единицы взаимодействия.  
   
 -   Разработчики приложений:  
   

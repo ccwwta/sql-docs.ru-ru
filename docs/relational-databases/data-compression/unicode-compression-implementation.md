@@ -15,12 +15,12 @@ ms.assetid: 44e69e60-9b35-43fe-b9c7-8cf34eaea62a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e0a63694f22f825604e5a3b2d453e58ea73766c4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f78e0bbe469861251c95a0d7fc382be4ed333dd0
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97485476"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251126"
 ---
 # <a name="unicode-compression-implementation"></a>Реализация сжатия Юникода
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "97485476"
 >  Сжатие Юникода не поддерживается для данных типа **nvarchar(max)** , даже если они хранятся в строке. Однако сжатие страниц может быть полезно для этого типа данных.  
   
 ## <a name="upgrading-from-earlier-versions-of-sql-server"></a>Обновление с предыдущих версий SQL Server  
- При обновлении базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] все изменения, связанные со сжатием Юникода, не оказывают влияния на объекты базы данных, сжатые или распакованные. После обновления базы данных ситуация с объектами выглядит следующим образом.  
+ При обновлении базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] все изменения, связанные со сжатием Юникода, не оказывают влияния на объекты базы данных, сжатые или распакованные. После обновления базы данных ситуация с объектами выглядит следующим образом.  
   
 -   Если объект не сжат, то никаких изменений не происходит и объект продолжает работать как раньше.  
   

@@ -18,16 +18,16 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016
-ms.openlocfilehash: 4eb7b7530c498a6ce590584aa83b3f38684960a7
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 1d7779f3e400345efcd183db16bf0d5780365f69
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170776"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250647"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Просмотр и изменение параметров безопасности репликации
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
-  В данном разделе описывается процесс просмотра и изменения параметров безопасности репликации в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или объектов RMO. Например, может потребоваться изменение подключения агента чтения журнала к издателю для использования проверки подлинности SQL Server вместо встроенной проверки подлинности Windows, или может потребоваться изменение учетных данных для запуска задания агента при изменении пароля учетной записи Windows. Дополнительные сведения о разрешениях, необходимых каждому агенту, см. в разделе [Модель безопасности агента репликации](../../../relational-databases/replication/security/replication-agent-security-model.md).  
+  В данном разделе описывается процесс просмотра и изменения параметров безопасности репликации в [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или объектов RMO. Например, может потребоваться изменение подключения агента чтения журнала к издателю для использования проверки подлинности SQL Server вместо встроенной проверки подлинности Windows, или может потребоваться изменение учетных данных для запуска задания агента при изменении пароля учетной записи Windows. Дополнительные сведения о разрешениях, необходимых каждому агенту, см. в разделе [Модель безопасности агента репликации](../../../relational-databases/replication/security/replication-agent-security-model.md).  
   
  **В этом разделе**  
   

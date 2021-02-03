@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: abb6420c-f809-426e-aeb4-d0a74989cf39
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 77cbe9eebacbf1656dc018f6811805636aded45f
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: b96e066b275ebd406fcecd81c185a65ac65abc22
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125301"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250363"
 ---
 # <a name="view-the-data-and-log-files-in-a-backup-set-sql-server"></a>Просмотр файлов данных и журналов в резервном наборе данных (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  В этом разделе описываются способы просмотра файлов данных и файлов журнала в резервном наборе данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  В этом разделе описываются способы просмотра файлов данных и файлов журнала в резервном наборе данных в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **В этом разделе**  
   

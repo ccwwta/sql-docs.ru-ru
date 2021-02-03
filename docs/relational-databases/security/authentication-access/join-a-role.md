@@ -17,16 +17,16 @@ ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 46d97f8d8e8313bc3fe63a83c4d2187704be802b
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 88d884d92685b943649006caa894d78a152c7667
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460002"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250757"
 ---
 # <a name="join-a-role"></a>присоединение к роли
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  В этом разделе описывается назначение ролей для имен входа и пользователей базы данных в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Для эффективного управления разрешениями в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] используются роли. Назначайте разрешения ролям, а затем добавляйте и удаляйте пользователей и имена входа в роли. Благодаря ролям нет необходимости задавать разрешения для каждого пользователя в отдельности.  
+  В этом разделе описывается назначение ролей для имен входа и пользователей базы данных в [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Для эффективного управления разрешениями в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] используются роли. Назначайте разрешения ролям, а затем добавляйте и удаляйте пользователей и имена входа в роли. Благодаря ролям нет необходимости задавать разрешения для каждого пользователя в отдельности.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает четыре типа ролей.  
   

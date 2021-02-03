@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: c73439c6fd7015bcd6bbae61d4164348331deb17
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: ac91abe799eb914d2a544d6f9fad598545a920c4
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91866601"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251149"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>Ключи шифрования базы данных и SQL Server (компонент Database Engine)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "91866601"
 
 Главный ключ службы может быть открыт только учетной записью службы Windows, под которой он был создан, либо участником, имеющим доступ к имени и паролю учетной записи службы.
 
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] использует для защиты главного ключа службы и главного ключа базы данных алгоритм шифрования AES. AES - это новый алгоритм шифрования, отличный от алгоритма 3DES, используемого в более ранних версиях. После обновления экземпляра компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)] до [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] необходимо заново сформировать главный ключ службы и главный ключ базы данных, чтобы обновить главные ключи до алгоритма AES. Дополнительные сведения о повторном создании главного ключа базы данных см. в статьях [ALTER SERVICE MASTER KEY (Transact-SQL)](../../../t-sql/statements/alter-service-master-key-transact-sql.md) и [ALTER MASTER KEY (Transact-SQL)](../../../t-sql/statements/alter-master-key-transact-sql.md).
+ [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] использует для защиты главного ключа службы и главного ключа базы данных алгоритм шифрования AES. AES - это новый алгоритм шифрования, отличный от алгоритма 3DES, используемого в более ранних версиях. После обновления экземпляра компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)] до [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] необходимо заново сформировать главный ключ службы и главный ключ базы данных, чтобы обновить главные ключи до алгоритма AES. Дополнительные сведения о повторном создании главного ключа базы данных см. в статьях [ALTER SERVICE MASTER KEY (Transact-SQL)](../../../t-sql/statements/alter-service-master-key-transact-sql.md) и [ALTER MASTER KEY (Transact-SQL)](../../../t-sql/statements/alter-master-key-transact-sql.md).
 
 ### <a name="database-master-key"></a>Главный ключ базы данных
   

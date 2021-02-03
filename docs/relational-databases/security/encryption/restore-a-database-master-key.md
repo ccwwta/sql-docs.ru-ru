@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 16897cc5-db8f-43bb-a38e-6855c82647cf
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 9860b952751937b18ca5e95e92ac959bb86abd23
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 65441ecd309abbe9b1545de622f0f7d9d4c2d4bc
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892243"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250526"
 ---
 # <a name="restore-a-database-master-key"></a>Восстановление главного ключа базы данных
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  В этом разделе описывается, как восстановить главный ключ базы данных в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] при помощи [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+  В этом разделе описывается, как восстановить главный ключ базы данных в [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] при помощи [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 ## <a name="before-you-begin"></a>Перед началом  
   
@@ -46,7 +46,7 @@ ms.locfileid: "85892243"
   
 1. Сохраните резервную копию главного ключа базы данных с физического носителя данных резервных копий или из папки локальной файловой системы.  
   
-2. В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+2. В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 3. На стандартной панели выберите пункт **Создать запрос**.  
   

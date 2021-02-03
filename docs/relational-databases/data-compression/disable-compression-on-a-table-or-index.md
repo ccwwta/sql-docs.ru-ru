@@ -14,18 +14,18 @@ ms.assetid: bda1e452-397b-4757-82a4-181217361589
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016'
-ms.openlocfilehash: 1a5de33ab7ee67f6c74ddff58219d779092cdcec
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 994c22db58c0d06b5a763769688d911cd739b367
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97485526"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250722"
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>Отключение сжатия таблицы или индекса
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  В этом разделе описывается, как отключить сжатие для таблицы или индекса в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  В этом разделе описывается, как отключить сжатие для таблицы или индекса в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **В этом разделе**  
   

@@ -24,17 +24,17 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a5c6647b06d058b1b97188810c4a23644d05c4f7
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: bc69ec8ee89cf994c61450804887b8c60388291f
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97468595"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250929"
 ---
 # <a name="create-a-login"></a>Создание имени входа
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  В этой статье описано, как создать имя входа в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] или [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Имя входа представляет собой идентификатор пользователя или процесса, выполняющего соединение с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  В этой статье описано, как создать имя входа в [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] или [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Имя входа представляет собой идентификатор пользователя или процесса, выполняющего соединение с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ##  <a name="background"></a><a name="Background"></a> Историческая справка  
  Имя входа — это субъект безопасности, с помощью которого система безопасности может проверить подлинность лица или сущности. Имя входа необходимо пользователю для соединения с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Вы можете создать имя входа на основе участника Windows (например, пользователя или группы домена Windows), либо на основе пользователя, не являющегося участником Windows (например, имени входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ).  

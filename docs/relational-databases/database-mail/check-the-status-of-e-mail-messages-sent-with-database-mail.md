@@ -16,23 +16,23 @@ ms.assetid: eb290f24-b52f-46bc-84eb-595afee6a5f3
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 245a50951896f923165e011fc51c09abd00f96e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0b230cc2a880b16b62934c3a89af475dd5cecf96
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421248"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251133"
 ---
 # <a name="check-the-status-of-e-mail-messages-sent-with-database-mail"></a>Проверка состояния сообщений электронной почты, отправленных при помощи компонента Database Mail
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  В этом разделе описывается порядок проверки с помощью [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] состояния сообщений электронной почты, отправленных компонентом Database Mail в [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  В этом разделе описывается порядок проверки с помощью [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] состояния сообщений электронной почты, отправленных компонентом Database Mail в [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 -   **Перед началом работы**  
   
 -   **Чтобы просмотреть состояние сообщения электронной почты отправляются с помощью компонента Database Mail, используя:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
- Компонент Database Mail хранит копии исходящих сообщений электронной почты и отображает их в представлениях **sysmail_allitems**, **sysmail_sentitems**, **sysmail_unsentitems**и **sysmail_faileditems** базы данных **msdb** . Внешняя программа компонента Database Mail протоколирует активность и отображает журнал при помощи компонента Windows Application Event Log и представления **sysmail_event_log** базы данных **msdb** . Для проверки состояния сообщений электронной почты запустите запрос для данного представления. У сообщений электронной почты может быть одно из следующих четырех состояний: **отправлено**, **не отправлено**, **попытка отправки**и **ошибка при отправке**.  
+ Компонент Database Mail хранит копии исходящих сообщений электронной почты и отображает их в представлениях **sysmail_allitems**, **sysmail_sentitems**, **sysmail_unsentitems** и **sysmail_faileditems** базы данных **msdb** . Внешняя программа компонента Database Mail протоколирует активность и отображает журнал при помощи компонента Windows Application Event Log и представления **sysmail_event_log** базы данных **msdb** . Для проверки состояния сообщений электронной почты запустите запрос для данного представления. У сообщений электронной почты может быть одно из следующих четырех состояний: **отправлено**, **не отправлено**, **попытка отправки** и **ошибка при отправке**.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
  **Проверка состояния сообщений электронной почты, отправленных компонентом Database Mail**  
@@ -70,7 +70,7 @@ WHERE items.recipients LIKE '%danw%'
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Ведение журнала и аудит компонента Database Mail](../../relational-databases/database-mail/database-mail-log-and-audits.md)  
   
   
