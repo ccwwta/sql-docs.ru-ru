@@ -12,12 +12,12 @@ ms.assetid: 691d4f80-6754-43f5-8b43-d4facf08f6fc
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 67d1c661f7157081f2693555667c439d589292e4
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: acfdadf0216bd243f61339982615c4bf83796dfa
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97472565"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99177978"
 ---
 # <a name="working-with-memory-optimized-system-versioned-temporal-tables"></a>Работа с оптимизированными для памяти темпоральными таблицами с системным управлением версиями
 
@@ -28,7 +28,7 @@ ms.locfileid: "97472565"
 В этом разделе обсуждается, как работа с оптимизированной для памяти темпоральной таблицей с системным управлением версиями отличается от работы с дисковой темпоральной таблицей с системным управлением версиями.
 
 > [!NOTE]
-> Использование Temporal с оптимизированными для памяти таблицами применяется только к [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и не относится к [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+> Использование Temporal с оптимизированными для памяти таблицами применяется только к [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] и не относится к [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
 ## <a name="discovering-metadata"></a>Обнаружение метаданных
 
@@ -79,7 +79,7 @@ GO ;
 
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Темпоральные таблицы с системным управлением версиями и таблицы, оптимизированные для памяти](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
 - [Создание оптимизированной для памяти темпоральной таблицы с системным управлением версиями](../../relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md)

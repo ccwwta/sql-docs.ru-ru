@@ -18,18 +18,18 @@ ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 06f465d3c4ff6086d74c155c4f810730eca50742
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: b2d8f1d2c6639b609a5f6feecc58137c6dc78580
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97484486"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160292"
 ---
 # <a name="create-unique-constraints"></a>Создание ограничений уникальности
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
-  Можно создать ограничение уникальности в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)] , чтобы гарантировать, что в определенных столбцах, не участвующих в первичном ключе, не будут встречаться повторяющиеся значения. Создание ограничения уникальности автоматически приводит к созданию соответствующего уникального индекса.  
+  Можно создать ограничение уникальности в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] при помощи [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)] , чтобы гарантировать, что в определенных столбцах, не участвующих в первичном ключе, не будут встречаться повторяющиеся значения. Создание ограничения уникальности автоматически приводит к созданию соответствующего уникального индекса.  
   
 > [!NOTE]    
 > Сведения об уникальных ограничениях в Azure Synapse Analytics см. в разделе [Первичный ключ, внешний ключ и уникальный ключ в Azure Synapse Analytics](/azure/sql-data-warehouse/sql-data-warehouse-table-constraints).

@@ -16,18 +16,18 @@ ms.assetid: 9c9e9ae4-9e03-4137-acb6-b18928a0c4ca
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4daec2e6e616ef0922e5700c77539e61496b69aa
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e978146fd5ec38059bac024fdc0624e521cd2580
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97462605"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99160271"
 ---
 # <a name="delete-foreign-key-relationships"></a>Удаление связей по внешнему ключу
 
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
-  Можно удалить ограничение внешнего ключа в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. При удалении ограничения внешнего ключа удаляется требование принудительного создания ссылочной целостности.  
+  Можно удалить ограничение внешнего ключа в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. При удалении ограничения внешнего ключа удаляется требование принудительного создания ссылочной целостности.  
   
  **В этом разделе**  
   

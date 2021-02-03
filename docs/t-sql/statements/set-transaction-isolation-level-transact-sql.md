@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - LEVEL
 - LEVEL_TSQL
@@ -28,12 +28,12 @@ ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0310498564525293dba5dde525c24d4ffd620aad
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 7fd0098e9b4e213619e65973c2367a03f0197852
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98080384"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99161095"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -164,12 +164,12 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 |Уровень изоляции|Доступ с помощью Transact-SQL|Доступ к файловой системе|  
 |---------------------|-------------------------|------------------------|  
-|Уровень изоляции read uncommitted|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|Не поддерживается|  
-|Уровень изоляции read committed|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
-|Уровень изоляции repeatable read|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|Не поддерживается|  
-|Упорядочиваемый уровень изоляции|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|Не поддерживается|  
-|Моментальный снимок с уровнем изоляции read commited|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
-|Моментальный снимок|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
+|Уровень изоляции read uncommitted|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|Не поддерживается|  
+|Уровень изоляции read committed|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|  
+|Уровень изоляции repeatable read|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|Не поддерживается|  
+|Упорядочиваемый уровень изоляции|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|Не поддерживается|  
+|Моментальный снимок с уровнем изоляции read commited|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|  
+|Моментальный снимок|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]|  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере устанавливается уровень изоляции `TRANSACTION ISOLATION LEVEL` для сеанса. Для каждой последующей инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сохраняет все совмещаемые блокировки до конца транзакции.  
