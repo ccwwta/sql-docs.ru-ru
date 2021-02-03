@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: ef3d409ae656776b870119ccd14cb211cc16b32c
-ms.sourcegitcommit: 5a1ed81749800c33059dac91b0e18bd8bb3081b1
+ms.openlocfilehash: 72bf9910a86d66ac36cbebbb0be66f8a8df832e5
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/23/2020
-ms.locfileid: "96125560"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235767"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Обзор процессов восстановления (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -179,9 +179,9 @@ ms.locfileid: "96125560"
 -   [Помощник по восстановлению: использование среды SSMS для создания и восстановления раздельных резервных копий](/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
 
 ## <a name="accelerated-database-recovery"></a><a name="adr"></a> Ускоренное восстановление баз данных.
-[Ускоренное восстановление базы данных](/azure/sql-database/sql-database-accelerated-database-recovery/) доступно в [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Ускоренное восстановление базы данных значительно улучшает доступность базы данных, особенно при наличии продолжительных транзакций, за счет перепроектирования [процесса восстановления](#TlogAndRecovery) [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. База данных, для которой было включено ускоренное восстановление, значительно быстрее восстанавливается после отработки отказа или другого неясного завершения работы. Если включено, ускоренное восстановление базы данных также значительно быстрее завершает откат отмененных продолжительных транзакций.
+[Ускоренное восстановление базы данных](/azure/sql-database/sql-database-accelerated-database-recovery/) доступно в [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Ускоренное восстановление базы данных значительно улучшает доступность базы данных, особенно при наличии продолжительных транзакций, за счет перепроектирования [процесса восстановления](#TlogAndRecovery) [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. База данных, для которой было включено ускоренное восстановление, значительно быстрее восстанавливается после отработки отказа или другого неясного завершения работы. Если включено, ускоренное восстановление базы данных также значительно быстрее завершает откат отмененных продолжительных транзакций.
 
-Ускоренное восстановление можно включить для каждой базы данных в [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], используя следующий синтаксис:
+Ускоренное восстановление можно включить для каждой базы данных в [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], используя следующий синтаксис:
 
 ```sql
 ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = ON;

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4c80a51370de62410367b1225fd85e3ffe7f261
-ms.sourcegitcommit: 8ca4b1398e090337ded64840bcb8d6c92d65c29e
+ms.openlocfilehash: d156b2c02d67c947041de268962579d6417202e2
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2021
-ms.locfileid: "98534803"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235751"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>Планирование аттестации службы защиты узла
 
@@ -118,7 +118,7 @@ HGS — это роль, использующая ресурсы ЦП, кото�
 
 Предъявляются следующие требования.
 
-- [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] или более поздней версии
+- [!INCLUDE [sssql19-md](../../../includes/sssql19-md.md)] или более поздней версии
 - Windows 10 Корпоративная (версия 1809) или более поздние версии или выпуск Windows Server 2019 Datacenter. Другие выпуски Windows 10 и Windows Server не поддерживают аттестацию с помощью HGS.
 - Поддержка ЦП для технологий виртуализации:
   - Intel VT-x с Extended Page Tables.
