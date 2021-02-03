@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - ERROR_LINE
 - ERROR_LINE_TSQL
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 44402d9f0af858381041e9f5bb5ff989971f44f1
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 8ec5cf07de8e7a32c52101b195ca32ff1caf2a12
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98097191"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99199527"
 ---
 # <a name="error_line-transact-sql"></a>ERROR_LINE (Transact-SQL)
 
@@ -56,7 +56,7 @@ ERROR_LINE ( )
 -   номер строки в подпрограмме, если ошибка возникла в хранимой процедуре или триггере;  
 -   значение NULL в случае вызова вне блока CATCH.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
 Функцию `ERROR_LINE` можно вызывать в любом месте области действия блока CATCH.  
   
 Функция `ERROR_LINE` возвращает номер строки, в которой возникла ошибка. Это происходит вне зависимости от места вызова `ERROR_LINE` в пределах блока CATCH от числа вызовов `ERROR_LINE`. В этом отличие данной функции от таких функций, как @@ERROR. Функция @@ERROR возвращает номер ошибки в той инструкции, которая непосредственно следует за инструкцией, вызвавшей ошибку, или же в первой инструкции блока CATCH.  

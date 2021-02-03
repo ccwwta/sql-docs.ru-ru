@@ -12,12 +12,12 @@ ms.assetid: e5d23ec9-7d18-40f6-add4-bea13132d0b9
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a552f940165a2bf45810dd4f6abbbd4f71513299
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: a8c13f9bcbbe501e369e2dd536c90d180bd88f6d
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477185"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201156"
 ---
 # <a name="temporal-table-metadata-views-and-functions"></a>Представления и функции метаданных для временной таблицы
 
@@ -25,7 +25,7 @@ ms.locfileid: "97477185"
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] включают ряд представлений и функций метабазы, чтобы дать администраторам возможность извлекать сведения о временных таблицах.
+[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] и [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] включают ряд представлений и функций метабазы, чтобы дать администраторам возможность извлекать сведения о временных таблицах.
 
 Сведения о временных таблицах предоставляются в следующих представлениях метаданных:
 
