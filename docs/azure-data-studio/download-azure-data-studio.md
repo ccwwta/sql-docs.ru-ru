@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 1/22/2020
-ms.openlocfilehash: 65daa495933d0dc974b6ae4d1c14ff9e59bd6249
-ms.sourcegitcommit: 2bdf1f1ee88f4fe3e872227d025e965e95d1b2b4
+ms.openlocfilehash: 1a8de5f990d9f3a8a974705d090dad8dccc1bae6
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98711970"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235729"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Скачивание и установка Azure Data Studio
 
@@ -174,7 +174,7 @@ Azure Data Studio работает в Windows, macOS и Linux и поддерж
 
 ## <a name="supported-sql-offerings"></a>Поддерживаемые предложения SQL
 
-- Эта версия Azure Data Studio работает со всеми [поддерживаемыми версиями SQL Server 2014 — [!INCLUDE[sql-server-2019](../includes/sssqlv15-MD.md)]](https://support.microsoft.com/lifecycle?C2=1044) и обеспечивает поддержку новейших облачных функций базы данных SQL Azure и Azure Synapse Analytics. Azure Data Studio также предоставляет предварительную поддержку для управляемых экземпляров SQL Azure.
+- Эта версия Azure Data Studio работает со всеми [поддерживаемыми версиями [!INCLUDE [sssql14-md](../includes/sssql14-md.md)] - [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) и обеспечивает поддержку для работы с последними облачными функциями в Базе данных Azure SQL и Azure Synapse Analytics. Azure Data Studio также предоставляет предварительную поддержку для управляемых экземпляров SQL Azure.
 
 ## <a name="move-user-settings"></a>Перемещение параметров пользователя
 
