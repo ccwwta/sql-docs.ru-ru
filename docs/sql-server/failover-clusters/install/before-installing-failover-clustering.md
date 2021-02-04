@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: a2ed61eb89deb29b22f82f39de4091f65be43cea
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 87294a8d20bf1c297c1629509a85cde7493b6ef5
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98595322"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076612"
 ---
 # <a name="before-installing-failover-clustering"></a>Подготовка к установке отказоустойчивого кластера
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "98595322"
   
 -   Обязательное программное обеспечение для установки. Перед запуском программы установки для установки или обновления [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]установите следующие компоненты, чтобы сократить время установки. Можно установить обязательное программное обеспечение на каждом узле отказоустойчивого кластера, а затем один раз перезапустить узлы перед началом работы программы установки.  
   
-    -   Windows PowerShell больше не устанавливается программой установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Оболочка Windows PowerShell является обязательной для установки компонентов [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] и [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Если оболочка Windows PowerShell отсутствует на компьютере, ее можно включить, следуя указаниям на странице [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214) .  
+    -   Windows PowerShell больше не устанавливается программой установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Оболочка Windows PowerShell является обязательной для установки компонентов [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] и [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Если оболочка Windows PowerShell отсутствует на компьютере, ее можно включить, следуя указаниям на странице [Windows Management Framework](/powershell/scripting/windows-powershell/wmf/overview) .  
   
     -   Платформа .NET Framework 3.5 с пакетом обновления 1 (SP1) больше не устанавливается программой установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , но может потребоваться при установке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в старых операционных системах Windows. Дополнительные сведения см. в статье [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][Заметки о выпуске](/previous-versions/sql/sql-server-15/dn169381(v=sql.15)).  
   
@@ -145,7 +145,7 @@ ms.locfileid: "98595322"
   
 -   Ознакомьтесь с разделом [Security Considerations for a SQL Server Installation](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
--   О включении проверки подлинности Kerberos для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], см. в статье базы [!INCLUDE[msCoName](../../../includes/msconame-md.md)] знаний Майкрософт [ Как использовать проверку подлинности Kerberos в SQL Server](https://support.microsoft.com/kb/319723).  
+-   О включении проверки подлинности Kerberos для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], см. в статье базы [!INCLUDE[msCoName](../../../includes/msconame-md.md)] знаний Майкрософт [ Как использовать проверку подлинности Kerberos в SQL Server](https://www.betaarchive.com/wiki/index.php?title=Microsoft_KB_Archive/319723).  
 
 -   Для экземпляра отказоустойчивого кластера SQL Server требуется, чтобы узлы кластера были присоединены к домену. Следующие конфигурации **не поддерживаются**: 
     *   Экземпляр отказоустойчивого кластера SQL в кластерах рабочей группы. 
