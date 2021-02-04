@@ -15,12 +15,12 @@ ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3eb77e6ed1dec97736c856c6b9c3c827470e31ce
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 27e6a98231e66a24a66233092e3e7e245a4e3d74
+ms.sourcegitcommit: 5dcbe4abbe2339292961370c1d8ca3affa625f72
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97463305"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99536408"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>Системные требования для собственного клиента SQL Server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "97463305"
   
 -   экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сервере.  
   
- Собственному клиенту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требуется установщик Windows версии 3.0. Установщик Windows версии 3.0 уже установлен в ОС [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Для всех других платформ необходимо его установить явно. Дополнительные сведения см. в разделе [установщик Windows 3,0 распространяемый компонент](https://www.microsoft.com/download/details.aspx?id=16821).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Для собственного клиента требуется установщик Windows 3,1. Установщик Windows 3,1 уже установлена в [!INCLUDE[msCoName](../../includes/msconame-md.md)] операционных системах Windows. Для всех других платформ необходимо его установить явно. Дополнительные сведения см. в разделе [установщик Windows 3,1 распространяемый компонент (v2)](https://www.microsoft.com/download/details.aspx?id=25).  
   
 > [!NOTE]  
 >  Перед установкой данного программного обеспечения убедитесь, что вы вошли в систему с правами администратора.  
