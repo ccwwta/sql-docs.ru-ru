@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - sqlsrv_free_stmt
 apitype: NA
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3c71f432-36ad-41e1-8ac7-587c82539448
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8984bd68e56e0ccf4d8bb29f54da9c8369812a20
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 011793bd0a76d3aa2984caa34b73800fd2e60040
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466748"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99154179"
 ---
 # <a name="sqlsrv_free_stmt"></a>sqlsrv_free_stmt
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +43,7 @@ sqlsrv_free_stmt( resource $stmt)
 Логическое значение **true** , если только функция не вызывается с недопустимым параметром. Если функция вызывается с недопустимым параметром, возвращается значение **false** .  
   
 > [!NOTE]  
-> **Null** является допустимым параметром для этой функции. Это позволяет несколько раз вызывать функцию в скрипте. Например, если освободить инструкцию в условии ошибки, а затем снова освободить ее в конце сценария, второй вызов**sqlsrv_free_stmt** возвратит значение **true** (истина), так как первый вызов **sqlsrv_free_stmt** (в условии ошибки) задал для ресурса инструкции значение **null**.  
+> **Null** является допустимым параметром для этой функции. Это позволяет несколько раз вызывать функцию в скрипте. Например, если освободить инструкцию в условии ошибки, а затем снова освободить ее в конце сценария, второй вызов **sqlsrv_free_stmt** возвратит значение **true** (истина), так как первый вызов **sqlsrv_free_stmt** (в условии ошибки) задал для ресурса инструкции значение **null**.  
   
 ## <a name="example"></a>Пример  
 Следующий пример создает ресурс инструкции, выполняется простой запрос и вызывает **sqlsrv_free_stmt** , чтобы освободить все ресурсы, связанные с инструкцией. В примере предполагается, что SQL Server и базы данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  

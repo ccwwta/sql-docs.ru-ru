@@ -7,19 +7,19 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - API Reference, sqlsrv_num_rows
 - sqlsrv_num_rows
 ms.assetid: c832210e-bb2a-47b5-a505-160b02d1d95e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 52366287eb25cb9932e8e80c97abc1c97ddbbcae
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: fe5599045702f2fec458df608d5fb25124732cff
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435132"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99153589"
 ---
 # <a name="sqlsrv_num_rows"></a>sqlsrv_num_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +37,7 @@ sqlsrv_num_rows( resource $stmt )
 *$stmt*: результирующий набор, для которого требуется подсчитать строки.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
-Значение**false** , если произошла ошибка при вычислении количества строк. В противном случае возвращает число строк в результирующем наборе.  
+Значение **false** , если произошла ошибка при вычислении количества строк. В противном случае возвращает число строк в результирующем наборе.  
   
 ## <a name="remarks"></a>Remarks  
 Инструкция sqlsrv_num_rows требует использовать курсор CLIENT, STATIC или KEYSET и возвращает значение **false** (ложь), если используется курсор FORWARD или DYNAMIC. (По умолчанию используется однонаправленный курсор.) Дополнительные сведения о курсорах см. в статьях [sqlsrv_query](../../connect/php/sqlsrv-query.md) и [Типы курсоров &#40;драйвер SQLSRV&#41;](../../connect/php/cursor-types-sqlsrv-driver.md).  
