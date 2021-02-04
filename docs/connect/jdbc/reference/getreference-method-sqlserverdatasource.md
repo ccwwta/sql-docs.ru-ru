@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerDataSource.getReference
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: b3fb1a97-86ee-4977-adca-c35ae199dbb3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8916c339a4a1d6c8373e3fbaf5a130dcc168155e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d44e8f10c1e4160504d20de7d5a9b3e36b31b950
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88434886"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99175211"
 ---
 # <a name="getreference-method-sqlserverdatasource"></a>Метод getReference (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ public javax.naming.Reference getReference()
   
  Если в версиях драйвера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC, предшествующих 3.0, метод SQLServerDataSource.setTrustStorePassword вызывался в объекте SQLServerDataSource, пароль присутствовал в объекте, возвращаемом SQLServerDataSource.getReference, что позволяло использовать объект для создания дополнительных соединений. В версии 3.0 драйвера JDBC необходимо установить пароль для объекта, возвращаемого SQLServerDataSource.getReference, перед установлением соединения с объектом.  
   
- Кроме того, если SQLServerDataSource.setTrustStorePassword задается перед привязкой свойств источника данных, необходимо вызвать метод SQLServerDataSource.setTrustStorePassword перед получением соединения. Например, примененная к объекту директива  
+ Кроме того, если SQLServerDataSource.setTrustStorePassword задается перед привязкой свойств источника данных, необходимо вызвать метод SQLServerDataSource.setTrustStorePassword перед получением соединения. Например,  
   
 ```  
 ctx = new InitialContext(System.getProperties());  

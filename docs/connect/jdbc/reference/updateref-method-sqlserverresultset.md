@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerResultSet.updateRef
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 1d80d9e1-4f58-4cc2-9ed6-786fdf3e2660
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e7403280bd00f3b42e0ad0a50d0b4baf11fee452
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf890b26f0b8225eb227161da407a26f022e0356
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466888"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99183857"
 ---
 # <a name="updateref-method-sqlserverresultset"></a>Метод updateRef (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "88466888"
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[updateRef (int, java.sql.Ref)](../../../connect/jdbc/reference/updateref-method-int-java-sql-ref.md)|Обновляет указанный столбец значением java.sql.Ref по заданному индексу столбца.|  
 |[updateRef (java.lang.String, java.sql.Ref)](../../../connect/jdbc/reference/updateref-method-java-lang-string-java-sql-ref.md)|Обновляет указанный столбец значением java.sql.Ref по заданному имени столбца.|  

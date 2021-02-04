@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: fa75cc2e8a120510edc711aafc37d268fec4dba7
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 9101f2cf26e797cc63a909a85c3eefa3fb083b4f
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642745"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251207"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Политика отработки отказа для экземпляров отказоустойчивого кластера
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  В экземпляре отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (FCI) в каждый момент времени только один узел может быть владельцем группы ресурсов кластера WSFC. Клиентские запросы в FCI обслуживаются через этот узел. В случае сбоя и неуспешного перезапуска владельцем группы становится другой узел WSFC в экземпляре FCI. Этот процесс называется отработкой отказа. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] повышает надежность обнаружения сбоев и обеспечивает гибкую политику отработки отказов.  
+  В экземпляре отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (FCI) в каждый момент времени только один узел может быть владельцем группы ресурсов кластера WSFC. Клиентские запросы в FCI обслуживаются через этот узел. В случае сбоя и неуспешного перезапуска владельцем группы становится другой узел WSFC в экземпляре FCI. Этот процесс называется отработкой отказа. [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] повышает надежность обнаружения сбоев и обеспечивает гибкую политику отработки отказов.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI зависит от возможностей базовой службы WSFC по обнаружению сбоев. Поэтому порядок отработки отказа для FCI определяется двумя механизмами: собственными функциями WSFC и функциями, добавленными в процессе установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   

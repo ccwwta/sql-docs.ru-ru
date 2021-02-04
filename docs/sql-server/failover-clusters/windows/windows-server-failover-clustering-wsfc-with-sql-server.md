@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 56cfc62709e24fc48704ed44b86a866b07a0b0ef
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 11e424ef4f32b91a7c4d65faf796335a3f7faf26
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642672"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251227"
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>Отказоустойчивая кластеризация Windows Server с SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  *Отказоустойчивый кластер Windows Server* (WSFC) представляет собой группу независимых серверов, совместная работа которых позволяет повысить доступность приложений и служб. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] поддержка экземпляров отказоустойчивого кластера [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] осуществляется с использованием служб и возможностей WSFC.  
+  *Отказоустойчивый кластер Windows Server* (WSFC) представляет собой группу независимых серверов, совместная работа которых позволяет повысить доступность приложений и служб. [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] поддержка экземпляров отказоустойчивого кластера [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] осуществляется с использованием служб и возможностей WSFC.  
   
    
 ##  <a name="terms-and-definitions"></a><a name="TermsAndDefs"></a> Термины и определения  
@@ -76,7 +76,7 @@ ms.locfileid: "97642672"
  Дополнительные сведения см. в статье [Failover Clustering Overview — Windows Server](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831579(v=ws.11))(Обзор отказоустойчивой кластеризации — Windows Server).  
   
 ##  <a name="sql-server-always-on-technologies-and-wsfc"></a><a name="AlwaysOnWsfcTech"></a> Технологии SQL Server AlwaysOn и WSFC  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] *AlwaysOn* — это решение высокого уровня доступности и аварийного восстановления с использованием WSFC. Компоненты AlwaysOn представляют собой интегрированные, гибкие решения, повышающие доступность приложений, окупаемость вложений в оборудование и упрощающее развертывание систем высокого уровня доступности и управление ими.  
+ [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)] *AlwaysOn* — это решение высокого уровня доступности и аварийного восстановления с использованием WSFC. Компоненты AlwaysOn представляют собой интегрированные, гибкие решения, повышающие доступность приложений, окупаемость вложений в оборудование и упрощающее развертывание систем высокого уровня доступности и управление ими.  
   
  Экземпляры [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] и экземпляры отказоустойчивого кластера AlwaysOn используют технологию платформы WSFC и регистрируют компоненты в качестве ресурсов кластера WSFC.  Связанные ресурсы объединяются в *роль*, которую можно сделать зависимой от других ресурсов кластера WSFC. Затем кластер WSFC сможет выявлять необходимость в перезапуске экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (и сигнализировать об этой необходимости), а также автоматически выполнять отработку отказа с переходом на другой серверный узел в кластере WSFC.  
   

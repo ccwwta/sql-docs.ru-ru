@@ -4,24 +4,23 @@ titleSuffix: SQL Server Profiler
 description: Изучите функции SQL Server Profiler. Получите помощь в устранении неполадок, используя это средство для создания трассировок, а также анализа и воспроизведения результатов трассировки.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: profiler
 ms.topic: conceptual
-ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 05/01/2020
-ms.openlocfilehash: 3169f8fbbc86fc95a62631c0cc93d77b6a46b0a4
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 3066ac1b16a1a294955825dc35b40f422bd79df3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643427"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99203541"
 ---
 # <a name="sql-server-profiler"></a>Приложение SQL Server Profiler
 
- [!INCLUDE[sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] — это интерфейс для создания трассировок и управления ими, а также для анализа и воспроизведения полученных результатов. События сохраняются в файле трассировки, который затем может быть проанализирован или использован для воспроизведения определенных последовательностей шагов для выявления возникших проблем.
 
@@ -46,7 +45,7 @@ ms.locfileid: "97643427"
 
 ## <a name="capture-and-replay-trace-data"></a>Захват и воспроизведение данных трассировки
 
-В следующей таблице показаны компоненты, с помощью которых мы рекомендуем выполнять захват и воспроизведение данных трассировки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .
+В следующей таблице показаны компоненты, с помощью которых мы рекомендуем выполнять захват и воспроизведение данных трассировки в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] .
 
 ||||
 |-|-|-|

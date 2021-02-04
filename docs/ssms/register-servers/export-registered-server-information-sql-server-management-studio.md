@@ -17,18 +17,18 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 1c976735ddc6ce9e602969e06abc13b076a74144
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: a71bebde2525a18e062832aba064a4b9aecf7f3a
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037587"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250484"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>Выполнение экспорта сведений компонента «Зарегистрированные серверы» (среда SQL Server Management Studio)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-В этом разделе описывается, как сохранить и экспортировать сведения о зарегистрированных серверах в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]и передать их другим сотрудникам и на другие серверы. Данную возможность экспорта можно использовать для создания согласованного пользовательского интерфейса на нескольких компьютерах.  
+В этом разделе описывается, как сохранить и экспортировать сведения о зарегистрированных серверах в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]и передать их другим сотрудникам и на другие серверы. Данную возможность экспорта можно использовать для создания согласованного пользовательского интерфейса на нескольких компьютерах.  
   
  Экспорт и последующий импорт файлов зарегистрированных серверов позволяет легко настроить одинаковые серверы для нескольких компьютеров в окне «Зарегистрированные серверы». Это полезно при обращении к большому числу серверов с локальных компьютеров, расположенных в разных местах, или при необходимости настроить базовые параметры соединения для менее опытного пользователя.  
   

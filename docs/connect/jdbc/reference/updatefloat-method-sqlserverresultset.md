@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerResultSet.updateFloat
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: daa3cff7-2481-4089-a41e-81fe9af1a462
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a0f9fe6fee6fe493def11252e77d307b66df6f63
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2dbc4d8066d480b423e8f5eee4faea87d0e7d288
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431356"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189059"
 ---
 # <a name="updatefloat-method-sqlserverresultset"></a>Метод updateFloat (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "88431356"
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[updateFloat (int, float)](../../../connect/jdbc/reference/updatefloat-method-int-float.md)|Обновляет указанный столбец значением типа **float** по заданному индексу столбца.|  
 |[updateFloat (java.lang.String, float)](../../../connect/jdbc/reference/updatefloat-method-java-lang-string-float.md)|Обновляет указанный столбец значением типа **float** по заданному имени столбца.|  

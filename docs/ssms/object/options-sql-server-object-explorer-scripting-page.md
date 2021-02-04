@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 35a255bb4df3779897ec40da29da9cc15f62ba1f
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: cbaf09a88e5856bfd5c8f36826d8894b947e3c0d
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037633"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250503"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>Параметры (обозреватель объектов SQL Server — страница "Скрипты")
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -151,7 +151,7 @@ ms.locfileid: "92037633"
 **Скрипт для типа ядра СУБД**. Создаваемые скрипты будут предназначены для указанного [типа ядра СУБД](/previous-versions/sql/sql-server-2014/ee642509(v=sql.120)).
 
 **Скрипт для версии сервера**  
-Создаваемые скрипты будут предназначены для указанной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Новые функции [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] нельзя внести в скрипты для более ранних версий. Некоторые скрипты, созданные для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , нельзя выполнять на серверах, где выполняется более ранняя версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], или в базе данных с более ранним значением [уровня совместимости баз данных](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+Создаваемые скрипты будут предназначены для указанной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Новые функции [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] нельзя внести в скрипты для более ранних версий. Некоторые скрипты, созданные для [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] , нельзя выполнять на серверах, где выполняется более ранняя версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], или в базе данных с более ранним значением [уровня совместимости баз данных](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
 ## <a name="see-also"></a>См. также раздел  
 [Формирование скриптов (среда SQL Server Management Studio)](../scripting/generate-scripts-sql-server-management-studio.md)  

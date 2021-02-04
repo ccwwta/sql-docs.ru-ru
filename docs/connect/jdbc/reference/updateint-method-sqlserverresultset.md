@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerResultSet.updateInt
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 2bb0319e-12cb-4604-a7e3-b22a24b02296
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d4ab1c14d9ca517a1c6a8ab515d82622716b8448
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eff640312bc642d18d993c67f7fe54006365b145
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478406"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99189027"
 ---
 # <a name="updateint-method-sqlserverresultset"></a>Метод updateInt (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "88478406"
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[updateInt (int, int)](../../../connect/jdbc/reference/updateint-method-int-int.md)|Обновляет указанный столбец значением **int** по заданному индексу столбца.|  
 |[updateInt (java.lang.String, int)](../../../connect/jdbc/reference/updateint-method-java-lang-string-int.md)|Обновляет указанный столбец значением **int** по заданному имени столбца.|  

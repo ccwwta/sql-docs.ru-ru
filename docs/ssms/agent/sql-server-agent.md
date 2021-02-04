@@ -15,12 +15,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016
-ms.openlocfilehash: 58d9f3921500e2fd7fd1fa02046d4f89d67ccbeb
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: cc8adae5672f14e25e9094befd455ac6ee599850
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97478795"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251005"
 ---
 # <a name="sql-server-agent"></a>Агент SQL Server
 
@@ -29,7 +29,7 @@ ms.locfileid: "97478795"
 > [!IMPORTANT]  
 > В [Управляемом экземпляре Azure SQL](/azure/sql-database/sql-database-managed-instance) в настоящее время поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия в T-SQL между Управляемым экземпляром SQL Azure и SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это служба Microsoft Windows, выполняющая запланированные административные задачи, которые называются *заданиями* в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это служба Microsoft Windows, выполняющая запланированные административные задачи, которые называются *заданиями* в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
 
 ## <a name="benefits-of-sql-server-agent"></a><a name="Benefits"></a>Преимущества агента SQL Server 
 
@@ -38,7 +38,7 @@ ms.locfileid: "97478795"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент может выполнять задания по расписанию в ответ на определенное событие или по требованию. Например, можно автоматизировать задачу создания резервной копии всех серверов компании, чтобы она выполнялась ежедневно по окончании рабочего дня. Запланируйте запуск резервного копирования после 22:00 с понедельника по пятницу; если во время создания резервной копии возникает проблема, агент SQL Server регистрирует соответствующее событие и выдает уведомление.  
   
 > [!NOTE]  
-> Служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию отключена, если во время установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] явно не выбран автоматический запуск службы.  
+> Служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию отключена, если во время установки [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] явно не выбран автоматический запуск службы.  
   
 ## <a name="sql-server-agent-components"></a><a name="Components"></a>Компоненты агента SQL Server  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент использует следующие компоненты, чтобы определить задачи для выполнения, время для выполнения задач и порядок уведомления об успешном или неудачном завершении задач.  

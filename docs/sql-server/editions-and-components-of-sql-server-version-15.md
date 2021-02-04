@@ -1,5 +1,5 @@
 ---
-description: Выпуски и поддерживаемые функции [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)].
+description: Выпуски и поддерживаемые функции [!INCLUDE[sssql19-md](../includes/sssql19-md.md)].
 title: Выпуски и поддерживаемые функции SQL Server 2019 | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2019
@@ -34,18 +34,18 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-ver15'
-ms.openlocfilehash: e0a8f226602ab41422715368fb12c13809fa6b40
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 9987384899eeb9087a938d8fd8e8b156ff8e1962
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97477155"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236266"
 ---
-# <a name="editions-and-supported-features-of-sssqlv15-md"></a>Выпуски и поддерживаемые функции [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)].
+# <a name="editions-and-supported-features-of-sssql19-md"></a>Выпуски и поддерживаемые функции [!INCLUDE[sssql19-md](../includes/sssql19-md.md)].
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx](../includes/applies-to-version/sqlserver.md)]
 
-В этом разделе подробно описаны функции, поддерживаемые различными выпусками [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)].
+В этом разделе подробно описаны функции, поддерживаемые различными выпусками [!INCLUDE[sssql19-md](../includes/sssql19-md.md)].
 
 Сведения о более ранних версиях:
 
@@ -58,10 +58,10 @@ ms.locfileid: "97477155"
 
 Актуальные заметки о выпуске и сведения о новых возможностях содержатся в следующих разделах:
 
-* [Заметки о выпуске [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]](../sql-server/sql-server-version-15-release-notes.md)
+* [Заметки о выпуске [!INCLUDE[sssql19-md](../includes/sssql19-md.md)]](../sql-server/sql-server-version-15-release-notes.md)
 * [Новые возможности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] версии 2019](../sql-server/what-s-new-in-sql-server-ver15.md).
 
-**Попробуйте [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]! [Скачайте [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] из центра вычислений](https://www.microsoft.com//evalcenter/evaluate-sql-server)**
+**Попробуйте [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]! [Скачайте [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] из центра вычислений](https://www.microsoft.com//evalcenter/evaluate-sql-server)**
 
 ## <a name="ssnoversion-editions"></a>[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] , выпуски
 
@@ -103,8 +103,8 @@ ms.locfileid: "97477155"
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Службы[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] включают в себя серверные и клиентские компоненты для создания, управления и развертывания табличных, матричных и графических отчетов, а также отчетов в свободной форме. Службы[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] являются расширяемой платформой, которую можно использовать для разработки приложений отчетов.|
 |[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] представляют собой набор графических средств и программируемых объектов для перемещения, копирования и преобразования данных. Они также включают компонент [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) для служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].|
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) — это решение [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] по управлению основными данными. MDS можно настроить для управления любой структурой (товары, заказчики, счета). Поддерживаются иерархии, детальная настройка безопасности, транзакции, управление версиями данных и бизнес-правила, а также использование [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] для управления данными.|
-|Служба машинного обучения (в базе данных)|Службы машинного обучения (в базе данных) поддерживают распределенные и масштабируемые решения машинного обучения, использующие корпоративные источники данных. В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]2016 поддерживался язык R. [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] поддерживает язык R и Python.|
-|Сервер машинного обучения (автономный)|Сервер машинного обучения (автономный) поддерживает развертывание распределенных масштабируемых решений машинного обучения на множестве платформ и использование разных корпоративных источников данных, включая Linux и Hadoop. В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]2016 поддерживался язык R. [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] поддерживает язык R и Python.|
+|Служба машинного обучения (в базе данных)|Службы машинного обучения (в базе данных) поддерживают распределенные и масштабируемые решения машинного обучения, использующие корпоративные источники данных. В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]2016 поддерживался язык R. [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] поддерживает язык R и Python.|
+|Сервер машинного обучения (автономный)|Сервер машинного обучения (автономный) поддерживает развертывание распределенных масштабируемых решений машинного обучения на множестве платформ и использование разных корпоративных источников данных, включая Linux и Hadoop. В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]2016 поддерживался язык R. [!INCLUDE[sssql19-md](../includes/sssql19-md.md)] поддерживает язык R и Python.|
 
 |Средства управления|Описание|
 |----------------------|-----------------|

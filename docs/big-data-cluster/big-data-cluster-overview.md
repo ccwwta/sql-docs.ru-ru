@@ -9,18 +9,18 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ced001726b7a8306f2064c1436ddb41cf65a6eb0
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: cda3b252ddfb602cca02d8dc09322769339e33e9
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98091814"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99235743"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>Что такое [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Начиная с версии [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] обеспечивают развертывание масштабируемых кластеров SQL Server, Spark и контейнеров HDFS, работающих в Kubernetes. Эти компоненты работают параллельно, позволяя считывать, записывать и обрабатывать большие данные в Transact-SQL или Spark, благодаря чему вы можете с легкостью объединять и анализировать важные реляционные данные с объемными большими данными.
+Начиная с версии [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)], [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] обеспечивают развертывание масштабируемых кластеров SQL Server, Spark и контейнеров HDFS, работающих в Kubernetes. Эти компоненты работают параллельно, позволяя считывать, записывать и обрабатывать большие данные в Transact-SQL или Spark, благодаря чему вы можете с легкостью объединять и анализировать важные реляционные данные с объемными большими данными.
 
 Используйте среду [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] для выполнения следующих действий:
 
@@ -43,7 +43,7 @@ ms.locfileid: "98091814"
 
 ### <a name="data-virtualization"></a>Виртуализация данных
 
-С помощью [PolyBase](../relational-databases/polybase/polybase-guide.md) [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] могут выполнять запросы к внешним источникам данных, не прибегая при этом к перемещению или копированию данных. В [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] применяются новые соединители с источниками данных.
+С помощью [PolyBase](../relational-databases/polybase/polybase-guide.md) [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] могут выполнять запросы к внешним источникам данных, не прибегая при этом к перемещению или копированию данных. В [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] применяются новые соединители с источниками данных.
 
 ![Виртуализация данных](media/big-data-cluster-overview/data-virtualization.png)
 

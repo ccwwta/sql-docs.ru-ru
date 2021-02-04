@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - sqlsrv_server_info
 apitype: NA
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ef6fe2b7-d267-4379-b948-5626c4684367
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7eaf032b121dc3e93cb13f001cbebd3eaa75b796
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e1c263797c0f67751b5aa96899adadbf37017803
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466692"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201036"
 ---
 # <a name="sqlsrv_server_info"></a>sqlsrv_server_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +42,7 @@ sqlsrv_server_info( resource $conn)
 ## <a name="return-value"></a>Возвращаемое значение  
 Ассоциативный массив со следующими ключами:  
   
-|Клавиши|Описание|  
+|Ключ|Описание|  
 |-------|---------------|  
 |CurrentDatabase|База данных, являющаяся целевой в настоящее время.|  
 |SQLServerVersion|Версия SQL Server.|  

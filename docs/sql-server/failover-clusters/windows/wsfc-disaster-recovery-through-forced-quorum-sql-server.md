@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: fcdd0f1d34ed4107cbe3c90708abe286efbf0837
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 6aa2a07da107a5283a4dacc8323dc5d6a928702a
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642664"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99251199"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>Аварийное восстановление WSFC через принудительный кворум (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "97642664"
 1.  **Определите область сбоя.** Определите, какие группы доступности или экземпляры SQL Server не отвечают, какие узлы кластера работают в сети и доступны для использования после аварии, изучите журналы событий Windows и системные журналы SQL Server.  Там, где это практически возможно, следует сохранить аналитические данные и системные журналы для последующего анализа.  
   
     > [!TIP]  
-    >  На главном экземпляре [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]можно получить сведения о работоспособности групп доступности, которые имеют реплику доступности на экземпляре локального сервера, выполнив запрос к динамическому административному представлению (DMV) [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md) .  
+    >  На главном экземпляре [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)]можно получить сведения о работоспособности групп доступности, которые имеют реплику доступности на экземпляре локального сервера, выполнив запрос к динамическому административному представлению (DMV) [sys.dm_hadr_availability_group_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md) .  
   
 2.  **Запустите кластер WSFC с помощью принудительного кворума на одном узле.** Определите узел с минимальным количеством сбоев компонентов, отличный от того, на котором служба кластеров WSFC была закрыта.  Убедитесь, что этот узел может взаимодействовать с большинством других узлов.  
   
