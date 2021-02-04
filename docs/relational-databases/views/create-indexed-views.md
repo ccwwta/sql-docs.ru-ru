@@ -19,12 +19,12 @@ ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 872d40262da465bac6e336472e8beca402482b5f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0cc0d86dbdce6e3618957551a1059c0178a23d61
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97484376"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236298"
 ---
 # <a name="create-indexed-views"></a>Создание индексированных представлений
 
@@ -39,8 +39,9 @@ ms.locfileid: "97484376"
 1. Убедитесь в правильности параметров SET для всех существующих таблиц, на которые ссылается представление.
 2. Прежде чем создавать новые таблицы и представление, проверьте параметры SET для сеанса.
 3. Проверьте, что определение представления детерминировано.
-4. Создайте представление с помощью параметра `WITH SCHEMABINDING`.
-5. Создайте уникальный кластеризованный индекс для представления.
+4. Убедитесь, что у базовой таблицы тот же владелец, что и у представления.
+5. Создайте представление с помощью параметра `WITH SCHEMABINDING`.
+6. Создайте уникальный кластеризованный индекс для представления.
 
 > [!IMPORTANT]
 > При выполнении DML<sup>1</sup> для таблицы, на которую ссылается большое количество индексированных представлений либо меньшее количество очень сложных индексированных представлений, эти упоминаемые индексированные представления также потребуется обновить. В результате может значительно снизиться производительность запросов DML, а в некоторых случаях может быть невозможно даже создать план запроса.
@@ -156,7 +157,10 @@ ms.locfileid: "97484376"
 
 #### <a name="permissions"></a><a name="Permissions"></a> Permissions
 
-Для выполнения этой инструкции требуется разрешение **CREATE VIEW** в отношении базы данных и разрешение **ALTER** в отношении схемы, в которой создается представление.
+Для выполнения этой инструкции требуется разрешение **CREATE VIEW** в отношении базы данных и разрешение **ALTER** в отношении схемы, в которой создается представление. Если базовая таблица находится в другой схеме, для нее требуется как минимум разрешение **REFERENCES**.
+
+    > [!NOTE]  
+    > For the creation of the index on top of the view, the base table must have the same owner as the view. This is also called ownership-chain. This is usually the case when table and view reside within the same schema, but it is possible that individual objects have different owners. The column **principal_id** in sys.tables contains a value if the owner is different from the schema-owner.
 
 ## <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: e15751fb064d2843770d72f26db94b29de28f199
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 1f9b85e3d2f14eb534956c218d38f98b634dc89c
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867594"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813288"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Переместить базу данных, защищаемую прозрачным шифрованием, в другой экземпляр SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "91867594"
 
 ###  <a name="using-transact-sql"></a><a name="TsqlCreate"></a> Использование Transact-SQL  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "91867594"
   
 7.  В обозревателе объектов среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]щелкните правой кнопкой мыши папку **Базы данных** и выберите команду **Присоединить...** .  
   
-8.  В диалоговом окне **Присоединение баз данных** в области **Базы данных для присоединения**нажмите кнопку **Добавить**.  
+8.  В диалоговом окне **Присоединение баз данных** в области **Базы данных для присоединения** нажмите кнопку **Добавить**.  
   
 9. В диалоговом окне **Поиск файлов базы данных—** _имя\_сервера_ выберите присоединяемый к новому серверу файл базы данных и нажмите кнопку **ОК**.  
   
@@ -253,7 +253,7 @@ ms.locfileid: "91867594"
   
 ###  <a name="using-transact-sql"></a><a name="TsqlMove"></a> Использование Transact-SQL  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  В **обозревателе объектов** подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  На стандартной панели выберите пункт **Создать запрос**.  
   

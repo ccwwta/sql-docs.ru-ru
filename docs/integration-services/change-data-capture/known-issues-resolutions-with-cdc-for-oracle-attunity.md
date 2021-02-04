@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: reference
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ad867768d72d9e03b7d76761bd371dd369c7161b
-ms.sourcegitcommit: c5078791a07330a87a92abb19b791e950672e198
+ms.openlocfilehash: e89a3638dc304bdda8bc11c55897975fb006e3ca
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/26/2020
-ms.locfileid: "94384735"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076842"
 ---
 # <a name="known-errors-and-resolutions-with-change-data-capture-for-oracle-by-attunity"></a>Известные ошибки и способы их устранения в Change Data Capture для Oracle от Attunity
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "94384735"
 - Некоторые изменения пропускаются и не реплицируются в базу данных SQL Server. Эта проблема возникает, если таблица содержит более одного символьного большого двоичного объекта (CLOB) и один из объектов имеет большое значение. 
     - Исправлено в _накопительном обновлении 1 для SQL Server 2014 SP1_ и _накопительном обновлении 8 для SQL Server 2014 RTM_, как описано в статье KB [3029096](https://support.microsoft.com/kb/3029096). 
 - Отслеживание измененных данных для Oracle с помощью Attunity перестает работать, если таблицы Oracle имеют столбец с типом данных Long.
-    - Исправлено в _накопительном обновлении 5 для SQL Server 2014 SP1_ и _накопительном обновлении 12 для SQL Server 2014 RTM_, как описано в статье KB [3145983](https://support.microsoft.com/kb/3145983).
+    - Исправлено в _накопительном обновлении 5 для SQL Server 2014 SP1_ и _накопительном обновлении 12 для SQL Server 2014 RTM_, как описано в статье KB [4017793](https://support.microsoft.com/topic/kb4017793-cumulative-update-12-for-sql-server-2014-sp1-bc24907b-afe2-6703-ccd9-99d6cb76a74d).
 
 ### <a name="sql-server-2012"></a>SQL Server 2012
 
@@ -89,7 +89,7 @@ ms.locfileid: "94384735"
 - Ошибка проверки метаданных для таблицы Oracle cdc.table_name. Индекс столбца column_name выходит за пределы допустимого диапазона. Исправлена в _накопительном обновлении 7 для SQL Server 2012 с пакетом обновления 1 (SP1)_, как описано в статье KB [2883524](https://support.microsoft.com/kb/2883524).
 - Служба Oracle CDC Service отображает состояние "Прервано" при использовании CDC для Oracle от Attunity в SQL Server 2012. Исправлена в _накопительном обновлении 8 для SQL Server 2012 с пакетом обновления 1 (SP1)_, как описано в статье KB [2923839](https://support.microsoft.com/kb/2923839).  
 - Некоторые изменения пропускаются и не реплицируются в базы данных SQL Server. Эта проблема возникает, если таблица содержит более одного символьного большого двоичного объекта (CLOB) и один из объектов имеет большое значение. Исправлена в _накопительном обновлении 8 для SQL Server 2012 с пакетом обновления 1 (SP1)_, как описано в статье KB [2923839](https://support.microsoft.com/kb/2923839).   
-- Отслеживание измененных данных для Oracle с помощью Attunity перестает работать, если таблицы Oracle имеют столбец с типом данных Long. Исправлено в _накопительном обновлении 2 для SQL Server 2012 SP3_ и _накопительном обновлении 11 для SQL 2012 SP2_, как описано в статье KB [3145983](https://support.microsoft.com/kb/3145983). 
+- Отслеживание измененных данных для Oracle с помощью Attunity перестает работать, если таблицы Oracle имеют столбец с типом данных Long. Исправлено в _накопительном обновлении 2 для SQL Server 2012 SP3_ и _накопительном обновлении 11 для SQL 2012 с пакетом обновления 2 (SP2)_ , как описано в статье KB [4017793](https://support.microsoft.com/topic/kb4017793-cumulative-update-12-for-sql-server-2014-sp1-bc24907b-afe2-6703-ccd9-99d6cb76a74d). 
 
 ## <a name="collect-detailed-logs"></a>Сбор подробных журналов 
 

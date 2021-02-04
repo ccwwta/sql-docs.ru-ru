@@ -12,12 +12,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016'
 manager: erikre
-ms.openlocfilehash: 03041d41745e51d858f56bfcd21407ad58530dd9
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 2f034ac2223b15a3b66883a3ce3dbc434bcf07db
+ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97460697"
+ms.lasthandoff: 01/26/2021
+ms.locfileid: "98813250"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Обновление Power Pivot для SharePoint
 
@@ -57,7 +57,7 @@ ms.locfileid: "97460697"
   
 -   Средства настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] — это одни из общих компонентов SQL Server. Все общие компоненты обновляются одновременно. Если во время обновления будут выбраны другие экземпляры SQL Server или функции, для которых требуется обновление общих компонентов, то средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] также будет обновлено. Если средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] обновлено, а экземпляр [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] — нет, могут возникнуть проблемы. Дополнительные сведения об общих функциях SQL Server см. в разделе [Обновление до SQL Server 2016 с использованием мастера установки (Setup)](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
--   Надстройка [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint (**spPowerPivot.msi**) устанавливается параллельно предыдущим версиям. Например, надстройка [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] устанавливается в папку `c:\Program Files\Microsoft SQL Server\130\Tools\PowerPivotTools`.  
+-   Надстройка [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint (**spPowerPivot.msi**) устанавливается параллельно предыдущим версиям. Например, надстройка устанавливается в папку `c:\Program Files\Microsoft SQL Server\nnn\Tools\PowerPivotTools`. Сведения о файлах установки SQL Server см. в разделе о [расположениях файлов](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md#shared-files-for-all-instances-of-).
   
 ##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> Предварительные требования  
  **Разрешения**  

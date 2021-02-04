@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =azure-sqldw-latest
-ms.openlocfilehash: 43a5cc755eb07fe80a0d33d6b5b892e2a65ab21e
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: fb52e9e869c0210e8e320c11dfec21aa8f7d585e
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97638830"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076812"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -402,7 +402,7 @@ WITH (
 ## <a name="faq"></a>ВОПРОСЫ И ОТВЕТЫ
 
 ### <a name="what-is-the-performance-of-the-copy-command-compared-to-polybase"></a>Какова производительность команды COPY по сравнению с PolyBase?
-Производительность команды COPY зависит от рабочей нагрузки. Для обеспечения максимальной производительности при загрузке CSV-файла рекомендуется разделять входные данные на несколько файлов.
+Производительность команды COPY зависит от рабочей нагрузки. Для обеспечения максимальной производительности при загрузке CSV-файла рекомендуется разделять входные данные на несколько файлов. Эта рекомендация также применима к сжатым GZIP-файлам.
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>Каковы рекомендации по разделению файлов при использовании команды COPY для загрузки CSV-файлов?
 Рекомендации по количеству файлов приведены в таблице ниже. После достижения рекомендуемого количества файлов производительность будет повышаться при увеличении размера файлов. Простая процедура разделения файлов описана в [этой документации](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/how-to-maximize-copy-load-throughput-with-file-splits/ba-p/1314474). 

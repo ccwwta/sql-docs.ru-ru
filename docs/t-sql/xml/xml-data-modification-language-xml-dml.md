@@ -6,7 +6,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 20ce50d2-c07b-4e41-93a7-1380d2cd49cb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2aaa0b9a37527c10de34e1f1037fe33a8dab3608
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b9296671957cfb5d8ee0bcd41ae94362a85f42c2
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496318"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99181691"
 ---
 # <a name="xml-data-modification-language-xml-dml"></a>Язык модификации XML-данных (XML DML)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "88496318"
   
  Заметим, что существуют атрибуты, которые нельзя добавить, удалить или изменить их значение. Пример:  
   
--   Для типизированного или нетипизированного **xml** это атрибуты **xmlns**, **xmlns:\*** и **xml:base**.  
+-   Для типизированного или нетипизированного **xml** это атрибуты **xmlns**, **xmlns:\* *_ и _* xml:base**.  
   
 -   Для типизированного **xml** это атрибуты **xsi:nil** и **xsi:type**.  
   
