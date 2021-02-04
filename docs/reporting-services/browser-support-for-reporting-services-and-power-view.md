@@ -1,7 +1,7 @@
 ---
 title: Поддержка браузера для служб Reporting Services и Power View | Документы Майкрософт
 description: Узнайте, какие версии браузера поддерживаются для просмотра служб SQL Server Reporting Services, элементов управления ReportViewer и Power View и управления ими.
-ms.date: 07/02/2017
+ms.date: 01/28/2021
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: aa8a9fbbcadfcdd3c266de4b1453ea7e5402e1af
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: e246db4f2a7b2a94ce17f8a48acf05b16aebbdf4
+ms.sourcegitcommit: 04d101fa6a85618b8bc56c68b9c006b12147dbb5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466655"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99049025"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Поддержка браузера для служб Reporting Services и Power View
 
@@ -95,8 +95,8 @@ ms.locfileid: "97466655"
 
 |**Тип браузера**|**Поддерживает**|**Выбор браузера по умолчанию**|**Выбор по умолчанию сервера**|
 |----------------------|------------------|-------------------------|------------------------|
-|**Microsoft Edge** (+)|Negotiate, Kerberos, NTLM, Basic|Согласование|Да. Используемые по умолчанию параметры проверки подлинности совместимы с Edge.|
-|**Microsoft Internet Explorer**|Negotiate, Kerberos, NTLM, Basic|Согласование|Да. Параметры проверки подлинности по умолчанию совместимы с Internet Explorer.|
+|**Microsoft Edge** (+)|Negotiate, NTLM, Basic|Согласование|Да. Используемые по умолчанию параметры проверки подлинности совместимы с Edge.|
+|**Microsoft Internet Explorer**|Negotiate, NTLM, Basic|Согласование|Да. Параметры проверки подлинности по умолчанию совместимы с Internet Explorer.|
 |**Google Chrome**(+)|Negotiate, NTLM, Basic|Согласование|Да. Параметры проверки подлинности по умолчанию совместимы с Chrome.|
 |**Mozilla Firefox**(+)|NTLM, базовый|NTLM|Да. Параметры проверки подлинности по умолчанию совместимы с Firefox.|
 |**Apple Safari**(+)|NTLM, базовый|Basic|Да. Параметры проверки подлинности по умолчанию совместимы с Safari.|

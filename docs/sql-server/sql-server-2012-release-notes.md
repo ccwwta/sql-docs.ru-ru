@@ -13,12 +13,12 @@ ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016
-ms.openlocfilehash: fff3b6de7e2e83c535997194ca2622d9cd9e9595
-ms.sourcegitcommit: 108bc8e576a116b261c1cc8e4f55d0e0713d402c
+ms.openlocfilehash: 06294cb2dbf588ed5f7588d05ee5aa1c5af971bc
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2021
-ms.locfileid: "98766179"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076076"
 ---
 # <a name="sql-server-2012-release-notes"></a>Заметки о выпуске SQL Server 2012
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -192,7 +192,7 @@ A semantic language statistics database is not registered. Full-text indexes usi
   
     -   Если SQL Server 2012 устанавливается на компьютере под управлением Windows 7 с пакетом обновления 1 (SP1) или Windows Server 2008 R2 с пакетом обновления 1 (SP1), это обновление уже установлено на компьютере.  
   
--   Наличие Windows PowerShell 2.0 является необходимым условием для установки компонента ядра СУБД SQL Server 2012 и среды SQL Server Management Studio, однако программа установки SQL Server больше не устанавливает Windows PowerShell. Если компонент PowerShell 2.0 отсутствует на компьютере, его можно включить, следуя указаниям, приведенным на странице [Windows Management Framework](https://support.microsoft.com/kb/968929) . Способ установки Windows PowerShell 2.0 зависит от используемой операционной системы:  
+-   Наличие Windows PowerShell 2.0 является необходимым условием для установки компонента ядра СУБД SQL Server 2012 и среды SQL Server Management Studio, однако программа установки SQL Server больше не устанавливает Windows PowerShell. Если компонент PowerShell 2.0 отсутствует на компьютере, его можно включить, следуя указаниям, приведенным на странице [Windows Management Framework](https://mskb.pkisolutions.com/kb/968929) . Способ установки Windows PowerShell 2.0 зависит от используемой операционной системы:  
   
     -   Windows Server 2008 — Windows PowerShell 1.0 является компонентом, и его можно добавить. Версии Windows PowerShell 2.0 загружаются и устанавливаются (фактически как обновление для ОС).  
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 72e29a5be172bdf00f9c57358cbbaa1e9bae5a09
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: b13ca53aad69647aee5158d86de2cfb16ac04710
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98594826"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076106"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Расширенная защита для проверки подлинности служб Reporting Services
 
@@ -25,7 +25,7 @@ ms.locfileid: "98594826"
 Службы SQL Server Reporting Services поддерживают и поощряют использование расширенной защиты, включенной в операционной системе и настроенной в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. По умолчанию [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] принимает запросы, в которых указана проверка подлинности Negotiate или NTLM, что позволяет ему пользоваться поддержкой расширенной защиты в операционной системе и функциями расширенной защиты в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 > [!IMPORTANT]  
->  По умолчанию расширенная защита в Windows отключена. Дополнительные сведения о включении расширенной защиты в Windows см. в разделе [Расширенная защита для проверки подлинности](https://go.microsoft.com/fwlink/?LinkID=178431). Для успешного прохождения проверки подлинности и операционная система, и стек проверки подлинности клиента должны поддерживать расширенную защиту. При использовании старых операционных систем для реализации на компьютере расширенной защиты может потребоваться установка нескольких обновлений. Сведения о последних изменениях, внесенных в расширенную защиту, см. в статье [Новые сведения о расширенной защите](/previous-versions/sql/sql-server-2008/dd146365(v=sql.100)).  
+>  По умолчанию расширенная защита в Windows отключена. Дополнительные сведения о включении расширенной защиты в Windows см. в разделе [Расширенная защита для проверки подлинности](https://support.microsoft.com/topic/microsoft-security-advisory-extended-protection-for-authentication-7dd2ee6d-c2e9-3484-2d8e-466261d3f0c7). Для успешного прохождения проверки подлинности и операционная система, и стек проверки подлинности клиента должны поддерживать расширенную защиту. При использовании старых операционных систем для реализации на компьютере расширенной защиты может потребоваться установка нескольких обновлений. Сведения о последних изменениях, внесенных в расширенную защиту, см. в статье [Новые сведения о расширенной защите](/previous-versions/sql/sql-server-2008/dd146365(v=sql.100)).  
 
 ## <a name="reporting-services-extended-protection-overview"></a>Общие сведения о расширенной защите служб Reporting Services
 

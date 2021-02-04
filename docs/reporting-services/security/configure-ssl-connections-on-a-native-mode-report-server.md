@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6d76229a17951c4b0bad35ee78e95a903bb590e3
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 0532c42a5bd080b7f686c1663c6f88d8066bc9ff
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98594958"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076266"
 ---
 # <a name="configure-tls-connections-on-a-native-mode-report-server"></a>Настройка TLS-соединений на сервере отчетов, работающем в собственном режиме
 
@@ -86,7 +86,7 @@ ms.locfileid: "98594958"
   
  Привязки TLS являются общими ресурсами в Microsoft Windows. Изменения, проведенные в диспетчере конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или других программах наподобие диспетчера IIS, могут отразиться на работе других приложений, работающих на этом же компьютере. Рекомендуется пользоваться для изменения привязок тем же средством, которое использовалось для их создания.  Например, если привязки TLS создавались с помощью Configuration Manager, рекомендуется работать с ними в той же программе в течение всего срока их службы. Если же для создания привязок использовался диспетчер IIS, рекомендуется выполнять все дальнейшие операции с этими привязками с помощью диспетчера IIS. Если службы IIS установлены на компьютере до установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], рекомендуется проверить конфигурацию TLS в IIS перед настройкой служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Если удаление привязок TLS для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] выполняется с помощью диспетчера конфигурации сервера отчетов, то может перестать работать TLS для веб-сайтов на сервере, где работают службы IIS, или на другом сервере HTTP.SYS. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager удаляет следующий раздел реестра: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters\SslBindingInfo\0.0.0.0:443** Если этот раздел реестра удаляется, привязка TLS для IIS также удаляется. Без этой привязки TLS для протокола HTTPS не поддерживается. Чтобы определить проблему, используйте диспетчер IIS или программу командной строки HTTPCFG.exe. Чтобы устранить проблему, восстановите привязку TLS для веб-сайтов с помощью диспетчера IIS. Чтобы предотвратить возникновение этой проблемы в будущем, с помощью диспетчера IIS удалите привязки TLS, а затем восстановите привязку для нужных веб-сайтов. Дополнительные сведения см. в статье базы знаний [SSL перестает работать после удаления привязки SSL (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n).  
+ Если удаление привязок TLS для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] выполняется с помощью диспетчера конфигурации сервера отчетов, то может перестать работать TLS для веб-сайтов на сервере, где работают службы IIS, или на другом сервере HTTP.SYS. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager удаляет следующий раздел реестра: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters\SslBindingInfo\0.0.0.0:443** Если этот раздел реестра удаляется, привязка TLS для IIS также удаляется. Без этой привязки TLS для протокола HTTPS не поддерживается. Чтобы определить проблему, используйте диспетчер IIS или программу командной строки HTTPCFG.exe. Чтобы устранить проблему, восстановите привязку TLS для веб-сайтов с помощью диспетчера IIS. Чтобы предотвратить возникновение этой проблемы в будущем, с помощью диспетчера IIS удалите привязки TLS, а затем восстановите привязку для нужных веб-сайтов. Дополнительные сведения см. в статье базы знаний [SSL перестает работать после удаления привязки SSL (https://support.microsoft.com/kb/956209/n)](https://web.archive.org/web/20150215042139/http://support.microsoft.com:80/kb/956209).  
   
 ## <a name="see-also"></a>См. также раздел  
  [Проверка подлинности с использованием сервера отчетов](../../reporting-services/security/authentication-with-the-report-server.md)   
