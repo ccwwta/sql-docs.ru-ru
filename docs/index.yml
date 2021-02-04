@@ -1,17 +1,17 @@
 ### YamlMime:Hub
 title: Документация по Microsoft SQL
-summary: 'Узнайте, как использовать возможности SQL Server и SQL Azure для эффективного управления базами данных, размещаемыми как локально, так и в облаке. (Быстрая ссылка: https://aka.ms/sqldocs)'
+summary: Узнайте, как использовать возможности SQL Server и SQL Azure для эффективного управления базами данных, размещаемыми как локально, так и в облаке.
 brand: sql
 metadata:
   title: Документация по Microsoft SQL | Документация Майкрософт
-  description: 'Узнайте, как использовать возможности SQL Server и SQL Azure для эффективного управления базами данных, размещаемыми как локально, так и в облаке. (Быстрая ссылка: https://aka.ms/sqldocs)'
+  description: Узнайте, как использовать возможности SQL Server и SQL Azure для эффективного управления базами данных, размещаемыми как локально, так и в облаке.
   ms.topic: hub-page
-  ms.openlocfilehash: 9e5ac2f53987c94f7a4fa84a55df23409861712e
-  ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+  ms.openlocfilehash: 68ee871d0a5d758a2fcb205373e8f61d02656cb1
+  ms.sourcegitcommit: e4b6357756a9c691b0441208a0058f7b8f3bea51
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 01/20/2021
-  ms.locfileid: "98594370"
+  ms.lasthandoff: 02/03/2021
+  ms.locfileid: "99510335"
 highlightedContent:
   items:
   - title: Попробуйте SQL Server 2019
@@ -43,7 +43,7 @@ productDirectory:
     - url: /azure/azure-sql/database/
       text: База данных SQL Azure
     - url: /azure/azure-sql/managed-instance/
-      text: Управляемый экземпляр SQL Azure
+      text: Управляемый экземпляр SQL Azure
     - url: /azure/azure-sql-edge/overview
       text: SQL Azure для пограничных вычислений
     - url: /azure/synapse-analytics/overview-what-is/
