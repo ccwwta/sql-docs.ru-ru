@@ -7,16 +7,16 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 30710a63-c05d-47d9-9cf9-c087a1c76373
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a43f718b3a4723710246b85bc166bb52d24a3f8f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 60faed31bc161bda250a4981d98406f81815a1ba
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88355090"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99178422"
 ---
 # <a name="sqlservercallablestatement-class"></a>Класс SQLServerCallableStatement
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -25,9 +25,9 @@ ms.locfileid: "88355090"
   
  **Пакет:** com.microsoft.sqlserver.jdbc  
   
- **Реализует: ** [ISQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
+ **Реализует:** [ISQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
- **Расширяет: ** [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
+ **Расширяет:** [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   
 ## <a name="syntax"></a>Синтаксис  
   
