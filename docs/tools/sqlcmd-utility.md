@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
-ms.openlocfilehash: b499c7236391c7286c4a267c433ad991a963dab5
-ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.openlocfilehash: 3a33f274b18e36859e697dd4c0a6bdb5c171930e
+ms.sourcegitcommit: 5dcbe4abbe2339292961370c1d8ca3affa625f72
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98688933"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99536405"
 ---
 # <a name="sqlcmd-utility"></a>Служебная программа sqlcmd
 
@@ -57,7 +57,7 @@ ms.locfileid: "98688933"
 **[![Скачивание sqlcmd для x64](../ssdt/media/download.png) Скачать программы командной строки Microsoft 15 для SQL Server (х64) (2,6 МБ)](https://go.microsoft.com/fwlink/?linkid=2142258)**
 <br>**[![Скачивание sqlcmd для x86](../ssdt/media/download.png) Скачать программы командной строки Microsoft 15 для SQL Server (х86) (2,3 МБ)](https://go.microsoft.com/fwlink/?linkid=2142257)**
 
-Программы командной строки предоставляются в общедоступной версии, тем не менее они выпускаются вместе с пакетом установщика для [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+Программы командной строки предоставляются в общедоступной версии, тем не менее они выпускаются вместе с пакетом установщика для [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)].
 
 **Сведения о версии**
 
@@ -70,7 +70,7 @@ ms.locfileid: "98688933"
 
 **Требования к системе** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008–2019.
 
-Этот компонент требует наличия [установщика Windows версии 4.5](https://www.microsoft.com/download/details.aspx?id=8483) и [драйвера Microsoft ODBC 17 для SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md).
+Этот компонент требует наличия [установщика Windows версии 4.5](https://windows-installer.soft32.com/) и [драйвера Microsoft ODBC 17 для SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md).
  
 Чтобы проверить версию SQLCMD, выполните команду `sqlcmd -?` и убедитесь, что используется версия 15.0.2000.5 или более поздняя.
 

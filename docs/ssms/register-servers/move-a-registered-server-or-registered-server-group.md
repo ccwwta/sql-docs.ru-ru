@@ -17,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
-ms.openlocfilehash: d433b5816919642b0d7b25b580f4314a949cf0c2
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: ba1ed37292b3b92ead4af84cb3f00d4b51e3372d
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92036936"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250925"
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>Перемещение зарегистрированного сервера или зарегистрированной группы серверов
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-В этом разделе описывает организация серверов в компоненте «Зарегистрированные серверы» путем перемещения зарегистрированного сервера или групп серверов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Группа серверов может содержать зарегистрированные серверы или вложенные группы серверов. Как серверы, так и группы серверов можно перемещать из одной группы в другую.  
+В этом разделе описывает организация серверов в компоненте «Зарегистрированные серверы» путем перемещения зарегистрированного сервера или групп серверов в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Группа серверов может содержать зарегистрированные серверы или вложенные группы серверов. Как серверы, так и группы серверов можно перемещать из одной группы в другую.  
 
 ## <a name="SSMSProcedure"></a>  
 
@@ -38,7 +38,7 @@ ms.locfileid: "92036936"
   
 2. В диалоговом окне **Перенос регистрации сервера** разверните список групп серверов, щелкните нужный узел и нажмите кнопку **OK**.  
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Регистрация серверов](./register-servers.md)
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 53e005fcd5c4a11270a5bc2f7c307f521311c548
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: 22a9134ed3caf220dbe895d7e4de8b9d52290e08
+ms.sourcegitcommit: 5dcbe4abbe2339292961370c1d8ca3affa625f72
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596655"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99536335"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Настройка проверки подлинности Windows на сервере отчетов
   По умолчанию службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] принимают запросы, в которых определена проверка подлинности Negotiate или NTLM. Если в развертывание входят клиентские приложения и браузеры, в которых используются поставщики безопасности, то можно использовать значения по умолчанию без дополнительной настройки. Если нужно использовать другого поставщика безопасности для встроенной безопасности Windows (например, требуется применять протокол Kerberos напрямую) или если значения по умолчанию были изменены, и нужно восстановить первоначальные настройки, то можно использовать сведения данного раздела, чтобы указать настройки проверки подлинности на сервере отчетов.  
@@ -197,7 +197,7 @@ ms.locfileid: "98596655"
   
 ## <a name="external-resources"></a>Внешние ресурсы  
   
--   Дополнительные сведения о Kerberos и серверах отчетов см. на странице [Развертывание решений бизнес-аналитики с помощью SharePoint, служб Reporting Services и сервера мониторинга PerformancePoint с Kerberos.](https://go.microsoft.com/fwlink/?LinkID=177751)  
+-   Дополнительные сведения о Kerberos и серверах отчетов см. на странице [Развертывание решений бизнес-аналитики с помощью SharePoint, служб Reporting Services и сервера мониторинга PerformancePoint с Kerberos.](https://www.kasperonbi.com/deploying-a-business-intelligence-solution-using-sharepoint-reporting-services-and-performancepoint-monitoring-server-with-kerberos/)  
   
 ## <a name="see-also"></a>См. также:  
  [Проверка подлинности с использованием сервера отчетов](../../reporting-services/security/authentication-with-the-report-server.md)   

@@ -17,18 +17,18 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
-ms.openlocfilehash: 9188b822e7bf0e0024e6c6fcdbe81db7ea05002f
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 2066f5a90f27b892827c1a36034a3f9e57f4f0ea
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037547"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250480"
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>Удаление группы серверов (среда SQL Server Management Studio)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-В этом разделе описывается удаление группы серверов из списка «Зарегистрированные серверы» в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Всегда можно удалить группу серверов. Если группа серверов не пуста, любые серверы или группы серверов, содержащиеся в удаляемой группе серверов, также будут удалены. Перед удалением группы серверов переместите все серверы и группы серверов, которые нужно сохранить, в новую группу серверов.  
+В этом разделе описывается удаление группы серверов из списка «Зарегистрированные серверы» в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Всегда можно удалить группу серверов. Если группа серверов не пуста, любые серверы или группы серверов, содержащиеся в удаляемой группе серверов, также будут удалены. Перед удалением группы серверов переместите все серверы и группы серверов, которые нужно сохранить, в новую группу серверов.  
   
 ##  <a name="SSMSProcedure"></a>  
   
@@ -38,6 +38,6 @@ ms.locfileid: "92037547"
   
 2.  В диалоговом окне **Подтверждение удаления** нажмите кнопку **Да**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Перемещение зарегистрированного сервера или зарегистрированной группы серверов (среда SQL Server Management Studio)](./move-a-registered-server-or-registered-server-group.md)  
   

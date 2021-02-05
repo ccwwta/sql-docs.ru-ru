@@ -21,12 +21,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/09/2017
-ms.openlocfilehash: a80c3fc49962ad4a67430163f81d00b37c05329b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 68efd346dad72b36e98f5ce0f0c659eed81c5966
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98169222"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236718"
 ---
 # <a name="dta-utility"></a>dta
 
@@ -184,7 +184,7 @@ dta -d AdventureWorks2012 ...
 [Рекомендации по индексам сolumnstore в помощнике по настройке ядра СУБД (DTA)](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).
  ||  
 |-|  
-|**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и более поздних версий.|  
+|**Область применения**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] и более поздних версий.|  
 
   
  **-fk** _keep_existing_option_  
@@ -222,7 +222,7 @@ dta -d AdventureWorks2012 ...
  Указывает, что в качестве рабочей нагрузки нужно использовать хранилище запросов. Анализируется первая тысяча событий из хранилища запросов для явно выбранных баз данных. Это значение можно изменить с помощью параметра **–n**.  Дополнительные сведения см. в статье [Хранилище запросов](../../relational-databases/performance/how-query-store-collects-data.md)[Настройка базы данных с помощью рабочей нагрузки из хранилища запросов](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md).
  ||  
 |-|  
-|**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и более поздних версий.|  
+|**Область применения**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] и более поздних версий.|  
      
  **-if** _workload_file_  
  Задает путь и имя файла рабочей нагрузки, используемого в качестве файла исходных данных для настройки. Файл должен быть в одном из следующих форматов: TRC (трассировочный файл приложения SQL Server Profiler), SQL (файл SQL) или LOG (файл трассировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Требуется указание либо одного файла рабочей нагрузки, либо одной таблицы рабочей нагрузки.  
@@ -281,7 +281,7 @@ dta -iq -I 48
 В этом примере помощник по настройке будет использовать хранилище запросов в качестве источника рабочей нагрузки и учитывать только те запросы, которые были выполнены за последние 48 часов.  
   ||  
 |-|  
-|**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и более поздних версий.|  
+|**Область применения**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] и более поздних версий.|  
 
 
   

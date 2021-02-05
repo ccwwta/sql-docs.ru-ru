@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f169f8a88c13cc6b12b060405285c963dd9524e3
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: fd76f7fb9da663c5768ec9d60679a14b797655fc
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988074"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250384"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Ограничения вычислительной емкости для разных выпусков SQL Server
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
-  Эта статья приводит ограничения емкости вычислительных ресурсов в различных выпусках [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] и описывает отличия в их работе в физических и виртуальных средах, содержащих процессоры с технологией Hyper-Threading.  
+  Эта статья приводит ограничения емкости вычислительных ресурсов в различных выпусках [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] и описывает отличия в их работе в физических и виртуальных средах, содержащих процессоры с технологией Hyper-Threading.  
   
  ![Сопоставления с ограничениями вычислительной мощности](../sql-server/media/compute-capacity-limits.gif "Сопоставления с ограничениями вычислительной мощности")  
   
@@ -76,7 +76,7 @@ ms.locfileid: "91988074"
   
 Эти ограничения относятся к отдельному экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Они представляют максимальную вычислительную мощность, которую будет использовать отдельный экземпляр. Ограничения не распространяются на сервер, где может развертываться экземпляр. На практике развертывание нескольких экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на одном физическом сервере является эффективным способом использовать вычислительную емкость физического сервера, на котором процессоров или ядер больше, чем допускают ограничения.  
   
-В следующей таблице приводятся ограничения вычислительной мощности для одного экземпляра каждого выпуска [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+В следующей таблице приводятся ограничения вычислительной мощности для одного экземпляра каждого выпуска [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)].  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition|Максимальная емкость вычислительных ресурсов для одного экземпляра ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Максимальная емкость вычислительных ресурсов для одного экземпляра (AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  

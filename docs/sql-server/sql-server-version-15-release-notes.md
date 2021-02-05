@@ -10,23 +10,23 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15
-ms.openlocfilehash: 9762de193eae8ad4e67e77ae54c9778e92357c45
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: bcd105fac1dcb534d6c287c0daa8b0fa0e692db2
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97402701"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99237835"
 ---
-# <a name="sql-server-2019-release-notes"></a>Заметки о выпуске [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]
+# <a name="sql-server-2019-release-notes"></a>Заметки о выпуске [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)]
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-В статье описаны ограничения и известные проблемы, связанные с [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]. Связанные сведения:
+В статье описаны ограничения и известные проблемы, связанные с [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)]. Связанные сведения:
 
-> [Новые возможности версии [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]](../sql-server/what-s-new-in-sql-server-ver15.md)
+> [Новые возможности версии [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)]](../sql-server/what-s-new-in-sql-server-ver15.md)
 
-## [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
+## [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)]
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] — это последний общедоступный выпуск [!INCLUDE[SQL Server 2019](../includes/ssnoversion-md.md)].
+[!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] — это последний общедоступный выпуск [!INCLUDE[SQL Server 2019](../includes/ssnoversion-md.md)].
 
 Полные сведения о лицензировании доступны в папке `License Terms` на установочном носителе.
 
@@ -42,16 +42,16 @@ ms.locfileid: "97402701"
 
 ## <a name="sql-server-installation-may-fail-if-ssms-18x-is-installed"></a>Установка SQL Server может быть прервана, если установлена среда SSMS 18.x.
 
-- **Проблема и последствия для клиентов**: при установке [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] происходит сбой, если следующие установки выполняются в приведенном ниже порядке:
+- **Проблема и последствия для клиентов**: при установке [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] происходит сбой, если следующие установки выполняются в приведенном ниже порядке:
   1. SQL Server Management Studio (SSMS) версии 18.0, 18.1, 18.2 или 18.3 установлена на сервере.
-  1. Предпринята попытка установки [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] со съемного носителя. Например, с установочного носителя DVD.
+  1. Предпринята попытка установки [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] со съемного носителя. Например, с установочного носителя DVD.
 
 - **Возможное решение**:
   1. Удалите любую версию SSMS выше, чем SSMS 18.3.1.
   1. Установите более новую версию SSMS (18.3.1 или новее). Для получения последней версии обратитесь к статье [Скачивание SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
-  1. Установите [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] как обычно.
+  1. Установите [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)] как обычно.
 
-- **Область применения**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]
+- **Область применения**: [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)]
 
 ## <a name="utf-8-collations"></a>Параметры сортировки UTF-8
 
@@ -65,7 +65,7 @@ ms.locfileid: "97402701"
   > [!NOTE]
   > В настоящее время в пользовательском интерфейсе нет возможности выбрать параметры сортировки с поддержкой UTF-8 в Azure Data Studio или SQL Server Data Tools (SSDT). Последняя версия [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) 18 поддерживает выбор параметров сортировки UTF-8 в пользовательском интерфейсе.
 
-- **Область применения**: RTM-версия [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]
+- **Область применения**: RTM-версия [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)]
 
 ## <a name="master-data-service-notification-email-contains-broken-link"></a>Уведомление от службы Master Data Services по электронной почте содержит неработающую ссылку
 
@@ -75,7 +75,7 @@ ms.locfileid: "97402701"
 
 - **Возможное решение**: Откройте портал MDS и перейдите к ресурсу вручную.
 
-- **Область применения**: RTM-версия [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]
+- **Область применения**: RTM-версия [!INCLUDE[SQL Server 2019](../includes/sssql19-md.md)]
 
 ## <a name="see-also"></a>См. также раздел
 

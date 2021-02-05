@@ -17,21 +17,21 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: eafa770651260fb99931556308ccce58f1bf681c
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: acf4033e4f4a7faed1fc771612fd038916da52ec
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037567"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250725"
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>Импорт сведений о зарегистрированном сервере (среда SQL Server Management Studio)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-В этом разделе описывается, как импортировать сохраненные сведения о зарегистрированных серверах в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Экспорт и импорт файлов зарегистрированных серверов позволяет легко настроить для нескольких компьютеров одинаковые зарегистрированные серверы. Это удобно при управлении большим количеством серверов с компьютеров, расположенных в различных местах, или если требуется сконфигурировать базовые настройки соединения для менее опытных пользователей.  
+В этом разделе описывается, как импортировать сохраненные сведения о зарегистрированных серверах в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Экспорт и импорт файлов зарегистрированных серверов позволяет легко настроить для нескольких компьютеров одинаковые зарегистрированные серверы. Это удобно при управлении большим количеством серверов с компьютеров, расположенных в различных местах, или если требуется сконфигурировать базовые настройки соединения для менее опытных пользователей.  
   
 > [!NOTE]  
->  В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] нельзя импортировать сведения о зарегистрированных серверах из более ранних версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  В [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] нельзя импортировать сведения о зарегистрированных серверах из более ранних версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ##  <a name="SSMSProcedure"></a>  
   

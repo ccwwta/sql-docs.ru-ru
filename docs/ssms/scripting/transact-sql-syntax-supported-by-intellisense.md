@@ -16,19 +16,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bbc08b695d0909ed0656a8bb2dd416f17a2c79e2
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 05e99b82272241221ba43e65a881bf0bdc4a29bf
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480605"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250478"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>Синтаксис языка Transact-SQL, поддерживаемый технологией IntelliSense
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  В этом разделе описываются инструкции и элементы синтаксиса [!INCLUDE[tsql](../../includes/tsql-md.md)] , которые поддерживаются технологией IntelliSense в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  В этом разделе описываются инструкции и элементы синтаксиса [!INCLUDE[tsql](../../includes/tsql-md.md)] , которые поддерживаются технологией IntelliSense в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="statements-supported-by-intellisense"></a>Инструкции, поддерживаемые технологией IntelliSense  
- В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]технология IntelliSense поддерживается только для наиболее часто используемых инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] . Некоторые общие условия редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] могут блокировать работу технологии IntelliSense. Дополнительные сведения см. в разделе [Устранение сбоев в работе IntelliSense (среда SQL Server Management Studio)](./troubleshooting-intellisense.md).  
+ В [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]технология IntelliSense поддерживается только для наиболее часто используемых инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] . Некоторые общие условия редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] могут блокировать работу технологии IntelliSense. Дополнительные сведения см. в разделе [Устранение сбоев в работе IntelliSense (среда SQL Server Management Studio)](./troubleshooting-intellisense.md).  
   
 > [!NOTE]  
 >  Технология IntelliSense недоступна для зашифрованных объектов баз данных, например зашифрованных хранимых процедур или определяемых пользователем функций. Справка и краткие сведения по параметрам недоступны для параметров расширенных хранимых процедур и определяемых пользователем типов при интеграции со средой CLR.  

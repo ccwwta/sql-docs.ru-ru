@@ -16,18 +16,18 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/28/2016
-ms.openlocfilehash: 5b9c676b9c9bdef3f7172da60406239ba50f8c86
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 9f34d85e6b26a8674ed0c05788299eb568e7080a
+ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037561"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "99250409"
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>Регистрация подключенного сервера (среда SQL Server Management Studio)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-В этом разделе описывается регистрация подключенного сервера в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS). Регистрация сервера дает возможность сохранить данные о соединении для тех серверов, к которым часто осуществляется доступ. Сервер может быть зарегистрирован перед установкой соединения или во время соединения из обозревателя объектов.  Зарегистрированные серверы в среде SSMS можно просмотреть, выбрав пункты **Просмотр**\\**Зарегистрированные серверы** в меню.
+В этом разделе описывается регистрация подключенного сервера в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS). Регистрация сервера дает возможность сохранить данные о соединении для тех серверов, к которым часто осуществляется доступ. Сервер может быть зарегистрирован перед установкой соединения или во время соединения из обозревателя объектов.  Зарегистрированные серверы в среде SSMS можно просмотреть, выбрав пункты **Просмотр**\\**Зарегистрированные серверы** в меню.
   
  **В этом разделе**  
   

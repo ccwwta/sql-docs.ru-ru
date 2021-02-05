@@ -12,12 +12,12 @@ ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016'
-ms.openlocfilehash: c088a6cf0779c5c37c92d7ecd2ff93b2cda4ae46
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 6f0795c8a0404aa5096e357478209fbb259d8e13
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172156"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99236200"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>Где найти надстройку службы Reporting Services для продуктов SharePoint
 
@@ -26,12 +26,12 @@ ms.locfileid: "98172156"
 > [!IMPORTANT]  
 >  Список поддерживаемых сочетаний надстройки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], сервера отчетов и SharePoint см. в разделе [Поддерживаемые сочетания SharePoint, компонентов служб Reporting Services и надстроек (SQL Server 2016)](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md).  
   
-##  <a name="sssql15-reporting-services-add-in-for-sharepoint-products"></a><a name="bkmk_sql16"></a> Надстройка служб [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] Reporting Services для продуктов SharePoint.  
+##  <a name="sssql16-md-reporting-services-add-in-for-sharepoint-products"></a><a name="bkmk_sql16"></a> Надстройка служб [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] Reporting Services для продуктов SharePoint.  
  Дополнительные сведения о загрузке и установке надстройки см. в центре загрузки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 -   [Надстройка служб Microsoft® SQL Server 2016 Reporting Services для Microsoft SharePoint](https://www.microsoft.com/download/details.aspx?id=52682)  
   
- Версия [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] надстройки также доступна в мастере установки [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] .  
+ Версия [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] надстройки также доступна в мастере установки [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] .  
   
 -   На странице **Выбор компонентов** мастера установки выберите **Надстройка служб Reporting Services для продуктов SharePoint**.  
   
@@ -64,6 +64,6 @@ ms.locfileid: "98172156"
 ## <a name="next-steps"></a>Дальнейшие действия
 
 [Установка и удаление надстройки служб Reporting Services для SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
-[После удаления надстройки служб Reporting Services в зоне, отличной от зоны по умолчанию, страницы SharePoint будут недоступны для просмотра](https://support.microsoft.com/kb/2009212)  
+[После удаления надстройки служб Reporting Services в зоне, отличной от зоны по умолчанию, страницы SharePoint будут недоступны для просмотра](https://web.archive.org/web/20131006010947/http://support.microsoft.com:80/kb/2009212)  
 
 Остались вопросы? [Посетите форум служб Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).
