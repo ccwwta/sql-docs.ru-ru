@@ -2,19 +2,19 @@
 title: Матрица поддержки функций драйверами
 description: Узнайте, какие популярные функции поддерживаются в драйверах для SQL Server и где можно найти сведения о них.
 ms.custom: ''
-ms.date: 12/03/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-daenge
-ms.openlocfilehash: 4fff9c04098bd0796f714d160864e4edb93613ac
-ms.sourcegitcommit: 28fecbf61ae7b53405ca378e2f5f90badb1a296a
+ms.openlocfilehash: e93307a7f29f31aa078a7d705a904812e6aa3847
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "96595235"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99166060"
 ---
 # <a name="driver-feature-support-matrix-for-microsoft-sql-server"></a>Матрица поддержки функций драйверами для Microsoft SQL Server
 
@@ -62,9 +62,9 @@ ms.locfileid: "96595235"
 | [Проверка подлинности Azure Active Directory с использованием маркера доступа](/azure/active-directory/develop/access-tokens) | [Да](odbc/using-azure-active-directory.md#authenticating-with-an-access-token) | [Да](odbc/using-azure-active-directory.md#authenticating-with-an-access-token) | [Да](jdbc/connecting-using-azure-active-directory-authentication.md#connecting-using-access-token) | [Да](oledb/features/using-azure-active-directory.md) |
 | [Проверка подлинности Azure Active Directory с использованием пароля](/azure/sql-database/sql-database-aad-authentication) |  [Да](odbc/using-azure-active-directory.md) | [Да](odbc/using-azure-active-directory.md) | [Да](jdbc/connecting-using-azure-active-directory-authentication.md) | [Да](oledb/features/using-azure-active-directory.md) |
 | [Интегрированная проверка подлинности Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Да](odbc/using-azure-active-directory.md) | [Да](odbc/using-azure-active-directory.md) | [Да](jdbc/connecting-using-azure-active-directory-authentication.md) | [Да](oledb/features/using-azure-active-directory.md) |
-| [Интерактивная проверка подлинности Azure Active Directory (MFA)](/azure/sql-database/sql-database-aad-authentication) | [Да](odbc/using-azure-active-directory.md) | | | [Да](oledb/features/using-azure-active-directory.md) |
+| [Интерактивная проверка подлинности Azure Active Directory (MFA)](/azure/sql-database/sql-database-aad-authentication) | [Да](odbc/using-azure-active-directory.md) | | [Да](jdbc/connecting-using-azure-active-directory-authentication.md) | [Да](oledb/features/using-azure-active-directory.md) |
 | [Проверка подлинности Azure Active Directory с использованием управляемого удостоверения](/azure/active-directory/managed-identities-azure-resources/overview) | [Да](odbc/using-azure-active-directory.md) | [Да](odbc/using-azure-active-directory.md) | [Да](jdbc/connecting-using-azure-active-directory-authentication.md) | [Да](oledb/features/using-azure-active-directory.md) |
-| [Проверка подлинности Azure Active Directory субъекта-службы](/azure/active-directory/develop/app-objects-and-service-principals) | | | | [Да](oledb/features/using-azure-active-directory.md) |
+| [Проверка подлинности Azure Active Directory субъекта-службы](/azure/active-directory/develop/app-objects-and-service-principals) | [Да](odbc/using-azure-active-directory.md) | [Да](odbc/using-azure-active-directory.md) | [Да](jdbc/connecting-using-azure-active-directory-authentication.md) | [Да](oledb/features/using-azure-active-directory.md) |
 | [Встроенная проверка подлинности Windows](/windows-server/security/windows-authentication/windows-authentication-overview) | Да | [Да](odbc/linux-mac/using-integrated-authentication.md) | [Да](jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) | Да |
 | [Массовое копирование](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md) | [Да](../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md) | [Да](../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md) | [Да](jdbc/using-bulk-copy-with-the-jdbc-driver.md) | [Да](oledb/features/performing-bulk-copy-operations.md) |
 | [Метаданные обнаружения и классификации данных](../relational-databases/security/sql-data-discovery-and-classification.md) | [Да](odbc/data-classification.md) | [Да](odbc/data-classification.md) | [Да](jdbc/data-discovery-classification-sample.md) | |
