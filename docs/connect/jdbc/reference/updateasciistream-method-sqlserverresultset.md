@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - SQLServerResultSet.updateAsciiStream
 apilocation:
@@ -16,12 +16,12 @@ apitype: Assembly
 ms.assetid: 4959a0a9-ae55-4c4e-80a8-21119aaceb92
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 474393f609e1e02e6e384931306df40b2b995733
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 80a0042b5125e6e3ac1f8b38238eba1b4bef9a2e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478458"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99192141"
 ---
 # <a name="updateasciistream-method-sqlserverresultset"></a>Метод updateAsciiStream (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "88478458"
   
 ## <a name="overload-list"></a>Список перегрузок  
   
-|name|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[Метод updateAsciiStream &#40;int, java.io.InputStream&#41;](../../../connect/jdbc/reference/updateasciistream-method-int-java-io-inputstream.md)|Обновляет значение ASCII-потока в указанном столбце.|  
 |[updateAsciiStream (int, java.io.InputStream, int)](../../../connect/jdbc/reference/updateasciistream-method-int-java-io-inputstream-int.md)|Обновляет указанный индекс столбца с использованием значения ASCII-потока, связанного с индексом столбца.|  
