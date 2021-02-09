@@ -19,12 +19,12 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fef5768f72f45bf388ccd5878d56dc480371aecd
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 5e2a52bcfa2e95aa364bbdf3079e2f8666f0e1e0
+ms.sourcegitcommit: 0b400bb99033f4b836549cb11124a1f1630850a1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646064"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99978796"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Примеры массового импорта и экспорта XML-документов (SQL Server)
 
@@ -36,7 +36,7 @@ ms.locfileid: "88646064"
 
 Для выполнения массового импорта данных из файла в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или несекционированное представление могут использоваться следующие средства.  
   
-- Программа**bcp**  
+- Программа **bcp**  
    Программа **bcp** может выполнять экспорт везде в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , где работает инструкция SELECT, включая секционированные представления.  
 
 - BULK INSERT  
@@ -46,7 +46,7 @@ ms.locfileid: "88646064"
 Дополнительные сведения см. в следующих разделах:
 - [Массовый импорт и экспорт данных с использованием программы bcp (SQL Server)](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
 - [Массовый импорт данных при помощи инструкции BULK INSERT или OPENROWSET(BULK...) (SQL Server)](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) 
-- [Как импортировать XML в SQL Server с помощью компонента массовой загрузки XML.](https://support.microsoft.com/kb/316005)
+- [Как импортировать XML в SQL Server с помощью компонента массовой загрузки XML.](https://mskb.pkisolutions.com/kb/316005)
 - [Коллекции XML-схем (SQL Server)](../xml/xml-schema-collections-sql-server.md)
   
 ## <a name="examples"></a>Примеры  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a700ef86b2ca645ce29cc7468fd8b948ccc2d4d7
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+ms.openlocfilehash: 33d461d2336ed8057b898e5c329db0f9b341cc19
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91957025"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835943"
 ---
 # <a name="integration-services-backward-compatibility"></a>Обратная совместимость служб Reporting Services
 
@@ -36,22 +36,22 @@ ms.locfileid: "91957025"
 
 В этой статье описаны нерекомендуемые функции служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], которые все еще доступны в текущем выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Эти функции будут удалены в следующем выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Не используйте устаревшие функции в новых приложениях.  
   
- В [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] отсутствуют устаревшие функции служб [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+ В [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] отсутствуют устаревшие функции служб [!INCLUDE[ssSQL19](../includes/sssql19-md.md)].  
 
 ## <a name="discontinued-integration-services-functionality"></a>Неподдерживаемые функции служб Integration Services
 
 В этой статье описаны функции служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], которые больше не доступны в текущем выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
- В [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]нет нерекомендуемых возможностей служб Integration Services.  
+ В [!INCLUDE[ssSQL19](../includes/sssql19-md.md)]нет нерекомендуемых возможностей служб Integration Services.  
 
 ## <a name="breaking-changes-to-integration-services-features"></a>Критические изменения в функциях служб Integration Services
 
 В этом разделе описываются критические изменения в службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Эти изменения могут нарушать работу приложений, скриптов или механизмов, основанных на более ранних версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. При обновлении могут возникнуть следующие проблемы.  
   
- Критических изменений в функциях служб Integration Services в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]нет. 
+ Критических изменений в функциях служб Integration Services в [!INCLUDE[ssSQL19](../includes/sssql19-md.md)]нет. 
 
 ## <a name="behavior-changes-to-integration-services-features"></a>Изменения в работе служб Integration Services
 
 В этом разделе описаны изменения в работе служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Изменения в работе касаются того, как компоненты работают или взаимодействуют в текущем выпуске служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в сравнении с предыдущими версиями [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-Изменений в поведении для функций служб Integration Services в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]нет.  
+Изменений в поведении для функций служб Integration Services в [!INCLUDE[ssSQL19](../includes/sssql19-md.md)]нет.  

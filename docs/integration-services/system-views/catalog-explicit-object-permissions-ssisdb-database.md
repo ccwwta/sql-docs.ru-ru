@@ -11,21 +11,18 @@ ms.topic: language-reference
 ms.assetid: 49b09e0f-06e8-451f-b979-a0d91000bfe3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e7052caddf7087239e734d6474c4d829f13e9948
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 63db338fa18e3efbf0739acca2c1b97ad388e985
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422088"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835218"
 ---
 # <a name="catalogexplicit_object_permissions-ssisdb-database"></a>catalog.explicit_object_permissions (база данных SSISDB)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
-
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-
-  Отображает только разрешения, которые были явно назначены пользователю.  
+ Отображает только разрешения, которые были явно назначены пользователю.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -36,7 +33,7 @@ ms.locfileid: "88422088"
 |is_deny|**bit**|Указывает, отказано ли в разрешении или же оно предоставлено. Если значение равно `1`, то в разрешении отказано. Если значение равно `0`, то в разрешении не отказано (оно предоставлено).|  
 |grantor_id|**int**|Идентификатор участника, предоставившего разрешение.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Это представление отображает типы разрешений, перечисленные в следующей таблице.  
   
 |Значение permission_type|Имя разрешения|Описание разрешения|Применимые типы объектов|  

@@ -11,19 +11,16 @@ ms.topic: language-reference
 ms.assetid: 7014c0e3-65dc-4a46-842e-4decf3737748
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 426199180acf6aafc609250638d00d1deb9231ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d3c2915d6bb01059b514649a21a391c2561579ae
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495294"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835295"
 ---
 # <a name="catalogenvironments-ssisdb-database"></a>catalog.environments (база данных SSISDB)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Отображает подробные сведения о среде для всех сред в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Среды содержат переменные, на которые могут ссылаться проекты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
@@ -32,12 +29,12 @@ ms.locfileid: "88495294"
 |environment_id|**bigint**|Уникальный идентификатор среды.|  
 |name|**sysname**|Имя среды.|  
 |folder_id|**bigint**|Уникальный идентификатор папки, в которой хранится среда.|  
-|description|**nvarchar(1024)**|Описание среды. Это значение является необязательным.|  
+|description|**nvarchar(1024)**|Описание среды. Это необязательное значение.|  
 |created_by_sid|**varbinary(85)**|Уникальный идентификатор безопасности пользователя, создавшего среду.|  
 |created_by_name|**nvarchar(128)**|Имя пользователя, создавшего среду.|  
 |created_time|**datetimeoffset**|Дата и время создания среды.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  В этом представлении отображается строка для каждой среды в каталоге. Имена сред уникальны только в пределах папки, где они находятся. Например, среда с именем `E1` может существовать в нескольких папках в каталоге, но в каждой папке может быть только одна среда с именем `E1`.  
   
 ## <a name="permissions"></a>Разрешения  

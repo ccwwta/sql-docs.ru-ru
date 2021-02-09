@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: vanto
-ms.openlocfilehash: f208b424272644f3d66146014401a1343f00e576
-ms.sourcegitcommit: 2bf83972036bdbe6a039fb2d1fc7b5f9ca9589d3
+ms.openlocfilehash: 398d8d1aaf626fdc65674ee1d5eb959951dcd5e2
+ms.sourcegitcommit: 58e7069b5b2b6367e27b49c002ca854b31b1159d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "94674210"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99552626"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Выпуски и поддерживаемые функции SQL Server 2019 на Linux
 
@@ -97,7 +97,7 @@ SQL Server 2019 на Linux поддерживает ядро СУБД SQL Serv
 |-------------|----------------|--------------|---------|------------------------|  
 |доставка журналов;|Да|Да|Да|нет|  
 |Сжатие резервных копий|Да|Да|нет|нет| 
-|Моментальный снимок базы данных|Да|нет|нет|нет|
+|Моментальный снимок базы данных|Да|Да|нет|нет|
 |Экземпляр отказоустойчивого кластера Always On <sup>1</sup>|Да|Да|нет|нет| 
 |Группы доступности Always On <sup>2</sup>|Да|нет|нет|нет|
 |Базовые группы доступности <sup>3</sup>|нет|Да|нет|нет|

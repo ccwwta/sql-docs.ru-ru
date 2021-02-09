@@ -11,19 +11,16 @@ ms.topic: language-reference
 ms.assetid: 07a9a163-4787-40f7-b371-ac5c6cb4b095
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e307babfd703b83758a6d1d3c7de3e6f62b00119
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d449dae68ce74abcf8509eb9f6b2e22ef46c51bb
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495244"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835315"
 ---
 # <a name="catalogexecution_component_phases"></a>catalog.execution_component_phases 
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Отображает время, затраченное компонентом потока данных на каждом этапе выполнения.  
   
@@ -39,7 +36,7 @@ ms.locfileid: "88495244"
 |end_time|**datetimeoffset(7)**|Время окончания этапа.|  
 |execution_path|**nvarchar(max)**|Путь выполнения задачи потока данных.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Это представление отображает строку для каждого этапа выполнения компонента потока данных, такого как Validate, Pre-Execute, Post-Execute, PrimeOutput и ProcessInput. Каждая строка отображает время начала и окончания для конкретного этапа выполнения.  
   
 ## <a name="example"></a>Пример  

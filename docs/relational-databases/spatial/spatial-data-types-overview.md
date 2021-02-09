@@ -16,12 +16,12 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 668d1fda7e4b979e52377c03daaddb0cb2286cdd
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 87ed2882d8276b3a92add3349b73bf38fe821dc9
+ms.sourcegitcommit: 10ae200635b9e8554e6bc6f658125e1a80d4d5ae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97462965"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99589316"
 ---
 # <a name="spatial-data-types-overview"></a>Основные сведения о типах пространственных данных
 
@@ -84,7 +84,7 @@ ms.locfileid: "97462965"
 
 Внутренняя часть многоугольника в эллиптической системе определяется по правилу левой руки: если двигаться вдоль географического прямоугольника, следуя по точкам в том порядке, в котором они указаны, область слева будет считаться внутренней частью, а область справа — внешней.
 
-Если уровень совместимости [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] равен 100 или ниже, тип данных **geography** имеет следующие ограничения:
+Если уровень совместимости [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] равен 100 или ниже, тип данных **geography** имеет следующие ограничения:
 
 - Любой экземпляр **geography** должен лежать в пределах одного полушария. Не допускается сохранение пространственных объектов больше размера полушария.
 
@@ -92,7 +92,7 @@ ms.locfileid: "97462965"
 
 - Методы типа данных **geography** , требующие указания двух экземпляров **geography** , такие как STIntersection(), STUnion(), STDifference() и STSymDifference(), возвратят NULL, если результаты методов не умещаются в одном полушарии. Метод STBuffer() также возвращает значение NULL, если выходные данные выходят за пределы одного полушария.  
 
-В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]тип **FullGlobe** представляет разновидность Polygon, охватывающую весь земной шар. Этот объект имеет площадь, но не имеет границ и вершин.  
+В [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]тип **FullGlobe** представляет разновидность Polygon, охватывающую весь земной шар. Этот объект имеет площадь, но не имеет границ и вершин.  
 
 ### <a name="outer-and-inner-rings-in-geography-data-type"></a>Внешнее и внутреннее кольца для типа данных `geography`
 

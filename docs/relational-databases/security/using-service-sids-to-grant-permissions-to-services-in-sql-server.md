@@ -8,12 +8,12 @@ ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.openlocfilehash: ab9af4d073cbec00736bab6a24817502d353ffd8
-ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
+ms.openlocfilehash: b7d5336bd6f4ad37fba6cf44865d49721b3cbb80
+ms.sourcegitcommit: 0b400bb99033f4b836549cb11124a1f1630850a1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92175933"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99978813"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>Использование идентификаторов безопасности для предоставления разрешений службам в SQL Server
 
@@ -105,7 +105,7 @@ GO
   > [!NOTE]
   > Удаление имен входа SID службы или их исключение из роли сервера sysadmin может вызвать ошибки в работе разных компонентов SQL Server, подключающихся к ядру СУБД SQL Server. Ниже перечислены некоторые из этих проблем:
   > - агент SQL Server не может запустить службу SQL Server или подключиться к ней;
-  > - при работе программ установки SQL Server возникает проблема, о которой говорится в следующей статье базы знаний Майкрософт: https://support.microsoft.com/help/955813/you-may-be-unable-to-restart-the-sql-server-agent-service-after-you-re.
+  > - при работе программ установки SQL Server возникает проблема, о которой говорится в следующей статье базы знаний Майкрософт: https://mskb.pkisolutions.com/kb/955813.
   >
   > Для экземпляра SQL Server по умолчанию эту ситуацию можно исправить, добавив SID службы с помощью следующих команд Transact-SQL:
   >

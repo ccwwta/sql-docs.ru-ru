@@ -14,19 +14,16 @@ helpviewer_keywords:
 ms.assetid: a634e94d-f492-4dfd-9611-a35f545106a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 25e397e3c3b85f401857b58bd51df456b08fdb37
-ms.sourcegitcommit: 192f6a99e19e66f0f817fdb1977f564b2aaa133b
+ms.openlocfilehash: 7d506b377970879c865ed807a4377a0c1bc1241b
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "96129455"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835245"
 ---
 # <a name="catalogpackages-ssisdb-database"></a>catalog.packages (база данных SSISDB)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Отображает подробные сведения для всех пакетов, которые появляются в каталоге служб **SSISDB**.  
   

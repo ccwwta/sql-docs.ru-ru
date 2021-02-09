@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3176e2d97a4a38172dc540a57b87006f599e29c5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ae083f7e594025449da685ce5f18ed777f88a8a1
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449881"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835125"
 ---
 # <a name="integration-services-programming-overview"></a>Общие сведения о программировании служб Integration Services
 
@@ -63,7 +63,7 @@ ms.locfileid: "88449881"
 >  Прикладные программные интерфейсы служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] несовместимы с языками скриптов на основе COM, такими как VBScript.  
   
 ## <a name="locating-assemblies"></a>Поиск сборок  
- В [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]сборки служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] были обновлены до .NET 4.0. Существует отдельный глобальный кэш сборок для .NET 4, расположенный в папке *\<drive>* :\Windows\Microsoft.NET\assembly. Там вы можете найти все сборки [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , обычно в папке GAC_MSIL.  
+ В [!INCLUDE[ssSQL19](../includes/sssql19-md.md)]сборки служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] были обновлены до .NET 4.0. Существует отдельный глобальный кэш сборок для .NET 4, расположенный в папке *\<drive>* :\Windows\Microsoft.NET\assembly. Там вы можете найти все сборки [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , обычно в папке GAC_MSIL.  
   
  Как и в предыдущих версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], основные DLL-файлы расширения служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] также находятся в каталоге *\<drive>* :\Program Files\Microsoft SQL Server\100\SDK\Assemblies.  
   

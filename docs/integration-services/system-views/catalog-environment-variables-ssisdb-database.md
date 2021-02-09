@@ -11,19 +11,16 @@ ms.topic: language-reference
 ms.assetid: 45f5aacd-505a-443b-8fc2-c7929e78cff8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b76045d5f901fa1444fd016d1c7673f46170332d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1a6894bc1dee54ec5fa66014ed363409ebb150b6
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495341"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835285"
 ---
 # <a name="catalogenvironment_variables-ssisdb-database"></a>catalog.environment_variables (база данных SSISDB)
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
-
-
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Отображает подробные сведения о переменных среды для всех сред в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
@@ -35,9 +32,9 @@ ms.locfileid: "88495341"
 |description|**nvarchar(1024)**|Описание переменной среды.|  
 |type|**nvarchar(128)**|Тип данных переменной среды.|  
 |sensitive|**bit**|Если значение равно `1`, переменная является конфиденциальной и шифруется при сохранении. Если значение равно `0`, переменная не является конфиденциальной и ее значение сохраняется в формате открытого текста.|  
-|value|**sql_variant**|Значение переменной среды. Если значение sensitive равно `0`, отображается значение в виде открытого текста. Если значение sensitive равно `1`, отображается значение **NULL**.|  
+|значение|**sql_variant**|Значение переменной среды. Если значение sensitive равно `0`, отображается значение в виде открытого текста. Если значение sensitive равно `1`, отображается значение **NULL**.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  В этом представлении отображается по одной строке для каждой из переменных среды в каталоге.  
   
 ## <a name="permissions"></a>Разрешения  
