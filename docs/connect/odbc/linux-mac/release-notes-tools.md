@@ -2,27 +2,36 @@
 title: Заметки о выпуске для mssql-tools в Linux и macOS
 description: Новые возможности и изменения в выпущенных версиях Microsoft SQL Server Tools.
 ms.custom: ''
-ms.date: 07/13/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ''
+ms.reviewer: v-daenge
 ms.technology: connectivity
 ms.topic: conceptual
 author: v-zhangw
 ms.author: v-zhangw
 manager: kenvh
-ms.openlocfilehash: 85f7115dbf138055df83a7bb07e5a78f505b5794
-ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
+ms.openlocfilehash: 75f1144e84792b3c9361dcab74dcdbcb7b072268
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87812363"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075926"
 ---
 # <a name="release-notes-for-the-microsoft-sql-server-tools-on-linux-and-macos"></a>Заметки о выпуске для инструментов Microsoft SQL Server в Linux и macOS
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 В этой статье описываются новые возможности в версиях [!INCLUDE[msCoName](../../../includes/msconame_md.md)] SQL Server Tools на платформах Linux и macOS.
+
+## <a name="17711-january-2021"></a>17.7.1.1 — январь 2021 г.
+
+| Добавленная возможность | Сведения |
+| :------------ | :------ |
+| Исправление ошибки Sqlcmd | Исправлена ошибка перенаправления ввода и ошибка, из-за которой пустые строки приводили к повторному выполнению. |
+| Исправление ошибки Sqlcmd | Исправлены ложные сообщения об ошибках для параметров r, p, X и k при определенном форматировании. |
+| Параметр Sqlcmd -z/-Z "Пароль" | Теперь поддерживается. |
+| &nbsp; | &nbsp; |
 
 ## <a name="17611-july-2020"></a>17.6.1.1, июль 2020 г.
 

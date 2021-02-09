@@ -2,7 +2,7 @@
 title: Список исправленных ошибок
 description: На этой странице содержится список ошибок, исправленных в каждом выпуске, начиная с Microsoft ODBC Driver 17 for SQL Server.
 ms.custom: ''
-ms.date: 04/24/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,16 +14,25 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: fb686e3c70723cf847853ad558f47cf37da23972
-ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
+ms.openlocfilehash: dcb4ec36406c44f51984ee5a8fc3afc2f0019a6e
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87544307"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076356"
 ---
 # <a name="list-of-bugs-fixed"></a>Список исправленных ошибок
 
 На этой странице содержится список ошибок, исправленных в каждом выпуске, начиная с [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+### <a name="bug-fixes-in-the-msconame-odbc-driver-177-for-ssnoversion"></a>Исправления ошибок в [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.7 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Исправление кодировки символов для столбцов VARIANT в режиме BCP NATIVE
+- Исправление работы параметра SQL_ATTR_PARAMS_PROCESSED_PTR в некоторых условиях
+- Исправление SQLDescribeParam в режиме FMTONLY для инструкций с комментариями
+- Устранение проблемы с федеративной проверкой подлинности при использовании Okta
+- Исправление чрезмерного использования памяти в многопроцессорных системах
+- Исправление проверки подлинности Azure AD для некоторых вариантов Базы данных SQL Azure
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-176-for-ssnoversion"></a>Исправления ошибок в [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.6 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 

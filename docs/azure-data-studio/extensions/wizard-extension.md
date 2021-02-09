@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 2d4864a3475b8e27fd86e90fbfa690c49a0c413d
-ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
+ms.openlocfilehash: 0fc56805427b820dc8ccb8cafedb0c04eb34ab6d
+ms.sourcegitcommit: fa63019cbde76dd981b0c5a97c8e4d57e8d5ca4e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96900797"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99495739"
 ---
 # <a name="create-an-azure-data-studio-wizard-extension"></a>Создание расширения мастера в Azure Data Studio
 
@@ -36,7 +36,7 @@ ms.locfileid: "96900797"
 - Установленный [Node.js](https://nodejs.org), доступный в вашей переменной `$PATH`. Node.js включает в себя [npm](https://www.npmjs.com/), диспетчер пакетов Node.js, который будет использоваться для установки генератора расширений.
 - [Visual Studio Code](https://code.visualstudio.com) для отладки расширения.
 - [Расширение отладки](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug) Azure Data Studio (необязательно). Оно позволяет протестировать расширение без необходимости упаковывать и устанавливать его в Azure Data Studio.
-- Убедитесь, что `azuredatastudio` указан в вашем пути. Для Windows выберите параметр `Add to Path` в setup.exe. Для Mac или Linux выберите параметр *Установить путь к команде azuredatastudio в PATH*.
+- Убедитесь, что `azuredatastudio` указан в вашем пути. Для Windows выберите параметр `Add to Path` в setup.exe. Для Mac или Linux выполните команду **Install 'azuredatastudio' command in PATH** из палитры команд в Azure Data Studio.
 
 ## <a name="install-the-extension-generator"></a>Установка генератора расширений
 

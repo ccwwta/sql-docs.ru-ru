@@ -2,7 +2,7 @@
 title: Матрица поддержки драйвера Microsoft JDBC Driver for SQL Server
 description: В этой статье приведены матрица и политика жизненного цикла поддержки для драйвера Microsoft JDBC Driver for SQL Server.
 ms.custom: ''
-ms.date: 08/27/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 341b021bbc582b2273f7601bfb993b4db40a4590
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 21b977b950babad552246925d78878c08cd36af3
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725455"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163603"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Матрица поддержки драйвера Microsoft JDBC Driver for SQL Server
 
@@ -26,7 +26,7 @@ ms.locfileid: "91725455"
   
 ## <a name="microsoft-jdbc-driver-support-lifecycle-matrix-and-policy"></a>Матрица и политика жизненного цикла поддержки для драйвера Microsoft JDBC  
 
-Политика жизненного цикла поддержки Майкрософт (MSL) предоставляет понятную и предсказуемую информацию о жизненном цикле поддержки продуктов Майкрософт. Основная фаза поддержки драйверов JDBC Driver версий 3.0, 4.x, 6.x, 7.x и 8.x длится пять лет с момента выпуска соответствующей версии. Основная фаза поддержки определена на веб-сайте жизненного цикла поддержки Майкрософт.  
+Политика жизненного цикла поддержки Майкрософт (MSL) предоставляет понятную и предсказуемую информацию о жизненном цикле поддержки продуктов Майкрософт. Основная фаза поддержки драйверов JDBC Driver версий 4.x, 6.x, 7.x, 8.x и 9.x длится пять лет с момента выпуска соответствующей версии. Основная фаза поддержки определена на веб-сайте жизненного цикла поддержки Майкрософт.  
   
 Возможность расширенной или настраиваемой поддержки драйвера JDBC не предусмотрена.  
 
@@ -34,6 +34,7 @@ ms.locfileid: "91725455"
   
 |Имя драйвера|Версия пакета драйвера|Применимые JAR(s)|Окончание основной фазы поддержки|
 |-|-|-|-|  
+|Microsoft JDBC Driver 9.2 для SQL Server|9.2|mssql-jdbc-9.2.0.jre15.jar<br> mssql-jdbc-9.2.0.jre11.jar<br> mssql-jdbc-9.2.0.jre8.jar|29 января 2026 г.|
 |Microsoft JDBC Driver 8.4 для SQL Server|8.4|mssql-jdbc-8.4.1.jre14.jar<br> mssql-jdbc-8.4.1.jre11.jar<br> mssql-jdbc-8.4.1.jre8.jar|31 июля 2025 г.|
 |Microsoft JDBC Driver 8.2 для SQL Server|8.2|mssql-jdbc-8.2.2.jre13.jar<br> mssql-jdbc-8.2.2.jre11.jar<br> mssql-jdbc-8.2.2.jre8.jar|31 января 2025 г.|
 |Microsoft JDBC Driver 7.4 для SQL Server|7.4|mssql-jdbc-7.4.1.jre12.jar<br> mssql-jdbc-7.4.1.jre11.jar<br> mssql-jdbc-7.4.1.jre8.jar|31 июля 2024 г.|
@@ -42,12 +43,12 @@ ms.locfileid: "91725455"
 |Драйвер Microsoft JDBC 6.4 для SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|27 февраля 2023 г.|
 |Microsoft JDBC Driver 6.2 для SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|30 июня 2022 г.|
 |Драйвер Microsoft JDBC Driver 6.0 для SQL Server|6,0|sqljdbc42.jar<br>sqljdbc41.jar|14 июля 2021 г.|
-|Microsoft JDBC Driver 4.2 for SQL Server|4.2|sqljdbc42.jar<br>sqljdbc41.jar|24 августа 2020 г.|
   
  Следующие драйверы Microsoft JDBC больше не поддерживаются.  
 
 |Имя драйвера|Версия пакета драйвера|Окончание основной фазы поддержки|  
 |-|-|-|
+|Microsoft JDBC Driver 4.2 for SQL Server|4.2|24 августа 2020 г.|
 |Microsoft JDBC Driver 4.1 for SQL Server|4.1|12 декабря 2019 г.|  
 |Microsoft JDBC Driver 4.0 for SQL Server|4,0|6 марта 2017 г.|  
 |Драйвер JDBC 3.0 для Microsoft SQL Server|3.0|23 апреля 2015 г.|  
@@ -61,6 +62,7 @@ ms.locfileid: "91725455"
   
 |Версия базы данных&nbsp;&#8594;<br />&#8595; Версия драйвера|База данных SQL Azure|Azure Synapse Analytics|Управляемый экземпляр SQL Azure|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2008 R2|SQL Server 2008|
 |---|---|---|---|---|---|---|---|---|---|---|---|
+|9.2|Да|Да|Да|Да|Да|Да|Да|Да|   |   |   |
 |8.4|Да|Да|Да|Да|Да|Да|Да|Да|Да|   |   |
 |8.2|Да|Да|Да|Да|Да|Да|Да|Да|Да|   |   |
 |7.4|Да|Да|Да|Да|Да|Да|Да|Да|Да|   |   |
@@ -91,6 +93,7 @@ ms.locfileid: "91725455"
   
 |Версия драйвера JDBC|Версия JRE|Версия API JDBC|
 |-|-|-|
+|[9.2](release-notes-for-the-jdbc-driver.md#92)|1.8, 11, 15|4.2, 4.3 (частично)|
 |[8.4](release-notes-for-the-jdbc-driver.md#84)|1.8, 11, 14|4.2, 4.3 (частично)|
 |[8.2](release-notes-for-the-jdbc-driver.md#82)|1.8, 11, 13|4.2, 4.3 (частично)|
 |[7.4](release-notes-for-the-jdbc-driver.md#74)|1.8, 11, 12|4.2, 4.3 (частично)|
@@ -100,7 +103,7 @@ ms.locfileid: "91725455"
 |[6.2](release-notes-for-the-jdbc-driver.md#62)|1.7, 1.8|4.1, 4.2|
 |[6.1](release-notes-for-the-jdbc-driver.md#61)|1.7, 1.8|4.1, 4.2|
 |[6.0](release-notes-for-the-jdbc-driver.md#60)|1.7, 1.8|4.1, 4.2|
-|[4.2](release-notes-for-the-jdbc-driver.md#42)|1.7, 1.8|4.1, 4.2|
+|4.2|1.7, 1.8|4.1, 4.2|
 |4.1|1.7|4,0|
 |4,0|1.5, 1.6, 1.7|3.0, 4.0|
 |3.0|1.5, 1.6,|3.0, 4.0|

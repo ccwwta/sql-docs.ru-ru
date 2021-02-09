@@ -2,7 +2,7 @@
 title: Заметки о выпуске ODBC Driver for SQL Server для Windows
 description: В этих заметках о выпуске описываются изменения в каждом выпуске драйвера Microsoft ODBC Driver for SQL Server в Windows.
 ms.custom: ''
-ms.date: 10/29/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,12 +12,12 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 6c19be21aebb6a8480fb51f396530e6843ac2861
-ms.sourcegitcommit: 9e2c682929ee64c051dc62f8917d147861f7c635
+ms.openlocfilehash: e587d8938cd5c63172f9e27622b680de62cb7cea
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93043814"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168009"
 ---
 # <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Заметки о выпуске Microsoft ODBC Driver for SQL Server для Windows
 
@@ -43,6 +43,28 @@ Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
 
+## <a name="177"></a>17,7
+
+![скачать](../../../ssms/media/download-icon.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2153471)  
+![скачать](../../../ssms/media/download-icon.png) [Скачать установщик x86](https://go.microsoft.com/fwlink/?linkid=2153469)  
+
+Номер версии: 17.7.1.1  
+Выпущено: 29 января 2021 г.
+
+Если необходимо загрузить установщик на языке, отличном от обнаруженного, можно использовать эти прямые ссылки.  
+Для драйвера x64: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2153471&clcid=0x40a)  
+Для драйвера x86: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2153469&clcid=0x40a)
+
+| Добавленная возможность | Сведения |
+| :------- | :------ |
+| Интерактивная проверка подлинности Azure Key Vault | Подробные сведения см. в статье [Использование Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md). |
+| Проверка подлинности на основе субъекта-службы | Подробнее см. статью [DSN and Connection String Keywords and Attributes](../dsn-connection-string-attribute.md) (Ключевые слова и атрибуты строки подключения и имени DSN). |
+| Возможность вставки в зашифрованные столбцы money и smallmoney | Подробные сведения см. в статье [Использование Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md). |
+| Исправления ошибок. | [Исправления ошибок](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
+## <a name="previous-releases"></a>Предыдущие выпуски
+
 ## <a name="176"></a>17.6
 
 ![скачать](../../../ssms/media/download-icon.png) [Скачать установщик x64](https://go.microsoft.com/fwlink/?linkid=2137027)  
@@ -61,8 +83,6 @@ GeneMi (and CraigG).  2019/03/30.
 | Атрибут подключения SQL_COPT_SS_AUTOBEGINTXN, определяющий, выполняется ли автоматически инструкция BEGIN TRANSACTION после ROLLBACK или COMMIT. | Подробнее см. статью [DSN and Connection String Keywords and Attributes](../dsn-connection-string-attribute.md) (Ключевые слова и атрибуты строки подключения и имени DSN). |
 | Исправления ошибок. | [Исправления ошибок](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
-
-## <a name="previous-releases"></a>Предыдущие выпуски
 
 ## <a name="1752"></a>17.5.2
 

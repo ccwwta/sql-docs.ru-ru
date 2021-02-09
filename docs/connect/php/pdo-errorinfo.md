@@ -2,21 +2,21 @@
 title: PDO::errorInfo
 description: Справочник по API для функции PDO::errorInfo в драйвере Microsoft PDO_SQLSRV для PHP для SQL Server.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 ms.assetid: 9d5481d5-13bc-4388-b3aa-78676c0fc709
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 579b516481c6349396a342e2c98200d70d731d25
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 46b57275d92f4eb6acb64c276e3b34ea67efb429
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646174"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99202028"
 ---
 # <a name="pdoerrorinfo"></a>PDO::errorInfo
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -26,7 +26,6 @@ ms.locfileid: "88646174"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 array PDO::errorInfo();  
 ```  
   
@@ -49,7 +48,7 @@ PDO::errorInfo возвращает только сведения об ошиб�
 ## <a name="example"></a>Пример  
 В этом примере неправильно указано имя столбца (`Cityx` вместо `City`), что вызывает ошибку, о которой затем сообщается.  
   
-```  
+```php
 <?php  
 $conn = new PDO( "sqlsrv:server=(local) ; Database = AdventureWorks ", "");  
 $query = "SELECT * FROM Person.Address where Cityx = 'Essen'";  
@@ -60,9 +59,89 @@ echo "\n";
 print_r ($conn->errorInfo());  
 ?>  
 ```  
-  
+
+## <a name="additional-odbc-messages"></a>Дополнительные сообщения ODBC
+
+При возникновении исключения драйвер ODBC может вернуть несколько ошибок, которые помогают в диагностике проблем. Однако PDO::errorInfo всегда выдает только первую ошибку. В ответ на этот [отчет об ошибке](https://bugs.php.net/bug.php?id=78196) функции [PDO::errorInfo](https://www.php.net/manual/en/pdo.errorinfo.php) и [PDOStatement::errorInfo](https://www.php.net/manual/en/pdostatement.errorinfo.php) были обновлены: теперь драйверы должны выводить *по крайней мере* следующие три поля:
+```
+0   SQLSTATE error code (a five characters alphanumeric identifier defined in the ANSI SQL standard).
+1   Driver specific error code.
+2   Driver specific error message.
+```
+
+Начиная с версии 5.9.0 функция PDO::errorInfo по умолчанию выводит дополнительные ошибки ODBC при их наличии. Пример.
+
+```php
+<?php  
+try {
+    $conn = new PDO("sqlsrv:server=$server;", $uid, $pwd);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $stmt = $conn->prepare("SET NOCOUNT ON; USE $database; SELECT 1/0 AS col1");
+    $stmt->execute();
+} catch (PDOException $e) {
+    var_dump($e->errorInfo);
+}
+?>  
+```  
+
+При выполнении приведенного выше скрипта должно было произойти исключение, и выходные данные должны выглядеть так:
+
+```
+array(6) {
+  [0]=>
+  string(5) "01000"
+  [1]=>
+  int(5701)
+  [2]=>
+  string(91) "[Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Changed database context to 'tempdb'."
+  [3]=>
+  string(5) "22012"
+  [4]=>
+  int(8134)
+  [5]=>
+  string(87) "[Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Divide by zero error encountered."
+}
+```
+
+Если пользователь предпочитает прежнее поведение, отключить новое можно с помощью параметра конфигурации `pdo_sqlsrv.report_additional_errors`. Просто добавьте следующую строку в начало любого скрипта PHP:
+
+```
+ini_set('pdo_sqlsrv.report_additional_errors', 0);
+```
+
+В этом случае при выполнении того же примера скрипта будут показаны следующие сведения об ошибках:
+
+```
+array(3) {
+  [0]=>
+  string(5) "01000"
+  [1]=>
+  int(5701)
+  [2]=>
+  string(91) "[Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Changed database context to 'tempdb'."
+}
+```
+
+При необходимости пользователь может добавить следующую строку в файл php.ini, чтобы отключить эту функцию во всех скриптах PHP:
+
+```
+pdo_sqlsrv.report_additional_errors = 0
+```
+
+## <a name="warnings-and-errors"></a>Предупреждения и ошибки
+
+Начиная с версии 5.9.0 предупреждения ODBC больше не будут регистрироваться как ошибки. То есть [коды ошибок](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes) с префиксом 01 регистрируются как предупреждения. Иными словами, если вы хотите регистрировать только ошибки, измените файл php.ini следующим образом:
+
+```
+[pdo_sqlsrv]  
+pdo_sqlsrv.log_severity = 1
+```
+
+В этом случае в файле журнала не будет сообщений с предупреждениями. Ознакомьтесь с тем, как [ведется журнал](https://docs.microsoft.com/sql/connect/php/logging-activity#logging-activity-using-the-pdo_sqlsrv-driver) для пользователей pdo_sqlsrv.
+
 ## <a name="see-also"></a>См. также:  
 [Класс PDO](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  
-  
+
+[PDOStatement::errorInfo](../../connect/php/pdostatement-errorinfo.md)

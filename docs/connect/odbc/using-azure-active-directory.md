@@ -2,7 +2,7 @@
 title: Использование Azure Active Directory с драйвером ODBC
 description: Microsoft ODBC Driver for SQL Server позволяет приложениям ODBC подключаться к экземпляру Базы данных SQL Azure с помощью Azure Active Directory.
 ms.custom: ''
-ms.date: 09/01/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e6925b2b79629fbcbe84f6577e2617e9b45ea82c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 2a6b27c8c14a92ed9f17c56cab1cf2285b2cfec9
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727388"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99198911"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>Использование Azure Active Directory с драйвером ODBC
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -34,7 +34,7 @@ Microsoft ODBC Driver for SQL Server версии 13.1 или более поз
 
 |Имя|Значения|По умолчанию|Описание|
 |-|-|-|-|
-|`Authentication`|(не задано), (пустая строка), `SqlPassword`, `ActiveDirectoryPassword`, `ActiveDirectoryIntegrated`, `ActiveDirectoryInteractive`, `ActiveDirectoryMsi` |(не задано)|Управляет режимом проверки подлинности.<table><tr><th>Значение<th>Описание<tr><td>(не задано)<td>Режим проверки подлинности определяется другими ключевыми словами (существующие параметры устаревшего подключения).<tr><td>(пустая строка)<td>(Только строка подключения.) Переопределение и отмена значения `Authentication`, заданного в имени DSN.<tr><td>`SqlPassword`<td>Прямая проверка подлинности в экземпляре SQL Server по имени пользователя и пароля.<tr><td>`ActiveDirectoryPassword`<td>Проверка подлинности по удостоверению Azure Active Directory с использованием имени пользователя и пароля.<tr><td>`ActiveDirectoryIntegrated`<td>_Только драйвер Windows, Linux и macOS 17.6+_ . Встроенная проверка подлинности с использованием удостоверения Azure Active Directory.<tr><td>`ActiveDirectoryInteractive`<td>_Только драйвер Windows_. Интерактивная проверка подлинности с использованием удостоверения Azure Active Directory.<tr><td>`ActiveDirectoryMsi`<td>Проверка подлинности с помощью управляемого удостоверения с использованием удостоверения Azure Active Directory. Для назначенного пользователем удостоверения в качестве идентификатора пользователя задается идентификатор объекта удостоверения пользователя.</table>|
+|`Authentication`|(не задано), (пустая строка), `SqlPassword`, `ActiveDirectoryPassword`, `ActiveDirectoryIntegrated`, `ActiveDirectoryInteractive`, `ActiveDirectoryMsi`, `ActiveDirectoryServicePrincipal` |(не задано)|Управляет режимом проверки подлинности.<table><tr><th>Значение<th>Описание<tr><td>(не задано)<td>Режим проверки подлинности определяется другими ключевыми словами (существующие параметры устаревшего подключения).<tr><td>(пустая строка)<td>(Только строка подключения.) Переопределение и отмена значения `Authentication`, заданного в имени DSN.<tr><td>`SqlPassword`<td>Прямая проверка подлинности в экземпляре SQL Server по имени пользователя и пароля.<tr><td>`ActiveDirectoryPassword`<td>Проверка подлинности по удостоверению Azure Active Directory с использованием имени пользователя и пароля.<tr><td>`ActiveDirectoryIntegrated`<td>_Только драйвер Windows, Linux и macOS 17.6+_ . Встроенная проверка подлинности с использованием удостоверения Azure Active Directory.<tr><td>`ActiveDirectoryInteractive`<td>_Только драйвер Windows_. Интерактивная проверка подлинности с использованием удостоверения Azure Active Directory.<tr><td>`ActiveDirectoryMsi`<td>Проверка подлинности с помощью управляемого удостоверения с использованием удостоверения Azure Active Directory. Для назначенного пользователем удостоверения в качестве идентификатора пользователя задается идентификатор объекта удостоверения пользователя.<tr><td>`ActiveDirectoryServicePrincipal`<td>(17.7 и более поздние версии.) Проверка подлинности с помощью удостоверения Azure Active Directory с использованием субъекта-службы.</table>|
 |`Encrypt`|(не задано), `Yes`, `No`|(см. описание)|Управляет шифрованием соединения. Если предварительный атрибут параметра `Authentication` не имеет значение _none_ в DSN или строке подключения, по умолчанию используется `Yes`. В противном случае значение по умолчанию — `No`. Если атрибут `SQL_COPT_SS_AUTHENTICATION` переопределяет значение предварительного атрибута `Authentication`, явно задайте значение шифрования в имени DSN, строке подключения или атрибуте подключения. Значением предварительного атрибута шифрования является `Yes`, если значение равно `Yes` в имени DSN или в строке подключения.|
 
 ## <a name="new-andor-modified-connection-attributes"></a>Новые или измененные атрибуты подключения
@@ -43,7 +43,7 @@ Microsoft ODBC Driver for SQL Server версии 13.1 или более поз
 
 |attribute|Тип|Значения|По умолчанию|Описание|
 |-|-|-|-|-|
-|`SQL_COPT_SS_AUTHENTICATION`|`SQL_IS_INTEGER`|`SQL_AU_NONE`, `SQL_AU_PASSWORD`, `SQL_AU_AD_INTEGRATED`, `SQL_AU_AD_PASSWORD`, `SQL_AU_AD_INTERACTIVE`, `SQL_AU_AD_MSI`, `SQL_AU_RESET`|(не задано)|См. описание ключевого слова `Authentication` выше. `SQL_AU_NONE` предоставляется для явного переопределения заданного значения `Authentication` в имени DSN или строке подключения, в то время как `SQL_AU_RESET` отменяет атрибут, если он был установлен, и значение имени DSN или строки подключения получает более высокий приоритет.|
+|`SQL_COPT_SS_AUTHENTICATION`|`SQL_IS_INTEGER`|`SQL_AU_NONE`, `SQL_AU_PASSWORD`, `SQL_AU_AD_INTEGRATED`, `SQL_AU_AD_PASSWORD`, `SQL_AU_AD_INTERACTIVE`, `SQL_AU_AD_MSI`, `SQL_AU_AD_SPA`, `SQL_AU_RESET`|(не задано)|См. описание ключевого слова `Authentication` выше. `SQL_AU_NONE` предоставляется для явного переопределения заданного значения `Authentication` в имени DSN или строке подключения, в то время как `SQL_AU_RESET` отменяет атрибут, если он был установлен, и значение имени DSN или строки подключения получает более высокий приоритет.|
 |`SQL_COPT_SS_ACCESS_TOKEN`|`SQL_IS_POINTER`|Указатель на `ACCESSTOKEN` или значение NULL|NULL|Если значение не равно NULL, указывается используемый маркер доступа Azure AD. Указание маркера доступа, а также ключевых слов строки подключения `UID`, `PWD`, `Trusted_Connection`, `Authentication` или эквивалентных атрибутов является ошибкой. <br> **ПРИМЕЧАНИЕ.** Драйвер ODBC версии 13.1 поддерживает это только в _Windows_.|
 |`SQL_COPT_SS_ENCRYPT`|`SQL_IS_INTEGER`|`SQL_EN_OFF`, `SQL_EN_ON`|(см. описание)|Управляет шифрованием соединения. `SQL_EN_OFF` отключает шифрование, а `SQL_EN_ON`— включает. Если предварительный атрибут параметра `Authentication` не имеет значение _none_ или если значение `SQL_COPT_SS_ACCESS_TOKEN` задано, а ключевое слово `Encrypt` не указано ни в имени DSN, ни в строке подключения, по умолчанию используется значение `SQL_EN_ON`. В противном случае значение по умолчанию — `SQL_EN_OFF`. Если для атрибута подключения `SQL_COPT_SS_AUTHENTICATION` не задано значение _none_, явно задайте для `SQL_COPT_SS_ENCRYPT` нужное значение, если ключевое слово `Encrypt` не указано в имени DSN или в строке подключения. Действительное значение этого атрибута определяет, [будет ли использоваться шифрование для подключения](../../relational-databases/native-client/features/using-encryption-without-validation.md).|
 |`SQL_COPT_SS_OLDPWD`|\-|\-|\-|Не поддерживается в Azure Active Directory, так как изменения паролей в субъектах Azure AD невозможно выполнить через подключение ODBC. <br><br>Истечение срока действия пароля для проверки подлинности SQL Server было введено в SQL Server 2005. Добавлен атрибут `SQL_COPT_SS_OLDPWD`, чтобы клиент мог предоставлять как старый, так и новый пароль для подключения. Если задано это свойство, поставщик не будет использовать пул соединений для первого и последующих соединений, поскольку строка подключения будет содержать старый пароль, который уже изменен.|
@@ -81,7 +81,11 @@ Microsoft ODBC Driver for SQL Server версии 13.1 или более поз
 
 ![Экран создания и редактирования имени DSN с выбранной проверкой подлинности на основе управляемого удостоверения службы.](windows/create-dsn-ad-msi.png)
 
-Шесть параметров соответствуют `Trusted_Connection=Yes` (устаревшая встроенная проверка подлинности только с использованием Windows SSPI), `Authentication=` `ActiveDirectoryIntegrated`, `SqlPassword`, `ActiveDirectoryPassword`, `ActiveDirectoryInteractive` и `ActiveDirectoryMsi` соответственно.
+`Authentication=ActiveDirectoryServicePrincipal` для проверки подлинности субъекта-службы Azure Active Directory
+
+![Экран создания и редактирования имени DSN с выбранной проверкой подлинности субъекта-службы Azure Active Directory.](windows/create-dsn-ad-spa.png)
+
+Семь параметров соответствуют `Trusted_Connection=Yes` (устаревшая встроенная проверка подлинности только с использованием Windows SSPI), `Authentication=` `ActiveDirectoryIntegrated`, `SqlPassword`, `ActiveDirectoryPassword`, `ActiveDirectoryInteractive`, `ActiveDirectoryMsi` и `ActiveDirectoryServicePrincipal` соответственно.
 
 ### <a name="sqldriverconnect-prompt-windows-driver-only"></a>Диалоговое окно SQLDriverConnect (только драйвер Windows)
 
@@ -104,7 +108,7 @@ Microsoft ODBC Driver for SQL Server версии 13.1 или более поз
 `server=Server;database=Database;UID=UserName;PWD=Password;Authentication=ActiveDirectoryPassword;`
 6. (_Только драйвер Windows, Linux и macOS 17.6+._ ) Встроенная проверка подлинности Windows с помощью ADAL или Kerberos, которая активирует учетные данные учетной записи Windows для маркера доступа, выданного Azure AD, при условии, что целевая база данных находится в Базе данных SQL Azure. Сертификат сервера проверяется независимо от параметра шифрования (если только параметр `TrustServerCertificate` не имеет значение `true`). В Linux или macOS должен быть доступен подходящий билет Kerberos. Дополнительные сведения см. в разделе, посвященном федеративным учетным записям и [использованию встроенной проверки подлинности](linux-mac/using-integrated-authentication.md), ниже.
 `server=Server;database=Database;Authentication=ActiveDirectoryIntegrated;`
-7. (_Только драйвер Windows_.) При интерактивной проверке подлинности Azure AD для настройки подключения используется технология многофакторной идентификации Azure. В этом режиме после указания имени для входа активируется диалоговое окно проверки подлинности Azure, которое позволяет пользователю ввести пароль для завершения установки подключения. Имя пользователя передается в строку подключения.
+7. (_Только драйвер Windows_.) При интерактивной проверке подлинности Azure AD для настройки подключения используется технология многофакторной проверки подлинности Azure Active Directory. В этом режиме после указания имени для входа активируется диалоговое окно проверки подлинности Azure, которое позволяет пользователю ввести пароль для завершения установки подключения. Имя пользователя передается в строку подключения.
 `server=Server;database=Database;UID=UserName;Authentication=ActiveDirectoryInteractive;`
 
 ![Пользовательский интерфейс проверки подлинности Windows Azure при использовании интерактивной проверки подлинности Active Directory.](windows/WindowsAzureAuth.png)
@@ -115,8 +119,10 @@ Microsoft ODBC Driver for SQL Server версии 13.1 или более поз
 Для назначенного пользователем удостоверения с идентификатором объекта равным myObjectId:<br>
 `server=Server;database=Database;UID=myObjectId;Authentication=ActiveDirectoryMsi;`
 
+9. Проверка подлинности субъекта-службы Azure Active Directory `server=Server;databse=Database;UID=clientId;PWD=clientSecret;Authentication=ActiveDirectoryServicePrincipal;`
+
 > [!NOTE]
->- При использовании параметров Active Directory с драйвером ODBC Windows ***до*** версии 17.4.2 должна быть установлена [Библиотека проверки подлинности Active Directory для SQL Server](https://go.microsoft.com/fwlink/?LinkID=513072). При использовании драйверов Linux и macOS убедитесь, что `libcurl` установлена. Для драйвера версии 17.2 и более поздних эта зависимость не является явной, так как она не обязательна для других методов проверки подлинности или операций ODBC.
+>- При использовании параметров Active Directory с драйвером ODBC Windows **_до версии_* _ 17.4.2 должна быть установлена [Библиотека проверки подлинности Active Directory для SQL Server](https://go.microsoft.com/fwlink/?LinkID=513072). При использовании драйверов Linux и macOS убедитесь, что `libcurl` установлена. Для драйвера версии 17.2 и более поздних эта зависимость не является явной, так как она не обязательна для других методов проверки подлинности или операций ODBC.
 >- Если конфигурация Azure Active Directory включает политики условного доступа, а клиент имеет версию Windows 10, Server 2016 или более позднюю, интегрированная проверка подлинности на основе имени пользователя и пароля может завершиться ошибкой. Для политик условного доступа нужно использовать диспетчер учетных записей Windows (WAM), который поддерживается в версии драйвера 17.6 или более поздней для Windows. Чтобы использовать WAM, создайте строку или значение DWORD с именем `ADALuseWAM` в `HKLM\Software\ODBC\ODBCINST.INI\ODBC Driver 17 for SQL Server`, `HKCU\Software\ODBC\ODBC.INI\<your-user-DSN-name>` или `HKLM\Software\ODBC\ODBC.INI\<your-system-DSN-name>` для конфигурации области глобального имени DSN, пользовательского имени DSN или имени DSN системы соответственно и задайте значение 1. Обратите внимание, что при проверке подлинности с помощью WAM не поддерживается запуск приложения от имени другого пользователя с помощью `runas`. Сценарии, для которых требуются политики условного доступа, не поддерживаются для Linux и macOS.
 >- Чтобы подключиться с помощью имени пользователя и пароля учетной записи SQL Server, теперь можно использовать новый параметр `SqlPassword` (рекомендуется для Azure SQL, так как этот параметр обеспечивает более безопасные значения по умолчанию для подключений).
 >- Чтобы подключиться с помощью имени пользователя и пароля учетной записи Azure Active Directory, укажите `Authentication=ActiveDirectoryPassword` в строке подключения, а также ключевые слова `UID` и `PWD` с именем пользователя и паролем соответственно.
@@ -155,7 +161,7 @@ typedef struct AccessToken
     SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server}"
     SQLCHAR accessToken[] = "eyJ0eXAiOi..."; // In the format extracted from an OAuth JSON response
     ...
-    DWORD dataSize = 2 * strlen(accessToken);
+    DWORD dataSize = 2 _ strlen(accessToken);
     ACCESSTOKEN *pAccToken = malloc(sizeof(ACCESSTOKEN) + dataSize);
     pAccToken->dataSize = dataSize;
     // Expand access token with padding bytes

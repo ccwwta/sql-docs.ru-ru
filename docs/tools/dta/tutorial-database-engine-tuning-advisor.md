@@ -14,12 +14,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 5b86d0a8ee13a4190d45d8a82cc08dea949acf26
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 61d04579d3eab5a373ea00814bf708d5bb3267ba
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732005"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99075996"
 ---
 # <a name="tutorial-database-engine-tuning-advisor"></a>Руководство по Database Engine Tuning Advisor
 
@@ -44,7 +44,7 @@ ms.locfileid: "85732005"
 ## <a name="requirements"></a>Требования  
 Этот учебник предназначен для администраторов баз данных, незнакомых с графическим пользовательским интерфейсом помощника по настройке ядра СУБД или программой командной строки **dta** , однако имеющих представление о концепциях и структурах баз данных, таких как индексы и индексированные представления.  
   
-Необходимо установить [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (или более позднюю версию) с образцом базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . В целях повышения безопасности образцы баз данных по умолчанию не устанавливаются. Дополнительные сведения об установке образцов баз данных см. в статье [Установка образцов SQL Server и образцов баз данных](https://sqlserversamples.codeplex.com).  
+Необходимо установить [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] с образцом базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. В целях повышения безопасности образцы баз данных по умолчанию не устанавливаются. Дополнительные сведения об установке образцов баз данных см. в статье [Установка образцов SQL Server и образцов баз данных](https://sqlserversamples.codeplex.com).  
   
 ## <a name="after-you-finish-this-tutorial"></a>После завершения работы с этим учебником  
 Выполнив задания этого учебника, изучите следующие разделы, чтобы получить дополнительные сведения о помощнике по настройке ядра СУБД:  

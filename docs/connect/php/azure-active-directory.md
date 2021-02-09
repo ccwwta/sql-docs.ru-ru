@@ -1,7 +1,7 @@
 ---
 title: Azure Active Directory
 description: Узнайте, как использовать проверку подлинности Azure Active Directory с драйверами Майкрософт для PHP для SQL Server.
-ms.date: 02/25/2019
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ''
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - azure active directory, authentication, access token
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f7abb90d32f93975c9a984670ca450dc791a46ae
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: ae3e734dee5f8ac46de2646cca9c37a7ed7748df
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92004556"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076962"
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>Подключение с использованием проверки подлинности Azure Active Directory
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,6 +33,7 @@ ms.locfileid: "92004556"
 ||`SqlPassword`|Прямая проверка подлинности в экземпляре SQL Server (может быть экземпляром Azure) по имени пользователя и паролю. Имя пользователя и пароль необходимо передать в строку подключения с использованием ключевых слов **UID** и **PWD**. |
 ||`ActiveDirectoryPassword`|Проверка подлинности по удостоверению Azure Active Directory с использованием имени пользователя и пароля. Имя пользователя и пароль необходимо передать в строку подключения с использованием ключевых слов **UID** и **PWD**. |
 ||`ActiveDirectoryMsi`|Проверка подлинности с помощью управляемого удостоверения, назначаемого системой или пользователем (требуется драйвер ODBC версии 17.3.1.1 или более поздней версии). Общие сведения и учебники см. в статье [Что такое управляемые удостоверения для ресурсов Azure?](/azure/active-directory/managed-identities-azure-resources/overview).|
+||`ActiveDirectoryServicePrincipal`|Проверка подлинности с помощью объектов субъекта-службы (требуется ODBC Driver версии 17.7 или более поздней). Дополнительные сведения и примеры см. в статье [Объекты приложения и субъекта-службы в Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals).|
 
 Ключевое слово **Authentication** влияет на параметры безопасности подключения. Если оно задано в строке подключения, по умолчанию для ключевого слова **Encrypt** указано значение true, то есть клиент будет запрашивать шифрование. Кроме того, сертификат сервера будет проверяться независимо от параметра шифрования, если для параметра **TrustServerCertificate** установлено значение true (**false** по умолчанию). Эта функция отличается от старого, менее безопасного метода входа в систему, при котором сертификат сервера проверяется только в том случае, если шифрование запрашивается в строке подключения.
 
@@ -233,6 +234,63 @@ try {
 }
 ?>
 ```
+
+## <a name="example---connect-using-service-principal-objects-in-azure-active-directory"></a>Пример: подключение с помощью объектов субъекта-службы в Azure Active Directory
+
+Для проверки подлинности с помощью объекта субъекта-службы потребуется соответствующий [идентификатор клиента приложения](/azure/active-directory/develop/howto-create-service-principal-portal#get-tenant-and-app-id-values-for-signing-in) и [секрет клиента](/azure/active-directory/develop/howto-create-service-principal-portal#option-2-create-a-new-application-secret).
+
+
+### <a name="sqlsrv-driver"></a>Драйвер SQLSRV
+
+```php
+<?php
+
+$adServer = 'myazureserver.database.windows.net';
+$adDatabase = 'myazuredatabase';
+$adSPClientId = 'myAppClientId';
+$adSPClientSecret = 'myClientSecret';
+
+$conn = false;
+$connectionInfo = array("Database"=>$adDatabase, 
+                        "Authentication"=>"ActiveDirectoryServicePrincipal",
+                        "UID"=>$adSPClientId,
+                        "PWD"=>$adSPClientSecret);
+
+$conn = sqlsrv_connect($adServer, $connectionInfo);
+if ($conn === false) {
+    echo "Could not connect using Azure AD Service Principal." . PHP_EOL;
+    print_r(sqlsrv_errors());
+}
+
+sqlsrv_close($conn);
+
+?>
+```
+
+### <a name="pdo_sqlsrv-driver"></a>Драйвер PDO_SQLSRV
+
+```php
+<?php
+
+$adServer = 'myazureserver.database.windows.net';
+$adDatabase = 'myazuredatabase';
+$adSPClientId = 'myAppClientId';
+$adSPClientSecret = 'myClientSecret';
+
+$conn = false;
+try {
+    $connectionInfo = "Database = $adDatabase; Authentication = ActiveDirectoryServicePrincipal;";
+    $conn = new PDO("sqlsrv:server = $adServer; $connectionInfo", $adSPClientId, $adSPClientSecret);
+} catch (PDOException $e) {
+    echo "Could not connect using Azure AD Service Principal.\n";
+    print_r($e->getMessage());
+    echo PHP_EOL;
+}
+
+unset($conn);
+?>
+```
+
 
 ## <a name="see-also"></a>См. также:
 [Использование Azure Active Directory с драйвером ODBC](../odbc/using-azure-active-directory.md)

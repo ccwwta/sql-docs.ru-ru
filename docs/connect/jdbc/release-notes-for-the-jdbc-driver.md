@@ -2,7 +2,7 @@
 title: Заметки о выпуске для драйвера JDBC
 description: В этой статье перечислены выпуски Microsoft JDBC Driver for SQL Server. Для каждой версии выпуска названы и описаны изменения.
 ms.custom: ''
-ms.date: 08/27/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,16 +11,71 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1bcbaee78dc7dcb0de053756aacfe2e1711679fe
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 0ffc7d8e4090673f3fc8feb96aa3650d35361281
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005671"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "99234859"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver-for-sql-server"></a>Заметки о выпуске Microsoft JDBC Driver for SQL Server
 
 В этой статье перечислены выпуски _Microsoft JDBC Driver для SQL Server_ . Для каждой версии выпуска названы и описаны изменения.
+
+## <a name="92"></a><a id="92"></a> 9.2
+
+**[![Скачать](../../ssms/media/download-icon.png) Скачать Microsoft ODBC Driver for SQL Server версии 9.2 (ZIP)](https://go.microsoft.com/fwlink/?linkid=2153622)**  
+**[![Скачать](../../ssms/media/download-icon.png) Скачать Microsoft ODBC Driver for SQL Server версии 9.2 (TAR.GZ)](https://go.microsoft.com/fwlink/?linkid=2153521)**  
+
+Номер версии: 9.2.0 Дата выпуска: 29 января 2021 г.
+
+Если необходимо загрузить драйвер на языке, отличном от обнаруженного, можно использовать эти прямые ссылки.  
+Для драйвера в ZIP-файле: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2153622&clcid=0x40a)  
+Для драйвера в TAR.GZ-файле: [Китайский (упрощенное письмо)](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x804) | [Китайский (традиционное письмо)](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x404) | [Английский (США)](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x409) | [Французский](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x40c) | [Немецкий](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x407) | [Итальянский](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x410) | [Японский](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x411) | [Корейский](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x412) | [Португальский (Бразилия)](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x416) | [Русский](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x419) | [Испанский](https://go.microsoft.com/fwlink/?linkid=2153521&clcid=0x40a)  
+
+### <a name="compliance"></a>Соответствие нормативным требованиям
+
+| Изменение соответствий | Сведения |
+| :---------------- | :------ |
+| Скачайте последние обновления для драйвера JDBC версии 9.2. | &bull; &nbsp; [GitHub, 9.2.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v9.2.0)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Полностью соответствует спецификации API JDBC версии 4.2. | JAR-файлам в пакете 9.2 имена присваиваются с учетом совместимости версий Java.<br/><br/>Например, файл mssql-jdbc-9.2.0.jre15.jar из пакета 9.2 должен использоваться с Java 15. |
+| Совместимость с пакетом Java Development Kit (JDK) версий 15.0, 11.0 и 1.8. | Microsoft JDBC Driver for SQL Server версии 9.2 теперь совместим с пакетом Java Development Kit (JDK) версии 15.0 наряду с JDK версий 11.0 и 1.8. |
+| &nbsp; | &nbsp; |
+
+### <a name="releases"></a>Выпуски
+
+Номер версии: 9.2.0 Дата выпуска: 29 января 2021 г.
+
+### <a name="support-for-jdk-15"></a>Поддержка JDK 15
+
+Microsoft JDBC Driver for SQL Server версии 9.2 теперь совместим с пакетом Java Development Kit (JDK) версии 15.0 наряду с JDK версий 11.0 и 1.8.
+
+### <a name="added-support-for-azure-active-directory-interactive-authentication"></a>Добавлена поддержка интерактивной проверки подлинности Azure Active Directory
+| Добавлен тип проверки подлинности | Сведения |
+| :---------- | :------ |
+| Microsoft JDBC Driver for SQL Server версии 9.2 теперь поддерживает интерактивную проверку подлинности в Azure Key Vault. | См. дополнительные сведения об [установке подключения с использованием проверки подлинности Azure Active Directory](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md). |
+| &nbsp; | &nbsp; |
+
+### <a name="added-support-for-azure-active-directory-service-principal-authentication"></a>Добавлена поддержка проверки подлинности субъекта-службы Azure Active Directory
+| Добавлен тип проверки подлинности | Сведения |
+| :---------- | :------ |
+| Microsoft JDBC Driver for SQL Server версии 9.2 теперь поддерживает проверку подлинности в Azure Key Vault с помощью идентификатора клиента и секрета удостоверения субъекта-службы. | См. дополнительные сведения об [установке подключения с использованием проверки подлинности Azure Active Directory](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md). |
+| &nbsp; | &nbsp; |
+
+### <a name="updated-azure-key-vault-library-to-use-modern-azure-key-vault-library"></a>Библиотека Azure Key Vault обновлена до современной версии
+| Изменения библиотеки для Azure Key Vault | Сведения |
+| :------------------- | :------ |
+| Microsoft JDBC Driver версии 9.2 переведен с библиотеки Azure Key Vault и библиотек ADAL предыдущего поколения на более современные библиотеки Azure Key Vault и идентификации Azure. | **ИЗМЕНЕНИЕ ЗАВИСИМОСТЕЙ**. Если вы используете проверку подлинности Azure Active Directory или Azure Key Vault, обновите зависимости приложения. Ознакомьтесь с требованиями к зависимостям при [работе с поставщиком Azure Key Vault](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md#working-with-the-azure-key-vault-provider) или [проверкой подлинности Azure Active Directory](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md#working-with-azure-active-directory-authentication). |
+| &nbsp; | &nbsp; |
+
+### <a name="enabled-usebulkcopyforbatchinsert-for-non-azure-synapse-analytics-servers"></a>Параметр useBulkCopyForBatchInsert включен для серверов, отличных от Azure Synapse Analytics
+| Изменения в использовании useBulkCopyForBatchInsert для серверов, отличных от Azure Synapse Analytics | Сведения |
+| :------------------- | :------ |
+| Microsoft JDBC Driver версии 9.2 теперь поддерживает интерфейс API массового копирования для выполнения операций пакетной вставки на серверах, отличных от Azure Synapse Analytics. | См. статью [Использование API массового копирования для операции пакетной вставки](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md). |
+| &nbsp; | &nbsp; |
+
+
+## <a name="previous-releases"></a>Предыдущие выпуски
 
 ## <a name="84"></a><a id="84"></a> 8.4
 
@@ -93,8 +148,6 @@ Microsoft JDBC Driver версии 8.4 для SQL Server теперь совм
 | Аутентификация на основе сертификата клиента | Сведения |
 | :------------------- | :------ |
 | В Microsoft JDBC Driver 8.4 для SQL Server добавлен новый метод проверки подлинности, который называется "проверка подлинности с помощью сертификата клиента", для сценариев замыкания на себя. | См. [Проверка подлинности сертификата клиента для сценариев замыкания на себя](../../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md). |
-
-## <a name="previous-releases"></a>Предыдущие выпуски
 
 ## <a name="82"></a><a id="82"></a> 8.2
 

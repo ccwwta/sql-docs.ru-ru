@@ -2,7 +2,7 @@
 title: Установка подключения с использованием проверки подлинности Azure Active Directory
 description: Узнайте о разработке приложений Java для использования функции проверки подлинности Azure Active Directory в Microsoft JDBC Driver for SQL Server.
 ms.custom: ''
-ms.date: 01/04/2020
+ms.date: 01/29/2021
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 68d8b2a131fa6ab1c9e287f70cb584db3aeedacc
-ms.sourcegitcommit: 6154ee7f20bccce9d458ac7f3b0a21b9613d1131
+ms.openlocfilehash: cbcf01d51ef4abe344b66529d72476a7d1385bbc
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/05/2021
-ms.locfileid: "97902642"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99168732"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Установка подключения с использованием проверки подлинности Azure Active Directory
 
@@ -29,11 +29,17 @@ ms.locfileid: "97902642"
 Для поддержки проверки подлинности Azure Active Directory в Microsoft JDBC Driver for SQL Server доступны следующие свойства подключения:
 *   **authentication**:  с помощью этого свойства можно указать метод проверки подлинности SQL, используемый для установки подключения. Возможны следующие значения: 
     * **ActiveDirectoryMSI**
-        * Поддерживается начиная с версии драйвера **7.2**. `authentication=ActiveDirectoryMSI` может использоваться для подключения к Базе данных или хранилищу данных SQL Azure изнутри Ресурса Azure с включенной поддержкой "Удостоверение". При необходимости в свойствах "Подключение" или "Источник данных" в этом режиме проверки подлинности можно указать **msiClientId**, который должен содержать идентификатор клиента Управляемого удостоверения, необходимого для получения **accessToken** при установке подключения.
+        * Поддерживается начиная с версии драйвера **7.2**. `authentication=ActiveDirectoryMSI` может использоваться для подключения к Базе данных SQL Azure или Synapse Analytics изнутри ресурса Azure с включенной поддержкой "Удостоверение". При необходимости в свойствах "Подключение" или "Источник данных" в этом режиме проверки подлинности можно указать **msiClientId**, который должен содержать идентификатор клиента Управляемого удостоверения, необходимого для получения **accessToken** при установке подключения.
     * **ActiveDirectoryIntegrated**
-        * Поддерживается начиная с версии драйвера **v6.0**. `authentication=ActiveDirectoryIntegrated` может использоваться для подключения к Базе данных или хранилищу данных SQL Azure с помощью встроенной проверки подлинности. Чтобы использовать этот режим проверки подлинности, необходимо объединить локальные службы федерации Active Directory (ADFS) в федерацию с Azure Active Directory в облаке. После настройки вы можете установить подключение, добавив собственную библиотеку "mssql-jdbc_auth-\<version>-\<arch>.dll" в путь к классам приложений в ОС Windows или настроив билет Kerberos для поддержки кроссплатформенной проверки подлинности. Вы сможете получить доступ к Базе данных SQL Azure или Azure Synapse Analytics без запроса учетных данных при входе в систему компьютера, присоединенного к домену.
+        * Поддерживается начиная с версии драйвера **6.0**. `authentication=ActiveDirectoryIntegrated` может использоваться для подключения к Базе данных SQL Azure или Synapse Analytics с помощью встроенной проверки подлинности. Чтобы использовать этот режим проверки подлинности, необходимо объединить локальные службы федерации Active Directory (ADFS) в федерацию с Azure Active Directory в облаке. После настройки вы можете установить подключение, добавив собственную библиотеку "mssql-jdbc_auth-\<version>-\<arch>.dll" в путь к классам приложений в ОС Windows или настроив билет Kerberos для поддержки кроссплатформенной проверки подлинности. Вы сможете получить доступ к Базе данных SQL Azure или Azure Synapse Analytics без запроса учетных данных при входе в систему компьютера, присоединенного к домену.
+
     * **ActiveDirectoryPassword**
-        * Поддерживается, начиная с версии драйвера **v6.0**. `authentication=ActiveDirectoryPassword` может использоваться для подключения к базе данных или хранилищу данных SQL Azure с использованием имени и пароля пользователя Azure AD.
+        * Поддерживается начиная с версии драйвера **6.0**. `authentication=ActiveDirectoryPassword` может использоваться для подключения к Базе данных SQL Azure или Synapse Analytics с использованием имени и пароля пользователя Azure AD.
+    * **ActiveDirectoryInteractive**
+        * Поддерживается начиная с версии драйвера **9.2**. `authentication=ActiveDirectoryInteractive` может использоваться для подключения к Базе данных SQL Azure или Synapse Analytics с помощью интерактивного процесса проверки подлинности (многофакторной проверки подлинности).
+    * **ActiveDirectoryServicePrincipal**
+        * Поддерживается начиная с версии драйвера **9.2**. `authentication=ActiveDirectoryServicePrincipal` может использоваться для подключения к Базе данных SQL Azure или Synapse Analytics с использованием идентификатора клиента и секрета удостоверения субъекта-службы.
+
     * **SqlPassword**
         * Используйте `authentication=SqlPassword` для подключения к SQL Server с помощью свойств userName, user и password.
     * **NotSpecified**
@@ -54,9 +60,12 @@ ms.locfileid: "97902642"
 Для других режимов проверки подлинности на клиентском компьютере должны быть установлены следующие компоненты:
 * Java 7 или более поздней версии.
 * Microsoft JDBC Driver 6.0 (или более поздней версии) for SQL Server.
-* Если вы используете режим проверки подлинности на основе токенов доступа, для запуска примеров из этой статьи вам необходима библиотека [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) и ее зависимости. Дополнительные сведения см. в разделе **Установка подключения с использованием токена доступа**.
-* При использовании режима проверки подлинности **ActiveDirectoryPassword** вам потребуется библиотека [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) и ее зависимости. Дополнительные сведения см. в разделе **Установка подключения с использованием режима проверки подлинности ActiveDirectoryPassword**.
-* При использовании режима **ActiveDirectoryIntegrated** вам потребуется библиотека azure-activedirectory-library-for-java и ее зависимости. Дополнительные сведения см. в разделе **Установка подключения с использованием режима проверки подлинности ActiveDirectoryIntegrated**.
+* Если вы используете режим проверки подлинности на основе маркеров доступа, для запуска примеров из этой статьи вам необходима библиотека [microsoft-authentication-library-for-java](https://github.com/AzureAD/microsoft-authentication-library-for-java) и ее зависимости. Дополнительные сведения см. в разделе [Установка подключения с использованием токена доступа](#connecting-using-access-token).
+* При использовании режима проверки подлинности **ActiveDirectoryPassword** вам потребуется библиотека [microsoft-authentication-library-for-java](https://github.com/AzureAD/microsoft-authentication-library-for-java) и ее зависимости. Дополнительные сведения см. в разделе [Установка подключения с использованием режима проверки подлинности ActiveDirectoryPassword](#connecting-using-activedirectorypassword-authentication-mode).
+* При использовании режима **ActiveDirectoryIntegrated** вам потребуется библиотека [microsoft-authentication-library-for-java](https://github.com/AzureAD/microsoft-authentication-library-for-java) и ее зависимости. Дополнительные сведения см. в разделе [Установка подключения с использованием режима проверки подлинности ActiveDirectoryIntegrated](#connecting-using-activedirectoryintegrated-authentication-mode).
+* При использовании режима **ActiveDirectoryInteractive** вам потребуется библиотека [microsoft-authentication-library-for-java](https://github.com/AzureAD/microsoft-authentication-library-for-java) и ее зависимости. Дополнительные сведения см. в разделе [Установка подключения с использованием режима проверки подлинности ActiveDirectoryInteractive](#connecting-using-activedirectoryinteractive-authentication-mode).
+* При использовании режима **ActiveDirectoryServicePrincipal** вам потребуется библиотека [microsoft-authentication-library-for-java](https://github.com/AzureAD/microsoft-authentication-library-for-java) и ее зависимости. Дополнительные сведения см. в разделе [Установка подключения с использованием режима проверки подлинности ActiveDirectoryServicePrincipal]()#connecting-using-activedirectoryserviceprincipal-authentication-mode.
+
 
 ## <a name="connecting-using-activedirectorymsi-authentication-mode"></a>Установка подключения с использованием режима проверки подлинности ActiveDirectoryMSI
 Следующий пример иллюстрирует использование режима `authentication=ActiveDirectoryMSI`. Запустите этот пример из Ресурса Azure, например виртуальной машины Azure, Службы приложений или приложения-функции, включенных в федерацию с Azure Active Directory.
@@ -266,13 +275,131 @@ You have successfully logged on as: <your user name>
 > [!NOTE]  
 > Обязательно создайте автономную пользовательскую базу данных. Пользователь автономной базы данных, представляющий указанного пользователя Azure Active Directory или одну из групп, к которым принадлежит указанный пользователь Azure Active Directory, должен существовать в этой базе данных с разрешением CONNECT (за исключением администратора сервера или группы Azure Active Directory).
 
+## <a name="connecting-using-activedirectoryinteractive-authentication-mode"></a>Установка подключения с использованием режима проверки подлинности ActiveDirectoryInteractive 
+Следующий пример иллюстрирует использование режима `authentication=ActiveDirectoryInteractive`.
+
+Перед сборкой и запуском примера выполните следующие действия:
+1.  Скачайте на клиентский компьютер (компьютер, на котором вы планируете запустить пример) [библиотеку azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) и ее зависимости и включите их в путь сборки Java.
+2.  Найдите приведенные ниже строки кода и замените имена сервера и базы данных именами своих сервера и базы данных.
+    ```java
+    ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
+    ds.setDatabaseName("demo"); // replace with your database name
+    ```
+3.  Найдите приведенные ниже строки кода и замените имя пользователя именем пользователя Azure AD, от имени которого вы хотите установить подключение.
+    ```java
+    ds.setUser("bob@cqclinic.onmicrosoft.com"); // replace with your user name
+    ```
+
+Пример использования режима проверки подлинности ActiveDirectoryInteractive:
+```java
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
+
+public class AADInteractive {
+    public static void main(String[] args) throws Exception{
+        
+        SQLServerDataSource ds = new SQLServerDataSource();
+        ds.setServerName("aad-managed-demo.database.windows.net"); // Replace with your server name
+        ds.setDatabaseName("demo"); // Replace with your database
+    ds.setAuthentication("ActiveDirectoryInteractive");
+      
+    // Optional
+        ds.setUser("bob@cqclinic.onmicrosoft.com"); // Replace with your user name
+        
+        try (Connection connection = ds.getConnection(); 
+                Statement stmt = connection.createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT SUSER_SNAME()")) {
+            if (rs.next()) {
+                System.out.println("You have successfully logged on as: " + rs.getString(1));
+            }
+        }
+    }
+}
+```
+При запуске программы откроется браузер, в котором пользователю нужно пройти проверку подлинности. Конкретный интерфейс зависит от того, как настроена служба Azure AD. При многофакторной проверке подлинности может запрашиваться такая информация,как имя пользователя, пароль или ПИН-код, либо требоваться проверка подлинности через дополнительное устройство, например телефон. Когда в одной программе выполняется несколько интерактивных запросов проверки подлинности, пользователь может даже не получать последующие запросы, если библиотека проверки подлинности может повторно использовать ранее кэшированный маркер.
+
+Сведения о том, как настроить Azure AD таким образом, чтобы требовалась многофакторная проверка подлинности, см. в статье [Приступая к работе со службой Многофакторной идентификации Azure AD в облаке](/azure/active-directory/authentication/howto-mfa-getstarted).
+
+Снимки экрана этих диалоговых окон см. в статье [Настройка Многофакторной идентификации для SQL Server Management Studio и Azure AD](/azure/azure-sql/database/authentication-mfa-ssms-configure).
+
+Если проверка подлинности пользователя успешно завершена, в браузере должно появиться следующее сообщение.
+```
+Authentication complete. You can close the browser and return to the application.
+```
+Обратите внимание, что оно означает лишь то, что проверка подлинности пройдена успешно, но необязательно то, что соединение с сервером установлено. Если подключение к серверу установлено, вернувшись в приложение, вы должны увидеть следующее сообщение.
+```
+You have successfully logged on as: <your user name>
+```
+
+> [!NOTE]  
+> Обязательно создайте автономную пользовательскую базу данных. Пользователь автономной базы данных, представляющий указанного пользователя Azure Active Directory или одну из групп, к которым принадлежит указанный пользователь Azure Active Directory, должен существовать в этой базе данных с разрешением CONNECT (за исключением администратора сервера или группы Azure Active Directory).
+
+## <a name="connecting-using-activedirectoryserviceprincipal-authentication-mode"></a>Установка подключения с использованием режима проверки подлинности ActiveDirectoryServicePrincipal
+Следующий пример иллюстрирует использование режима `authentication=ActiveDirectoryServicePrincipal`.
+
+Перед сборкой и запуском примера выполните следующие действия:
+1.  Скачайте на клиентский компьютер (компьютер, на котором вы планируете запустить пример) [библиотеку azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) и ее зависимости и включите их в путь сборки Java.
+2.  Найдите приведенные ниже строки кода и замените имена сервера и базы данных именами своих сервера и базы данных.
+    ```java
+    ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
+    ds.setDatabaseName("demo"); // replace with your database name
+    ```
+3.  Найдите приведенные ниже строки кода и замените имя пользователя именем пользователя Azure AD, от имени которого вы хотите установить подключение.
+    ```java
+    ds.setUser("bob@cqclinic.onmicrosoft.com"); // replace with your user name
+    ```
+
+Пример использования режима проверки подлинности ActiveDirectoryInteractive:
+```java
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
+
+public class AADServicePrincipal {
+    public static void main(String[] args) throws Exception{
+        String principalId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your AAD secure principal ID.
+        String principalSecret = "..."; // Replace with your AAD principal secret.
+
+        SQLServerDataSource ds = new SQLServerDataSource();
+        ds.setServerName("aad-managed-demo.database.windows.net"); // Replace with your server name
+        ds.setDatabaseName("demo"); // Replace with your database
+    ds.setAuthentication("ActiveDirectoryServicePrincipal");
+    ds.setAADSecurePrincipalId(principalId);
+    ds.setAADSecurePrincipalSecret(principalSecret);
+      
+    // Optional
+        ds.setUser("bob@cqclinic.onmicrosoft.com"); // Replace with your user name
+        
+        try (Connection connection = ds.getConnection(); 
+                Statement stmt = connection.createStatement();
+                ResultSet rs = stmt.executeQuery("SELECT SUSER_SNAME()")) {
+            if (rs.next()) {
+                System.out.println("You have successfully logged on as: " + rs.getString(1));
+            }
+        }
+    }
+}
+```
+Если подключение установлено успешно, отобразится следующее сообщение.
+```
+You have successfully logged on as: <your user name>
+```
+
+> [!NOTE]  
+> Обязательно создайте автономную пользовательскую базу данных. Пользователь автономной базы данных, представляющий указанного пользователя Azure Active Directory или одну из групп, к которым принадлежит указанный пользователь Azure Active Directory, должен существовать в этой базе данных с разрешением CONNECT (за исключением администратора сервера или группы Azure Active Directory).
+
 ## <a name="connecting-using-access-token"></a>Установка подключения с использованием токена доступа
-Приложения или службы могут извлечь токен доступа из Azure Active Directory и использовать его для подключения к базе данных или хранилищу данных SQL Azure.
+Приложения или службы могут извлечь маркер доступа из Azure Active Directory и использовать его для подключения к Базе данных SQL Azure или Synapse Analytics.
 
 > [!NOTE] 
 > **accessToken** можно задать только с помощью параметра Properties метода getConnection() в классе DriverManager. Его нельзя использовать в строке подключения.
 
-В приведенном ниже примере показано простое приложение Java, которое подключается к базе данных или хранилищу данных SQL Azure с использованием проверки подлинности на основе токенов доступа. Перед сборкой и запуском примера выполните следующие шаги:
+В приведенном ниже примере показано простое приложение Java, которое подключается к Базе данных SQL Azure или Synapse Analytics с использованием проверки подлинности на основе маркеров доступа. Перед сборкой и запуском примера выполните следующие шаги:
 1.  Создайте учетную запись приложения в Azure Active Directory для своей службы.
     1. Войдите на портал Azure.
     2. Щелкните Azure Active Directory в области навигации слева.
@@ -293,7 +420,7 @@ You have successfully logged on as: <your user name>
     CREATE USER [mytokentest] FROM EXTERNAL PROVIDER
     ```
 
-3.  Скачайте на клиентский компьютер (компьютер, на котором вы планируете запустить пример) библиотеку [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) и ее зависимости и включите их в путь сборки Java. Обратите внимание, что библиотека azure-activedirectory-library-for-java требуется только для запуска этого конкретного примера. В данном примере API-интерфейсы из этой библиотеки используются для получения токена доступа из Azure AD. Если у вас уже есть токен доступа, вы можете пропустить этот шаг. Обратите внимание, что вам также необходимо удалить в примере раздел, который извлекает токен доступа.
+3.  Скачайте на клиентский компьютер (на котором вы планируете запустить пример) библиотеку [microsoft-authentication-library-for-java](https://github.com/AzureAD/microsoft-authentication-library-for-java) и ее зависимости и включите их в путь сборки Java. Обратите внимание, что библиотека microsoft-authentication-library-for-java требуется только для запуска этого конкретного примера. В данном примере API-интерфейсы из этой библиотеки используются для получения токена доступа из Azure AD. Если у вас уже есть токен доступа, вы можете пропустить этот шаг. Обратите внимание, что вам также необходимо удалить в примере раздел, который извлекает токен доступа.
 
 В приведенном ниже примере замените собственными значениями URL-адрес службы токенов безопасности, идентификатор клиента, секрет клиента, имя сервера и базы данных.
 
@@ -306,9 +433,11 @@ import java.util.concurrent.Future;
 import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
 
 // The azure-activedirectory-library-for-java is needed to retrieve the access token from the AD.
-import com.microsoft.aad.adal4j.AuthenticationContext;
-import com.microsoft.aad.adal4j.AuthenticationResult;
-import com.microsoft.aad.adal4j.ClientCredential;
+import com.microsoft.aad.msal4j.ClientCredentialFactory;
+import com.microsoft.aad.msal4j.ClientCredentialParameters;
+import com.microsoft.aad.msal4j.ConfidentialClientApplication;
+import com.microsoft.aad.msal4j.IAuthenticationResult;
+import com.microsoft.aad.msal4j.IClientCredential;
 
 public class AADTokenBased {
 
@@ -320,11 +449,19 @@ public class AADTokenBased {
         String clientId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your client ID.
         String clientSecret = "..."; // Replace with your client secret.
 
-        AuthenticationContext context = new AuthenticationContext(stsurl, false, Executors.newFixedThreadPool(1));
-        ClientCredential cred = new ClientCredential(clientId, clientSecret);
-
-        Future<AuthenticationResult> future = context.acquireToken(spn, cred, null);
-        String accessToken = future.get().getAccessToken();
+    String scope = spn +  "/.default";
+    Set<String> scopes = new HashSet<>();
+        scopes.add(scope);
+    
+    ExecutorService executorService = Executors.newSingleThreadExecutor();
+    IClientCredential credential = ClientCredentialFactory.createFromSecret(clientSecret);
+    ConfidentialClientApplication clientApplication = ConfidentialClientApplication
+            .builder(clientId, credential).executorService(executorService).authority(stsurl).build();
+    CompletableFuture<IAuthenticationResult> future = clientApplication
+            .acquireToken(ClientCredentialParameters.builder(scopes).build());
+            
+    IAuthenticationResult authenticationResult = future.get();
+    String accessToken = authenticationResult.accessToken();
 
         System.out.println("Access Token: " + accessToken);
 

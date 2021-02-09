@@ -9,16 +9,16 @@ ms.author: drskwier
 ms.reviewer: maghan, sstein
 ms.custom: ''
 ms.date: 08/07/2020
-ms.openlocfilehash: 060039496d5877951e5255fce5e6cac2321731c6
-ms.sourcegitcommit: 31f3405be08441471f441395f1d0f0017ebc0ad5
+ms.openlocfilehash: 1233b8319c4fbd893159ba88fbcd1c3401f05ce0
+ms.sourcegitcommit: fa63019cbde76dd981b0c5a97c8e4d57e8d5ca4e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "94617932"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99495722"
 ---
 # <a name="build-a-database-project-from-command-line"></a>Создание проекта базы данных из командной строки
 
-В то время как расширение "Проект Базы данных SQL" для Azure Data Studio предоставляет графический пользовательский интерфейс для [сборки проекта базы данных](sql-database-project-extension-build.md), встроенный интерфейс командной строки также доступен для сред Windows, macOS и Linux. В этой статье содержатся сведения о предварительных требованиях и синтаксисе, необходимых для создания проекта SQL для DACPAC из командной строки.
+В то время как расширение "Проект Базы данных SQL" для Azure Data Studio предоставляет графический пользовательский интерфейс для [сборки проекта базы данных](sql-database-project-extension-build.md), интерфейс сборки из командной строки также доступен для сред Windows, macOS и Linux. В этой статье содержатся сведения о предварительных требованиях и синтаксисе, необходимых для создания проекта SQL для DACPAC из командной строки.
 
 ## <a name="prerequisites"></a>Предварительные требования
 

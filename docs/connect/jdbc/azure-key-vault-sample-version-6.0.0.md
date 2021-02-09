@@ -2,7 +2,7 @@
 description: Пример Azure Key Vault версии 6.0.0
 title: Пример для Azure Key Vault версии 6.0.0 | Документация Майкрософт
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f297d639eacf0405ce8cbaa52d35a4bfb3ae20c7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bab23ffdf60f45d46fa22585297fe6da1d3307e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438506"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99163634"
 ---
 # <a name="azure-key-vault-sample-version-600"></a>Пример Azure Key Vault версии 6.0.0
 
@@ -23,7 +23,7 @@ ms.locfileid: "88438506"
 
 ## <a name="sample-application-using-azure-key-vault-feature"></a>Простое приложение, использующее возможность Azure Key Vault
 
-Это приложение может работать с JDBC Driver версии 6.0.0 при наличии Azure-Keyvault (версия 0.9.7), Adal4j (версия 1.3.0) и  всех их зависимостей.  Чтобы устранить дополнительные зависимости, добавьте нужные библиотеки в POM-файл проекта, как описано [здесь](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
+Это приложение может работать с JDBC Driver версии 6.0.0 при наличии Azure-Keyvault (версия 0.9.7), Adal4j (версия 1.3.0) и всех их зависимостей. Чтобы разрешить базовые зависимости, добавьте эти библиотеки в файл объектной модели проекта (POM). Дополнительные сведения о зависимостях компонентов см. в статье [Зависимости компонентов Microsoft JDBC Driver для SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
 ```java
 import java.net.URISyntaxException;
@@ -228,5 +228,6 @@ public class AKV_600 {
 
 ## <a name="see-also"></a>См. также раздел
 
+[Пример использования Azure Key Vault версии 9.2](../../connect/jdbc/azure-key-vault-sample-version-9.2.md)  
 [Пример использования Azure Key Vault для версии 7.0](../../connect/jdbc/azure-key-vault-sample-version-7.0.md)  
 [Пример Azure Key Vault версии 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)

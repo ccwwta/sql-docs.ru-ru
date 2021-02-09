@@ -10,15 +10,15 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 12/11/2020
-ms.openlocfilehash: abefb39814213426d863fa3839c4095eadc82249
-ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
+ms.openlocfilehash: c4a9947520ef3914a2ccb34aba5ffaacc1bc6bb2
+ms.sourcegitcommit: 5ceafd29b8f22edb800cec150f0ccddea43313e7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97577919"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98983647"
 ---
 # <a name="sqlpackage-extract-parameters-and-properties"></a>Параметры и свойства извлечения SqlPackage
-Действие извлечения SqlPackage.exe приводит к созданию схемы активной базы данных из SQL Server или базы данных SQL Azure в пакет DACPAC (DACPAC-файл). По умолчанию данные в DACPAC-файл не включаются. Чтобы их включить, используйте [действие экспорта](sqlpackage-export.md). 
+Действие извлечения SqlPackage.exe создает схему подключенной базы данных в DACPAC-файле. По умолчанию данные в DACPAC-файл не включаются. Чтобы включить данные, используйте [действие экспорта](sqlpackage-export.md) или свойства извлечения *ExtractAllTableData*/*TableData*. 
 
 ## <a name="command-line-syntax"></a>Синтаксис для командной строки
 

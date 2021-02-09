@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 11/4/2020
-ms.openlocfilehash: 8555a183dc1f888e6ae80b78999b5fc234b431cf
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: ef49071f97d255d98f8086b9ff329c77d7b4afad
+ms.sourcegitcommit: 5ceafd29b8f22edb800cec150f0ccddea43313e7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98594409"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "98983667"
 ---
 # <a name="sqlpackageexe"></a>SQLPackage.exe
 
@@ -23,13 +23,13 @@ ms.locfileid: "98594409"
   
 - [Версия.](#version) Возвращает номер сборки приложения SqlPackage.  Этот параметр добавлен в версии 18.6.
 
-- [Extract](sqlpackage-extract.md): создает файл моментального снимка базы данных (DACPAC) из активной Базы данных SQL Server или SQL Azure.  
+- [Extract](sqlpackage-extract.md): Создает файл приложения уровня данных (DACPAC), содержащий только схему или схему и пользовательские данные из подключенной базы данных SQL.  
   
 - [Publish](sqlpackage-publish.md): выполняет добавочное обновление схемы базы данных в соответствии со схемой исходного DACPAC-файла. Если база данных не существует на сервере, операция публикации создаст ее. В противном случае обновляется существующая база данных.  
   
-- [Export](sqlpackage-export.md): экспортирует активную базу данных, включая схему базы данных и пользовательские данные, из Базы данных SQL Azure или SQL Server в пакет BACPAC (BACPAC-файл).  
+- [Export](sqlpackage-export.md): экспортирует подключенную базу данных SQL, включая схему базы данных и пользовательские данные, в BACPAC-файл.  
   
-- [Import](sqlpackage-import.md): импортирует данные схемы и таблиц из пакета BACPAC в новую пользовательскую базу данных в экземпляре Базы данных SQL Server или SQL Azure.  
+- [Import](sqlpackage-import.md): импортирует схему и данные таблиц из BACPAC-файла в новую пользовательскую базу данных.  
   
 - [DeployReport](sqlpackage-deploy-drift-report.md): создает XML-отчет по изменениям, которые должны быть внесены в результате публикации.  
   

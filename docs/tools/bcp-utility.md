@@ -29,12 +29,12 @@ ms.reviewer: v-daenge
 ms.custom: seo-lt-2019
 ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017'
-ms.openlocfilehash: 2be72374a13dbedb444b2661cf0e53a0d555d98c
-ms.sourcegitcommit: 713e5a709e45711e18dae1e5ffc190c7918d52e7
+ms.openlocfilehash: 9c732f7be3a25752c16e8e09e483097c8b9cac18
+ms.sourcegitcommit: 5dcbe4abbe2339292961370c1d8ca3affa625f72
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "98688999"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99536415"
 ---
 # <a name="bcp-utility"></a>Программа bcp
 
@@ -56,7 +56,7 @@ ms.locfileid: "98688999"
 **[![Скачивание bcp для x64](../ssdt/media/download.png) Скачать программы командной строки Microsoft 15 для SQL Server (х64)](https://go.microsoft.com/fwlink/?linkid=2142258)**
 <br>**[![Скачивание bcp для x86](../ssdt/media/download.png) Скачать программы командной строки Microsoft 15 для SQL Server (х86)](https://go.microsoft.com/fwlink/?linkid=2142257)**
 
-Инструменты командной строки предоставляются в общедоступной версии, тем не менее они выпускаются вместе с пакетом установщика для [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+Инструменты командной строки предоставляются в общедоступной версии, тем не менее они выпускаются вместе с пакетом установщика для [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)].
 
 ### <a name="version-information"></a>Сведения о версии
 
@@ -71,7 +71,7 @@ ms.locfileid: "98688999"
 
 Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019.
 
-Этот компонент требует наличия [установщика Windows версии 4.5](https://www.microsoft.com/download/details.aspx?id=8483) и [драйвера Microsoft ODBC 17 для SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md).
+Этот компонент требует наличия [установщика Windows версии 4.5](https://windows-installer.soft32.com/) и [драйвера Microsoft ODBC 17 для SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md).
 
 Чтобы проверить версию BCP, выполните команду `bcp /v` и убедитесь, что используется версия 15.0.2000.5 или выше.
 
@@ -174,7 +174,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 |ACP|[!INCLUDE[vcpransi](../includes/vcpransi-md.md)]/Microsoft Windows (ISO 1252).|  
 |OEM|Кодовая страница, используемая клиентом по умолчанию. Это кодовая страница, используемая по умолчанию, если не указан параметр **-C** .|  
 |RAW|Преобразование из одной кодовой страницы в другую не выполняется. Этот параметр обеспечивает высокую производительность, так как преобразование не выполняется.|  
-|*code_page*|Определенный номер кодовой страницы, например 850.<br /><br /> Версии раньше 13 ([!INCLUDE[ssSQL15](../includes/sssql16-md.md)]) не поддерживают кодовую страницу 65001 (кодировка UTF-8). Начиная с версии 13, кодировку UTF-8 можно импортировать в более ранние версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
+|*code_page*|Определенный номер кодовой страницы, например 850.<br /><br /> Версии раньше 13 ([!INCLUDE[sssql15-md](../includes/sssql16-md.md)]) не поддерживают кодовую страницу 65001 (кодировка UTF-8). Начиная с версии 13, кодировку UTF-8 можно импортировать в более ранние версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
 |||
   
  **-d** _**имя\_базы_данных**_<a name="d"></a>   
@@ -429,7 +429,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  **120** = [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
   
- **130** = [!INCLUDE[ssSQL15](../includes/sssql16-md.md)]  
+ **130** = [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]  
   
  Например, чтобы создать данные для типов, не поддерживаемых [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)], но введенных в более поздних версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], используйте параметр -V80.  
   
@@ -445,7 +445,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 ## <a name="remarks"></a>Примечания<a name="remarks"></a>
 
-- Программа **bcp** 13.0 устанавливается при установке средств [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Если установлены средства как [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , так и более ранней версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], то в зависимости от значения переменной среды PATH вместо **bcp** 13.0 необходимо использовать более раннюю версию клиента **bcp** . Переменная среды определяет набор каталогов, используемых Windows для поиска исполняемых файлов. Чтобы определить используемую версию, выполните в командной строке Windows команду **bcp /v** или **bcp -v**. Чтобы получить информацию о том, как задать путь к команде в переменной среды PATH, обратитесь к разделу [Переменные среды](/windows/win32/shell/user-environment-variables) или выполните поиск по запросу "Переменные среды" в справке Windows.
+- Программа **bcp** 13.0 устанавливается при установке средств [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[sssql19-md.md](../includes/sssql19-md.md)]. Если установлены средства для нескольких версий [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], то в зависимости от значения переменной среды PATH возможно, что вместо **bcp** 13.0 вы используете более раннюю версию клиента **bcp**. Переменная среды определяет набор каталогов, используемых Windows для поиска исполняемых файлов. Чтобы определить используемую версию, выполните в командной строке Windows команду **bcp /v** или **bcp -v**. Чтобы получить информацию о том, как задать путь к команде в переменной среды PATH, обратитесь к разделу [Переменные среды](/windows/win32/shell/user-environment-variables) или выполните поиск по запросу "Переменные среды" в справке Windows.
 
     Чтобы при запуске использовалась последняя версия программы bcp, необходимо удалить все более старые версии программы bcp.
 
@@ -471,7 +471,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 ## <a name="native-data-file-support"></a>Поддержка собственного формата файлов данных
 
- В [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]программа **bcp** поддерживает только собственные файлы данных, совместимые с [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]и [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
+ В [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] программа **bcp** поддерживает только собственные файлы данных, совместимые с версиями [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] начиная с [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)].
 
 ## <a name="computed-columns-and-timestamp-columns"></a>Вычисляемые столбцы и столбцы типа timestamp
 

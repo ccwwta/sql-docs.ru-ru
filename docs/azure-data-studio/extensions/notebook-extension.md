@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: alayu, maghan
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: 44080250d95d21cecca16ff605ca22683e5b4440
-ms.sourcegitcommit: 7f76975c29d948a9a3b51abce564b9c73d05dcf0
+ms.openlocfilehash: 36ed1466decd88686647302e65cf24746393d1f3
+ms.sourcegitcommit: fa63019cbde76dd981b0c5a97c8e4d57e8d5ca4e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "96900817"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99495741"
 ---
 # <a name="create-a-jupyter-notebook-extension"></a>Создание расширения Jupyter Notebook
 
@@ -48,7 +48,7 @@ ms.locfileid: "96900817"
 
 - Установленный [Node.js](https://nodejs.org), доступный в вашей переменной `$PATH`. Node.js включает в себя [npm](https://www.npmjs.com/), диспетчер пакетов Node.js, который будет использоваться для установки генератора расширений.
 - [Visual Studio Code](https://code.visualstudio.com) для отладки расширения.
-- Убедитесь, что `azuredatastudio` указан в вашем пути. Для Windows выберите параметр **Добавить в PATH** в setup.exe. Для Mac или Linux выберите параметр **Установить путь к команде azuredatastudio в PATH**.
+- Убедитесь, что `azuredatastudio` указан в вашем пути. Для Windows выберите параметр **Добавить в PATH** в setup.exe. Для Mac или Linux выполните команду **Install 'azuredatastudio' command in PATH** из палитры команд в Azure Data Studio.
 
 ## <a name="install-the-extension-generator"></a>Установка генератора расширений
 

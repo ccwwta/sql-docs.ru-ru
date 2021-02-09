@@ -2,12 +2,12 @@
 description: sqlsrv_field_metadata
 title: sqlsrv_field_metadata | Документация Майкрософт
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - sqlsrv_field_metadata
 apitype: NA
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6f2e0f7eefdfe78d1058d839c3e5a4fa9404e77
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 5cbcb5cf689d544730661fd9dd700537309d8a23
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92080573"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99154235"
 ---
 # <a name="sqlsrv_field_metadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,9 +46,9 @@ sqlsrv_field_metadata( resource $stmt)
 |-------|---------------|  
 |name|Имя столбца, которому соответствует поле.|  
 |Тип|Числовое значение, соответствующее типу SQL.|  
-|Размер|Число символов для полей символьного типа (char(n), varchar(n), nchar(n), nvarchar(n), XML). Число байтов для полей двоичного типа (binary(n), varbinary(n), UDT). Значение**NULL** для других типов данных SQL Server.|  
-|Точность|Точность для типов переменной точности (real, numeric, decimal, datetime2, datetimeoffset и time). Значение**NULL** для других типов данных SQL Server.|  
-|Масштабирование|Масштаб для типов переменного масштаба (numeric, decimal, datetime2, datetimeoffset и time). Значение**NULL** для других типов данных SQL Server.|  
+|Размер|Число символов для полей символьного типа (char(n), varchar(n), nchar(n), nvarchar(n), XML). Число байтов для полей двоичного типа (binary(n), varbinary(n), UDT). Значение **NULL** для других типов данных SQL Server.|  
+|Точность|Точность для типов переменной точности (real, numeric, decimal, datetime2, datetimeoffset и time). Значение **NULL** для других типов данных SQL Server.|  
+|Масштабирование|Масштаб для типов переменного масштаба (numeric, decimal, datetime2, datetimeoffset и time). Значение **NULL** для других типов данных SQL Server.|  
 |Допускает значения NULL|Перечисляемое значение, указывающее, что столбец допускает значение NULL (**SQLSRV_NULLABLE_YES**), столбец не допускает значение NULL (**SQLSRV_NULLABLE_NO**), либо неизвестно, допускает ли столбец значение NULL (**SQLSRV_NULLABLE_UNKNOWN**).|  
   
 Следующая таблица содержит дополнительные сведения о ключах для каждого подмассива (дополнительные сведения об этих типах см. в документации по SQL Server):  
@@ -236,6 +236,76 @@ foreach ($fieldmeta as $f) {
 {"Name":"FirstName","Type":-9,"Size":50,"Precision":null,"Scale":null,"Nullable":1,"Data Classification":[]}
 {"Name":"LastName","Type":-9,"Size":50,"Precision":null,"Scale":null,"Nullable":1,"Data Classification":[]}
 {"Name":"BirthDate","Type":91,"Size":null,"Precision":10,"Scale":0,"Nullable":1,"Data Classification":[{"Label":{"name":"Confidential Personal Data","id":""},"Information Type":{"name":"Birthdays","id":""}}]}
+```
+
+## <a name="sensitivity-rank-using-a-predefined-set-of-values"></a>Ранг конфиденциальности на основе предопределенного набора значений
+
+Начиная с версии 5.9.0 в драйверах PHP появилась возможность извлечения ранга классификации при использовании ODBC Driver 17.4.2 или более поздней версии. Пользователь может определить ранг при использовании [ADD SENSITIVITY CLASSIFICATION](/sql/t-sql/statements/add-sensitivity-classification-transact-sql) для классификации любого столбца данных. 
+
+Например, если пользователь назначает `NONE` и `LOW` столбцам BirthDate и SSN соответственно, представление JSON будет выглядеть следующим образом:
+
+```
+{"0":{"Label":{"name":"Confidential Personal Data","id":""},"Information Type":{"name":"Birthdays","id":""},"rank":0},"rank":0}
+{"0":{"Label":{"name":"Highly Confidential - secure privacy","id":""},"Information Type":{"name":"Credentials","id":""},"rank":10},"rank":10}
+```
+
+Как видно из [классификации конфиденциальности](/sql/relational-databases/system-catalog-views/sys-sensitivity-classifications-transact-sql), ранги имеют следующие числовые значения:
+
+```
+0 for NONE
+10 for LOW
+20 for MEDIUM
+30 for HIGH
+40 for CRITICAL
+```
+
+Таким образом, если вместо `RANK=NONE` пользователь задает `RANK=CRITICAL` при классификации столбца BirthDate, метаданные классификации будут следующими:
+
+```
+  array(7) {
+    ["Name"]=>
+    string(9) "BirthDate"
+    ["Type"]=>
+    int(91)
+    ["Size"]=>
+    NULL
+    ["Precision"]=>
+    int(10)
+    ["Scale"]=>
+    int(0)
+    ["Nullable"]=>
+    int(1)
+    ["Data Classification"]=>
+    array(2) {
+      [0]=>
+      array(3) {
+        ["Label"]=>
+        array(2) {
+          ["name"]=>
+          string(26) "Confidential Personal Data"
+          ["id"]=>
+          string(0) ""
+        }
+        ["Information Type"]=>
+        array(2) {
+          ["name"]=>
+          string(9) "Birthdays"
+          ["id"]=>
+          string(0) ""
+        }
+        ["rank"]=>
+        int(40)
+      }
+      ["rank"]=>
+      int(40)
+    }
+  }
+```
+
+Обновленное представление JSON выглядит так:
+
+```
+{"0":{"Label":{"name":"Confidential Personal Data","id":""},"Information Type":{"name":"Birthdays","id":""},"rank":40},"rank":40}
 ```
 
 ## <a name="see-also"></a>См. также:  

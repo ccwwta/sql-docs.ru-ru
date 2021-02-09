@@ -2,7 +2,7 @@
 title: Использование функции Always Encrypted с драйвером JDBC
 description: Узнайте, как использовать Always Encrypted в приложении Java с драйвером JDBC для SQL Server для шифрования конфиденциальных данных на сервере.
 ms.custom: ''
-ms.date: 08/24/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 52fc716acb62ea82a6a29c1cceaa73a30cc93c44
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: a89deba9ed124587899bc915fa86ef74074ed761
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727510"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99195274"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Использование функции Always Encrypted с драйвером JDBC
 
@@ -126,9 +126,9 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 >
 >  [azure-sdk-for-java](https://github.com/Azure/azure-sdk-for-java)
 >
->  [azure-activedirectory-library-for-java libraries](https://github.com/AzureAD/azure-activedirectory-library-for-java)
+>  [Библиотеки microsoft-authentication-library-for-java](https://github.com/AzureAD/microsoft-authentication-library-for-java)
 >
-> Пример включения этих зависимостей в проект Maven см. в статье [Download ADAL4J And AKV Dependencies with Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven) (Загрузка зависимостей ADAL4J и AKV с помощью Apache Maven).
+> Пример включения этих зависимостей в проект Maven см. на странице [скачивания зависимостей MSAL4J и AKV с помощью Apache Maven](https://github.com/microsoft/mssql-jdbc/wiki/Download-MSAL4J-And-AKV-Dependencies-with-Apache-Maven).
 
 ### <a name="using-azure-key-vault-authentication-with-managed-identities"></a>Использование проверки подлинности в Azure Key Vault с помощью управляемых удостоверений
 

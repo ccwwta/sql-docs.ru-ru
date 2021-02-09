@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
-ms.topic: conceptual
+ms.topic: reference
 apiname:
 - sqlsrv_query
 apitype: NA
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5c2b60fa120863c5ca33fb21ae158649b1d1adcf
-ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
+ms.openlocfilehash: 751fd08e63cccfe4293785191a223728690ed13e
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2020
-ms.locfileid: "92081103"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99201078"
 ---
 # <a name="sqlsrv_query"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -59,11 +59,11 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
     |Элемент|Описание|  
     |-----------|---------------|  
     |*$value*|Буквенное значение, переменная PHP или ссылочная переменная PHP.|  
-    |*$direction*(необязательно)|Одна из следующих констант **SQLSRV_PARAM_\*** , используемая для указания направления параметра: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. Значение по умолчанию — **SQLSRV_PARAM_IN**.<br /><br />Дополнительные сведения о константах PHP см. в статье [Константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
-    |*$phpType*(необязательно)|Константа **SQLSRV_PHPTYPE_\*** , указывающая тип данных PHP для возвращаемого значения.<br /><br />Дополнительные сведения о константах PHP см. в статье [Константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
-    |*$sqlType*(необязательно)|Константа **SQLSRV_SQLTYPE_\*** , указывающая тип данных SQL Server для входного значения.<br /><br />Дополнительные сведения о константах PHP см. в статье [Константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
+    |*$direction*(необязательно)|Одна из следующих констант **SQLSRV_PARAM_\* *_, используемая для указания направления параметра: _* SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. Значение по умолчанию — **SQLSRV_PARAM_IN**.<br /><br />Дополнительные сведения о константах PHP см. в статье [Константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
+    |*$phpType*(необязательно)|Константа **SQLSRV_PHPTYPE_\** _, указывающая тип данных PHP для возвращаемого значения.<br /><br />Дополнительные сведения о константах PHP см. в статье [Константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
+    |_$sqlType* [необязательный параметр]|Константа **SQLSRV_SQLTYPE_\** _, указывающая тип данных SQL Server для входного значения.<br /><br />Дополнительные сведения о константах PHP см. в статье [Константы &#40;драйверы Майкрософт для PHP для SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
   
-*$options* [необязательный параметр]: ассоциативный массив, позволяющий задать свойства запроса. Это тот же список ключей, который поддерживается [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md#properties).
+_$options* [необязательный параметр]: ассоциативный массив, позволяющий задать свойства запроса. Это тот же список ключей, который поддерживается [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md#properties).
   
 ## <a name="return-value"></a>Возвращаемое значение  
 Ресурс инструкции. Если не удается создать или выполнить инструкцию, возвращается значение **false**.  

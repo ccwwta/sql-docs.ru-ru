@@ -2,7 +2,7 @@
 title: Заметки о выпуске драйверов Майкрософт для PHP
 description: На этой странице описано, что было изменено в каждой версии драйверов Microsoft для PHP для SQL Server.
 ms.custom: ''
-ms.date: 09/11/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: be2317f95adc1a94ee85805aecfaed37d05e875a
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 2d62068af3e6ec4a8f2711a5c11ab1f01388be8e
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005728"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076306"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Заметки о выпуске драйверов Майкрософт для PHP для SQL Server
 
@@ -39,6 +39,36 @@ TO  :  'release-notes-php-sql-driver.md'
 For any questions, ask GeneMi or CraigG.
 Thanks a lot.  2019-03-28  (DevO= 1467988)
 -->
+
+## <a name="59"></a>5.9
+
+![скачать](../../ssms/media/download-icon.png) [Скачать пакет Windows](https://go.microsoft.com/fwlink/?linkid=?????)
+[Тег выпуска GitHub (пакеты Linux и macOS доступны здесь)](https://github.com/Microsoft/msphpsql/releases/tag/v5.9.0)
+
+### <a name="version-information"></a>Сведения о версии
+
+- Номер выпуска: 5.9.0<sup>1</sup>
+- Выпущено: 29 января 2021 г.
+
+### <a name="whats-new-in-59"></a>Новые возможности версии 5.9
+
+| Изменения | Сведения |
+| :------- | :------ |
+| Добавлена поддержка PHP 8.0. | &nbsp; |
+| Прекращена поддержка PHP 7.2. | &nbsp; |
+| Добавлена поддержка драйвера Microsoft ODBC Driver 17.7 на всех платформах. | &nbsp; |
+| Добавлена поддержка macOS Big Sur, Ubuntu 20.04, Ubuntu 20.10 и Alpine 3.12. | Для некоторых из этих ОС требуется драйвер ODBC Driver 17.5 или более поздней версии. |
+| Прекращена поддержка macOS High Sierra, Debian 8 и Ubuntu 19.10. | &nbsp; |
+| Поддержка языкового стандарта GB18030. | &nbsp; |
+| Функция PDO errorinfo усовершенствована и теперь включает дополнительные сообщения ODBC при их наличии. | &nbsp; |
+| Поддержка классификации данных со сведениями о ранге. | Требуются SQL Server 2019 и драйвер ODBC 17.4.2 или более поздней версии. |
+| Добавлена поддержка проверки подлинности субъекта-службы Azure Active Directory. | Требуется драйвер ODBC 17.7 или более поздней версии. |
+| Улучшена производительность при обработке десятичных чисел во входных или выходных данных. Исключены лишние преобразования числовых значений. | &nbsp; |
+| Повышена производительность при получении чисел из буферов клиентов. | &nbsp; |
+| Время ожидания запроса задается без использования LOCK TIMEOUT, что позволяет избежать лишнего обращения к серверу. | &nbsp; |
+| &nbsp; | &nbsp; |
+
+<sup>1</sup> В этом выпуске требуется драйвер ODBC Driver 17.4.2 или более поздней версии. В противном случае появится предупреждение о невозможности задать атрибут. При использовании более старой версии драйвера ODBC это предупреждение можно отключить. При использовании SQLSRV обратитесь к статье [Практическое руководство. Настройка обработки ошибок и предупреждений с помощью драйвера SQLSRV](https://docs.microsoft.com/sql/connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver). При использовании PDO_SQLSRV предупреждения по умолчанию скрываются, но могут записываться в журнал. Дополнительные сведения см. в статье [Ведение журнала](https://docs.microsoft.com/sql/connect/php/logging-activity).
 
 ## <a name="581"></a>5.8.1
 

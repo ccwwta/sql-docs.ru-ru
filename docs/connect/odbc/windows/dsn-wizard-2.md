@@ -2,7 +2,7 @@
 description: Мастер источников данных, экран 2 (драйвер ODBC для SQL Server)
 title: Мастер источников данных, экран 2 (драйвер ODBC для SQL Server) | Документация Майкрософт
 ms.custom: ''
-ms.date: 08/06/2020
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
 ms.author: v-jizho2
-ms.openlocfilehash: d1e18939ab9d3f2e86452dd3f1847971157ca92c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 749ba8963234955e4893a2c5197bcfd4c26f2584
+ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462213"
+ms.lasthandoff: 01/30/2021
+ms.locfileid: "99159561"
 ---
 # <a name="data-source-wizard-screen-2"></a>Экран 2 мастера источников данных
 
@@ -49,6 +49,11 @@ ms.locfileid: "88462213"
 ### <a name="with-managed-identity-authentication"></a>С проверкой подлинности управляемого удостоверения
 
 Указывает, что драйвер проверяет подлинность для SQL Server с помощью управляемого удостоверения.
+
+### <a name="with-active-directory-service-principal-authentication"></a>С проверкой подлинности субъекта-службы Active Directory
+
+Указывает, что драйвер проходит проверку подлинности на сервере SQL Server с помощью субъекта-службы Azure Active Directory.
+
 
 ### <a name="login-id"></a>Идентификатор входа
 

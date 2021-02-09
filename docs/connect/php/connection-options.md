@@ -2,7 +2,7 @@
 title: Параметры соединения
 description: Эта статья содержит перечень параметров, которые допускаются в ассоциативном массиве sqlsrv_connect в драйвере SQLSRV, и ключевые слова, которые допускаются в имени источника данных в драйвере PDO_SQLSRV.
 ms.custom: ''
-ms.date: 12/12/2019
+ms.date: 01/29/2021
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 98f6899c1bfc7652c4a2facee95cf5fd62e4e521
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a8718cc04972e74ffc39b1528ed73eb00664eda8
+ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632964"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "99076256"
 ---
 # <a name="connection-options"></a>Параметры соединения
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "81632964"
 |APP|Строка|Указывает имя приложения, используемое для трассировки.|Не задано.|  
 |ApplicationIntent|Строка|Объявляет тип рабочей нагрузки приложения при соединении с сервером. Возможные значения — **ReadOnly** и **ReadWrite**.<br /><br />Дополнительные сведения о поддержке [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] для [!INCLUDE[ssHADR](../../includes/sshadr_md.md)] см. в статье [Support for High Availability, Disaster Recover](php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) (Поддержка высокого уровня доступности и аварийного восстановления).|ReadWrite|
 |AttachDBFileName|Строка|Указывает, какой файл базы данных сервер должен присоединить.|Не задано.|
-|Аутентификация|Одна из следующих строк:<br /><br />**SqlPassword**<br /><br />**ActiveDirectoryPassword**<br /><br />**ActiveDirectoryMsi**|Указывает режим проверки подлинности.<br /><br />Дополнительные сведения см. в статье [Connect Using Azure Active Directory Authentication](azure-active-directory.md) (Подключение с использованием проверки подлинности Azure Active Directory).|Не задано.|
+|Аутентификация|Одна из следующих строк:<br /><br />**SqlPassword**<br /><br />**ActiveDirectoryPassword**<br /><br />**ActiveDirectoryMsi**<br /><br />**ActiveDirectoryServicePrincipal**|Указывает режим проверки подлинности.<br /><br />Дополнительные сведения см. в статье [Connect Using Azure Active Directory Authentication](azure-active-directory.md) (Подключение с использованием проверки подлинности Azure Active Directory).|Не задано.|
 |CharacterSet<br /><br />(не поддерживается в драйвере PDO_SQLSRV)|Строка|Задает кодировку, используемую для отправки данных на сервер.<br /><br />Возможными значениями являются SQLSRV_ENC_CHAR и UTF-8. Дополнительные сведения см. в разделе [Как Отправка и извлечение данных UTF-8 с помощью встроенной поддержки UTF-8](how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|SQLSRV_ENC_CHAR|  
 |ColumnEncryption|Одна из следующих строк:<br /><br />**Enabled**<br /><br />**Отключено**<br /><br />Строка, идентифицирующая протокол аттестации и URL-адрес для аттестации анклава.|Указывает, включена ли функция Always Encrypted. Если протокол аттестации и URL-адрес указаны, функция Always Encrypted с безопасными анклавами включена при условии соблюдения других требований, описанных [здесь](always-encrypted-secure-enclaves.md).|Выключено|  
 |ConnectionPooling|1 или **true** для включения организации пулов соединений.<br /><br />0 или **false** для отключения организации пулов соединений.|Указывает, назначено ли соединение из пула соединений (1 или **true**) или нет (0 или **false**) <sup>1</sup>.|**true** (1)|  

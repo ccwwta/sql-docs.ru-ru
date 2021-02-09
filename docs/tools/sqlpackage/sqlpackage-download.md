@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 10/02/2020
-ms.openlocfilehash: c86dde50390bdf14719da96f7fc3d0cc35a9c440
-ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
+ms.openlocfilehash: 45aad0892dbc187e50368f7abcf6c0b02cbc7cca
+ms.sourcegitcommit: e4b6357756a9c691b0441208a0058f7b8f3bea51
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97577948"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99510295"
 ---
 # <a name="download-and-install-sqlpackage"></a>Скачивание и установка sqlpackage
 
@@ -31,6 +31,9 @@ ms.locfileid: "97577948"
 |[Windows .NET Core](#get-sqlpackage-net-core-for-windows) |[ZIP-файл](https://go.microsoft.com/fwlink/?linkid=2143496)|18 сентября 2020 г.| 18.6| 15.0.4897.1 |
 
 Подробнее см. в [заметках о выпуске](release-notes-sqlpackage.md). Чтобы скачать дополнительные языки, воспользуйтесь разделом [Доступные языки](#available-languages).
+
+
+Доступна обновляемая ссылка ([https://aka.ms/sqlpackage-linux](https://aka.ms/sqlpackage-linux)), указывающая на текущую версию sqlpackage для [Linux .NET Core](#get-sqlpackage-net-core-for-linux). Ее можно использовать для автоматизации сред с последней версией sqlpackage.
 
 ## <a name="dacfx"></a>DacFx
 SqlPackage — это интерфейс командной строки для платформы DacFx, который предоставляет некоторые общедоступные API DacFx. DacServices ([Microsoft.SqlServer.Dac](/dotnet/api/microsoft.sqlserver.dac.dacservices)) — это связанный механизм для интеграции развертывания базы данных в конвейер приложений.  API-интерфейс DacServices доступен в пакете NuGet [Microsoft.SqlServer.DACFx](https://www.NuGet.org/packages/Microsoft.SqlServer.DACFx).  Текущая версия DacFx — 150.4897.1.
@@ -90,7 +93,7 @@ dotnet add package Microsoft.SqlServer.DACFx
 
 ## <a name="get-sqlpackage-net-core-for-linux"></a>Получение .NET Core sqlpackage для Linux
 
-1. Скачайте [sqlpackage для Linux](https://go.microsoft.com/fwlink/?linkid=2143497) с помощью одного из установщиков или архива tar.gz:
+1. Скачайте [sqlpackage для Linux](https://go.microsoft.com/fwlink/?linkid=2143497) с помощью одного из установщиков или архива tar.gz.
 2. Чтобы извлечь файл и запустить sqlpackage, откройте новое окно терминала и введите следующие команды:
 
    ```bash
