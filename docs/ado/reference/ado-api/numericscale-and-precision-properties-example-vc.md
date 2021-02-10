@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55d91ba8-4d80-4df6-af8e-060a19ddc138
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cd954184f8ea2227427a5668968714e9c61dfe23
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 982c266811743a65f717e02ac4ca3612db6ca3f8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167026"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041515"
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>Примеры свойств NumericScale и Precision (Visual C++)
 В этом примере используются свойства [NumericScale](./numericscale-property-ado.md) и [Precision](./precision-property-ado.md) для просмотра числа и точности полей в таблице ***скидки** _ базы данных _ *_pubs_**.  

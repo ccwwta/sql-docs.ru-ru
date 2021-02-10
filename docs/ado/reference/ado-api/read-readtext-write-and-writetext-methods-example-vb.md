@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7889a43427c8752ba30a4ccae1b6fc5db77db549
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6be85fef5e69e879034536c8785eccfd72c9f331
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166765"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040764"
 ---
 # <a name="read-readtext-write-and-writetext-methods-example-vb"></a>Примеры методов Read, ReadText, Write и WriteText (Visual Basic)
 В этом примере показано, как считать содержимое текстового поля в текстовый [поток](./stream-object-ado.md) и в двоичный **поток**. К другим свойствам и методам относятся " [Расположение](./position-property-ado.md)", " [Размер](./size-property-ado-parameter.md)", "набор [символов](./charset-property-ado.md)" и " [сетеос](./seteos-method.md)".  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c4f001b5-8d16-4d39-a42e-c0e2faaaceaf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b5b7e99548e156126455a66be7fdf73a9c00ebbc
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ab4d7c462e0e205050eed2b873a0071ac82ea936
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166823"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040974"
 ---
 # <a name="prompt-property-dynamic-ado"></a>Свойство Prompt (динамическое) (ADO)
 Указывает, должен ли поставщик OLE DB запрашивать сведения об инициализации у пользователя.  
@@ -27,7 +27,7 @@ ms.locfileid: "99166823"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает и возвращает значение [коннектпромптенум](./connectpromptenum.md) .  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **Prompt** — это динамическое свойство, которое может быть добавлено к коллекции [свойств](./properties-collection-ado.md) объекта [Connection](./connection-object-ado.md) поставщиком OLE DB. Для запроса сведений об инициализации поставщик OLE DB обычно отображает диалоговое окно для пользователя.  
   
  При закрытии **соединения** динамические свойства объекта [соединения](./connection-object-ado.md) теряются. Необходимо сбросить свойство **Prompt** , прежде чем повторно открыть **соединение** , чтобы использовать значение, отличное от значения по умолчанию.  

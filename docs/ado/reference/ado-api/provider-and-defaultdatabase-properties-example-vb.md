@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 677e1dbe-bcf6-4028-a62c-e99b1c88bf7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0fbc27246c6d79a7e9750e063ada29b775f45f00
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 12a89ea2c19b7e1734800edfcc62c1734bf7f296
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170521"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040854"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vb"></a>Пример свойств provider и DefaultDatabase (Visual Basic)
 В этом примере демонстрируется свойство [provider](./provider-property-ado.md) путем открытия трех объектов [соединения](./connection-object-ado.md) с помощью разных поставщиков. Он также использует свойство [DefaultDatabase](./defaultdatabase-property.md) , чтобы задать базу данных по умолчанию для поставщика Microsoft ODBC.  

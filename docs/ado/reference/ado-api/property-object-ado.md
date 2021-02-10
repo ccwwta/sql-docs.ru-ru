@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: b2a4767c-03c7-4935-a3bc-df3e1a38a009
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a24503889e8bd7deab3bca6072da9114f0a0efdd
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e78b0d38a775a527016126fbbc9fe1051664ce9c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170532"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040924"
 ---
 # <a name="property-object-ado"></a>Объект Property (ADO)
 Представляет динамическую характеристику объекта ADO, определяемого поставщиком.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Объекты ADO имеют два типа свойств: встроенные и динамические.  
   
  Встроенные свойства — это свойства, реализованные в ADO и немедленно доступные для любого нового объекта с использованием `MyObject.Property` синтаксиса. Они не отображаются как объекты **свойств** в коллекции [свойств](./properties-collection-ado.md) объекта, поэтому, хотя их значения можно изменять, их характеристики изменить нельзя.  

@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4cd94745a6ec2d4f34245b53f509752c13688d45
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 93d34581e7ea19ad584161e12375101a06256cbd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170601"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041114"
 ---
 # <a name="parameters-collection-ado"></a>Коллекция Parameters (ADO)
 Содержит все объекты [параметров](./parameter-object.md) объекта [Command](./command-object-ado.md) .  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Объект **Command** содержит коллекцию **Parameters** , состоящие из объектов **параметров** .  
   
  При использовании метода [Refresh](./refresh-method-ado.md) в коллекции **Parameters** объекта **Command** извлекаются сведения о параметрах поставщика для хранимой процедуры или параметризованного запроса, указанного в объекте **Command** . Некоторые поставщики не поддерживают вызовы хранимых процедур или параметризованные запросы; вызов метода **Refresh** для коллекции **Parameters** при использовании такого поставщика возвратит ошибку.  

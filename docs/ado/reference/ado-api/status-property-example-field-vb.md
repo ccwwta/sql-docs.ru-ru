@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 69e80f025c29e379495507447ef78af5bcc8868f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 706be79c9a910a8f6f5df5635acf0d5f0ad3a8c6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166461"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040444"
 ---
 # <a name="status-property-example-field-vb"></a>Пример свойства Status (объект Field) (Visual Basic)
 В следующем примере документ открывается из папки для чтения и записи с помощью [поставщика публикации в Интернете](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Для свойства [Status](./status-property-ado-field.md) объекта [поля](./field-object.md) [записи](./record-object-ado.md) сначала будет задано значение **адфиелдпендингинсерт**, а затем оно будет обновлено на **адфиелдок**.  

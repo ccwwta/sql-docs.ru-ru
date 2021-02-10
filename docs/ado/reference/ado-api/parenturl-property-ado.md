@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 89b3caf606d47c2be1add80a20830570be3f7fd2
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: fe54516f1721cdc24da9fbdeaf72688a6c0960a2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166866"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041044"
 ---
 # <a name="parenturl-property-ado"></a>Свойство ParentURL (ADO)
 Указывает абсолютную строку URL-адреса, указывающую на родительскую [запись](./record-object-ado.md) текущего объекта **Record** .  
@@ -29,7 +29,7 @@ ms.locfileid: "99166866"
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает **строковое** значение, указывающее URL-адрес родительской **записи**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Свойство **парентурл** зависит от источника, используемого для открытия объекта **Record** . Например, **запись** может быть открыта с источником, содержащим относительный путь к каталогу, на который ссылается свойство [ActiveConnection](./activeconnection-property-ado.md) .  
   
  Предположим, "вторая" — это папка, которая находится в разделе "First". Откройте объект **Record** , используя следующий синтаксис:  

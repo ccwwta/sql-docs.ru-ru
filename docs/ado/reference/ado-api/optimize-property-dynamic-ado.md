@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 839c2cb27fc14546523272c1c5b6d69f233557fa
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 60fb0e98e2adbd57ad9fa3a98d4d04f7def8d30d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166946"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041294"
 ---
 # <a name="optimize-property-dynamic-ado"></a>Свойство Optimize (динамическое) (ADO)
 Указывает, должен ли быть создан индекс для [поля](./field-object.md).  
@@ -27,7 +27,7 @@ ms.locfileid: "99166946"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает **логическое** значение, указывающее, должен ли быть создан индекс.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Индекс может повысить производительность операций, которые находят или сортируют значения в [наборе записей](./recordset-object-ado.md). Индекс является внутренним по отношению к ADO; Вы не можете явно получить доступ к нему или использовать его в своем приложении.  
   
  Чтобы создать индекс для поля, задайте для свойства **optimize** значение **true**. Чтобы удалить индекс, присвойте этому свойству значение **false**.  

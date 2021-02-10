@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9b5ca92e42a68639f6b9e3044894ec779109fff5
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b764f9a28665d31667e9c502c7ad8bdf0b9bbcad
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170680"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041314"
 ---
 # <a name="openschema-method"></a>Метод OpenSchema
 Получает сведения о схеме базы данных от поставщика.  
@@ -42,12 +42,12 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  Любое значение [SchemaEnum](./schemaenum.md) , представляющее тип выполняемого запроса схемы.  
   
  *Критерии*  
- Необязательный параметр. Массив ограничений запроса для каждого параметра *QueryType* , как указано в [SchemaEnum](./schemaenum.md).  
+ Необязательный элемент. Массив ограничений запроса для каждого параметра *QueryType* , как указано в [SchemaEnum](./schemaenum.md).  
   
  *счемаид*  
  Идентификатор GUID для запроса схемы поставщика, не определяемый спецификацией OLE DB. Этот параметр является обязательным, если для *QueryType* задано значение **адсчемапровидерспеЦифик**. в противном случае он не используется.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Метод **OpenSchema** возвращает собственные описательные сведения об источнике данных, например о таблицах, которые находятся в источнике данных, столбцах в таблицах и поддерживаемых типах данных.  
   
  Аргумент *QueryType* — это идентификатор GUID, который указывает, какие столбцы (схемы) возвращены. Спецификация OLE DB содержит полный список схем.  

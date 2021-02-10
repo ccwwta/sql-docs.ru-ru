@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e0d88fba7389c40442fccf006afc03020004d928
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b9d82bf7985afebbcbd0a07baeae76cb80af6027
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166757"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040774"
 ---
 # <a name="readtext-method"></a>Метод ReadText
 Считывает указанное количество символов из объекта текстового [потока](./stream-object-ado.md) .  
@@ -36,12 +36,12 @@ String = Stream.ReadText ( NumChars)
   
 #### <a name="parameters"></a>Параметры  
  *NumChars*  
- Необязательный параметр. Значение **типа Long** , указывающее количество символов, считываемых из файла, или значение [стреамреаденум](./streamreadenum.md) . Значение по умолчанию — **адреадалл**.  
+ Необязательный элемент. Значение **типа Long** , указывающее количество символов, считываемых из файла, или значение [стреамреаденум](./streamreadenum.md) . Значение по умолчанию — **адреадалл**.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Метод **ReadText** считывает указанное число символов, целую строку или весь поток из объекта **потока** и возвращает результирующую строку.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если *нумчар* больше, чем количество символов, оставшихся в потоке, возвращаются только оставшиеся символы. Чтение строки не дополняется в соответствии с длиной, заданной параметром *нумчар*. Если не осталось ни одного символа для чтения, возвращается Variant со значением NULL. **ReadText** нельзя использовать для чтения в обратном направлении.  
   
 > [!NOTE]

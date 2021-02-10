@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e33c6ec-14d9-4b1d-ba9b-cb99862e7bac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dd53935335a4f5df694a5a5175f2bd7d3505a108
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e0948b7d5dd6fef29336fbb9af49e2578b2bb4ba
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170645"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041244"
 ---
 # <a name="originalvalue-property-ado"></a>Свойство OriginalValue (ADO)
 Указывает значение [поля](./field-object.md) , которое существовало в записи до внесения каких-либо изменений.  
@@ -29,7 +29,7 @@ ms.locfileid: "99170645"
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение **типа Variant** , представляющее значение поля до любого изменения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте свойство **originalValue** , чтобы вернуть исходное значение поля для поля из текущей записи.  
   
  В *режиме немедленного обновления* (в котором поставщик записывает изменения в базовый источник данных после вызова метода [Update](./update-method.md) ) свойство **originalValue** возвращает значение поля, существовавшее до любых изменений (то есть с момента последнего вызова метода **обновления** ). Это то же значение, которое метод [CancelUpdate](./cancelupdate-method-ado.md) использует для замены свойства [value](./value-property-ado.md) .  

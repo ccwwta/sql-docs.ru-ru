@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: daa8319a-49aa-4c1c-9af6-0b01e9ab2f9d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9b2da711df951fc79db5034eeb447a71ade21fee
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 75473101028de4ab22d9faad8b5f1269aab33f12
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166862"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041054"
 ---
 # <a name="position-property-ado"></a>Свойство Position (ADO)
 Указывает текущую точку в объекте [потока](./stream-object-ado.md) .  
@@ -29,7 +29,7 @@ ms.locfileid: "99166862"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает значение **типа Long** , указывающее смещение (в байтах) текущей позиции от начала потока. Значение по умолчанию — 0, представляющее первый байт в потоке.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Текущую позицию можно переместить в точку после конца потока. Если указать текущую точку после конца потока, [Размер](./size-property-ado-stream.md) объекта **потока** будет увеличиваться соответствующим образом. Все новые байты, добавленные таким образом, будут иметь значение null.  
   
 > [!NOTE]

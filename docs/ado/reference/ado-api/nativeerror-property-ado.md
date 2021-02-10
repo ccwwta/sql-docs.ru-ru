@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b9b47e57-18a4-4186-aef5-5bd18d7b1d74
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b25d6c3ffd9563032df8743c60a5db1cd3f78b4e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 10ed79bf5629ce6439362ce1e80226444928a16b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167060"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041594"
 ---
 # <a name="nativeerror-property-ado"></a>Свойство NativeError (ADO)
 Указывает код ошибки конкретного поставщика для данного объекта [ошибки](./error-object.md) .  
@@ -31,7 +31,7 @@ ms.locfileid: "99167060"
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение **типа Long** , указывающее код ошибки.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте свойство **NativeError** , чтобы получить сведения об ошибке конкретной базы данных для конкретного объекта **ошибки** . Например, при использовании поставщика Microsoft ODBC для OLE DB с базой данных Microsoft SQL Server, машинные коды ошибок, происходящие из SQL Server, проходят через ODBC и поставщик ODBC в свойство ADO **NativeError** .  
   
 ## <a name="applies-to"></a>Применение  

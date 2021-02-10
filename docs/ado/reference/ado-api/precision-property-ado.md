@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1fa38e78-6b5b-414d-ba0a-3dd26b29b766
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4e8eba98d2489dab9bd41019ddc1f32da3711ad1
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 0060418a7b2cce6f7d82ecfe1095e35102aadbff
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166851"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041014"
 ---
 # <a name="precision-property-ado"></a>Свойство Precision (ADO)
 Указывает степень точности для числовых значений в объекте [параметра](./parameter-object.md) или для числовых объектов [полей](./field-object.md) .  
@@ -30,7 +30,7 @@ ms.locfileid: "99166851"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает значение **типа Byte** , указывающее максимальное количество цифр, используемых для представления значений.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте свойство **Precision** , чтобы определить максимальное количество цифр, используемых для представления значений числового **параметра** или объекта **поля** .  
   
  Значение доступно для чтения и записи в объекте **Parameter** .  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e52fe6b3b26a8bc4832952940c7e84c736f2da5e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: febf5627d46bbb464ff01c41a0eee23b2242c801
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166585"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040704"
 ---
 # <a name="savetofile-method"></a>Метод SaveToFile
 Сохраняет двоичное содержимое [потока](./stream-object-ado.md) в файл.  
@@ -44,7 +44,7 @@ Stream.SaveToFile FileName, SaveOptions
 > [!NOTE]
 >  Если перезаписать существующий файл (когда **адсавекреатеоверврите** установлен), **SaveToFile** усекает все байты из исходного существующего файла, который соответствует новому [EOS](./eos-property.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **SaveToFile** может использоваться для копирования содержимого объекта **потока** в локальный файл. Содержимое или свойства объекта **Stream** не изменяются. Перед вызовом **SaveToFile** объект **потока** должен быть открытым.  
   
  Этот метод не изменяет связь объекта **потока** с базовым источником. Объект **потока** по-прежнему будет связан с исходным URL-адресом или **записью** , которая была источником при открытии.  
