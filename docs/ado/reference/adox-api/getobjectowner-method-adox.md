@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8965adf0-9075-4125-8142-73eb700029c3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a23921220da6cd91d2af8b8f7aac5197301c9175
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8657feb52c09f8d4ef04517985201d9a2aa8f80c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172082"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054209"
 ---
 # <a name="getobjectowner-method-adox"></a>Метод GetObjectOwner (ADOX)
 Возвращает владельца объекта в [каталоге](./catalog-object-adox.md).  
@@ -45,9 +45,9 @@ Owner = Catalog.GetObjectOwner(ObjectName, ObjectType [,ObjectTypeId])
  Значение типа **Long** , которое может быть одной из констант [обжекттипинум](./objecttypeenum.md) , указывающее тип объекта, для которого необходимо получить владельца.  
   
  *обжекттипеид*  
- Необязательный параметр. Значение **типа Variant** , указывающее идентификатор GUID для типа объекта поставщика, не определенного спецификацией OLE DB. Этот параметр является обязательным, если для *ObjectType* задано значение **адпермобжпровидерспеЦифик**. в противном случае он не используется.  
+ Необязательный элемент. Значение **типа Variant** , указывающее идентификатор GUID для типа объекта поставщика, не определенного спецификацией OLE DB. Этот параметр является обязательным, если для *ObjectType* задано значение **адпермобжпровидерспеЦифик**. в противном случае он не используется.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если поставщик не поддерживает возврат владельцев объектов, возникнет ошибка.  
   
 ## <a name="applies-to"></a>Применение  

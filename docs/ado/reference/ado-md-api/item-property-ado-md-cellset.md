@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6d2fe7bb3d13b988b7bc25b6d3f17a5b2ccf945a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 0fc6d2650619ef0647f32af9101c3e0c895e300a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164536"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054569"
 ---
 # <a name="item-property-ado-md-cellset"></a>Свойство Item (многомерный объект ADO Cellset)
 Извлекает ячейку из набора [ячеек](./cellset-object-ado-md.md) , используя ее координаты.  
@@ -45,7 +45,7 @@ Cell = Cellset.Item ( Positions)
   
 -   Порядковый номер  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Свойство **Item** используется для возвращения объекта [ячейки](./cell-object-ado-md.md) в объекте набора [ячеек](./cellset-object-ado-md.md) . Если свойству **Item** не удается найти ячейку, соответствующую аргументу *Positions* , возникает ошибка.  
   
  Свойство **Item** является свойством по умолчанию для объекта набора **ячеек** . Следующие формы синтаксиса взаимозаменяемы:  

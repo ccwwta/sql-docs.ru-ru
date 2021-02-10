@@ -42,12 +42,12 @@ helpviewer_keywords:
 ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83ef51697cd3ad1ad1a01355baead5d90788813f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 51373d1eee3613366c39bd3d18a9f479a0d046c6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171998"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053998"
 ---
 # <a name="name-property-adox"></a>Свойство Name (ADOX)
 Указывает имя объекта.  
@@ -55,7 +55,7 @@ ms.locfileid: "99171998"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает **строковое** значение.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Имена не обязательно должны быть уникальными в пределах коллекции.  
   
  Свойство **Name** доступно для чтения и записи в объектах [столбца](./column-object-adox.md), [группы](./group-object-adox.md), [ключа](./key-object-adox.md), [индекса](./index-object-adox.md), [таблицы](./table-object-adox.md)и [пользователя](./user-object-adox.md) . Свойство **Name** доступно только для чтения в объектах [каталога](./catalog-object-adox.md), [процедуры](./procedure-object-adox.md)и [представления](./view-object-adox.md) .  

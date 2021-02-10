@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 927bcf3e-32f5-4a80-98d3-600779f0732e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b1c3734ad88b72a2f7779b37c97c4b7c4863c12
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: fec4b21cf4aa619fba72f5d62fff7f6e34506de5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164102"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053879"
 ---
 # <a name="procedure-object-adox"></a>Объект Procedure (ADOX)
 Представляет хранимую процедуру. При использовании в сочетании с объектом [команды](../ado-api/command-object-ado.md) ADO объект **процедуры** можно использовать для добавления, удаления или изменения хранимых процедур.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Объект **процедуры** позволяет создать хранимую процедуру, не зная и не используя синтаксис создания процедуры поставщика.  
   
  Свойства объекта **процедуры** позволяют:  

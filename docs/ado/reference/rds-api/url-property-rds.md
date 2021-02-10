@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c56b233-1be8-442c-8d0e-a4c96465bc99
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1a780d7790568950833cb177f6ba87bd18ebd409
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9311cd62d8aa938e7b26ffc1052ed9335114aa90
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166068"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100052805"
 ---
 # <a name="url-property-rds"></a>Свойство URL (служба удаленных рабочих столов)
 Указывает строку, содержащую относительный или абсолютный URL-адрес.  
@@ -38,13 +38,13 @@ Run time: DataControl.URL="Server"
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Сервер*  
+ *Server*  
  **Строковое** значение, содержащее допустимый URL-адрес.  
   
  *DataControl*  
  Объектная переменная, представляющая объект- **элемент управления** .  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Как правило, URL-адрес определяет файл Active Server страницы (. ASP), который может создавать и возвращать [набор записей](../ado-api/recordset-object-ado.md). Таким образом, пользователь может получить **набор записей** , не выполняя серверный объект [факта](./datafactory-object-rdsserver.md) на стороне сервера, или запрограммировать пользовательский бизнес-объект.  
   
  Если свойство **URL** задано, [SubmitChanges](./submitchanges-method-rds.md) отправит изменения в расположение, указанное URL-адресом.  

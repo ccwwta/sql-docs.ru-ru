@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c24b191e11f95428b80a9ecfb3cced4f605e3e76
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: c293915a847a150719754c1df0f9389be3efb863
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166094"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100052915"
 ---
 # <a name="sql-property"></a>Свойство SQL
 Указывает строку запроса, используемую для получения [набора записей](../ado-api/recordset-object-ado.md).  
@@ -44,7 +44,7 @@ Run time: DataControl.SQL = "QueryString"
  *DataControl*  
  Объектная переменная, представляющая **RDS. Объект элемента управления** .  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Как правило, это инструкция SQL (с использованием диалекта сервера базы данных), например `"Select * from NewTitles"` . Чтобы гарантировать точное сопоставление и обновление записей, обновляемый запрос должен содержать поле, отличное от длинного бинарного поля или вычисленного поля.  
   
  Свойство **SQL** является необязательным, если пользовательский бизнес-объект на стороне сервера получает данные для клиента.  

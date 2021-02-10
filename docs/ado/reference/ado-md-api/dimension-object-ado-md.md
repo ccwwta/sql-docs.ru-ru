@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8a8738c6e5143a8fc23da2c008a01b28db36ee04
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 311ea31a50bb9004425ad8db14c1beb309e15eb0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99174280"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054809"
 ---
 # <a name="dimension-object-ado-md"></a>Объект Dimension (многомерные объекты ADO)
 Представляет одно из измерений многомерного куба, содержащего одну или несколько иерархий элементов.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  С помощью коллекций и свойств объекта **Dimension** можно выполнять следующие действия.  
   
 -   Определяет **измерение** с помощью свойств [Name](./name-property-ado-md.md) и [UniqueName](./uniquename-property-ado-md.md) .  
@@ -39,7 +39,7 @@ ms.locfileid: "99174280"
   
  Коллекция **Properties** содержит свойства, предоставляемые поставщиком. В следующей таблице перечислены свойства, которые могут быть доступны. Фактический список свойств может отличаться в зависимости от реализации поставщика. Более полный список доступных свойств см. в документации поставщика.  
   
-|name|Описание|  
+|Имя|Описание|  
 |----------|-----------------|  
 |CatalogName|Имя каталога, которому принадлежит куб.|  
 |CubeName|Имя куба.|  

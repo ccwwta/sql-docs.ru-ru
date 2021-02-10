@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 148e889a4b9ac406732a5665d02dd9d52727b6ed
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a7ec4676ae96b1caf5e7561b90d5930a3b07d378
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99168955"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053175"
 ---
 # <a name="executeoptions-property-rds"></a>Свойство ExecuteOptions (служба удаленных рабочих столов)
 Указывает, включено ли асинхронное выполнение.  
@@ -38,7 +38,7 @@ ms.locfileid: "99168955"
 > [!NOTE]
 >  Каждый исполняемый файл, использующий эти константы, должен предоставлять объявления для них. Вы можете вырезать и вставить объявления констант из файла Адквбс. Inc, расположенного в папке установки по умолчанию для библиотеки RDS.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если для **ексекутеоптионс** задано значение **адцексекасинк**, то асинхронно выполняет следующий вызов **Refresh** в [RDS.](./datacontrol-object-rds.md) **Набор записей** объекта данных.  
   
  При попытке вызвать метод [Reset](./reset-method-rds.md), [Refresh](./refresh-method-rds.md), [SubmitChanges](./submitchanges-method-rds.md), [CancelUpdate](../ado-api/cancelupdate-method-ado.md)или [Recordset](./recordset-sourcerecordset-properties-rds.md) , пока другая асинхронная операция может изменить [RDS.](./datacontrol-object-rds.md) Выполняется **набор записей** объекта "элемент управления", возникает ошибка.  

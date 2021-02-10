@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d162b0291a19a80ec0133307c785ad3af588aee
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 4fa32ebcb641623f9a9ceb30ad30d12a949ba84b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99168885"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053085"
 ---
 # <a name="invokeservice-rds"></a>InvokeService (служба удаленных рабочих столов)
 Возвращает указатель на запрошенный интерфейс в более совместимой версии объекта.  
@@ -50,7 +50,7 @@ object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown*
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение HRESULT, указывающее, был ли успешно вызван метод **инвокесервице** .  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Реализация обработчика курсора RDS **инвокесервице** принимает входной набор строк (или несколько результатов), заполняет обработчик курсора из входного набора строк, а затем возвращает указатель на себя.  
   
 ## <a name="applies-to"></a>Применение  

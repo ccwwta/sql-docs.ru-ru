@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a6d74000-0828-49ba-850a-63da865f8802
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ba2064096c36bf6490daa8d472801de7594cfdcc
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 984b87be8bdf188abc0c0e48153a54806af93f88
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164018"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053485"
 ---
 # <a name="table-object-adox"></a>Объект Table (ADOX)
 Представляет таблицу базы данных, включая столбцы, индексы и ключи.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Следующий код создает новую **таблицу**:  
   
 ```  

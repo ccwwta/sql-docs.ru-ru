@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bf3b4466-9a0b-446e-9e04-fed944e3a493
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 225ae29d2fa74d6788115a921590c669c7bb3ba0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: f864868d3ad1bb4474b0640862aef20a3f187e4b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164522"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054529"
 ---
 # <a name="levelname-property-ado-md"></a>Свойство LevelName (многомерные объекты ADO)
 Указывает имя уровня [элемента](./member-object-ado-md.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "99164522"
 ## <a name="return-values"></a>Возвращаемые значения  
  Возвращает **строку** и доступна только для чтения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте свойство **LevelName** , чтобы получить имя уровня, которому принадлежит элемент. Это соответствует свойству [Name](./name-property-ado-md.md) объекта [Level](./level-object-ado-md.md) .  
   
 ## <a name="applies-to"></a>Применение  

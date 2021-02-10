@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7562c5ddc3a8360f2c8672e7526c86b7f77af04d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 4829eadfc91be74ae3f487d9f315162788b7ca0e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99168907"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053125"
 ---
 # <a name="handler-property-rds"></a>Свойство Handler (служба удаленных рабочих столов)
 Указывает имя программы настройки на стороне сервера (обработчик), которая расширяет функциональные возможности [RDSServer.](./datafactory-object-rdsserver.md)данных и всех параметров, используемых *обработчиком*.  
@@ -43,7 +43,7 @@ DataControl.Handler = String
  *String*  
  **Строковое** значение, содержащее имя обработчика и все параметры, разделенные запятыми (например, `"handlerName,parm1,parm2,...,parm` *N* `"` ).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Это свойство поддерживает [настройку](../../guide/remote-data-service/datafactory-customization.md), которая требует установки свойства [CursorLocation](../ado-api/cursorlocation-property-ado.md) в значение **адусеклиент**.  
   
  Имя обработчика и его параметров, если таковые имеются, разделяются запятыми (","). Непредсказуемое поведение приведет к тому, что точка с запятой (";") появляется в любом месте *строки*. Вы можете написать собственный обработчик, если он поддерживает интерфейс **идатафакторихандлер** .  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 20f2480f-3758-405d-a379-05a0dce74796
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0826d80d786f6f6e944c284422e2a891b509025c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ae851f55696232f5bb11e38bfdfc3d0f44ed6709
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99163705"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053046"
 ---
 # <a name="query-method-rds"></a>Метод Query (служба удаленных рабочих столов)
 Использует допустимую строку SQL-запроса для возврата [набора записей](../ado-api/recordset-object-ado.md).  
@@ -47,7 +47,7 @@ Set Recordset = DataFactory.Query(Connection, Query)
  *Запрос*  
  **Строка** , содержащая SQL-запрос.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В запросе должен использоваться диалект SQL сервера базы данных. Если с выполненным запросом возникла ошибка, возвращается состояние результата. Метод **Query** не выполняет проверку синтаксиса строки **запроса** .  
   
 ## <a name="applies-to"></a>Применение  

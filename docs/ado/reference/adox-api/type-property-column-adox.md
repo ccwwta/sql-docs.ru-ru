@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5c6718b6-f728-478a-8afb-5d17b0a91d1f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 77d7bcf4ddc6beb29dc04513952050c8ba042c55
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 520087ef5d1afc2024fa5b64fc259cd8ef35439a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99163996"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053465"
 ---
 # <a name="type-property-column-adox"></a>Свойство Type (Column) (ADOX)
 Указывает тип данных столбца.  
@@ -33,7 +33,7 @@ ms.locfileid: "99163996"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает **длинное** значение, которое может быть одной из констант [дататипинум](../ado-api/datatypeenum.md) . Значение по умолчанию — **адварвчар**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Это свойство доступно для чтения и записи до тех пор, пока объект [столбца](./column-object-adox.md) не будет добавлен к коллекции или другому объекту, после чего он доступен только для чтения.  
   
 ## <a name="applies-to"></a>Применение  

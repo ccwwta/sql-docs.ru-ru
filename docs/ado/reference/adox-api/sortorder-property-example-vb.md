@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 09ecc9649da8d080ac0fc1dbde4f26cc850907e5
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: dd66a90a039531ec3aeeaa78ed0bea5716f39d0d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164032"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053495"
 ---
 # <a name="sortorder-property-example-vb"></a>Пример свойства SortOrder (Visual Basic)
 В этом примере демонстрируется свойство [SortOrder](./sortorder-property-adox.md) [столбца](./column-object-adox.md) , добавленного к коллекции [Columns](./columns-collection-adox.md) [индекса](./index-object-adox.md). Код добавляет индекс по возрастанию к столбцу Country в таблице **Employees** , а затем отображает записи. Затем код добавляет нисходящий индекс к столбцу Country в таблице **Employees** и снова отображает записи. Отображается разность между индексами по возрастанию и убыванию.  

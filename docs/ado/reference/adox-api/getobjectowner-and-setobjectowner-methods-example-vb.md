@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e44ec3d4-42ae-447d-aaed-bdea53cb0cca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 34e056c23c7192ba1e9d2810df88bb5f0e1a20aa
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8c5b5125f65eec46818ba4d43c8b305f6d82d964
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172085"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054219"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vb"></a>Примеры методов GetObjectOwner и SetObjectOwner (Visual Basic)
 В этом примере демонстрируются методы [примеры методов getobjectowner](./getobjectowner-method-adox.md) и [SetObjectOwner](./setobjectowner-method.md) . В этом коде предполагается наличие учетной записи группы (см. Дополнительные сведения о добавлении этой группы в систему в разделе [группы и пользователи добавим, метод ChangePassword (VB)](./groups-and-users-append-changepassword-methods-example-vb.md) ). Владелец таблицы Categories имеет значение Accounting.  

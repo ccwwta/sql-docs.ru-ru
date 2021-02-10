@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 24eb03ba-ccfd-4353-b6af-03586b2da6fd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bb91a09167b10a7b5b1f969e2d0775f6ced31a4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 09f5306f6df62792f8be42ed06081596682ca0bd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99168934"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053155"
 ---
 # <a name="filtercriterion-property-rds"></a>Свойство FilterCriterion (служба удаленных рабочих столов)
 Указывает оператор вычисления для использования в значении фильтра.  
@@ -41,7 +41,7 @@ DataControl.FilterCriterion = String
  *String*  
  **Строковое** значение, указывающее оператор вычисления [FilterValue](./filtervalue-property-rds.md) для записей. Может быть одним из следующих: <, \<=, > , >=, = или <>.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Свойства [sortColumn](./sortcolumn-property-rds.md), [SortDirection](./sortdirection-property-rds.md), [FilterValue](./filtervalue-property-rds.md), **филтеркритерион** и [филтерколумн](./filtercolumn-property-rds.md) предоставляют функции сортировки и фильтрации кэша на стороне клиента. Функция сортировки упорядочивает записи по значениям из одного столбца. Функция фильтрации отображает подмножество записей на основе критериев поиска, а полный [набор записей](../ado-api/recordset-object-ado.md) сохраняется в кэше. Метод [Reset](./reset-method-rds.md) выполнит условия и заменит текущий **набор** записей на обновляемый **набор записей**.  
   
  Оператор "! =" недопустим для **филтеркритерион**; Вместо этого используйте "<>".  

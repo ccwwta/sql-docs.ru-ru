@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee407e03-4889-4a22-b031-ca542d637c96
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eea25b680f578035ae4ca1f4c2dcdf8b1bbe6fdf
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2dcc8a9e84f06665f90e22f0c034f8223af2ff1a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169352"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054089"
 ---
 # <a name="indexnulls-property-example-vc"></a>Пример свойства IndexNulls (Visual C++)
 В этом примере демонстрируется свойство [IndexNulls](./indexnulls-property-adox.md) [индекса](./index-object-adox.md). Код создает новый индекс и задает значение **IndexNulls** на основе введенных пользователем данных. Затем **индекс** добавляется в [таблицу](./table-object-adox.md) **Employees** в [каталоге](./catalog-object-adox.md) *Northwind* . Новый **индекс** применяется к [набору записей](../ado-api/recordset-object-ado.md) , основанному на таблице **Employees** , и открывается **набор записей** . В таблицу **Employees** добавляется новая запись со значением **null** в индексированном поле. Отображается ли эта новая запись, зависит от значения свойства **IndexNulls** .  

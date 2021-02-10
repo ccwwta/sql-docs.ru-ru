@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: e6b6e3a4-8952-4d79-81f4-51019c338374
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8a7646288bfb2736671f58a2b158f6047476dbc2
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 67d50c34c55543d0ddb870ad6ba5a1fd8cbd5f11
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172112"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054249"
 ---
 # <a name="delete-method-adox-collections"></a>Метод Delete (коллекции ADOX)
 Удаляет объект из коллекции.  
@@ -52,7 +52,7 @@ Collection.Delete Name
  *Имя*  
  **Значение типа Variant** , указывающее имя или порядковый номер объекта, который нужно удалить.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если *имя* не существует в коллекции, возникнет ошибка.  
   
  Для коллекций [таблиц](./tables-collection-adox.md) и [пользователей](./users-collection-adox.md) возникнет ошибка, если поставщик не поддерживает удаление таблиц или пользователей соответственно. Для [процедур](./procedures-collection-adox.md) и коллекций [представлений](./views-collection-adox.md) команда **Delete** завершится ошибкой, если поставщик не поддерживает сохранение команд.  

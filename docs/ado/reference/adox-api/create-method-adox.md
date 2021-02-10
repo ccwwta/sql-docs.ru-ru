@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 64f5c21c-b581-42d8-bdc7-c4f1bebaf105
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b44be7497ca6952dd88d6f18ac0b42a6c989db36
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 364af90384476b8da388c5ea5f5bfc8467ca97e5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172206"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054319"
 ---
 # <a name="create-method-adox"></a>Метод Create (ADOX)
 Создает новый каталог.  
@@ -38,7 +38,7 @@ Catalog.Create ConnectString
  *ConnectString*  
  **Строковое** значение, используемое для подключения к источнику данных.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Метод **CREATE** создает и открывает новое [соединение](../ado-api/connection-object-ado.md) ADO с источником данных, указанным в *ConnectString*. В случае успеха новый объект **Connection** назначается свойству [ActiveConnection](./activeconnection-property-adox.md) .  
   
  Если поставщик не поддерживает создание новых каталогов, возникнет ошибка.  

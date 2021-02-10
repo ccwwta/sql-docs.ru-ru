@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 30185312-5e09-4804-852d-e505d660113a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e42da0195d1e95bbeac1939d69b23f9955ad4677
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 7840578ef9ba40df97103bf22e2de2efafdb7067
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169264"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053889"
 ---
 # <a name="primarykey-property-adox"></a>Свойство PrimaryKey (ADOX)
 Указывает, представляет ли индекс первичный ключ в таблице.  
@@ -33,7 +33,7 @@ ms.locfileid: "99169264"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает и возвращает **логическое** значение.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Значение по умолчанию равно **False**.  
   
  Это свойство доступно только для чтения в объектах [индекса](./index-object-adox.md) , уже добавленных в коллекцию.  

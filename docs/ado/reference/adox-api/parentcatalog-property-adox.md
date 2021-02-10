@@ -41,12 +41,12 @@ helpviewer_keywords:
 ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 720d3f5a04d17664b7fa486d084a9d443bd5f2e4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: bda5a8fb248b4794f860d5bbb65e0c268ed3d534
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169300"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053959"
 ---
 # <a name="parentcatalog-property-adox"></a>Свойство ParentCatalog (ADOX)
 Указывает родительский каталог объекта таблицы, пользователя или столбца, который предоставляет доступ к свойствам, зависящим от поставщика.  
@@ -54,7 +54,7 @@ ms.locfileid: "99169300"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает и возвращает объект [каталога](./catalog-object-adox.md) . Установка **ParentCatalog** в открытый **Каталог** предоставляет доступ к свойствам, зависящим от поставщика, до добавления таблицы или столбца в коллекцию **каталогов** .  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Некоторые поставщики данных позволяют записывать значения свойств, определяемые поставщиком, только при их создании: то есть когда таблица или столбец добавляются в коллекцию **каталогов** . Чтобы получить доступ к этим свойствам перед добавлением этих объектов в **Каталог**, сначала укажите **Каталог** в свойстве **ParentCatalog** .  
   
  Ошибка возникает при добавлении таблицы или столбца к **каталогу** , отличному от каталога **ParentCatalog**.  

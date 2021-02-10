@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: cdb31c76-e559-475c-b33a-aac24f73e70e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6e3369e181577214a9e4b430dded19110744eb0d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 08bb9e7bb82484080f969bce5e817a1d21724809
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169316"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054039"
 ---
 # <a name="keys-collection-adox"></a>Коллекция Keys (ADOX)
 Содержит все [Ключевые](./key-object-adox.md) объекты [таблицы](./table-object-adox.md).  
   
-## <a name="remarks"></a>Замечания  
- Метод [append](./append-method-adox-keys.md) для [коллекции Keys]() уникален для ADOX. Вы можете выполнить следующие действия:  
+## <a name="remarks"></a>Remarks  
+ Метод [append](./append-method-adox-keys.md) для [коллекции Keys]() уникален для ADOX. Вы можете выбрать один из следующих вариантов.  
   
 -   Добавьте новый ключ в коллекцию с помощью метода [append](./append-method-adox-keys.md) .  
   
- Остальные свойства и методы являются стандартными для коллекций ADO. Вы можете выполнить следующие действия:  
+ Остальные свойства и методы являются стандартными для коллекций ADO. Вы можете выбрать один из следующих вариантов.  
   
 -   Доступ к ключу в коллекции со свойством [Item](../ado-api/item-property-ado.md) .  
   

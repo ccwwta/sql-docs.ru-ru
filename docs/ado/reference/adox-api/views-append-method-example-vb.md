@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b5b4c082-ac29-4f49-a8b8-e21b554c9b0d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f4c065edf9e779887e38f4c09634f6a0bc6a58c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 1cc2df470b2b51176cd44433359cf74d31c36863
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99163934"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100053385"
 ---
 # <a name="views-append-method-example-vb"></a>Пример метода Append коллекции Views (Visual Basic)
 В следующем коде показано, как использовать объект [Command](../ado-api/command-object-ado.md) и метод [append](./append-method-adox-views.md) коллекции [views](./views-collection-adox.md) для создания нового представления в базовом источнике данных.  
