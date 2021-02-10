@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 62e20e03-50cc-4ac8-8072-524d194d2ec3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c72a996ac72c8c595e58818bd8901707a3cb8adc
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: b4e1dad1b2c2265dcb83e18309d5716864c0d63f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91984970"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044564"
 ---
 # <a name="find-databases-wizard-verify-selection-accesstosql"></a>Мастер поиска баз данных (проверка выбора) (Акцесстоскл)
 На странице Проверка выбора мастера поиска баз данных перечислены файлы, которые будут добавлены в SSMA. Если список файлов неверен, нажмите кнопку **назад** , чтобы изменить список. В противном случае нажмите кнопку **"Готово"** , чтобы добавить файлы.  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 4b8f84909de05efc5d53b924eb298adcaab93d7f
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: b7653d131ca9f345353de46b2579735a527bca5a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985037"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044934"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>Создание файлов переменных значений (Акцесстоскл)
 Файл значений переменных — это XML-файл, состоящий из значений параметров команд (таких как имя исходного или целевого сервера), которые часто меняются при миграции сервера. При выполнении большого количества миграций баз данных создаются несколько переменных файлов для хранения значений каждого исходного сервера и на них указывают ссылки в файле главного сценария с помощью параметра **-v** в командной строке. Это поведение помогает поддерживать статические значения в нескольких файлах скриптов с переменными значениями в нескольких файлах переменных.  
@@ -94,5 +94,5 @@ ms.locfileid: "91985037"
 ## <a name="next-step"></a>Следующий шаг  
 Следующий шаг в работе консоли — [Создание файлов подключения к серверу &#40;акцесстоскл&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также раздел  
 [Создание файлов подключения к серверу (доступ)](./creating-the-server-connection-files-accesstosql.md)  

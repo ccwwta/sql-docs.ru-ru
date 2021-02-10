@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 05ae3f5a-a0c1-459d-aa7d-ed7f3b2ecd60
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80215c133895804264ad7be586faeaf7cfcc4180
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: fdbecc77e8a86f2135c6b12fd9fbf6a4727c31cd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170907"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041864"
 ---
 # <a name="item-property-example-vc"></a>Пример свойства Item (Visual C++)
-В этом примере показано, как свойство [Item](./item-property-ado.md) получает доступ к членам коллекции. В этом примере открывается таблица ***authors** _ базы данных _*_pubs_*_ с параметризованной командой.  
+В этом примере показано, как свойство [Item](./item-property-ado.md) получает доступ к членам коллекции. В этом примере открывается таблица ***authors** _ базы данных _ *_pubs_** с параметризованной командой.  
   
  Доступ к параметру в команде, выданной для базы данных, осуществляется из коллекции [параметров](./parameters-collection-ado.md) объекта [Command](./command-object-ado.md) по индексу и имени. Затем к полям возвращаемого [набора записей](./recordset-object-ado.md) обращаются из коллекции [полей](./fields-collection-ado.md) этого объекта по индексу и имени.  
   
@@ -82,7 +82,7 @@ void ItemX() {
       Column[7] = "zip";  
       Column[8] = "contract";  
   
-      _bstr_t strText("SELECT _ FROM authors WHERE state = ?");  
+      _bstr_t strText("SELECT * FROM authors WHERE state = ?");  
       pCmd->CommandText = strText;  
   
       pPrm = pCmd->CreateParameter("ItemXparm", adChar, adParamInput, 2, "CA");  

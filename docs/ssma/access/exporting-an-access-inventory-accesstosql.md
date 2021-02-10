@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 112452e9e6c31810dbf26d9aa1e7b36959c192d5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 10bff5f86bec26994c143195fcbb97aa30ba709e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488337"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044774"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Экспорт инвентаризации доступа (Акцесстоскл)
 Если у вас есть несколько баз данных Access и вы не уверены, какие из них нужно перенести [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , можно экспортировать учет всех баз данных Access в проекте. Затем можно просматривать и запрашивать метаданные инвентаризации, чтобы определить, какие базы данных и объекты в этих базах данных нужно перенести. Эта Инвентаризация позволяет быстро находить ответы на вопросы, например следующие:  

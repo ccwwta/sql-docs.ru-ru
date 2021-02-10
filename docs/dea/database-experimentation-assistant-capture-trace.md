@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: e335170c97f18039767fab8bf0b8400ce9f9b45d
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 9bc1dafd5242dc4be8a9a2947465ed48a01fcb8d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643764"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100042424"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Запись трассировки в Database Experimentation Assistant
 
@@ -80,7 +80,7 @@ Database Experimentation Assistant (ДЕА) можно использовать 
 
 В следующей таблице перечислены события и соответствующие данные столбцов, которые ДЕА собирает для трассировок.
   
-|Название мероприятия|Текстовые данные (1)|Двоичные данные (2)|Идентификатор базы данных (3)|Имя узла (8)|Имя приложения (10)|Имя для входа (11)|SPID (12)|Время начала (14)|Время окончания (15)|Имя базы данных (35)|Последовательность событий (51)|Система (60)|  
+|Имя события|Текстовые данные (1)|Двоичные данные (2)|Идентификатор базы данных (3)|Имя узла (8)|Имя приложения (10)|Имя для входа (11)|SPID (12)|Время начала (14)|Время окончания (15)|Имя базы данных (35)|Последовательность событий (51)|Система (60)|  
 |---|---|---|---|---|---|---|---|---|---|---|---|---|  
 |**RPC: завершено (10)**||*|*|*|*|*|*|*|*|*|*|*|  
 |**RPC: запуск (11)**||*|*|*|*|*|*|*||*|*|*|  

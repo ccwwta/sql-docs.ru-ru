@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec0b77ba5588ffb13420970a41036e40757af51e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b1b3b375158bb8d296c9010caab900db4791fcec
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167165"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041844"
 ---
 # <a name="loadfromfile-method-ado"></a>Метод LoadFromFile (ADO)
 Загружает содержимое существующего файла в [поток](./stream-object-ado.md).  
@@ -37,7 +37,7 @@ Stream.LoadFromFileFileName
  *FileName*  
  **Строковое** значение, содержащее имя файла, загружаемого в **поток**. Имя *файла* может содержать любой допустимый путь и имя в формате UNC. Если указанный файл не существует, возникает ошибка времени выполнения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод можно использовать для загрузки содержимого локального файла в объект **потока** . Это можно использовать для передачи содержимого локального файла на сервер.  
   
  Перед вызовом **лоадфромфиле** объект **потока** должен быть уже открыт. Этот метод не изменяет привязку объекта **потока** ; Он по-прежнему будет привязан к объекту, указанному в URL-адресе или **записи** , с которой был первоначально открыт **поток** .  

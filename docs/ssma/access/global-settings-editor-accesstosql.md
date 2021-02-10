@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5a0abfda-912a-4dfc-acf7-0e0a6cae15c5
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 0d603037d791002ebbdee50dcb7c90e99fdd8e68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bf7f85632245fc9d4656a1fb27faf6e95b3ac6e7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472554"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044454"
 ---
 # <a name="global-settings-editor-accesstosql"></a>Глобальные параметры (редактор) (Акцесстоскл)
 Используйте страницу редактор диалогового окна **глобальные параметры** , чтобы указать параметры для окон редактора кода.  

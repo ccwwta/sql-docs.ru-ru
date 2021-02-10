@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0ae6b59ffe896180f5977288bbee16925b7d33b4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 3e87e7ae8592afc67b049fb25c4e66392f45eb89
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170914"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041904"
 ---
 # <a name="item-property-ado"></a>Свойство Item (ADO)
 Указывает конкретный элемент коллекции по имени или порядковому номеру.  
@@ -69,7 +69,7 @@ Set object = collection.Item ( Index )
  *Index*  
  Выражение **типа Variant** , результатом которого является либо имя, либо порядковый номер объекта в коллекции.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Свойство **Item** используется для возврата определенного объекта в коллекции. Если **элемент** не может найти объект в коллекции, соответствующей аргументу *index* , возникает ошибка. Кроме того, некоторые коллекции не поддерживают именованные объекты. для этих коллекций необходимо использовать ссылки на порядковые номера.  
   
  Свойство **Item** является свойством по умолчанию для всех коллекций; Поэтому следующие формы синтаксиса являются взаимозаменяемыми:  

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: ssma
-ms.openlocfilehash: 1d28458896d4ae4806db1b0f705c5e33badddfb7
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fb21fdc7da82d6dae2390ddcf0884ea1e8ac8a58
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932755"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044394"
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>Перенос схемы Oracle в SQL Server 2017 в Linux с Помощник по миграции SQL Server
 
@@ -77,9 +77,9 @@ ms.locfileid: "87932755"
 
 Чтобы создать отчет о миграции, выполните следующие действия.
 
-1. В **обозревателе метаданных Oracle**разверните узел сервера.
+1. В **обозревателе метаданных Oracle** разверните узел сервера.
 
-1. Разверните узел **схемы**, щелкните правой кнопкой мыши элемент **HR**и выберите команду **создать отчет**.
+1. Разверните узел **схемы**, щелкните правой кнопкой мыши элемент **HR** и выберите команду **создать отчет**.
 
    ![Отчет о создании отчета в обозревателе метаданных Oracle](./media/sql-server-linux-convert-from-oracle/CreateReport.png)
 
@@ -98,7 +98,7 @@ ms.locfileid: "87932755"
 
 ## <a name="convert-schema"></a>Преобразовать схему
 
-Щелкните правой кнопкой мыши пункт **HR** в **обозревателе метаданных Oracle**и выберите команду Преобразовать схему.
+Щелкните правой кнопкой мыши пункт **HR** в **обозревателе метаданных Oracle** и выберите команду Преобразовать схему.
 
 ![Преобразовать схему](./media/sql-server-linux-convert-from-oracle/ConvertSchema.png)
 
@@ -116,7 +116,7 @@ ms.locfileid: "87932755"
 
 Последним шагом является перенос данных.
 
-1. В **обозревателе метаданных Oracle**щелкните правой кнопкой мыши пункт **HR**и выберите пункт **перенести данные**.
+1. В **обозревателе метаданных Oracle** щелкните правой кнопкой мыши пункт **HR** и выберите пункт **перенести данные**.
 
 1. Шаг переноса данных требует повторного ввода учетных данных Oracle и SQL Server.
 

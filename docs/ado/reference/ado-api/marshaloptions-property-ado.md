@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 390c8abf-133e-40da-8b99-8f748a983e4f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2d825a56123965fa95605e913354f6ea34db04ea
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8797d968a342a8e68f3d3c3e19319d6a1bdc2505
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170874"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041804"
 ---
 # <a name="marshaloptions-property-ado"></a>Свойство MarshalOptions (ADO)
 Указывает, какие записи [набора записей](./recordset-object-ado.md) необходимо маршалировать обратно на сервер.  
@@ -29,7 +29,7 @@ ms.locfileid: "99170874"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает значение [маршалоптионсенум](./marshaloptionsenum.md) . Значение по умолчанию — **адмаршалалл**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  При использовании [набора записей](./recordset-object-ado.md)на стороне клиента записи, которые были изменены на клиенте, записываются обратно на средний уровень или на веб-сервер с помощью метода, называемого упаковкой, процесс упаковки и отправки параметров метода интерфейса через границы потока или процесса. Установка свойства **MarshalOptions** может повысить производительность при передаче измененных удаленных данных для обновления на среднем уровне или на веб-сервере.  
   
 > [!NOTE]

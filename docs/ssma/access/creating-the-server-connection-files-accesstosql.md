@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 20c47935963473b7b6aced7d6b3eed4a53afbeac
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 9d956167cd6a4cea41d9381996a0418b2cd5f4c3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987520"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044944"
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>Создание файлов подключения к серверу (Акцесстоскл)
 Сведения о сервере можно указать в разделе Servers файла скрипта. Сведения о сервере также можно указать в отдельном файле соединения сервера. Параметр командной строки для файла соединения с сервером — `-c <serverconnectionfile>` . Если один и тот же идентификатор сервера имеется в файлах соединения скрипта и сервера, то считается, что определение сервера в файле сценария.  
@@ -67,5 +67,5 @@ ms.locfileid: "91987520"
 ## <a name="next-step"></a>Следующий шаг  
 Следующий шаг в работе консоли заключается [в выполнении консоли SSMA &#40;акцесстоскл&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также раздел  
 [Запуск консоли SSMA (доступ)](./executing-the-ssma-console-accesstosql.md)  

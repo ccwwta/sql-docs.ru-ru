@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 973d2ec0a740e07aac94a4f44ab08051294d5128
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 55b92abd659ccfd0ebba21091764d53e7fc0614d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985015"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044662"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>Мастер поиска баз данных (выбор файлов) (Акцесстоскл)
 На странице Выбор файлов мастера поиска баз данных перечислены файлы, найденные во время поиска. Чтобы выбрать файл для добавления в SSMA, выберите строку, содержащую имя файла. Завершив выбор файлов, нажмите кнопку **Далее** , чтобы просмотреть страницу Проверка выбора.  
@@ -42,10 +42,10 @@ ms.locfileid: "91985015"
 **Путь к файлу**  
 Отображает путь к файлу базы данных Access.  
   
-**Размер**  
+**Size**  
 Размер базы данных в байтах.  
   
-**Создан**  
+**Создано**  
 Дата и время создания базы данных.  
   
 **Изменен**  

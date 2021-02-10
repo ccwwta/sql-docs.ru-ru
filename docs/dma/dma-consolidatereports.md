@@ -14,24 +14,24 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4d1bcf2cdc9997ea33be87184c38447b7cd62973
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: c2804bbc185a3aa17d7f50d85b9ef6c2cc84d002
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98091610"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100044651"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Оценка предприятия и объединение оценки с помощью DMA
 
 Следующие пошаговые инструкции помогут вам использовать Помощник по миграции данных для успешной масштабируемой оценки обновления локальной SQL Server или SQL Server, выполняющихся на виртуальных машинах Azure, или для миграции в базу данных SQL Azure.
 
-## <a name="prerequisites"></a>Предварительные условия
+## <a name="prerequisites"></a>Предварительные требования
 
 - Укажите компьютер средств в сети, с которого будет инициирован канал DMA. Убедитесь, что этот компьютер подключен к SQL Serverным целям.
 - Скачайте и установите следующие компоненты:
   - [Помощник по миграции данных](https://www.microsoft.com/download/details.aspx?id=53595) версии 3.6 или выше.
   - [PowerShell](https://aka.ms/wmf5download) версии 5.0 или более поздней.
-  - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) версии 4.5 или выше.
+  - [Платформа .NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) версии 4.5 или выше.
   - [SSMS](../ssms/download-sql-server-management-studio-ssms.md) 17,0 или более поздней версии.
   - [Power BI Desktop](/power-bi/fundamentals/desktop-get-the-desktop).
   - [Модули Azure PowerShell](/powershell/azure/install-az-ps).
@@ -110,7 +110,7 @@ ms.locfileid: "98091610"
 
 - ServerName
 - InstanceName
-- Port
+- Порт
 - ассессментфлаг
 
 ![Снимок экрана SQL Server содержимого таблицы при использовании инвентаризации экземпляра.](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)

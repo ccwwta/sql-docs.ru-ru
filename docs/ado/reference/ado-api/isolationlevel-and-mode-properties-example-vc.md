@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 29ef200146cdd048375c815e426f3d208095238f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ea7af1176e4fb123df44f1640107b7c7ad345309
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167212"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100041924"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>Пример свойств IsolationLevel и Mode (Visual c++)
 В этом примере свойство [mode](./mode-property-ado.md) используется для открытия монопольного соединения, а свойство [IsolationLevel](./isolationlevel-property.md) — для открытия транзакции, которая выполняет изоляцию других транзакций.  
