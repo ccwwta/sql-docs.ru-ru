@@ -21,12 +21,12 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current
-ms.openlocfilehash: 8580ae3857b4c8c7f54599e70134879a076e89ca
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 1044577add08fe1c9d6337f67244a185d98db8e4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99131367"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065568"
 ---
 # <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys.dm_user_db_resource_governance (Transact-SQL)
 
@@ -95,7 +95,7 @@ ms.locfileid: "99131367"
 
 Для этого представления необходимо разрешение VIEW DATABASE STATE.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Remarks
 
 Описание руководства по управлению ресурсами в базе данных SQL Azure см. в разделе [ограничения ресурсов базы данных SQL](/azure/sql-database/sql-database-resource-limits-database-server).
 

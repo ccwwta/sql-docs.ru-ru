@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ad75b648-d119-4119-98f0-d18f058be68d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 91ccdde50fc0e4f031f376132213881db0a85449
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 519706bd731c9590676cfef3c0363f49ea903e8a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418530"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066050"
 ---
 # <a name="working-with-the-sample-console-script-filesexecuting-the-ssma-console-accesstosql"></a>Работа с примером консольного сценария Филесексекутинг консоли SSMA (Акцесстоскл)
 Несколько примеров файлов предоставлены вместе с продуктом для ссылки и использования пользователя. В этом разделе описывается, как с легкостью настроить эти сценарии в соответствии с потребностями конечного пользователя.  

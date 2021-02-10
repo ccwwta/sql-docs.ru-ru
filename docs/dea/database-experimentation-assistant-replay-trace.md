@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: b91385f587668b17bd9cde9f173cebacce48dc91
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: 105f471afc10e03c8d6371aa22cce1f6e74ca8c1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97489548"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065919"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Воспроизведение трассировки в Database Experimentation Assistant
 

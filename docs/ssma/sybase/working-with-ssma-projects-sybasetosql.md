@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 11091d95-c488-48c3-891a-743cac94ac93
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: a1a73e1dbc1c494080427ae5dfd686dd3c18abc1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b0276efc988eca1674410c31a2f83379ee1e875b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497638"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064996"
 ---
 # <a name="working-with-ssma-projects-sybasetosql"></a>Работа с проектами SSMA (SybaseToSQL)
 Чтобы выполнить миграцию баз данных адаптивного сервера предприятия (ASE) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, сначала необходимо создать проект SSMA. Проект — это файл, содержащий метаданные о базах данных ASE, которые необходимо перенести [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, метаданные о целевом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, которые будут принимать перенесенные объекты и данные, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] а также SQL Azure сведения о соединении и параметры проекта.  
@@ -119,7 +119,7 @@ SSMA содержит несколько параметров для преоб�
 ## <a name="next-step"></a>Следующий шаг  
 Следующим шагом процесса миграции является [Подключение к SYBASE ASE](connecting-to-sybase-ase-sybasetosql.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Миграция баз данных Sybase ASE в SQL Server — база данных SQL Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
 [Подключение к Sybase ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)  
 [Подключение к SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md)  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 25a06221-0045-4fb6-a150-1245649768ab
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ce07766ba9a10a8f9a0c7be38b8d263d371afd19
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 81a18ca94c24ddcfb3749e5f13d92808f904f09f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418540"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066219"
 ---
 # <a name="shortcut-keys-accesstosql"></a>Сочетания клавиш (Акцесстоскл)
 Для навигации по приложению SSMA можно использовать сочетания клавиш. Дополнительные сведения см. в следующих разделах:  

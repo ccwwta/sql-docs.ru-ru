@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 017b7a1e06fca4a1f682050b99f8c8412b44aaf4
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d1666d4ba2279623065dd3c0d8faf5e0653de82e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951129"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065949"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>Просмотр аналитических отчетов в Database Experimentation Assistant
 
@@ -83,6 +83,6 @@ ms.locfileid: "87951129"
    > [!NOTE]
    > При анализе расширенного события (. XEL-). сведения о плане запроса не собираются для ограничения нехватки памяти на компьютере пользователя.
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 - Чтобы узнать, как создать аналитический отчет в командной строке, см. раздел [Запуск в командной строке](database-experimentation-assistant-run-command-prompt.md).

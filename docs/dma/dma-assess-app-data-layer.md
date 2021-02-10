@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 13b0775dd7a20d37e80eaddb39f649f65c43b129
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: f56976c9140cb4ac18c048d7d57d6949fc4ae74d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886181"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065163"
 ---
 # <a name="assess-an-apps-data-access-layer-with-data-migration-assistant"></a>Оценка уровня доступа к данным приложения с помощью Помощник по миграции данных
 
@@ -106,7 +106,7 @@ ms.locfileid: "82886181"
 
 ## <a name="see-also"></a>См. также раздел
 
-* [Общие сведения о Помощник по миграции данных](../dma/dma-overview.md)
+* [Обзор Помощника по миграции данных](../dma/dma-overview.md)
 * [Помощник по миграции данных: параметры конфигурации](../dma/dma-configurationsettings.md)
 * [Помощник по миграции данных: рекомендации](../dma/dma-bestpractices.md)
 * [Набор средств для переноса доступа к данным](https://marketplace.visualstudio.com/items?itemName=ms-databasemigration.data-access-migration-toolkit)

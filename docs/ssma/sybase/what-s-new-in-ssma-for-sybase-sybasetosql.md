@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: alexiva
-ms.openlocfilehash: c9bbea58446a4e42410273e6d20f2649121ee813
-ms.sourcegitcommit: a16b98d3bf3eeb58f5d2aeece2464f8a96e2b4a8
+ms.openlocfilehash: e63eea932696ca0304443722b40518017ae43485
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97665872"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065049"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Новые возможности SSMA для SAP ASE (SybaseToSQL)
 
@@ -123,7 +123,7 @@ ms.locfileid: "97665872"
 Выпуск версии SSMA для SAP ASE усовершенствован с помощью целевого набора исправлений, разработанных для улучшения показателей качества и преобразования, а также исправлений для:
 
 * Проблемы с отключенными некластеризованными индексами после переноса данных.
-* Обнаружение .NET Framework во время автоматической установки.
+* Обнаружение платформа .NET Framework во время автоматической установки.
 * Периодический сбой, возникающий при скачивании новой версии.
 
 > [!NOTE]
@@ -366,6 +366,6 @@ ms.locfileid: "97665872"
 
 Первый выпуск SSMA для СУБД Sybase был в июле 2006 г.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Начало работы с SSMA для Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ef221118-b442-4ca6-9409-6ee1d9f8d948
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 072073fae690812ed2a51cb74073eea95552392a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ee3257ef5cdf136c39bc6af3d2a0047ecfd3d69f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497611"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064909"
 ---
 # <a name="working-with-the-sample-console-script-files-sybasetosql"></a>Работа с образцами файлов сценария консоли (SybaseToSQL)
 Несколько примеров файлов предоставлены вместе с продуктом для ссылки и использования пользователя. В этом разделе описывается, как с легкостью настроить эти сценарии в соответствии с потребностями конечного пользователя.  
@@ -122,7 +122,7 @@ ms.locfileid: "88497611"
   
     `object-name:` Указывает имя базы данных-источника или таблицы, которые необходимо перенести. Убедитесь, что соответствующие `object-type` изменения основаны на типе объекта, который указан в `object-name`  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Создание файлов переменных значений &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
 [Создание файлов подключения к серверу &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
 [Создание отчетов &#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)  
