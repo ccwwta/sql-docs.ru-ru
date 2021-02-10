@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c8f6fbcb-6675-4133-b37e-430de43949c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1f97f5b9c9a947362edffaa88f878c96d63b270f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 41bc6310f5fe9e75a57032bc13bc64cba62306f1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979885"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032556"
 ---
 # <a name="recordset-positioning"></a>Позиционирование в наборе записей
 Используйте свойство **примеры AbsolutePosition** для перемещения к записи, основанной на ее порядковом положении в объекте **набора записей** , или для определения порядкового номера текущей записи. Чтобы это свойство было доступно, поставщик должен поддерживать соответствующие функциональные возможности.  

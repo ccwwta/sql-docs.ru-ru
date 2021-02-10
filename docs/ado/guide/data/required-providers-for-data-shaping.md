@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bd2829c49adb318ae80eeefd2ec2913fd8620d2b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: eb3d91f23666c900f59a6ffc8e6b94af9bcdb4d7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979805"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032536"
 ---
 # <a name="required-providers-for-data-shaping"></a>Обязательные поставщики для формирования данных
 Для формирования данных обычно требуется два поставщика. Поставщик услуг, [Служба формирования данных для OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md), предоставляет функциональные возможности формирования данных и поставщик данных, например поставщик OLE DB для SQL Server, предоставляет строки данных для заполнения [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md)в форме.  

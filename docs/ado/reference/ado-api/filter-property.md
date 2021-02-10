@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7366ba67d36049f1c5df701bc633d76f56bb9af5
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 7ee0d5e133edbd9c5d8471176e07bce02d19c930
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167328"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033963"
 ---
 # <a name="filter-property"></a>Свойство Filter
 Указывает фильтр для данных в [наборе записей](./recordset-object-ado.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "99167328"
   
 -   Значение [филтерграупенум](./filtergroupenum.md) .  
   
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Remarks
 
 Используйте свойство **Filter** для выборочного отображения записей в объекте **набора записей** . Отфильтрованный **набор записей** станет текущим курсором. Затрагиваются другие свойства, возвращающие значения, основанные на текущем **курсоре** , такие как [свойство примеры AbsolutePosition (ADO)](./absoluteposition-property-ado.md), [свойство примеры absolutepage (ADO)](./absolutepage-property-ado.md), [свойство RecordCount (ADO)](./recordcount-property-ado.md)и [свойство PageCount (ADO)](./pagecount-property-ado.md). Если задать для свойства **фильтра** определенное новое значение, текущая запись перемещается в первую запись, удовлетворяющую новому значению.
   
@@ -94,8 +94,8 @@ ms.locfileid: "99167328"
 |Позволяющ|Не ключи|Один ключ|Несколько ключей|
 |-|--------------|----------------|-------------------|
 |**Не ключи**|+|+|+|
-|**Один ключ**|+|-|Недоступно|
-|**Несколько ключей**|+|Недоступно|+|
+|**Один ключ**|+|-|Н/Д|
+|**Несколько ключей**|+|Н/Д|+|
 |||||
   
 ## <a name="applies-to"></a>Применение

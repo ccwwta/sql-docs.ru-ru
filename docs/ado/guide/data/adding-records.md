@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b833bc78a75d09c8f58ae12532f446ec94a097e0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b39a0920d9816837b6d737df00e6bb4560358356
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991755"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033404"
 ---
 # <a name="adding-records-to-a-recordset"></a>Добавление записей в набор записей
 Используйте метод **AddNew** для создания и инициализации новой записи в существующем **наборе записей**. Можно использовать метод **поддерживает** со значением **курсороптионенум** , равным **ададднев** , чтобы проверить, можно ли добавлять записи в текущий объект **Recordset** .

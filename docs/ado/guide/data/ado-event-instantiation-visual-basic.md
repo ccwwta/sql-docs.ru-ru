@@ -13,12 +13,12 @@ dev_langs:
 ms.assetid: dce0a2a3-326f-4aaf-a822-6c5549833afa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 32b4c4e9da14c264913ed477059fa00eed093e1b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 764c1d06be70c808881d74c8e458b74a432ddfe3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991685"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033354"
 ---
 # <a name="ado-event-instantiation-visual-basic"></a>Создание экземпляра события ADO: Visual Basic
 Чтобы обеспечить обработку событий ADO в Microsoft® Visual Basic®, необходимо объявить переменную уровня модуля с помощью ключевого слова **WithEvents** . Переменная может быть объявлена только как часть модуля класса и должна быть объявлена на уровне модуля. Однако это не является настолько узким, насколько кажется, поскольку Visual Basic объекты **формы** также являются классами. Самый простой способ обработать события ADO — объявить переменную с помощью **WithEvents**. В следующем примере обрабатывается событие **коннекткомплете** для объекта **Connection** :  

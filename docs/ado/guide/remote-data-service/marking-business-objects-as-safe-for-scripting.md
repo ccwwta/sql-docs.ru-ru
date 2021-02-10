@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6681a0b40890db9c344a91adc26694f3e122710d
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 1866d72f438e263ec6cdb1f66cccb247d460a270
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721506"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031926"
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>Отметка бизнес-объектов как безопасных для скриптов
 > [!IMPORTANT]
@@ -44,4 +44,4 @@ Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}]
   
  На последнем шаге мастер установки приложения создает файл. htm и. cab. Затем можно скопировать эти два файла на целевой компьютер и дважды щелкнуть htm-файл, чтобы загрузить страницу и правильно зарегистрировать сервер.  
   
- Так как бизнес-объект будет установлен в каталог Windows\System32\Occache по умолчанию, переместите его в каталог Windows\System32 и измените раздел реестра **HKEY_CLASSES_ROOT \клсид \\ ** \<*MyActiveXGUID*> \\ **InprocServer32** в соответствии с правильным путем.
+ Так как бизнес-объект будет установлен в каталог Windows\System32\Occache по умолчанию, переместите его в каталог Windows\System32 и измените раздел реестра **HKEY_CLASSES_ROOT\CLSID\\** \<*MyActiveXGUID*> \\ **InprocServer32** в соответствии с правильным путем.

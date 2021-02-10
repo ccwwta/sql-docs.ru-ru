@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1eb9209c-602c-4507-b0c2-6527a599b67d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d445a6bfc705821b49408027c13ef1474cdc0d94
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 81caf2da7f342cc7c31d1e4cd2bbad5b83852e9a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167565"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034404"
 ---
 # <a name="delete-method-ado-recordset"></a>Метод Delete (объект Recordset ADO)
 Удаляет текущую запись или группу записей.  
@@ -41,7 +41,7 @@ recordset.Delete AffectRecords
 > [!NOTE]
 >  **адаффекталл** и **адаффекталлчаптерс** не являются допустимыми аргументами для **удаления**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Использование метода **Delete** помечает текущую запись или группу записей в объекте [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) для удаления. Если объект **набора записей** не допускает удаления записей, возникает ошибка. Если вы используете режим немедленного обновления, немедленное удаление происходит в базе данных. Если запись не может быть успешно удалена (например, из-за нарушений целостности базы данных), после вызова метода [Update](../../../ado/reference/ado-api/update-method.md)запись остается в режиме редактирования. Это означает, что необходимо отменить обновление с помощью [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) , прежде чем перемещаться по текущей записи (например, с помощью [закрытия](../../../ado/reference/ado-api/close-method-ado.md), [перемещения](../../../ado/reference/ado-api/move-method-ado.md)или [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  
   
  Если вы используете режим пакетного обновления, записи помечаются для удаления из кэша, а фактическое удаление происходит при вызове метода [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) . Используйте свойство [Filter](../../../ado/reference/ado-api/filter-property.md) для просмотра удаленных записей.  

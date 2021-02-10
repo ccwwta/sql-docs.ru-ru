@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 60e006733fd8ef5bd958328420ab43c1cbabc50e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1b554afa949acea4f816ce66e92e897477c2fe00
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979425"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032426"
 ---
 # <a name="streams-and-persistence"></a>Потоки и сохраняемость
-Метод [сохранения](../../../ado/reference/ado-api/save-method.md) объекта [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) сохраняет или сохраняет **набор записей** в *файле, а*метод [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) восстанавливает **набор записей** из этого файла.  
+Метод [сохранения](../../../ado/reference/ado-api/save-method.md) объекта [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) сохраняет или сохраняет **набор записей** в *файле, а* метод [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) восстанавливает **набор записей** из этого файла.  
   
  При использовании ADO 2,7 или более поздней версии методы **Save** и **Open** могут также сохранить **набор записей** в объекте [потока](../../../ado/reference/ado-api/stream-object-ado.md) . Эта функция особенно полезна при работе с удаленной службой данных (RDS) и Active Server страницами (ASP).  
   
@@ -161,7 +161,7 @@ function GetRs()
 ...  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Open (набор записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Метод Save](../../../ado/reference/ado-api/save-method.md)

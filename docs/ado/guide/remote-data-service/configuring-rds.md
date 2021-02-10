@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5dd48483-858a-48c2-98ce-f2359abe1f59
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d7b1e2652f43a094429f5eb7ce7489006e52f752
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 1af0a8c1fd4c54f73ad0751e4ac4e93b45a04783
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724825"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032036"
 ---
 # <a name="configuring-rds"></a>Настройка RDS
 > [!IMPORTANT]
@@ -44,7 +44,7 @@ ms.locfileid: "91724825"
   
 -   [Настройка безопасного или неограниченного режимов в DataFactory](./configuring-datafactory-for-safe-or-unrestricted-modes.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование связанных технологий с RDS](./using-related-technologies-with-rds.md)   
  [Настройка в отношении фактов](./datafactory-customization.md)   
  [Устранение неполадок с RDS](./troubleshooting-rds.md)

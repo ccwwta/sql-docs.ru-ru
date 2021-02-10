@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 49456201-b085-4851-9686-e814136b07be
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c4d3a70388415402db3ecf8bdb21bd717a66aa6
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d69af7af414c1c864d47e39160f4b4a94d726ac9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979565"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032456"
 ---
 # <a name="specifying-connection-properties"></a>Указание свойств подключения
 Можно указать большую часть сведений, указанных в [строке подключения](../../../ado/guide/data/creating-a-connection-string.md) , задав свойства объекта **соединения** перед открытием соединения. Например, можно добиться того же результата, что и в строке подключения, описанной в разделе [Создание строки подключения](../../../ado/guide/data/creating-a-connection-string.md) с помощью следующего кода.  

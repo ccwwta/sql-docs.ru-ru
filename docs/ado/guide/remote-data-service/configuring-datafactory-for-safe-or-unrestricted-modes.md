@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ff24805-dc7a-42ae-b600-5bad0e3f51b8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f711a815614ecc74c46e8d0f7851415bc73ed1d
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: a1727608476b8522f0e9ec6f09ce471de4ffb419
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724815"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032054"
 ---
 # <a name="configuring-datafactory-for-safe-or-unrestricted-modes"></a>Настройка безопасного или неограниченного режимов в DataFactory
 > [!IMPORTANT]
@@ -38,6 +38,6 @@ ms.locfileid: "91724815"
   
  После запуска хандсафе. reg необходимо отключить и перезапустить службу веб-публикаций на веб-сервере, введя следующие команды в окне командной строки: "NET ОСТАНАВЛИВАЮТ W3SVC" и "NET START W3SVC".  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка в отношении фактов](./datafactory-customization.md)   
  [Основные принципы RDS](./rds-fundamentals.md)

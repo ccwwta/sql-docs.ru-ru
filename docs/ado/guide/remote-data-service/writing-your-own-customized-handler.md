@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6d761b781e7de4225f51fb3600ac467015a0c274
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: f2c62c8b12435ec70166b66416f343fa835f6158
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722725"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032615"
 ---
 # <a name="writing-your-own-customized-handler"></a>Создание собственного настраиваемого обработчика
 Если вы являетесь администратором сервера IIS, которому требуется поддержка RDS по умолчанию, вам может потребоваться написать собственный обработчик, но лучше контролировать запросы пользователей и права доступа.  
@@ -32,7 +32,7 @@ ms.locfileid: "91722725"
 ## <a name="idatafactoryhandler-interface"></a>Интерфейс Идатафакторихандлер  
  Этот интерфейс имеет два **метода: "," и "** **Повторное соединение**". Для обоих методов требуется, чтобы свойство [CursorLocation](../../reference/ado-api/cursorlocation-property-ado.md) было установлено в значение **адусеклиент**.  
   
- Оба метода принимают аргументы, которые отображаются после первой запятой в ключевом слове**handler =**. Например, `"Handler=progid,arg1,arg2;"` передает строку аргумента `"arg1,arg2"` и `"Handler=progid"` передает аргумент NULL.  
+ Оба метода принимают аргументы, которые отображаются после первой запятой в ключевом слове **handler =**. Например, `"Handler=progid,arg1,arg2;"` передает строку аргумента `"arg1,arg2"` и `"Handler=progid"` передает аргумент NULL.  
   
 ## <a name="getrecordset-method"></a>Метод WebMethod  
  Этот метод запрашивает источник данных и создает новый объект [набора записей](../../reference/ado-api/recordset-object-ado.md) с помощью предоставленных аргументов. **Набор записей** должен быть открыт с помощью **адлоккбатчоптимистик** и не должен быть открыт асинхронно.  
@@ -44,7 +44,7 @@ ms.locfileid: "91722725"
   
  ***запрос***  Текст команды для выполнения запроса.  
   
- ***ППРС***  Указатель, по которому должен возвращаться **набор записей** .  
+ ***ППРС** _ — указатель, где должен возвращаться _ *Recordset**.  
   
 ## <a name="reconnect-method"></a>Повторно подключить метод  
  Этот метод обновляет источник данных. Он создает новый объект [соединения](../../reference/ado-api/connection-object-ado.md) и присоединяет заданный **набор записей**.  
@@ -54,7 +54,7 @@ ms.locfileid: "91722725"
   
  ***args***  Аргументы для обработчика.  
   
- ***вытягивание***  Объект **Recordset** .  
+ ***вытягивание** _ объект _ *Recordset**.  
   
 ## <a name="msdfhdlidl"></a>мсдфхдл. idl  
  Это определение интерфейса для **идатафакторихандлер** , которое отображается в файле **мсдфхдл. idl** .  
@@ -100,7 +100,7 @@ HRESULT _stdcall GetRecordset(
 };  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Раздел "Подключение файла настройки"](./customization-file-connect-section.md)   
  [Раздел журналов файлов настройки](./customization-file-logs-section.md)   
  [Раздел файла настройки SQL](./customization-file-sql-section.md)   

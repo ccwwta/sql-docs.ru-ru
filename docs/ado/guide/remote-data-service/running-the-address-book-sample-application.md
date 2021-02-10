@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3a2644e9-d634-4ae6-a5b7-13fb7b317ec7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 85d9dbf43107af7504241af825b5b21c38139e3b
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: b4e77339de5ec7ebddbdb1314228abf6eef8c15d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91723057"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031816"
 ---
 # <a name="running-the-address-book-sample-application"></a>Выполнение примера приложения адресной книги
 > [!IMPORTANT]
@@ -36,11 +36,11 @@ ms.locfileid: "91723057"
   
 2.  В Microsoft Internet Explorer 4,0 или более поздней версии введите следующий адрес:  
   
-     **https://** *webserver* **/РДС/аддрессбук/аддрбук.АСП**  
+     **https://**  **/РДС/аддрессбук/аддрбук.АСП**  
   
      где веб- *сервер* — имя сервера, на котором установлены компоненты RDS Server.  
   
 3.  Затем можно попробовать различные сценарии в примере приложения адресной книги, например поиск человека по его имени, список всех людей с названием «руководитель программы» или изменение существующих записей. Нажмите кнопку **найти** , чтобы заполнить сетку данных всеми доступными именами.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект привязки данных адресной книги](./address-book-data-binding-object.md)

@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: b1e927d6-7d50-4978-9eef-045043cdce7a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9929177baaf1efd486cb9f628034158b370badc7
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: d6a769a22a86e145727079af6fc067b1552f2bbf
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722865"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031716"
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>Шаг 6. Изменения отправлены на сервер (учебник по RDS)
 Если объект **набора записей** редактируется, любые изменения (т. е. добавленные, измененные или удаленные строки) могут быть отправлены обратно на сервер.  
   
 > [!NOTE]
->  Поведение RDS по умолчанию можно вызвать неявно с помощью объектов ADO и поставщика Microsoft OLE DB удаленного взаимодействия. Запросы могут возвращать **наборы записей**, а измененные **наборы записей**могут обновлять источник данных. В этом руководстве не выполняется вызов RDS с объектами ADO, но вот как это будет выглядеть, если:  
+>  Поведение RDS по умолчанию можно вызвать неявно с помощью объектов ADO и поставщика Microsoft OLE DB удаленного взаимодействия. Запросы могут возвращать **наборы записей**, а измененные **наборы записей** могут обновлять источник данных. В этом руководстве не выполняется вызов RDS с объектами ADO, но вот как это будет выглядеть, если:  
   
 ```vb
 Dim rs as New ADODB.Recordset  
@@ -75,7 +75,7 @@ End Sub
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Поставщик службы удаленного взаимодействия Microsoft OLE DB (поставщик служб ADO)](../appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)   
  [Руководство по RDS](./rds-tutorial.md)   
  [Учебник по RDS (VBScript)](./rds-tutorial-vbscript.md)

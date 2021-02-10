@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e2a48c4d-88b1-43ff-a202-9cdec54997d2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0ad7fcb2bb63d77bd50c89f11e9b818439b0d1d0
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 693f5858a80d5bc986dc16f993aa5c5a78c54d7c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721405"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031876"
 ---
 # <a name="rds-tutorial-vbscript"></a>Учебник по RDS (VBScript)
 Это руководство по RDS, написанное на Microsoft Visual Basic Scripting Edition. Описание назначения этого учебника см. в [руководстве по RDS](./rds-tutorial.md).  
@@ -59,7 +59,7 @@ Set DC = Server.CreateObject("RDS.DataControl")
  Однако в этом руководстве используется мнимой сервер «Йоурсервер».  
   
 > [!NOTE]
->  Обратите внимание на тип данных аргументов **ByRef** . VBScript не позволяет указать тип переменной, поэтому всегда необходимо передавать **вариант**. При использовании протокола HTTP RDS позволяет передать вариант в метод, который предполагает, что не является вариантным, если вызвать его с помощью **RDS. ** Метод [CreateObject](../../reference/rds-api/createobject-method-rds.md) объекта пространства на объекте. При использовании DCOM или внутрипроцессного сервера необходимо сопоставить типы параметров на стороне клиента и сервера, иначе вы получите ошибку "несоответствие типов".  
+>  Обратите внимание на тип данных аргументов **ByRef** . VBScript не позволяет указать тип переменной, поэтому всегда необходимо передавать **вариант**. При использовании протокола HTTP RDS позволяет передать вариант в метод, который предполагает, что не является вариантным, если вызвать его с помощью **RDS.** Метод [CreateObject](../../reference/rds-api/createobject-method-rds.md) объекта пространства на объекте. При использовании DCOM или внутрипроцессного сервера необходимо сопоставить типы параметров на стороне клиента и сервера, иначе вы получите ошибку "несоответствие типов".  
   
 ```vb
 Set DF1 = DS1.CreateObject("RDSServer.DataFactory", "https://yourServer")  
@@ -139,5 +139,5 @@ End Sub
   
  **Это последняя часть руководства.**  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Учебник по RDS](./rds-tutorial.md)

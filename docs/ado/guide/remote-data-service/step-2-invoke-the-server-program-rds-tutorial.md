@@ -13,24 +13,24 @@ helpviewer_keywords:
 ms.assetid: 5e74c2da-65ee-4de4-8b41-6eac45c3632e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9238fa208a5ce415986fee05045dc7ea34e0d67
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: ccccbbc0d634b1044569c4787b8e7bb60c2c3275
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91723005"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031726"
 ---
 # <a name="step-2-invoke-the-server-program-rds-tutorial"></a>Шаг 2. Вызовите программу сервера (учебник по RDS)
-При вызове метода *прокси-сервера*клиента фактическая программа на сервере выполняет метод. На этом шаге вы выполните запрос на сервере.  
+При вызове метода *прокси-сервера* клиента фактическая программа на сервере выполняет метод. На этом шаге вы выполните запрос на сервере.  
   
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
   
  **Часть A** Если вы не использовали [RDSServer.](../../reference/rds-api/datafactory-object-rdsserver.md) в этом руководстве, самый удобный способ выполнить это действие — использовать [RDS. Объект элемента управления](../../reference/rds-api/datacontrol-object-rds.md) . **RDS. Элемент управления** данными объединяет предыдущий этап создания учетной записи-посредника, выполняя этот шаг, выполнив запрос.  
   
- Задайте **RDS. ** Свойство [сервера](../../reference/rds-api/server-property-rds.md) «элемент управления DataObject», которое определяет, где следует создать экземпляр программы сервера; Свойство [Connect](../../reference/rds-api/connect-property-rds.md) для указания строки подключения для доступа к источнику данных; и свойство [SQL](../../reference/rds-api/sql-property.md) для указания текста команды запроса. Затем выдайте метод [Refresh](../../reference/rds-api/refresh-method-rds.md) , чтобы программа сервера подключится к источнику данных, получала строки, указанные запросом, и возвращала клиенту объект **набора записей** .  
+ Задайте **RDS.** Свойство [сервера](../../reference/rds-api/server-property-rds.md) «элемент управления DataObject», которое определяет, где следует создать экземпляр программы сервера; Свойство [Connect](../../reference/rds-api/connect-property-rds.md) для указания строки подключения для доступа к источнику данных; и свойство [SQL](../../reference/rds-api/sql-property.md) для указания текста команды запроса. Затем выдайте метод [Refresh](../../reference/rds-api/refresh-method-rds.md) , чтобы программа сервера подключится к источнику данных, получала строки, указанные запросом, и возвращала клиенту объект **набора записей** .  
   
- В этом руководстве не используется **RDS. Элемент управления**данным, но это будет выглядеть, если:  
+ В этом руководстве не используется **RDS. Элемент управления** данным, но это будет выглядеть, если:  
   
 ```vb
 Sub RDSTutorial2A()  
@@ -64,6 +64,6 @@ Sub RDSTutorial2B()
 ...  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Шаг 3. сервер получает набор записей (учебник по RDS)](./step-3-server-obtains-a-recordset-rds-tutorial.md)   
  [Учебник по RDS (VBScript)](./rds-tutorial-vbscript.md)

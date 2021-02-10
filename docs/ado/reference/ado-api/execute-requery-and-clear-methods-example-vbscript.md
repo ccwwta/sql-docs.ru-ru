@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3a7bbf07-2fca-4892-95f4-eec93f2d5e91
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d592835b148c6307e49583fac3e4a9cbffbfbf23
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: c0708e50451d58dc6732ed9ffa2714716fb0c55e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171137"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034134"
 ---
 # <a name="execute-requery-and-clear-methods-example-vbscript"></a>Пример методов Execute, Requery и Clear (VBScript)
 В этом примере демонстрируется метод **EXECUTE** при запуске из объекта [команды](../../../ado/reference/ado-api/command-object-ado.md) и объекта [соединения](../../../ado/reference/ado-api/connection-object-ado.md) . Он также использует метод [Requery](../../../ado/reference/ado-api/requery-method.md) для получения текущих данных в [наборе записей](../../../ado/reference/ado-api/recordset-object-ado.md)и метод [clear](../../../ado/reference/ado-api/clear-method-ado.md) для очистки содержимого коллекции [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) . Для выполнения этой процедуры требуются процедуры ExecuteCommand и Принтаутпут.  

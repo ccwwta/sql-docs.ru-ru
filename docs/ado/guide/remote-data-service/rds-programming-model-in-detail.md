@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a2b307c89d5e4a25d6963ef100083015ffe6ce74
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 8421340798a308204a0961340e06216f3b0cb24a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724925"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031896"
 ---
 # <a name="rds-programming-model-in-detail"></a>Подробные сведения о модели программирования RDS
 Ниже приведены ключевые элементы модели программирования RDS.  
@@ -66,12 +66,12 @@ ms.locfileid: "91724925"
  **RDS. Объект «элемент управления** данных» также имеет собственные методы для перемещения, сортировки и фильтрации строк связанного объекта **Recordset** . Эти методы похожи, но не совпадают с методами объекта **набора записей** ADO.  
   
 ## <a name="events"></a>События  
- RDS поддерживает два собственных события, которые не зависят от модели событий ADO. Событие [onReadyStateChange](../../reference/rds-api/onreadystatechange-event-rds.md) вызывается при каждом вызове **RDS. **Изменилось свойство свойства [ReadyState](../../reference/rds-api/readystate-property-rds.md) , уведомляя вас о том, что асинхронная операция успешно завершена, прервана или произошла ошибка. Событие [OnError](../../reference/rds-api/onerror-event-rds.md) вызывается при возникновении ошибки, даже если эта ошибка возникает во время асинхронной операции.  
+ RDS поддерживает два собственных события, которые не зависят от модели событий ADO. Событие [onReadyStateChange](../../reference/rds-api/onreadystatechange-event-rds.md) вызывается при каждом вызове **RDS.** Изменилось свойство свойства [ReadyState](../../reference/rds-api/readystate-property-rds.md) , уведомляя вас о том, что асинхронная операция успешно завершена, прервана или произошла ошибка. Событие [OnError](../../reference/rds-api/onerror-event-rds.md) вызывается при возникновении ошибки, даже если эта ошибка возникает во время асинхронной операции.  
   
 > [!NOTE]
 >  Microsoft Internet Explorer предоставляет два дополнительных события для RDS: **ондатасетчанжед**, которые указывают, что **набор записей** является функциональным, но все еще получает строки, и **ондатасеткомплете**, который указывает, что **набор записей** завершил извлечение строк.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Модель программирования RDS с объектами](./rds-programming-model-with-objects.md)   
  [Объект элемента управления (RDS)](../../reference/rds-api/datacontrol-object-rds.md)   
  [Объект фактического объекта (RDSServer)](../../reference/rds-api/datafactory-object-rdsserver.md)   

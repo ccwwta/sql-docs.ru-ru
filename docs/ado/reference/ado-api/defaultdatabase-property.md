@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 41e8a8dd-e69c-4a09-8736-93502e01961c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8cff37ae3bc0940a62e2acc9af3ac6c25d1379a4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: db35621095f74e2dd1905d0cc5803cbefcf5f2a6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167586"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034424"
 ---
 # <a name="defaultdatabase-property"></a>Свойство DefaultDatabase
 Указывает базу данных по умолчанию для объекта [соединения](../../../ado/reference/ado-api/connection-object-ado.md) .  
@@ -29,7 +29,7 @@ ms.locfileid: "99167586"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает **строковое** значение, результатом которого является имя базы данных, доступной из поставщика.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте свойство **DefaultDatabase** , чтобы задать или вернуть имя базы данных по умолчанию для конкретного объекта **соединения** .  
   
  При наличии базы данных по умолчанию строки SQL могут использовать неполный синтаксис для доступа к объектам в этой базе данных. Для доступа к объектам в базе данных, отличной от указанной в свойстве **DefaultDatabase** , необходимо указать имена объектов с нужным именем базы данных. При подключении поставщик будет записывать сведения о базе данных по умолчанию в свойство **DefaultDatabase** . Некоторые поставщики разрешают только одну базу данных на одно соединение. в этом случае изменить свойство **DefaultDatabase** нельзя.  

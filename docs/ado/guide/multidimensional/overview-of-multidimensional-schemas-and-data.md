@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 431ff25d49c4a45055d796aba98f229564872a4e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2dcd54dfb8ba5797588c615f987830dcb8aa5736
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978645"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032186"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>Общие сведения о многомерных схемах и данных
 ## <a name="understanding-multidimensional-schemas"></a>Основные сведения о многомерных схемах  
@@ -82,9 +82,9 @@ Hamburg, Munich, Stuttgart}
   
  Элементы можно консолидировать по одной или нескольким иерархиям на измерение. Рассмотрим измерение времени, где есть два способа свертки на уровень "год" с уровня "дни":  
   
- В этом примере также иллюстрируется другая характеристика: некоторые элементы уровня «неделя» в иерархии «год-неделя» не отображаются ни на одном уровне иерархии «год-квартал». Таким же иерархия не должна включать все элементы измерения.  
+ В этом примере также иллюстрируется другая характеристика: некоторые элементы уровня «неделя» Year-Week иерархии не отображаются на любом уровне иерархии Year-Quarter. Таким же иерархия не должна включать все элементы измерения.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объектная модель объекты данных ActiveX (MD)](../../reference/ado-md-api/ado-md-object-model.md)   
  [ADO (многомерные) (объекты данных ActiveX (MD))](./ado-multidimensional-ado-md.md)   
  [Программирование с помощью объекты данных ActiveX (MD)](./programming-with-ado-md.md)   

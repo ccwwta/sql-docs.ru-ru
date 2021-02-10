@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 774ff9b0728d362822c72047b573ab9def944d18
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f7affce9c8596b9155f691ccf2ef61f9f0eca35d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979041"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032276"
 ---
 # <a name="using-ado-for-internet-publishing"></a>Использование ADO для публикации в Интернете
 [Поставщик OLE DB для публикации в Интернете](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) показывает конкретный пример доступа к разнородным данным с помощью ADO. Несмотря на то, что примеры в этом разделе относятся к использованию поставщика публикации в Интернете, эти принципы должны быть похожи при использовании ADO с другими поставщиками для разнородных данных, например поставщика в хранилище электронной почты.  
@@ -32,7 +32,7 @@ ms.locfileid: "88979041"
  Дополнительные сведения об использовании URL-адресов см. в разделе [абсолютные и относительные URL-адреса](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="record-fields"></a>Поля записей  
- Различие различий между разнородными и однородными данными заключается в том, что для первого, каждой строки данных или **записи**может быть другой набор столбцов или **полей**. Для однородных данных каждая строка имеет одинаковый набор столбцов. Дополнительные сведения о полях, относящихся к поставщику публикации в Интернете, см. в разделе [записи и предоставляемые поставщиком дополнительные поля](../../../ado/guide/data/records-and-provider-supplied-fields.md).  
+ Различие различий между разнородными и однородными данными заключается в том, что для первого, каждой строки данных или **записи** может быть другой набор столбцов или **полей**. Для однородных данных каждая строка имеет одинаковый набор столбцов. Дополнительные сведения о полях, относящихся к поставщику публикации в Интернете, см. в разделе [записи и Provider-Supplied дополнительных полях](../../../ado/guide/data/records-and-provider-supplied-fields.md).  
   
 ### <a name="appending-new-fields"></a>Добавление новых полей  
  Несколько объектов ADO были расширены для совместной работы с объектами **Record** и **Stream** .  
@@ -53,7 +53,7 @@ ms.locfileid: "88979041"
   
 -   [Записи и предоставляемые поставщиком поля](../../../ado/guide/data/records-and-provider-supplied-fields.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
  [Журнал объектов ADO](../../../ado/guide/ado-history.md)

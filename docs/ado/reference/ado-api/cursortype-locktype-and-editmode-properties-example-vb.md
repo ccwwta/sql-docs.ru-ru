@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2cb4a304-f40a-4897-8b93-82c2d8e93500
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4451b3e733fa593a0c2c3c0f1d48ba4d24c697de
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2448e853f6c5e98a415f4a85228027465ea7192f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167630"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034504"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vb"></a>Примеры свойств примеры CursorType, LockType и EditMode (Visual Basic)
 В этом примере показано задание свойств [примеры CursorType](./cursortype-property-ado.md) и [LockType](./locktype-property-ado.md) перед открытием [набора записей](./recordset-object-ado.md). Он также показывает значение свойства [EditMode](./editmode-property.md) в различных условиях. Для выполнения этой процедуры требуется функция Едитмодеаутпут.  

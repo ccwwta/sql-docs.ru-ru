@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d17fa12aa0b07b265fb8f26b6ac1b6c584015d1e
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: bc9b9415628f27cd68cecbf02de2c52165c8d509
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724765"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031996"
 ---
 # <a name="customization-file-sql-section"></a>Настройка раздела SQL файла
 Раздел **SQL** может содержать новую строку SQL, которая заменяет командную строку клиента. Если в разделе нет строки SQL, раздел будет проигнорирован.  
@@ -51,7 +51,7 @@ SQL = " "
 |**SQL**|Литеральная строка, указывающая, что это запись раздела SQL.|  
 |***sqlString***|Строка SQL, которая заменяет строку клиента.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Раздел "Подключение файла настройки"](./customization-file-connect-section.md)   
  [Раздел журналов файлов настройки](./customization-file-logs-section.md)   
  [Раздел UserList файла настройки](./customization-file-userlist-section.md)   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ca1c3422-b6a4-4ba6-af55-54f975b698b1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 97f6dba7bf01b3236d6b8b00e6338185cf6a8d41
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 31c9b1dd1ccc3ef61b120bf3d075b81fc34c0eb6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979005"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032286"
 ---
 # <a name="using-cachesize"></a>Using CacheSize
 Свойство **CacheSize** используется для управления количеством записей, получаемых за один раз в локальную память от поставщика. Например, если **CacheSize** имеет значение 10, после первого открытия объекта **Recordset** поставщик получает первые 10 записей в локальную память. При перемещении по объекту **Recordset** поставщик возвращает данные из буфера локальной памяти. Как только вы перейдете за последнюю запись в кэше, поставщик извлекает следующие 10 записей из источника данных в кэш.  

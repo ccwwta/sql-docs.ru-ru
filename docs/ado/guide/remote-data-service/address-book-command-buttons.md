@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d234732b90fdd89b6f0e41efe1762bb3a99ddde2
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: dccdb22981bb1662cd50da1e28db8fa0a2ce47d6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724855"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032055"
 ---
 # <a name="address-book-command-buttons"></a>Кнопки команд адресной книги
 Приложение адресной книги содержит следующие командные кнопки:  
@@ -63,7 +63,7 @@ End Sub
 ```  
   
 ## <a name="update-profile-button"></a>Кнопка обновления профиля  
- Нажатие кнопки **Обновить профиль** активирует процедуру VBScript Update_OnClick, которая выполняет [RDS. ](../../reference/rds-api/datacontrol-object-rds.md) `DC1` Методы [SubmitChanges](../../reference/rds-api/submitchanges-method-rds.md) и [Refresh](../../reference/rds-api/refresh-method-rds.md) объекта элемента управления DataObject.  
+ Нажатие кнопки **Обновить профиль** активирует процедуру VBScript Update_OnClick, которая выполняет [RDS.](../../reference/rds-api/datacontrol-object-rds.md) `DC1` Методы [SubmitChanges](../../reference/rds-api/submitchanges-method-rds.md) и [Refresh](../../reference/rds-api/refresh-method-rds.md) объекта элемента управления DataObject.  
   
 ```vb
 Sub Update_OnClick  
@@ -85,6 +85,6 @@ End Sub
   
  При `DC1.CancelUpdate` выполнении он отменяет любые изменения, внесенные пользователем в запись сотрудника в сетке данных с момента последнего запроса или обновления. Он восстанавливает исходные значения.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Кнопки навигации адресной книги](./address-book-navigation-buttons.md)   
  [Объект DataControl (служба удаленных рабочих столов)](../../reference/rds-api/datacontrol-object-rds.md)

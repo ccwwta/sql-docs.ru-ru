@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7556d3857142a4762fd411f5175a38c2e4d58cf3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9282bdc81d71ecd938f3d115678769915f8e3367
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979365"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032406"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>Поставщик OLE DB для публикации в Интернете
-Объекты [записи](../../../ado/reference/ado-api/record-object-ado.md) и [потока](../../../ado/reference/ado-api/stream-object-ado.md) ADO можно использовать с поставщиком Microsoft OLE DB для публикации в Интернете (поставщик публикации в Интернете) для доступа к ресурсам, таким как веб-папки или файлы, обслуживаемые Microsoft FrontPage, и управления ими. С помощью ADO можно указать источник **записи**, **потока**или [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) в качестве URL-адреса. Затем можно передать, скачать, переместить, скопировать и удалить ресурсы или напрямую управлять свойствами ресурсов.  
+Объекты [записи](../../../ado/reference/ado-api/record-object-ado.md) и [потока](../../../ado/reference/ado-api/stream-object-ado.md) ADO можно использовать с поставщиком Microsoft OLE DB для публикации в Интернете (поставщик публикации в Интернете) для доступа к ресурсам, таким как веб-папки или файлы, обслуживаемые Microsoft FrontPage, и управления ими. С помощью ADO можно указать источник **записи**, **потока** или [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md) в качестве URL-адреса. Затем можно передать, скачать, переместить, скопировать и удалить ресурсы или напрямую управлять свойствами ресурсов.  
   
  Пример кода, в котором используются **записи** и **потоки** с поставщиком публикации в Интернете, см. в статье [сценарий публикации в Интернете](../../../ado/guide/data/internet-publishing-scenario.md).  
   
