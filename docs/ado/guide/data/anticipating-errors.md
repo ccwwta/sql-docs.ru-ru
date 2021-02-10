@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea1d4a97-58c3-476b-a496-cc80db2a90d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f5affe90da5a982a6e01bd5719793581fb3c5f13
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 4a8c7c3867d7e133428ff8e17cca8e54e5a54297
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991615"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037814"
 ---
 # <a name="anticipating-errors"></a>Прогнозирование ошибок
 Предотвращение ошибок по крайней мере не менее важно, чем обработка ошибок. В этом заключительном разделе содержится краткий список предосторожностей, которые могут потребоваться вашему приложению для уменьшения вероятности возникновения ошибок.  

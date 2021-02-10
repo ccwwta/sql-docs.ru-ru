@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b09e5f9356ad196e03c970623369d4918a6f5506
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4ca0d2e0a2bff2e5f9a3ea057220ac8cda14c9af
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724755"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036514"
 ---
 # <a name="customization-file-userlist-section"></a>Настройка раздела UserList файла
 Раздел **USERLIST** относится к разделу **Connect** с тем же параметром *идентификатора* раздела.  
@@ -40,7 +40,7 @@ ms.locfileid: "91724755"
 |*userName*|*Имя пользователя* , использующего это подключение. Допустимые имена пользователей устанавливаются в диалоговом окне IIS **Service Manager** .|  
 |**_accessRights_**|Одно из следующих прав доступа:<br /><br /> -   Не **доступ** — пользователь не может получить доступ к источнику данных.<br />-   **Только для** чтения — пользователь может читать источник данных.<br />-   **ReadWrite** — пользователь может выполнять чтение или запись в источник данных.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Раздел "Подключение файла настройки"](./customization-file-connect-section.md)   
  [Раздел журналов файлов настройки](./customization-file-logs-section.md)   
  [Раздел файла настройки SQL](./customization-file-sql-section.md)   

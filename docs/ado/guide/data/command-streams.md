@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2ae54835836fecdfbf3b026fe9e6a701a5602d3d
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1c0872f20754d093020ece2830d389de32f09032
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991545"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037744"
 ---
 # <a name="command-streams"></a>Потоки команд
 ADO всегда поддерживал ввод команды в строковом формате, указанном свойством **CommandText** . В качестве альтернативы с помощью ADO 2,7 или более поздней версии можно также использовать поток данных для ввода команды, назначив поток свойству **CommandStream** . Можно назначить объект **потока** ADO или любой объект, поддерживающий интерфейс **IStream** com.  
@@ -64,7 +64,7 @@ Set adoCmd  = Server.CreateObject("ADODB.Command"")
 adoCmd.CommandStream = adoStreamQuery  
 ```  
   
- Укажите **диалект**языка команд, который указывает, как поставщик OLE DB SQL Server должен интерпретировать поток команд. Диалект, заданный идентификатором GUID, зависящим от поставщика:  
+ Укажите **диалект** языка команд, который указывает, как поставщик OLE DB SQL Server должен интерпретировать поток команд. Диалект, заданный идентификатором GUID, зависящим от поставщика:  
   
 ```  
 adoCmd.Dialect = "{5D531CB2-E6Ed-11D2-B252-00C04F681B71}"  

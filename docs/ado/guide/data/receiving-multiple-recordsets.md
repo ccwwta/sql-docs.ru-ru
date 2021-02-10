@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a7ad7a6-f00d-4355-b0b5-d0ab957b0566
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abac183f348553f30bf0cf5ed91725ef421afb3e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d0b4213b70498ea021b2267748c0f6fe3c6adf5a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979975"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037124"
 ---
 # <a name="receiving-multiple-recordsets"></a>Получение нескольких наборов записей
 [Поставщик OLE DB Майкрософт для SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) поддерживает возврат нескольких объектов **Recordset** для одной команды, содержащей несколько инструкций SQL, по одному **набору записей** на каждую инструкцию SQL. Порядок, в котором возвращаются **наборы записей**, соответствует порядку, в котором инструкции SQL помещаются в текст команды.  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca4c5a094e263ca0c44c58a9d9118d4e2ce01538
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a5ce736c8dd24f2398d7c8c374be260080c32e11
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991415"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037644"
 ---
 # <a name="dealing-with-failed-updates"></a>Работа с ошибками обновлений
 Когда обновление завершается с ошибками, способ устранения ошибок зависит от природы и серьезности ошибок и логики приложения. Однако если база данных используется совместно с другими пользователями, то типичная ошибка заключается в том, что другой пользователь изменяет поле до того, как это сделано. Этот тип ошибки называется конфликтом. ADO обнаруживает эту ситуацию и сообщает об ошибке.  
@@ -29,13 +29,13 @@ ms.locfileid: "88991415"
  Код для оповещения пользователя о конфликте обновлений выглядит следующим образом:  
   
 ```  
-objRs.Filter = adFilterConflictingRecords  
+objRs.Filter = adFilterConflictingRecords  
 objRs.MoveFirst  
-Do While Not objRst.EOF  
-   Debug.Print "Conflict: Name =  "; objRs!au_fname; " "; objRs!au_lname  
+Do While Not objRst.EOF  
+   Debug.Print "Conflict: Name =  "; objRs!au_fname; " "; objRs!au_lname  
    objRs.MoveNext  
 Loop  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пакетный режим](./batch-mode.md)

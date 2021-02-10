@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: be65ff094518defcbf27ba2aa2ffa69835ee8ca3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cd626fe6887f784ec62e22ccc276e64feb4a9b14
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991275"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037464"
 ---
 # <a name="formal-shape-grammar"></a>Грамматика формального формирования данных
 Это формальное грамматика для создания любой команды Shape:  
@@ -68,7 +68,7 @@ ms.locfileid: "88991275"
 |\<string>|Unicode-char [Юникод-char...]|  
 |\<expression>|Visual Basic для приложений выражение, операнды которого являются другими столбцами, не являющимися ВЫЧИСЛЯЕМыми в одной строке.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Доступ к строкам в иерархическом наборе записей](./accessing-rows-in-a-hierarchical-recordset.md)   
  [Общие сведения о формировании данных](./data-shaping-overview.md)   
  [Необходимые поставщики для формирования данных](./required-providers-for-data-shaping.md)   

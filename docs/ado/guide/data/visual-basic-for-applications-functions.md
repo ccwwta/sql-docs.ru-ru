@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 960e0f8cf42a2ef1f0b2b30f73a784d208777dae
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1c7b1b8493e6e8dd066ad2208e35d374cc0fadff
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978935"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036744"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Функции Visual Basic для приложений
 В выражениях вычисления для формирования данных можно использовать следующие функции Visual Basic для приложений.  
@@ -60,7 +60,7 @@ ms.locfileid: "88978935"
         DateValue  
         День  
         DDB  
-        Ошибка  
+        Error  
         Error$  
         Exp  
         Fix  
@@ -99,7 +99,7 @@ ms.locfileid: "88978935"
         Mid$  
         Минута  
         MIRR  
-        Month  
+        Месяц  
         Сейчас  
         NPer  
         NPV  
@@ -120,9 +120,9 @@ ms.locfileid: "88978935"
         Rnd  
         RTrim  
         RTrim $  
-        Second  
+        Секунда  
         Sgn  
-        Синус  
+        Sin  
         SLN  
         Пробел  
         Space$  
@@ -137,7 +137,7 @@ ms.locfileid: "88978935"
         String$  
         SYD  
         Tan  
-        Time  
+        время;  
         Time$  
         Таймер  
         TimeSerial  
@@ -150,11 +150,11 @@ ms.locfileid: "88978935"
         Val  
         VarType  
         День недели  
-        Year  
+        Year;  
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Доступ к строкам в иерархическом наборе записей](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [Общие сведения о формировании данных](../../../ado/guide/data/data-shaping-overview.md)   
  [Грамматика формальной фигуры](../../../ado/guide/data/formal-shape-grammar.md)   

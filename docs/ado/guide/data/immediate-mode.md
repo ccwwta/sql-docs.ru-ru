@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 31fc53d0-97de-4315-a87b-3bf5cdd1f432
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e57d39fedb6509663ec21f28341d6bbca57dbd5c
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 9838a86c66abba0a73014a08a32e8e24d18849af
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980505"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037314"
 ---
 # <a name="immediate-mode"></a>Режим интерпретации
 Режим интерпретации действует, когда свойство **LockType** имеет значение **adLockOptimistic** или **адлоккпессимистик**. В режиме интерпретации изменения в записи передаются в источник данных сразу после того, как вы объявили работу над строкой, вызвав метод **Update** .  

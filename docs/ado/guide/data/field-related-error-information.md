@@ -1,6 +1,6 @@
 ---
 description: Сведения о связанных с полями ошибках
-title: Сведения об ошибке, связанные с полем | Документация Майкрософт
+title: Field-Related сведения об ошибке | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: ado
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e7b1af4-996b-47c5-9161-c5575ad4fec9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: af7aee82f8568cafcc35ac0e78d13386822888fb
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cce74cf105aa7b38c2a3d7b157ef0fa17a1e8c1f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991265"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037474"
 ---
 # <a name="field-related-error-information"></a>Сведения о связанных с полями ошибках
 Если ошибка связана напрямую с полем, например, если данные отсутствуют или неверный тип для поля, можно получить дополнительные сведения о причине проблемы, изучив свойство Status объекта **поля** " **состояние** ". Это свойство было дополнено для предоставления конкретных сведений о проблеме. Так, например, при сбое вызова **UpdateBatch** причину проблемы можно определить, изучив свойство **Status** **полей** в каждой из затронутых записей. Свойство будет содержать одно из значений в константе **фиелдстатусенум** . В следующей таблице приведены значения, представляющие конкретный интерес при возникновении ошибки.  

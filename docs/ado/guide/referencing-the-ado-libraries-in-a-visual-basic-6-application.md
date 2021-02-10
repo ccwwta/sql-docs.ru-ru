@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cfd37a82-aad2-41cd-8d13-1566c43d95f0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71ae81dc98d0fffe7463759be0846afccd708f0f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 431a58609ff26ace443b012bc2835e5ba89736db
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978515"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036614"
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>Ссылки на библиотеки ADO в приложении Visual Basic 6
 Чтобы импортировать библиотеки ADO в приложение Microsoft Visual Basic 6, необходимо задать ссылку в проекте Visual Basic.  
@@ -33,7 +33,7 @@ ms.locfileid: "88978515"
   
 2.  Щелкните элемент меню **проект** , а затем выберите **ссылки...** в раскрывающемся меню.  
   
-3.  В поле **Доступные ссылки**установите флажок для **библиотеки Microsoft объекты данных ActiveX *n. n* **, где ***n. n*** представляет номер последней версии. В поле **Расположение** ниже следует выбрать параметр *$installDir\msado15.dll*, где *$installDir* представляет путь к каталогу, в котором была установлена библиотека ADO.  
+3.  В поле **Доступные ссылки** установите флажок для **библиотеки Microsoft объекты данных ActiveX *n. n***, где **_n. n_*_ — номер последней версии.*** Приведенное ниже поле _ Location должно обозначать значение *$installDir\msado15.dll*, где *$installDir* представляет путь к каталогу, в котором была установлена библиотека ADO.  
   
 4.  Если вы планируете использовать объекты данных ActiveX (MD), повторите шаг 3, чтобы выбрать **библиотеку Microsoft объекты данных ActiveX (многомерная) *n. n* Library**. Поле **Location (расположение** ) должно обозначать этот вариант как *$installDir\msadomd.dll*.  
   

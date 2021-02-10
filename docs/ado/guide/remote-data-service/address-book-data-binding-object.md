@@ -1,6 +1,6 @@
 ---
 description: Объект привязки данных адресной книги
-title: Объект-привязка данных адресной книги | Документация Майкрософт
+title: Адресная книга Data-Binding объект | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: ado
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f5c98370ebb1a1b16e09e900455888d0c201905
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 91489445aef2034ed273a6d13cc5d6ae02b7f519
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721575"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036594"
 ---
 # <a name="address-book-data-binding-object"></a>Объект привязки данных адресной книги
 Приложение адресной книги использует [RDS. Объект элемента управления](../../reference/rds-api/datacontrol-object-rds.md) данными для привязки данных из базы данных SQL Server к визуальному объекту (в нашем примере это таблица DHTML) на HTML-странице клиента приложения. Логика программы VBScript, управляемой событиями, использует [RDS. Элемент управления](../../reference/rds-api/datacontrol-object-rds.md) для:  
@@ -53,7 +53,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|***КЛАССА***|Уникальное, 128-разрядное число, определяющее тип внедренного объекта в системе. Этот идентификатор сохраняется в системном реестре локального компьютера. (Идентификаторы класса **RDS. Элемент управления** DataObject, см [. в разделе RDS. Объект элемента управления](../../reference/rds-api/datacontrol-object-rds.md).)|  
+|***ClassID** _|Уникальное, 128-разрядное число, определяющее тип внедренного объекта в системе. Этот идентификатор сохраняется в системном реестре локального компьютера. (Идентификаторы класса _ *RDS. Объект "элемент управления*" см [. в разделе RDS. Объект элемента управления](../../reference/rds-api/datacontrol-object-rds.md).)|  
 |***Идентификатор***|Определяет идентификатор на уровне документа для внедренного объекта, который используется для его идентификации в коде.|  
   
 ## <a name="rdsdatacontrol-tag-parameters"></a>Клиент. Параметры тега элемента управления  
@@ -65,5 +65,5 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 |[CONNECT](../../reference/rds-api/connect-property-rds.md)|Предоставляет необходимые сведения о подключении для **RDS. Элемент управления** для подключения к SQL Server.|  
 |[SQL](../../reference/rds-api/sql-property.md)|Задает или возвращает строку запроса, используемую для получения [набора записей](../../reference/ado-api/recordset-object-ado.md).|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Кнопки команд адресной книги](./address-book-command-buttons.md)

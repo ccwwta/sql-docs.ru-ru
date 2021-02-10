@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3ef36d24-f121-4a5f-84ad-5fc84992e81d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8c5ae91d6a8a0dc45b29b2a13bf68bca24bb2194
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 6a5d2f90b1234a5f59e979a2af870d58efdb9a1b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979195"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037884"
 ---
 # <a name="understanding-recordset-structure"></a>Основные сведения о структуре набора записей
 Каждый **набор записей** содержит коллекцию **Fields** , состоящую из одного или нескольких объектов **field** . Объект **поля** обычно представляет столбец таблицы. В следующих разделах объясняется, как перемещаться по коллекции **Fields** и получать сведения о каждом поле. Затем они обсуждают, какие сведения доступны через объект **field** и как его использовать.  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 442b08c5-ccc7-4192-a1cc-22f250867782
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 636e4822be1ecce136302b7f36289857546eab2f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: aae6cbd7d843771fbf88d6d257706ce66e424745
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978975"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036764"
 ---
 # <a name="using-pages"></a>Использование страниц
 Используйте свойство **PageCount** , чтобы определить, сколько страниц данных находится в объекте **Recordset** . *Страницы* — это группы записей, размер которых равен значению свойства **pageSize** . Даже если последняя страница является неполной, так как число записей меньше, чем значение **pageSize** , оно считается дополнительной страницей в значении **PageCount** . Если объект **Recordset** не поддерживает это свойство, **PageCount** будет иметь значение-1, чтобы указать, что **PageCount** является недетерминированным.  

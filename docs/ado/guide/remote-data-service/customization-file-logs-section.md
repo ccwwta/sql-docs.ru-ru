@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc65c6d9ad0b97f6d7f98a26fec173fc0fd630c3
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 34485c91a20b8c5df668e5eddd11e442418844a9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724775"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036534"
 ---
 # <a name="customization-file-logs-section"></a>Настройка раздела журналов файла
 Раздел **журналы** содержит запись файла журнала, которая указывает имя файла, записывающего ошибки во время выполнения **операции.**  
@@ -37,7 +37,7 @@ FileName
   
 ```  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
   
 |Часть|Описание|  
 |----------|-----------------|  
@@ -46,7 +46,7 @@ FileName
   
  Файл журнала будет содержать имя пользователя, HRESULT, дату и время каждой ошибки.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Раздел "Подключение файла настройки"](./customization-file-connect-section.md)   
  [Раздел файла настройки SQL](./customization-file-sql-section.md)   
  [Раздел UserList файла настройки](./customization-file-userlist-section.md)   

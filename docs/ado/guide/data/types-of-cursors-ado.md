@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: adeaef5251ef5e9ebbc1e6b792f2647d3fcea250
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: c264cda3a42dd49848d4ad047f24d54102c60a3c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979315"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037824"
 ---
 # <a name="types-of-cursors-ado"></a>Типы курсоров (ADO)
 Как правило, приложение должно использовать простейший курсор, который предоставляет необходимый доступ к данным. Каждая дополнительная характеристика курсора за пределами основ (последовательное, только для чтения, статическая, прокрутка, без буферизации) имеет цену за память клиента, сетевую нагрузку или производительность. Во многих случаях параметры курсора по умолчанию создают более сложный курсор, чем действительно требуется приложению.  
@@ -45,7 +45,7 @@ ms.locfileid: "88979315"
   
 -   [Динамические курсоры](../../../ado/guide/data/dynamic-cursors.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Однопроходные курсоры](../../../ado/guide/data/forward-only-cursors.md)   
  [Статические курсоры](../../../ado/guide/data/static-cursors.md)   
  [Курсоры набора ключей](../../../ado/guide/data/keyset-cursors.md)   

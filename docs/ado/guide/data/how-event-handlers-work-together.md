@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 37e1c5d081ccbcacaf50aa385a87afa9555ad2ca
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: dd6950ec37ddf974470e29ae554603723b299ef5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980525"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037354"
 ---
 # <a name="how-event-handlers-work-together"></a>Совместная работа обработчиков событий
 Если вы не программируете в Visual Basic, необходимо реализовать все обработчики событий для **соединений** и событий **набора записей** независимо от того, действительно ли вы обрабатываете все события. Объем работ по реализации зависит от языка программирования. Дополнительные сведения см. в разделе [Создание экземпляра события ADO по языку](./ado-event-instantiation-by-language.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "88980525"
 > [!NOTE]
 >  Этот метод не может использоваться в Visual Basic, поскольку этот язык может сопоставлять только один объект с обработчиком событий.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сводка по обработчику событий ADO](./ado-event-handler-summary.md)   
  [Создание экземпляра события ADO по языку](./ado-event-instantiation-by-language.md)   
  [Параметры события](./event-parameters.md)   

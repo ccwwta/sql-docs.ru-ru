@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 64234ce5-dc46-4c8a-a316-61956b6b9abb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cbc2b4821ac5c57c2302892caff1afa742e829b9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 45842fd5035a8b52c68911d29a23a3414a776e02
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978695"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036694"
 ---
 # <a name="provider-support-for-adox-ado"></a>Поддержка поставщика для ADOX (ADO)
 Некоторые функции ADOX не поддерживаются в зависимости от поставщика данных OLE DB. ADOX полностью поддерживается [поставщиком OLE DB для Microsoft Jet](../appendixes/microsoft-ole-db-provider-for-microsoft-jet.md). В следующих таблицах перечислены неподдерживаемые функции [поставщика microsoft OLE DB для SQL Server](../appendixes/microsoft-ole-db-provider-for-sql-server.md), [поставщика Microsoft OLE DB для ODBC](../appendixes/microsoft-ole-db-provider-for-odbc.md)или [поставщик OLE DB для Oracle (Майкрософт)](../appendixes/microsoft-ole-db-provider-for-oracle.md) . ADOX не поддерживается другими поставщиками OLE DB Майкрософт.  

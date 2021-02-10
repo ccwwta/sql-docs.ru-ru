@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 17ce1263-5897-452a-9ea5-c7f96b33df65
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 35c2376031e96a19c4a761a9826e47be2306518e
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 031d819e2c8eed63b9b8ff42aa58fb8e998a4273
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991335"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037504"
 ---
 # <a name="editing-existing-records"></a>Изменение существующих записей
 Чтобы изменить существующие записи, перейдите к строке, которую необходимо изменить, и измените свойство **значения** полей, которые необходимо изменить. Дополнительные сведения о свойстве **value** объекта **field** см. в разделе [анализ данных](./examining-data.md). В зависимости от типа курсора для отправки изменений обратно в источник данных будет использоваться **Update** или **UpdateBatch** . Дополнительные сведения см. в разделе [обновление и сохранение данных](./updating-and-persisting-data.md).  

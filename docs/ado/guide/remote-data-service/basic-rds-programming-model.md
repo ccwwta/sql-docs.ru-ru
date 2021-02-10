@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0bdd236b-edff-4aac-94c3-93e1465ca6c5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b43d18127717ae58b4db2c8fb33c5d173ab160af
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 81d789c003921b4e8359df281cb9fa51dbdf1f26
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724835"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036584"
 ---
 # <a name="basic-rds-programming-model"></a>Основная модель программирования RDS
 > [!IMPORTANT]
@@ -44,7 +44,7 @@ ms.locfileid: "91724835"
   
  И, наконец, если между ними есть свои нужды, ADO теперь поддерживает настройку поведения серверной программы по умолчанию.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Подробное описание модели программирования RDS](./rds-programming-model-in-detail.md)   
  [Сценарий RDS](./rds-scenario.md)   
  [Руководство по RDS](./rds-tutorial.md)   

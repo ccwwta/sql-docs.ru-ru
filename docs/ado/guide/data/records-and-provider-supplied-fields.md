@@ -1,6 +1,6 @@
 ---
 description: Записи и предоставляемые поставщиком поля
-title: Записи и поля, предоставляемые поставщиком | Документация Майкрософт
+title: Записи и Provider-Supplied поля | Документация Майкрософт
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: ado
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7cc7b8c4fb0116f96a2470a7161f9fbd30c7efb9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a64168a8a1fec81d47c337978ea75664fec0a10c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979955"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037114"
 ---
 # <a name="records-and-provider-supplied-fields"></a>Записи и предоставляемые поставщиком поля
 При открытии объекта [Record](../../../ado/reference/ado-api/record-object-ado.md) его источник может быть текущей строкой открытого [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md), абсолютным URL-адресом или относительным URL-адресом в сочетании с открытым объектом [соединения](../../../ado/reference/ado-api/connection-object-ado.md) .  
@@ -56,7 +56,7 @@ ms.locfileid: "88979955"
 ## <a name="resource-recordset-columns"></a>Столбцы набора записей ресурса  
  *Набор записей ресурсов* состоит из следующих столбцов.  
   
-|Имя столбца|Type|Описание|  
+|Имя столбца|Тип|Описание|  
 |-----------------|----------|-----------------|  
 |RESOURCE_PARSENAME|адварвчар|Только для чтения. Указывает URL-адрес ресурса.|  
 |RESOURCE_PARENTNAME|адварвчар|Только для чтения. Указывает абсолютный URL-адрес родительской записи.|  
@@ -77,6 +77,6 @@ ms.locfileid: "88979955"
 |RESOURCE_DISPLAYNAME|адварвчар|Только для чтения. Указывает отображаемое имя ресурса.|  
 |RESOURCE_ISROOT|адбулеан|Только для чтения. Значение true, если ресурс является корнем коллекции или структурированного документа.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Приложение А. Поставщики](../../../ado/guide/appendixes/appendix-a-providers.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c4e1187a319b086f7a28d3b282869271cd444ab5
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e9ee255f895e934c4405d888d72f15b8cee9159d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980165"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037204"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>Использование непараметризованных команд
 Для непараметризованных команд выполняются все команды поставщика, а также **наборы записей** , создаваемые во время выполнения команды. Если команда выполняется синхронно, все **наборы записей** будут заполнены полностью. Если выбран режим асинхронного заполнения, заполненное состояние **наборов записей** будет зависеть от режима заполнения и размера **наборов записей**.  
@@ -40,9 +40,9 @@ SHAPE {SELECT * FROM Customers}
   
  Если в присоединенном столбце нет *псевдонима Chapter*, для него автоматически создается имя. Объект [поля](../../reference/ado-api/field-object.md) для столбца будет добавлен в коллекцию [Fields](../../reference/ado-api/fields-collection-ado.md) объекта **Recordset** , и его тип данных будет **адчаптер**.  
   
- Сведения о навигации по иерархическим **наборам записей**см. [в разделе доступ к строкам в иерархическом наборе записей](./accessing-rows-in-a-hierarchical-recordset.md).  
+ Сведения о навигации по иерархическим **наборам записей** см. [в разделе доступ к строкам в иерархическом наборе записей](./accessing-rows-in-a-hierarchical-recordset.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример формирования данных](./data-shaping-example.md)   
  [Грамматика формальной фигуры](./formal-shape-grammar.md)   
  [Общие сведения о командах формирования данных](./shape-commands-in-general.md)

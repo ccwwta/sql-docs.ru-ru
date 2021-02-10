@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1dca646b07c441a4fccd617723aba98536f1a7e1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ce3b22ecd5913db0045f82e72aa20b0833a5109b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980335"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100037264"
 ---
 # <a name="more-about-recordset-persistence"></a>Дополнительные сведения о сохраняемости набора записей
 Объект ADO Recordset поддерживает хранение содержимого объекта **набора записей** в файле с помощью метода [Save](../../reference/ado-api/save-method.md) . Сохраняемый файл может находиться на локальном диске, сервере или в качестве URL-адреса на веб – сайте. Позднее файл можно восстановить с помощью метода [Open](../../reference/ado-api/open-method-ado-recordset.md) объекта **Recordset** или метода [EXECUTE](../../reference/ado-api/execute-method-ado-connection.md) объекта [Connection](../../reference/ado-api/connection-object-ado.md) .  
@@ -78,7 +78,7 @@ dc.SQL = "c:\yourFile.adtg"
 dc.Refresh  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод GetString (ADO)](../../reference/ado-api/getstring-method-ado.md)   
  [Поставщик сохраняемости Microsoft OLE DB (поставщик служб ADO)](../appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)   
  [Объект Recordset (ADO)](../../reference/ado-api/recordset-object-ado.md)   

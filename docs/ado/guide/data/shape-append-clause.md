@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 11d2c02d24753460f90452ddd6cc6b1e1589b80b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 7c6d62d410e6709c93ad6e3d04db627f14f091a1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979625"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036994"
 ---
 # <a name="shape-append-clause"></a>Предложение APPEND для формирования данных
 Предложение добавления команды Shape добавляет столбец или столбцы к **набору записей**. Часто эти столбцы являются столбцами секций, которые ссылаются на дочерний **набор записей**.  
@@ -71,7 +71,7 @@ SHAPE [parent-command [[AS] parent-alias]]
   
 -   Другая команда Shape, внедренная в круглые скобки.  
   
--   Имя существующего **набора записей**в форме.  
+-   Имя существующего **набора записей** в форме.  
   
 -   Ключевое слово TABLE, за которым следует имя таблицы в поставщике данных.  
   
@@ -120,7 +120,7 @@ SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO 
   
 -   [Предложения COMPUTE для промежуточного формирования данных](../../../ado/guide/data/intervening-shape-compute-clauses.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример формирования данных](../../../ado/guide/data/data-shaping-example.md)   
  [Грамматика формальной фигуры](../../../ado/guide/data/formal-shape-grammar.md)   
  [Общие сведения о командах формирования данных](../../../ado/guide/data/shape-commands-in-general.md)
