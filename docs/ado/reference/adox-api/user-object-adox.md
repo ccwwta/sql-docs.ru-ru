@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: f68e32ce-ef7c-407d-bdb5-d280947ae0e2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c5ca59cb5900643202c2d541072c48b275b5b5df
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e37c09d4793a96056ab5d8003bf022b1d250b744
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169142"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049684"
 ---
 # <a name="user-object-adox"></a>Объект User (ADOX)
 Представляет учетную запись пользователя, имеющую разрешения на доступ в защищенной базе данных.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Коллекция [пользователей](./users-collection-adox.md) [каталога](./catalog-object-adox.md) представляет всех пользователей каталога. Коллекция **пользователей** для [группы](./group-object-adox.md) представляет только пользователей определенной группы.  
   
  С помощью свойств, коллекций и методов **пользовательского** объекта можно выполнять следующие действия:  

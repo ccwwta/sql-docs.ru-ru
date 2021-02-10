@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a29e3fb9-306d-497a-9a59-1856a914e5e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b4f8f1db220bdf68205e3bd4628a27d0b57705b8
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 531a832c5519b7a049c96de15971c74bc9a607a9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99168805"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049204"
 ---
 # <a name="recordset-sourcerecordset-properties-rds"></a>Свойства Recordset и SourceRecordset (служба удаленных рабочих столов)
 Указывает объект **набора записей** , возвращенный из пользовательского бизнес-объекта.  
@@ -44,7 +44,7 @@ Recordset = DataControl.Recordset
  *набор записей*  
  Объектная переменная, представляющая объект **набора записей** .  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Свойству **саурцерекордсет** можно присвоить набор [записей](../ado-api/recordset-object-ado.md) , возвращаемый из пользовательского бизнес-объекта.  
   
  Эти свойства позволяют приложению обрабатывать процесс привязки с помощью пользовательского процесса. Они получают набор строк, заключенный в **набор записей** , чтобы можно было напрямую взаимодействовать с **набором записей**, выполняя такие действия, как установка свойств или перебор **набора записей**.  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f451f93c41ba8fae501d9fb52233f9a4dbe03d30
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: feb259809798e3260e4e201c4658bfbc1455f168
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169581"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050545"
 ---
 # <a name="append-method-adox-indexes"></a>Метод Append (коллекция Indexes ADOX)
 Добавляет новый объект [index](./index-object-adox.md) в коллекцию [индексов](./indexes-collection-adox.md) .  
@@ -38,9 +38,9 @@ Indexes.Append Index [,Columns]
  Добавляемый объект **index** или имя создаваемого и добавляемого индекса.  
   
  *Столбцы*  
- Необязательный параметр. Значение **типа Variant** , указывающее имена столбцов, которые будут индексироваться. Параметр *Columns* соответствует значениям свойства [Name](./name-property-adox.md) объекта [Column](./column-object-adox.md) или объектов.  
+ Необязательный элемент. Значение **типа Variant** , указывающее имена столбцов, которые будут индексироваться. Параметр *Columns* соответствует значениям свойства [Name](./name-property-adox.md) объекта [Column](./column-object-adox.md) или объектов.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Параметр *Columns* может принимать либо имя столбца, либо массив имен столбцов.  
   
  Если поставщик не поддерживает создание индексов, возникнет ошибка.  

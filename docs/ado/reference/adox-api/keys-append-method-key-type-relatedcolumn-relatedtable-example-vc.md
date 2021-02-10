@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 28495b8f-18dc-482c-995d-a120f6ae2006
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce9203411271fc1dc5e69278f92989c1b76ba159
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ade44a896c3fd93f9e6543a501e4ab9693bba187
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164164"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049964"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vc"></a>Примеры метода Append коллекции Keys, свойства Type объекта Key, а также примеры свойств RelatedColumn, RelatedTable и UpdateRule (Visual C++)
 В следующем коде показано, как создать новый внешний ключ. Предполагается, что существует две таблицы (Customers и Orders).  

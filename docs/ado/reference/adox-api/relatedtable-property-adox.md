@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: cb54c6bc-2be2-40b1-bc11-90c10651b878
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dc2eb95c9ae35d2abe697a6f5e0231633ded8fec
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2f78385b6b8c9b45437fab3cb5e3dca608e8af56
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164055"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049784"
 ---
 # <a name="relatedtable-property-adox"></a>Свойство RelatedTable (ADOX)
 Указывает имя связанной таблицы.  
@@ -33,7 +33,7 @@ ms.locfileid: "99164055"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает и возвращает **строковое** значение.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Значение по умолчанию — пустая строка.  
   
  Если ключ является внешним ключом, **RelatedTable** — имя таблицы, содержащей ключ.  

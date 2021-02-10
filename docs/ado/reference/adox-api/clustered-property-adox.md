@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9b62fb35-de43-425a-83ca-77af4e33fea9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e9a727d17e4c673b1a6e9376ef40903e8408ee7
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 3636da83a0318eb9a3af4bf5209aa96c46e2a1ab
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169522"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050325"
 ---
 # <a name="clustered-property-adox"></a>Свойство Clustered (ADOX)
 Указывает, является ли индекс кластеризованным.  
@@ -33,7 +33,7 @@ ms.locfileid: "99169522"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает и возвращает **логическое** значение.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Значение по умолчанию равно **False**.  
   
  Это свойство доступно только для чтения в объектах [индекса](./index-object-adox.md) , которые уже были добавлены в коллекцию.  

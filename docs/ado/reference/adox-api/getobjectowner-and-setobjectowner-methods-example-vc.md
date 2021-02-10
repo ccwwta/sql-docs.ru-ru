@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f5f2aa4b-d790-458f-9e70-1643e3e203b2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fb68ca4eb7cd8c1591ef52b399649dac7614b308
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: fc0838e16533d5c9c75d9dfbec7bfb934efeb5f2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169409"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050104"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>Примеры методов GetObjectOwner и SetObjectOwner (Visual C++)
 В этом примере демонстрируются методы [примеры методов getobjectowner](./getobjectowner-method-adox.md) и [SetObjectOwner](./setobjectowner-method.md) . В этом коде предполагается наличие учетной записи группы (см. Дополнительные сведения о добавлении этой группы в систему в разделе [группы и пользователи добавим, метод ChangePassword (](./groups-and-users-append-changepassword-methods-example-vc.md) Visual c++)). Владелец таблицы Categories имеет значение Accounting.  

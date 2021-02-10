@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1057b57b-5ace-4830-9a20-562e88aeef86
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1b465013a9229f1542756f75427ea32acf1104b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: aafb86aae81dcb3b638349a87f68d29de9043396
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169551"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050365"
 ---
 # <a name="attributes-property-example-vc"></a>Пример свойства Attributes (Visual C++)
 В этом примере демонстрируется свойство [Attributes](./attributes-property-adox.md) [столбца](./column-object-adox.md). Задание значения **адколнуллабле** позволяет пользователю задать значение [поля](../ado-api/field-object.md) [набора записей](../ado-api/recordset-object-ado.md) в виде пустой строки. В этом случае пользователь может различать записи, в которых данные не известны, и запись, в которой данные не применяются.  

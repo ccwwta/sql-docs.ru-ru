@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d9d8715-e4ad-4ff3-bf7f-f1dc0532d8c2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8bfd6b6c504077bd20ced3d302206c129ab781ae
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b736b616578eb3d0a8efa91c7b2b76515f33b96a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166118"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049131"
 ---
 # <a name="sortdirection-property-rds"></a>Свойство SortDirection (служба удаленных рабочих столов)
 Указывает, используется ли порядок сортировки по возрастанию или по убыванию.  
@@ -41,7 +41,7 @@ DataControl.SortDirection = value
  *Значение*  
  **Логическое** значение, которое при установке значения **true** указывает направление сортировки по возрастанию. **Значение false** указывает на убывающий порядок.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Свойства [sortColumn](./sortcolumn-property-rds.md), **SortDirection**, [FilterValue](./filtervalue-property-rds.md), [филтеркритерион](./filtercriterion-property-rds.md)и [филтерколумн](./filtercolumn-property-rds.md) предоставляют функции сортировки и фильтрации кэша на стороне клиента. Функция сортировки упорядочивает записи, используя значения из одного столбца. Функция фильтрации отображает подмножество записей на основе критериев поиска, а полный [набор записей](../ado-api/recordset-object-ado.md) сохраняется в кэше. Метод [Reset](./reset-method-rds.md) выполнит условия и заменит текущий **набор** записей на обновляемый **набор записей**.  
   
 ## <a name="applies-to"></a>Применение  

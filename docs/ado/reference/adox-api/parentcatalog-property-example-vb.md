@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 448bc850-7584-4c5f-89f3-5f4fee88b259
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4b4ee803de006feaa3eadc1eae3eb635e8c598cf
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 5f728bb18f57d8f30cf4d576e651f8a20bc385ad
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164126"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049874"
 ---
 # <a name="parentcatalog-property-example-vb"></a>Пример свойства ParentCatalog (Visual Basic)
 В следующем коде показано, как использовать свойство [ParentCatalog](./parentcatalog-property-adox.md) для доступа к свойству, зависящему от поставщика, до добавления таблицы в каталог. Свойство имеет значение **AutoIncrement**, которое создает поле автоприращения в базе данных Microsoft Jet.  

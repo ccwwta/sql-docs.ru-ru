@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1809c23267057a34c0f2f594a41bdfe62304545c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2299e0b918206a1eadfa3d3352a01ec0d7320152
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99163786"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049414"
 ---
 # <a name="fetchoptions-property-rds"></a>Свойство FetchOptions (служба удаленных рабочих столов)
 Указывает тип асинхронной выборки.  
@@ -39,7 +39,7 @@ ms.locfileid: "99163786"
 > [!NOTE]
 >  Каждый исполняемый файл на стороне клиента, использующий эти константы, должен предоставлять объявления для них. Вы можете вырезать и вставить объявления констант из файла Адквбс. Inc, расположенного в папке установки по умолчанию для библиотеки RDS.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В веб-приложении обычно требуется использовать **адкфетчасинк** (значение по умолчанию), так как оно обеспечивает лучшую производительность. В скомпилированном клиентском приложении обычно требуется использовать **адкфетчбаккграунд**.  
   
 ## <a name="applies-to"></a>Применение  

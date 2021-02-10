@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9536ad522be7a323113e23466de5abb82cbb5824
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2dfc8f93b2c185b530a142dde8206c77799818c3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172264"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050385"
 ---
 # <a name="attributes-property-example-vb"></a>Пример свойства Attributes (Visual Basic)
 В этом примере демонстрируется свойство [Attributes](./attributes-property-adox.md) [столбца](./column-object-adox.md). Задание значения **адколнуллабле** позволяет пользователю задать значение [поля](../ado-api/field-object.md) [набора записей](../ado-api/recordset-object-ado.md) в виде пустой строки. В этом случае пользователь может различать записи, в которых данные не известны, и запись, в которой данные не применяются.  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 56b94fc6-7ef0-4e4a-82a3-033b94c46036
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 859e3dea7f5dbdb84efd44aebc766eb2d195a7e3
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 846475567fb15e549f96094ca55a1881d8888ce5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164312"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050535"
 ---
 # <a name="append-method-adox-groups"></a>Метод Append (коллекция Groups ADOX)
 Добавляет новый объект [группы](./group-object-adox.md) в коллекцию [Groups](./groups-collection-adox.md) .  
@@ -38,7 +38,7 @@ Groups.Append Group
  *Группа*  
  Добавляемый объект **группы** или имя группы для создания и добавления.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Коллекция **Groups** [каталога](./catalog-object-adox.md) представляет все учетные записи групп каталога. Коллекция **Groups** для [пользователя](./user-object-adox.md) представляет только группу, к которой принадлежит пользователь.  
   
  Если поставщик не поддерживает создание групп, возникнет ошибка.  

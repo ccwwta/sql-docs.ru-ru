@@ -17,22 +17,22 @@ helpviewer_keywords:
 ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c77c3eccd6cc2e61898b1619ec6255f65227384b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8285f74a4c5702e21dc2cd34e86be11ee4fc93a0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169246"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049824"
 ---
 # <a name="procedures-collection-adox"></a>Коллекция Procedures (ADOX)
 Содержит все объекты [процедур](./procedure-object-adox.md) каталога.  
   
-## <a name="remarks"></a>Замечания  
- Метод [append](./append-method-adox-procedures.md) для коллекции **процедур** уникален для ADOX. Вы можете выполнить следующие действия:  
+## <a name="remarks"></a>Remarks  
+ Метод [append](./append-method-adox-procedures.md) для коллекции **процедур** уникален для ADOX. Вы можете выбрать один из следующих вариантов.  
   
 -   Добавьте новую процедуру в коллекцию с помощью метода **append** .  
   
- Остальные свойства и методы являются стандартными для коллекций ADO. Вы можете выполнить следующие действия:  
+ Остальные свойства и методы являются стандартными для коллекций ADO. Вы можете выбрать один из следующих вариантов.  
   
 -   Получите доступ к процедуре в коллекции со свойством [Item](../ado-api/item-property-ado.md) .  
   

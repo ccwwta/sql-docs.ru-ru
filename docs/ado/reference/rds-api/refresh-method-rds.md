@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c90a8050-0ff4-4c83-9925-261f2f2ccfe9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f35574b0e9623560ddfafe123340e302a9fc5220
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 0f9e23ed4b6c17f4d1f3ffa7489490f40c25f8b7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99168802"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049194"
 ---
 # <a name="refresh-method-rds"></a>Метод Refresh (служба удаленных рабочих столов)
 Повторно запрашивает источник данных, указанный в свойстве [Connect](./connect-property-rds.md) , и обновляет результаты запроса.  
@@ -42,7 +42,7 @@ DataControl.Refresh
  *DataControl*  
  Объектная переменная, представляющая [RDS. Объект элемента управления](./datacontrol-object-rds.md) .  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Перед использованием метода **Refresh** необходимо задать свойства [Connect](./connect-property-rds.md), [Server](./server-property-rds.md)и [SQL](./sql-property.md) . Все элементы управления, привязанные к данным, в форме, связанной с **RDS. Объект элемента управления** данные будет отражать новый набор записей. Освобождается существующий объект [набора записей](../ado-api/recordset-object-ado.md) , и все несохраненные изменения отбрасываются. Метод **Refresh** автоматически делает первую запись текущей записью.  
   
  Рекомендуется периодически вызывать метод **Refresh** при работе с данными. Если получить данные и оставить их на клиентском компьютере в течение определенного времени, скорее всего, они устаревают. Возможно, любые внесенные изменения будут завершаться ошибкой, так как другой пользователь мог изменить запись и отправил изменения перед вами.  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3f36bc8-6f69-49b0-83cd-2ccd3afebfbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4edcebbfdee8a9a1411189786593c129ee32771c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ce472fa758c479a02a43ce8ddd640219e1f7919e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169036"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049514"
 ---
 # <a name="converttostring-method-rds"></a>Метод ConvertToString (служба удаленных рабочих столов)
 Преобразует [набор записей](../ado-api/recordset-object-ado.md) в строку MIME, представляющую данные набора записей.  
@@ -41,7 +41,7 @@ DataFactory.ConvertToString(Recordset)
  *набор записей*  
  Объектная переменная, представляющая объект **набора записей** .  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  С помощью файлов. ASP используйте **ConvertToString** для внедрения **набора записей** в HTML-страницу, созданную на сервере для передачи его на клиентский компьютер.  
   
  **ConvertToString** сначала загружает **набор записей** в таблицы службы курсоров, а затем создает поток в формате MIME.  

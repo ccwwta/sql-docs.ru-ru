@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 28f17186-b842-4cf9-b320-a9bb941c481b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: af9276f641a3a9c419cc0dc49595bcddc049336e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 44e1eca1ac4a949a3d46fe3a1ec58ff0c0b882dc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99163764"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049394"
 ---
 # <a name="filtervalue-property-rds"></a>Свойство FilterValue (служба удаленных рабочих столов)
 Указывает значение, с которым фильтруются записи.  
@@ -41,7 +41,7 @@ DataControl.FilterValue = String
  *String*  
  **Строковое** значение, представляющее значение данных, с помощью которого отфильтруются записи (например, `'Programmer'` или `125` ).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Свойства [sortColumn](./sortcolumn-property-rds.md), [SortDirection](./sortdirection-property-rds.md), **FilterValue**, [филтеркритерион](./filtercriterion-property-rds.md)и [филтерколумн](./filtercolumn-property-rds.md) предоставляют функции сортировки и фильтрации кэша на стороне клиента. Функция сортировки упорядочивает записи по значениям из одного столбца. Функция фильтрации отображает подмножество записей на основе критериев поиска, а полный [набор записей](../ado-api/recordset-object-ado.md) сохраняется в кэше. Метод [Reset](./reset-method-rds.md) выполнит условия и заменит текущий **набор** записей на обновляемый **набор записей**.  
   
  Значения NULL приводят к ошибке несоответствия типов.  

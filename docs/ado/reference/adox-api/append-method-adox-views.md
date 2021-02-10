@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 757778961d7b66dd147b8b013b48062dae0cbd91
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 15a22e293262c414278db7f6e7e266b562d61de3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172282"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050445"
 ---
 # <a name="append-method-adox-views"></a>Метод Append (коллекция Views ADOX)
 Создает новый объект [представления](./view-object-adox.md) и добавляет его в коллекцию [представлений](./views-collection-adox.md) .  
@@ -41,7 +41,7 @@ Views.Append Name, Command
  *Command*  
  Объект [команды](../ado-api/command-object-ado.md) ADO, представляющий создаваемое представление.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Создает новое представление в источнике данных с именем и атрибутами, указанными в объекте **Command** .  
   
  Если текст команды, который указывает пользователь, представляет процедуру, а не представление, то поведение зависит от поставщика. Если поставщик не поддерживает хранимые команды, **Добавление** завершится ошибкой.  

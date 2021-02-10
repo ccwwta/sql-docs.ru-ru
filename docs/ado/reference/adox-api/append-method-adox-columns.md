@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a46d23c-efef-4ec7-815d-cd3ac86787dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 40abf0ae298b469d0814e8dd3da85a8c8865be78
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 7cf3b6e70bb7df0aff23d8d4d6c92b4fe6656e21
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169597"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050555"
 ---
 # <a name="append-method-adox-columns"></a>Метод Append (коллекция Columns ADOX)
 Добавляет новый объект [Column](./column-object-adox.md) в коллекцию [Columns](./columns-collection-adox.md) .  
@@ -38,11 +38,11 @@ Columns.Append Column [,Type] [,DefinedSize]
  *Столбец*  
  Добавляемый объект **Column** или имя создаваемого и добавляемого столбца.  
   
- *Type*  
- Необязательный параметр. Значение типа **Long** , указывающее тип данных столбца. Параметр *типа* соответствует свойству [Type](./type-property-column-adox.md) объекта **Column** .  
+ *Тип*  
+ Необязательный элемент. Значение типа **Long** , указывающее тип данных столбца. Параметр *типа* соответствует свойству [Type](./type-property-column-adox.md) объекта **Column** .  
   
  *DefinedSize*  
- Необязательный параметр. Значение **типа Long** , указывающее размер столбца. Параметр *DefinedSize* соответствует свойству [DefinedSize](./definedsize-property-adox.md) объекта **Column** .  
+ Необязательный элемент. Значение **типа Long** , указывающее размер столбца. Параметр *DefinedSize* соответствует свойству [DefinedSize](./definedsize-property-adox.md) объекта **Column** .  
   
 > [!NOTE]
 >  При добавлении **столбца** в коллекцию **Columns** [индекса](./index-object-adox.md) , если **Столбец** не существует в [таблице](./table-object-adox.md) , уже присоединенной к коллекции [таблиц](./tables-collection-adox.md) , возникнет ошибка.  

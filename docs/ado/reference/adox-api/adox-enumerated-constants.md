@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6f9734a802ca1b653a912a0fe829b24e14e6953f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 227e66568fcc140c5a14a23af7a6471a710c23c4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164345"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050635"
 ---
 # <a name="adox-enumerated-constants"></a>ADOX Enumerated Constants
 Для помощи в отладке перечисляемые константы ADOX список значений для каждой константы. Однако это значение является исключительно рекомендацией и может изменяться от одного выпуска ADOX к другому. Код должен зависеть только от имени перечисленных констант, а не от фактического значения.  

@@ -19,22 +19,22 @@ helpviewer_keywords:
 ms.assetid: 23b9fea8-4f76-4a51-95ce-1a6ce4560b34
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65b84850b8da3d85e8b4a013371119d4109eb6cf
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 81a7e0c521b96b737c44e3c88f2b14be42176a31
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169481"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050274"
 ---
 # <a name="columns-collection-adox"></a>Коллекция Columns (ADOX)
 Содержит все объекты [Column](./column-object-adox.md) таблицы, индекса или ключа.  
   
-## <a name="remarks"></a>Замечания  
- Метод [append](./append-method-adox-columns.md) для коллекции **Columns** уникален для ADOX. Вы можете выполнить следующие действия:  
+## <a name="remarks"></a>Remarks  
+ Метод [append](./append-method-adox-columns.md) для коллекции **Columns** уникален для ADOX. Вы можете выбрать один из следующих вариантов.  
   
 -   Добавьте новый столбец в коллекцию с помощью метода **append** .  
   
- Остальные свойства и методы являются стандартными для коллекций ADO. Вы можете выполнить следующие действия:  
+ Остальные свойства и методы являются стандартными для коллекций ADO. Вы можете выбрать один из следующих вариантов.  
   
 -   Доступ к столбцу в коллекции со свойством [Item](../ado-api/item-property-ado.md) .  
   

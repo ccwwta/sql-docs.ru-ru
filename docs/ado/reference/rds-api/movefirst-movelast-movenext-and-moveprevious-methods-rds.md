@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 45c80bb5-136f-4204-9df2-78740fa55574
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80a0a2b5fae2339718089903060c512595957be3
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 54395a8b0bdc88e873ad25d41ab92304e7f5efe6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99168920"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049284"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-rds"></a>Методы MoveFirst, MoveLast, MoveNext и MovePrevious (служба удаленных рабочих столов)
 Переход к первой, последней, следующей или предыдущей записи в указанном объекте [набора записей](../ado-api/recordset-object-ado.md) .  
@@ -41,7 +41,7 @@ DataControl.Recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
  *DataControl*  
  Объектная переменная, представляющая [RDS. Объект элемента управления](./datacontrol-object-rds.md) .  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Методы **Move** можно использовать с **RDS. Объект элемента управления** данными для перемещения по записям данных в элементах управления с привязкой к данным на веб-странице. Например, предположим, что **набор записей** отображается в сетке путем привязки к **RDS. Объект элемента управления** . Затем можно включить кнопки «Первая», «последняя», «вперед» и «назад», которые пользователи могут нажать для перехода к первой, последней, следующей или предыдущей записи в отображаемом **наборе записей**. Это делается путем вызова методов **MoveFirst**, **MoveLast**, **MoveNext** и **MovePrevious** **RDS. Объект элемента управления** DataObject в процедурах OnClick для первой, последней, следующей и предыдущей кнопок соответственно. В [примере адресной книги](../../guide/remote-data-service/address-book-navigation-buttons.md) показано, как это сделать.  
   
 ## <a name="applies-to"></a>Применение  

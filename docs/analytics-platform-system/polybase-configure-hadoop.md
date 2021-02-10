@@ -9,12 +9,12 @@ ms.date: 12/13/2019
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019, seo-lt-2019
-ms.openlocfilehash: 2989be74f4c180d07a6270a8ba5f685460780fbd
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 18bec3d694985e15b1ae2d813fddf2f378c9d78a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243478"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049110"
 ---
 # <a name="configure-polybase-in-parallel-data-warehouse-to-access-external-data-in-hadoop"></a>Настройка Polybase в параллельном хранилище данных для доступа к внешним данным в Hadoop
 
@@ -49,7 +49,7 @@ PolyBase поддерживает два поставщика Hadoop — Horton
 
 2. Перезапустите регион APS с помощью страницы состояния службы [Configuration Manager устройства](launch-the-configuration-manager.md).
   
-## <a name="enable-pushdown-computation"></a><a id="pushdown"></a> Активация вычислений pushdown  
+## <a name="enable-pushdown-computation"></a><a id="pushdown"></a> Включить вычисления включение  
 
 Чтобы улучшить производительность при выполнении запроса, активируйте вычисление pushdown для кластера Hadoop.  
   
@@ -278,7 +278,7 @@ Yarn-site.xml yarn.application.classpath и mapreduce.application.classpath ко
 
 Есть три функции, которые выполняет PolyBase:  
   
-- Нерегламентированные запросы к внешним таблицам.  
+- отправка нерегламентированных запросов к внешним таблицам;  
 - импорт данных;  
 - экспорт данных.  
 

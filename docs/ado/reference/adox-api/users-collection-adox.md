@@ -18,24 +18,24 @@ helpviewer_keywords:
 ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 84fffacf0795d60808e172185251f3135bd0d7d4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 781f9eb90c621cf8daf4afb0cdf8dc4f1f7b47b4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169122"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100049674"
 ---
 # <a name="users-collection-adox"></a>Коллекция Users (ADOX)
 Содержит все сохраненные [пользовательские](./user-object-adox.md) объекты [каталога](./catalog-object-adox.md) или [группы](./group-object-adox.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Коллекция **пользователей** [каталога](./catalog-object-adox.md) представляет всех пользователей каталога. Коллекция **пользователей** для [группы](./group-object-adox.md) представляет только тех пользователей, которые имеют членство в определенной группе.  
   
- Метод [append](./append-method-adox-users.md) для коллекции **пользователей** уникален для ADOX. Вы можете выполнить следующие действия:  
+ Метод [append](./append-method-adox-users.md) для коллекции **пользователей** уникален для ADOX. Вы можете выбрать один из следующих вариантов.  
   
 -   Добавьте нового пользователя в коллекцию с помощью метода **append** .  
   
- Остальные свойства и методы являются стандартными для коллекций ADO. Вы можете выполнить следующие действия:  
+ Остальные свойства и методы являются стандартными для коллекций ADO. Вы можете выбрать один из следующих вариантов.  
   
 -   Доступ к пользователю в коллекции со свойством [Item](../ado-api/item-property-ado.md) .  
   
