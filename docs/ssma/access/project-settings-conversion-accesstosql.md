@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 63952d4e46b1c25e49e7f29f8da1e23543232cb7
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: a7390c30cd245a3f8a46784ec12e97752173a629
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988520"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066489"
 ---
 # <a name="project-settings-conversion-accesstosql"></a>Параметры проекта (преобразование) (Акцесстоскл)
 Параметры проекта преобразования позволяют настроить способ преобразования объектов из объектов базы данных Access в или в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объекты базы данных SQL Azure.  
@@ -85,7 +85,7 @@ ms.locfileid: "91988520"
 -   **Полный режим**: ошибка  
   
 **Предупреждать, если сложный запрос использует подстановочный знак ( \& #42;)**  
-Отображает предупреждение в области вывода и Список ошибок, если имя столбца в инструкции SELECT является подстановочным знаком (*).  
+Отображает предупреждение в области вывода и список ошибок, если имя столбца в инструкции SELECT является подстановочным знаком (*).  
   
 -   **Режим по умолчанию**: true  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9355fb1b-5cd4-49a2-839c-4b06057ea6c4
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7776ed791dc0ee1cf40525e3fefa68e9717abe55
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f71fec9e62497260d5c9aa0a5b4a08f542b56de5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463362"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067999"
 ---
 # <a name="global-settings-output-window-mysqltosql"></a>Глобальные параметры (окно вывода) (MySQLToSQL)
 Используйте диалоговое окно **глобальные параметры** , чтобы указать параметры для SSMA.  
@@ -23,7 +23,7 @@ ms.locfileid: "88463362"
 Чтобы получить доступ к параметрам окно вывода, в меню **Сервис** выберите **глобальные параметры**, щелкните **графический интерфейс** в нижней части левой панели, а затем выберите **окно вывода**.  
   
 ## <a name="options"></a>Параметры  
-**Отображение панели Список ошибок**  
+**Отображение панели список ошибок**  
 Выберите **значение true** , если требуется, чтобы SSMA отображал панель Список ошибок при наличии сообщений.  
   
 **Отображение области вывода**  

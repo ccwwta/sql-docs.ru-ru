@@ -11,12 +11,12 @@ ms.assetid: 4bb8466e-2199-4f00-8513-b04e9586723d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 0facd2ecca0ff6cc0a4bc28fe709a7adfc0c5acf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cbb47d74535af0dea97842bdf46680a4376c2ba7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320450"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067759"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>Параметры проекта (сопоставление типов) (OracleToSQL)
 Страница Сопоставление типов диалогового окна **Параметры проекта** содержит параметры, которые настраивают, как SSMA преобразует типы данных Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы данных.  
@@ -32,7 +32,7 @@ ms.locfileid: "88320450"
 ## <a name="options"></a>Параметры  
 В следующей таблице показаны параметры вкладки **Сопоставление типов** .  
   
-**Тип источника**  
+**Исходный тип**  
 Сопоставленный тип данных Oracle.  
   
 **Тип целевого объекта**  
@@ -43,10 +43,10 @@ ms.locfileid: "88320450"
 **Добавление**  
 Нажмите, чтобы добавить тип данных в список сопоставления.  
   
-**Edit** (Изменение)  
+**Правка**  
 Нажмите, чтобы изменить выбранный тип данных в списке сопоставление.  
   
-**Удалить**  
+**Remove**  
 Нажмите, чтобы удалить выбранное сопоставление типа данных из списка сопоставления.  
   
 **Сброс до значений по умолчанию**  
@@ -77,7 +77,7 @@ ms.locfileid: "88320450"
 |double precision|float [53]|  
 |FLOAT|float [53]|  
 |INT|INT|  
-|integer|INT|  
+|Целое число|INT|  
 |long|varchar(max)|  
 |Long RAW|varbinary(max)|  
 |Long RAW [ \* .. 8000]<sup>*</sup>|varbinary [*]|  
@@ -89,7 +89,7 @@ ms.locfileid: "88320450"
 |изменение национального алфавита<sup>*</sup>|nvarchar(max)|  
 |nchar|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
-|number|float [53]|  
+|число|float [53]|  
 |NUMERIC|float [53]|  
 |nvarchar2|nvarchar(max)|  
 |pls_integer|INT|  
@@ -139,7 +139,7 @@ ms.locfileid: "88320450"
 |float [*.. 53]|float [*]|  
 |float [54.. *]|float [53]|  
 |INT|INT|  
-|integer|INT|  
+|Целое число|INT|  
 |long|varchar(max)|  
 |Long RAW|varbinary(max)|  
 |Long RAW [*.. 8000]|varbinary [*]|  
@@ -156,7 +156,7 @@ ms.locfileid: "88320450"
 |nchar|nchar|  
 |nchar [*]|nchar [*]|  
 |NCLOB|nvarchar(max)|  
-|number|float [53]|  
+|число|float [53]|  
 |Number [*.. \* ]|numeric [*]|  
 |Number [*.. \* ] [\*..\*]|numeric [*] [ \* ]|  
 |NUMERIC|NUMERIC|  
@@ -235,7 +235,7 @@ ms.locfileid: "88320450"
 |изменение типа nchar [*.. 4000]|nvarchar [*]|  
 |изменение типа nchar [4001.. *]|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
-|Number|float [53]|  
+|число;|float [53]|  
 |Number [*.. \* ]|numeric [*]|  
 |Number [*.. \* ] [\*..\*]|numeric [*] [ \* ]|  
 |Числовой|numeric [38] [0]|  

@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: c7443ed363a4968415b651e460bbc4f69cb7415b
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0e52cf31a94f2fd63f92305b80f7f7ae049c2809
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951109"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066449"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>Запуск Database Experimentation Assistant из командной строки
 
@@ -28,7 +28,7 @@ ms.locfileid: "87951109"
    >
    > `Deacmd.exe -o <operation> --help`
    >
-   > Требуется имя операции; допустимые операции: **Analysis**, **старткаптуре**и **стопкаптуре**.
+   > Требуется имя операции; допустимые операции: **Analysis**, **старткаптуре** и **стопкаптуре**.
 
 ## <a name="start-a-new-workload-capture-by-using-the-dea-command"></a>Запуск новой записи рабочей нагрузки с помощью команды ДЕА
 
@@ -132,6 +132,6 @@ ms.locfileid: "87951109"
 | --Абу | URL-адрес большого двоичного объекта для экземпляра с ключом SAS |
 | --ББУ | URL-адрес большого двоичного объекта для экземпляра B с ключом SAS |
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 - Дополнительные сведения об использовании ДЕА см. в разделе [обзор Database experimentation Assistant](database-experimentation-assistant-overview.md).

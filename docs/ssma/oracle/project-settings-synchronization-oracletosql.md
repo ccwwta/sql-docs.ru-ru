@@ -11,12 +11,12 @@ ms.assetid: e223fb7d-05ec-4fa5-8973-d845c33a23dd
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 6b27143bca2e5b2a2ef9d844fc5f2fc8208734a5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ff0869f3219eb21d079be062203f20e4602217c5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492396"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067779"
 ---
 # <a name="project-settingssynchronization-oracletosql"></a>Параметры проекта (синхронизация) (OracleToSQL)
 Страница синхронизация диалогового окна **Параметры проекта** содержит параметры, которые настраивают, как SSMA загружает и обновляет объекты базы данных, такие как таблицы и хранимые процедуры, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -29,8 +29,8 @@ ms.locfileid: "88492396"
   
 -   Чтобы указать параметры для текущего проекта, в меню **Сервис** выберите пункт **Параметры проекта**, а затем щелкните **Синхронизация** в нижней части левой панели.  
   
-## <a name="miscellaneous-options"></a>Различные параметры  
-**Ошибок**  
+## <a name="miscellaneous-options"></a>Прочие параметры  
+**Попытки**  
 Указывает число попыток, которые SSMA должны выполнить при загрузке объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Объекты, которые не загружаются [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в текущей попытке, будут предприняты повторно, пока SSMA не достигнет максимального числа попыток в текущем процессе синхронизации. Значение по умолчанию равно **2**  
   
 ## <a name="synchronization-for-oracle-options"></a>Параметры синхронизации для Oracle  

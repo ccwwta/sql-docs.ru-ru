@@ -14,12 +14,12 @@ ms.assetid: af24c303-4a41-449b-9c86-d6558a97e839
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 6f46d7714c9da54fde1105671c5be7b3ea090a48
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: cb932aeb30be643b260e3b1e0ce10fea22ffeb1a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987930"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067240"
 ---
 # <a name="user-interface-reference-accesstosql"></a>Справочник по пользовательскому интерфейсу (Акцесстоскл)
 В этом разделе содержатся разделы справки по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Помощник по миграции (SSMA) для доступа.  
@@ -51,7 +51,7 @@ ms.locfileid: "91987930"
 |[Параметры проекта (SQL Azure)](./project-settings-azure-sql-db-accesstosql.md)|Страница SQL Azure диалогового окна **Параметры проекта** используется для указания суффикса базы данных, а также интервала времени ожидания пульса.|  
 |[Сохранить метаданные &#40;Акцесстоскл&#41;](../../ssma/access/save-metadata-accesstosql.md)|Диалоговое окно **Сохранение метаданных** появляется при сохранении проекта, в котором отсутствуют метаданные.|  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также раздел  
 [Начало работы с Помощник по миграции SQL Server для доступа &#40;Акцесстоскл&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
 [Подготовка баз данных Access к миграции](preparing-access-databases-for-migration-accesstosql.md)  
 [Миграция баз данных Access в SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1ca622b2-55d8-4666-b80a-8d9791cd3d3b
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 774c1260d3ffcd6797c1e0a1a6d3a88103ae3f5f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f0b27d3ffcab6f13f41bcf354cf966302425906e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480365"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067479"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>Команды меню и другие сочетания клавиш (SybaseToSQL)
 В следующих разделах описываются сочетания клавиш для доступа к командам меню и другие сочетания клавиш, используемые в различных диалоговых окнах приложения SSMA для Sybase.  
@@ -197,6 +197,6 @@ ms.locfileid: "88480365"
 |Запустить краткие сведения.|CTRL + SHIFT + ПРОБЕЛ|  
 |Переход к объявлению.|F12|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Сочетания клавиш&#40;Sybase в SQL&#41;](../../ssma/sybase/shortcut-keys-sybase-to-sql.md)  
   

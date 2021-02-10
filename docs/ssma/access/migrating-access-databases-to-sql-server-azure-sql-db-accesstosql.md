@@ -17,15 +17,15 @@ ms.assetid: 76a3abcf-2998-4712-9490-fe8d872c89ca
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: c8c0fbd289aea92c78d97a4d41a93255c9e196bf
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 683c17a23b1eda96c040dabcf62d58b24fbb53ed
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938086"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066709"
 ---
 # <a name="migrating-access-databases-to-sql-server---azure-sql-database-accesstosql"></a>Миграция баз данных Access в SQL Server — база данных SQL Azure (Акцесстоскл)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Помощник по миграции (SSMA) — это средство, предоставляющее исчерпывающую среду, помогающую быстро перенести базы данных Access в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. С помощью SSMA можно просматривать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объекты базы данных Access и Azure SQL, оценивать базу данных Access для миграции, преобразовывать объекты базы данных Access, загружать их в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, а затем переносить данные.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Помощник по миграции (SSMA) — это средство, предоставляющее исчерпывающую среду, помогающую быстро перенести базы данных Access в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. С помощью SSMA можно просматривать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объекты базы данных Access и Azure SQL, оценивать базу данных Access для миграции, преобразовывать объекты базы данных Access, загружать их в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, а затем переносить данные.  
   
 ## <a name="recommended-migration-process"></a>Рекомендуемый процесс миграции  
 Чтобы успешно перенести объекты и данные из доступа в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, используйте следующую процедуру.  
@@ -40,7 +40,7 @@ ms.locfileid: "87938086"
   
     Можно подключиться либо к SQL Server, либо к SQL Azure.  
   
-4.  Чтобы настроить сопоставление одной или нескольких баз данных Access и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] схем SQL Azure, [сопоставьте исходную и целевую базы данных](mapping-source-and-target-databases-accesstosql.md).  
+4.  Чтобы настроить сопоставление одной или нескольких баз данных Access и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] схем SQL Azure,  [сопоставьте исходную и целевую базы данных](mapping-source-and-target-databases-accesstosql.md).  
   
 5.  При необходимости можно [создать отчет об оценке](assessing-access-database-objects-for-conversion-accesstosql.md) , чтобы определить, можно ли успешно преобразовать объекты базы данных Access в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure.  
   
@@ -59,6 +59,6 @@ ms.locfileid: "87938086"
   
 Вы также можете использовать мастер миграции для пошагового выполнения этого процесса. Дополнительные сведения см. в разделе [Мастер миграции](migration-wizard-accesstosql.md).  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также раздел  
 [начало работы с Помощник по миграции SQL Server для доступа](getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
 [Подготовка баз данных Access к миграции](preparing-access-databases-for-migration-accesstosql.md)

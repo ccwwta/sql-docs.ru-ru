@@ -13,12 +13,12 @@ ms.assetid: 8b527a56-4e52-487a-9ac9-2320388e6d7d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 263d04b401146ce2975a810b084e4957f1daf718
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: df992d19ecb90ad78e060dccdfa5e2e015988477
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492415"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067745"
 ---
 # <a name="removing-ssma--for-oracle-components-oracletosql"></a>Удаление компонентов SSMA для Oracle (OracleToSQL)
 После завершения миграции баз данных из Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может потребоваться удалить компоненты SSMA. Вы можете удалить клиентские компоненты в любое время. Однако не следует удалять пакет расширений, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] если только перенесенные базы данных больше не используют функции в схеме **ssma_oracle** базы данных **сисдб** .  
@@ -30,12 +30,12 @@ ms.locfileid: "88492415"
   
 1.  На панели управления и откройте элемент **Установка и удаление программ**.  
   
-2.  Выберите ** [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Помощник по миграции для Oracle**и нажмите кнопку **Удалить**.  
+2.  Выберите **[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Помощник по миграции для Oracle** и нажмите кнопку **Удалить**.  
   
 3.  Чтобы подтвердить удаление SSMA, нажмите кнопку **Да**.  
   
 ## <a name="uninstalling-the-extension-pack"></a>Удаление пакета расширений  
-Если вы уверены, что перенесенные базы данных не используют объекты в схеме **сисдб. ssma_oracle** , можно удалить пакет расширений с помощью компонента " **Установка и удаление программ**".  
+Если вы уверены, что перенесенные базы данных не используют объекты в схеме **sysdb.ssma_oracle** , можно удалить пакет расширений с помощью компонента " **Установка и удаление программ**".  
   
 **Удаление пакета расширений**  
   
@@ -55,9 +55,9 @@ ms.locfileid: "88492415"
   
 7.  На странице Готово нажмите кнопку **выход**.  
   
-После удаления можно подтвердить, что объекты в схеме **сисдб. ssma_oracle** и, возможно, всю базу данных **сисдб** , были удалены с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Однако при использовании других продуктов SSMA они также используют базу данных **сисдб** . Если база данных существует и вы уверены, что другие базы данных не ссылаются на объекты в этой базе данных, можно отключить базу данных.  
+После удаления можно убедиться, что объекты в схеме **sysdb.ssma_oracle** и, возможно, вся база данных **сисдб** , удалены с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Однако при использовании других продуктов SSMA они также используют базу данных **сисдб** . Если база данных существует и вы уверены, что другие базы данных не ссылаются на объекты в этой базе данных, можно отключить базу данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Установка SSMA для клиента Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
 [Установка компонентов SSMA на SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
   

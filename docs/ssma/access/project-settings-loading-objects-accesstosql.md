@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9ec1c1e8-a3e1-4e81-bf49-631f87daa209
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: f03b7457d79c573806ffbda2b601f56d0f942a54
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a2d119ac2c58d0bea25a6f21ba4bf97cb47a8421
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488205"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100066369"
 ---
 # <a name="project-settings-loading-objects-accesstosql"></a>Параметры проекта (загрузка объектов) (Акцесстоскл)
 Параметры проекта загрузка объектов позволяют настроить синхронизацию объектов базы данных Access с объектами базы данных SQL Server.  
@@ -28,11 +28,11 @@ ms.locfileid: "88488205"
   
 -   Чтобы указать параметры для текущего проекта, в меню **Сервис** выберите пункт **Параметры проекта**, а затем щелкните **Загрузка объектов** в нижней части левой панели.  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
   
 ##### <a name="misc"></a>Разное  
   
-##### <a name="attempts"></a>Ошибок  
+##### <a name="attempts"></a>Попытки  
 Предоставляет сведения о количестве проходов объектов, которые необходимо загрузить в SQL Server. Загрузка объектов в SQL Server обычно выполняется в несколько проходов. Объекты, которые не удается загрузить в первый проход, например внешние ключи, могут успешно загрузиться в следующий проход.  
   
 По умолчанию используется значение 2.  

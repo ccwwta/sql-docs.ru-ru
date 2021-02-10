@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5c3080c3-d074-4f99-a5f5-219ebeddc474
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d609900151e7ced05be4cc92e65c06270b6ef8a5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e9c19e60d2b4b30724dc750f3a99a604334a2155
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426926"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069239"
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>Работа с примерами файлов сценариев консоли (DB2ToSQL)
 Несколько примеров файлов предоставлены вместе с продуктом для ссылки и использования пользователя. В этом разделе описывается, как с легкостью настроить эти сценарии в соответствии с потребностями конечного пользователя.  

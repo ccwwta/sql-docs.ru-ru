@@ -11,19 +11,19 @@ ms.assetid: 43989355-cebf-4d8b-ba3d-fa8546e70230
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 0a0b888c594a46543f3cdec8e9c70bf9b511ed91
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b399f44fda5e9ec8cda0edf6c7e198157b4f516d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463196"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100068868"
 ---
 # <a name="global-settings-dialogs--oracletosql"></a>Глобальные параметры (диалоговые окна) (OracleToSQL)
 Используйте страницу диалоговые окна диалогового окна **глобальные параметры** , чтобы указать параметры действия пользователя и предупреждения по умолчанию для SSMA.  
   
 Для доступа к параметрам диалогового окна в меню **Сервис** выберите **глобальные параметры**, щелкните **графический интерфейс** в нижней части левой панели, а затем выберите **диалоговые окна**.  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
 **Предупреждать перед перезаписью объектов**  
 Когда SSMA преобразует объекты в SQL Server, некоторые объекты уже могут существовать в метаданных SQL Server проекта. Эти объекты могли быть уже преобразованы, или объекты могут просто иметь то же имя в целевой схеме, что и объекты, которые вы собираетесь преобразовать.  
   

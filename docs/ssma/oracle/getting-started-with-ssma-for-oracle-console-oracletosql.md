@@ -14,12 +14,12 @@ ms.assetid: 667a5e4a-6848-4973-a72d-1287f64718ac
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: a403f515c057349c9717422f99b6de15aede566f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fd87502c1eda3dc8d4caf4c654804b164f24f36f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463270"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100068059"
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>Начало работы с консолью SSMA для Oracle (OracleToSQL)
 В этом разделе описывается процедура запуска и начала работы с консольным приложением Oracle. Здесь также перечислены соглашения, используемые в типичном окне вывода консоли SSMA.  
@@ -29,7 +29,7 @@ ms.locfileid: "88463270"
   
 1.  Последовательно выберите пункты **Пуск** и **все программы**.  
   
-2.  Щелкните ярлык ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для командной строки Oracle помощник по миграции** .  
+2.  Щелкните ярлык **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для командной строки Oracle помощник по миграции** .  
   
     В нем отображается меню использования консоли SSMA и `(/? Help)` , которое поможет приступить к работе с консольным приложением.  
   
@@ -66,6 +66,6 @@ ms.locfileid: "88463270"
 |Зеленый|Запрос на ввод данных пользователем|  
 |Цвет|Начало, окончание и результат операции|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Установка SSMA для Oracle](installing-ssma-for-oracle-oracletosql.md)  
   

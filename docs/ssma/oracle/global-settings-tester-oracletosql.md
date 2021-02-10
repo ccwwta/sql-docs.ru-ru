@@ -11,17 +11,17 @@ ms.assetid: 4acc0f2a-85ba-4c99-856a-89030f5c418e
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 789d2cbb22e03053ab8f03e0bdd50b6383ea788e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f3b8a5871ae12f9408700153afa4f429a4865514
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320400"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100067941"
 ---
 # <a name="global-settings-tester-oracletosql"></a>Глобальные параметры (средство тестирования) (OracleToSQL)
 Страница «испытатель» диалогового окна « **глобальные параметры** » используется для указания параметров для тестера SSMA.  
   
-Чтобы получить доступ к параметрам тестера, в меню **Сервис** выберите **глобальные параметры**и щелкните **Тестер** в нижней части левой панели.  
+Чтобы получить доступ к параметрам тестера, в меню **Сервис** выберите **глобальные параметры** и щелкните **Тестер** в нижней части левой панели.  
   
 ## <a name="options"></a>Параметры  
 **Тестовый анализ объектов**  
@@ -62,8 +62,8 @@ ms.locfileid: "88320400"
   
 1.  Да  
   
-2.  Нет  
+2.  нет  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Завершение подготовки тестового случая &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   

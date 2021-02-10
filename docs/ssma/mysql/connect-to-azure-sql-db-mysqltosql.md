@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: cf3112f6b431fae9149df76464ed576f89a51dd1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 44f97ee6686bbe61a90e5fccf2cfb165e7e97cf0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454136"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069055"
 ---
 # <a name="connect-to-azure-sql-database-mysqltosql"></a>Подключение к базе данных SQL Azure (MySQLToSQL)
 Используйте диалоговое окно Подключение к SQL Azure для подключения к базе данных в базе данных SQL Azure, которую требуется перенести.  
   
 Чтобы открыть это диалоговое окно, в меню **файл** выберите **подключиться к SQL Azure**. Если подключение было выполнено ранее, команда **повторно подключится к SQL Azure.**  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
 **Имя сервера**  
   
 Выберите или введите имя сервера для подключения к SQL Azure.  
@@ -34,7 +34,7 @@ ms.locfileid: "88454136"
 > [!IMPORTANT]  
 > SSMA для MySQL не поддерживает подключение к базе данных master в SQL Azure.  
   
-**User name**  
+**Имя пользователя**  
   
 Введите имя пользователя, которое SSMA будет использовать для подключения к базе данных SQL Azure.  
   
