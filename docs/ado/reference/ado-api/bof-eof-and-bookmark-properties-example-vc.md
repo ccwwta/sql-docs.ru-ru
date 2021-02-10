@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7cfc7d8ffa447beccf4597beb63f54d5ba958f29
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ae45fb2eea6c971fe72d152d0ee6058dbfc81db5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164782"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027564"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vc"></a>Пример свойств BOF, EOF и Bookmark (Visual c++)
 Первая функция в этом примере использует свойства [BOF](./bof-eof-properties-ado.md) и [EOF](./bof-eof-properties-ado.md) для вывода сообщения, если пользователь пытается переместиться после первой или последней записи [набора записей](./recordset-object-ado.md). Он использует свойство [Bookmark](./bookmark-property-ado.md) , чтобы пользователь мог пометить запись в **наборе записей** и вернуться к ней позже.  

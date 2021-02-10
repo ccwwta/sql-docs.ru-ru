@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c359c25c-db2a-4a20-afa9-62d87a62df72
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b05dac0ec74bb6c0cd9c9e99d8bb631b0a242eb3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 05e91905930b011976f61b149abeeaccc1d00398
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418250"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100023177"
 ---
 # <a name="using-test-repositories-sybasetosql"></a>Использование репозиториев тестирования (SybaseToSQL)
 В репозитории тестов SSMA хранятся тестовые случаи и результаты тестов тестеров SSMA для последующего использования. Данные репозитория сохраняются в SQL Server таблицах **тесткасерепоситори** и **рунтесткасересултрепоситори** в **ssma_sybase_utilities** схемы базы данных **ssmatesterdb_syb** .  

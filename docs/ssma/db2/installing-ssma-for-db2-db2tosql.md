@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 79fbe8ea-471b-407a-be2a-4100d9b57c61
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 85b772ea7626a9eaf3ad3f19bb04727628d9dc2e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6fb00709c462bd13dc6af2656e1b7e2dc487d4b8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488187"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100014788"
 ---
 # <a name="installing-ssma-for-db2-db2tosql"></a>Установка SSMA для DB2 (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Помощник по миграции (SSMA) для DB2 состоит из клиентского приложения, которое используется для выполнения миграции из DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных SQL Azure и обратно. Он также содержит пакет расширений, который поддерживает перенос данных и использование системных функций DB2 в перенесенных базах данных.  
@@ -33,6 +33,6 @@ ms.locfileid: "88488187"
 |[Установка компонентов SSMA на SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)|Содержит сведения и инструкции по установке пакета расширения на экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Удаление SSMA для компонентов DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/removing-ssma-for-db2-components-db2tosql.md)|Содержит инструкции по удалению клиентской программы и пакета расширений.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Перенос баз данных DB2 в SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

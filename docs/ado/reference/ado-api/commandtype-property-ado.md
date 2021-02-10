@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ca44809c-8647-48b6-a7fb-0be70a02f53e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: debd8c2630ba9fa7369b356950f979a64eee59d0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 883887b32a46025c1fc60f5b8ca782241b201ab3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99155722"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100026592"
 ---
 # <a name="commandtype-property-ado"></a>Свойство CommandType (ADO)
 Указывает тип объекта [команды](./command-object-ado.md) .  
@@ -32,7 +32,7 @@ ms.locfileid: "99155722"
 > [!NOTE]
 >  Не используйте значения **Коммандтипинум** **адкмдфиле** или **адкмдтабледирект** с **CommandType**. Эти значения можно использовать только в качестве параметров с методами [Open](./open-method-ado-recordset.md) и [Requery](./requery-method.md) [набора записей](./recordset-object-ado.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте свойство **CommandType** для оптимизации оценки свойства [CommandText](./commandtext-property-ado.md) .  
   
  Если для свойства **CommandType** задано значение по умолчанию **адкмдункновн**, то может возникнуть снижение производительности, так как ADO должны вызывать поставщик, чтобы определить, является ли свойство **CommandText** инструкцией SQL, хранимой процедурой или именем таблицы. Если известно, какой тип команды используется, установка свойства **CommandType** указывает ADO перейти непосредственно к соответствующему коду. Если свойство **CommandType** не соответствует типу команды в свойстве **CommandText** , то при вызове метода [EXECUTE](./execute-method-ado-command.md) возникает ошибка.  

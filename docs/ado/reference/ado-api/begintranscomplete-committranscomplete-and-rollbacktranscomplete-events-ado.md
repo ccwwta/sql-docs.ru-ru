@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: ec4e4b38-e9c6-4757-b2ef-4e468ae5f1d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 013df2c56a973d8df6b51434f016ee7642fc4f71
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 2c00bcdbbfb477f4f612fedd0a71fe8131858588
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164784"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027574"
 ---
 # <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>События Бегинтранскомплете, Коммиттранскомплете и Роллбакктранскомплете (ADO)
 Эти события будут вызываться после завершения выполнения связанной операции над объектом [Connection](./connection-object-ado.md) .  
@@ -63,7 +63,7 @@ RollbackTransComplete pError, adStatus, pConnection
  *пконнектион*  
  Объект **соединения** , для которого произошло это событие.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В Visual C++ несколько **соединений** могут совместно использовать один и тот же метод обработки событий. Метод использует возвращенный объект **соединения** , чтобы определить, какой объект вызывал событие.  
   
  Если свойство [Attributes](./attributes-property-ado.md) имеет значение **адксакткоммитретаининг** или **адксактабортретаининг**, Новая транзакция начинается после фиксации или отката транзакции. Используйте событие **бегинтранскомплете** , чтобы пропустить все события начала транзакции, кроме первого.  

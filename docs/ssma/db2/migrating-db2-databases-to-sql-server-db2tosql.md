@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 14d2e655-af7e-4aa5-ba28-0e3d0d025518
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e31d4b1d31cb186276d8424f8c49450cb4ce9406
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+ms.openlocfilehash: 912f1ffd342517add68d1ce7f628251fc86dc6aa
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869533"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017704"
 ---
 # <a name="migrating-db2-databases-to-sql-server-db2tosql"></a>Перенос баз данных DB2 в SQL Server (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Помощник по миграции (SSMA) для DB2 — это Комплексная среда, которая помогает быстро перенести базы данных DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных SQL Azure или. С помощью SSMA для DB2 можно просматривать объекты и данные базы данных, оценивать базы данных для миграции, переносить объекты базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных SQL Azure, а затем переносить данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных SQL Azure или из нее. Обратите внимание, что нельзя перенести схемы SYS и SYSTEM DB2.  

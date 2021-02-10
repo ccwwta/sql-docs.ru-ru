@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9be4f47033616f56177027bc83c4621cef57847
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8f0ed083766464cccd504da7ad9270600fe0050c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164868"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027931"
 ---
 # <a name="adorecordsetconstruction-interface"></a>Интерфейс ADORecordsetConstruction
 Интерфейс **адорекордсетконструктион** используется для создания объекта **набора записей** ADO из объекта OLE DB **набора строк** в приложении C/C++.  

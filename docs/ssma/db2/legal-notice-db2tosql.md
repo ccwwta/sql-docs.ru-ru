@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d2e558b8-7208-44b4-82b3-4b411a34a8c9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 331a004ac1daba1b1d456acab86037b97f15cad5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2bcb8cc343007e79890c82d5ca80e9ce8b7ec6f1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492497"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100014644"
 ---
 # <a name="legal-notice-db2tosql"></a>Юридическая информация (DB2toSQL)
 Настоящий документ, в том числе содержащиеся в нем образцы приложений, предоставляется исключительно в ознакомительных целях без каких-либо явных или подразумеваемых гарантий. Данные, содержащиеся в этой документации, включая URL-адреса, а также ссылки на другие веб-сайты, могут меняться без предварительного уведомления. Всю ответственность за использование документации, а также за результаты ее использования несет исключительно пользователь.  

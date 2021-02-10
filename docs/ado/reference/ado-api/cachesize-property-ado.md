@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 49dc9a49-af7b-433b-be36-7a14ca984fb7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9aef38a384c352648d5487ee9dae9a79d605e8e3
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ac840d510bbfeebc575ada36e76462930ffaf19f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167821"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027500"
 ---
 # <a name="cachesize-property-ado"></a>Свойство CacheSize (ADO)
 Указывает число записей из объекта [набора записей](./recordset-object-ado.md) , которые кэшируются локально в памяти.  
@@ -29,7 +29,7 @@ ms.locfileid: "99167821"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает **длинное** значение, которое должно быть больше 0. Значение по умолчанию: 1.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Свойство **CacheSize** используется для управления количеством записей, получаемых за один раз в локальную память от поставщика. Например, если **CacheSize** имеет значение 10, после первого открытия объекта **Recordset** поставщик получает первые 10 записей в локальную память. При перемещении по объекту **Recordset** поставщик возвращает данные из буфера локальной памяти. Как только вы перейдете за последнюю запись в кэше, поставщик извлекает следующие 10 записей из источника данных в кэш.  
   
 > [!NOTE]

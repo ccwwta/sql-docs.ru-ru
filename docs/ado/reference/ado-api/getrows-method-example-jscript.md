@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d33467a5-5a56-450d-98c1-c3ce6f9f103c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 992255020a1188507fc64cccb12f9d19061c56fa
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: fa40f6a65ee059115830832bbc7762d7bc98f22a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167272"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100021030"
 ---
 # <a name="getrows-method-example-jscript"></a>Пример метода GetRows (JScript)
 В этом примере метод [GetRows](./getrows-method-ado.md) используется для получения всех строк таблицы *Кустиомерс* из [набора записей](./recordset-object-ado.md) и для заполнения массива результирующими данными. Метод **GetRows** возвращает меньше требуемого числа строк в двух случаях: или, если был достигнут [конец файла](./bof-eof-properties-ado.md) , или если **GetRows** попытался получить запись, удаленную другим пользователем. Функция возвращает **значение false** только в том случае, если происходит второй вариант. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **жетровсжс. ASP**.  

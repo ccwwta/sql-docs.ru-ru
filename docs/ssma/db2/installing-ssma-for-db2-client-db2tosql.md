@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ae2a470-6afd-4512-b6d1-fcbe6afe88ad
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: a223f5dbf6e100ac776e2f3aebad51c9bb885abf
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+ms.openlocfilehash: dd9c4116acd482fa12b74556b9d1ad1fe9b06cdd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869612"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100014764"
 ---
 # <a name="installing-ssma-for-db2-client-db2tosql"></a>Установка SSMA для клиента DB2 (DB2ToSQL)
 
@@ -37,7 +37,7 @@ SSMA предназначен для работы с DB2 в z/OS версии 9,
 
 - Windows 7 или более поздней версии или Windows Server 2008 или более поздней версии.
 - [!INCLUDE[msCoName](../../includes/msconame_md.md)] Установщик Windows 3,1 или более поздних версий.
-- [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] Версия 4.7.2 или более поздняя. Его можно получить в [центре разработчиков .NET Framework](https://go.microsoft.com/fwlink/?LinkId=48882).
+- [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] Версия 4.7.2 или более поздняя. Его можно получить в [центре разработчиков платформа .NET Framework](https://go.microsoft.com/fwlink/?LinkId=48882).
 - Поставщик OLE DB для DB2 (Майкрософт) версии 5 или более поздней, а также подключение к базам данных DB2, которые требуется перенести.
 - Доступ к и достаточным разрешениям на компьютере, на котором размещен целевой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или база данных SQL Azure, куда будут перенесены объекты и данные базы данных. Дополнительные сведения см. [в разделе Подключение к SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2tosql.md).
 - рекомендуется 4 ГБ ОЗУ.
@@ -64,7 +64,7 @@ SSMA можно загрузить из Интернета. Чтобы скач�
 
 Расположение установки по умолчанию — `C:\Program Files\Microsoft SQL Server Migration Assistant for DB2`.
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 - [Установка компонентов SSMA на SQL Server](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)
 - [Миграция баз данных DB2 в SQL Server](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)

@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: ec6b5ad0ab2047e72a1f3e3e5dfcd9fc49b954d9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7bd846f4c4abd2a6b9fbcdc434964b789f32d047
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749779"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100030642"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Миграция локальных SQL Server или SQL Server на виртуальные машины Azure в базу данных SQL Azure с помощью Помощник по миграции данных
 
@@ -33,13 +33,13 @@ ms.locfileid: "85749779"
 
 2. Задайте для параметра Тип источника значение **SQL Server** , а для параметра Тип целевого сервера — **база данных SQL Azure**.
 
-3. Щелкните **Создать**.
+3. Нажмите кнопку **Создать**.
 
    ![Создание проекта миграции](../dma/media/NewCreate1.png)
 
 ## <a name="specify-the-source-server-and-database"></a>Указание исходного сервера и базы данных
 
-1. Для источника в разделе **Подключение к исходному серверу**в текстовом поле **имя сервера** введите имя исходного SQL Server экземпляра.
+1. Для источника в разделе **Подключение к исходному серверу** в текстовом поле **имя сервера** введите имя исходного SQL Server экземпляра.
 
 2. Выберите **Тип проверки подлинности**, поддерживаемый исходным экземпляром SQL Server.
 
@@ -61,7 +61,7 @@ ms.locfileid: "85749779"
 
 ## <a name="specify-the-target-server-and-database"></a>Указание целевого сервера и базы данных
 
-1. Для целевого объекта в разделе **Подключение к целевому серверу**в текстовом поле **имя сервера** введите имя экземпляра базы данных SQL Azure. 
+1. Для целевого объекта в разделе **Подключение к целевому серверу** в текстовом поле **имя сервера** введите имя экземпляра базы данных SQL Azure. 
 
 2. Выберите **тип проверки подлинности** , поддерживаемый целевым экземпляром базы данных SQL Azure.
 
@@ -118,7 +118,7 @@ ms.locfileid: "85749779"
 
    ![Состояние миграции](../dma/media/migration-status.png) 
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 * [Помощник по миграции данных (DMA)](../dma/dma-overview.md)
 * [Помощник по миграции данных: параметры конфигурации](../dma/dma-configurationsettings.md)

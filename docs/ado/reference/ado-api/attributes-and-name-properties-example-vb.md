@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 258bdce3-1819-44a2-9217-105879c789ef
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5aaa3c02210e548e2e2081a1a5728eecda7543ab
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 01cda52ce9a1a2f1d64350a299f8a9505c707c90
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164818"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027604"
 ---
 # <a name="attributes-and-name-properties-example-vb"></a>Примеры свойств Attributes и Name (Visual Basic)
 В этом примере отображается значение свойства [Attributes](./attributes-property-ado.md) для объектов [соединения](./connection-object-ado.md), [поля](./field-object.md)и [Свойства](./property-object-ado.md) . В нем используется свойство [Name](./name-property-ado.md) для вывода имени каждого **поля** и объекта **Свойства** .  

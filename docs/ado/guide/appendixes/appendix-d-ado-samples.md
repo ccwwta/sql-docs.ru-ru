@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1582e411-55ac-40f0-bd3d-9a10654e4b67
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2226406e3fc10a2e1dadd19020f9fcb243f442b7
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 45c5b0f925503431ed91e52b68c4aa8723c6461c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991145"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029468"
 ---
 # <a name="appendix-d-ado-samples-in-the-windows-sdk"></a>Приложение г. примеры ADO в Windows SDK
 Windows SDK содержит несколько примеров приложений, демонстрирующих использование ADO и RDS Code. Эти примеры позволяют научиться использовать ADO и RDS, но не предназначены для развертывания на рабочих серверах.
@@ -33,5 +33,5 @@ Windows SDK содержит несколько примеров приложе�
 
  Документация по ADO также содержит примеры кода на нескольких языках, которые включены в эту интерактивную справку в качестве разделов. Дополнительные сведения об этих примерах см. в разделе [примеры кода ADO](../../reference/ado-api/ado-code-examples.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
  Примеры кода ADO [справочника по API](../../reference/ado-api/ado-api-reference.md) ADO для [Microsoft объекты данных ActiveX (ADO)](../../microsoft-activex-data-objects-ado.md) примеры [кодов ADO](../../reference/ado-api/ado-code-examples.md) [в Visual Basic](../../reference/ado-api/ado-code-examples-in-visual-basic.md) примеров кода ado примеры кода на [языке сценариев VBScript](../../reference/ado-api/ado-code-examples-vbscript.md) [в Visual C++](../../reference/ado-api/ado-code-examples-in-visual-c.md) [приложении A: поставщики](./appendix-a-providers.md) [Настройка приложения RDS](../remote-data-service/configuring-rds.md) [Приложение C: программирование с помощью](./appendix-c-programming-with-ado.md) [журнала](../ado-history.md) ADO ADO

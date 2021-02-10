@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 475de5e2-f634-4954-9edf-0027a6ba38d6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9369b22c012773627c17da55a336aac116dc4e06
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9f917dbcf9f89edd22a06a8b95726333ffb342b4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171231"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100025138"
 ---
 # <a name="endofrecordset-event-ado"></a>Событие EndOfRecordset (ADO)
 Событие **ендофрекордсет** вызывается при попытке переместиться в строку после конца [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -48,7 +48,7 @@ EndOfRecordset fMoreData, adStatus, pRecordset
  *предшнур*  
  Объект **Recordset** . **Набор записей** , для которого произошло это событие.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  При сбое операции [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) может возникнуть событие **ендофрекордсет** .  
   
  Этот обработчик событий вызывается при попытке переместиться за пределы объекта **набора записей** , возможно, в результате вызова **MoveNext**. Однако в этом событии можно получить дополнительные записи из базы данных и добавить их в конец **набора записей**. В этом случае задайте для *фморедата* значение VARIANT_TRUE и вернитесь из **ендофрекордсет**. Затем снова вызовите **MoveNext** для доступа к вновь полученным записям.  

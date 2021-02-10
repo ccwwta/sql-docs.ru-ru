@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b6064030bd26ab6abb0bb003b2fcf26e72c4f24d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 48fa1fcb993531f8644b931f216f9b38ed427282
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166746"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100020363"
 ---
 # <a name="record-object-ado"></a>Объект Record (ADO)
 Представляет строку из [набора записей](./recordset-object-ado.md) или поставщика данных или объекта, возвращаемого частично структурированным поставщиком данных, например файла или каталога.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Объект **Record** представляет одну строку данных и имеет некоторые концептуальные сходства с однострочным **набором записей**. В зависимости от возможностей поставщика объекты **записи** могут возвращаться непосредственно от поставщика вместо однострочного **набора записей**, например при выполнении SQL-запроса, выбирающего только одну строку. Или объект **Record** можно получить непосредственно из объекта **Recordset** . Или же **запись** может возвращаться непосредственно от поставщика к частично структурированным данным, например к поставщику Microsoft Exchange OLE DB.  
   
  Поля, связанные с объектом **Record** , можно просмотреть с помощью коллекции [Fields](./fields-collection-ado.md) объекта **Record** . ADO допускает объектно-ориентированные столбцы, включая **набор записей**, **SAFEARRAY** и скалярные значения в коллекции **полей** объектов **Record** .  

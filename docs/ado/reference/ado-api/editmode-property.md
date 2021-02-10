@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a1b04bb2-8c8b-47f9-8477-bfd0368b6f68
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5854dce12ddb2303077111f3129274861a340ebd
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 5cec956ced454f0220b8d545e8e05c8fbcf8a760
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171234"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100025415"
 ---
 # <a name="editmode-property"></a>Свойство EditMode
 Указывает состояние редактирования текущей записи.  
@@ -29,7 +29,7 @@ ms.locfileid: "99171234"
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение [едитмодинум](../../../ado/reference/ado-api/editmodeenum.md) .  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  ADO поддерживает буфер редактирования, связанный с текущей записью. Это свойство указывает, были ли внесены изменения в этот буфер или создана ли новая запись. Чтобы определить состояние редактирования текущей записи, используйте свойство **EditMode** . Вы можете проверить наличие ожидающих изменений в случае, если процесс редактирования был прерван, и определить, нужно ли использовать метод [Update](../../../ado/reference/ado-api/update-method.md) или [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) .  
   
  В *режиме немедленного обновления* свойство **EditMode** сбрасывается в **адедитноне** после вызова успешного вызова метода **Update** . Если при вызове [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) не удается удалить записи или записи в источнике данных (например, из-за нарушений ссылочной целостности), [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md) остается в режиме редактирования (**EditMode**  =  **адедитинпрогресс**). Поэтому **CancelUpdate** должен вызываться перед переходом от текущей записи (например, с [Move](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)или [Close](../../../ado/reference/ado-api/close-method-ado.md) ).  

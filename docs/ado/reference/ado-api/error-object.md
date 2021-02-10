@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a175d453-fa55-4f49-9ede-a26d83177919
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eba5b63bc766161556779dd261393b0dfe06822d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: aa7a9f478398c1e6348513076ac9e9f3d8b815a5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171194"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100025061"
 ---
 # <a name="error-object"></a>Объект Error
 Содержит сведения об ошибках доступа к данным, относящихся к одной операции, включающей в себя поставщик.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Любая операция, включающая объекты ADO, может формировать одну или несколько ошибок поставщика. При возникновении каждой ошибки в коллекцию [ошибок](../../../ado/reference/ado-api/errors-collection-ado.md) объекта [Connection](../../../ado/reference/ado-api/connection-object-ado.md) помещаются один или несколько объектов **ошибок** . Если другая операция ADO создает ошибку, коллекция **Errors** удаляется, а новый набор объектов **ошибок** помещается в коллекцию **Errors** .  
   
 > [!NOTE]
