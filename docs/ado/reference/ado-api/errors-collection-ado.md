@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 290819e1-7b39-4e1e-a93b-801257138b00
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1f75d1a068a3e86ecb9e0d5b1e27afae6ac4a6e5
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: c243b27a03a5fb80b3444267a184ab995212226d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171185"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100025041"
 ---
 # <a name="errors-collection-ado"></a>Коллекция Errors (ADO)
 Содержит все объекты [ошибок](../../../ado/reference/ado-api/error-object.md) , созданные в ответ на одну ошибку, связанную с поставщиком.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Любая операция, включающая объекты ADO, может формировать одну или несколько ошибок поставщика. При возникновении каждой ошибки в коллекцию **Errors** объекта [Connection](../../../ado/reference/ado-api/connection-object-ado.md) можно поместить один или несколько объектов **ошибок** . Если другая операция ADO создает ошибку, коллекция **Errors** удаляется, а новый набор объектов **ошибок** может быть помещен в коллекцию **Errors** .  
   
  Каждый объект **ошибки** представляет определенную ошибку поставщика, а не ошибку ADO. Ошибки ADO предоставляются механизмом обработки исключений времени выполнения. Например, в Microsoft Visual Basic возникновение ошибки, относящейся к ADO, вызывает событие [OnError](../../../ado/reference/rds-api/onerror-event-rds.md) и появляется в объекте **Err** .  

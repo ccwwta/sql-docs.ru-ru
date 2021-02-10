@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 868731f7f7c88a2f6a26b5fab1670de8de96b1b3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1f1919f3524f05035a4376f30cf2e36ae731bdea
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990955"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028854"
 ---
 # <a name="using-ado-with-scripting-languages"></a>Использование объектов ADO с языками сценариев
 В среде выполнения сценариев ADO позволяет предоставлять данные с помощью сценариев на стороне сервера. В этом сценарии ADO, базовый поставщик OLE DB, который он использует, и любые другие компоненты, необходимые для ссылки на данное хранилище данных, устанавливаются на сервере, на котором выполняется службы IIS (IIS). С помощью Active Server страниц (ASP) ADO — это компонент, на который ссылается скрипт, который может создавать HTML, например. Это содержимое HTML может передаваться через HTTP в веб-браузер клиента. С помощью сценариев веб-страница может отправить действия обратно на серверный сценарий, что позволяет обновлять, просматривать и просмотреть определенные данные.  
@@ -45,7 +45,7 @@ ms.locfileid: "88990955"
   
 |Поставщик|Уверены в безопасности сценариев?|  
 |--------------|-------------------------|  
-|Фигурная|Да|  
+|Фигура|Да|  
 |Сохранить|Да|  
 |Удаленный доступ|Да|  
 |Поставщик OLE DB для SQL Server (SQLOLEDB)|Нет|  
@@ -66,7 +66,7 @@ ms.locfileid: "88990955"
   
 -   [Программирование объектов ADO с использованием JScript](./jscript-ado-programming.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Microsoft объекты данных ActiveX (ADO)](../../microsoft-activex-data-objects-ado.md)   
  [Использование ADO с Microsoft Visual Basic](./using-ado-with-microsoft-visual-basic.md)   
  [Использование объектов ADO с Microsoft Visual C++](./using-ado-with-microsoft-visual-c.md)

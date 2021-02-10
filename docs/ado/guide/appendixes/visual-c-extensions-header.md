@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e8c15738d7ad6fe93a1401636239369b3a87381
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 8d38a5d925bb90a85ccd41930bc5ef5ba49dfa94
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991805"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028688"
 ---
 # <a name="visual-c-extensions-header"></a>Заголовок расширений Visual C++
-В следующем заголовке **икрсинт. h**подробно описывается интерфейс, позволяющий клиентам получать поля из **набора записей** в переменные, определенные в классе, производном от **кадорекордбиндинг**. Необходимо указать макрос привязки ADO для каждого поля, к которому требуется получить доступ.  
+В следующем заголовке **икрсинт. h** подробно описывается интерфейс, позволяющий клиентам получать поля из **набора записей** в переменные, определенные в классе, производном от **кадорекордбиндинг**. Необходимо указать макрос привязки ADO для каждого поля, к которому требуется получить доступ.  
   
 ```cpp
 #ifndef _ICRSINT_H_  
@@ -58,16 +58,16 @@ enum ADOFieldStatusEnum
   
 typedef struct stADO_BINDING_ENTRY  
 {  
-   ULONG      ulOrdinal;  
-   WORD       wDataType;  
-   BYTE       bPrecision;  
-   BYTE       bScale;  
-   ULONG      ulSize;  
-   ULONG      ulBufferOffset;  
-   ULONG      ulStatusOffset;  
-   ULONG      ulLengthOffset;  
-   ULONG      ulADORecordBindingOffSet;  
-   BOOL       fModify;  
+   ULONG      ulOrdinal;  
+   WORD       wDataType;  
+   BYTE       bPrecision;  
+   BYTE       bScale;  
+   ULONG      ulSize;  
+   ULONG      ulBufferOffset;  
+   ULONG      ulStatusOffset;  
+   ULONG      ulLengthOffset;  
+   ULONG      ulADORecordBindingOffSet;  
+   BOOL       fModify;  
 } ADO_BINDING_ENTRY;  
   
 #define BEGIN_ADO_BINDING(cls) public: \  
@@ -208,6 +208,6 @@ public:
 #endif // !_ICRSINT_H_  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример расширений Visual C++](./visual-c-extensions-example.md)   
  [Использование расширений Visual C++](./using-visual-c-extensions.md)

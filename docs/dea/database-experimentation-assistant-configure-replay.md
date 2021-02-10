@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 7001f188b00e70c2616e8c3592d7fa9e34147321
-ms.sourcegitcommit: debaff72dbfae91b303f0acd42dd6d99e03135a2
+ms.openlocfilehash: 18428e87d1c769d10a4d1acbf0033c739db09d0d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "96419789"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017064"
 ---
 # <a name="configure-distributed-replay-for-database-experimentation-assistant"></a>Настройка распределенное воспроизведение для Database Experimentation Assistant
 
@@ -126,6 +126,6 @@ Database Experimentation Assistant (ДЕА) использует средств�
 2. Предоставьте пользователям учетной записи службы клиента разрешения на доступ к базам данных в экземпляре SQL Server. Для выполнения запросов на экземпляре SQL Server необходимы разрешения.
 3. Запустите воспроизведение.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - Сведения о воспроизведении захваченной трассировки в обновленной тестовой среде см. в разделе [Воспроизведение трассировки в Database experimentation Assistant](database-experimentation-assistant-replay-trace.md).

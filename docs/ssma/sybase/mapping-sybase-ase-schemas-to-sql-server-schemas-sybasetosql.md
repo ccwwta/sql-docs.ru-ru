@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2c927003-c49d-4fe1-8e3e-5b2899166268
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: db0c65c8def8c2a755fe6ca9a224c936e9085f8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a0084551b2e1ab6de4c3731f33525ccd3a8a48d5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88320200"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017542"
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>Сопоставление схем Sybase ASE со схемами SQL Server (SybaseToSQL)
 В хранилище Sybase адаптивного сервера Enterprise (ASE) каждая база данных имеет одну или несколько схем. По умолчанию SSMA переносит все объекты в базе данных и схеме в ту же базу данных и схему в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. Однако вы можете настроить сопоставление между ASE и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базой данных SQL Azure.  

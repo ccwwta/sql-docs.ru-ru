@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19ade6a2c9501523e97d30f496249a423445d3c0
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 50535a71c1062bc04aa009bea1aab08d3cf1faf0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991795"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028699"
 ---
 # <a name="absolute-and-relative-urls"></a>Абсолютные и относительные URL-адреса
 URL-адрес указывает расположение целевого объекта, хранящегося на локальном или сетевом компьютере. Целевым объектом может быть файл, каталог, HTML-страница, изображение, программа и т. д.  
@@ -31,7 +31,7 @@ URL-адрес указывает расположение целевого об
   
  *Абсолютный URL-адрес* использует следующий формат: *Scheme://Server/Path/Resource*  
   
- Относительный URL-адрес обычно состоит только из *пути*и (необязательно) *ресурса*, но не имеет *схемы* или *сервера*. В следующих таблицах определяются отдельные части полного формата URL-адреса.  
+ Относительный URL-адрес обычно состоит только из *пути* и (необязательно) *ресурса*, но не имеет *схемы* или *сервера*. В следующих таблицах определяются отдельные части полного формата URL-адреса.  
   
  *scheme*  
  Указывает, каким способом будет осуществляться доступ к *ресурсу* .  
@@ -39,7 +39,7 @@ URL-адрес указывает расположение целевого об
  *server*  
  Указывает имя компьютера, на котором расположен *ресурс* .  
   
- *путь*  
+ *path*  
  Указывает последовательность каталогов, ведущих к целевому объекту. Если *ресурс* не указан, целевой объект является последним каталогом в *пути*.  
   
  *ресурсов*  
@@ -68,7 +68,7 @@ URL-адрес указывает расположение целевого об
  Например, в следующем примере кода показано, как открыть **набор записей** в Readme25.txtном файле каталога winnt/system32:  
   
 ```  
-recordset.Open "system32/Readme25.txt", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  
+recordset.Open "system32/Readme25.txt", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  
 ```  
   
  Абсолютный URL-адрес в строке подключения указывает сервер ( `YourServer` ) и путь ( `Winnt` ). Этот URL-адрес также определяет контекст.  
@@ -83,12 +83,12 @@ recordset.Open "system32/Readme25.txt", "URL=https://YourServer/Winnt/",,,adCmd
 recordset.Open "", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  
 ```  
   
-## <a name="ole-db-provider-supplied-url-schemes"></a>Схемы URL-адресов, предоставляемые поставщиком OLE DB  
+## <a name="ole-db-provider-supplied-url-schemes"></a>Схемы URL-адресов OLE DB Provider-Supplied  
  Начальная часть полного URL-адреса — это *схема* , используемая для доступа к ресурсу, определяемому оставшейся частью URL-адреса. Примеры: HTTP (протокол гипертекста) и FTP (протокол FTP).  
   
  ADO поддерживает поставщики OLE DB, которые распознают собственные схемы URL-адресов. Например, [поставщик Microsoft OLE DB для публикации в Интернете](../appendixes/microsoft-ole-db-provider-for-internet-publishing.md)*,* который обращается к опубликованным файлам Windows 2000, распознает существующую схему HTTP.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект Connection (ADO)](../../reference/ado-api/connection-object-ado.md)   
  [Объект Record (ADO)](../../reference/ado-api/record-object-ado.md)   
  [Объект Recordset (ADO)](../../reference/ado-api/recordset-object-ado.md)

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 42061ff7-e6e7-497b-a0d9-440b9cf5986c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3ea89bcdf9b10fb50e74228a26bfcd5cead83aca
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f778b2bd361fab5ac1210005076692c813bb4b9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492387"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017314"
 ---
 # <a name="project-settings-synchronization-mysqltosql"></a>Параметры проекта (синхронизация) (MySQLToSQL)
 **Параметры проекта** синхронизации позволяют настроить синхронизацию объектов базы данных MySQL с объектами базы данных SQL Server.  
@@ -32,7 +32,7 @@ ms.locfileid: "88492387"
   
 ##### <a name="misc"></a>Разное  
   
-##### <a name="attempts"></a>Ошибок  
+##### <a name="attempts"></a>Попытки  
 Предоставляет сведения о количестве проходов объектов, которые необходимо загрузить в SQL Server. Загрузка объектов в SQL Server обычно выполняется в несколько проходов. Объекты, которые не удается загрузить в первый проход, например внешние ключи, могут успешно загрузиться в следующий проход.  
   
 По умолчанию используется значение 2.  

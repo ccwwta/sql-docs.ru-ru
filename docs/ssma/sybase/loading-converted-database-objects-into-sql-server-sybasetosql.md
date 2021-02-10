@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4c59256f-99a8-4351-9559-a455813dbd06
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6b7f9a9a69fd1f5ac685550fb91ab93ad2220f49
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 1b8e266fa67f0f6eb7ef46a9bdd7bd62d09180b9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038267"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100017646"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-sybasetosql"></a>Загрузка преобразованных объектов базы данных в SQL Server (SybaseToSQL)
 После преобразования объектов базы данных «адаптивный сервер предприятия» (ASE) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure можно загрузить результирующие объекты базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. Можно либо создать объекты SSMA, либо создавать сценарии для объектов и выполнять сценарии самостоятельно. Кроме того, SSMA позволяет обновлять целевые метаданные фактическим содержимым [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базой данных SQL Azure.  
@@ -43,7 +43,7 @@ ms.locfileid: "92038267"
   
     -   Чтобы синхронизировать или опустить отдельные объекты или категории объектов, установите или снимите флажок рядом с объектом или папкой.  
   
-3.  Выбрав объекты для обработки в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure обозревателе метаданных, щелкните правой кнопкой мыши **базы данных**и выберите команду **синхронизировать с базой данных**.  
+3.  Выбрав объекты для обработки в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure обозревателе метаданных, щелкните правой кнопкой мыши **базы данных** и выберите команду **синхронизировать с базой данных**.  
   
     Можно также синхронизировать отдельные объекты или категории объектов, щелкнув правой кнопкой мыши объект или его родительскую папку, а затем выбрав команду  **синхронизировать с базой данных**.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "92038267"
   
 **Сохранение объектов в виде скриптов**  
   
-1.  Выбрав объекты для сохранения в скрипт, щелкните правой кнопкой мыши **базы данных**и выберите **Сохранить как скрипт**.  
+1.  Выбрав объекты для сохранения в скрипт, щелкните правой кнопкой мыши **базы данных** и выберите **Сохранить как скрипт**.  
   
     Можно также создать скрипты для отдельных объектов или категорий объектов, щелкнув правой кнопкой мыши объект или содержащую его папку, а затем выбрав команду **Сохранить скрипт**.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "92038267"
   
 **Изменение скрипта**  
   
-1.  В меню [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Файл** наведите указатель мыши на пункт **Открыть**и выберите **Файл**.  
+1.  В меню [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Файл** наведите указатель мыши на пункт **Открыть** и выберите **Файл**.  
   
 2.  В диалоговом окне **Открыть** перейдите к и выберите файл сценария, а затем нажмите кнопку **ОК**.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "92038267"
   
 **Запуск сценария**  
   
-1.  В меню [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Файл** наведите указатель мыши на пункт **Открыть**и выберите **Файл**.  
+1.  В меню [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Файл** наведите указатель мыши на пункт **Открыть** и выберите **Файл**.  
   
 2.  В диалоговом окне **Открыть** перейдите к и выберите файл сценария, а затем нажмите кнопку **ОК**.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "92038267"
   
 Дополнительные сведения об использовании редактора запросов для выполнения скриптов см [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] . в разделе «запрос» [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации по.  
   
-Скрипты также можно запускать из командной строки с помощью программы **sqlcmd** и из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента. Дополнительные сведения о программе **sqlcmd**см. в разделе «Программа sqlcmd» [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации по. Дополнительные сведения об [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агенте см. в разделе «Автоматизация административных задач ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агент)» [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации по.  
+Скрипты также можно запускать из командной строки с помощью программы **sqlcmd** и из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента. Дополнительные сведения о программе **sqlcmd** см. в разделе «Программа sqlcmd» [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации по. Дополнительные сведения об [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агенте см. в разделе «Автоматизация административных задач ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агент)» [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации по.  
   
 ## <a name="securing-objects-in-sql-server"></a>Защита объектов в SQL Server  
 После загрузки преобразованных объектов базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно предоставлять и запрещать разрешения на эти объекты. Рекомендуется сделать это перед переносом данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Сведения о защите объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе «вопросы безопасности для баз данных и приложений баз данных» [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации по.  

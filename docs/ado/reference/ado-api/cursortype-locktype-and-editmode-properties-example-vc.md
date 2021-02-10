@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b2a80e44-03d8-426e-81b6-dd9dfc30e181
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 964410feadaac3ff321af122ff7118a6c6327552
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6e47c46dbdd6cfa44e7e818289bee840b349f387
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171345"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100025897"
 ---
 # <a name="cursortype-locktype-and-editmode-properties-example-vc"></a>Пример свойств примеры CursorType, LockType и EditMode (Visual c++)
 В этом примере показано задание свойств [примеры CursorType](./cursortype-property-ado.md) и [LockType](./locktype-property-ado.md) перед открытием [набора записей](./recordset-object-ado.md). Он также показывает значение свойства [EditMode](./editmode-property.md) в различных условиях. Для выполнения этой процедуры требуется функция Едитмодеаутпут.  

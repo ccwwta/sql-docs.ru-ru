@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f924e1bec97ed399f4d6d3351c8d18b1d8dad5b1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: e769310609ebae9c7df8cfe0d518acce058d32e7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991065"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029288"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Обзор поставщика услуг Microsoft OLE DB для публикации в Интернете
 Поставщик Microsoft OLE DB для публикации в Интернете позволяет ADO получать доступ к ресурсам, обслуживаемым Microsoft FrontPage или Microsoft Internet Information Server. К ресурсам относятся исходные файлы веб-системы, такие как HTML-файлы, или папки Windows 2000.
@@ -64,5 +64,5 @@ MSDAIPP.DSO
 > [!NOTE]
 >  Если МСДАИПП. Объекты DSO явно указываются в качестве значения поставщика с помощью ключевого слова строки подключения *поставщика* или свойства **поставщика** . в строке подключения нельзя использовать "URL =". В противном случае возникнет ошибка. Вместо этого просто укажите URL-адрес, как показано в разделе [Использование ADO с поставщиком OLE DB для публикации в Интернете](../data/the-ole-db-provider-for-internet-publishing.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
  [Сценарий публикации в Интернете](../data/internet-publishing-scenario.md) [поставщик OLE DB для публикации в Интернете](../data/the-ole-db-provider-for-internet-publishing.md)

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3d70e0e3-fe83-4b4d-beac-42c82495a05b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7fb43bb8aa7ad9bd71906036a081dac4ec91c794
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 904b1116be5e0daec2fce61e4a988c9b957322ef
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99202546"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100016244"
 ---
 # <a name="statement-transitions"></a>Переходы инструкций
 Инструкции ODBC имеют следующие состояния.  
   
-|Состояние|Описание|  
+|Область|Описание|  
 |-----------|-----------------|  
 |S0|Нераспределенная инструкция. (Состояние соединения должно быть C4, C5 или C6. Дополнительные сведения см. в разделе [переходы соединений](../../../odbc/reference/appendixes/connection-transitions.md).)|  
 |S1|Выделенная инструкция.|  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1bce53fd000baace86d32542d9b9cc843ee68296
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 5a6cfdda6072f8ed51d55569ed68b113a4148642
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991025"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029268"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Обзор поставщика OLE DB Майкрософт для ODBC
 Для программистов ADO или RDS идеальным миром будет один, в котором каждый источник данных предоставляет интерфейс OLE DB, чтобы ADO мог напрямую обращаться к источнику данных. Хотя все больше поставщиков баз данных реализуют OLE DB интерфейсы, некоторые источники данных пока не предоставляются таким образом. Однако большинство систем СУБД, используемых сегодня, доступны через ODBC.
@@ -84,13 +84,13 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="remarks"></a>Remarks
  Если используется **имя DSN** или **FileDSN**, оно должно быть определено с помощью администратора источников данных ODBC на панели управления Windows. В Microsoft Windows 2000 администратор ODBC находится в разделе Администрирование. В более ранних версиях Windows значок администратора ODBC называется **32-bit ODBC** или просто **ODBC**.
 
- Вместо установки **имени DSN**можно указать драйвер ODBC (**Driver =**), например "SQL Server;" имя сервера (**Server =**); и имя базы данных (**база данных =**).
+ Вместо установки **имени DSN** можно указать драйвер ODBC (**Driver =**), например "SQL Server;" имя сервера (**Server =**); и имя базы данных (**база данных =**).
 
  Можно также указать имя учетной записи пользователя (**UID =**) и пароль для учетной записи пользователя (**PWD =**) в параметрах, ОТносящихся к ODBC, или в стандартных параметрах *пользователя* и *пароля* , определяемых ADO.
 
  Хотя определение **DSN** уже указывает *базу данных, можно указать параметр* *базы данных* в дополнение к **имени DSN** для подключения к другой базе данных. Рекомендуется *всегда включать параметр* *базы данных* при использовании **имени DSN**. Это обеспечит подключение к правильной базе данных, если другой пользователь изменил параметр базы данных по умолчанию, так как вы последним проверили определение **DSN** .
 
-## <a name="provider-specific-connection-properties"></a>Свойства соединения, зависящие от поставщика
+## <a name="provider-specific-connection-properties"></a>Свойства подключения Provider-Specific
  Поставщик OLE DB для ODBC добавляет несколько свойств в коллекцию [Properties](../../reference/ado-api/properties-collection-ado.md) объекта **Connection** . В следующей таблице перечислены эти свойства с соответствующим OLE DB именем свойства в круглых скобках.
 
 |Имя свойства|Описание|
@@ -117,14 +117,14 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Функции времени и даты (KAGPROP_TIMEDATEFUNCTIONS)|Указывает, какие функции времени и даты поддерживаются драйвером ODBC. Список имен функций и связанных значений, используемых в этой битовой маске, см. в [приложении E: скалярные функции](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)в документации по ODBC.|
 |Поддержка грамматики SQL (KAGPROP_ODBCSQLCONFORMANCE)|Указывает грамматику SQL, поддерживаемую драйвером ODBC.|
 
-## <a name="provider-specific-recordset-and-command-properties"></a>Специфические для поставщика набор записей и свойства команды
+## <a name="provider-specific-recordset-and-command-properties"></a>Provider-Specific набор записей и свойства команд
  Поставщик OLE DB для ODBC добавляет несколько свойств в коллекцию **свойств** **набора записей** и объектов **команд** . В следующей таблице перечислены эти свойства с соответствующим OLE DB именем свойства в круглых скобках.
 
 |Имя свойства|Описание|
 |-------------------|-----------------|
 |Обновления, операции удаления и вставки на основе запросов (KAGPROP_QUERYBASEDUPDATES)|Указывает, можно ли выполнять операции обновления, удаления и вставки с помощью запросов SQL.|
 |Тип параллелизма ODBC (KAGPROP_CONCURRENCY)|Указывает метод, используемый для уменьшения потенциальных проблем, вызванных двумя пользователями, пытающимися получить доступ к одним и тем же данным из источника данных одновременно.|
-|Доступность больших двоичных объектов в однонаправленном курсоре (KAGPROP_BLOBSONFOCURSOR)|Указывает, можно ли получить доступ к **полям** BLOB-объектов при использовании однопроходного курсора.|
+|Доступность больших двоичных объектов на Forward-Only курсоре (KAGPROP_BLOBSONFOCURSOR)|Указывает, можно ли получить доступ к **полям** BLOB-объектов при использовании однопроходного курсора.|
 |Включить SQL_FLOAT, SQL_DOUBLE и SQL_REAL в предложения WHERE КБУ (KAGPROP_INCLUDENONEXACT)|Указывает, можно ли включать значения SQL_FLOAT, SQL_DOUBLE и SQL_REAL в предложение WHERE КБУ.|
 |Расположение в последней строке после вставки (KAGPROP_POSITIONONNEWROW)|Указывает, что после вставки новой записи в таблицу последняя строка в таблице станет текущей.|
 |Ировсетчанжеекстинфо (KAGPROP_IROWSETCHANGEEXTINFO)|Указывает, предоставляет ли интерфейс **IRowsetChange** расширенную информацию.|
@@ -179,19 +179,19 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[Примеры AbsolutePosition](../../reference/ado-api/absoluteposition-property-ado.md)|недоступно|недоступно|чтение/запись|чтение/запись|
 |[ActiveConnection](../../reference/ado-api/activeconnection-property-ado.md)|чтение/запись|чтение/запись|чтение/запись|чтение/запись|
 |[BOF](../../reference/ado-api/bof-eof-properties-ado.md)|Только для чтения|Только для чтения|Только для чтения|Только для чтения|
-|[Закладка.](../../reference/ado-api/bookmark-property-ado.md)|недоступно|недоступно|чтение/запись|чтение/запись|
+|[Закладка](../../reference/ado-api/bookmark-property-ado.md)|недоступно|недоступно|чтение/запись|чтение/запись|
 |[CacheSize](../../reference/ado-api/cachesize-property-ado.md)|чтение/запись|чтение/запись|чтение/запись|чтение/запись|
 |[CursorLocation](../../reference/ado-api/cursorlocation-property-ado.md)|чтение/запись|чтение/запись|чтение/запись|чтение/запись|
 |[Примеры CursorType](../../reference/ado-api/cursortype-property-ado.md)|чтение/запись|чтение/запись|чтение/запись|чтение/запись|
 |[EditMode](../../reference/ado-api/editmode-property.md)|Только для чтения|Только для чтения|Только для чтения|Только для чтения|
-|[Filter](../../reference/ado-api/filter-property.md)|чтение/запись|чтение/запись|чтение/запись|чтение/запись|
+|[Фильтр](../../reference/ado-api/filter-property.md)|чтение/запись|чтение/запись|чтение/запись|чтение/запись|
 |[LockType](../../reference/ado-api/locktype-property-ado.md)|чтение/запись|чтение/запись|чтение/запись|чтение/запись|
 |[MarshalOptions](../../reference/ado-api/marshaloptions-property-ado.md)|чтение/запись|чтение/запись|чтение/запись|чтение/запись|
 |[MaxRecords](../../reference/ado-api/maxrecords-property-ado.md)|чтение/запись|чтение/запись|чтение/запись|чтение/запись|
 |[PageCount](../../reference/ado-api/pagecount-property-ado.md)|чтение/запись|недоступно|Только для чтения|Только для чтения|
 |[PageSize](../../reference/ado-api/pagesize-property-ado.md)|чтение/запись|чтение/запись|чтение/запись|чтение/запись|
 |[RecordCount](../../reference/ado-api/recordcount-property-ado.md)|чтение/запись|недоступно|Только для чтения|Только для чтения|
-|[Source](../../reference/ado-api/source-property-ado-recordset.md)|чтение/запись|чтение/запись|чтение/запись|чтение/запись|
+|[Источник](../../reference/ado-api/source-property-ado-recordset.md)|чтение/запись|чтение/запись|чтение/запись|чтение/запись|
 |[Состояние](../../reference/ado-api/state-property-ado.md)|Только для чтения|Только для чтения|Только для чтения|Только для чтения|
 |[Состояние](../../reference/ado-api/status-property-ado-recordset.md)|Только для чтения|Только для чтения|Только для чтения|Только для чтения|
 
@@ -252,7 +252,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |ГРУППИРОВКа по поддержке|DBPROP_GROUPBY|
 |Поддержка разнородных таблиц|DBPROP_HETEROGENEOUSTABLES|
 |Чувствительность идентификатора к регистру|DBPROP_IDENTIFIERCASE|
-|Исходный каталог|DBPROP_INIT_CATALOG|
+|Initial Catalog|DBPROP_INIT_CATALOG|
 |Уровни изоляции|DBPROP_SUPPORTEDTXNISOLEVELS|
 |Хранение изоляции|DBPROP_SUPPORTEDTXNISORETAIN|
 |Идентификатор локали|DBPROP_INIT_LCID|
@@ -276,16 +276,16 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Доступность выходного параметра|DBPROP_OUTPUTPARAMETERAVAILABILITY|
 |Пароль|DBPROP_AUTH_PASSWORD|
 |Методы доступа для передачи по ссылке|DBPROP_BYREFACCESSORS|
-|Сохранять сведения о безопасности|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|
+|Persist Security Info|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|
 |Тип постоянного идентификатора|DBPROP_PERSISTENTIDTYPE|
 |Поведение при подготовке к прерыванию|DBPROP_PREPAREABORTBEHAVIOR|
 |Действие подготовки к фиксации|DBPROP_PREPARECOMMITBEHAVIOR|
 |Условие процедуры|DBPROP_PROCEDURETERM|
-|prompt|DBPROP_INIT_PROMPT|
+|Запрос|DBPROP_INIT_PROMPT|
 |Понятное имя поставщика|DBPROP_PROVIDERFRIENDLYNAME|
 |Provider Name|DBPROP_PROVIDERFILENAME|
 |Версия поставщика|DBPROP_PROVIDERVER|
-|Источник данных только для чтения|DBPROP_DATASOURCEREADONLY|
+|Источник данных Read-Only|DBPROP_DATASOURCEREADONLY|
 |Преобразования наборов строк для команды|DBPROP_ROWSETCONVERSIONSONCOMMAND|
 |Термин схемы|DBPROP_SCHEMATERM|
 |Использование схемы|DBPROP_SCHEMAUSAGE|
@@ -431,5 +431,5 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  Дополнительные сведения о конкретной реализации и функциональных возможностях о поставщике OLE DB Майкрософт для ODBC см. в [справочнике по программированию OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)) или на веб-сайте центра разработчиков для доступа к данным и хранилища на сайте MSDN.
 
-## <a name="see-also"></a>См. также
- [Объект Command (ADO)](../../reference/ado-api/command-object-ado.md) [свойство CommandText](../../reference/ado-api/commandtext-property-ado.md) (ADO) свойство [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md) (ADO) метод Execute (ADO) [(объект,](../../reference/ado-api/connection-object-ado.md) [команда ADO)](../../reference/ado-api/execute-method-ado-command.md) [Open Method (ADO Recordset)](../../reference/ado-api/open-method-ado-recordset.md) [Коллекция параметров](../../reference/ado-api/parameters-collection-ado.md) (ADO [)](../../reference/ado-api/properties-collection-ado.md) [свойство поставщика](../../reference/ado-api/provider-property-ado.md) (ADO) [объект Recordset](../../reference/ado-api/recordset-object-ado.md) (ADO) [поддерживает метод](../../reference/ado-api/supports-method.md)
+## <a name="see-also"></a>См. также:
+ [Объект Command (ADO)](../../reference/ado-api/command-object-ado.md) [свойство CommandText](../../reference/ado-api/commandtext-property-ado.md) (ADO) свойство [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md) (ADO) метод Execute (ADO) [(объект,](../../reference/ado-api/connection-object-ado.md) [команда ADO)](../../reference/ado-api/execute-method-ado-command.md) [](../../reference/ado-api/open-method-ado-recordset.md) [Коллекция параметров](../../reference/ado-api/parameters-collection-ado.md) (ADO [)](../../reference/ado-api/properties-collection-ado.md) [свойство поставщика](../../reference/ado-api/provider-property-ado.md) (ADO) [объект Recordset](../../reference/ado-api/recordset-object-ado.md) (ADO) [поддерживает метод](../../reference/ado-api/supports-method.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3ee27314-a305-4fbc-8433-9ee9a909afd6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 756fe40bf7916dfa3e56a3e559be2874b5e8cd85
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 08019584f43891bb8e918b5e5f491c038a4b9afc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171310"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100025604"
 ---
 # <a name="definedsize-property"></a>Свойство DefinedSize
 Указывает емкость данных для объекта [поля](../../../ado/reference/ado-api/field-object.md) .  
@@ -37,7 +37,7 @@ ms.locfileid: "99171310"
   
 4.  Для типов данных, длина которых не превышает длину, для этого параметра задано значение ~ 0 (битовая, а не 0, все биты установлены в 1).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте свойство **DefinedSize** , чтобы определить емкость данных для объекта **поля** .  
   
  Свойства **DefinedSize** и [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) различаются. Например, рассмотрим объект **field** с объявленным типом **адварчар** и значением свойства **DefinedSize** 50, содержащим один символ. Возвращаемое значение свойства **ActualSize** — это длина в байтах одного символа.  

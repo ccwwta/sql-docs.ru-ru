@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bc04cce33d3a1170c01b604ef8b71ef82bc98fe2
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 87d9e159a9a97a0a929bec72d03118a927aad56e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991035"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029228"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Обзор поставщика Microsoft OLE DB для Microsoft Jet
 Поставщик OLE DB для Microsoft Jet позволяет ADO получать доступ к базам данных Microsoft Jet.
@@ -53,7 +53,7 @@ Microsoft.Jet.OLEDB.4.0
 > [!NOTE]
 >  При подключении к поставщику источника данных, который поддерживает проверку подлинности Windows, следует указать **Trusted_Connection = Yes** или **Integrated Security = SSPI** вместо сведений об идентификаторе пользователя и пароле в строке подключения.
 
-## <a name="provider-specific-connection-parameters"></a>Параметры подключения, зависящие от поставщика
+## <a name="provider-specific-connection-parameters"></a>Параметры подключения Provider-Specific
  Поставщик OLE DB для Microsoft Jet поддерживает несколько динамических свойств, зависящих от поставщика, помимо тех, которые определены в ADO. Как и в случае со всеми другими параметрами **соединения** , их можно задать с помощью коллекции **Properties** объекта **Connection** или в составе строки подключения.
 
  В следующей таблице перечислены эти свойства вместе с соответствующим OLE DB именем свойства в круглых скобках.
@@ -81,7 +81,7 @@ Microsoft.Jet.OLEDB.4.0
 |Jet OLEDB: время ожидания команды ODBC (DBPROP_JETOLEDB_ODBCCOMMANDTIMEOUT)|Указывает число миллисекунд, по истечении которых истекает время ожидания удаленного запроса ODBC от Jet.|
 |Jet OLEDB: Блокировка страниц для блокировки таблицы (DBPROP_JETOLEDB_PAGELOCKSTOTABLELOCK)|Указывает, сколько страниц должно быть заблокировано в рамках транзакции, прежде чем Jet попытается повысить блокировку до блокировки таблицы. Если это значение равно 0, блокировка не повышается.|
 |Jet OLEDB: время ожидания страницы (DBPROP_JETOLEDB_PAGETIMEOUT)|Указывает время в миллисекундах, в течение которого Jet будет ожидать, не устарел ли его кэш с файлом базы данных.|
-|Jet OLEDB: повторное использование страниц с длинными значениями (DBPROP_JETOLEDB_RECYCLELONGVALUEPAGES)|Указывает, должен ли модуль Jet принудительно пытаться восстановить страницы больших двоичных объектов при их освобождении.|
+|Jet OLEDB: Очистка страниц Long-Valued (DBPROP_JETOLEDB_RECYCLELONGVALUEPAGES)|Указывает, должен ли модуль Jet принудительно пытаться восстановить страницы больших двоичных объектов при их освобождении.|
 |Jet OLEDB: путь реестра (DBPROP_JETOLEDB_REGPATH)|Указывает раздел реестра Windows, который содержит значения для ядра СУБД Jet.|
 |Jet OLEDB: сброс ISAM stats (DBPROP_JETOLEDB_RESETISAMSTATS)|Указывает, DBSCHEMA_JETOLEDB_ISAMSTATS ли **набор записей** схемы сбрасывать счетчики производительности после возврата сведений о производительности.|
 |Jet OLEDB: Общая асинхронная задержка (DBPROP_JETOLEDB_SHAREDASYNCDELAY)|Указывает максимальное время в миллисекундах, в течение которого Jet может откладывать асинхронные операции записи на диск при открытии базы данных в многопользовательской режиме.|
@@ -89,7 +89,7 @@ Microsoft.Jet.OLEDB.4.0
 |Jet OLEDB: режим фиксации транзакции (DBPROP_JETOLEDB_TXNCOMMITMODE)|Указывает, записывает ли Jet данные на диск синхронно или асинхронно при фиксации транзакции.|
 |Jet OLEDB: Синхронизация пользовательской фиксации (DBPROP_JETOLEDB_USERCOMMITSYNC)|Указывает, записываются ли изменения, внесенные в транзакции, в синхронном или асинхронном режиме.|
 
-## <a name="provider-specific-recordset-and-command-properties"></a>Специфические для поставщика набор записей и свойства команды
+## <a name="provider-specific-recordset-and-command-properties"></a>Provider-Specific набор записей и свойства команд
  Поставщик Jet также поддерживает несколько специфических для поставщика **наборов записей** и свойств **команд** . Доступ к этим свойствам и их настройка осуществляется с помощью коллекции **свойств** **набора записей** или объекта **команды** . В таблице перечислены имя свойства ADO и соответствующее OLE DB имя свойства в круглых скобках.
 
 |Имя свойства|Описание|
@@ -99,10 +99,10 @@ Microsoft.Jet.OLEDB.4.0
 |Jet OLEDB: размер кэша курсора FAT (DBPROP_JETOLEDB_FATCURSORMAXROWS)|Указывает количество строк для кэширования при использовании кэширования строк удаленного хранилища данных. Это значение игнорируется, если **Jet OLEDB: enable FAT** имеет значение true.|
 |Jet OLEDB: несоответствие (DBPROP_JETOLEDB_INCONSISTENT)|Указывает, разрешены ли в результатах запроса непоследовательные обновления.|
 |Jet OLEDB: гранулярность блокировки (DBPROP_JETOLEDB_LOCKGRANULARITY)|Указывает, открыта ли таблица с блокировкой на уровне строк.|
-|Jet OLEDB: Инструкция сквозного ODBC (DBPROP_JETOLEDB_ODBCPASSTHROUGH)|Указывает, что Jet должен передать текст SQL в объект **команды** в серверную части без изменений.|
+|Jet OLEDB: Инструкция ODBC Pass-Through (DBPROP_JETOLEDB_ODBCPASSTHROUGH)|Указывает, что Jet должен передать текст SQL в объект **команды** в серверную части без изменений.|
 |Jet OLEDB: частичные операции без операций (DBPROP_JETOLEDB_BULKPARTIAL)|Указывает на поведение Jet при сбое операций SQL DML.|
-|Jet OLEDB: сквозная операция запроса (DBPROP_JETOLEDB_PASSTHROUGHBULKOP)|Указывает, передаются ли запросы, не возвращающие **набор записей** , в источник данных.|
-|Jet OLEDB: сквозная строка подключения запроса (DBPROP_JETOLEDB_ODBCPASSTHROUGHCONNECTSTRING)|Указывает строку подключения Jet, используемую для подключения к удаленному хранилищу данных. Это значение игнорируется, если не выполняется **инструкция сквозной инструкции Jet OLEDB: ODBC** .|
+|Jet OLEDB: сквозная передача запроса Bulk-Op (DBPROP_JETOLEDB_PASSTHROUGHBULKOP)|Указывает, передаются ли запросы, не возвращающие **набор записей** , в источник данных.|
+|Jet OLEDB: сквозная строка подключения запроса (DBPROP_JETOLEDB_ODBCPASSTHROUGHCONNECTSTRING)|Указывает строку подключения Jet, используемую для подключения к удаленному хранилищу данных. Это значение игнорируется, если только **инструкция Jet OLEDB: ODBC Pass-Through** имеет значение true.|
 |Jet OLEDB: сохраненный запрос (DBPROP_JETOLEDB_STOREDQUERY)|Указывает, следует ли интерпретировать текст команды как хранимый запрос вместо команды SQL.|
 |Jet OLEDB: Проверка правил в наборе (DBPROP_JETOLEDB_VALIDATEONSET)|Указывает, оцениваются ли правила проверки Jet при установке данных столбца или при фиксации изменений в базе данных.|
 
@@ -112,7 +112,7 @@ Microsoft.Jet.OLEDB.4.0
  Текст команды в объекте [Command](../../reference/ado-api/command-object-ado.md) использует диалект Microsoft Jet SQL. В тексте команды можно указать запросы, возвращающие строки, запросы действий и имена таблиц. Однако хранимые процедуры не поддерживаются, и их не следует указывать.
 
 ## <a name="recordset-behavior"></a>Поведение набора записей
- Ядро СУБД Microsoft Jet не поддерживает динамические курсоры. Таким образом, поставщик OLE DB для Microsoft Jet не поддерживает тип курсора **адлоккдинамик** . При запросе динамического курсора поставщик возвращает курсор KEYSET и сбрасывает свойство [примеры CursorType](../../reference/ado-api/cursortype-property-ado.md) , чтобы указать тип возвращаемого [набора записей](../../reference/ado-api/recordset-object-ado.md) . Кроме того, если запрашивается обновляемый **набор записей** (**LockType** — **adLockOptimistic**, **адлоккбатчоптимистик**или **адлоккпессимистик**), поставщик также возвращает курсор KEYSET и сбрасывает свойство **примеры CursorType** .
+ Ядро СУБД Microsoft Jet не поддерживает динамические курсоры. Таким образом, поставщик OLE DB для Microsoft Jet не поддерживает тип курсора **адлоккдинамик** . При запросе динамического курсора поставщик возвращает курсор KEYSET и сбрасывает свойство [примеры CursorType](../../reference/ado-api/cursortype-property-ado.md) , чтобы указать тип возвращаемого [набора записей](../../reference/ado-api/recordset-object-ado.md) . Кроме того, если запрашивается обновляемый **набор записей** (**LockType** — **adLockOptimistic**, **адлоккбатчоптимистик** или **адлоккпессимистик**), поставщик также возвращает курсор KEYSET и сбрасывает свойство **примеры CursorType** .
 
 ## <a name="dynamic-properties"></a>Динамические свойства
  Поставщик OLE DB для Microsoft Jet вставляет несколько динамических свойств в коллекцию **свойств** неоткрытыго [соединения](../../reference/ado-api/connection-object-ado.md), [набора записей](../../reference/ado-api/recordset-object-ado.md)и [командных](../../reference/ado-api/command-object-ado.md) объектов.
@@ -165,11 +165,11 @@ Microsoft.Jet.OLEDB.4.0
 |Поведение при подготовке к прерыванию|DBPROP_PREPAREABORTBEHAVIOR|
 |Действие подготовки к фиксации|DBPROP_PREPARECOMMITBEHAVIOR|
 |Условие процедуры|DBPROP_PROCEDURETERM|
-|prompt|DBPROP_INIT_PROMPT|
+|Запрос|DBPROP_INIT_PROMPT|
 |Понятное имя поставщика|DBPROP_PROVIDERFRIENDLYNAME|
 |Provider Name|DBPROP_PROVIDERFILENAME|
 |Версия поставщика|DBPROP_PROVIDERVER|
-|Источник данных только для чтения|DBPROP_DATASOURCEREADONLY|
+|Источник данных Read-Only|DBPROP_DATASOURCEREADONLY|
 |Преобразования наборов строк для команды|DBPROP_ROWSETCONVERSIONSONCOMMAND|
 |Термин схемы|DBPROP_SCHEMATERM|
 |Использование схемы|DBPROP_SCHEMAUSAGE|
@@ -188,7 +188,7 @@ Microsoft.Jet.OLEDB.4.0
 |Имя свойства ADO|Имя свойства OLE DB|
 |-----------------------|--------------------------|
 |Порядок доступа|DBPROP_ACCESSORDER|
-|Набор строк только для добавления|DBPROP_APPENDONLY|
+|Append-Only набор строк|DBPROP_APPENDONLY|
 |Блокировка объектов хранилища|DBPROP_BLOCKINGSTORAGEOBJECTS|
 |Тип закладки|DBPROP_BOOKMARKTYPE|
 |С закладками|DBPROP_IROWSETLOCATE|
@@ -266,7 +266,7 @@ Microsoft.Jet.OLEDB.4.0
 |Имя свойства ADO|Имя свойства OLE DB|
 |-----------------------|--------------------------|
 |Порядок доступа|DBPROP_ACCESSORDER|
-|Набор строк только для добавления|DBPROP_APPENDONLY|
+|Append-Only набор строк|DBPROP_APPENDONLY|
 |Блокировка объектов хранилища|DBPROP_BLOCKINGSTORAGEOBJECTS|
 |Тип закладки|DBPROP_BOOKMARKTYPE|
 |С закладками|DBPROP_IROWSETLOCATE|

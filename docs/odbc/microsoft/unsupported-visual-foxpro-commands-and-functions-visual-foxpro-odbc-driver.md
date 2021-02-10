@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: afdb6b7e-738d-42ca-8053-67ae50873ca6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fd7b34f35ac0fcc747cb30fb35537a33cc5cd4a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d4ac7f25709cf91e03f9ad8b15f9fb0026ee5e98
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471425"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015394"
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>Неподдерживаемые команды и функции Visual FoxPro (драйвер ODBC для Visual FoxPro)
 В следующей таблице перечислены команды и функции FoxPro, которые не поддерживаются драйвером ODBC для Visual FoxPro, но поддерживаются Microsoft® Visual FoxPro®.  
@@ -33,29 +33,29 @@ ms.locfileid: "88471425"
 
 :::row:::
     :::column:::
-        !(См. раздел RUN &#124;!Кнопки  
-        #<a name="defineundef"></a>ОПРЕДЕЛИТЬ... #UNDEF  
-        #<a name="ifendifpreprocessordirective"></a>Директива препроцессора IF... #ENDIF  
-        #<a name="ifdef124ifndef"></a>IFDEF &#124; #IFNDEF  
-        #<a name="includepreprocessordirective"></a>ВКЛЮЧИТЬ директиву препроцессора  
+        ! (См. раздел RUN &#124;! Кнопки  
+        #<a name="define--undef"></a>ОПРЕДЕЛИТЬ... #UNDEF  
+        #<a name="if--endif-preprocessor-directive"></a>Директива препроцессора IF... #ENDIF  
+        #<a name="ifdef-124-ifndef"></a>IFDEF &#124; #IFNDEF  
+        #<a name="include-preprocessor-directive"></a>ВКЛЮЧИТЬ директиву препроцессора  
         :: Оператор разрешения области  
-        ?&#124;??Get-Help  
+        ? &#124;?? Команда  
     :::column-end:::
     :::column:::
-        ???Get-Help  
-        @ ... BOX, команда  
-        @ ... Команда класса  
-        @ ... Команда CLEAR  
-        @ ... Команда "изменить — поля редактирования"  
-        @ ... FILL, команда  
-        @ ... Получить  
+        ??? Команда  
+        @ ... BOX, команда  
+        @ ... Команда класса  
+        @ ... Команда CLEAR  
+        @ ... Команда "изменить — поля редактирования"  
+        @ ... FILL, команда  
+        @ ... Получить  
     :::column-end:::
     :::column:::
-        @ ... Команда меню  
-        @ ... Команда PROMPT  
-        @ ... Скажите, команда  
-        @ ... Команда SCROLL  
-        @ ... В команду  
+        @ ... Команда меню  
+        @ ... Команда PROMPT  
+        @ ... Скажите, команда  
+        @ ... Команда SCROLL  
+        @ ... В команду  
         \ &#124; \\ \ команда  
     :::column-end:::
 :::row-end:::
@@ -461,7 +461,7 @@ NUMLOCK (), функция
         _PPITCH переменная системной памяти  
         _PQUALITY переменная системной памяти  
         _PRETEXT переменная системной памяти  
-        PRINTJOB... Команда ЕНДПРИНТЖОБ  
+        PRINTJOB... Команда ЕНДПРИНТЖОБ  
     :::column-end:::
     :::column:::
         Функция ПРИНТСТАТУС ()  
@@ -527,7 +527,7 @@ NUMLOCK (), функция
         _RMARGIN переменная системной памяти  
         RMDIR, команда  
         Функция ROW ()  
-        ЗАПУСТИТЕ &#124;!Get-Help  
+        ЗАПУСТИТЕ &#124;! Команда  
         Команда вызов RUNSCRIPT  
     :::column-end:::
 :::row-end:::
@@ -658,7 +658,7 @@ NUMLOCK (), функция
 :::row:::
     :::column:::
         _TABS переменная системной памяти  
-        ТЕКСТ... Команда ЕНДТЕКСТ  
+        ТЕКСТ... Команда ЕНДТЕКСТ  
         _THROTTLE переменная системной памяти  
     :::column-end:::
     :::column:::
@@ -707,7 +707,7 @@ NUMLOCK (), функция
         Функция ВЕКСИСТ ()  
         Функция ВФОНТ ()  
         _WINDOWS переменная системной памяти  
-        С ПОМОЩЬЮ... Команда ЕНДВИС  
+        С ПОМОЩЬЮ... Команда ЕНДВИС  
     :::column-end:::
     :::column:::
         _WIZARD переменная системной памяти  

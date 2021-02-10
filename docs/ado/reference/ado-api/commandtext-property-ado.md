@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4dd7e82a-8da5-4a4e-b439-11a29286fa0e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a387746928ac92dfa6c31fbe33dab66abba05eeb
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: fb418696392fe250bd659ba68306df10a7c36a66
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164651"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100026619"
 ---
 # <a name="commandtext-property-ado"></a>Свойство CommandText (ADO)
 Указывает текст команды, которая должна быть выдана поставщику.  
@@ -29,7 +29,7 @@ ms.locfileid: "99164651"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает **строковое** значение, содержащее команду поставщика, например инструкцию SQL, имя таблицы, относительный URL-адрес или вызов хранимой процедуры. По умолчанию используется пустая строка ("").  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте свойство **CommandText** , чтобы задать или вернуть текст команды, представленной объектом [Command](./command-object-ado.md) . Обычно это будет инструкция SQL, но также может быть любой другой тип инструкции команды, распознаваемый поставщиком, например вызов хранимой процедуры. Инструкция SQL должна иметь определенный диалект или версию, поддерживаемые обработчиком запросов поставщика.  
   
  Если свойство [Prepared](./prepared-property-ado.md) объекта **Command** имеет значение **true** , а объект **команды** привязан к открытому соединению при задании свойства **CommandText** , то ADO готовит запрос (то есть скомпилированную форму запроса, который хранится поставщиком) при вызове методов [EXECUTE](./execute-method-ado-command.md) или [Open](./open-method-ado-connection.md) .  

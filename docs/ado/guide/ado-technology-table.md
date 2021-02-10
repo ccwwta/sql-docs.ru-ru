@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 38c8ad3c-d6f1-40f6-a394-bbba6ed861e5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1cd2f1da937b663b1cc32939c0fb0de17dad8fb7
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: d067e7bb1adbbb19d08cb87c9ccf4f69004bff55
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991215"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100030512"
 ---
 # <a name="products-and-technologies-table"></a>Таблица Products and Technologies
 В следующей таблице перечислены продукты, средства и технологии Майкрософт, которые обсуждаются в этом руководством программиста. По возможности он предоставляет ссылки на соответствующие разделы руководства.
 
-|Продукт или технология Майкрософт|Ссылки (на английском языке)|
+|Продукт или технология Майкрософт|Ссылки|
 |-------------------------------------|----------------|
 |Access/Jet|[Работа с наборами записей](./data/working-with-recordsets.md)<br /><br /> [Основные принципы ADOX](./extensions/adox-fundamentals.md)<br /><br /> [Поставщик Microsoft OLE DB для Microsoft Jet](./appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
 |Интерфейсы служб Active Directory (ADSI)|[Поставщик OLE DB Майкрософт для службы Microsoft Active Directory](./appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e0db4e15-6787-41e2-8f13-9e9b524d620a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: adc282492b4c6d9a21683693154e43f1177bdca0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: c33cedffcdd4eb9b738b952afaa060af9d99ff6a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164750"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100027490"
 ---
 # <a name="cancel-method-ado"></a>Метод Cancel (ADO)
 Отменяет выполнение ожидающего асинхронного вызова метода.  
@@ -48,7 +48,7 @@ object.Cancel
 |[Соединение](./connection-object-ado.md)|[Выполнить](./execute-method-ado-connection.md) или [Открыть](./open-method-ado-connection.md)|  
 |[Запись](./record-object-ado.md)|[Копирекорд](./copyrecord-method-ado.md), [делетерекорд](./deleterecord-method-ado.md), [MoveRecord](./moverecord-method-ado.md)или [Open](./open-method-ado-record.md)|  
 |[набор записей](./recordset-object-ado.md)|[Открыть](./open-method-ado-recordset.md)|  
-|[Поток](./stream-object-ado.md)|[Открыть](./open-method-ado-stream.md)|  
+|[STREAM](./stream-object-ado.md)|[Открыть](./open-method-ado-stream.md)|  
   
 ## <a name="applies-to"></a>Применение  
 

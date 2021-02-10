@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e3c50eee-964a-4abd-810d-1bd51978e814
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c8a90832737c161a08f7abed98ebc8d3fbb2b13
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: af8b5a367d0de0fbce599644f901bd74002ec436
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97637831"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100030523"
 ---
 # <a name="ado-programmers-guide-for-using-ado-objects"></a>Рекомендации программиста ADO по использованию объектов ADO
 Эта документация содержит общие сведения об использовании объектов ADO для работы с данными из различных источников данных. Во первых, в этом обзоре представлены новые функции и требования для установки, использования и распространения компонента ADO. В следующих разделах рассматривается использование различных типов объектов ADO. Наконец, приложения обсуждают различные поставщики данных и служб, предоставляемые корпорацией Майкрософт, сообщения об ошибках, и советы по использованию ADO на нескольких языках программирования, а также примеры и глоссарий.

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed5e1b60-3769-4b26-a253-1d721e37941d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aa5a83c79deb2d9df42e81869476ae856bac322a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 37736aa5c6b2d71d48a2a28aca6f53e6ef021e83
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167428"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100024969"
 ---
 # <a name="execute-requery-and-clear-methods-example-vb"></a>Примеры методов Execute, Requery и Clear (Visual Basic)
 В этом примере демонстрируется метод **EXECUTE** при запуске из объекта [команды](../../../ado/reference/ado-api/command-object-ado.md) и объекта [соединения](../../../ado/reference/ado-api/connection-object-ado.md) . Он также использует метод [Requery](../../../ado/reference/ado-api/requery-method.md) для получения текущих данных в [наборе записей](../../../ado/reference/ado-api/recordset-object-ado.md)и метод [clear](../../../ado/reference/ado-api/clear-method-ado.md) для очистки содержимого коллекции [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) . (Доступ к коллекции **Errors** осуществляется через объект **Connection** свойства [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md).) Для выполнения этой процедуры требуются процедуры ExecuteCommand и Принтаутпут.  

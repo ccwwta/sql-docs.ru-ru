@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5524a575-67dd-4ef6-9d17-3412df9b9f9c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e591fae2984714fcc0bcb2f70eab614f27e397b1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ed113379b43b9a543eabe554b39aad6ef1e21d7e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492487"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100016754"
 ---
 # <a name="data-migration-report--mysqltosql"></a>Отчет о миграции данных (MySQLToSQL)
 После переноса данных в появляется диалоговое окно **отчет о переносе данных** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -36,7 +36,7 @@ ms.locfileid: "88492487"
 **Число успешно перенесенных строк**  
 Число строк данных, успешно перенесенных в целевую таблицу.  
   
-**Коэффициент**  
+**Соотношение**  
 Процент успешно перенесенных строк.  
   
 **Сведения**  

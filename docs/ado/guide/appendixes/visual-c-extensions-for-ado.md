@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6d1586800288d0a2d2984cf08e770f776c5ee3c6
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 837ecdb45ead79e9e957a6d2381ccfaf1de6fb2c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991815"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028669"
 ---
 # <a name="visual-c-extensions-for-ado"></a>Расширения Visual C++ для ADO
 Предпочтительный метод программирования ADO с Visual C++ использует директиву **#import** , как описано в [Microsoft Visual C++ программировании ADO](./visual-c-ado-programming.md). Однако более ранние версии ADO поставляются с альтернативным методом программирования с использованием Visual C++: расширений Visual C++. В этом разделе описывается эта функция для тех, кто должен поддерживать код расширений Visual C++, но новый код ADO должен быть написан с помощью директивы #**Import**.
@@ -40,5 +40,5 @@ ms.locfileid: "88991815"
 
 -   [Пример модулей ADO с расширениями Visual C++](./visual-c-extensions-example.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
  [Visual C++ный индекс синтаксиса ADO для расширений COM-](../../reference/ado-api/ado-for-visual-c-syntax-index-for-com.md) [Visual C++ пример](./visual-c-extensions-example.md) [с использованием](./using-visual-c-extensions.md) [заголовка Visual C++ расширений](./visual-c-extensions-header.md) Visual C++ Extensions

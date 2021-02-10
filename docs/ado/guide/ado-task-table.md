@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59cb4cceb81861460fbcf7f079801b08319c76d9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f29f2462f19200e486b3ed7b5635048028f4bbcc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991205"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031046"
 ---
 # <a name="ado-programming-task-table"></a>Таблица задач программирования ADO
 В следующей таблице перечислены задачи программирования, содержащиеся в документации *программиста* по программированию ADO, и приведены ссылки на каждую задачу. Эти ссылки могут быть текстовыми описаниями или примерами кода, в которых можно найти сведения о функции ADO, которая выполняет эту задачу.
 
-|Задача «ADO»|Ссылки (на английском языке)|
+|Задача «ADO»|Ссылки|
 |--------------|----------------|
 |Подключение к поставщику данных|[Подключение к источникам данных](./data/connecting-to-data-sources.md)|
 |Исполнение команд или вызов хранимых процедур|[Подготовка и выполнение команд](./data/preparing-and-executing-commands.md)|

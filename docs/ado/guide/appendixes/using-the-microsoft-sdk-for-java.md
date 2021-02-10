@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8471d7e80599b96315fae47e130aaba8c23bd4f1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 13a518a3cbf7c4d9f83da5810e340406147f86f2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990945"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028834"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>Использование пакета Microsoft SDK для Java
 
@@ -48,7 +48,7 @@ ms.locfileid: "88990945"
     jvc /g:t c:\<windows>\Java\trustlib\msado15\*.Java  
     ```  
   
-3.  Чтобы использовать эти файлы, откройте проект в Visual J++. В меню **проект** выберите команду **Добавить в проект**. Выберите **файлы**и добавьте все. Файлы JAVA, созданные в каталоге trustlib\msado15 для вашего проекта.  
+3.  Чтобы использовать эти файлы, откройте проект в Visual J++. В меню **проект** выберите команду **Добавить в проект**. Выберите **файлы** и добавьте все. Файлы JAVA, созданные в каталоге trustlib\msado15 для вашего проекта.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Классы-оболочки Java для объектов ADO](./ado-java-class-wrappers.md)

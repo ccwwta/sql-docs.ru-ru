@@ -13,12 +13,12 @@ dev_langs:
 ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 68ccc1f5cc173f4ebd80ed093e88968c137c954f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: fd479847766b8682025b2e4c6f047a5f4549d077
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991655"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028050"
 ---
 # <a name="ado-event-instantiation-visual-c"></a>Создание экземпляра события ADO: Visual C++
 Это схематическое описание того, как создавать экземпляры событий ADO в Microsoft® Visual C++®. Полное описание см. в статье [Пример модели событий ADO (Visual c++)](../../reference/ado-api/ado-events-model-example-vc.md) .  
@@ -66,7 +66,7 @@ STDMETHODIMP CConnEvent::ConnectComplete(
 // EndEventExampleVC02  
 ```  
   
- Классы событий наследуют от **IUnknown**, поэтому необходимо также реализовать методы **QueryInterface**, **AddRef**и **Release** . Также реализуйте конструкторы классов и деструкторы. Выберите Visual C++ инструменты, с которыми вы сможете упростить эту задачу.  
+ Классы событий наследуют от **IUnknown**, поэтому необходимо также реализовать методы **QueryInterface**, **AddRef** и **Release** . Также реализуйте конструкторы классов и деструкторы. Выберите Visual C++ инструменты, с которыми вы сможете упростить эту задачу.  
   
  Убедитесь, что ваши обработчики событий доступны, выполнив **QueryInterface** в [наборе записей](../../reference/ado-api/recordset-object-ado.md) и объектах [соединения](../../reference/ado-api/connection-object-ado.md) для интерфейсов **IConnectionPointContainer** и **IConnectionPoint** . Затем выполните команду **IConnectionPoint:: Advise** для каждого класса.  
   

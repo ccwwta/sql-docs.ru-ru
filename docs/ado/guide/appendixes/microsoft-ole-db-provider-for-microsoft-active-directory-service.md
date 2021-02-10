@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 08d945b101ac91300793920e3e01ea0a9619b372
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2174610e0747f984babae59c4b00d1245d763db2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991055"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029278"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Поставщик OLE DB Майкрософт для службы Microsoft Active Directory
 Поставщик интерфейсов служб Active Directory (ADSI) позволяет ADO подключаться к разнородным службам каталогов через ADSI. Это дает приложениям ADO доступ только для чтения к службам каталогов Microsoft Windows NT 4,0 и Microsoft Windows 2000 в дополнение к любым LDAP-совместимым службам каталогов и службами каталогов Novell. Интерфейсы ADSI основаны на модели поставщика, поэтому при наличии нового поставщика, предоставляющего доступ к другому каталогу, приложение ADO будет иметь доступ к нему без проблем. Поставщик ADSI бесплатен и поддерживает Юникод.  
@@ -63,9 +63,9 @@ ADSDSOObject
 |Значение|Описание|  
 |-----------|-----------------|  
 |*Корневой*|Указывает **путь** к объекту, с которого начинается поиск (то есть корневой элемент поиска).|  
-|*Filter*|Указывает фильтр поиска в формате RFC 1960.|  
+|*Фильтр*|Указывает фильтр поиска в формате RFC 1960.|  
 |*Атрибуты*|Указывает разделенный запятыми список атрибутов, которые должны быть возвращены.|  
-|*Область*|Необязательный элемент. **Строка** , указывающая область поиска. Может применяться один из перечисленных ниже типов.<br /><br /> -Base — Поиск только базового объекта (корень поиска).<br />-Одноуровневой — Поиск только на одном уровне.<br />-Subtree — Поиск по всему поддереву.|  
+|*Область*|Необязательный элемент. **Строка** , указывающая область поиска. Может принимать следующие значения:<br /><br /> -Base — Поиск только базового объекта (корень поиска).<br />-Одноуровневой — Поиск только на одном уровне.<br />-Subtree — Поиск по всему поддереву.|  
   
  Пример:  
   
@@ -96,20 +96,20 @@ objectClass='user' AND objectCategory='Person'"
 |[Примеры AbsolutePosition](../../reference/ado-api/absoluteposition-property-ado.md)|чтение/запись|  
 |[ActiveConnection](../../reference/ado-api/activeconnection-property-ado.md)|Только для чтения|  
 |[BOF](../../reference/ado-api/bof-eof-properties-ado.md)|Только для чтения|  
-|[Закладка.](../../reference/ado-api/bookmark-property-ado.md)|чтение/запись|  
+|[Закладка](../../reference/ado-api/bookmark-property-ado.md)|чтение/запись|  
 |[CacheSize](../../reference/ado-api/cachesize-property-ado.md)|чтение/запись|  
 |[CursorLocation](../../reference/ado-api/cursorlocation-property-ado.md)|всегда **адусесервер**|  
 |[Примеры CursorType](../../reference/ado-api/cursortype-property-ado.md)|всегда **адопенстатик**|  
 |[EditMode](../../reference/ado-api/editmode-property.md)|всегда **адедитноне**|  
 |[КОНЦА](../../reference/ado-api/bof-eof-properties-ado.md)|Только для чтения|  
-|[Filter](../../reference/ado-api/filter-property.md)|чтение/запись|  
+|[Фильтр](../../reference/ado-api/filter-property.md)|чтение/запись|  
 |[LockType](../../reference/ado-api/locktype-property-ado.md)|чтение/запись|  
 |[MarshalOptions](../../reference/ado-api/marshaloptions-property-ado.md)|недоступно|  
 |[MaxRecords](../../reference/ado-api/maxrecords-property-ado.md)|чтение/запись|  
 |[PageCount](../../reference/ado-api/pagecount-property-ado.md)|Только для чтения|  
 |[PageSize](../../reference/ado-api/pagesize-property-ado.md)|чтение/запись|  
 |[RecordCount](../../reference/ado-api/recordcount-property-ado.md)|Только для чтения|  
-|[Source](../../reference/ado-api/source-property-ado-recordset.md)|чтение/запись|  
+|[Источник](../../reference/ado-api/source-property-ado-recordset.md)|чтение/запись|  
 |[Состояние](../../reference/ado-api/state-property-ado.md)|Только для чтения|  
 |[Состояние](../../reference/ado-api/status-property-ado-recordset.md)|Только для чтения|  
   
@@ -140,7 +140,7 @@ objectClass='user' AND objectCategory='Person'"
   
  Дополнительные сведения о ADSI и особенностях поставщика см. в документации по интерфейсам Active Directory служб или на веб-странице ADSI.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойство CommandType (ADO)](../../reference/ado-api/commandtype-property-ado.md)   
  [Свойство ConnectionString (ADO)](../../reference/ado-api/connectionstring-property-ado.md)   
  [Коллекция Properties (ADO)](../../reference/ado-api/properties-collection-ado.md)   

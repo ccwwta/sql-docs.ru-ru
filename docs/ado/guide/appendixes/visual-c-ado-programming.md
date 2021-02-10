@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a2e0284db09672d0e92bb952c9e122a65cb8350b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 420bfbba2eaa3946ce9a373c4ac31a88b540f7d2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991835"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100028709"
 ---
 # <a name="visual-c-ado-programming"></a>Программирование объектов ADO с использованием Visual C++
 Справочник по API ADO описывает функциональные возможности интерфейса прикладного программирования (API) ADO, используя синтаксис, аналогичный Microsoft Visual Basic. Хотя предполагаемая аудитория — все пользователи, программисты ADO используют различные языки, такие как Visual Basic, Visual C++ (с директивой **#import** и без нее) и Visual J++ (с пакетом класса ADO/WFC).  
@@ -33,39 +33,39 @@ ms.locfileid: "88991835"
   
  ADO реализуется с помощью интерфейсов COM (объектная модель компонентов). Однако программистам проще работать с COM в определенных языках программирования, чем в других. Например, почти все детали использования COM обрабатываются неявно для Visual Basic программистов, тогда как Visual C++ программистам необходимо принять участие в этих деталях.  
   
- В следующих разделах приводятся сводные сведения для программистов C и C++, использующих ADO и директиву **#import** . Основное внимание уделяется типам данных COM (**Variant**, **BSTR**и **SAFEARRAY**) и обработке ошибок (_com_error).  
+ В следующих разделах приводятся сводные сведения для программистов C и C++, использующих ADO и директиву **#import** . Основное внимание уделяется типам данных COM (**Variant**, **BSTR** и **SAFEARRAY**) и обработке ошибок (_com_error).  
   
 ## <a name="using-the-import-compiler-directive"></a>Использование директивы компилятора #import  
  Директива компилятора **#import** Visual C++ упрощает работу с методами и свойствами ADO. Директива принимает имя файла, содержащего библиотеку типов, например ADO. dll (Msado15.dll), и создает файлы заголовков, содержащие объявления typedef, интеллектуальные указатели для интерфейсов и перечислимые константы. Каждый интерфейс инкапсулируется или упаковывается в класс.  
   
  Для каждой операции в классе (т. е. вызове метода или свойства) существует объявление, которое вызывает операцию напрямую (то есть «необработанная» форма операции), и объявление для вызова необработанной операции и выдает ошибку COM, если операция не выполняется успешно. Если операция является свойством, то обычно существует директива компилятора, которая создает альтернативный синтаксис для операции, имеющей такой синтаксис, как Visual Basic.  
   
- Операции, излучающие значение свойства, имеют имена в форме, **получить**_свойство_. Операции, устанавливающие значение свойства, имеют имена формы,_свойства_ **размещения**. Операции, которые задают значение свойства с указателем на объект ADO, имеют имена в виде_свойства_ **путреф**.  
+ Операции, излучающие значение свойства, имеют имена в форме, **получить**_свойство_. Операции, устанавливающие значение свойства, имеют имена формы,_свойства_ **размещения**. Операции, которые задают значение свойства с указателем на объект ADO, имеют имена в виде _свойства_ **путреф**.  
   
  Вы можете получить или задать свойство с помощью вызовов следующих форм:  
   
 ```cpp
-variable = objectPtr->GetProperty(); // get property value   
-objectPtr->PutProperty(value);       // set property value  
-objectPtr->PutRefProperty(&value);   // set property with object pointer  
+variable = objectPtr->GetProperty(); // get property value   
+objectPtr->PutProperty(value);       // set property value  
+objectPtr->PutRefProperty(&value);   // set property with object pointer  
 ```
   
 ## <a name="using-property-directives"></a>Использование директив свойств  
  Директива компилятора **__declspec (Property...)** — это расширение языка C, специфическое для Microsoft, которое объявляет функцию, используемую как свойство, для использования альтернативного синтаксиса. В результате можно задать или получить значения свойства так же, как Visual Basic. Например, можно задать и получить свойство следующим образом:  
   
 ```cpp
-objectPtr->property = value;        // set property value  
-variable = objectPtr->property;     // get property value  
+objectPtr->property = value;        // set property value  
+variable = objectPtr->property;     // get property value  
 ```
   
  Обратите внимание, что вам не нужно выполнять код:  
   
 ```cpp
-objectPtr->PutProperty(value);      // set property value  
-variable = objectPtr->GetProperty;  // get property value  
+objectPtr->PutProperty(value);      // set property value  
+variable = objectPtr->GetProperty;  // get property value  
 ```
   
- Компилятор создаст соответствующий **Get** _-_ вызов_Свойства_ Get, Where **Put**-или **путреф**, основываясь на объявлении альтернативного синтаксиса и о том, выполняется ли чтение или запись свойства.  
+ Компилятор создаст соответствующий  _-_ вызов _Свойства_ Get, Where -или **путреф**, основываясь на объявлении альтернативного синтаксиса и о том, выполняется ли чтение или запись свойства.  
   
  Директива компилятора **__declspec (Property...)** может объявлять **только альтернативный** синтаксис для **функции, например** **Get**, WHERE или **Get** . Операции только для чтения имеют только объявление **Get** ; операции только для записи имеют только объявление « **Размещение** »; операции, доступные для **чтения и записи, имеют объявления** **Get** и WHERE.  
   
@@ -75,7 +75,7 @@ variable = objectPtr->GetProperty;  // get property value
   
 ## <a name="collections-the-getitem-method-and-the-item-property"></a>Коллекции, метод DataItem и свойство Item  
 
- ADO определяет несколько коллекций, включая **поля**, **Параметры**, **Свойства**и **ошибки**. В Visual C++ метод **Item (_индекс_)** Возвращает элемент коллекции. *Index* — это **вариант**, значение которого является либо числовым индексом элемента в коллекции, либо строкой, содержащей имя элемента.  
+ ADO определяет несколько коллекций, включая **поля**, **Параметры**, **Свойства** и **ошибки**. В Visual C++ метод **Item (_индекс_)** Возвращает элемент коллекции. *Index* — это **вариант**, значение которого является либо числовым индексом элемента в коллекции, либо строкой, содержащей имя элемента.  
   
  Директива компилятора **__declspec (Property...)** объявляет свойство **Item** в качестве альтернативного синтаксиса для каждого основного метода **Item ()** коллекции. Альтернативный синтаксис использует квадратные скобки и похож на ссылку на массив. Как правило, две формы выглядят следующим образом:  
   
@@ -112,10 +112,10 @@ rs->Fields->Item["au_fname"]->Value = "value";
   
  Примеры итераций коллекции см. в разделе "коллекции ADO" статьи "Справочник по ADO".  
   
-## <a name="com-specific-data-types"></a>Типы данных, относящиеся к COM  
- Как правило, любой тип данных Visual Basic, который можно найти в справочнике по API ADO, имеет Visual C++ эквивалент. **К ним**относятся стандартные типы данных, например **char без знака** , для Visual Basic **байт**, **Short** для **Integer**и **Long** . Взгляните на синтаксис Индексесто посмотрите, что именно требуется для операндов данного метода или свойства.  
+## <a name="com-specific-data-types"></a>Типы данных COM-Specific  
+ Как правило, любой тип данных Visual Basic, который можно найти в справочнике по API ADO, имеет Visual C++ эквивалент. **К ним** относятся стандартные типы данных, например **char без знака** , для Visual Basic **байт**, **Short** для **Integer** и **Long** . Взгляните на синтаксис Индексесто посмотрите, что именно требуется для операндов данного метода или свойства.  
   
- Исключениями из этого правила являются типы данных, характерные для COM: **Variant**, **BSTR**и **SAFEARRAY**.  
+ Исключениями из этого правила являются типы данных, характерные для COM: **Variant**, **BSTR** и **SAFEARRAY**.  
   
 ### <a name="variant"></a>Variant  
  **Вариант** — это структурированный тип данных, который содержит элемент значения и член типа данных. **Вариант** может содержать широкий диапазон других типов данных, включая другой вариант, BSTR, логический, IDispatch или указатель IUnknown, валюту, дату и т. д. COM также предоставляет методы, которые упрощают преобразование одного типа данных в другой.  
@@ -179,14 +179,14 @@ rs->Fields->Item["au_fname"]->Value = "value";
  Три метода являются исключениями для типичного использования **втмиссинг**. Это методы **EXECUTE** для объектов **Connection** и **Command** , а также метод **NextRecordset** объекта **Recordset** . Ниже приведены их сигнатуры.  
   
 ```cpp
-_RecordsetPtr <A HREF="mdmthcnnexecute.htm">Execute</A>( _bstr_t CommandText, VARIANT * RecordsAffected,   
-        long Options );  // Connection  
-_RecordsetPtr <A HREF="mdmthcmdexecute.htm">Execute</A>( VARIANT * RecordsAffected, VARIANT * Parameters,   
-        long Options );  // Command  
-_RecordsetPtr <A HREF="mdmthnextrec.htm">NextRecordset</A>( VARIANT * RecordsAffected );  // Recordset  
+_RecordsetPtr <A HREF="mdmthcnnexecute.htm">Execute</A>( _bstr_t CommandText, VARIANT * RecordsAffected,   
+        long Options );  // Connection  
+_RecordsetPtr <A HREF="mdmthcmdexecute.htm">Execute</A>( VARIANT * RecordsAffected, VARIANT * Parameters,   
+        long Options );  // Command  
+_RecordsetPtr <A HREF="mdmthnextrec.htm">NextRecordset</A>( VARIANT * RecordsAffected );  // Recordset  
 ```
   
- Параметры *рекордсаффектед* и *Parameters*являются указателями на **Variant**. *Parameters* — это входной параметр, указывающий адрес **варианта** , содержащего один параметр, или массив параметров, который изменяет выполняемую команду. *Рекордсаффектед* — это выходной параметр, указывающий адрес **варианта**, в котором возвращается число строк, затронутых методом.  
+ Параметры *рекордсаффектед* и *Parameters* являются указателями на **Variant**. *Parameters* — это входной параметр, указывающий адрес **варианта** , содержащего один параметр, или массив параметров, который изменяет выполняемую команду. *Рекордсаффектед* — это выходной параметр, указывающий адрес **варианта**, в котором возвращается число строк, затронутых методом.  
   
  В методе **EXECUTE** объекта **Command** укажите, что параметры не указаны, задав для *параметров* значение `&vtMissing` (рекомендуется) или указатель null (то есть **null** или ноль (0)). Если для *параметров* задан нулевой указатель, метод внутренне заменяет эквивалент **втмиссинг**, а затем завершает операцию.  
   
@@ -195,13 +195,13 @@ _RecordsetPtr <A HREF="mdmthnextrec.htm">NextRecordset</A>( VARIANT * Record
  Таким образом, для этих трех методов код может быть следующим:  
   
 ```cpp
-pConnection->Execute("commandText", NULL, adCmdText);   
-pCommand->Execute(NULL, NULL, adCmdText);  
+pConnection->Execute("commandText", NULL, adCmdText);   
+pCommand->Execute(NULL, NULL, adCmdText);  
 pRecordset->NextRecordset(NULL);  
 ```
   
 ## <a name="error-handling"></a>Обработка ошибок  
- В COM большинство операций возвращают код возврата HRESULT, указывающий, успешно ли завершилась функция. Директива **#import** создает код-оболочку вокруг каждого "необработанного" метода или свойства и проверяет ВОЗВРАЩЕННОЕ значение HRESULT. Если HRESULT указывает на сбой, код программы-оболочки вызывает ошибку COM путем вызова _com_issue_errorex () с кодом возврата HRESULT в качестве аргумента. Объекты ошибок COM могут быть перехвачены в **try** - блоке try**catch** . (Для повышения эффективности перехватите ссылку на объект **_com_error** .)  
+ В COM большинство операций возвращают код возврата HRESULT, указывающий, успешно ли завершилась функция. Директива **#import** создает код-оболочку вокруг каждого "необработанного" метода или свойства и проверяет ВОЗВРАЩЕННОЕ значение HRESULT. Если HRESULT указывает на сбой, код программы-оболочки вызывает ошибку COM путем вызова _com_issue_errorex () с кодом возврата HRESULT в качестве аргумента. Объекты ошибок COM могут быть перехвачены в  - блоке try **catch** . (Для повышения эффективности перехватите ссылку на объект **_com_error** .)  
   
  Помните, что это ошибки ADO: они вызваны сбоем операции ADO. Ошибки, возвращенные базовым поставщиком, отображаются как объекты **ошибок** в коллекции **ошибок** объектов **соединения** .  
   
@@ -230,7 +230,7 @@ Dim rst As ADODB.Recordset
 Set rst = New ADODB.Recordset  
 ```
   
- В Visual C++ директива **#import** создает объявления интеллектуального типа указателя для всех объектов ADO. Например, переменная, указывающая на объект **_Recordset** , имеет тип **_RecordsetPtr**и объявляется следующим образом:  
+ В Visual C++ директива **#import** создает объявления интеллектуального типа указателя для всех объектов ADO. Например, переменная, указывающая на объект **_Recordset** , имеет тип **_RecordsetPtr** и объявляется следующим образом:  
   
 ```cpp
 _RecordsetPtr  rs;  
@@ -270,14 +270,14 @@ rs->Open(...);
  Если необходимо закодировать отсутствующий **строковый** операнд в Visual Basic, то операнд просто опускается. Необходимо указать операнд в Visual C++. Код **_bstr_t** , имеющий пустую строку в качестве значения.  
   
 ```cpp
-_bstr_t strMissing(L"");  
+_bstr_t strMissing(L"");  
 ```
   
 ### <a name="coding-a-missing-parameter---variant"></a>Написание кода для пропущенного параметра-Variant  
  Если необходимо закодировать отсутствующий операнд **типа Variant** в Visual Basic, то операнд просто опускается. Необходимо указать все операнды в Visual C++. В коде отсутствует параметр **Variant** с **_variant_t** , для которого задано специальное значение, DISP_E_PARAMNOTFOUND и тип, VT_ERROR. Кроме того, можно указать **втмиссинг**, которая является эквивалентной предопределенной константой, предоставляемой директивой **#import** .  
   
 ```cpp
-_variant_t  vtMissingYours(DISP_E_PARAMNOTFOUND, VT_ERROR);   
+_variant_t  vtMissingYours(DISP_E_PARAMNOTFOUND, VT_ERROR);   
 ```
   
  -или use-  
@@ -290,39 +290,39 @@ _variant_t  vtMissingYours(DISP_E_PARAMNOTFOUND, VT_ERROR); 
  В Visual Basic **тип Variant** объявляется с помощью оператора **Dim** следующим образом:  
   
 ```vb
-Dim VariableName As Variant  
+Dim VariableName As Variant  
 ```
   
- В Visual C++ объявите переменную как **_variant_t**типа. Ниже показаны несколько схематических **_variant_t** объявлений.  
+ В Visual C++ объявите переменную как **_variant_t** типа. Ниже показаны несколько схематических **_variant_t** объявлений.  
   
 > [!NOTE]
 >  Эти объявления просто придают грубое представление о том, что вы намерены программировать в собственной программе. Дополнительные сведения см. в примерах ниже и в документации по Visual C + +.  
   
 ```cpp
-_variant_t  VariableName(value);  
-_variant_t  VariableName((data type cast) value);  
-_variant_t  VariableName(value, VT_DATATYPE);  
-_variant_t  VariableName(interface * value, bool fAddRef = true);  
+_variant_t  VariableName(value);  
+_variant_t  VariableName((data type cast) value);  
+_variant_t  VariableName(value, VT_DATATYPE);  
+_variant_t  VariableName(interface * value, bool fAddRef = true);  
 ```
   
 ### <a name="using-arrays-of-variants"></a>Использование массивов вариантов  
  В Visual Basic массивы типа **Variant** можно закодировать оператором **Dim** или использовать функцию **Array** , как показано в следующем примере кода:  
   
 ```vb
-Public Sub ArrayOfVariants  
-Dim cn As ADODB.Connection  
-Dim rs As ADODB.Recordset  
+Public Sub ArrayOfVariants  
+Dim cn As ADODB.Connection  
+Dim rs As ADODB.Recordset  
 Dim fld As ADODB.Field  
   
-    cn.Open "DSN=pubs"  
-    rs = cn.OpenSchema(adSchemaColumns, _  
-        Array(Empty, Empty, "authors", Empty))  
+    cn.Open "DSN=pubs"  
+    rs = cn.OpenSchema(adSchemaColumns, _  
+        Array(Empty, Empty, "authors", Empty))  
     For Each fld in rs.Fields  
         Debug.Print "Name = "; fld.Name  
     Next fld  
     rs.Close  
     cn.Close  
-End Sub  
+End Sub  
 ```
   
  В следующем примере Visual C++ демонстрируется использование **массива SafeArray** , используемого с **_variant_t**.  
@@ -332,10 +332,10 @@ End Sub
   
 1.  Опять же, встроенная функция ТЕССР () определяется для использования преимуществ существующего механизма обработки ошибок.  
   
-2.  Нужен только одномерный массив, поэтому можно использовать **сафеаррайкреатевектор**вместо объявления общего назначения **Сафеаррайбаунд** и функции **сафеаррайкреате** . Ниже приведен код, который будет выглядеть с помощью **сафеаррайкреате**:  
+2.  Нужен только одномерный массив, поэтому можно использовать **сафеаррайкреатевектор** вместо объявления общего назначения **Сафеаррайбаунд** и функции **сафеаррайкреате** . Ниже приведен код, который будет выглядеть с помощью **сафеаррайкреате**:  
   
     ```cpp
-       SAFEARRAYBOUND   sabound[1];  
+       SAFEARRAYBOUND   sabound[1];  
        sabound[0].lLbound = 0;  
        sabound[0].cElements = 4;  
        pSa = SafeArrayCreate(VT_VARIANT, 1, sabound);  
@@ -345,7 +345,7 @@ End Sub
   
      Возвращаемый **набор записей** состоит из нескольких столбцов, подмножество которых является столбцами ограничений. Значения столбцов ограничений для каждой возвращаемой строки должны совпадать со значениями соответствующих ограничений.  
   
-4.  Те, кто знаком с **SAFEARRAY** , могут быть удивлены тем, что **сафеаррайдестрой**() не вызывается перед выходом. Фактически вызов **сафеаррайдестрой**() в этом случае приведет к возникновению исключения времени выполнения. Причина заключается в том, что деструктор для `vtCriteria` будет вызывать **вариантклеар**(), когда **_variant_t** выходит из области, что освобождает **SAFEARRAY**. Вызов **сафеаррайдестрой**без ручного очистки **_variant_t**приведет к тому, что деструктор попытается очистить недопустимый указатель **SAFEARRAY** .  
+4.  Те, кто знаком с **SAFEARRAY** , могут быть удивлены тем, что **сафеаррайдестрой**() не вызывается перед выходом. Фактически вызов **сафеаррайдестрой**() в этом случае приведет к возникновению исключения времени выполнения. Причина заключается в том, что деструктор для `vtCriteria` будет вызывать **вариантклеар**(), когда **_variant_t** выходит из области, что освобождает **SAFEARRAY**. Вызов **сафеаррайдестрой** без ручного очистки **_variant_t** приведет к тому, что деструктор попытается очистить недопустимый указатель **SAFEARRAY** .  
   
      Если были вызваны **сафеаррайдестрой** , код будет выглядеть следующим образом:  
   
@@ -418,28 +418,28 @@ int main() {
  В Visual Basic имя свойства не уточняется, когда оно извлекается, назначается или присваивается ссылка.  
   
 ```vb
-Public Sub GetPutPutRef  
-Dim rs As New ADODB.Recordset  
-Dim cn As New ADODB.Connection  
-Dim sz as Integer  
-cn.Open "Provider=sqloledb;Data Source=yourserver;" & _  
+Public Sub GetPutPutRef  
+Dim rs As New ADODB.Recordset  
+Dim cn As New ADODB.Connection  
+Dim sz as Integer  
+cn.Open "Provider=sqloledb;Data Source=yourserver;" & _  
          "Initial Catalog=pubs;Integrated Security=SSPI;"  
-rs.PageSize = 10  
-sz = rs.PageSize  
-rs.ActiveConnection = cn  
-rs.Open "authors",,adOpenStatic  
+rs.PageSize = 10  
+sz = rs.PageSize  
+rs.ActiveConnection = cn  
+rs.Open "authors",,adOpenStatic  
 ' ...  
 rs.Close  
 cn.Close  
-End Sub  
+End Sub  
 ```
   
- В этом Visual C++ примере демонстрируется свойство **Get** / **Put** / **путреф**_Property_.  
+ В этом Visual C++ примере демонстрируется свойство **Get** /  / **путреф**.  
   
 #### <a name="notes"></a>Примечания  
  Следующие примечания соответствуют подразделам с комментариями в примере кода.  
   
-1.  В этом примере используются две формы отсутствующего строкового аргумента: явная константа, **стрмиссинг**и строка, которую компилятор будет использовать для создания временного **_bstr_t** , который будет существовать для области действия метода **Open** .  
+1.  В этом примере используются две формы отсутствующего строкового аргумента: явная константа, **стрмиссинг** и строка, которую компилятор будет использовать для создания временного **_bstr_t** , который будет существовать для области действия метода **Open** .  
   
 2.  Необязательно приведение операнда `rs->PutRefActiveConnection(cn)` к, `(IDispatch *)` так как тип операнда уже существует `(IDispatch *)` .  
   
@@ -487,21 +487,21 @@ int main() {
  В этом Visual Basic примере показан стандартный и альтернативный синтаксис для **Item**().  
   
 ```vb
-Public Sub GetItemItem  
-Dim rs As New ADODB.Recordset  
-Dim name as String  
-rs = rs.Open "authors", "DSN=pubs;", adOpenDynamic, _  
-         adLockBatchOptimistic, adTable  
-name = rs(0)  
-' -or-  
-name = rs.Fields.Item(0)  
-rs(0) = "Test"  
+Public Sub GetItemItem  
+Dim rs As New ADODB.Recordset  
+Dim name as String  
+rs = rs.Open "authors", "DSN=pubs;", adOpenDynamic, _  
+         adLockBatchOptimistic, adTable  
+name = rs(0)  
+' -or-  
+name = rs.Fields.Item(0)  
+rs(0) = "Test"  
 rs.UpdateBatch  
-' Restore name  
-rs(0) = name  
+' Restore name  
+rs(0) = name  
 rs.UpdateBatch  
 rs.Close  
-End Sub  
+End Sub  
 ```
   
  В этом Visual C++ примере демонстрируется **элемент**.  

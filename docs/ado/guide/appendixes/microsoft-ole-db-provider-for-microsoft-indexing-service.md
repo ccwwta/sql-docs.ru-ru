@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b3e479ca023efb704bf496c9ffaeaca2f1b6ba15
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: f7d2204a2d91e862616713dbfee6eec3d6d3e8ba
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991045"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029308"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Обзор службы Microsoft OLE DB Provider для Microsoft Indexing Service
 Поставщик Microsoft OLE DB для службы индексирования Майкрософт предоставляет программный доступ только для чтения к файловой системе и веб-данным, индексированным службой индексирования Майкрософт. Приложения ADO могут выдавать SQL запросы для получения сведений о содержимом и свойствах файла.
@@ -79,14 +79,14 @@ MSIDXS
 |[Примеры CursorType](../../reference/ado-api/cursortype-property-ado.md)|всегда **адопенстатик**|
 |[EditMode](../../reference/ado-api/editmode-property.md)|всегда **адедитноне**|
 |[КОНЦА](../../reference/ado-api/bof-eof-properties-ado.md)|Только для чтения|
-|[Filter](../../reference/ado-api/filter-property.md)|чтение/запись|
+|[Фильтр](../../reference/ado-api/filter-property.md)|чтение/запись|
 |[LockType](../../reference/ado-api/locktype-property-ado.md)|чтение/запись|
 |[MarshalOptions](../../reference/ado-api/marshaloptions-property-ado.md)|недоступно|
 |[MaxRecords](../../reference/ado-api/maxrecords-property-ado.md)|чтение/запись|
 |[PageCount](../../reference/ado-api/pagecount-property-ado.md)|Только для чтения|
 |[PageSize](../../reference/ado-api/pagesize-property-ado.md)|чтение/запись|
 |[RecordCount](../../reference/ado-api/recordcount-property-ado.md)|Только для чтения|
-|[Source](../../reference/ado-api/source-property-ado-recordset.md)|чтение/запись|
+|[Источник](../../reference/ado-api/source-property-ado-recordset.md)|чтение/запись|
 |[Состояние](../../reference/ado-api/state-property-ado.md)|Только для чтения|
 |[Состояние](../../reference/ado-api/status-property-ado-recordset.md)|Только для чтения|
 
@@ -116,5 +116,5 @@ MSIDXS
 
  Для получения сведений о конкретной реализации и функциональных сведений о поставщике Microsoft OLE DB для службы индексирования Майкрософт обратитесь к [руководству по OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85))или посетите страницу веб-службы на веб-сайте Windows NT Server.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
  Свойство [CommandType (объекты (ADO)](../../reference/ado-api/commandtype-property-ado.md) свойства [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md) (ADO) свойство [поставщика](../../reference/ado-api/provider-property-ado.md) [коллекции](../../reference/ado-api/properties-collection-ado.md) (ADO) [объект Recordset](../../reference/ado-api/recordset-object-ado.md) (ADO) [поддерживает метод](../../reference/ado-api/supports-method.md)

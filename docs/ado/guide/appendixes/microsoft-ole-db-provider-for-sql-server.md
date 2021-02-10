@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a307a0de76ce1e74e3e1773a414fce93957572b
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 1b6a62e8946415cc9c1e869a173de43b98ba14f7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991005"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100029258"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Обзор поставщика OLE DB Майкрософт для SQL Server
 Поставщик OLE DB Майкрософт для SQL Server, SQLOLEDB предоставляет ADO доступ к Microsoft SQL Server.
@@ -59,13 +59,13 @@ User ID=MyUserID;Password=MyPassword;"
 > [!NOTE]
 >  При подключении к поставщику источника данных, который поддерживает проверку подлинности Windows, следует указать **Trusted_Connection = Yes** или **Integrated Security = SSPI** вместо сведений об идентификаторе пользователя и пароле в строке подключения.
 
-## <a name="provider-specific-connection-parameters"></a>Параметры подключения, зависящие от поставщика
+## <a name="provider-specific-connection-parameters"></a>Параметры подключения Provider-Specific
  Поставщик поддерживает несколько параметров соединения, зависящих от поставщика, помимо тех, которые определены в ADO. Как и в случае со свойствами соединения ADO, эти свойства, зависящие от поставщика, могут быть заданы через коллекцию [свойств](../../reference/ado-api/properties-collection-ado.md) [соединения](../../reference/ado-api/connection-object-ado.md) или могут быть заданы как часть **ConnectionString**.
 
 |Параметр|Описание|
 |---------------|-----------------|
-|Trusted_Connection|Указывает режим проверки подлинности пользователя. Для этого свойства можно задать значение **Да** или **нет**. Значение по умолчанию — **No**. Если для этого свойства задано значение **Да**, SQLOLEDB использует режим проверки подлинности Microsoft Windows NT для авторизации доступа пользователей к SQL Server базе данных, указанной значениями свойств **Location** и [DataSource](../../reference/ado-api/datasource-property-ado.md) . Если это свойство имеет значение **нет**, SQLOLEDB использует смешанный режим для авторизации доступа пользователей к базе данных SQL Server. Имя входа и пароль SQL Server указаны в свойствах **идентификатора пользователя** и **пароля** .|
-|Текущий язык|Указывает SQL Server имя языка. Указывает язык, используемый для выбора и форматирования системных сообщений. Язык должен быть установлен на SQL Server, иначе открытие подключения завершится ошибкой.|
+|Trusted_Connection|Указывает режим проверки подлинности пользователя. Для этого свойства можно задать значение **Да** или **нет**. Значение по умолчанию — **Нет**. Если для этого свойства задано значение **Да**, SQLOLEDB использует режим проверки подлинности Microsoft Windows NT для авторизации доступа пользователей к SQL Server базе данных, указанной значениями свойств **Location** и [DataSource](../../reference/ado-api/datasource-property-ado.md) . Если это свойство имеет значение **нет**, SQLOLEDB использует смешанный режим для авторизации доступа пользователей к базе данных SQL Server. Имя входа и пароль SQL Server указаны в свойствах **идентификатора пользователя** и **пароля** .|
+|Current Language|Указывает SQL Server имя языка. Указывает язык, используемый для выбора и форматирования системных сообщений. Язык должен быть установлен на SQL Server, иначе открытие подключения завершится ошибкой.|
 |Сетевой адрес|Указывает сетевой адрес SQL Server, заданный свойством **Location** .|
 |Network Library|Указывает имя сетевой библиотеки (DLL), используемой для связи с SQL Server. Не должно включать путь или расширение DLL. Значение по умолчанию предоставляется конфигурацией клиента SQL Server.|
 |Использовать процедуру для подготовки|Определяет, создает ли SQL Server временные хранимые процедуры при подготовке команд ( **подготовленным** свойством).|
@@ -112,7 +112,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
  При использовании SQL Server ADO может использовать XML для ввода **команды** и получать результаты в формате XML-потока, а не в объектах **набора записей** . Дополнительные сведения см. в разделе [Использование потоков для ввода команды](../data/command-streams.md) и [получение результирующих наборов в потоках](../data/retrieving-resultsets-into-streams.md).
 
 ### <a name="accessing-sql_variant-data-using-mdac-27-mdac-28-or-windows-dac-60"></a>Доступ к данным sql_variant с помощью MDAC 2,7, MDAC 2,8 или Windows DAC 6,0
- Microsoft SQL Server имеет тип данных с именем **sql_variant**. Как и **DBTYPE_VARIANT**OLE DB, тип данных **sql_variant** может хранить данные нескольких разных типов. Однако между **DBTYPE_VARIANT** и **sql_variant**существует несколько ключевых различий. ADO также обрабатывает данные, хранящиеся в виде **sql_variant** , иначе, чем они обрабатывают другие типы данных. В следующем списке описываются проблемы, которые следует учитывать при доступе к SQL Server данным, хранящимся в столбцах типа **sql_variant**.
+ Microsoft SQL Server имеет тип данных с именем **sql_variant**. Как и **DBTYPE_VARIANT** OLE DB, тип данных **sql_variant** может хранить данные нескольких разных типов. Однако между **DBTYPE_VARIANT** и **sql_variant** существует несколько ключевых различий. ADO также обрабатывает данные, хранящиеся в виде **sql_variant** , иначе, чем они обрабатывают другие типы данных. В следующем списке описываются проблемы, которые следует учитывать при доступе к SQL Server данным, хранящимся в столбцах типа **sql_variant**.
 
 -   В MDAC 2,7, MDAC 2,8 и компонентах доступа к данным Windows (Windows DAC) 6,0 поставщик OLE DB для SQL Server поддерживает тип **sql_variant** . Поставщик OLE DB для ODBC не поддерживает.
 
@@ -122,7 +122,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 
 -   Множественные приведение типов данных приведет к несовпадению типов. Например, при преобразовании **sql_variant** с подтипом **GUID** в **DBTYPE_VARIANT** приведет к подтипу **SAFEARRAY**(bytes). Преобразование этого типа обратно в **sql_variant** приведет к созданию нового подтипа **массива**(байт).
 
--   Поля **набора записей** , содержащие данные **sql_variant** , могут быть удаленными (упакованными) или материализованными, только если **sql_variant** содержит конкретные подтипы. Попытка удаленного или сохранения данных со следующими неподдерживаемыми подтипами приведет к ошибке во время выполнения (неподдерживаемое преобразование) от поставщика сохраняемости (Майкрософт) (Мсперсист): **VT_VARIANT**, **VT_RECORD**, **VT_ILLEGAL**, **VT_UNKNOWN**, **VT_BSTR**и **VT_DISPATCH.**
+-   Поля **набора записей** , содержащие данные **sql_variant** , могут быть удаленными (упакованными) или материализованными, только если **sql_variant** содержит конкретные подтипы. Попытка удаленного или сохранения данных со следующими неподдерживаемыми подтипами приведет к ошибке во время выполнения (неподдерживаемое преобразование) от поставщика сохраняемости (Майкрософт) (Мсперсист): **VT_VARIANT**, **VT_RECORD**, **VT_ILLEGAL**, **VT_UNKNOWN**, **VT_BSTR** и **VT_DISPATCH.**
 
 -   Поставщик OLE DB для SQL Server в MDAC 2,7, MDAC 2,8 и Windows DAC 6,0 имеет динамическое свойство с именем **Разрешить собственные варианты** , которые, как предполагается в названии, позволяют разработчикам получить доступ к **sql_variant** в собственной форме, а не **DBTYPE_VARIANT**. Если это свойство установлено и **набор записей** открыт с помощью обработчика курсора клиента (**адусеклиент**), вызов **Recordset. Open** завершится ошибкой. Если это свойство задано и **набор записей** открыт с серверными курсорами (**адусесервер**), вызов **Recordset. Open** будет выполнен, но при доступе к столбцам типа **sql_variant** будет возникать ошибка.
 
@@ -161,7 +161,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |ГРУППИРОВКа по поддержке|DBPROP_GROUPBY|
 |Поддержка разнородных таблиц|DBPROP_HETEROGENEOUSTABLES|
 |Чувствительность идентификатора к регистру|DBPROP_IDENTIFIERCASE|
-|Исходный каталог|DBPROP_INIT_CATALOG|
+|Initial Catalog|DBPROP_INIT_CATALOG|
 |Уровни изоляции|DBPROP_SUPPORTEDTXNISOLEVELS|
 |Хранение изоляции|DBPROP_SUPPORTEDTXNISORETAIN|
 |Идентификатор локали|DBPROP_INIT_LCID|
@@ -182,16 +182,16 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Доступность выходного параметра|DBPROP_OUTPUTPARAMETERAVAILABILITY|
 |Методы доступа для передачи по ссылке|DBPROP_BYREFACCESSORS|
 |Пароль|DBPROP_AUTH_PASSWORD|
-|Сохранять сведения о безопасности|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|
+|Persist Security Info|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|
 |Тип постоянного идентификатора|DBPROP_PERSISTENTIDTYPE|
 |Поведение при подготовке к прерыванию|DBPROP_PREPAREABORTBEHAVIOR|
 |Действие подготовки к фиксации|DBPROP_PREPARECOMMITBEHAVIOR|
 |Условие процедуры|DBPROP_PROCEDURETERM|
-|prompt|DBPROP_INIT_PROMPT|
+|Запрос|DBPROP_INIT_PROMPT|
 |Понятное имя поставщика|DBPROP_PROVIDERFRIENDLYNAME|
 |Provider Name|DBPROP_PROVIDERFILENAME|
 |Версия поставщика|DBPROP_PROVIDERVER|
-|Источник данных только для чтения|DBPROP_DATASOURCEREADONLY|
+|Источник данных Read-Only|DBPROP_DATASOURCEREADONLY|
 |Преобразования наборов строк для команды|DBPROP_ROWSETCONVERSIONSONCOMMAND|
 |Термин схемы|DBPROP_SCHEMATERM|
 |Использование схемы|DBPROP_SCHEMAUSAGE|
@@ -358,5 +358,5 @@ EXECUTE SalesByCategory 'Produce', '1995'
 
  Сведения о конкретной реализации и сведения о функциональных возMicrosoft SQL Serverии OLE DB поставщика см. в разделе [поставщик SQL Server](/previous-versions/windows/desktop/ms720897(v=vs.85)).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
  Property ( [ADO) свойство](../../reference/ado-api/connectionstring-property-ado.md) [поставщика](../../reference/ado-api/provider-property-ado.md) (ADO) [объект Recordset Object (](../../reference/ado-api/recordset-object-ado.md) ADO)

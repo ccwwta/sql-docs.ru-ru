@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 59a0075dfcee23c5e005853b0befd4b3eb0f39c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9f9fa74533d7887f968d45dde715b191ac00be88
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463455"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100015182"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>Выполнение команд консоли SSMA (MySQLToSQL)
 Корпорация Майкрософт предоставляет надежный набор команд для работы с файлами сценариев для выполнения и управления действиями SSMA.  
@@ -286,7 +286,7 @@ Save-Project: сохраняет проект миграции.
   
 />  
 ```  
-или  
+или диспетчер конфигурации служб  
   
 ```xml  
 <generate-assessment-report  
@@ -360,7 +360,7 @@ Convert-Schema
   
 />  
 ```  
-или  
+или диспетчер конфигурации служб  
   
 ```xml  
 <convert-schema  
@@ -420,7 +420,7 @@ Convert-Schema
   
 </migrate-data>  
 ```  
-или  
+или диспетчер конфигурации служб  
   
 ```xml  
 <migrate-data  
@@ -508,7 +508,7 @@ Map-Schema
   
 />  
 ```  
-или  
+или диспетчер конфигурации служб  
   
 ```xml  
 <synchronize-target  
@@ -517,7 +517,7 @@ Map-Schema
   
   object-type="<object-category>"/>  
 ```  
-или  
+или диспетчер конфигурации служб  
   
 ```xml  
 <synchronize-target>  
@@ -573,7 +573,7 @@ Map-Schema
   
 />  
 ```  
-или  
+или диспетчер конфигурации служб  
   
 ```xml  
 <refresh-from-database  
@@ -582,7 +582,7 @@ Map-Schema
   
    object-type="<object-category>"/>  
 ```  
-или  
+или диспетчер конфигурации служб  
   
 ```xml  
 <refresh-from-database>  
@@ -632,7 +632,7 @@ Map-Schema
   
 />  
 ```  
-или  
+или диспетчер конфигурации служб  
   
 ```xml  
 <save-as-script  
@@ -708,7 +708,7 @@ Convert-SQL-оператор
   
 </convert-sql-statement>  
 ```  
-или  
+или диспетчер конфигурации служб  
   
 ```  
 <convert-sql-statement  
@@ -733,7 +733,7 @@ Convert-SQL-оператор
   
 />  
 ```  
-или  
+или диспетчер конфигурации служб  
   
 ```  
 <convert-sql-statement  
