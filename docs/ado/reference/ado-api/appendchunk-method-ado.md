@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7abcebce9f587260d7147745ab99c2b4cecc78a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 937f70d50abb1422f069d555695744c26639dccf
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167877"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035604"
 ---
 # <a name="appendchunk-method-ado"></a>Метод AppendChunk (ADO)
 Добавляет данные к большому текстовому или двоичному [полю](./field-object.md)данных или к объекту [параметра](./parameter-object.md) .  
@@ -41,7 +41,7 @@ object.AppendChunk Data
  *Данные*  
  **Значение типа Variant** , содержащее данные, добавляемые к объекту.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте метод **AppendChunk** для **поля** или объекта **параметра** , чтобы заполнить его длинными двоичными или символьными данными. В ситуациях, когда память системы ограничена, можно использовать метод **AppendChunk** для обработки длинных значений в частях, а не в полном объеме.  
   
 ## <a name="field"></a>Поле  

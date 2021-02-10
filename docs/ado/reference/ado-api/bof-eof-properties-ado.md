@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71424db7a06dc8b1d5d47a3505e90ffaf175cc3b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8dd77c7bd3e7c92ec5eb970d0134db4e6e39258f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167831"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035494"
 ---
 # <a name="bof-eof-properties-ado"></a>Свойства BOF и EOF (ADO)
 -   **BOF** Указывает, что текущая запись находится перед первой записью в объекте [набора записей](./recordset-object-ado.md) .  
@@ -33,7 +33,7 @@ ms.locfileid: "99167831"
 ## <a name="return-value"></a>Возвращаемое значение  
  Свойства **BOF** и **EOF** возвращают **логические** значения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте свойства **BOF** и **EOF** , чтобы определить, содержит ли объект **набора** записей записи или выходят за пределы объекта **набора записей** при переходе от записи к записи.  
   
  Свойство **BOF** возвращает **значение true** (-1), если текущая запись находится перед первой записью, и **false** (0), если текущая запись находится в положении или после первой записи.  

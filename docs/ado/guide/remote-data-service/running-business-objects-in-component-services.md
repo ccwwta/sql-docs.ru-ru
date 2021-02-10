@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3077d0b6-42d6-4f10-8e5d-42e6204f1109
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e4cafeaf590c07ec52153a2932de3e105e26950
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 7129254d609e1bd80853ccf5008527bfbf938c30
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91723105"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036384"
 ---
 # <a name="running-business-objects-in-component-services"></a>Запуск бизнес-объектов в службах компонентов
 > [!IMPORTANT]
@@ -33,5 +33,5 @@ ms.locfileid: "91723105"
 > [!NOTE]
 >  Если бизнес-объекты на среднем уровне реализуются как компоненты служб компонентов **с помощью функций** **сеткомплете**, а также **SetAbort**, то бизнес-объекты могут использовать службы компонентов (или MTS, если используются контекстные объекты Windows NT) для поддержания состояния между несколькими клиентскими вызовами. Такая ситуация возможна при использовании DCOM, который обычно реализуется между доверенными клиентами и серверами в интрасети. В этом случае [RDS. Объект пространства](../../reference/rds-api/dataspace-object-rds.md) и метод [CreateObject](../../reference/rds-api/createobject-method-rds.md) на стороне клиента заменяются объектом контекста транзакции и методом **CreateInstance** , которые предоставляются интерфейсом **итрансактионконтекст** и реализуются службами компонентов.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные принципы RDS](./rds-fundamentals.md)

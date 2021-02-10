@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 26d8a458b9bc1b477dd74ade09ad742c15ac73e8
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c0be8adfc9fdcf85df12768571567ce832c2f69a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721435"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036474"
 ---
 # <a name="minimizing-log-file-space-usage"></a>Минимизация использования места в файле журнала
 Файл журнала может быстро заполняться (таким же прерывает работу сервера), если в SQL Server базе данных имеется большой объем действий. Можно задать усечение файла журнала **на контрольную точку** , чтобы значительно продлить время существования файла журнала для базы данных.  
@@ -46,5 +46,5 @@ ms.locfileid: "91721435"
   
  Дополнительные сведения о функции **Truncate on Checkpoint** см. в документации по Microsoft SQL Server.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные принципы RDS](./rds-fundamentals.md)

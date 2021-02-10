@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: efcb376c9ad27dff5a0c85d73f70ae4000385e3d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 318bb7478bdbc6f3b4007f788045438cdb91dfe3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99159241"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035924"
 ---
 # <a name="activeconnection-property-ado"></a>Свойство ActiveConnection (ADO)
 Указывает, к какому объекту [соединения](./connection-object-ado.md) в данный момент принадлежит указанная [команда](./command-object-ado.md), [набор записей](./recordset-object-ado.md)или объект [записи](./record-object-ado.md) .  
@@ -31,7 +31,7 @@ ms.locfileid: "99159241"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает **строковое** значение, содержащее определение соединения, если соединение закрыто, или **вариант** , содержащий текущий объект **соединения** , если соединение открыто. По умолчанию используется пустая ссылка на объект. См. свойство [ConnectionString](./connectionstring-property-ado.md) .  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте свойство **ActiveConnection** , чтобы определить объект **соединения** , для которого будет выполняться указанный объект **команды** , или будет открыт указанный **набор записей** .  
   
 ## <a name="command"></a>Команда  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 79f8ee5e-fc70-46d8-8c29-ebf943c66592
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b394ab30d4ee8d73e879abe2687e1208ba3188ad
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: c688816872dfe8fbb061173b5aa645f7035ef99f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99161015"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035964"
 ---
 # <a name="absoluteposition-property-ado"></a>Свойство AbsolutePosition (ADO)
 Указывает порядковый номер текущей записи объекта [набора записей](./recordset-object-ado.md) .  
@@ -31,7 +31,7 @@ ms.locfileid: "99161015"
   
  Для 64-разрядного кода используйте тип данных, который обеспечивает хранение 64-разрядного значения. Например, можно использовать либо длинное, либо другое значение, равное 64-разрядной длине, например ДБОРДИНАЛ. Не используйте значения **поситионенум** , так как они ограничены 32-разрядной длиной.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Чтобы задать свойство **примеры AbsolutePosition** , для ADO требуется, чтобы поставщик OLE DB использовал интерфейс [IRowsetLocate: IRowset](/previous-versions/windows/desktop/ms721190(v=vs.85)) .  
   
  При доступе к свойству **примеры AbsolutePosition** **набора записей** , открытого с помощью однопроходного или динамического курсора, возникает ошибка **адеррфеатуренотаваилабле**. При использовании других типов курсоров правильное расположение будет возвращено, пока поставщик OLE DB поддерживает интерфейс **IRowsetScroll: IRowsetLocate** . Если поставщик не поддерживает интерфейс **IRowsetScroll** , для свойства задается значение **адпосункновн**. Обратитесь к документации поставщика, чтобы определить, поддерживает ли он **IRowsetScroll**.  

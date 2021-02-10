@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eabdd278-6576-4be7-9315-fb79cb8ef678
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d485b2306b654c4f98911e0a994c246a474f424
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: bbc055034c6a73248a9032b5412652c5fae6574d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99161731"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035844"
 ---
 # <a name="addnew-method-example-jscript"></a>Пример метода AddNew (JScript)
 В этом примере используется метод [AddNew](./addnew-method-ado.md) для создания новой записи с указанным именем. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **аддневжс. ASP**.  

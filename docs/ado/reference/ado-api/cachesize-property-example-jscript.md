@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3675f641-b4b1-48ff-ba33-8d9ea064cd04
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3087f5f35d27ca09afa860dbff52a5cec0b8b345
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 120debe76e24e68668ffbfcc81393c0796ad4176
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171550"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035544"
 ---
 # <a name="cachesize-property-example-jscript"></a>Пример свойства CacheSize (JScript)
 В этом примере используется свойство [CacheSize](./cachesize-property-ado.md) , чтобы продемонстрировать разницу в производительности для операции, выполняемой с 30-записывающим кэшем и без него. Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **качесизежс. ASP**.  

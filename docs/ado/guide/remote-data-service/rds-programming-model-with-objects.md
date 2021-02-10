@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6ee41cabf8175bc7f2a34c0381193e406d33f38f
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 282e272d1d830bfb20f407053a04a6d0b598c490
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724915"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036364"
 ---
 # <a name="rds-programming-model-with-objects"></a>Модель программирования RDS с объектами
 Целью RDS является получение доступа к источникам данных и их обновление через промежуточные носители, такие как IIS. Модель программирования указывает последовательность действий, необходимых для выполнения этой цели. Объектная модель определяет объекты, методы и свойства которых влияют на модель программирования.  
@@ -41,7 +41,7 @@ ms.locfileid: "91724915"
   
 -   Изменения объекта **набора записей** отправляются обратно на сервер и используются для обновления источника данных (**RDS. Элемент управления** или **RDSServer. факт**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сводка объектной модели RDS](./rds-object-model-summary.md)   
  [Объект элемента управления (RDS)](../../reference/rds-api/datacontrol-object-rds.md)   
  [Объект фактического объекта (RDSServer)](../../reference/rds-api/datafactory-object-rdsserver.md)   

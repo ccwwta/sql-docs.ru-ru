@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 61a51b74-93cd-439c-877f-f3055499d39f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9082a8f6f32db01913437607dc12bb8758f7b93f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a720fe06f661eb8a978ac2caedc1049b4cef7b62
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167673"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035224"
 ---
 # <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>Примеры методов Копирекорд, CopyTo и SaveToFile (Visual Basic)
 В этом примере показано, как создавать копии файла с помощью объектов [Stream](./stream-object-ado.md) или [Record](./record-object-ado.md) . Одна копия вносится в веб-папку для публикации в Интернете. Другие свойства и методы включают [тип потока](./type-property-ado-stream.md), **открытые**, [лоадфромфиле](./loadfromfile-method-ado.md)и [запись Open](./open-method-ado-record.md).  

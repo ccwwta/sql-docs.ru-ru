@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 27a98245b27d5c30f2bcc762318f86a358ef16b4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 73b9557dc8404407d68af748644f52bbdd37359f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167842"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035534"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vb"></a>Примеры свойств BOF, EOF и Bookmark (Visual Basic)
 В этом примере используются свойства [BOF](./bof-eof-properties-ado.md) и [EOF](./bof-eof-properties-ado.md) для вывода сообщения, если пользователь пытается переместиться после первой или последней записи [набора записей](./recordset-object-ado.md). Он использует свойство [Bookmark](./bookmark-property-ado.md) , чтобы пользователь мог пометить запись в **наборе записей** и вернуться к ней позже.  

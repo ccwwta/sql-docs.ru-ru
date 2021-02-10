@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ddb58a35-ec3a-423c-a504-3c65e62c23d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 781d20047b170ec5f3d1fc480d65cfc684735f84
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 5f5b8019bedb2273c15ee3362f7fd3cb9688308e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99161041"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035983"
 ---
 # <a name="absolutepage-property-ado"></a>Свойство AbsolutePage (ADO)
 Указывает, на какой странице находится текущая запись.  
@@ -31,7 +31,7 @@ ms.locfileid: "99161041"
   
  Для 64-разрядного кода используйте тип данных, который обеспечивает хранение 64-разрядного значения. Например, можно использовать либо **длинное** , либо другое значение, которое может быть 64-разрядной длиной, например дбординал. Не используйте значения **поситионенум** , так как их длина ограничена 32-разрядной.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Это свойство можно использовать для указания номера страницы, на которой находится текущая запись. Он использует свойство [pageSize](./pagesize-property-ado.md) , чтобы логически разделить общее число наборов строк объекта **Recordset** на ряд страниц, каждый из которых имеет число записей, равное **pageSize** (за исключением последней страницы, в которой может быть меньше записей). Чтобы это свойство было доступно, поставщик должен поддерживать соответствующие функциональные возможности.  
   
 -   При получении или установке свойства **примеры ABSOLUTEPAGE** ADO использует свойство [примеры AbsolutePosition](./absoluteposition-property-ado.md) и свойство [pageSize](./pagesize-property-ado.md) следующим образом:  

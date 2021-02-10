@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5c0530ad-68d0-4cba-b1af-9386d566c7c5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 821b4bd876319306f184fe095f7a45c1a0c3629a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d0464ae5bf88e93ba29c189c17ad84bcfab7387a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171524"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035484"
 ---
 # <a name="cancel-method-example-vb"></a>Пример метода Cancel (Visual Basic)
 В этом примере метод [Cancel](./cancel-method-ado.md) используется для отмены команды, выполняющейся на объекте [соединения](./connection-object-ado.md) , если соединение занято.  

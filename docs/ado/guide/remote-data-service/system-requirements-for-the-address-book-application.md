@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: da385405-1c9a-478b-9bf6-fba70015324c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7edd6f3c383c1563122bff053e39a372dff264b3
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 0fa1eb879a536a2958184942c5d779ebb1c998b5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91722836"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036084"
 ---
 # <a name="system-requirements-for-the-address-book-application"></a>Требования к системе для приложения адресной книги
 Чтобы настроить пример приложения адресной книги, необходимо обеспечить соответствие следующим требованиям к программному обеспечению и базе данных:  
@@ -51,7 +51,7 @@ ms.locfileid: "91722836"
   
  Если у вас нет прав, администратору базы данных может потребоваться настроить систему и предоставить вам разрешение на доступ к базе данных или настроить базу данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполнение скрипта SQL адресной книги](./running-the-address-book-sql-script.md)   
  [Объект элемента управления (RDS)](../../reference/rds-api/datacontrol-object-rds.md)   
  [Выполнение примера приложения адресной книги](./running-the-address-book-sample-application.md)

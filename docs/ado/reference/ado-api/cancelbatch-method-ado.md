@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dbdc2574-e44e-4d95-b03d-4a5d9e9adf3c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: edbafa81c787bb4dafed6688f43907a87504c3c7
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 4784dbd1de8cf29476b4873ce79b704925e06dfd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164734"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035504"
 ---
 # <a name="cancelbatch-method-ado"></a>Метод CancelBatch (ADO)
 Отменяет ожидающее пакетное обновление.  
@@ -36,9 +36,9 @@ recordset.CancelBatchAffectRecords
   
 #### <a name="parameters"></a>Параметры  
  *аффектрекордс*  
- Необязательный параметр. Значение [аффектенум](./affectenum.md) , указывающее, сколько записей будет влиять на метод **CancelBatch** .  
+ Необязательный элемент. Значение [аффектенум](./affectenum.md) , указывающее, сколько записей будет влиять на метод **CancelBatch** .  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте метод **CancelBatch** , чтобы отменить все ожидающие обновления в [наборе записей](./recordset-object-ado.md) в режиме пакетного обновления. Если **набор записей** находится в режиме немедленного обновления, вызов **CancelBatch** без **адаффекткуррент** выдает ошибку.  
   
  Если редактируется текущая запись или добавляется новая запись при вызове **CancelBatch**, то ADO сначала вызывает метод [CancelUpdate](./cancelupdate-method-ado.md) для отмены любых кэшированных изменений. После этого все ожидающие изменения в **наборе записей** будут отменены.  

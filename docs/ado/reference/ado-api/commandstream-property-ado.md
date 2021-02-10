@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f78f61b6-87e0-48dc-961e-83d0e20da58e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 817ee84681b4b13895bc493034ceabade1f4773e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b2b7618cae464f8d4fdbafb0ebcab09551749b90
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99167762"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034834"
 ---
 # <a name="commandstream-property-ado"></a>Свойство CommandStream (ADO)
 Указывает поток, используемый в качестве входных данных для объекта [команды](./command-object-ado.md) .  
@@ -29,7 +29,7 @@ ms.locfileid: "99167762"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает поток, используемый в качестве входных данных для объекта **команды** . Формат этого потока зависит от поставщика. Дополнительные сведения см. в документации поставщика. Это свойство аналогично свойству [CommandText](./commandtext-property-ado.md) , которое используется для указания строки для входных данных **команды**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **CommandStream** и **CommandText** являются взаимоисключающими. Когда пользователь задает свойство **CommandStream** , свойству **CommandText** присваивается пустая строка (""). Если пользователь задает свойство **CommandText** , свойству **CommandStream** будет присвоено значение **Nothing**.  
   
  Поведение методов **Command. parameters. Refresh** и **Command. Prepare** определяется поставщиком. Значения параметров в потоке не могут быть обновлены.  

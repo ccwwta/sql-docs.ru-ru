@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70f91e85010abb784291c3c9eca52b9a74ed6286
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: b2b9294b3024a3d4a7dbfd51baadb2474b7715ee
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721395"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036414"
 ---
 # <a name="rds-tutorial"></a>Учебник по RDS
 В этом учебнике показано, как использовать модель программирования RDS для запроса и обновления источника данных. Во первых, он описывает шаги, необходимые для выполнения этой задачи. Затем этот учебник повторяется в Microsoft® Visual Basic Scripting Edition (в котором используется ADO для классов Windows Foundation (ADO/WFC)).  
@@ -69,6 +69,6 @@ ms.locfileid: "91721395"
   
 -   [Учебник по RDS (VBScript)](./rds-tutorial-vbscript.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Шаг 1. Указание серверной программы (учебник по RDS)](./step-1-specify-a-server-program-rds-tutorial.md)   
  [Учебник по RDS (VBScript)](./rds-tutorial-vbscript.md)

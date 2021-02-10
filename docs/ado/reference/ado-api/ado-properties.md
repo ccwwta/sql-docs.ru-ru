@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bdacd558161c09d1d43f590f9f355e14da262b14
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: f29b56b54c2800a77ac76134f0c946f09e34a621
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164884"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035724"
 ---
 # <a name="ado-properties"></a>Свойства ADO
 
@@ -91,7 +91,7 @@ ms.locfileid: "99164884"
 |[Состояние (набор записей ADO)](./status-property-ado-recordset.md)|Указывает состояние текущей записи, относящейся к пакетным обновлениям или другим массовым операциям.|  
 |[StayInSync](./stayinsync-property.md)|Указывает, изменяется ли ссылка на базовые дочерние записи (то есть *глава*) в иерархическом объекте **Recordset** при изменении позиционирования родительской строки.|  
 |[Свойство Stream](./stream-property.md)|Возвращает или задает OLE DB объект **потока** из или в объекте **адостреамконструктион** .|  
-|[Type](./type-property-ado.md)|Указывает операционный тип или тип данных для **параметра**, **поля** или объекта **Свойства** .|  
+|[Тип](./type-property-ado.md)|Указывает операционный тип или тип данных для **параметра**, **поля** или объекта **Свойства** .|  
 |[Type (поток ADO)](./type-property-ado-stream.md)|Указывает тип данных, содержащихся в **потоке** (двоичный или текстовый).|  
 |[UnderlyingValue](./underlyingvalue-property.md)|Указывает текущее значение в базе данных для объекта **поля** .|  
 |[Значение](./value-property-ado.md)|Указывает значение, присваиваемое **полю**, **параметру** или объекту **Свойства** .|  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fc5e30aef0162ecc2ffe9016e14fdfa36644aca5
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 76f3311a622abbd249aa942e1ebdbda33ad06966
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724885"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036424"
 ---
 # <a name="registering-a-custom-business-object"></a>Регистрация пользовательского бизнес-объекта
 Для успешного запуска пользовательского бизнес-объекта (. dll или. exe) через веб-сервер в реестр необходимо указать ProgID бизнес-объекта, как описано в этой процедуре. Эта функция RDS обеспечивает защиту веб-сервера, запуская только санкционированные исполняемые файлы.  
@@ -37,8 +37,8 @@ ms.locfileid: "91724885"
   
 2.  Введите **regedit** и нажмите кнопку **ОК**.  
   
-3.  В редакторе реестра перейдите к разделу реестра **HKEY_LOCAL_MACHINE \system\currentcontrolset\services\w3svc\parameters\adclaunch** .  
+3.  В редакторе реестра перейдите к разделу реестра **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\W3SVC\Parameters\ADCLaunch** .  
   
-4.  Выберите ключ **адклаунч** , а затем в меню **Правка**наведите указатель мыши на пункт **создать** и выберите **ключ**.  
+4.  Выберите ключ **адклаунч** , а затем в меню **Правка** наведите указатель мыши на пункт **создать** и выберите **ключ**.  
   
 5.  Введите идентификатор ProgID для настраиваемого бизнес-объекта и нажмите клавишу **Ввод**. Оставьте поле **значение** пустым.

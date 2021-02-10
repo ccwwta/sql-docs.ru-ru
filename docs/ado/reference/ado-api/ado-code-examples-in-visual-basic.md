@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1152893e-b617-40f1-88b6-81e82e2234f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d1281cc6f900c43ff568d70f7885277f7df89f0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: aa11129824efaa5af4f244e34a5719a9a62ee2e6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164954"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100035814"
 ---
 # <a name="ado-code-examples-in-visual-basic"></a>Примеры кода ADO в Visual Basic
 Используйте приведенные ниже примеры кода, чтобы научиться использовать методы, свойства и события ADO при записи в Visual Basic.  

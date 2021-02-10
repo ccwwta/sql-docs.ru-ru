@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25f4837fb73f15c8626a0b2a558f38badb1f36ed
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 1d2b674e5ecc927989873c82303f2b2410c31d31
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91721295"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100036064"
 ---
 # <a name="understanding-the-customization-file"></a>Общие сведения о файле настроек
-Каждый заголовок раздела в файле настройки состоит из квадратных скобок (**[]**), содержащих тип и параметр. Четыре типа разделов обозначаются строковыми литералами **Connect**, **SQL**, **USERLIST**или **logs**. Параметр является строкой литерала, значением по умолчанию, идентификатором, заданным пользователем, или Nothing.  
+Каждый заголовок раздела в файле настройки состоит из квадратных скобок (**[]**), содержащих тип и параметр. Четыре типа разделов обозначаются строковыми литералами **Connect**, **SQL**, **USERLIST** или **logs**. Параметр является строкой литерала, значением по умолчанию, идентификатором, заданным пользователем, или Nothing.  
   
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](/dotnet/framework/wcf/).  
@@ -67,7 +67,7 @@ identifier
   
 -   Раздел **logs** **используется при** каждом выполнении операции.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Раздел "Подключение файла настройки"](./customization-file-connect-section.md)   
  [Раздел журналов файлов настройки](./customization-file-logs-section.md)   
  [Раздел файла настройки SQL](./customization-file-sql-section.md)   
