@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 67c14205590ccdf9d20a30f44c13aa2da5abbe8d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9bb65299be2778897b72303cccb99043a3b01406
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99212565"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100061109"
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Приложение Б. Таблицы перехода состояния ODBC
 В таблицах этого приложения показано, как функции ODBC вызывают переходы между состояниями среды, соединения, инструкции и дескриптора. Состояние среды, соединения, инструкции или дескриптора обычно определяет, когда могут быть вызваны функции, использующие соответствующий тип дескриптора (среда, соединение, инструкция или дескриптор). Состояния среды, соединения, инструкции и дескриптора перекрываются примерно так, как показано на следующих иллюстрациях. Например, точное перекрытие состояний соединения C5 и C6 и состояний инструкций S1 – S12 зависит от источника данных, так как транзакции начинаются в разное время в разных источниках данных, а состояние дескриптора D1i (неявно выделенный дескриптор) зависит от состояния инструкции, с которой связан дескриптор, а State D1e (явно выделенный дескриптор) не зависит от состояния любой инструкции. Описание каждого состояния см. в подразделе [переходы среды](../../../odbc/reference/appendixes/environment-transitions.md), [переходы соединений](../../../odbc/reference/appendixes/connection-transitions.md), [переходы инструкций](../../../odbc/reference/appendixes/statement-transitions.md)и [переходы по дескрипторам](../../../odbc/reference/appendixes/descriptor-transitions.md)далее в этом приложении.  

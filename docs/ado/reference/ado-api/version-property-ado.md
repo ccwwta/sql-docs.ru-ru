@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: db4cb894-9bd9-422d-a58a-cef6941a5784
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b4ed042d847ab250386857560bcbc232660fcd9
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e80e1ff7f889cb8e7d4528cb7a2cd4de3159ae38
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166300"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056179"
 ---
 # <a name="version-property-ado"></a>Свойство Version (ADO)
 Указывает номер версии ADO.  
@@ -31,7 +31,7 @@ ms.locfileid: "99166300"
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает **строковое** значение, указывающее версию.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте свойство **Version** , чтобы получить номер версии реализации ADO.  
   
  Версия поставщика будет доступна как динамическое свойство в коллекции [свойств](./properties-collection-ado.md) .  

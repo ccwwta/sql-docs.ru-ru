@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a57b99597bea639eddb5e73b2d6e4c7137333bc2
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d135747f0599f646035d2e70e768bf755ac6fa21
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166266"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056109"
 ---
 # <a name="willconnect-event-ado"></a>Событие WillConnect (ADO)
 Событие **виллконнект** вызывается до начала соединения.  
@@ -59,7 +59,7 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  *пконнектион*  
  Объект [соединения](./connection-object-ado.md) , к которому относится данное уведомление о событии. Изменения параметров **соединения** обработчиком событий **виллконнект** не будут влиять на **соединение**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  При вызове **виллконнект** параметры *ConnectionString*, *UserID*, *Password* и *Options* устанавливаются в значения, установленные операцией, вызвавшей это событие (ожидающее подключение), и могут быть изменены перед возвратом события. **Виллконнект** может возвращать запрос на отмену ожидающего подключения.  
   
  При отмене этого события будет вызван **коннекткомплете** с его параметром *адстатус* , установленным в **адстатусеррорсоккурред**.  

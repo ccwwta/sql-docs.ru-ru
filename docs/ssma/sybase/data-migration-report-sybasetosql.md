@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: bac234ef-bc16-47e6-8a7c-aa6e76d860c5
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c13b2536ddada33a6b9a3f14d53b208dd177098c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f8699eef19daaeb0b875a5158a2c1350f10c17c7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492297"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056829"
 ---
 # <a name="data-migration-report-sybasetosql"></a>Отчет о миграции данных (SybaseToSQL)
 После переноса данных в появляется диалоговое окно **отчет о переносе данных** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -36,7 +36,7 @@ ms.locfileid: "88492297"
 **Число успешно перенесенных строк**  
 Число строк данных, успешно перенесенных в целевую таблицу.  
   
-**Коэффициент**  
+**Соотношение**  
 Процент успешно перенесенных строк.  
   
 **Сведения**  

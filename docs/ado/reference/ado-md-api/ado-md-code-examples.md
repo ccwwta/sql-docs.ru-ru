@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 72cf9eb3-31f6-441c-aede-5383fdfb81af
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c3fbff5c43f8004507f2d4e75e73123d4d82d6c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 3a82791645a54135f2206f2d22192777f882c568
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166214"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100055955"
 ---
 # <a name="ado-md-code-examples"></a>Примеры кода многомерных объектов ADO
 Используйте приведенные ниже примеры кода, чтобы научиться использовать объекты данных ActiveX (MD) объекты, методы и свойства. Эти примеры представляют собой подмножество примеров приложений, устанавливаемых с Microsoft SQL Server служб OLAP для SQL Server 7,0.  

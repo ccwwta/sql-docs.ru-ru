@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b809a24429b490961e1d0d009656539db9fe81d9
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 7796f70b1652c479d958477dd244f836477c64e9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172406"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056219"
 ---
 # <a name="value-property-ado"></a>Свойство Value (ADO)
 
@@ -32,7 +32,7 @@ ms.locfileid: "99172406"
 
 Задает или возвращает значение **типа Variant** , указывающее значение объекта. Значение по умолчанию зависит от свойства [Type](./type-property-ado.md) .
   
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Remarks
 
 Свойство **value** используется для задания или возврата данных из объектов **полей** , для задания или возврата значений параметров с помощью объектов **параметров** , а также для установки или возврата параметров свойств с объектами **свойств** . Является ли свойство **value** доступно для чтения и записи или только для чтения, зависит от множества факторов. Дополнительные сведения см. в разделах, посвященных соответствующим объектам.
 

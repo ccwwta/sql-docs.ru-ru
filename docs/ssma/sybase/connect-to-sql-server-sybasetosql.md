@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 30179b25-409b-4e23-bc73-2f226657098f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 115b5ca1eadac2e8042abcc6fae7add920889155
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b2b9c2d3f776ba41263e23d593ee3a4ef0f739df
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372490"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064289"
 ---
 # <a name="connect-to-sql-server-sybasetosql"></a>Диалоговое окно "Подключение к SQL Server" (SybaseToSQL)
 Используйте диалоговое окно **Подключение к SQL Server** , чтобы подключиться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на который требуется выполнить миграцию. Чтобы открыть диалоговое окно **Подключение к SQL Server** , в меню **файл** выберите пункт **подключиться к SQL Server**.  
@@ -39,7 +39,7 @@ ms.locfileid: "88372490"
 **Аутентификация**  
 Выберите метод проверки подлинности, используемый для подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы использовать текущую учетную запись Windows, выберите Проверка подлинности Windows. Чтобы указать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа и пароль, выберите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности.  
   
-**User name**  
+**Имя пользователя**  
 Если используется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности, введите имя входа для этого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если используется проверка подлинности Windows, этот параметр недоступен.  
   
 **Пароль**  

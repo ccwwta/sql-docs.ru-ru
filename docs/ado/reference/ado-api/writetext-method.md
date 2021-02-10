@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b4c05ab892ce442db5eefefddf3eb0796af5dec9
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 8d310e2beaf69968721e2edc5c65c57cb88cf492
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166244"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056039"
 ---
 # <a name="writetext-method"></a>Метод WriteText
 Записывает указанную текстовую строку в объект [потока](./stream-object-ado.md) .  
@@ -39,9 +39,9 @@ Stream.WriteText Data, Options
  **Строковое** значение, содержащее текст в символах для написания.  
   
  *Параметры*  
- Необязательный параметр. Значение [стреамвритинум](./streamwriteenum.md) , указывающее, должен ли символ разделителя строки записываться в конце указанной строки.  
+ Необязательный элемент. Значение [стреамвритинум](./streamwriteenum.md) , указывающее, должен ли символ разделителя строки записываться в конце указанной строки.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Указанные строки записываются в объект **потока** без промежуточных пробелов или символов между строками.  
   
  Текущей [позиции](./position-property-ado.md) присваивается символ, следующий за записанными данными. Метод **WriteText** не усекает остальные данные в потоке. Если вы хотите усечь эти символы, вызовите [сетеос](./seteos-method.md).  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3f433434833ee07e4ebbf999e2ef2ca122f44fc
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 41ef9c6809302e39d63e5cca53bc3c0f29963683
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170063"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056419"
 ---
 # <a name="type-property-example-field-vc"></a>Пример свойства Type (объект Field) (Visual C++)
-В этом примере показано свойство [Type](./type-property-ado.md) , в котором отображается имя константы, соответствующее значению свойства **Type** всех объектов [field](./field-object.md) в таблице **_Employees_* _. Для выполнения этой процедуры требуется функция FieldType.  
+В этом примере показано свойство [Type](./type-property-ado.md) , в котором отображается имя константы, соответствующее значению свойства **Type** всех объектов [field](./field-object.md) в таблице **_Employees_** . Для выполнения этой процедуры требуется функция FieldType.  
   
 ## <a name="example"></a>Пример  
   
@@ -154,7 +154,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- _ *Поля в таблице Employee:**  
+ **Поля в таблице Employee:**  
  **Имя: emp_id**  
  **Тип: Адчар**  
  **Имя: fname.**  

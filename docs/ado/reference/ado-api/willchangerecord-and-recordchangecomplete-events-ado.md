@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: cbc369fd-63af-4a7d-96ae-efa91b78ca69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a713c39746db1d6a5317a4884ac0a2c5cbb23fc
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 93eabc24b65a00b44db15dcef5bdd7d1a6f3c17d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166282"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056129"
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>События WillChangeRecord и RecordChangeComplete (ADO)
 Событие **виллчанжерекорд** вызывается до того, как в [наборе записей](./recordset-object-ado.md) изменяется одна или несколько записей (строк). Событие **рекордчанжекомплете** вызывается после изменения одной или нескольких записей.  
@@ -61,7 +61,7 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
  *предшнур*  
  Объект **Recordset** . **Набор записей** , для которого произошло это событие.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Событие **виллчанжерекорд** или **рекордчанжекомплете** может возникать для первого измененного поля в строке из-за следующих операций **с наборами записей** : [Update](./update-method.md), [Delete](./delete-method-ado-recordset.md), [CancelUpdate](./cancelupdate-method-ado.md), [AddNew](./addnew-method-ado.md), [UpdateBatch](./updatebatch-method.md)и [CancelBatch](./cancelbatch-method-ado.md). Значение [примеры CursorType](./cursortype-property-ado.md) **набора записей** определяет, какие операции приводят к возникновению событий.  
   
  Во время события **виллчанжерекорд** свойству  [Filter фильтра](./filter-property.md) набора записей присваивается значение **адфилтераффектедрекордс**. Это свойство нельзя изменить во время обработки события.  

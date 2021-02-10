@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bcb1468e-18bb-41b8-8902-6ee05b786eec
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d1dd9e59a8adfd107a033cdf1606e80825bd8e74
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: bff174eb526c52ceb30fac86d41f7cc2455a7858
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172413"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056269"
 ---
 # <a name="updatebatch-and-cancelbatch-methods-example-vc"></a>Примеры методов UpdateBatch и CancelBatch (Visual C++)
 В этом примере демонстрируется метод [UpdateBatch](./updatebatch-method.md) в сочетании с методом [CancelBatch](./cancelbatch-method-ado.md) .  

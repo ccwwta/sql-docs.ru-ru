@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 00a0c8b8-8b63-433f-95b8-020ab05874a0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dd9ba64953632ad4681e7650ba8028df45e53da6
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d96f48d796e3eef7b41467ea4f5b5b14bfc66d36
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166346"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056379"
 ---
 # <a name="underlyingvalue-property"></a>Свойство UnderlyingValue
 Указывает текущее значение объекта [поля](./field-object.md) в базе данных.  
@@ -31,7 +31,7 @@ ms.locfileid: "99166346"
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение **типа Variant** , указывающее значение **поля**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте свойство **UnderlyingValue** , чтобы вернуть текущее значение поля из базы данных. Значение поля в свойстве **UnderlyingValue** является значением, видимым для транзакции и может быть результатом последнего обновления другой транзакции. Это может отличаться от свойства [originalValue](./originalvalue-property-ado.md) , которое отражает значение, первоначально возвращенное [набору записей](./recordset-object-ado.md).  
   
  Это похоже на использование метода повторной [синхронизации](./resync-method.md) , но свойство **UnderlyingValue** возвращает только значение для определенного поля из текущей записи. Это то же значение, которое метод [Resync](./resync-method.md) использует для замены свойства [value](./value-property-ado.md) .  

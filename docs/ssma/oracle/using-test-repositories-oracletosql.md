@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6b070a45c7990efbb598401b241083fcb2d804f5
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: f73dd1aabecee8625ace5cc4af0d342124306815
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035143"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100063459"
 ---
 # <a name="using-test-repositories-oracletosql"></a>Использование репозиториев тестирования (OracleToSQL)
 В репозитории тестов SSMA хранятся тестовые случаи и результаты тестов тестеров SSMA для последующего использования. Данные репозитория сохраняются в SQL Server таблицах **тесткасерепоситори** и **рунтесткасересултрепоситори** в схеме **ssma_oracle_utilities** базы данных **ссматестердб** .  

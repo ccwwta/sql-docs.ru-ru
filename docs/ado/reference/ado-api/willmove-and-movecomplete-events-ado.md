@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1a3d1042-4f30-4526-a0c7-853c242496db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 46c28cd74fcf7a580d6695e21cd1e5e2750f0519
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a2476447e5da8baa89a2df326eba3d41225c698e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166256"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056059"
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>События WillMove и MoveComplete (ADO)
 Событие **виллмове** вызывается до того, как операция ожидает изменения текущей позицией в [наборе записей](./recordset-object-ado.md). Событие **мовекомплете** вызывается после изменения текущей позицией в **наборе записей** .  
@@ -59,7 +59,7 @@ MoveComplete adReason, pError, adStatus, pRecordset
  *предшнур*  
  Объект [Recordset](./recordset-object-ado.md) . **Набор записей** , для которого произошло это событие.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Событие **виллмове** или **мовекомплете** может возникать из-за следующих операций с **набором записей** : [Open](./open-method-ado-recordset.md), [Move](./move-method-ado.md), [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [AddNew](./addnew-method-ado.md)и [Requery](./requery-method.md). Эти события могут возникать из-за следующих свойств: [Filter](./filter-property.md), [index](./index-property.md), [Bookmark](./bookmark-property-ado.md), [примеры absolutepage](./absolutepage-property-ado.md)и [примеры AbsolutePosition](./absoluteposition-property-ado.md). Эти события также возникают, если для дочернего **набора** записей подключены события **набора записей** и перемещен родительский **набор записей** .  
   
  Необходимо присвоить параметру *адстатус* значение **адстатусунвантедевент** для каждого возможного значения *адреасон* , чтобы полностью отключить уведомление о событии для любого события, включающего параметр *адреасон* .  

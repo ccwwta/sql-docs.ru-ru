@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e7dcecd3-7dc7-445c-b922-f700c3067fbc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abdb50494f859d6cc16e3e9ab0b13257a156601f
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e741ec0e5458218ddb6dc3a46c3a098acf482611
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172342"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056029"
 ---
 # <a name="xactattributeenum"></a>XactAttributeEnum
 Задает атрибуты транзакции для объекта [соединения](./connection-object-ado.md) .  

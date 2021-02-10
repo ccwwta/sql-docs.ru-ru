@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: ''
-ms.openlocfilehash: 35465a761258fb5a7865e711e2809d740b9b9fee
-ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
+ms.openlocfilehash: 8688fa61a1ccaede3bd370e1d19ccd66531f5739
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2020
-ms.locfileid: "92496817"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100060939"
 ---
 # <a name="dmacmd-assess-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql"></a>ДМАКМД: Оценка готовности SQL Serverного пространства данных для переноса в Azure SQL 
 
@@ -35,7 +35,7 @@ ms.locfileid: "92496817"
 >
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-to-Assess-Readiness-of-SQL-Server-Data-Estate-Migrating-to-Azure-SQL/player?WT.mc_id=dataexposed-c9-niner]
 
-## <a name="prerequisites"></a>Обязательные условия 
+## <a name="prerequisites"></a>Предварительные требования 
 
 Чтобы использовать ДМАКМД для выполнения оценки и передачи результатов в центр миграции Azure, вам потребуется следующее: 
 
@@ -92,13 +92,13 @@ XML-элементы, передаваемые в ДМАКМД, определя
 |**XML-элемент** |**Определение**  |
 |---------|---------|
 |`AssessmentName`|Имя оценки|
-|`AssessmentSourcePlatform`|Исходная платформа SQL Server. Значение по умолчанию — `SqlOnPrem`.|
+|`AssessmentSourcePlatform`|Исходная платформа SQL Server. Значение по умолчанию — `SqlOnPrem`.|
 |`AssessmentTargetPlatform`|Целевая платформа SQL Server.  </br> `AzureSqlDatabase` предназначен для целевого объекта базы данных SQL Azure. </br> `ManagedSqlServer` предназначен для целевого объекта Управляемый экземпляр Azure SQL. </br></br>Пример **оценки азуресклми** оценки целевого объекта SQL управляемый экземпляр.|
 |`AssessmentDatabases`|Если необходимо оценить все базы данных в экземпляре, укажите только имя экземпляра, в каждой из которых указаны конкретные базы данных. </br></br>Пример **оценки азуресклми** оценивает все базы данных в экземпляре `Servername\SQL2017` и две определенные базы данных в экземпляре `Servername\SQL2016` .  |
 |`AssessmentResultDma` </br> `AssessmentResultJson` </br> `AssessmentResultCsv` | Задает формат файла результатов. `.DMA`, `.JSON` и `.CSV` соответственно. Дважды щелкните, `.DMA` чтобы открыть в пользовательском интерфейсе DMA. <br> `AssessmentResultDma` требуется для отправки результатов оценки в центр миграции Azure.  |
 |`AssessmentOverwriteResult`| Указывает, следует ли перезаписывать существующий файл результатов оценки с тем же путем, что и `AssessmentResultJson` , `AssessmentResultDma` или `AssessmentResultCsv` .|
 |`AssessmentEvaluateCompatibilityIssues` </br> `AssessmentEvaluateFeatureParity` |Выполните оценку, чтобы оценить проблемы совместимости и нарушения четности компонентов соответственно.|
-|`AzureCloudEnvironment`|Облачная среда Azure для подключения. значение по умолчанию — общедоступное облако Azure. </br></br> Поддерживаемые значения: </br>`Azure (default)`, `AzureChina`, `AzureGermany`, `AzureUSGovernment`.|
+|`AzureCloudEnvironment`|Облачная среда Azure для подключения. значение по умолчанию — общедоступное облако Azure. </br></br> Поддерживаемые значения </br>`Azure (default)`, `AzureChina`, `AzureGermany`, `AzureUSGovernment`.|
 |`SubscriptionId`|Идентификатор подписки Azure.|
 |`AzureMigrateProjectName`|Имя проекта службы "миграция Azure" для отправки результатов оценки.|
 |`ResourceGroupName`|Имя группы ресурсов для миграции Azure.|
@@ -130,7 +130,7 @@ JSON result file      : C:\Demo\ScaleAssessment\Scale-Assessment-for-AzureSQLMan
 
 Просмотрите отправленные результаты в [службе "миграция Azure](dma-assess-sql-data-estate-to-sqldb.md#view-target-readiness-assessment-results) ", чтобы получить централизованное представление о всей области данных. . 
 
-## <a name="best-practices"></a>Советы и рекомендации 
+## <a name="best-practices"></a>Рекомендации 
 
 При использовании ДМАКМД учитывайте следующие рекомендации: 
 
@@ -139,7 +139,7 @@ JSON result file      : C:\Demo\ScaleAssessment\Scale-Assessment-for-AzureSQLMan
 - Время выполнения оценки зависит от количества объектов базы данных. По возможности избегайте выполнения оценок в рабочей системе и разгрузки на виртуальную машину или на промежуточный сервер, особенно для баз данных с большим количеством объектов. 
 
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 * [Помощник по миграции данных (DMA)](../dma/dma-overview.md)
 * [Помощник по миграции данных: параметры конфигурации](../dma/dma-configurationsettings.md)

@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 5f498c9a-b1e7-4e6e-9ae6-71eadaf9aada
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 64cb464f4843476dda737609596da148e304c2fc
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 591e3ea0a1fd9ebc3e6d8321da1af1638102749c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169990"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100055779"
 ---
 # <a name="axis-object-ado-md"></a>Объект Axis (многомерные объекты ADO)
 Представляет координату или ось фильтрации набора ячеек, содержащего выбранные элементы одного или нескольких измерений.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Объект **Axis** может содержаться в коллекции [осей](./axes-collection-ado-md.md) или возвращаться свойством [филтераксис](./filteraxis-property-ado-md.md) набора [ячеек](./cellset-object-ado-md.md).  
   
  С помощью коллекций и свойств объекта **Axis** можно выполнять следующие действия.  

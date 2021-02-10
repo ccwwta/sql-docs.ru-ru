@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: a60b83d3b494ba705399effd9412ef0549f2f3e4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 49e8472353f19bcca00e68969579d4cbf6f0b538
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99198688"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064829"
 ---
 # <a name="sysfn_pagerescracker-transact-sql"></a>sys.fn_PageResCracker (Transact-SQL)
 [!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
@@ -56,7 +56,7 @@ sys.fn_PageResCracker ( page_resource )
 |file_id|**int**|Идентификатор файла|  
 |page_id|**int**|Идентификатор страницы|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 `sys.fn_PageResCracker` используется для преобразования 8-байтового шестнадцатеричного представления страницы базы данных в набор строк, содержащий идентификатор базы данных, идентификатор файла и идентификатор страницы.   
 
 Допустимый ресурс страницы можно получить из `page_resource` столбца sys.dm_exec_requests &#40;динамическое административное представление [TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) или [sys.sysобрабатывает &#40;системное представление&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) . Если используется недопустимый ресурс страницы, возвращается значение NULL.  

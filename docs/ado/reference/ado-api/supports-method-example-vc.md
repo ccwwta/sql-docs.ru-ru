@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e174179-9d95-41b9-b72b-6cdbdca6e255
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 041fedecbadcd0bd47e3f0d852f1e759b6efc734
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e24f78691dd26404c1aab90086ab7cede582588c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166385"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056479"
 ---
 # <a name="supports-method-example-vc"></a>Пример метода Supports (Visual C++)
 В этом примере используется [метод](./supports-method.md) Supports для вывода параметров, поддерживаемых набором записей, открытым с разными типами курсоров. Для выполнения этого примера требуется функция Дисплайсуппорт.  

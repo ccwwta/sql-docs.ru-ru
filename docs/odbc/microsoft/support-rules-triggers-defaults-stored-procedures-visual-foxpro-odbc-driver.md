@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 56b1a2e50f26da8ce5ef581f8eda7c6a96afd741
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ea801de44e1fce175ac549402e17b9fcc2e9f020
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449116"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100061129"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Поддержка правил, триггеров, значений по умолчанию и хранимых процедур (драйвер ODBC для Visual FoxPro)
 С помощью драйвера ODBC для Visual FoxPro нельзя создавать правила и триггеры Visual FoxPro, а также значения по умолчанию или хранимые процедуры. Однако приложение может взаимодействовать с существующими правилами, триггерами, значениями по умолчанию или хранимыми процедурами при вставке, обновлении или удалении данных Visual FoxPro, хранящихся в базе данных.  
@@ -199,8 +199,8 @@ ms.locfileid: "88449116"
     :::column-end:::
     :::column:::
         DO, команда  
-        УЧИТЫВАТЬ РЕГИСТР... Команда ЕНДКАСЕ  
-        ВЫПОЛНЯТЬ ВО ВРЕМЯ... Команда ЕНДДО  
+        УЧИТЫВАТЬ РЕГИСТР... Команда ЕНДКАСЕ  
+        ВЫПОЛНЯТЬ ВО ВРЕМЯ... Команда ЕНДДО  
         Функция DOW ()  
         Функция ДТОК ()  
         Функция DTOR ()  
@@ -243,7 +243,7 @@ ms.locfileid: "88449116"
         Функция FLOOR ()  
         Команда FLUSH  
         ДЛЯ функции ()  
-        ДЛЯ... Команда ЕНДФОР  
+        ДЛЯ... Команда ЕНДФОР  
         Функция FOUND ()  
     :::column-end:::
     :::column:::
@@ -290,7 +290,7 @@ ms.locfileid: "88449116"
 :::row:::
     :::column:::
         Функция ИДКСКОЛЛАТЕ ()  
-        ЕСЛИ... ENDIF, команда  
+        ЕСЛИ... ENDIF, команда  
         Функция IIF ()  
         Функция ИНДБК ()  
         Команда INDEX  
@@ -473,7 +473,7 @@ ms.locfileid: "88449116"
 
 :::row:::
     :::column:::
-        СКАНИРОВАТЬ... Команда ЕНДСКАН  
+        СКАНИРОВАТЬ... Команда ЕНДСКАН  
         ТОЧЕЧная команда  
         SEC (), функция  
         Функция SECONDs ()  

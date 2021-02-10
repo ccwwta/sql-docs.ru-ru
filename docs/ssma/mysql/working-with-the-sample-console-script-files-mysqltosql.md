@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7e6aaa8a-5f5c-414d-9fb8-21e56b9ffaef
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 6c60c48b2c22dfb414710e305986b16d3ee31e17
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2ea2e364dd5c09a288b94ed60a7bff93ac16c6bd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463293"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064149"
 ---
 # <a name="working-with-the-sample-console-script-files-mysqltosql"></a>Работа с примерами файлов сценариев консоли (MySQLToSQL)
 Несколько примеров файлов предоставлены вместе с продуктом для ссылки и использования пользователя. В этом разделе описывается, как с легкостью настроить эти сценарии в соответствии с потребностями конечного пользователя.  
@@ -122,7 +122,7 @@ ms.locfileid: "88463293"
   
     `object-name:` Указывает имя базы данных-источника или таблицы, которые необходимо перенести. Убедитесь, что соответствующие `object-type` изменения основаны на типе объекта, который указан в `object-name`  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Создание файлов переменных значений &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
 [Создание файлов подключения к серверу &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
 [Создание отчетов &#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md)  

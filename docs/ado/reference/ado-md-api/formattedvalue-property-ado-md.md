@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5c06451e-06ec-4da6-9a87-2d043469248a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c2b1f8ebc7341a85cbeb887133336653979b5d9a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: aba336cff29c02f1468ed1763d005990cc465adb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169851"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100054760"
 ---
 # <a name="formattedvalue-property-ado-md"></a>Свойство FormattedValue (многомерные объекты ADO)
 Указывает отформатированное отображение значения [ячейки](./cell-object-ado-md.md) .  
@@ -30,7 +30,7 @@ ms.locfileid: "99169851"
 ## <a name="return-values"></a>Возвращаемые значения  
  Возвращает **строку** и доступна только для чтения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте свойство **FormattedValue** для получения форматированного отображаемого значения свойства [value](./value-property-ado-md.md) объекта [ячейки](./cell-object-ado-md.md) . Например, если значение ячейки 1056,87, а это значение представляло собой сумму в долларах, **FormattedValue** будет $1 056,87.  
   
 ## <a name="applies-to"></a>Применение  

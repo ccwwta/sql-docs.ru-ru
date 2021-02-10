@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9ae780dc-b33f-4861-a996-176bae9e7211
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: fc847eecec3f84cda54e2820a444036a016ec9a8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d8f2dff81302c644a244a451f314026d29119cbd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935273"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100062819"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>Команды меню и другие сочетания клавиш (MySQLToSQL)
 В следующих разделах описываются сочетания клавиш для доступа к командам меню и другие сочетания клавиш, используемые в различных диалоговых окнах приложения SSMA для MySQL.  
@@ -181,5 +181,5 @@ ms.locfileid: "87935273"
 |Переход к объявлению.|F12|  
   
 ## <a name="see-also"></a>См. также:  
-[Сочетания клавиш &#40;&#41;MySQLToSQL](../../ssma/mysql/shortcut-keys-mysqltosql.md)  
+[Сочетания клавиш &#40;&#41;MySQLToSQL ](../../ssma/mysql/shortcut-keys-mysqltosql.md)  
   

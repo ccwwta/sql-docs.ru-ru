@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c1fd0cdb2322b3cad507745a97faa6b74f245b40
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 88c9adb5ec2167bba4183d2040b16d19d5b25711
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169958"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100057049"
 ---
 # <a name="cell-object-ado-md"></a>Объект Cell (многомерные объекты ADO)
 Представляет данные на пересечении координат осей, содержащихся в наборе ячеек.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Объект **ячейки** возвращается свойством [Item](./item-property-ado-md-cellset.md) объекта набора [ячеек](./cellset-object-ado-md.md) .  
   
  С помощью коллекций и свойств объекта **ячейки** можно выполнять следующие действия.  
@@ -43,7 +43,7 @@ ms.locfileid: "99169958"
   
  Коллекция **Properties** содержит свойства, предоставляемые поставщиком. В следующей таблице перечислены свойства, которые могут быть доступны. Фактический список свойств может отличаться в зависимости от реализации поставщика. Более полный список доступных свойств см. в документации поставщика.  
   
-|name|Описание|  
+|Имя|Описание|  
 |----------|-----------------|  
 |BackColor|Цвет фона, используемый при отображении ячейки.|  
 |FontFlags|Битовая маска, определяющая влияние на шрифт.|  

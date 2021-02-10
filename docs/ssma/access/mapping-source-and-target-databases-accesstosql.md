@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9e07c42e272728943f30198c8800c86aaa9443e3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 966ec1472737f0e4d67615d4e7eb65df01a52cf4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938183"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100059059"
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>Сопоставление исходных и целевых баз данных (Акцесстоскл)
 При подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure необходимо указать целевую базу данных для миграции. Если у вас есть несколько баз данных Access, их можно сопоставлять с несколькими [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базами данных (или схемами) или с несколькими схемами в подключенной базе данных SQL Azure.  
   
 ## <a name="sql-server-or-azure-sql-database-schemas"></a>SQL Server или схемы базы данных SQL Azure  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]базы данных используют концепцию схем для разделения объектов в базе данных на логические группы. Например, база данных библиотеки может использовать три схемы с именами **Books**, **Audio**и **Video** для разделения книг, звуковых и видеообъектов друг от друга. По умолчанию база данных Access сопоставляется с базой данных **master** и схемой **dbo** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и с подключенной базой данных и схемой **dbo** в SQL Azure.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных используют концепцию схем для разделения объектов в базе данных на логические группы. Например, база данных библиотеки может использовать три схемы с именами **Books**, **Audio** и **Video** для разделения книг, звуковых и видеообъектов друг от друга. По умолчанию база данных Access сопоставляется с базой данных **master** и схемой **dbo** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и с подключенной базой данных и схемой **dbo** в SQL Azure.  
   
 Если не настроить сопоставление между каждой базой данных Access и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базой данных и схемой, SSMA будет переносить все схемы и данные, связанные с базой данных Access, в сопоставленную базу данных по умолчанию.  
   

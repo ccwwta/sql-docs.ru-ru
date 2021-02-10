@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e6baf106-abbd-4200-b3de-33b4b4f1b294
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 0f5205dccc0d5c13f4c9308d32d981a7be506656
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b3f417752ef7de6ab5c4fef077eb9771d7454996
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463166"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100057199"
 ---
 # <a name="creating-script-files-sybasetosql"></a>Создание файлов сценария (SybaseToSQL)
 Первым шагом перед запуском консольного приложения SSMA является создание файла скрипта и при необходимости создание файла значения переменной и файла подключения к серверу.  
@@ -400,6 +400,6 @@ ms.locfileid: "88463166"
 ## <a name="next-step"></a>Следующий шаг  
 Следующим шагом в работе консоли является [Создание файлов значений переменных &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Создание файлов переменных значений &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
   

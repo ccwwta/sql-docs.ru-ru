@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3aae1107-2f81-413c-8eda-ef96c3df1b8a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a78cd5e1d1415353e2186570abda78e16b7316b9
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b09edba191b0927ade67755b3aaa39f5becfdb41
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166161"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100055749"
 ---
 # <a name="catalog-example-vb"></a>Пример объекта Catalog (Visual Basic)
 Этот Visual Basic проект создает новый куб с помощью многомерных выражений. Затем он документирует структуру куба в документе Microsoft Word.  

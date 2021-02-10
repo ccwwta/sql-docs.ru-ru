@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 66384c27490bbc9d330f5f2d186bad1b4f4b97ee
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 07560faaa3fb3316864216859f79cd5e1b7ff950
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038868"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056839"
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>Преобразование объектов базы данных SAP ASE (SybaseToSQL)
 После подключения к адаптивному серверу SAP (ASE), подключению к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure и настройке параметров проекта и сопоставления данных можно преобразовать объекты базы данных SAP адаптивного сервера Enterprise (ASE) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или объекты базы данных SQL Azure.  
@@ -49,7 +49,7 @@ ms.locfileid: "92038868"
   
     -   Чтобы преобразовать или опустить отдельные объекты, разверните папку Категория, а затем установите или снимите флажок рядом с объектом.  
   
-3.  Чтобы преобразовать все выбранные объекты, щелкните правой кнопкой мыши элемент **базы данных**и выберите команду **преобразовать схему**.  
+3.  Чтобы преобразовать все выбранные объекты, щелкните правой кнопкой мыши элемент **базы данных** и выберите команду **преобразовать схему**.  
   
     Можно также преобразовать отдельные объекты или категории объектов, щелкнув правой кнопкой мыши объект или содержащую его папку, а затем выбрав команду **преобразовать схему**.  
   
@@ -156,5 +156,5 @@ ms.locfileid: "92038868"
 ## <a name="next-steps"></a>Дальнейшие действия  
 Следующий шаг процесса миграции [загружает преобразованные объекты базы данных в SQL Server или SQL Azure (SybaseToSQL)](./loading-converted-database-objects-into-sql-server-sybasetosql.md).  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также раздел  
 [Миграция баз данных SAP ASE в SQL Server — база данных SQL Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

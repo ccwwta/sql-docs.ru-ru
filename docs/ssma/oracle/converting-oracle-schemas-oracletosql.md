@@ -13,12 +13,12 @@ ms.assetid: e021182d-31da-443d-b110-937f5db27272
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 907c04d8acd0859b71d1b31d2839c23d5e4b85e8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8e2ee101ec916a920d4b72d924456a52850e8bc7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935071"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100058759"
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>Преобразование схем Oracle (OracleToSQL)
 После подключения к Oracle, подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и настройки параметров проекта и сопоставления данных можно преобразовать объекты базы данных Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объекты базы данных.  
@@ -26,7 +26,7 @@ ms.locfileid: "87935071"
 ## <a name="the-conversion-process"></a>Процесс преобразования  
 Преобразование объектов базы данных принимает определения объектов из Oracle, преобразует их в аналогичные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объекты, а затем загружает эту информацию в метаданные SSMA. Он не загружает сведения в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Затем можно просмотреть объекты и их свойства с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обозревателя метаданных.  
   
-Во время преобразования SSMA выводит выходные сообщения на панель вывода и сообщения об ошибках в область Список ошибок. Используйте выходные данные и сведения об ошибках, чтобы определить, нужно ли изменить базы данных Oracle или процесс преобразования, чтобы получить нужные результаты преобразования.  
+Во время преобразования SSMA выводит выходные сообщения на панель вывода и сообщения об ошибках в область список ошибок. Используйте выходные данные и сведения об ошибках, чтобы определить, нужно ли изменить базы данных Oracle или процесс преобразования, чтобы получить нужные результаты преобразования.  
   
 ## <a name="setting-conversion-options"></a>Настройка параметров преобразования  
 Перед преобразованием объектов проверьте параметры преобразования проекта в диалоговом окне " **Параметры проекта** ". С помощью этого диалогового окна можно задать, как SSMA преобразует функции и глобальные переменные. Дополнительные сведения см. в разделе [Project Settings &#40;Conversion&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md).  

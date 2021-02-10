@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f6a17e8c-7a28-48d0-bded-76b9e0cf7639
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 61e170cd368771fc75c2c6e552d4465dfe51866c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: f68e21972be70369d231ede6788be5d4b200b69d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166378"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056449"
 ---
 # <a name="type-property-ado-stream"></a>Свойство Type (объект Stream ADO)
 Указывает тип данных, содержащихся в [потоке](./stream-object-ado.md) (двоичный или текстовый).  
@@ -31,7 +31,7 @@ ms.locfileid: "99166378"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает значение [стреамтипинум](./streamtypeenum.md) , указывающее тип данных, содержащихся в объекте **потока** . Значение по умолчанию — **адтипетекст**. Однако, если двоичные данные изначально записываются в новый пустой **поток**, **Тип** изменится на **адтипебинари**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Свойство **Type** доступно только для чтения и записи, если текущая координата находится в начале **потока** (значение [позиции](./position-property-ado.md) равно 0), а в любой другой позиции — только для чтения.  
   
  Свойство **Type** определяет, какие методы следует использовать для чтения и записи **потока**. Для текстовых **потоков** используйте [ReadText](./readtext-method.md) и [WriteText](./writetext-method.md). Для двоичных **потоков** используйте [Чтение](./read-method.md) и [запись](./write-method.md).  

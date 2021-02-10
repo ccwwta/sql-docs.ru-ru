@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: b506f7ae063964bc1667b4425028cd35fbc9c91e
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: af91274d4e48ce99894316c730a58d68fd633242
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985130"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100062909"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Преобразование схем DB2 (DB2ToSQL)
 После подключения к DB2, подключения к и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настройки параметров проекта и сопоставления данных можно преобразовать объекты базы данных DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объекты базы данных.  
@@ -23,7 +23,7 @@ ms.locfileid: "91985130"
 ## <a name="the-conversion-process"></a>Процесс преобразования  
 Преобразование объектов базы данных принимает определения объектов из DB2, преобразует их в аналогичные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объекты, а затем загружает эти сведения в метаданные SSMA. Он не загружает сведения в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Затем можно просмотреть объекты и их свойства с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обозревателя метаданных.  
   
-Во время преобразования SSMA выводит выходные сообщения на панель вывода и сообщения об ошибках в область Список ошибок. Используйте выходные данные и сведения об ошибках, чтобы определить, нужно ли изменить базы данных DB2 или процесс преобразования, чтобы получить нужные результаты преобразования.  
+Во время преобразования SSMA выводит выходные сообщения на панель вывода и сообщения об ошибках в область список ошибок. Используйте выходные данные и сведения об ошибках, чтобы определить, нужно ли изменить базы данных DB2 или процесс преобразования, чтобы получить нужные результаты преобразования.  
   
 ## <a name="setting-conversion-options"></a>Настройка параметров преобразования  
 Перед преобразованием объектов проверьте параметры преобразования проекта в диалоговом окне " **Параметры проекта** ". С помощью этого диалогового окна можно задать, как SSMA преобразует функции и глобальные переменные. Дополнительные сведения см. в разделе [Project Settings &#40;Conversion&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-conversion-db2tosql.md).  

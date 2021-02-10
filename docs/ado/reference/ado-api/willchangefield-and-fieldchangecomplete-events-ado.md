@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca5aa421eff2048ebce6af5c8db4c6791a67259c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 4aef5291d7e4c539200eb0cfd34edf3174c44c0b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172375"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056139"
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>События WillChangeField и FieldChangeComplete (ADO)
 Событие **виллчанжефиелд** вызывается до того, как ожидающая операция изменяет значение одного или нескольких объектов [field](./field-object.md) в [наборе записей](./recordset-object-ado.md). Событие **фиелдчанжекомплете** вызывается после изменения значения одного или нескольких объектов **field** .  
@@ -62,7 +62,7 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
  *предшнур*  
  Объект **Recordset** . **Набор записей** , для которого произошло это событие.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Событие **виллчанжефиелд** или **фиелдчанжекомплете** может возникнуть при установке свойства [value](./value-property-ado.md) и вызове метода [Update](./update-method.md) с параметрами массива полей и значений.  
   
 ## <a name="see-also"></a>См. также:  

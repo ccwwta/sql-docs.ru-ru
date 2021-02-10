@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3da213467ad6513d4c25e6888bd095e80746cba7
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 92fb1bec694ca29ffe0591eb03012e1ed2ab3f2f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038277"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064379"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>Работа с проектами SSMA (MySQLToSQL)
 Чтобы перенести базы данных MySQL в SQL Server или SQL Azure, необходимо сначала создать проект SSMA. Проект представляет собой файл, содержащий следующие сведения:  
@@ -106,7 +106,7 @@ SSMA создает файл проекта.
   
 1.  Для каждой базы данных, в которой не **указано состояние метаданных**, установите флажок рядом с именем базы данных. Сохранение метаданных может занять несколько минут. Если вы не хотите сохранять метаданные на этом этапе, не выбирайте никакие флажки.  
   
-2.  Щелкните **Сохранить**.  
+2.  Выберите команду **Сохранить**.  
   
 SSMA будет анализировать схемы MySQL и сохранять метаданные в файл проекта.  
   

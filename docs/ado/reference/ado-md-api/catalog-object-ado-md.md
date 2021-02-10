@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 11f6f896-d69c-44a4-94cd-d54c93140e4a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 834594c957c05d4e2acef78bb772afcbe83b685a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 73ae5da9b73093251dcf2355643e038264182b90
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169972"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100055739"
 ---
 # <a name="catalog-object-ado-md"></a>Объект Catalog (многомерные объекты ADO)
 Содержит сведения о многомерной схеме (то есть Кубы и базовые измерения, иерархии, уровни и элементы), относящиеся к поставщику многомерных данных (MDP).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  С помощью коллекций и свойств объекта **каталога** можно выполнять следующие действия.  
   
 -   Откройте каталог, задав для свойства [ActiveConnection](./activeconnection-property-ado-md.md) стандартный объект [соединения](../ado-api/connection-object-ado.md) ADO или допустимую строку подключения.  

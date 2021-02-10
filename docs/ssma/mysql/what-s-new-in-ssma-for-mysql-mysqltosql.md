@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 ms.author: alexiva
-ms.openlocfilehash: b97f27f2e6c1fbed9109abbde012d7a8cf97935a
-ms.sourcegitcommit: a16b98d3bf3eeb58f5d2aeece2464f8a96e2b4a8
+ms.openlocfilehash: 5f2de303081b21e1b29ce99059e15bc3634b32d8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97665835"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064309"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>Новые возможности в SSMA для MySQL (MySQLToSql)
 
@@ -126,7 +126,7 @@ ms.locfileid: "97665835"
 Выпуск версии SSMA для MySQL усовершенствован с помощью целевого набора исправлений, разработанных для улучшения показателей качества и преобразования, а также исправлений для:
 
 * Проблемы с отключенными некластеризованными индексами после переноса данных.
-* Обнаружение .NET Framework во время автоматической установки.
+* Обнаружение платформа .NET Framework во время автоматической установки.
 * Периодический сбой, возникающий при скачивании новой версии.
 
 > [!NOTE]

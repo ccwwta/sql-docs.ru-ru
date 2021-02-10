@@ -14,12 +14,12 @@ ms.assetid: ''
 author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 20f216b920eb16651ca0d06a6b8090e431f8c592
-ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
+ms.openlocfilehash: a893ad7e086abfdf0cc61c785ad6d93c3eeed184
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "92439408"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100061529"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Выполнение оценки миграции службы интеграции SQL Server с Помощник по миграции данных
 
@@ -42,7 +42,7 @@ DMA необходимо запустить с **правами админист
 
 1. Укажите тип исходного и целевого серверов.
 
-    Выберите источник как **SQL Server**и задайте тип целевого сервера в качестве **базы данных SQL Azure** или **Azure SQL управляемый экземпляр**.
+    Выберите источник как **SQL Server** и задайте тип целевого сервера в качестве **базы данных SQL Azure** или **Azure SQL управляемый экземпляр**.
 
 1. Нажмите кнопку **Создать**.
 

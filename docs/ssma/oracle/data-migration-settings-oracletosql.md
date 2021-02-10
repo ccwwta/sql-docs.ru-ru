@@ -11,12 +11,12 @@ ms.assetid: 91f7f558-025d-4f4d-ac2c-aa095e7d1ace
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: a46cdca0d713dc9d33cc919e312a500d867fbfbd
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 4bd91336e15f7d9404632aafd0b9cbc29e0dc2e0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038057"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100058469"
 ---
 # <a name="data-migration-settings-oracletosql"></a>Параметры миграции данных (OracleToSQL)
   
@@ -41,7 +41,7 @@ ms.locfileid: "92038057"
     -   Если это текстовое поле не отмечено, то переносимые данные будут добавлены к существующим данным в целевой базе данных.  
   
 2.  **Использовать пользовательское выделение:**  
-     Этот параметр позволяет пользователю изменить имеющуюся инструкцию **SELECT** (инструкция**SELECT** позволяет пользователям выбирать данные для отображения в целевой базе данных).  
+     Этот параметр позволяет пользователю изменить имеющуюся инструкцию **SELECT** (инструкция **SELECT** позволяет пользователям выбирать данные для отображения в целевой базе данных).  
   
     1.  По умолчанию это текстовое поле не отмечено.  
   

@@ -1,6 +1,6 @@
 ---
 description: Специальные типы данных для драйвера, типы дескрипторов, типы сведений, диагностические типы и атрибуты
-title: Типы, зависящие от драйвера — данные, дескриптор, сведения, диагностика | Документация Майкрософт
+title: Типы Driver-Specific — данные, дескриптор, сведения, диагностика | Документация Майкрософт
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,25 +15,25 @@ helpviewer_keywords:
 ms.assetid: ad4c76d3-5191-4262-b47c-5dd1d19d1154
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9a0ac3fd67e07f23f14420ee46ccda5cd409f87a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 03cd6b0ed9a424a161f88f4bd525941895d3d201
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483007"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100062569"
 ---
 # <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>Специальные типы данных для драйвера, типы дескрипторов, типы сведений, диагностические типы и атрибуты
 Драйверы могут выделять значения, зависящие от драйвера, для следующих параметров:  
   
--   **Индикаторы типа данных SQL** Они используются в *ParameterType* в **SQLBindParameter** и в *DataType* в **SQLGetTypeInfo** и возвращаются **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLGetTypeInfo**, **SQLDescribeParam**, **SQLProcedureColumns**и **SQLSpecialColumns**.  
+-   **Индикаторы типа данных SQL** Они используются в *ParameterType* в **SQLBindParameter** и в *DataType* в **SQLGetTypeInfo** и возвращаются **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLGetTypeInfo**, **SQLDescribeParam**, **SQLProcedureColumns** и **SQLSpecialColumns**.  
   
--   **Поля дескриптора** Они используются в *фиелдидентифиер* в **SQLColAttribute**, **SQLGetDescField**и **SQLSetDescField**.  
+-   **Поля дескриптора** Они используются в *фиелдидентифиер* в **SQLColAttribute**, **SQLGetDescField** и **SQLSetDescField**.  
   
 -   **Поля диагностики** Они используются в *диагидентифиер* в **SQLGetDiagField** и **SQLGetDiagRec**.  
   
 -   **Типы сведений** Они используются в *инфотипе* в **SQLGetInfo**.  
   
--   **Атрибуты соединения и инструкции** Они используются в *атрибуте* в **SQLGetConnectAttr**, **SQLGetStmtAttr**, **SQLSetConnectAttr**и **SQLSetStmtAttr**.  
+-   **Атрибуты соединения и инструкции** Они используются в *атрибуте* в **SQLGetConnectAttr**, **SQLGetStmtAttr**, **SQLSetConnectAttr** и **SQLSetStmtAttr**.  
   
  Для каждого из этих элементов существует два набора значений: значения, зарезервированные для использования в ODBC, и значения, зарезервированные для использования драйверами. Перед реализацией значений, зависящих от драйвера, средство записи драйверов должно запрашивать значение для каждого конкретного типа, поля или атрибута из открытой группы. Для разработки нового драйвера используйте диапазон, описанный в таблице ниже. Диспетчер драйверов ODBC 3,8 не выдаст ошибку, если используется неизвестное значение, которое не входит в диапазон, описанный ниже. Однако более поздние версии диспетчера драйверов могут выдавать ошибку, если получены неизвестные значения, которые не находятся в диапазоне.  
   

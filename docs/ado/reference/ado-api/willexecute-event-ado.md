@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cffc2e0a79ff4bffd83eadac20cf522df6d0c9cc
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 53be0dbdb8ecebb6b81c1b4300353a07c0f442e5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99172372"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100056085"
 ---
 # <a name="willexecute-event-ado"></a>Событие WillExecute (ADO)
 Событие **WillExecute** вызывается непосредственно перед выполнением ожидающей команды в соединении.  
@@ -59,7 +59,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *пконнектион*  
  Объект [соединения (ADO)](./connection-object-ado.md) , к которому относится данное уведомление о событии.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Событие **WillExecute** может возникать из-за соединения.  Метод [Execute (соединение ADO)](./execute-method-ado-connection.md), [метод Execute (команда ADO)](./execute-method-ado-command.md)или [открытый метод (набор записей ADO)](./open-method-ado-recordset.md) . параметр *пконнектион* всегда должен содержать допустимую ссылку на объект **соединения** . Если событие вызвано **Connection.Exeмилые** *, то параметры* предустановки и *Пкомманд* задаются как **Nothing**. Если это событие связано с **набором Recordset. Open**, параметр *предшнура* будет ссылаться на объект **Recordset** , а параметр *пкомманд* имеет значение **Nothing**. Если событие происходит из-за **Command.Exeмилые**, параметр *пкомманд* будет ссылаться на объект **Command** , *а параметру* предустановки — значение **Nothing**.  
   
  **WillExecute** позволяет проверять и изменять параметры ожидания выполнения. Это событие может возвращать запрос на отмену ожидающей команды.  

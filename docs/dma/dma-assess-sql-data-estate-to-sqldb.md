@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c6e5a3878011de396568c4649ea5575635e96aec
-ms.sourcegitcommit: 3bd188e652102f3703812af53ba877cce94b44a9
+ms.openlocfilehash: 4c59fb5228ef46a693e343716d1e58e56c042a53
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2020
-ms.locfileid: "97489558"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100061559"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Оценка готовности SQL Serverного пространства данных для переноса в базу данных SQL Azure с помощью Помощник по миграции данных
 
@@ -101,7 +101,7 @@ ms.locfileid: "97489558"
 
     Если вы обновляете локальный экземпляр SQL Server до более поздней версии SQL Server или для SQL Server, размещенного на виртуальной машине Azure, задайте для параметра Тип исходного и целевого сервера значение **SQL Server**. Задайте тип целевого сервера **Azure sql управляемый экземпляр** для оценки готовности целевой базы данных SQL Azure (PaaS).
 
-3. Нажмите кнопку **создания**.
+3. Нажмите кнопку **Создать**.
 
    ![Интерфейс Помощник по миграции данных службы "миграция Azure"](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-interface.png)
 
