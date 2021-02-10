@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07d25fc0-4958-4e12-b616-36257ead812b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1956e7fff574174e9566f489a22bd725020336fc
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 57ffe57a9ad4dd1faa0335718a9ac13f799d5b50
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88990965"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033414"
 ---
 # <a name="using-ado-with-microsoft-visual-c"></a>Использование объектов ADO с Microsoft Visual C++
 Сведения об использовании ADO с Visual C++ см. в следующих разделах:  
@@ -35,7 +35,7 @@ ms.locfileid: "88990965"
   
 -   [Образец расширения Visual C++](./visual-c-extensions-example.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Microsoft объекты данных ActiveX (ADO)](../../microsoft-activex-data-objects-ado.md)   
  [Visual C++ индекс синтаксиса для COM](../../reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)   
  [ADO для Visual C++ индекса синтаксиса с #import](../../reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   

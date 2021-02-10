@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bec2b55f7daee865489c3f32e1ee70e53b9102a6
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ec46ed0f94ffe9bd50d0576ab7b3855011bcf775
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980635"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033164"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: простое приложение ADO
 Это простое приложение проходит через каждую из четырех основных операций ADO: получение, изучение, изменение и обновление данных. Эти операции выполняются с примером базы данных Northwind, входящей в состав SQL Server Microsoft®. Чтобы сосредоточиться на основных принципах работы с ADO и избежать загромождения кода, обработка ошибок в примере минимальна.  
@@ -52,10 +52,10 @@ ms.locfileid: "88980635"
 |TextBox|Имя|txtDisplay1|  
 ||Multiline|Да|  
 |Кнопка команды|Имя|кмджетдата|  
-||Caption|Получение данных|  
+||Заголовок|Получение данных|  
 |Кнопка команды|Имя|кмдексаминедата|  
-||Caption|Проверка данных|  
+||Заголовок|Проверка данных|  
 |Кнопка команды|Имя|кмдедитдата|  
-||Caption| Изменение данных|  
+||Заголовок| Изменение данных|  
 |Кнопка команды|Имя|кмдупдатедата|  
-||Caption|Обновление данных|
+||Заголовок|Обновление данных|

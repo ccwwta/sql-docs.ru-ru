@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: f156aa48-bfc2-40d1-962b-7b08855776c6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3896ec0e36fb5416d97cf3e6e6ad8409843cae3a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ddc69b4d66266732d784f0546a52a222f5fe23ec
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164634"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100034804"
 ---
 # <a name="comparebookmarks-method-example-vb"></a>Пример метода CompareBookmarks (Visual Basic)
 В этом примере демонстрируется метод [CompareBookmarks](./comparebookmarks-method-ado.md) . Относительное значение закладок редко требуется, если конкретная закладка не является каким-либо специальным.  
   
- Назначьте случайную строку [набора записей](./recordset-object-ado.md) , полученную из таблицы ***authors** _, в качестве цели поиска. Затем отобразить расположение каждой строки относительно этого целевого объекта.  
+ Назначьте случайную строку [набора записей](./recordset-object-ado.md) , производного от таблицы ***authors*** , в качестве цели поиска. Затем отобразить расположение каждой строки относительно этого целевого объекта.  
   
 ```  
 'BeginCompareBookmarksVB  
@@ -59,7 +59,7 @@ Public Sub Main()
   
      ' Open recordset as a static cursor type recordset  
     Set rstAuthors = New ADODB.Recordset  
-    strSQLAuthors = "SELECT _ FROM Authors"  
+    strSQLAuthors = "SELECT * FROM Authors"  
     rstAuthors.Open strSQLAuthors, Cnxn, adOpenStatic, adLockReadOnly, adCmdText  
   
     count = rstAuthors.RecordCount  

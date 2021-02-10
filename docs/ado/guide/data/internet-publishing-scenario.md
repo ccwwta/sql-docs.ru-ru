@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2f551969-0fd9-41ee-b81d-100975a4bdc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 40a74a489a39d0bbb4c11c27e16225aec8779606
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2e31ee8fb294dc66b52630d79a585961b1f360d7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88980455"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032756"
 ---
 # <a name="internet-publishing-scenario"></a>Сценарий публикации в Интернете
-В этом примере кода показано, как использовать ADO с поставщиком Microsoft OLE DB для публикации в Интернете. В этом сценарии вы создадите Visual Basic приложение, которое использует объекты **Recordset**, **Record**и **Stream** для вывода содержимого ресурсов, опубликованных с помощью поставщика публикации в Интернете.  
+В этом примере кода показано, как использовать ADO с поставщиком Microsoft OLE DB для публикации в Интернете. В этом сценарии вы создадите Visual Basic приложение, которое использует объекты **Recordset**, **Record** и **Stream** для вывода содержимого ресурсов, опубликованных с помощью поставщика публикации в Интернете.  
   
  Для создания этого сценария необходимо выполнить следующие действия.  
   
@@ -35,6 +35,6 @@ ms.locfileid: "88980455"
   
 -   [Шаг 4. Заполнение текстового поля сведений](./step-4-populate-the-details-text-box.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Поставщик OLE DB Майкрософт для публикации в Интернете](../appendixes/microsoft-ole-db-provider-for-internet-publishing.md)   
  [Поставщик OLE DB для публикации в Интернете](./the-ole-db-provider-for-internet-publishing.md)

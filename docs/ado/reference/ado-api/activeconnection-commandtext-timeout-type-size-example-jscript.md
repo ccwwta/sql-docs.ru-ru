@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ea74e2a3-c965-43aa-9076-26a084b48ad8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b44f41b589e813e79e6a66e2736dbafc9d1c4e52
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9363e10227ad258cc1533619930d882e0c0ac0d3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99159925"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031566"
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-jscript"></a>Пример свойств ActiveConnection, CommandText, CommandTimeout, CommandType, Size и Direction (JScript)
 В этом примере для выполнения хранимой процедуры используются свойства [ActiveConnection](./activeconnection-property-ado.md), [CommandText](./commandtext-property-ado.md), [CommandTimeout](./commandtimeout-property-ado.md), [CommandType](./commandtype-property-ado.md), [size](./size-property-ado-parameter.md)и [Direction](./direction-property.md) . Вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **активеконнектионжс. ASP**.  

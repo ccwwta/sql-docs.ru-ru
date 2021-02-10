@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: d52e6926-5c22-43dc-9f32-7b32c1a071e2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 659ae835cb14a71018de651db83d5d7b934b43ae
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b17e1b7bdac37e6f170833fda83233017643526b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88979135"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100032316"
 ---
 # <a name="updating-joined-results-unique-table"></a>Обновление результатов объединения JOIN: уникальная таблица
 ADO позволяет точно управлять изменениями в определенной базовой таблице в наборе записей, сформированном операцией JOIN с несколькими базовыми таблицами, используя динамическое свойство уникальной таблицы. Дополнительные сведения об использовании уникальной таблицы см. в справочных разделах программиста ADO по уникальной таблице и обновлении динамических свойств ресинхронизации.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пакетный режим](../../../ado/guide/data/batch-mode.md)

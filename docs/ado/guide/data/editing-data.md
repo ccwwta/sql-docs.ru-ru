@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b39e62f1d7fc55c2d58b382677efa41e4df784a3
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2f8fa6b7a3fb898d425d439b11b42451d42ac17a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991345"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033234"
 ---
 # <a name="editing-data"></a>Изменение данных
 Мы объяснили, как использовать ADO для подключения к источнику данных, выполнять команду, получать результаты в объекте **набора записей** и перемещаться по **набору записей**. В этом разделе рассматриваются следующие фундаментальные операции ADO: Редактирование данных.  
   
- В этом разделе используется образец **набора записей** , представленный в статье [исследование данных](./examining-data.md)с одним важным изменением. Для открытия **набора записей**используется следующий код:  
+ В этом разделе используется образец **набора записей** , представленный в статье [исследование данных](./examining-data.md)с одним важным изменением. Для открытия **набора записей** используется следующий код:  
   
 ```  
 'BeginEditIntro  

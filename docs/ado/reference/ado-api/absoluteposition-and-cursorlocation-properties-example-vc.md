@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 48c07216-d199-4822-89f8-ce928d3d2b74
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b597fd2270ffa1b8fef7c921dccdb4ea4d8d337c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9bf02995e59e2e3bad2d2d93a1157b975c2ad1d2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99159275"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100031651"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-vc"></a>Пример свойств примеры AbsolutePosition и CursorLocation (Visual c++)
 В этом примере показано, как свойство [примеры AbsolutePosition](./absoluteposition-property-ado.md) может отслеживать ход выполнения цикла, который перечисляет все записи [набора записей](./recordset-object-ado.md). Свойство [CursorLocation](./cursorlocation-property-ado.md) используется для включения свойства **примеры AbsolutePosition** путем установки курсора на клиентский курсор.  

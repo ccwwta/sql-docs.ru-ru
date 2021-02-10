@@ -23,12 +23,12 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: wiassaf
 manager: amitban
-ms.openlocfilehash: fad0a1121d9d7d9e8cc37970022f1c5bbf028e10
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 636a16d8656572e6fe2505f58bafc9eca9f6ce18
+ms.sourcegitcommit: 78b3096c2be89bcda92244f78663d8b38811bec5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99184770"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "100009292"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-SQL)
 
@@ -51,7 +51,7 @@ ms.locfileid: "99184770"
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
 В базах данных SQL Basic, S0 и S1, а также для баз данных в эластичных пулах `Server admin` `Azure Active Directory admin` требуется учетная запись или. Для всех остальных целей службы базы данных SQL `VIEW DATABASE STATE` разрешение требуется в базе данных.    
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  
  sys.dm_os_spinlock_stats можно использовать для обнаружения источника конфликтов спина. В некоторых случаях может быть разрешено или устранено состязание за взаимоблокировки. Но возможны и такие ситуации, когда будет необходимо обратиться в службу поддержки пользователей [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
@@ -131,7 +131,7 @@ GO
 |DIGEST_CACHE|Только для внутреннего использования.|
 |динпбуф|Только для внутреннего использования.|
 |директлогконсумер|Только для внутреннего использования.|
-|DP_LIST|Управляет доступом к списку «грязных» страниц для базы данных с включенной косвенной контрольной точкой. Дополнительные сведения см. в [этой статье](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510).|
+|DP_LIST|Управляет доступом к списку «грязных» страниц для базы данных с включенной косвенной контрольной точкой. Примените исправления из [статьи 4497928](https://support.microsoft.com/kb/4497928), в [статье 4040276](https://support.microsoft.com/kb/4040276) или используйте [флаг трассировки 3468](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Дополнительные сведения см. в [этой статье](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510).|
 |DROP|Только для внутреннего использования.|
 |DROP_TEMPO|Только для внутреннего использования.|
 |DROPPED_ALLOC_UNIT|Только для внутреннего использования.|

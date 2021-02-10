@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0fcd3b23a6aeaa86b33650acf677dc132e8219d1
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: eda5438d4fbda93b9e8c19602b9236d1812e6826
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991505"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033294"
 ---
 # <a name="creating-a-connection-string"></a>Создание строки подключения
 Строка подключения состоит из списка пар "аргумент-значение" (то есть параметров), разделенных точкой с запятой. Пример:  

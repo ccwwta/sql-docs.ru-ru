@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: be4eda13-d4e4-4d6b-bb0d-3310b0a96fc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7a6975e606544ddc05a838fa0238d95132c13bf1
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d111bac142126b8d5c4d9ec14616c91a18e70d4f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171075"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100024630"
 ---
 # <a name="fieldenum"></a>FieldEnum
 Задает специальные поля, на которые ссылается коллекция [Fields](./fields-collection-ado.md) объекта [Record](./record-object-ado.md) .  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Эти константы предоставляют "ярлык" для доступа к специальным полям, связанным с **записью**. Получите объект [поля](./field-object.md) из коллекции **полей** , а затем получите его содержимое со свойством [value](./value-property-ado.md) объекта **field** .  
   
 |Константа|Значение|Описание|  

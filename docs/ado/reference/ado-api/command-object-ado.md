@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a02c22fb-542d-465e-a629-30fd59dcbebf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b8926e551f97d60256758b7df6c9dabca5584123
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: c8cb910eef7ef810b444813c1e6678b745c524e8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171485"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100026960"
 ---
 # <a name="command-object-ado"></a>Объект Command (ADO)
 Определяет конкретную команду, которую необходимо выполнить для источника данных.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте объект **Command** , чтобы запрашивать базу данных и возвращать записи в объекте [набора записей](./recordset-object-ado.md) , выполнять групповые операции или управлять структурой базы данных. В зависимости от функциональных возможностей поставщика некоторые коллекции **команд** , методы или свойства могут вызвать ошибку при ссылке.  
   
  С помощью коллекций, методов и свойств объекта **Command** можно выполнять следующие действия.  

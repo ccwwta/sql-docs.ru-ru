@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dedb841f9889d71da89107766ff26e3f870d1193
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: fdf7580f3a04a15fd75fb6d2c7712a694dfd2175
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991665"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100033764"
 ---
 # <a name="ado-fundamentals"></a>Основные принципы ADO
 ADO предоставляет разработчикам мощную, логическую объектную модель для программного доступа, редактирования и обновления данных из разнообразных источников данных с помощью OLE DB системных интерфейсов. Наиболее распространенным применением ADO является запрос таблицы или таблиц в реляционной базе данных, получение и отображение результатов в приложении и, возможно, предоставление пользователям доступа и сохранение изменений в данных. К другим задачам относятся следующие.  

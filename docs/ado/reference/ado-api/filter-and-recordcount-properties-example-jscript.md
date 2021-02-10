@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 677fa67e-9cb9-4d7d-a786-beeb5bee5236
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 15043939f3e2f024895d5199117550022ad43117
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 1610f0dd498b8dfbaa9718071a63fbb457822d4f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99171055"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100024620"
 ---
 # <a name="filter-and-recordcount-properties-example-jscript"></a>Пример свойств Filter и RecordCount (JScript)
 Этот пример открывает **набор записей** в таблице компании базы данных Northwind, а затем использует свойство [Filter](./filter-property.md) для ограничения записей, видимых для тех, где поле CompanyName начинается с буквы D. вырежьте и вставьте следующий код в Блокнот или другой текстовый редактор и сохраните его как **филтержс. ASP**.  
