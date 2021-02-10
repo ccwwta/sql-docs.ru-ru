@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 91eab784-3ce9-41d6-a840-9b0939ca0608
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6364517c41ff08417a86bcdc6fd5b3f7d0dd3c2b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 44c63a6eda1c98b76408a1f62a6aa3094aa4764e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164435"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050921"
 ---
 # <a name="position-object-ado-md"></a>Объект Position (многомерные объекты ADO)
 Представляет набор из одного или нескольких элементов различных измерений, определяющих точку вдоль оси.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  С помощью свойств и коллекций объекта « **позиционирование** » можно выполнять следующие действия.  
   
 -   Свойство **Ordinal** используется для возвращения порядкового номера **расположения** вдоль [оси](./axis-object-ado-md.md).  

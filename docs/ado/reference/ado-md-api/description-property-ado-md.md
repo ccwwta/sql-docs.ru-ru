@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6d626d35-0bf3-4f24-9934-ad9c9c91273a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7339bcafe8df6678ec5cd9a0bef43dd92dd6edbd
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 4fbb1ff444c4d5b2cbf233ec2999411ab11ddfd9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169884"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051165"
 ---
 # <a name="description-property-ado-md"></a>Свойство Description (многомерные объекты ADO)
 Возвращает текстовое описание текущего объекта.  
@@ -34,7 +34,7 @@ ms.locfileid: "99169884"
 ## <a name="return-values"></a>Возвращаемые значения  
  Возвращает **строку** и доступна только для чтения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Для объектов [member](./member-object-ado-md.md) **Описание** применяется только к элементам Measure и формуле. **Описание** возвращает пустую строку ("") для всех других типов элементов. Дополнительные сведения о различных типах членов см. в описании свойства [Type](./type-property-ado-md.md) .  
   
  Это свойство поддерживается только для объектов- **членов** , принадлежащих объекту [уровня](./level-object-ado-md.md) . Ошибка возникает, когда на это свойство ссылаются объекты- **члены** , принадлежащие объекту- [положению](./position-object-ado-md.md) .  

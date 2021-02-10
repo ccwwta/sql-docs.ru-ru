@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f5375fa1-4711-4f7e-9ba4-54c427f71325
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c95d36c758b81daa1a60419d6214d75781131c9e
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 281a58f7e8dfc5a7f157a7f331ebc1378389ae39
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166665"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051665"
 ---
 # <a name="refresh-method-example-vb"></a>Пример метода Refresh (Visual Basic)
 В этом примере демонстрируется использование метода [Refresh](./refresh-method-ado.md) для обновления коллекции [Parameters](./parameters-collection-ado.md) для объекта [команды](./command-object-ado.md) хранимой процедуры.  

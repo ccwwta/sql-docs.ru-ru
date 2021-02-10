@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1370f83c4214047038eadf4b84813f0b48c3b72
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 4f84fe2157e9da38ad55a56334436a5d54128823
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164543"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051155"
 ---
 # <a name="hierarchy-object-ado-md"></a>Объект Hierarchy (многомерные объекты ADO)
 Представляет один из способов, с помощью которых элементы [измерения](./dimension-object-ado-md.md) могут быть объединены или сведены. Измерение можно объединить по одной или нескольким иерархиям.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  С помощью коллекций и свойств объекта **Hierarchy** можно выполнять следующие действия.  
   
 -   Определяет **иерархию** с помощью свойств [Name](./name-property-ado-md.md) и [UniqueName](./uniquename-property-ado-md.md) .  
@@ -39,7 +39,7 @@ ms.locfileid: "99164543"
   
  Коллекция **Properties** содержит свойства, предоставляемые поставщиком. В следующей таблице перечислены свойства, которые могут быть доступны. Фактический список свойств может отличаться в зависимости от реализации поставщика. Более полный список доступных свойств см. в документации поставщика.  
   
-|name|Описание|  
+|Имя|Описание|  
 |----------|-----------------|  
 |AllMember|Элемент на высшем уровне свертки в иерархии.|  
 |CatalogName|Имя каталога, которому принадлежит куб.|  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 58199284-747b-4312-b97f-797ee7bd4435
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9cfb5a0f09e7f990fe5dd1f4ce21478c6d34446
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 1e63e6a1b45c9f64c2dc06518cd325e05a53cc41
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166530"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051425"
 ---
 # <a name="sort-property-example-vc"></a>Пример свойства Sort (Visual C++)
 В этом примере используется свойство [Sort](./sort-property.md) объекта [Recordset](./recordset-object-ado.md) для изменения порядка строк **набора записей** , полученного из ***таблицы* _authors_** _ базы данных. Вторичная служебная программа выводит каждую строку.  

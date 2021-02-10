@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a6001168-b954-47f0-ba0d-c05c4cc40c58
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: caadd690a43683b4e31ae73b99a7f24217fb8529
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 4d76ed341fe71f7a5927f6a7e84a63322adcf13f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164453"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051045"
 ---
 # <a name="ordinal-property-ado-md-cell"></a>Свойство Ordinal (многомерный объект ADO Cell)
 Однозначно определяет [ячейку](./cell-object-ado-md.md) по ее положению в наборе ячеек.  
@@ -30,7 +30,7 @@ ms.locfileid: "99164453"
 ## <a name="return-values"></a>Возвращаемые значения  
  Возвращает **длинное** целое число и доступно только для чтения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Порядковое значение ячейки однозначно определяет ячейку в наборе ячеек. По сути, ячейки нумеруются в наборе ячеек, как если *бы набор ячеек* был многомерным массивом, где *p* — это число [осей](./axes-collection-ado-md.md). Нумерация ячеек начинается с нуля в построчном порядке. Ниже приведена формула для вычисления порядкового номера ячейки.  
   
  Порядковое значение ячейки можно использовать со свойством [Item](./item-property-ado-md-cellset.md) объекта набора [ячеек](./cellset-object-ado-md.md) для быстрого извлечения [ячейки](./cell-object-ado-md.md).  

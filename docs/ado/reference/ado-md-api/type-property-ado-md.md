@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 34698910-64b9-41d8-8531-9de12f2b1e32
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 383105d5e33c3443cda93c5d2e8db77aaef57134
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: a09786a0819735625e518a25464fea28c2336e8a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169688"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050835"
 ---
 # <a name="type-property-ado-md"></a>Свойство Type (многомерные объекты ADO)
 Указывает тип текущего [элемента](./member-object-ado-md.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "99169688"
 ## <a name="return-values"></a>Возвращаемые значения  
  Возвращает значение [мембертипинум](./membertypeenum.md) и доступно только для чтения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Это свойство поддерживается только для объектов- [членов](./member-object-ado-md.md) , принадлежащих объекту [уровня](./level-object-ado-md.md) . Ошибка возникает, когда на это свойство ссылаются объекты- **члены** , принадлежащие объекту- [положению](./position-object-ado-md.md) .  
   
 ## <a name="applies-to"></a>Применение  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e6bad449-ebdb-4dd3-886a-9e6f1e7ee5d2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5f47c76cd0c79d1ffade6ff163558be5e5a254be
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 57682be31c8640dc68b149495df2b0b36639d419
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166547"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051445"
 ---
 # <a name="size-property-ado-parameter"></a>Свойство Size (объект Parameter ADO)
 Указывает максимальный размер объекта [параметра](./parameter-object.md) в байтах или символах.  
@@ -29,7 +29,7 @@ ms.locfileid: "99166547"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает значение **типа Long** , указывающее максимальный размер в байтах или символах значения в объекте **параметра** .  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Свойство **size** используется для определения максимального размера значений, записываемых или считываемых из свойства [value](./value-property-ado.md) объекта **Parameter** .  
   
  Если для объекта **параметра** задан тип данных переменной длины (например, любой **строковый** тип, например **адварчар**), необходимо задать свойство **size** объекта перед его добавлением в коллекцию [Parameters](./parameters-collection-ado.md) . в противном случае возникает ошибка.  

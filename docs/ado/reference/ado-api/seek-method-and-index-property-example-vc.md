@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0dd3d70fcb53d74ec9a364c8fe1b240c25d56112
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d59878f855be7593eeffaaec3fee9f6236b1b2ff
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166572"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051475"
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>Примеры метода Seek и свойства Index (Visual C++)
-В этом примере используется метод [Seek](./seek-method.md) объекта [Recordset](./recordset-object-ado.md) и свойство [index](./index-property.md) в сочетании с заданным ***идентификатором сотрудника** _, чтобы найти имя сотрудника в таблице _*_Employees_*_ базы данных Nwind. mdb.  
+В этом примере используется метод [Seek](./seek-method.md) объекта [Recordset](./recordset-object-ado.md) и свойство [index](./index-property.md) в сочетании с заданным ***идентификатором сотрудника** _, чтобы найти имя сотрудника в таблице _ *_Employees_** базы данных Nwind. mdb.  
   
 ```  
 // BeginSeekCpp.cpp  
@@ -69,7 +69,7 @@ void SeekX();
 void PrintProviderError(_ConnectionPtr pConnection);  
 void PrintComError(_com_error &e);  
   
-inline char_ mygets(char* strDest, int n) {      
+inline char* mygets(char* strDest, int n) {      
    char strExBuff[10];  
    char* pstrRet = fgets(strDest, n, stdin);  
   

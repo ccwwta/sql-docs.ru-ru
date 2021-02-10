@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a87d8080-a238-45e5-bc80-9a8625b3810f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 75970571be282042338ab7a5eb870a725af5e201
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 119a2394fba0b7558ee5a2975e07fccd76bd8ee9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169749"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051055"
 ---
 # <a name="open-method-ado-md"></a>Метод Open (многомерные объекты ADO)
 Извлекает результаты многомерного запроса и возвращает результаты в набор [ячеек](./cellset-object-ado-md.md).  
@@ -36,12 +36,12 @@ Cellset.Open Source, ActiveConnection
   
 #### <a name="parameters"></a>Параметры  
  *Источник*  
- Необязательный параметр. Значение **типа Variant** , результатом которого является допустимый многомерный запрос, например запрос многомерного выражения (MDX). *Исходный* аргумент соответствует свойству [Source](./source-property-ado-md.md) . Дополнительные сведения о многомерных выражениях см. в OLE DB документации по [OLAP](/previous-versions/windows/desktop/ms717005(v=vs.85)) в пакете SDK компонентов доступа к данным Microsoft.  
+ Необязательный элемент. Значение **типа Variant** , результатом которого является допустимый многомерный запрос, например запрос многомерного выражения (MDX). *Исходный* аргумент соответствует свойству [Source](./source-property-ado-md.md) . Дополнительные сведения о многомерных выражениях см. в OLE DB документации по [OLAP](/previous-versions/windows/desktop/ms717005(v=vs.85)) в пакете SDK компонентов доступа к данным Microsoft.  
   
  *ActiveConnection*  
- Необязательный параметр. **Значение типа Variant** , результатом которого является строка, указывающая допустимое имя переменной объекта [подключения](../ado-api/connection-object-ado.md) ADO или определение соединения. Аргумент *ActiveConnection* задает соединение, в котором будет открыт объект набора [ячеек](./cellset-object-ado-md.md) . При передаче определения соединения для этого аргумента ADO открывает новое соединение, используя указанные параметры. Аргумент *ActiveConnection* соответствует свойству [ActiveConnection](./activeconnection-property-ado-md.md) .  
+ Необязательный элемент. **Значение типа Variant** , результатом которого является строка, указывающая допустимое имя переменной объекта [подключения](../ado-api/connection-object-ado.md) ADO или определение соединения. Аргумент *ActiveConnection* задает соединение, в котором будет открыт объект набора [ячеек](./cellset-object-ado-md.md) . При передаче определения соединения для этого аргумента ADO открывает новое соединение, используя указанные параметры. Аргумент *ActiveConnection* соответствует свойству [ActiveConnection](./activeconnection-property-ado-md.md) .  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Метод **Open** выдает ошибку, если какой-либо из его параметров опущен, а соответствующее значение свойства не было задано до попытки открыть набор **ячеек**.  
   
 ## <a name="applies-to"></a>Применение  

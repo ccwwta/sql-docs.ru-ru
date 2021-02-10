@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ebbebb2150cbe9c03e51ac296c39c362a6670e1d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 501a7e3eda723579a63b39cf7fd09c9a39216604
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169805"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051145"
 ---
 # <a name="level-object-ado-md"></a>Объект Level (многомерные объекты ADO)
 Содержит набор элементов, каждый из которых имеет одинаковый ранг в иерархии.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  С помощью коллекций и свойств объекта **Level** можно выполнять следующие действия.  
   
 -   Определяет **уровень** с помощью свойств [Name](./name-property-ado-md.md) и [UniqueName](./uniquename-property-ado-md.md) .  
@@ -43,7 +43,7 @@ ms.locfileid: "99169805"
   
  Коллекция **Properties** содержит свойства, предоставляемые поставщиком. В следующей таблице перечислены свойства, которые могут быть доступны. Фактический список свойств может отличаться в зависимости от реализации поставщика. Более полный список доступных свойств см. в документации поставщика.  
   
-|name|Описание|  
+|Имя|Описание|  
 |----------|-----------------|  
 |CatalogName|Имя каталога, которому принадлежит куб.|  
 |CubeName|Имя куба.|  

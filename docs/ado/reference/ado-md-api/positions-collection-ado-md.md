@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 5b9e7545-cf30-464d-80ef-5c99c8306bab
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2a11dfa5b6fff9112098443d73ef54a742db06f6
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 1cd3a431884f314c814b2d7060ae506cb6c18d71
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164427"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100050905"
 ---
 # <a name="positions-collection-ado-md"></a>Коллекция Positions (многомерные объекты ADO)
 Содержит объекты [позиции](./position-object-ado-md.md) , определяющие точку на оси.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **Positions** — это стандартная коллекция ADO. С помощью свойств и методов коллекции можно выполнять следующие действия.  
   
 -   Получите количество объектов в коллекции со свойством [Count](../ado-api/count-property-ado.md) .  

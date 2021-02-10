@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a05ba2c9-2821-4343-8607-4de9b764ec91
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ece9c2255891424ce26ef6ed81285c6f5767086
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 04287b1fca3b3716302ab440f8f5213cff3f6302
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166505"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051375"
 ---
 # <a name="source-property-ado-recordset"></a>Свойство Source (объект Recordset ADO)
 Указывает источник данных для объекта [набора записей](./recordset-object-ado.md) .  
@@ -35,7 +35,7 @@ ms.locfileid: "99166505"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает **строковое** значение или ссылку на объект [команды](./command-object-ado.md) ; Возвращает только **строковое** значение, указывающее источник **набора записей**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте свойство **Source** , чтобы указать источник данных для объекта **набора записей** , используя одну из следующих команд: переменная объекта **команды** , инструкция SQL, хранимая процедура или имя таблицы.  
   
  Если задать для свойства **Source** объект **Command** , свойство [ActiveConnection](./activeconnection-property-ado.md) объекта **Recordset** будет наследовать значение свойства **ActiveConnection** для указанного объекта **команды** . Однако чтение свойства **Source** не приводит к возврату объекта **Command** . Вместо этого возвращается свойство [CommandText](./commandtext-property-ado.md) объекта **Command** , для которого задается **исходное** свойство.  

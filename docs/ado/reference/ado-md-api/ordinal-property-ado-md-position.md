@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6efe8b5d-a2d5-43a9-a5ea-f9244f8d4ec9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a560b34e6ec55892a6f779c4808e5a7c69d99bca
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 0ff25700d58b2f1101a7819d6c8faa914c2b0ae6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99169737"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051015"
 ---
 # <a name="ordinal-property-ado-md-position"></a>Свойство Ordinal (многомерный объект ADO Position)
 Уникально определяет [Расположение](./position-object-ado-md.md) вдоль оси.  
@@ -30,7 +30,7 @@ ms.locfileid: "99169737"
 ## <a name="return-values"></a>Возвращаемые значения  
  Возвращает **длинное** целое число и доступно только для чтения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Свойство **Ordinal** объекта [position](./position-object-ado-md.md) соответствует индексу **позиции** в коллекции [Positions](./positions-collection-ado-md.md) .  
   
  Ячейку можно быстро получить с помощью **порядкового номера** **позиции** вдоль каждой оси со свойством [Item](./item-property-ado-md-cellset.md) объекта набора [ячеек](./cellset-object-ado-md.md) .  

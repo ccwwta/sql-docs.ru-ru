@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 99c13920d8a786b4d9eae0d22a794b9ed34ddbb0
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 942f11dfa25a92f6914c868ffcdeb65c434e490c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99166732"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051855"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
 Указывает, следует ли открыть существующую **запись** или создать новую **запись** для метода [открытия](./open-method-ado-record.md) объекта [записи](./record-object-ado.md) . Значения можно сочетать с оператором AND.  

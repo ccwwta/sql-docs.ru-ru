@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 337c9eda-9ddf-49ac-94d3-b33114ba6224
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7710357ccb84d096aefcc1cca20bd87056326a5c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 568cc7db5b272ffa9fd4aef30e035ac83379eb49
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170295"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051485"
 ---
 # <a name="seek-method-and-index-property-example-vb"></a>Пример метода Seek и свойства Index (Visual Basic)
 В этом примере используется метод [Seek](./seek-method.md) объекта [Recordset](./recordset-object-ado.md) и свойство [index](./index-property.md) в сочетании с заданным ***идентификатором сотрудника** _, чтобы найти имя сотрудника в таблице _ *_Employees_** базы данных Nwind. mdb.  

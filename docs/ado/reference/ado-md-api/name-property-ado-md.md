@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 4a04380b-51dc-4aaf-8d25-123cdd589641
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce785bf3c9ca351331f071bf74cdf98a6e118618
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 96d411c00ee6f0c7d062a5bda4ca2295d4f36d5d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99164475"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051075"
 ---
 # <a name="name-property-ado-md"></a>Свойство Name (многомерные объекты ADO)
 Указывает имя объекта.  
@@ -36,7 +36,7 @@ ms.locfileid: "99164475"
 ## <a name="return-values"></a>Возвращаемые значения  
  Возвращает **строку** и доступна только для чтения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Свойство **Name** объекта можно получить по порядковому номеру, после чего можно будет ссылаться на объект непосредственно по имени. Например, если `cdf.CubeDefs(0).Name` выдает "bobs Video Store", можно ссылаться на этот [CubeDef](./cubedef-object-ado-md.md) как `cdf.CubeDefs("Bobs Video Store")` .  
   
 ## <a name="applies-to"></a>Применение  
