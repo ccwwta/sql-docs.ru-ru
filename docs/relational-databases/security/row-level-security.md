@@ -17,12 +17,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 828218dcebe5f2e5ab6c0759083f497876dae6b2
-ms.sourcegitcommit: 00be343d0f53fe095a01ea2b9c1ace93cdcae724
+ms.openlocfilehash: 739501f78f313f8fbff20d71cc63376a8da27343
+ms.sourcegitcommit: 58e7069b5b2b6367e27b49c002ca854b31b1159d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98813529"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "99552670"
 ---
 # <a name="row-level-security"></a>Безопасность на уровне строк
 
@@ -302,7 +302,7 @@ DROP SCHEMA Security;
 ### <a name="prerequisites"></a>Предварительные требования
 
 1. Вам потребуется выделенный пул SQL. См. статью [Создание выделенного пула SQL](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal).
-1. Сервер, на котором размещен выделенный пул SQL, должен быть зарегистрирован в AAD, и у вас должна быть учетная запись хранения Azure с разрешениями на уровне участника для BLOB-объектов хранилища. Следуйте инструкциям, которые приводятся [здесь](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps).
+1. Сервер, на котором размещен выделенный пул SQL, должен быть зарегистрирован в AAD, и у вас должна быть учетная запись хранения Azure с разрешениями на уровне участника для данных BLOB-объектов хранилища. Следуйте инструкциям, которые приводятся [здесь](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps).
 1. Создайте файловую систему для учетной записи хранения Azure. Используйте Обозреватель службы хранилища для просмотра учетной записи хранения. Щелкните правой кнопкой мыши на контейнерах и выберите *Создать файловую систему*.  
 
 Выполнив все предварительные условия, создайте три учетные записи пользователей, демонстрирующие разные возможности доступа.

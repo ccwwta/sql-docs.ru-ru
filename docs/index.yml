@@ -6,12 +6,12 @@ metadata:
   title: Документация по Microsoft SQL | Документация Майкрософт
   description: Узнайте, как использовать возможности SQL Server и SQL Azure для эффективного управления базами данных, размещаемыми как локально, так и в облаке.
   ms.topic: hub-page
-  ms.openlocfilehash: 68ee871d0a5d758a2fcb205373e8f61d02656cb1
-  ms.sourcegitcommit: e4b6357756a9c691b0441208a0058f7b8f3bea51
+  ms.openlocfilehash: 92327e6d448170977d25336a44b118d81497d1dd
+  ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 02/03/2021
-  ms.locfileid: "99510335"
+  ms.lasthandoff: 02/10/2021
+  ms.locfileid: "100074115"
 highlightedContent:
   items:
   - title: Попробуйте SQL Server 2019
@@ -43,7 +43,7 @@ productDirectory:
     - url: /azure/azure-sql/database/
       text: База данных SQL Azure
     - url: /azure/azure-sql/managed-instance/
-      text: Управляемый экземпляр SQL Azure
+      text: Управляемый экземпляр SQL Azure
     - url: /azure/azure-sql-edge/overview
       text: SQL Azure для пограничных вычислений
     - url: /azure/synapse-analytics/overview-what-is/

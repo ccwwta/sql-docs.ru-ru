@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: alexiva
-ms.openlocfilehash: 37d0898d242073c9bc842d0d3cca645acc02a851
-ms.sourcegitcommit: a16b98d3bf3eeb58f5d2aeece2464f8a96e2b4a8
+ms.openlocfilehash: a047a1528bafe0f04fca72661d4e32cc8b15fc89
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97665825"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069299"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>Новые возможности SSMA для DB2 (DB2ToSQL)
 
@@ -169,7 +169,7 @@ ms.locfileid: "97665825"
 Выпуск версии SSMA для DB2 усовершенствован с целью устранения проблем с подключением к базе данных SQL Azure из средства консоли SSMA и отсутствием COUNT_BIG столбца в объявлении views во время преобразования. Кроме того, эта версия включает целевой набор исправлений, предназначенный для улучшения качества и метрики преобразования, а также исправления для:
 
 * Проблемы с отключенными некластеризованными индексами после переноса данных.
-* Обнаружение .NET Framework во время автоматической установки.
+* Обнаружение платформа .NET Framework во время автоматической установки.
 * Периодический сбой, возникающий при скачивании новой версии.
 
 > [!NOTE]

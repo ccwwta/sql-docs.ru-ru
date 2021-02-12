@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ce63f633-067d-4f04-b8e9-e1abd7ec740b
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 536c32f8332fd3d3d2e2db505275b6cb773d24a6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8d10a1ce6bab71b99f11be697843ce32ed03c678
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418480"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077085"
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>Запуск консоли SSMA (DB2ToSQL)
 Корпорация Майкрософт предоставляет надежный набор команд для работы с файлами сценариев для выполнения и управления действиями SSMA. Эти разделы подробно описываются. Консольное приложение использует определенные стандартные команды файла сценария, перечисленные в этом разделе.  

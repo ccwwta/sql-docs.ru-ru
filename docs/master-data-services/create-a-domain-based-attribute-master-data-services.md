@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: daea6bffcefaab4866a27418d48eb2963482a5e6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ec761b64a614af99a4eddfbaa60c37d93d30bf1b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461872"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272695"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>Создание атрибута на основе домена (службы Master Data Services)
 
@@ -45,7 +45,7 @@ ms.locfileid: "88461872"
 |Столбец|Описание|
 |------------|-----------------|
 |Состояние|Состояние атрибута.<br /><br /> При нажатии кнопки сохранить отображается ![значок для обновления состояния](../master-data-services/media/mds-statusicon-updating.png "Значок обновления состояния") , указывающий на то, что атрибут обновляется.<br /><br /> Если при создании или изменении атрибута возникли ошибки, отображается ![значок изображение состояния ошибки](../master-data-services/media/mds-statusicon-error.png "Значок состояния ошибки") .<br /><br /> В противном случае отображается состояние ОК, а ![для значка состояния ОК](../master-data-services/media/mds-statusicon-ok.png "Значок состояния "ОК"") — изображение.|
-|Имя|Имя атрибута.|
+|name|Имя атрибута.|
 |Отображаемое имя|Отображаемое имя атрибута.|
 |Описание|Описание атрибута.|
 |Ширина отображаемой области (в пикселях)|Ширина атрибута.|
@@ -96,7 +96,7 @@ ms.locfileid: "88461872"
 
      Сведения об ограничении допустимых значений см. в публикации [How to filter Domain Based Attribute drop down lists](https://blogs.msdn.microsoft.com/mds/2015/12/03/in-sql-server-2016-master-data-services-how-to-filter-domain-based-attribute-drop-down-lists/)(Как отфильтровывать раскрывающиеся списки атрибута на основе домена) в блоге, посвященном Master Data Services.
 
-12. **Необязательный параметр.** Чтобы отслеживать изменения в группах атрибутов, выберите **Enable change tracking** . Дополнительные сведения см. в разделе [Добавление атрибутов в группу отслеживания изменений (службы Master Data Services)](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).
+12. **Необязательный элемент.** Чтобы отслеживать изменения в группах атрибутов, выберите **Enable change tracking** . Дополнительные сведения см. в разделе [Добавление атрибутов в группу отслеживания изменений (службы Master Data Services)](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).
 
 13. Выберите команду **Сохранить**.
 

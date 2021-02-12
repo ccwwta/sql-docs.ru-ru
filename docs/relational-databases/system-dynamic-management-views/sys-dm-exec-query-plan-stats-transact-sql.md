@@ -1,6 +1,6 @@
 ---
-description: sys. dm_exec_query_plan_stats (Transact-SQL)
-title: sys. dm_exec_query_plan_stats (Transact-SQL) | Документация Майкрософт
+description: sys.dm_exec_query_plan_stats (Transact-SQL)
+title: sys.dm_exec_query_plan_stats (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -18,14 +18,14 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 0ab11e74205f47d50e927680081e8e13dfee37fb
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: c1f833351fd342629b858b19c113015e81ec3db1
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042485"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100072030"
 ---
-# <a name="sysdm_exec_query_plan_stats-transact-sql"></a>sys. dm_exec_query_plan_stats (Transact-SQL)
+# <a name="sysdm_exec_query_plan_stats-transact-sql"></a>sys.dm_exec_query_plan_stats (Transact-SQL)
 [!INCLUDE[SQL Server 2019](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
 Возвращает эквивалент последнего известного реального плана выполнения для ранее кэшированного плана запроса.
@@ -48,9 +48,9 @@ sys.dm_exec_query_plan_stats(plan_handle)
   
 -   [sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
 
--   [sys. dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+-   [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
 
--   [sys. dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
+-   [sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
 
 ## <a name="table-returned"></a>Возвращаемая таблица
 
@@ -73,13 +73,13 @@ sys.dm_exec_query_plan_stats(plan_handle)
 
 В следующих случаях результат инструкции Showplan, **эквивалентный фактическому плану выполнения** , возвращается в **query_plan** столбец возвращаемой таблицы для `sys.dm_exec_query_plan_stats` :  
 
--   Этот план можно найти в [представлении каталога sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).     
+-   Этот план можно найти в [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).     
     **AND**    
 -   Выполняемый запрос является сложным или потребляет ресурсы.
 
-В следующих случаях в **query_plan** столбце возвращаемой таблицы возвращается **упрощенный результат <sup>1</sup> ** инструкции Showplan для `sys.dm_exec_query_plan_stats` :  
+В следующих случаях в **query_plan** столбце возвращаемой таблицы возвращается **упрощенный результат <sup>1</sup>** инструкции Showplan для `sys.dm_exec_query_plan_stats` :  
 
--   Этот план можно найти в [представлении каталога sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).     
+-   Этот план можно найти в [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md).     
     **AND**    
 -   Запрос достаточно прост, обычно разбитый на категории в рамках рабочей нагрузки OLTP.
 
@@ -100,14 +100,14 @@ sys.dm_exec_query_plan_stats(plan_handle)
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-looking-at-last-known-actual-query-execution-plan-for-a-specific-cached-plan"></a>A. Просмотр последнего известного фактического плана выполнения запроса для определенного кэшированного плана  
- В следующем примере производится запрос к **sys. dm_exec_cached_plans** для поиска интересного плана и копирования его `plan_handle` из выходных данных.  
+ В следующем примере запрос **sys.dm_exec_cached_plans** для поиска интересного плана и копирования его `plan_handle` из выходных данных.  
   
 ```sql  
 SELECT * FROM sys.dm_exec_cached_plans;  
 GO  
 ```  
   
-Затем, чтобы получить последний известный план выполнения запроса, используйте скопированную `plan_handle` с помощью системной функции **sys. dm_exec_query_plan_stats**.  
+Затем, чтобы получить последний известный план выполнения запроса, используйте функцию, скопированную `plan_handle` с помощью системной функции **sys.dm_exec_query_plan_stats**.  
   
 ```sql  
 SELECT * FROM sys.dm_exec_query_plan_stats(< copied plan_handle >);  
@@ -145,7 +145,7 @@ WHERE objtype ='Trigger';
 GO
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
   [Флаги трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления, связанные с выполнением &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  

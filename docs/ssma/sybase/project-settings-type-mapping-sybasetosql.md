@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 99ab880b69d2c06d462ed42ca0a2529ba6bf7bc2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9e9086feb8adcb64ba1a24191e91028fc870d488
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372120"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069940"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>Параметры проекта (сопоставление типов) (SybaseToSQL)
 Страница Сопоставление типов диалогового окна **Параметры проекта** содержит параметры, которые настраивают, каким способом SSMA преобразует адаптивные серверные типы данных SYBASE (ASE) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы данных.  
@@ -27,7 +27,7 @@ ms.locfileid: "88372120"
 -   Чтобы указать параметры для текущего проекта, в меню **Сервис** выберите пункт **Параметры проекта**, а затем выберите **Сопоставление типов** в нижней части левой панели.  
   
 ## <a name="options"></a>Параметры  
-**Тип источника**  
+**Исходный тип**  
 Сопоставленный тип данных ASE.  
   
 **Тип целевого объекта**  
@@ -38,10 +38,10 @@ ms.locfileid: "88372120"
 **Добавление**  
 Нажмите, чтобы добавить тип данных в список сопоставления.  
   
-**Edit** (Изменение)  
+**Правка**  
 Нажмите, чтобы изменить выбранный тип данных в списке сопоставление.  
   
-**Удалить**  
+**Remove**  
 Нажмите, чтобы удалить выбранное сопоставление типа данных из списка сопоставления.  
   
 **Сброс до значений по умолчанию**  
@@ -63,7 +63,7 @@ ms.locfileid: "88372120"
 |**изменение типа char [8001.. \* ]**|**varchar(max)**|  
 |**Char [ \* .. 8000]**|**Char [ \* ]**|  
 |**Char [8001.. \* ;]**|**varchar(max)**|  
-|**символов**|**char**|  
+|**character**|**char**|  
 |**character varying**|**varchar**|  
 |**Разное символов [ \* .. 8000]**|**varchar [ \* ]**|  
 |**разное начертание [8001.. \* ]**|**varchar(max)**|  

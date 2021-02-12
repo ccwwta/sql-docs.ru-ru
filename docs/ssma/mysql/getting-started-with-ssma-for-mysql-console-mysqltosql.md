@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 218d502c-059f-4d48-9aea-61e553d74303
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 59df65daf56708a2b30b1e0a75e554750e95cb47
-ms.sourcegitcommit: 442fbe1655d629ecef273b02fae1beb2455a762e
+ms.openlocfilehash: 4c4a7e894052ec9799039d45ff5bb9e2aa29a23b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "93235191"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078215"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>Начало работы с консолью SSMA для MySQL (MySQLToSQL)
 В этом разделе описывается процедура запуска и начала работы с консольным приложением MySQL. Здесь также перечислены соглашения, используемые в типичном окне вывода консоли SSMA.  
@@ -26,7 +26,7 @@ ms.locfileid: "93235191"
 ## <a name="launching-ssma-console"></a>Запуск консоли SSMA  
 Чтобы запустить консольное приложение SSMA, выполните следующие действия:  
   
-1.  Последовательно выберите пункты **Пуск** и **все программы** .  
+1.  Последовательно выберите пункты **Пуск** и **все программы**.  
   
 2.  Щелкните ярлык **командной строки MySQL помощник по миграции SQL Server** .  
   

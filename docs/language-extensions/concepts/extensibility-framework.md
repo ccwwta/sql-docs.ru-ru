@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15'
-ms.openlocfilehash: 344e5f35e35202b6a44a4932db8a27424fdb8753
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: f7d4c2e2408bbcc78c0ea74f0d50bd4e0599b826
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97471805"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069798"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>Архитектура расширяемости в расширениях языка SQL Server
 
@@ -38,15 +38,15 @@ The following diagram visually describes opportunities and benefits of the exten
 
 Архитектура разработана таким образом, что внешний код выполнялся в отдельном от SQL Server процессе, но с компонентами, которые внутренне управляют цепочкой запросов на данные и операции в SQL Server. 
   
-  ***Архитектура компонентов в Windows:** _
+  ***Архитектура компонентов в Windows:***
 
   ![Архитектура компонентов в Windows](../media/generic-architecture-windows.png "Архитектура компонентов в Windows")
   
-  _*_Архитектура компонентов в Linux:_*_
+  ***Архитектура компонентов в Linux:***
   
   ![Архитектура компонентов в Linux](../media/generic-architecture-linux.png "Архитектура компонентов в WindowsLinux")
   
-Компоненты включают службу _ *панели запуска**, которая используется для вызова внешних сред выполнения (например, Java) и логики, зависящей от библиотеки, для загрузки интерпретаторов и библиотек.
+Компоненты включают службу **панели запуска**, которая используется для вызова внешних сред выполнения (например, Java) и логики, зависящей от библиотеки, для загрузки интерпретаторов и библиотек.
 
 <a name="launchpad"></a>
 

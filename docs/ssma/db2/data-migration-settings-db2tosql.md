@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 573e673e-a194-4cb2-9aba-aaac6e1a225c
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 0646fc033f73134a4dfcba62e574ba08e378b9cc
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 17121feedda919034ed8c2ee40fec8b06321d131
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91984880"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078252"
 ---
 # <a name="data-migration-settings-db2tosql"></a>Параметры переноса данных (DB2ToSQL)
   
@@ -40,7 +40,7 @@ ms.locfileid: "91984880"
     -   Если это текстовое поле не отмечено, то переносимые данные будут добавлены к существующим данным в целевой базе данных.  
   
 2.  **Использовать пользовательское выделение:**  
-     Этот параметр позволяет пользователю изменить имеющуюся инструкцию **SELECT** (инструкция**SELECT** позволяет пользователям выбирать данные для отображения в целевой базе данных).  
+     Этот параметр позволяет пользователю изменить имеющуюся инструкцию **SELECT** (инструкция **SELECT** позволяет пользователям выбирать данные для отображения в целевой базе данных).  
   
     1.  По умолчанию это текстовое поле не отмечено.  
   

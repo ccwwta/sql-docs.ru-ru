@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cf426c69-6a8e-4d19-951d-6661d5ae2562
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: fc7abeb4eec6d25e183db5ffcf1923185016b913
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b562e886bcb09eae4c02607f17eb7419b313a759
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492549"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100072038"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>Параметры проекта (сопоставление типов) (DB2ToSQL)
 Страница Сопоставление типов диалогового окна **Параметры проекта** содержит параметры, которые настраивают, как SSMA преобразует типы данных DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы данных.  
@@ -28,10 +28,10 @@ ms.locfileid: "88492549"
   
 Чтобы задать параметры для текущего объекта или класса объектов, используйте вкладку **Сопоставление типов** в главном окне SSMA.  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
 В следующей таблице показаны параметры вкладки **Сопоставление типов** .  
   
-**Тип источника**  
+**Исходный тип**  
 Сопоставленный тип данных DB2.  
   
 **Тип целевого объекта**  
@@ -42,10 +42,10 @@ ms.locfileid: "88492549"
 **Добавление**  
 Нажмите, чтобы добавить тип данных в список сопоставления.  
   
-**Edit** (Изменение)  
+**Правка**  
 Нажмите, чтобы изменить выбранный тип данных в списке сопоставление.  
   
-**Удалить**  
+**Remove**  
 Нажмите, чтобы удалить выбранное сопоставление типа данных из списка сопоставления.  
   
 **Сброс до значений по умолчанию**  
@@ -76,7 +76,7 @@ ms.locfileid: "88492549"
 |double precision|float [53]|  
 |FLOAT|float [53]|  
 |INT|INT|  
-|integer|INT|  
+|Целое число|INT|  
 |long|varchar(max)|  
 |Long RAW|varbinary(max)|  
 |Long RAW [ \* .. 8000]<sup>\*</sup>|varbinary [ \* ]|  
@@ -88,7 +88,7 @@ ms.locfileid: "88492549"
 |изменение национального алфавита<sup>\*</sup>|nvarchar(max)|  
 |nchar|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
-|number|float [53]|  
+|число|float [53]|  
 |NUMERIC|float [53]|  
 |nvarchar2|nvarchar(max)|  
 |pls_integer|INT|  
@@ -138,7 +138,7 @@ ms.locfileid: "88492549"
 |float [ \* .. 53]|float [ \* ]|  
 |float [54.. \* ]|float [53]|  
 |INT|INT|  
-|integer|INT|  
+|Целое число|INT|  
 |long|varchar(max)|  
 |Long RAW|varbinary(max)|  
 |Long RAW [ \* .. 8000]|varbinary [ \* ]|  
@@ -155,7 +155,7 @@ ms.locfileid: "88492549"
 |nchar|nchar|  
 |nchar [ \* ]|nchar [ \* ]|  
 |NCLOB|nvarchar(max)|  
-|number|float [53]|  
+|число|float [53]|  
 |Number [ \* .. \* ]|numeric [ \* ]|  
 |Number [ \* .. \* ] [\*..\*]|numeric [ \* ] [ \* ]|  
 |NUMERIC|NUMERIC|  
@@ -234,7 +234,7 @@ ms.locfileid: "88492549"
 |изменение типа nchar [ \* .. 4000]|nvarchar [ \* ]|  
 |Разное изменение типа nchar [4001.. \* ]|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
-|Number|float [53]|  
+|число;|float [53]|  
 |Number [ \* .. \* ]|numeric [ \* ]|  
 |Number [ \* .. \* ] [\*..\*]|numeric [ \* ] [ \* ]|  
 |Числовой|numeric [38] [0]|  
@@ -265,6 +265,6 @@ ms.locfileid: "88492549"
 |VARCHAR2 [8001.. \* ]|Варча (max)|  
 |XmlType|Xml|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Справочник по пользовательскому интерфейсу &#40;DB2ToSQL&#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   
