@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cef348aee2b917b0a6afd61d30b5e4f7fa7da665
-ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
+ms.openlocfilehash: d983b4d0d7cfb02a587675984fdc42c54bf9f0ec
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "92257206"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100047204"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Настройка параметров развертывания для кластерных ресурсов и служб
 
@@ -312,7 +312,7 @@ azdata bdc config replace --config-file custom-bdc/bdc.json --json-values "$.spe
 > [!TIP]
 > Дополнительные сведения о конфигурации хранилища см. в статье [Сохраняемость данных при использовании кластера больших данных SQL Server в Kubernetes](concept-data-persistence.md).
 
-Сначала создайте файл patch.json, как показано ниже, чтобы настроить параметры *хранения* .
+Сначала создайте файл patch.json, как показано ниже, чтобы настроить параметры *хранения*.
 
 ```json
 {
@@ -677,8 +677,8 @@ azdata bdc config patch --config-file custom-bdc/control.json --patch-file elast
 
 ## <a name="turn-pods-and-nodes-metrics-collection-onoff"></a>Включение и отключение сбора метрик для модулей pod и узлов
 
-В SQL Server 2019 с накопительным пакетом обновления 5 (CU5) появились два параметра для управления сбором метрик для модулей pod и узлов. Если вы используете различные решения для мониторинга инфраструктуры Kubernetes, вы можете отключить встроенный сбор метрик для модулей pod и узлов, присвоив параметрам *allowNodeMetricsCollection* и *allowPodMetricsCollection* значения *false* в файле конфигурации развертывания *control.json* . Для сред OpenShift для этих параметров по умолчанию задано значение *false* во встроенных профилях развертывания, так как сбор метрик модулей pod и узлов требует привилегированных возможностей.
-Выполните следующую команду, чтобы обновить значения этих параметров в пользовательском файле конфигурации с помощью CLI *azdata* .
+В SQL Server 2019 с накопительным пакетом обновления 5 (CU5) появились два параметра для управления сбором метрик для модулей pod и узлов. Если вы используете различные решения для мониторинга инфраструктуры Kubernetes, вы можете отключить встроенный сбор метрик для модулей pod и узлов, присвоив параметрам *allowNodeMetricsCollection* и *allowPodMetricsCollection* значения *false* в файле конфигурации развертывания *control.json*. Для сред OpenShift для этих параметров по умолчанию задано значение *false* во встроенных профилях развертывания, так как сбор метрик модулей pod и узлов требует привилегированных возможностей.
+Выполните следующую команду, чтобы обновить значения этих параметров в пользовательском файле конфигурации с помощью CLI *azdata*.
 
 ```bash
  azdata bdc config replace -c custom-bdc/control.json -j "$.security.allowNodeMetricsCollection=false"

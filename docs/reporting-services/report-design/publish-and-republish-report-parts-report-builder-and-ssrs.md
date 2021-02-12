@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f8848fb3d8d474083e0ce1a10b7d355a2e4b886e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d91904f4d91941549582d8d7c578dcc4682f23f4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87928635"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100014740"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>Публикация и повторная публикация элементов отчетов (построитель отчетов и службы SSRS)
   Части отчета — это элементы отчета с разбиением на страницы, опубликованные отдельно на сервере отчетов, которые можно повторно использовать в других отчетах с разбиением на страницы. Предусмотрена возможность публикации элемента отчета с настройками по умолчанию в заданном по умолчанию местоположении или изменения таких метаданных элемента отчета, как заголовок и описание, с последующим сохранением где-то в другом месте на сервере отчетов. Можно также сохранить ее на сайте SharePoint, который объединен с сервером отчетов (при наличии соответствующих разрешений).  

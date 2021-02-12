@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a1c8b7ee7baed3008dece84d1a2f7f0f4e28e8f9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 1ac27d7f3f83a65f6a9e7b06da511bd9b9baf751
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934274"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100062639"
 ---
 # <a name="managing-report-parts"></a>Управление элементами отчета
   Элементы отчета могут повторно использоваться в отчетах с разбиением на страницы несколькими пользователями и в нескольких отчетах. Пользователи могут искать элементы отчета на сервере и добавлять их в отчет.  Пользователи могут также получать уведомления об обновлениях для элемента отчета на сервере и заново публиковать новые версии элемента отчета. Права доступа служб отчетов могут влиять на действия по созданию отчетов, а также позволяют управлять ими.  В этом разделе рассматриваются свойства и режимы работы для элементов отчетов после их появления на сервере.  

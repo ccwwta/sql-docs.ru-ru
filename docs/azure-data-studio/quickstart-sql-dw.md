@@ -9,12 +9,12 @@ ms.author: alayu
 ms.reviewer: maghan, jrasnick
 ms.custom: seodec18; seo-lt-2019
 ms.date: 10/15/2020
-ms.openlocfilehash: 8215e84c4c61935b3f5831ca771e2868e27be428
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 91e91aeb69db1d3ff3f357289f0156cfcf739bab
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98091727"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040075"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-a-dedicated-sql-pool-in-azure-synapse-analytics"></a>Краткое руководство. Использование Azure Data Studio для подключения и запрашивания данных с помощью выделенного пула SQL в Azure Synapse Analytics
 

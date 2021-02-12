@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4ee0d698-6246-48eb-b963-d62be81cab6a
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 0341869ff5d39ad35fce6ac450d293eaac1feb38
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 63957996baa6f65b864a3fe74bdb6b5c90aab3a4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488173"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100072008"
 ---
 # <a name="removing-ssma-for-db2-components-db2tosql"></a>Удаление SSMA для компонентов DB2 (DB2ToSQL)
 После завершения миграции баз данных из DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может потребоваться удалить компоненты SSMA. Вы можете удалить клиентские компоненты в любое время. Однако не следует удалять пакет расширений, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] если только перенесенные базы данных больше не используют функции в схеме **ssma_DB2** базы данных **сисдб** .  
@@ -27,14 +27,14 @@ ms.locfileid: "88488173"
   
 1.  На панели управления и откройте элемент **Установка и удаление программ**.  
   
-2.  Выберите ** [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Помощник по миграции для DB2**, а затем нажмите кнопку **Удалить**.  
+2.  Выберите **[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Помощник по миграции для DB2**, а затем нажмите кнопку **Удалить**.  
   
 3.  Чтобы подтвердить удаление SSMA, нажмите кнопку **Да**.  
   
 ## <a name="uninstalling-the-extension-pack"></a>Удаление пакета расширений  
-Если вы уверены, что перенесенные базы данных не используют объекты в схеме **сисдб. ssma_DB2** , можно удалить пакет расширений, удалив его из схемы — нет удаления Windows  
+Если вы уверены, что перенесенные базы данных не используют объекты в схеме **sysdb.ssma_DB2** , можно удалить пакет расширений, удалив его из схемы — нет удаления Windows.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Установка SSMA для клиента DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)  
 [Установка компонентов SSMA на SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-components-on-sql-server-db2tosql.md)  
   

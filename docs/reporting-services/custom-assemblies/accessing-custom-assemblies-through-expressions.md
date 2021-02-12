@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 917c4d47-1a95-4f54-98b1-e8cb2165d90f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e77b3df959230b7ecb8bb20874d61e9191074285
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: df929de930289f9683608ec42240f03a93983ccb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80217043"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064639"
 ---
 # <a name="accessing-custom-assemblies-through-expressions"></a>Доступ к пользовательским сборкам посредством выражений
   После того как пользовательская сборка была создана, сделана доступной для конструктора отчетов или сервера отчетов, добавлена к подходящей политике безопасности, а также после того, как в определение отчета была добавлена ссылка на данную пользовательскую сборку, появится возможность доступа к членам классов сборки посредством выражений отчетов. Для ссылки в выражении на пользовательский код следует вызвать элемент класса этой сборки. Способ создания ссылки зависит от того, является ли метод статическим или основывается на экземпляре.  

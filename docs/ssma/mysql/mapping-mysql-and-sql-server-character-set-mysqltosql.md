@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7782a8853e1b17ecba0950e647d1335758b998af
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 13b2accd6b4dc2ba2bbd8c9c1e6db312650d2d62
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935283"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077625"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Сопоставление кодировок MySQL и SQL Server (MySQLToSQL)
 Кодировку (Charset) можно указать для символьных типов данных, выражений и литералов MySQL.  
@@ -103,7 +103,7 @@ ms.locfileid: "87935283"
     |utf8|Юникод UTF-8|NCHAR/NVARCHAR (по умолчанию)|  
     |ucs2|UCS-2 Юникод|NCHAR/NVARCHAR (по умолчанию)|  
     |cp866|DOS, Русский|CHAR/VARCHAR (по умолчанию)|  
-    |keybcs2|DOS Каменикки чешский — словацкий|CHAR/VARCHAR (по умолчанию)|  
+    |keybcs2|DOS Каменикки Czech-Slovak|CHAR/VARCHAR (по умолчанию)|  
     |макце|Mac Central (Европейский)|CHAR/VARCHAR (по умолчанию)|  
     |макрос|Западная Европа, Mac|CHAR/VARCHAR (по умолчанию)|  
     |cp852|DOS, Центральная Европа|CHAR/VARCHAR (по умолчанию)|  

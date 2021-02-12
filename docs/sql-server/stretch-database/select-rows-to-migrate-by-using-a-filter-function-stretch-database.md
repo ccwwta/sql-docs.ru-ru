@@ -14,12 +14,12 @@ ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 31199872a4a206469c44f91aa80c3606f129fdb9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 72162b4ed6339bcf7939e1903886170e3df36e63
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492617"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100030915"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Выбор строк для миграции с использованием функции фильтров (Stretch Database)
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -87,7 +87,7 @@ RETURN  SELECT 1 AS is_eligible
   
 -   Сравнение параметра функции с константным выражением. Например, `@column1 < 1000`.  
   
-     Ниже приведен пример, в котором проверяется, меньше ли значение столбца ** date&lt;, чем 01.01.2016.  
+     Ниже приведен пример, в котором проверяется, меньше ли значение столбца date&lt;, чем 01.01.2016.  
   
     ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate(@column1 datetime)  

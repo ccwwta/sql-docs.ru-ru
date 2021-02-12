@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b1217843-8d3d-49f3-a0d2-d35b0db5b2df
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e666496383b738b11f20cd9b3d7e3a76e8613416
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8f2f9f3986697f83e5b9bb5616f30f4f1086373f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79198315"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100063759"
 ---
 # <a name="creating-the-web-service-proxy"></a>Создание учетной записи-посредника веб-службы
   Клиент и веб-служба могут обмениваться данными с помощью сообщений SOAP, в который входные и выходные параметры инкапсулируются в формате XML. Класс-посредник сопоставляет параметры с XML-элементами, а затем отправляет сообщения SOAP по сети. Таким образом класс-посредник устраняет необходимость связываться с веб-службой на уровне SOAP и позволяет вызывать методы веб-службы в любой среде разработки, которая поддерживает протокол SOAP и прокси для веб-служб.  

@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b6c0280e54fab14c4a3f76f75a4639dad99a0635
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 4b8638e0c9a958e8f5dd6b6039540e8492555b03
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91933562"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100074835"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Развертывание веб-части "Средство просмотра отчетов" служб SQL Server Reporting Services на сайте SharePoint
 
@@ -29,7 +29,7 @@ ms.locfileid: "91933562"
 
 > [!IMPORTANT]
 > Начиная с версии 15.X.X.X, установить ReportViewerWebPart можно параллельно с существующими приложениями для устройств, совместно используемых в интегрированном режиме SharePoint в Reporting Services.
-> В этом обновлении WSP-решения мы добавили новые файлы. Предыдущее решение должно быть отозвано, а новое — повторно развернуто с помощью командлетов Uninstall-SPSolution и Install-SPSolution, соответственно.
+> В этом обновлении решения .wsp мы добавили новые файлы. Предыдущее решение должно быть отозвано, а новое — повторно развернуто с помощью командлета Uninstall-SPSolution и Install-SPSolution, соответственно.
 >
 
 **Поддерживаемые версии SharePoint Server:**

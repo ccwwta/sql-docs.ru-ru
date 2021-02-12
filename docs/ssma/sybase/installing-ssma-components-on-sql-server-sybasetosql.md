@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 33b5663e7693de8c031f2b39c0436a771920be56
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 82f5d7eef228326f0dba9b194b87bffce4bb5eff
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372370"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078238"
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>Установка компонентов SSMA на SQL Server (SybaseToSQL)
 
@@ -23,7 +23,7 @@ ms.locfileid: "88372370"
 
 ## <a name="ssma-for-sybase-extension-pack"></a>SSMA для пакета расширения Sybase
 
-Пакет расширений SSMA добавляет базы данных, **сисдб** и **ssmatesterdb_syb**, к указанному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . База данных **сисдб** содержит таблицы и хранимые процедуры, необходимые для переноса данных. База данных **ssmatester_syb** содержит **ssma_sybase_utilities**схемы, в которой создаются объекты (таблицы, триггеры, представления), используемые компонентом SSMA Tester.
+Пакет расширений SSMA добавляет базы данных, **сисдб** и **ssmatesterdb_syb**, к указанному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . База данных **сисдб** содержит таблицы и хранимые процедуры, необходимые для переноса данных. База данных **ssmatester_syb** содержит **ssma_sybase_utilities** схемы, в которой создаются объекты (таблицы, триггеры, представления), используемые компонентом SSMA Tester.
 
 Кроме того, при переносе данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA создает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задания агента, когда для переноса данных используется модуль миграции данных на стороне сервера.
 
@@ -33,7 +33,7 @@ ms.locfileid: "88372370"
 
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляр установлен.
 - Установщик [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows версии 3.1 или более поздняя версия.
-- [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] Версия 4.7.2 или более поздняя. Его можно получить в [центре разработчиков .NET Framework](https://go.microsoft.com/fwlink/?LinkId=48882).
+- [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort_md.md)] Версия 4.7.2 или более поздняя. Его можно получить в [центре разработчиков платформа .NET Framework](https://go.microsoft.com/fwlink/?LinkId=48882).
 - Поставщик Sybase OLE DB/ADO.Net/ODBC и подключение к серверу базы данных SAP ASE, содержащему базы данных, которые необходимо перенести. Поставщики можно установить на носителе с продуктом SAP ASE. Дополнительные сведения о подключении см. [в статье подключение к SYBASE ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Служба браузера должна быть запущена во время установки. Используется для заполнения списка экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в мастере установки. Службу браузера можно отключить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] после установки.
 
@@ -49,9 +49,9 @@ ms.locfileid: "88372370"
 
 Чтобы установить пакет расширений, выполните следующие действия.
 
-1. Скопируйте **SSMAforSybaseExtensionPack_*n*. msi**, где *n* — номер сборки, на компьютер, на котором работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
-2. Дважды щелкните **SSMAforSybaseExtensionPack_*n*. msi**.
-3. На странице **приветствия** нажмите кнопку **Далее**.
+1. Скопируйте **SSMAforSybaseExtensionPack_ *n*. msi**, где *n* — номер сборки, на компьютер, на котором работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
+2. Дважды щелкните **SSMAforSybaseExtensionPack_ *n*. msi**.
+3. На странице **Приветствие** нажмите кнопку **Далее**.
 4. На странице Лицензионное **соглашение** ознакомьтесь с лицензионным соглашением. Если вы согласны, выберите параметр **я принимаю условия соглашения** , а затем нажмите кнопку **Далее**.
 5. На странице **Выбор типа установки** выберите вариант **Обычная**.
 6. На странице **Все готово для установки** нажмите **Установить**.
@@ -75,11 +75,11 @@ ms.locfileid: "88372370"
 
     Если установлен флажок **установить базу данных тестировщика** , будет создана **ssmatesterdb_syb** база данных.
 
-12. После завершения установки появится запрос на подтверждение установки служебной базы данных на другом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , выберите **Да**, а затем нажмите кнопку **Далее**или закрыть мастер, выберите **нет** и нажмите кнопку **выход**.
+12. После завершения установки появится запрос на подтверждение установки служебной базы данных на другом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , выберите **Да**, а затем нажмите кнопку **Далее** или закрыть мастер, выберите **нет** и нажмите кнопку **выход**.
 
 ### <a name="sql-server-database-objects"></a>SQL Server объекты базы данных
 
-После установки пакета расширений вы увидите таблицу **ssma_syb. bcp_migration_packages** в базе данных **сисдб** . Вы также увидите следующие хранимые процедуры:
+После установки пакета расширений вы увидите таблицу **ssma_syb. bcp _migration_packages** в базе данных **сисдб** . Вы также увидите следующие хранимые процедуры:
 
 - `bcp_clean_migration_data`
 - `bcp_ensure_message_table`

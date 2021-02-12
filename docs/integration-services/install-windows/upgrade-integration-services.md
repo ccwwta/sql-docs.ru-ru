@@ -17,12 +17,12 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: 95ffd6eb4e200139f653d3c051b6106c5f472497
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: cd258e7680e2f70693ea6e6c36355c0beacbeca8
+ms.sourcegitcommit: 868c60aa3a76569faedd9b53187e6b3be4997cc9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92193916"
+ms.lasthandoff: 02/08/2021
+ms.locfileid: "99835940"
 ---
 # <a name="upgrade-integration-services"></a>Обновление служб Integration Services
 
@@ -36,10 +36,10 @@ ms.locfileid: "92193916"
  Вместе с этой параллельной установкой устанавливается несколько версий программы dtexec. Чтобы убедиться в том, что запускается правильная версия программы, в командной строке запустите программу, введя полный путь (\<drive>:\Program Files\Microsoft SQL Server\\<версия\>\DTS\Binn). Дополнительные сведения о программе dtexec см. в разделе [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
   
 > [!NOTE]  
->  В предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]по умолчанию при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] все пользователи в группе пользователей имели доступ к службе [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . При установке [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]пользователи не имеют доступа к службе [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . По умолчанию эта служба является защищенной. После установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] администратор [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен запустить средство настройки DCOM (Dcomcnfg.exe), чтобы предоставить конкретным пользователям доступ к службе [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Дополнительные сведения см. в разделе [Службы Integration Services (SSIS)](../../integration-services/service/integration-services-service-ssis-service.md).  
+>  В предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]по умолчанию при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] все пользователи в группе пользователей имели доступ к службе [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . При установке [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] и более поздних версий пользователи не имеют доступа к службе [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. По умолчанию эта служба является защищенной. После установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] администратор [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен запустить средство настройки DCOM (Dcomcnfg.exe), чтобы предоставить конкретным пользователям доступ к службе [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Дополнительные сведения см. в разделе [Службы Integration Services (SSIS)](../../integration-services/service/integration-services-service-ssis-service.md).  
   
 ## <a name="before-upgrading-integration-services"></a>До обновления служб Integration Services  
- Рекомендуется перед обновлением до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]запустить помощник по обновлению. Помощник по обновлению сообщит о проблемах, которые могут возникнуть при обновлении существующих пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] до нового формата [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+ Рекомендуется перед обновлением до [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)]запустить помощник по обновлению. Помощник по обновлению сообщит о проблемах, которые могут возникнуть при обновлении существующих пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] до нового формата [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] .  
   
 > [!NOTE]
 >  В выпуске SQL Server 2012 не поддерживается миграция или запуск пакетов служб DTS. Следующие функциональные возможности служб DTS более не поддерживаются.  
@@ -56,7 +56,7 @@ ms.locfileid: "92193916"
 ## <a name="upgrading-integration-services"></a>обновление служб Integration Services  
  Обновление можно выполнить одним из следующих способов.  
   
--   Запустите программу установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и выберите параметр **Обновление с SQL Server 2008, SQL Server 2008 R2, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
+-   Запустите программу установки [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] и выберите параметр **Обновление с SQL Server 2008, SQL Server 2008 R2, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
   
 -   Из командной строки запустите программу установки **setup.exe** , указав параметр **/ACTION=upgrade** . Дополнительные сведения см. в подразделе "Скрипты установки для служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]" раздела [Установка SQL Server 2016 из командной строки](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
@@ -70,19 +70,19 @@ ms.locfileid: "92193916"
   
  Можно обновить службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] вместе с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)], только компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)]либо только службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Если обновить только компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)], службы [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] или более поздней версии останутся в рабочем состоянии, но функциональность служб [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]будет отсутствовать. Если обновить только службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], то службы [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] будут обладать полной функциональностью, но смогут хранить пакеты только в файловой системе, если экземпляр компонента [!INCLUDE[ssDECurrent](../../includes/ssdecurrent-md.md)] не будет доступен на другом компьютере.  
   
-## <a name="upgrading-both-integration-services-and-the-database-engine-to-sscurrent"></a>Обновление служб Integration Services вместе с компонентом ядра СУБД до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="upgrading-both-integration-services-and-the-database-engine-to-sssql19"></a>Обновление служб Integration Services вместе с компонентом ядра СУБД до [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)]  
  В этом разделе описаны последствия, к которым может привести обновление со следующими критериями.  
   
--   Обновление служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]производится одновременно.  
+-   Обновление служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] до [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)]производится одновременно.  
   
 -   И службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , и экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] находятся на одном компьютере.  
   
 ### <a name="what-the-upgrade-process-does"></a>Действия, выполняемые при обновлении  
  Процесс обновления заключается в выполнении следующих задач.  
   
--   Устанавливает файлы, службы и средства [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] (в средах[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]). Если на одном компьютере есть несколько экземпляров [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , при первом обновлении какого-либо из них до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]устанавливаются файлы, службы и средства [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] .  
+-   Устанавливает файлы, службы и средства [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] (в средах[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]). Если на одном компьютере есть несколько экземпляров [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , при первом обновлении какого-либо из них до [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)]устанавливаются файлы, службы и средства [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] .  
   
--   Обновление экземпляра [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] до версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+-   Обновление экземпляра [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] до версии [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] .  
   
 -   Перенос данных служб из системных таблиц служб [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] или более поздних версий в системные таблицы служб [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] осуществляется следующим образом:  
   
@@ -99,7 +99,7 @@ ms.locfileid: "92193916"
   
 -   Создаются три новые предопределенные роли базы данных, db_ssisadmin, db_ssisltduser и db_ssisoperator, предназначенные для управления доступом к пакетам. Роли [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] — db_dtsadmin, db_dtsltduser и db_dtsoperator — не удаляются, но становятся членами соответствующих новых ролей.  
   
--   Если хранилище пакетов [!INCLUDE[ssIS](../../includes/ssis-md.md)] (папка в файловой системе, управляемая службой [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ) находится в папке по умолчанию **\SQL Server\90**, **\SQL Server\100**, **\SQL Server\110**или **\SQL Server\120** , то пакеты переносятся в новую папку по умолчанию **\SQL Server\130**.  
+-   Если хранилище пакетов [!INCLUDE[ssIS](../../includes/ssis-md.md)] (папка в файловой системе, управляемая службой [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ) находится в папке по умолчанию **\SQL Server\90**, **\SQL Server\100**, **\SQL Server\110** или **\SQL Server\120** , то пакеты переносятся в новую папку по умолчанию **\SQL Server\130**.  
   
 -   Изменение файла конфигурации служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , чтобы он указывал на обновленный экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -108,11 +108,11 @@ ms.locfileid: "92193916"
   
 -   **Не** удаляются службы [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] или более поздней версии.  
   
--   Не выполняется перенос существующих пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в формат пакетов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Сведения о переносе пакетов см. в разделе [Обновление пакетов служб Integration Services](../../integration-services/install-windows/upgrade-integration-services-packages.md).  
+-   Не выполняется перенос существующих пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в формат пакетов [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] . Сведения о переносе пакетов см. в разделе [Обновление пакетов служб Integration Services](../../integration-services/install-windows/upgrade-integration-services-packages.md).  
   
 -   Не производится перенос пакетов, расположенных в файловой системе в месте, отличном от расположения по умолчанию, добавленного в файл конфигурации служб. Если файл конфигурации ранее изменялся, и в него были добавлены папки файловой системы, хранящиеся в этих папках пакеты не будут перенесены в новое местоположение.  
   
--   В шагах задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , где выполняется непосредственный вызов служебной программы **dtexec** (dtexec.exe), путь к программе **dtexec** в файловой системе не изменяется. В этих шагах задания нужно вручную изменить путь файловой системы, чтобы задать правильное местонахождение [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] для служебной программы **dtexec** .  
+-   В шагах задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , где выполняется непосредственный вызов служебной программы **dtexec** (dtexec.exe), путь к программе **dtexec** в файловой системе не изменяется. В этих шагах задания нужно вручную изменить путь файловой системы, чтобы задать правильное местонахождение [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)] для служебной программы **dtexec** .  
   
 ### <a name="what-you-can-do-after-upgrading"></a>Действия после обновления  
  После завершения обновления можно выполнить следующие задачи.  
@@ -128,12 +128,12 @@ ms.locfileid: "92193916"
   
 -   Чтобы проектировать, выполнять пакеты служб [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]либо управлять ими, невозможно использовать средства [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Средства [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]и [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] включают в себя соответствующие версии среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а также служебную программу выполнения пакетов (dtexecui.exe). Средства [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]и [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]в процессе обновления не удаляются. Но их нельзя будет использовать, чтобы продолжить работу с пакетами служб [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] или более поздней версии на обновленных серверах.  
   
--   По умолчанию при установке обновления служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] настраивается для регистрации событий, связанных с запуском пакетов, в журнал событий приложений. При использовании компонента сборщика данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]эта настройка может вызвать появление в журнале событий слишком большого числа записей. К числу регистрируемых событий относятся EventID 12288, «Пакет запущен» и EventID 12289, «Выполнение пакета завершилось успешно». Чтобы исключить регистрацию этих двух событий в журнале событий приложений, откройте реестр для изменения. Затем найдите в реестре узел HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS и измените значение DWORD для параметра LogPackageExecutionToEventLog с 1 на 0.  
+-   По умолчанию при установке обновления служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] настраивается для регистрации событий, связанных с запуском пакетов, в журнал событий приложений. При использовании компонента сборщика данных [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)]эта настройка может вызвать появление в журнале событий слишком большого числа записей. К числу регистрируемых событий относятся EventID 12288, «Пакет запущен» и EventID 12289, «Выполнение пакета завершилось успешно». Чтобы исключить регистрацию этих двух событий в журнале событий приложений, откройте реестр для изменения. Затем найдите в реестре узел HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS и измените значение DWORD для параметра LogPackageExecutionToEventLog с 1 на 0.  
   
-## <a name="upgrading-only-the-database-engine-to-sscurrent"></a>Обновление до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="upgrading-only-the-database-engine-to-sssql19"></a>Обновление до [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)]  
  В этом разделе описаны последствия, к которым может привести обновление со следующими критериями.  
   
--   Обновляется только экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Иначе говоря, экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] обновляется до версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], а экземпляр служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и клиентские средства сохраняются в версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+-   Обновляется только экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Иначе говоря, экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] обновляется до версии [!INCLUDE[ssSQL19](../../includes/sssql19-md.md)], а экземпляр служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и клиентские средства сохраняются в версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
 -   Экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] находится на одном компьютере, а службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и клиентские средства — на другом.  
   

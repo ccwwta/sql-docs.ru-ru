@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 04bba43a-7bed-4d3c-bb62-8e9ab2adf9e3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ce8afd47260ebc402f3d93cd191529eb7640f99d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fb8c8994b9fb2804816663801612f5085eeedce4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488278"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100075095"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>Команды меню и другие сочетания клавиш (Акцесстоскл)
 В следующих разделах описываются сочетания клавиш для доступа к командам меню и другие сочетания клавиш, используемые в различных диалоговых окнах приложения SSMA для Access.  
@@ -189,6 +189,6 @@ ms.locfileid: "88488278"
 |Запустить краткие сведения.|CTRL + SHIFT + ПРОБЕЛ|  
 |Переход к объявлению.|F12|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Сочетания клавиш &#40;&#41;Акцесстоскл ](../../ssma/access/shortcut-keys-accesstosql.md)  
   

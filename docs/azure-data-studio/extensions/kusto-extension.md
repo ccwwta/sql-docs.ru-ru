@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 10/29/2020
-ms.openlocfilehash: 0c77b957f14401aec3130fa5fa4f78f0d34de9b5
-ms.sourcegitcommit: 894c1a23e922dc29b82c1d2c34c7b0ff28b38654
+ms.openlocfilehash: 15b2dc331a1387039c79cbab164682f00981c591
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "93067206"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100052035"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>Расширение Kusto (KQL) для Azure Data Studio (предварительная версия)
 
@@ -88,7 +88,7 @@ ms.locfileid: "93067206"
 
 Теперь, когда вы настроили подключение к кластеру Azure Data Explorer, можно выполнять запросы к вашей базе данных с помощью Kusto (KQL).
 
-Чтобы создать новую вкладку запроса, можно либо выбрать в меню **Файл > Создать запрос** , либо использовать сочетание клавиш *Ctrl + N* , либо щелкнуть базу данных правой кнопкой мыши и выбрать пункт **Создать запрос**.
+Чтобы создать новую вкладку запроса, можно либо выбрать в меню **Файл > Создать запрос**, либо использовать сочетание клавиш *Ctrl + N*, либо щелкнуть базу данных правой кнопкой мыши и выбрать пункт **Создать запрос**.
 
 Когда новая вкладка запроса будет открыта, введите запрос Kusto.
 
@@ -124,7 +124,7 @@ StormEvents
 
 ## <a name="sanddance-visualization"></a>Визуализация SandDance
 
-[Расширение SandDance](sanddance-extension.md) с расширением Kusto (KQL) в Azure Data Studio объединяют сводят вместе широкие возможности интерактивной визуализации. В результирующем наборе запроса KQL нажмите кнопку **Визуализатор** , чтобы запустить [SandDance](https://sanddance.js.org/).
+[Расширение SandDance](sanddance-extension.md) с расширением Kusto (KQL) в Azure Data Studio объединяют сводят вместе широкие возможности интерактивной визуализации. В результирующем наборе запроса KQL нажмите кнопку **Визуализатор**, чтобы запустить [SandDance](https://sanddance.js.org/).
 
 :::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="Визуализация SandDance":::
 

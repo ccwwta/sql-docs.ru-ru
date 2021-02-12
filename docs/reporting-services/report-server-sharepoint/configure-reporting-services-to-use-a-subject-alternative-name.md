@@ -8,12 +8,12 @@ ms.technology: security
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 40ddab224d24e566ad346d64d5238ca5c81d9f48
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 25e5fce47d86ea4d544b43f297fcb793d8167a66
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891594"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100065169"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name-san"></a>Настройка использования альтернативного имени субъекта в Reporting Services (SAN)
 
@@ -134,7 +134,7 @@ URL-адреса в Reporting Services и Сервере отчетов Power B
   
     ```  
   
-10. Для **URL-адреса веб-портала**создайте новую запись для альтернативного имени субъекта, введя следующее:
+10. Для **URL-адреса веб-портала** создайте новую запись для альтернативного имени субъекта, введя следующее:
 
     ```  
     netsh http>add urlacl  url=https://www.myreports.com:443/Reports  

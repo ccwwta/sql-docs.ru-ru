@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 52b5704b-27f9-400a-a821-d8fa0786afe4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4e68ffa14bfe98bc55e5424abe0dbdac944950a1
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: aebf8df47e1cda77dcbbce89bd1e74a439082281
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91933701"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100045094"
 ---
 # <a name="report-server-windows-service-mssqlserver-107"></a>Служба Windows сервера отчетов (MSSQLServer) 107
     

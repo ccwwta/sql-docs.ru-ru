@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a5629a72-8c17-46a4-bb4d-19d51a0b98a2
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d6b4aef228ca1631bb550437ff0f66ff20555cb0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4d96e3e3caeb1c40a9f4529f8d2c0ea7e0b1f717
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88321070"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100072128"
 ---
 # <a name="project-settingssynchronization-db2tosql"></a>Параметры проекта (синхронизация) (DB2ToSQL)
 Страница синхронизация диалогового окна **Параметры проекта** содержит параметры, которые настраивают, как SSMA загружает и обновляет объекты базы данных, такие как таблицы и хранимые процедуры, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -28,8 +28,8 @@ ms.locfileid: "88321070"
   
 -   Чтобы указать параметры для текущего проекта, в меню **Сервис** выберите пункт **Параметры проекта**, а затем щелкните **Синхронизация** в нижней части левой панели.  
   
-## <a name="miscellaneous-options"></a>Различные параметры  
-**Ошибок**  
+## <a name="miscellaneous-options"></a>Прочие параметры  
+**Попытки**  
 Указывает число попыток, которые SSMA должны выполнить при загрузке объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Объекты, которые не загружаются [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в текущей попытке, будут предприняты повторно, пока SSMA не достигнет максимального числа попыток в текущем процессе синхронизации. Значение по умолчанию равно **2**  
   
 ## <a name="synchronization-for-db2-options"></a>Синхронизация параметров DB2  

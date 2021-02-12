@@ -9,12 +9,12 @@ ms.date: 10/19/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 904b07913a63e226e5e45876f2fc520226411223
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: bfcc348595a645eca3b1150ae39e7c777f4e192a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92199588"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100046774"
 ---
 # <a name="sql-server-big-data-clusters-hdfs-encryption-zones-usage-guide"></a>Рекомендации по использованию зон шифрования HDFS в Кластерах больших данных SQL Server
 
@@ -22,7 +22,7 @@ ms.locfileid: "92199588"
 
 В этом руководстве показано, как использовать функции шифрования неактивных данных Кластеров больших данных SQL Server для шифрования папок HDFS с помощью зон шифрования.
 
-Обратите внимание, что уже подключенная зона шифрования по умолчанию __```/securelake```__ готова к использованию. Она создана с помощью созданного системой 256-битного ключа с именем __securelakekey__ . Этот ключ можно использовать для создания дополнительных зон шифрования.
+Обратите внимание, что уже подключенная зона шифрования по умолчанию __```/securelake```__ готова к использованию. Она создана с помощью созданного системой 256-битного ключа с именем __securelakekey__. Этот ключ можно использовать для создания дополнительных зон шифрования.
 
 ## <a name="prerequisites"></a><a id="prereqs"></a> Предварительные требования
 
@@ -45,7 +45,7 @@ ms.locfileid: "92199588"
    hdfs dfs -mkdir -p /user/zone/folder
    ```
 
-1. Выдайте команду на создание зоны шифрования, чтобы зашифровать папку с помощью ключа __securelakekey__ .
+1. Выдайте команду на создание зоны шифрования, чтобы зашифровать папку с помощью ключа __securelakekey__.
 
    ```console
    hdfs crypto -createZone -keyName securelakekey -path /user/zone/folder
