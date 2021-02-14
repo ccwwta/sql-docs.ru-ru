@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: bf44b236-d9be-41ae-a5fd-bd73038e505f
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 15882852544113881b52f3641e0c85ec684add22
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 57fadc47d241658b96f2d9a7087bcb174d72dcce
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418570"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076315"
 ---
 # <a name="connect-to-azure-sql-database-accesstosql"></a>Подключение к базе данных SQL Azure (Акцесстоскл)
 Используйте диалоговое окно Подключение к SQL Azure для подключения к базе данных в базе данных SQL Azure, которую требуется перенести.  
@@ -35,7 +35,7 @@ ms.locfileid: "88418570"
 > [!IMPORTANT]  
 > SSMA для Access не поддерживает подключение к базе данных master в SQL Azure.  
   
-**User name**  
+**Имя пользователя**  
   
 Введите имя пользователя, которое SSMA будет использовать для подключения к базе данных SQL Azure.  
   

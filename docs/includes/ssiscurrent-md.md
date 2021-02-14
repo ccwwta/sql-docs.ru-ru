@@ -1,1 +1,1 @@
- Службы SQL Server 2017 Integration Services (SSIS) 
+ Службы SQL Server 2019 Integration Services (SSIS) 

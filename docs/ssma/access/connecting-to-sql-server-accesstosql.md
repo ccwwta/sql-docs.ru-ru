@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f84cf007-ddf1-4396-a07c-3e0729abc769
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1bd54d3fdf90447dbbf8b35a96c6b454ca6c4e56
-ms.sourcegitcommit: 82b92f73ca32fc28e1948aab70f37f0efdb54e39
+ms.openlocfilehash: 59583057641bb167aae197dd9fae3bf6e5833302
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "94869570"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076205"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>Подключение к SQL Server (Акцесстоскл)
 
@@ -64,7 +64,7 @@ ms.locfileid: "94869570"
 2. В поле **имя сервера** введите или выберите имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
    - При подключении к экземпляру по умолчанию на локальном компьютере можно ввести `localhost` или точку ( `.` ).
    - При подключении к экземпляру по умолчанию на другом компьютере введите имя компьютера.
-   - При подключении к именованному экземпляру введите имя компьютера, обратную косую черту и имя экземпляра. Например, так: `MyServer\MyInstance`.
+   - При подключении к именованному экземпляру введите имя компьютера, обратную косую черту и имя экземпляра. Например, `MyServer\MyInstance`.
    - Чтобы подключиться к активному пользовательскому экземпляру [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] , подключитесь с помощью протокола именованных каналов и укажите имя канала, например `\\.\pipe\sql\query` . Дополнительные сведения см. в документации по [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)].
 
 3. Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен для приема подключений по нестандартному порту, введите номер порта, используемый для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соединений, в поле **порт сервера** . Для экземпляра по умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] номер порта по умолчанию — 1433. Для именованных экземпляров SSMA попытается получить номер порта из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службы браузера.
@@ -78,7 +78,7 @@ ms.locfileid: "94869570"
 
 6. Для безопасного подключения добавляются два элемента управления: флажок **Шифровать соединение** и **TrustServerCertificate** . Флажок только при **шифровании подключения** установлен **TrustServerCertificate** . Если установлен флажок **Шифровать соединение** (true) и **TrustServerCertificate** (false), то будет проверять [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSL-сертификат. Проверка сертификата сервера является частью SSL-подтверждения и гарантирует, что для подключения выбран правильный сервер. Чтобы убедиться в этом, сертификат должен быть установлен на стороне клиента, а также на стороне сервера.
 
-7. Нажмите кнопку **Соединить**.
+7. Щелкните **Подключить**.
 
 > [!IMPORTANT]
 > Хотя вы можете подключаться к более поздней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , по сравнению с версией, выбранной при создании проекта миграции, преобразование объектов базы данных определяется целевой версией проекта, а не версией, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] к которой вы подключены.

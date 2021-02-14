@@ -12,12 +12,12 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: 8deacb8250d640e33140203d4d6d2c8eeb5d6acb
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 79a9e663214538252a6421d22baa068cf773b51e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99236855"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341403"
 ---
 # <a name="tracing-master-data-services"></a>Трассировка (Master Data Services)
 
@@ -66,7 +66,7 @@ ms.locfileid: "99236855"
     |Time|Когда происходит запись трассировки.|  
     |CorrelationID|Каждому запросу присваивается один идентификатор корреляции. Все трассировки, активированные данным запросом, будут иметь одинаковый идентификатор корреляции.<br /><br /> При возникновении ошибки в пользовательском интерфейсе сообщение об ошибке содержит идентификатор корреляции.|  
     |Операция|Имя запрошенной операции. Если это запрос к пользовательскому веб-интерфейсу, то именем операции является URL-адрес. Если это запрос к API, то именем операции является имя службы.|  
-    |Уровень|Уровень данной записи трассировки.|  
+    |Level|Уровень данной записи трассировки.|  
     |Сообщение|Текст трассировки.|  
   
 ## <a name="external-resources"></a>Внешние ресурсы  

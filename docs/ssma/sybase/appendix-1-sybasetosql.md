@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: 6dcfd6d5-772c-4876-aa94-a7f43c4b9d59
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 46b1d3bd60a3a2603cb0a317e0d2bbc3a206c3ea
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 63088f95aa36ca183a282615a25e6f9a8b29a0dd
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038848"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100075072"
 ---
 # <a name="appendix---1-sybasetosql"></a>Приложение 1 (SybaseToSQL)
 Быстрый просмотр параметров командной строки консоли SSMA:  
   
-|SL. Нет.|Параметр|Необходим?|Аргумент Switch|Разрешенные значения|  
+|SL. Нет.|Коммутатор|Необходим?|Аргумент Switch|Разрешенные значения|  
 |-----------|----------|-------------|-------------------|--------------------|  
 |1|-s/сценарий|Да|scriptfile|Допустимое имя XML-файла.<br /><br />Файл определения консольного скрипта.|  
 |2|-v/переменная|Нет|вариаблевалуефиле|Допустимое имя XML-файла.<br /><br />Если в файле скрипта используются переменные, необходимо указать этот файл.|  
@@ -31,7 +31,7 @@ ms.locfileid: "92038848"
 |5|-l/журнал|Нет|logfile|Допустимое имя файла.|  
 |6|-e/прожектенвиронмент|Нет|прожектенвиронментфолдер|Допустимое имя папки, содержащее файлы среды проекта SSMA.|  
 |7|-p/секурепассворд|Нет|-a/добавить {<server_id> [,... n] &#124; все}-c&#124;ServerConnection <Server-Connection-File> [-v&#124;переменная <переменная-value-File>] [-o/overwrite]<br /><br />или диспетчер конфигурации служб<br /><br />-a/добавить {<server_id> [,... n] &#124; все&#124;скрипта (}-s) <скрипт-File> [-v&#124;переменная <переменная-value-File>] [-o/overwrite]<br /><br />-r/Remove {<server_id> [,... n] &#124; все}<br /><br />-l/List<br /><br />-e/Export {<Server-ID> [,... n] &#124; все} <зашифрованные файлы паролей><br /><br />-i/Import {<Server-ID> [,... n] &#124; все} <зашифрованные файлы паролей>|Если этот параметр указан, он не должен сочетаться с другими параметрами.<br /><br />Server-ID: уникальный идентификатор, предоставленный для сервера {String}<br /><br />Server-Connection-File: файл определения сервера (серверконнектионфиле или scriptfile).<br /><br />переменная-value-File. это файл определения переменной, который используется в файле Server-Connection-File.<br /><br />encrypted-Password-File. это файл паролей сервера, зашифрованный с помощью заданной пользователем парольной фразы.|  
-|8|-?|Нет|Н/Д|Н/Д|  
+|8|-?|Нет|Неприменимо|Н/Д|  
   
 ## <a name="see-also"></a>См. также:  
 [Запуск консоли SSMA (Sybase)](./executing-the-ssma-console-sybasetosql.md)  

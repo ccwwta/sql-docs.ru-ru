@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dbf165b1121b35ccc1b68578841108866832bb80
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 10caff2486f8dae470a4778c6da649b7bba5ddba
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765603"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339924"
 ---
 # <a name="sequence-and-qnames-xquery"></a>Последовательность и QNames (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -149,7 +149,7 @@ WHERE ProductModelID=7;
 > [!NOTE]  
 >  Эта реализация не поддерживает префикс, `local` как описано в спецификации XQuery в http://www.w3.org/2004/07/xquery-local-functions .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основы языка XQuery](../xquery/xquery-basics.md)  
   
   

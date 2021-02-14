@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9dae0ad64323ea2879f0e752fd8a8d737bf003d2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 43f437c001bf38eab688720f1f3f66177c187d8f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "92257657"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100342149"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>Отправка файла ярлыка запроса по электронной почте (надстройка MDS для Excel)
 
@@ -24,7 +24,7 @@ ms.locfileid: "92257657"
 
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] можно отправить кому-либо файл ярлыка запроса по электронной почте, если адресат должен иметь возможность работать с теми же данными, что и вы. Вместо сохранения и отправки листа по электронной почте следует предоставлять общий доступ к запросу.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   Необходимо иметь установленную программу Outlook 2010 или более позднюю версию.  

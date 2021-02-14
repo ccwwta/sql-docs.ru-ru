@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 5ee625c0-044a-4cda-b210-02b64e619d65
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: caf736973d288a89bec287aff3cb1c1993e3b0dc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b52ae499cf09e8fcd024f592ae639d0f9a7c1c5a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726785"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341961"
 ---
 # <a name="aggregate-functions---max"></a>Агрегатные функции — max
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  Возвращает из последовательности атомарных значений, *$arg*один элемент, значение которого больше всех остальных.  
+  Возвращает из последовательности атомарных значений, *$arg* один элемент, значение которого больше всех остальных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -39,7 +39,7 @@ fn:max($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  *$arg*  
  Последовательность атомарных значений, из которой требуется вернуть максимальное значение.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Все типы атомарных значений, передаваемых в **Max ()** , должны быть подтипами одного и того же базового типа. Допустимые базовые типы — это типы, поддерживающие операцию **gt** . Эти типы включают в себя три встроенных базовых численных типа, базовые типы даты-времени, а также xs:string, xs:boolean, xdt:untypedAtomic. Значения типа xdt:untypedAtomic приводятся к типу xs:double. Если существует смесь этих типов или передаются другие значения других типов, возникает статическая ошибка.  
   
  Результат **Max ()** получает базовый тип переданных типов, например xs: Double в случае xdt: untypedAtomic. Если вход статически пуст, подразумевается пустое значение, и формируется статическая ошибка.  
@@ -63,7 +63,7 @@ fn:max($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
   
 -   Синтаксический параметр для указания параметров сортировки не поддерживается.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функции XQuery для типа данных xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

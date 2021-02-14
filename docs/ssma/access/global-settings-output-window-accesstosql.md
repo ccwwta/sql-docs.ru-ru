@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ca64f234-38f2-4607-a9d6-d4906e48e336
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 03ed181f7cb35619b0ab114116847a32efb8c636
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 55a3033a4b980194f37ead20af52a3abae2f5790
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422998"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100078765"
 ---
 # <a name="global-settings-output-window-accesstosql"></a>Глобальные параметры (окно вывода) (Акцесстоскл)
 Используйте диалоговое окно **глобальные параметры** , чтобы указать параметры для SSMA.  
@@ -23,7 +23,7 @@ ms.locfileid: "88422998"
 Чтобы получить доступ к параметрам окно вывода, в меню **Сервис** выберите **глобальные параметры**, щелкните **графический интерфейс** в нижней части левой панели, а затем выберите **окно вывода**.  
   
 ## <a name="options"></a>Параметры  
-**Отображение панели Список ошибок**  
+**Отображение панели список ошибок**  
 Выберите **значение true** , если требуется, чтобы SSMA отображал панель Список ошибок при наличии сообщений.  
   
 **Отображение области вывода**  

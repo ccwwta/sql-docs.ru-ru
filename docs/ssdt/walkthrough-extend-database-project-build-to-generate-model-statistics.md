@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 59c98e39bccbb6d4f74ddb5e9494e7fc4bced3eb
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 5e3905a3ded61ac6ef99f9ada4e94ffaab77a36c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985080"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100016684"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Пошаговое руководство. Расширение сборки проекта базы данных для формирования статистики модели
 
@@ -93,7 +93,7 @@ ms.locfileid: "91985080"
   
 4.  Выберите запись **System.ComponentModel.Composition** и нажмите кнопку **ОК**.  
   
-5.  Добавьте необходимые ссылки SQL. Для этого щелкните правой кнопкой мыши узел проекта и выберите **Добавить ссылку**. Нажмите кнопку **Обзор** . Перейдите в папку **C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin** Выберите записи **Microsoft.SqlServer.Dac.dll**, **Microsoft.SqlServer.Dac.Extensions.dll**и **Microsoft.Data.Tools.Schema.Sql.dll** и нажмите кнопку **ОК**.  
+5.  Добавьте необходимые ссылки SQL. Для этого щелкните правой кнопкой мыши узел проекта и выберите **Добавить ссылку**. Нажмите кнопку **Обзор** . Перейдите в папку **C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin** Выберите записи **Microsoft.SqlServer.Dac.dll**, **Microsoft.SqlServer.Dac.Extensions.dll** и **Microsoft.Data.Tools.Schema.Sql.dll** и нажмите кнопку **ОК**.  
   
     После этого приступайте к добавлению кода класса.  
   
@@ -440,7 +440,7 @@ ms.locfileid: "91985080"
   
 4.  В окне **Выберите файл ключа строгого имени** щелкните **<New>** .  
   
-5.  В диалоговом окне **Создать ключ со строгим именем** в поле **Имя файла ключа**введите **MyRefKey**.  
+5.  В диалоговом окне **Создать ключ со строгим именем** в поле **Имя файла ключа** введите **MyRefKey**.  
   
 6.  (Необязательно) Можно указать пароль для файла ключа для строгого имени.  
   

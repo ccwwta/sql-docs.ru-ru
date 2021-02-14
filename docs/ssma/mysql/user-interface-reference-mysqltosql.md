@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 47633dca91b3cf240ef745b186e01d4795de7d37
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: f2e74f5138108d4f7bcc8f4d7a3b2f8f008ab455
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035157"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100074485"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>Справочник по пользовательскому интерфейсу (MySQLToSQL)
 В этом разделе содержатся разделы справки по Помощник по миграции SQL Server (SSMA) для MySQL.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>Содержание  
 В следующей таблице приводится список диалоговых окон SSMA.  
   
 |Раздел|Описание|  
@@ -28,7 +28,7 @@ ms.locfileid: "92035157"
 |[Расширенный выбор объектов &#40;MySQLToSQL&#41;](../../ssma/mysql/advanced-object-selection-mysqltosql.md)|Используйте диалоговое окно **Расширенный выбор объектов** для поиска объектов базы данных с помощью условий фильтра, а затем выберите или отмените выбор этих объектов.|  
 |[Отчет об оценке &#40;MySQLToSQL&#41;](../../ssma/mysql/assessment-report-mysqltosql.md)|Используйте отчет для просмотра результатов преобразования объектов MySQL в синтаксис Transact-SQL, а также для оценки времени и сложности миграции на SQL Server.|  
 |[Подключение к MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)|Используйте диалоговое окно **Подключение к MySQL** для подключения к базе данных MySQL, которую требуется перенести.|  
-|[Подключение к SQL Server](./connect-to-sql-server-mysqltosql.md)|Используйте диалоговое окно **Подключение к SQL Server** , чтобы подключиться к экземпляру SQL Server, на который требуется выполнить миграцию.|  
+|[Подключение к SQL Server](./connect-to-sql-server-mysqltosql.md)|Используйте диалоговое окно **Подключение к SQL Server** , чтобы подключиться к экземпляру SQL Server, на который требуется выполнить миграцию.|  
 |[Подключение к базе данных SQL Azure &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)|Используйте диалоговое окно **Подключение к SQL Azure** , чтобы подключиться к экземпляру SQL Azure, на который требуется выполнить миграцию.|  
 |[Параметры преобразования (MySQL)](./conversion-settings-mysqltosql.md)|Используйте вкладку **Параметры** для установки параметров на уровне узла.|  
 |[Отчет о переносе данных &#40;MySQLToSQL&#41;](../../ssma/mysql/data-migration-report-mysqltosql.md)|Отображает результаты переноса данных из MySQL в SQL Server или SQL Azure.|  

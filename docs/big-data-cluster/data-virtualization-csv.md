@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: a524b238e980ee4b8972a4a8f7b976a34ca17c3e
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 7b78e44ee36e9320688a8a6815fbb267f1663d3d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97420126"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100038674"
 ---
 # <a name="virtualize-csv-data-from-storage-pool-big-data-clusters"></a>Виртуализация данных CSV-файла из пула носителей (кластеры больших данных)
 

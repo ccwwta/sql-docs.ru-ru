@@ -9,12 +9,12 @@ ms.assetid: 70485e74-2e25-4e7e-be6c-9dd1780a42e3
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 7940de563ab3b5dbee0fe59fb93f1dfe2d02ce3b
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: f965b68279398720ff7b1b9bcb76b5ec73410466
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988260"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100080085"
 ---
 # <a name="extended-events-for-stretch-database"></a>Расширенные события для Stretch Database
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -26,7 +26,7 @@ Stretch Database предоставляет набор расширенных с
   
 ## <a name="list-of-extended-events-for-stretch-database"></a>Список расширенных событий для базы данных Stretch  
   
-Имя события|Описание события   
+Имя события.|Описание события   
 ---------|---------  
 remote_data_archive_db_ddl|Происходит при обработке базы данных языка DDL T-SQL для расширения данных.  
 remote_data_archive_provision_operation|Возникает при начале или окончании операции подготовки.  

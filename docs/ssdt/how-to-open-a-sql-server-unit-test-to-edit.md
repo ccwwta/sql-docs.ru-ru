@@ -10,16 +10,16 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 8ed1f08f02b22aabc85a18068b5bbbe02b5a7ee9
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 0cd06acbd8817c62e728ee054024f570682450fc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987953"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100018174"
 ---
 # <a name="how-to-open-a-sql-server-unit-test-to-edit"></a>Руководство. открыть модульный тест SQL Server для изменения
 
-После создания модульного теста SQL Server добавьте инструкции и условия тестов Transact**SQL с помощью** конструктора модульных тестов SQL Server\-. Тесты, создаваемые с помощью конструктора, формируют код Visual C# или Visual Basic. Код выполняется при запуске теста.  
+После создания модульного теста SQL Server добавьте инструкции и условия тестов Transact **SQL с помощью** конструктора модульных тестов SQL Server\-. Тесты, создаваемые с помощью конструктора, формируют код Visual C# или Visual Basic. Код выполняется при запуске теста.  
   
 Если тест соответствует требованиям, его можно запускать без изменений. Если в модульный тест требуется добавить дополнительные функции, его код можно изменить. Код находится в файле с расширением CS или VB в тестовом проекте. Дополнительные сведения см. в статье [Файлы модульного теста SQL Server](../ssdt/sql-server-unit-test-files.md). Тесты также можно настраивать путем создания новых тестовых условий. Дополнительные сведения см. в разделе [Как создавать условия теста для конструктора модульных тестов базы данных (Visual Studio 2010)](/previous-versions/visualstudio/visual-studio-2010/aa833409(v=vs.100)).  
   
