@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 909d3cb49879a94c466e58f83997e32c468d9df8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0627d892733f84cb4a8d1b5cf80ad65d9c09f824
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85643362"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100335850"
 ---
 # <a name="sequencetype-expressions-xquery"></a>Выражения SequenceType (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -40,13 +40,13 @@ ms.locfileid: "85643362"
 Expression instance of SequenceType[Occurrence indicator]  
 ```  
   
- Обратите внимание, что `instance of` оператор, `Occurrence indicator` указывает количество элементов в результирующей последовательности. Если он не указан, предполагается, что количество элементов равно 1. В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] поддерживается только индикатор вхождения вопросительного знака (**?)** . Элемент **?** Индикатор вхождения указывает, что `Expression` может возвращать ноль или один элемент. Если **?** указан индикатор вхождения, `instance of` возвращает значение true, если `Expression` тип соответствует указанному `SequenceType` , независимо от того, `Expression` возвращает ли элемент Singleton или пустую последовательность.  
+ Обратите внимание, что `instance of` оператор, `Occurrence indicator` указывает количество элементов в результирующей последовательности. Если он не указан, предполагается, что количество элементов равно 1. В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] поддерживается только индикатор вхождения вопросительного знака (**?)** . Квантификатор **?** Индикатор вхождения указывает, что `Expression` может возвращать ноль или один элемент. Если **?** указан индикатор вхождения, `instance of` возвращает значение true, если `Expression` тип соответствует указанному `SequenceType` , независимо от того, `Expression` возвращает ли элемент Singleton или пустую последовательность.  
   
  Если **?** не указан индикатор вхождения, `sequence of` возвращает значение true, только если `Expression` тип соответствует `Type` указанному и `Expression` возвращает Singleton.  
   
  **Примечание** . Символ плюса ( **+** ) и индикаторы вхождения звездочки (**&#42;**) не поддерживаются в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- В следующих примерах показано использование**экземпляра** оператора XQuery.  
+ В следующих примерах показано использование **экземпляра** оператора XQuery.  
   
 ### <a name="example-a"></a>Пример A  
  В следующем примере создается переменная типа **XML** и задается запрос к ней. В выражении запроса используется оператор `instance of` для определения того, соответствует ли динамический тип значения, возвращаемого первым операндом, типу второго операнда.  
@@ -110,7 +110,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Дополнительные сведения см. [в разделе Сравнение типизированного XML с нетипизированным XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
+ Дополнительные сведения см. в статье [Сравнение типизированного и нетипизированного XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
  Следующие запросы Усесебулеан `instance of` выражение, чтобы определить, имеет ли атрибут LocationID тип xs: integer:  
   
@@ -313,7 +313,7 @@ select @x.query(' declare namespace CustOrders="Customers";
   
 -   Полные последовательности, например `(1,2) instance of xs:integer*`, не поддерживаются.  
   
--   При использовании вида последовательности **element ()** , указывающего имя типа, например `element(ElementName, TypeName)` , тип должен быть дополнен вопросительным знаком (?). Например, инструкция `element(Title, xs:string?)` указывает, что элемент может иметь значение NULL. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]не поддерживает обнаружение во время выполнения свойства **xsi: nil** с помощью `instance of` .  
+-   При использовании вида последовательности **element ()** , указывающего имя типа, например `element(ElementName, TypeName)` , тип должен быть дополнен вопросительным знаком (?). Например, инструкция `element(Title, xs:string?)` указывает, что элемент может иметь значение NULL. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не поддерживает обнаружение во время выполнения свойства **xsi: nil** с помощью `instance of` .  
   
 -   Если значение `Expression` извлекается из элемента или атрибута, типизированного как объединенный тип, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] может идентифицировать только примитивный непроизводный тип, от которого произведен тип значения. Например, если для <`e1`> определен статический тип (xs: integer | xs: String), следующий пример вернет значение false.  
   
@@ -375,13 +375,13 @@ select @x.query('xs:date("2000-01-01Z")')
   
 #### <a name="implementation-limitations"></a>Ограничения реализации  
   
--   Выражения XQuery **типесвитч**, **casted**и **Treat** не поддерживаются.  
+-   Выражения XQuery **типесвитч**, **casted** и **Treat** не поддерживаются.  
   
 -   **для приведения AS** требуется вопросительный знак (?) После атомарного типа.  
   
 -   **xs: QName** не поддерживается в качестве типа для приведения. Вместо этого используйте **Расширенный-QName** .  
   
--   для **xs: Date**, **xs: Time**и **xs: DateTime** требуется часовой пояс, обозначенный буквой Z.  
+-   для **xs: Date**, **xs: Time** и **xs: DateTime** требуется часовой пояс, обозначенный буквой Z.  
   
      Например, следующий запрос завершается неудачей, потому что часовой пояс не указан:  
   
@@ -407,7 +407,7 @@ select @x.query('xs:date("2000-01-01Z")')
     <a>2002-05-25Z</a>  
     ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выражения XQuery](../xquery/xquery-expressions.md)   
  [Введите System &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
   

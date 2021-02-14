@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a50ed63856e9998066db0b4d0791feb79478726c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6fec2edcca6a5a73c8fcdb9bb0629b7b5ed2ff24
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734163"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340464"
 ---
 # <a name="xquery-language-reference-sql-server"></a>Справочник по языку XQuery (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[tsql](../includes/tsql-md.md)]поддерживает подмножество языка XQuery, используемого для запроса типа данных **XML** . Эта реализация XQuery совпадает с рабочим эскизом XQuery на июль 2004 г. Язык разрабатывается консорциумом World Wide Web Consortium (W3C) с участием всех основных поставщиков баз данных, а также корпорации Майкрософт. Так как спецификации W3C могут быть подвержены изменениям в будущем, перед тем как стать рекомендациями W3C, эта реализация может отличаться от конечной рекомендации. Данный подраздел охватывает семантику и синтаксис поднабора XQuery, который поддерживается в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  [!INCLUDE[tsql](../includes/tsql-md.md)] поддерживает подмножество языка XQuery, используемого для запроса типа данных **XML** . Эта реализация XQuery совпадает с рабочим эскизом XQuery на июль 2004 г. Язык разрабатывается консорциумом World Wide Web Consortium (W3C) с участием всех основных поставщиков баз данных, а также корпорации Майкрософт. Так как спецификации W3C могут быть подвержены изменениям в будущем, перед тем как стать рекомендациями W3C, эта реализация может отличаться от конечной рекомендации. Данный подраздел охватывает семантику и синтаксис поднабора XQuery, который поддерживается в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Дополнительные сведения см. в [спецификации языка W3C XQuery 1,0](https://go.microsoft.com/fwlink/?LinkId=48846).  
   
@@ -61,7 +61,7 @@ WHERE ProductModelID=7
   
 |Раздел|Описание|  
 |-----------|-----------------|  
-|[Данные XML (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)|Описание поддержки типа данных **XML**в [!INCLUDE[ssDE](../includes/ssde-md.md)] методах и методов, которые можно использовать для этого типа данных. Тип данных **XML** формирует модель входных данных XQuery, на которой выполняются выражения XQuery.|  
+|[Данные XML (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)|Описание поддержки типа данных **XML** в [!INCLUDE[ssDE](../includes/ssde-md.md)] методах и методов, которые можно использовать для этого типа данных. Тип данных **XML** формирует модель входных данных XQuery, на которой выполняются выражения XQuery.|  
 |[Коллекции XML-схем (SQL Server)](../relational-databases/xml/xml-schema-collections-sql-server.md)|Описывается, как хранящиеся в базе данных экземпляры XML могут быть типизированы. Это означает, что коллекцию схем XML можно связать со столбцом типа **XML** . Все экземпляры, хранящиеся в столбце, проверяются и типизируются схемой в коллекции и предоставляют типизированные сведения для XQuery.|  
 |||  
   
@@ -79,8 +79,8 @@ WHERE ProductModelID=7
 |[Сравнение операторов XQuery с XML-данными](../xquery/xquery-operators-against-the-xml-data-type.md)|Описываются поддерживаемые операторы XQuery.|  
 |[Дополнительные примеры запросов на языке XQuery к XML-данным](../xquery/additional-sample-xqueries-against-the-xml-data-type.md)|Приводятся дополнительные образцы запросов XQuery.|  
   
-## <a name="see-also"></a>См. также  
- [SQL Server &#40;XML-данных&#41;](../relational-databases/xml/xml-data-sql-server.md)   
+## <a name="see-also"></a>См. также:  
+ [Данные XML (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)   
  [Коллекции XML-схем (SQL Server)](../relational-databases/xml/xml-schema-collections-sql-server.md)   
  [Примеры массового импорта и экспорта XML-документов (SQL Server)](../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   

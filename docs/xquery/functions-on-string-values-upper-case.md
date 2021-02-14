@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2e48fb5448284cc90a87aff88a9cf7a0304c661d
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 62a59ec49dfccfba7c710baf9a80eae2c301a94b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87107228"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344962"
 ---
 # <a name="functions-on-string-values---upper-case"></a>Функции со строковыми значениями — upper-case
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ DECLARE @x xml = N'abcDEF!@4';
 SELECT @x.value('fn:upper-case(/text()[1])', 'nvarchar(10)');  
 ```  
   
-### <a name="b-search-for-a-specific-character-string"></a>Б) Поиск конкретной символьной строки  
+### <a name="b-search-for-a-specific-character-string"></a>Б. Поиск конкретной символьной строки  
  В этом примере показано использование функции upper-case для выполнения поиска без учета регистра.  
   
 ```  

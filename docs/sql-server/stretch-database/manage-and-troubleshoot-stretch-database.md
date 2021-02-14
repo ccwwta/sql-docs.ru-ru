@@ -14,12 +14,12 @@ ms.assetid: 6334db3e-9297-44df-8d53-211187a95520
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: efe0b68c605c96423dae5206693ff733430aff63
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 346bc660bc1fa1fd9a6e75a91caa182ff25e6c53
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454337"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100081108"
 ---
 # <a name="manage-and-troubleshoot-stretch-database"></a>Управление службой Stretch Database и устранение неполадок, связанных с ее использованием
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -81,7 +81,7 @@ GO
   > [!IMPORTANT]
   > Воссоздавая столбцы, случайно стертые из удаленной таблицы, процедура **sp_rda_reconcile_columns** не восстанавливает данные, которые прежде присутствовали в стертых столбцах.
   
-Процедура**sp_rda_reconcile_columns** не стирает столбцы из удаленной таблицы, существующие в удаленной таблице, но отсутствующие в таблице SQL Server с поддержкой Stretch. Если в удаленной таблице Azure есть столбцы, которых больше нет в таблице SQL Server с поддержкой Stretch Database, эти лишние столбцы не препятствуют нормальной работе службы Stretch Database. При желании вы можете удалить такие столбцы вручную.  
+Процедура **sp_rda_reconcile_columns** не стирает столбцы из удаленной таблицы, существующие в удаленной таблице, но отсутствующие в таблице SQL Server с поддержкой Stretch. Если в удаленной таблице Azure есть столбцы, которых больше нет в таблице SQL Server с поддержкой Stretch Database, эти лишние столбцы не препятствуют нормальной работе службы Stretch Database. При желании вы можете удалить такие столбцы вручную.  
  
 ## <a name="manage-performance-and-costs"></a>Управление производительностью и затратами  
   

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c522e0756ca846558acbf6ac1b96c7d4abeef57e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7f9a09225562cbabe7ced75d80f26e37ee53d3e3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753558"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100335840"
 ---
 # <a name="functions-on-sequences---empty"></a>Функции с последовательностями — empty
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ fn:empty($arg as item()*) as xs:boolean
  *$arg*  
  Последовательность элементов. Если последовательность пуста, функция возвращает значение True. В противном случае функция возвращает значение False.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Функция **fn: Exists ()** не поддерживается. В качестве альтернативы можно использовать функцию **NOT ()** .  
   
 ## <a name="examples"></a>Примеры  
@@ -111,7 +111,7 @@ ProductModelID Result
   <Location LocationID="60" LaborHrs="4" MachineHours="NotFound"/>  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функции XQuery для типа данных XML](../xquery/xquery-functions-against-the-xml-data-type.md)   
  [exist (метод) (тип данных xml)](../t-sql/xml/exist-method-xml-data-type.md)  
   

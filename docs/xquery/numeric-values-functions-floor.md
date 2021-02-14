@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4ace57dd-b66e-4b60-a2b9-a1b0f1a0831d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cf7943cbcef462dbdf73e72357f28e4f4e3eb20d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 206bacf618d38c2dbbe593355d48ed66f7a9e67f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724214"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341540"
 ---
 # <a name="numeric-values-functions---floor"></a>Функции с числовыми значениями — floor
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -39,8 +39,8 @@ fn:floor ($arg as numeric?) as numeric?
  *$arg*  
  Число, к которому применяется функция.  
   
-## <a name="remarks"></a>Примечания  
- Если тип *$arg* является одним из трех числовых базовых типов, **xs: float**, **xs: double**или **xs: decimal**, возвращаемый тип совпадает с типом *$arg* . Если тип *$arg* является типом, производным от одного из числовых типов, то возвращаемым типом является базовый числовой тип.  
+## <a name="remarks"></a>Remarks  
+ Если тип *$arg* является одним из трех числовых базовых типов, **xs: float**, **xs: double** или **xs: decimal**, возвращаемый тип совпадает с типом *$arg* . Если тип *$arg* является типом, производным от одного из числовых типов, то возвращаемым типом является базовый числовой тип.  
   
  Если в качестве входных данных для функций Fn: Floor, fn: Ceiling или Fn: Round задано значение **xdt: untypedAtomic**, нетипизированные данные, то неявно приводится к типу **xs: Double**. Использование любого другого типа вызовет статическую ошибку.  
   
@@ -54,7 +54,7 @@ fn:floor ($arg as numeric?) as numeric?
   
 -   Функция **floor ()** сопоставляет все целочисленные значения с типом xs: Decimal.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функция CEILING &#40;XQuery&#41;](../xquery/numeric-values-functions-ceiling.md)   
  [Функция Round &#40;XQuery&#41;](../xquery/numeric-values-functions-round.md)   
  [Функции XQuery для типа данных xml](../xquery/xquery-functions-against-the-xml-data-type.md)  

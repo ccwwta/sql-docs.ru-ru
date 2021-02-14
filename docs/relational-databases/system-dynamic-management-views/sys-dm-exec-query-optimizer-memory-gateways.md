@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: josack
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ff3adb52a968957faead5453e266ec733df38f4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 66e5d3e4509b8593a41a53348e466054ee01b4f4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99198532"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100342909"
 ---
 # <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 
@@ -51,7 +51,7 @@ SQL Server требуется разрешение VIEW SERVER STATE на сер
 Для работы с базой данных SQL Azure в базе данных требуется разрешение VIEW DATABASE STATE.
 
 
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 SQL Server использует многоуровневый шлюз для регулирования числа разрешенных параллельных компиляций.  Используются три шлюза, включая небольшие, средние и большие. Шлюзы помогают предотвратить исчерпание общих ресурсов памяти за счет большего объема памяти компиляции, требующего потребителей.
 
 Ожидает результат шлюза при отложенной компиляции. Помимо задержек при компиляции, регулируемые запросы будут иметь связанный RESOURCE_SEMAPHORE_QUERY_COMPILE тип ожидания. Тип ожидания RESOURCE_SEMAPHORE_QUERY_COMPILE может указывать на то, что запросы используют большой объем памяти для компиляции и что память была исчерпана, или же достаточно памяти в целом, но доступные единицы в определенном шлюзе исчерпаны. Выходные данные **sys.dm_exec_query_optimizer_memory_gateways** можно использовать для устранения неполадок в сценариях, где недостаточно памяти для компиляции плана выполнения запроса.  

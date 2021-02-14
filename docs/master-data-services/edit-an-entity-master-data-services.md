@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a95b2515fd8840f3a5dc04b4276bfb0316535619
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 55cc510ecfb781d1d4366d9df928223139116fde
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88389550"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341740"
 ---
 # <a name="edit-an-entity-master-data-services"></a>Изменение сущности (Master Data Services)
 
@@ -60,7 +60,7 @@ ms.locfileid: "88389550"
      Дополнительные сведения см. в разделе [Сжатие данных](../relational-databases/data-compression/data-compression.md) .  
   
 ## <a name="status"></a>Состояние  
- В столбце состояния в сетке отображается состояние операции с сущностью. После нажатия кнопки **Сохранить сущность**появится следующее изображение, которое указывает на то, что сущность обновляется.  
+ В столбце состояния в сетке отображается состояние операции с сущностью. После нажатия кнопки **Сохранить сущность** появится следующее изображение, которое указывает на то, что сущность обновляется.  
   
  ![Значок обновления состояния](../master-data-services/media/mds-statusicon-updating.png "Значок обновления состояния")  
   

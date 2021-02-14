@@ -17,10 +17,10 @@ ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: c26248551ad949bcf27433d28898ba4ec98dc68b
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
+ms.lasthandoff: 02/12/2021
 ms.locfileid: "99211634"
 ---
 # <a name="sp_replsetoriginator-transact-sql"></a>sp_replsetoriginator (Transact-SQL)
@@ -46,7 +46,7 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **sp_replsetoriginator** выполняется агент распространения для записи источника транзакций, применяемых репликацией. Данные сведения используются для запуска механизма распознавания замыкания на себя для двунаправленных транзакционных подписок, которые имеют набор свойств обратной связи.  
   
 ## <a name="permissions"></a>Разрешения  

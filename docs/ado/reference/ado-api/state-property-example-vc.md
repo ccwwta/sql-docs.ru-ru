@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c38cd3b-e4f5-4754-b115-ef5e46d24ab9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8a1090d0121d54ecb754f8a2c979602da56e9498
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 06062a16166ad2dea1891ea63e952b3955597063
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99170195"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100051225"
 ---
 # <a name="state-property-example-vc"></a>Пример свойства State (Visual C++)
 В этом примере свойство [State](./state-property-ado.md) используется для отображения сообщения, в то время как асинхронные соединения открываются и выполняются асинхронные команды.  

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dc92086e-3b01-4b0b-9f54-3bbf306cf7ae
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3713f0fadfe186c31a26f2f19adea88da2f28384
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3fdc8ce4bf35bb630d0ed0b40892312f89a5285c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729520"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340519"
 ---
 # <a name="context-functions---last-xquery"></a>Функции контекста — last (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "85729520"
 fn:last() as xs:integer  
 ```  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  В SQL Server функция **fn: Last ()** может использоваться только в контексте контекстно-зависимого предиката. Точнее, ее использование возможно только внутри квадратных скобок (`[ ]`).  
   
 ## <a name="examples"></a>Примеры  
@@ -78,7 +78,7 @@ ProductModelID Result
        </LastTwoManuSteps>  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функции XQuery для типа данных xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

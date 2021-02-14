@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5eff7f5f2db1d1b155b94818083ddad11f23890e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f87125b2c72ac5c8242965dcb3d0407a4a15614c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456720"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340227"
 ---
 # <a name="reserved-words-master-data-services"></a>Зарезервированные слова (службы Master Data Services)
 
@@ -38,7 +38,7 @@ ms.locfileid: "88456720"
   
 -   [Атрибуты](../master-data-services/reserved-words-master-data-services.md#attributes)  
   
--   [Участники](../master-data-services/reserved-words-master-data-services.md#members)  
+-   [Члены](../master-data-services/reserved-words-master-data-services.md#members)  
   
 ##  <a name="models"></a><a name="models"></a> Моделью  
  Если модель создается с именем **Name** или **Code**, не выбирайте **Создать сущность с именем модели** , поскольку **Name** или **Code** нельзя использовать в качестве имени сущности.  
@@ -51,7 +51,7 @@ ms.locfileid: "88456720"
   
 ##  <a name="attributes"></a><a name="attributes"></a> Атрибута  
   
--   **ID**  
+-   **Идентификатор**  
   
 -   **Код**  
   
@@ -59,7 +59,7 @@ ms.locfileid: "88456720"
   
 -   **LastChgUserName**  
   
--   **имя**;  
+-   **Имя**  
   
 -   **EnterDTM**  
   
@@ -78,9 +78,9 @@ ms.locfileid: "88456720"
 -   **Version_ID**  
   
 ##  <a name="members"></a><a name="members"></a> Участниками  
- Для элементов нельзя использовать **MDMMemberStatus**, **MDMUnused**или **ROOT** в качестве значения атрибута **Code** .  
+ Для элементов нельзя использовать **MDMMemberStatus**, **MDMUnused** или **ROOT** в качестве значения атрибута **Code** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Общие сведения о службах Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md)  
   
   

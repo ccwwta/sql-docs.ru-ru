@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a5ae807638c25b0e01129d1dfbdc6238fd3001f8
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: edc7b7875e3ee3f7512ee19a62d68a50a1617436
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99201011"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100081365"
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions, функция
 **Соответствия**  
@@ -69,7 +69,7 @@ SQLRETURN SQLGetFunctions(
 ## <a name="diagnostics"></a>Диагностика  
  Когда **SQLGetFunctions** возвращает SQL_ERROR или SQL_SUCCESS_WITH_INFO, связанное значение SQLSTATE может быть получено путем вызова **SQLGetDiagRec** с *параметром handletype* SQL_HANDLE_DBC и *маркером* *коннектионхандле*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые функцией **SQLGetFunctions** , и объясняется каждый из них в контексте этой функции. Нотация "(DM)" предшествует описаниям SQLSTATE, возвращаемым диспетчером драйверов. Код возврата, связанный с каждым значением SQLSTATE, имеет SQL_ERROR, если не указано иное.  
   
-|SQLSTATE|Ошибка|Описание|  
+|SQLSTATE|Error|Описание|  
 |--------|-----|-----------|  
 |01000|Общее предупреждение|Информационное сообщение для конкретного драйвера. (Функция возвращает SQL_SUCCESS_WITH_INFO.)|  
 |08S01|Сбой канала связи|Канал связи между драйвером и источником данных, к которому был подключен драйвер, был неудачен до завершения обработки функции.|  

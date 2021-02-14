@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6e96975fbd7946c53f60af29a91cec938b0ffeb0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: df91e4bc3d0dab5566abfecd8ef5a8039339d2c6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461801"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339102"
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>Создание и выполнение отношений синхронизации сущностей (Master Data Services)
 
@@ -79,9 +79,9 @@ ms.locfileid: "88461801"
   
 9. Если вы хотите синхронизировать существующую сущность, выберите пункт **Существующая сущность** , а затем выберите сущность в соответствующем списке. Если же при синхронизации вам нужно создать новую сущность, выберите пункт **Новая сущность** и введите имя целевой сущности.  
   
-10. Выберите **синхронизацию по требованию**или **автоматическую синхронизацию** и укажите частоту.  
+10. Выберите **синхронизацию по требованию** или **автоматическую синхронизацию** и укажите частоту.  
   
-11. Выберите команду **Сохранить**.  
+11. Нажмите кнопку **Сохранить**.  
   
  **Выполнение отношения синхронизации сущностей**  
   

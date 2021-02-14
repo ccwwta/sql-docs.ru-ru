@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dc2a85c48e404fa717b001482bbe5fc8f8356e99
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1ea2dbaab164c57acf9e9bc166ee431e80783648
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775489"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341579"
 ---
 # <a name="numeric-values-functions---ceiling"></a>Функции с числовыми значениями — ceiling 
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -39,8 +39,8 @@ fn:ceiling ( $arg as numeric?) as numeric?
  *$arg*  
  Число, к которому применяется функция.  
   
-## <a name="remarks"></a>Примечания  
- Если тип *$arg* является одним из трех числовых базовых типов, **xs: float**, **xs: double**или **xs: decimal**, возвращаемый тип совпадает с типом *$arg* .  
+## <a name="remarks"></a>Remarks  
+ Если тип *$arg* является одним из трех числовых базовых типов, **xs: float**, **xs: double** или **xs: decimal**, возвращаемый тип совпадает с типом *$arg* .  
   
  Если тип *$arg* является типом, производным от одного из числовых типов, то возвращаемым типом является базовый числовой тип.  
   
@@ -100,7 +100,7 @@ ProductModelID Result
   
 -   Функция **ceiling ()** сопоставляет все целочисленные значения с типом xs: Decimal.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функция Floor &#40;XQuery&#41;](../xquery/numeric-values-functions-floor.md)   
  [Функция Round &#40;XQuery&#41;](../xquery/numeric-values-functions-round.md)  
   

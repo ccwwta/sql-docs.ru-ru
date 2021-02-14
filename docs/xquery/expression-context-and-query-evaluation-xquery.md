@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a870cdbd9a90fefe29088892f278446479665de7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f4fd85737d1a7cdc981576f624a2a403f0eb19ee
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753638"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341949"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>Контекст выражения и вычисление запросов (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "85753638"
   
      Все такие связывания пространств имен разрешаются в процессе инициализации статического контекста.  
   
--   При выполнении запроса к типизированному **XML-** столбцу или переменной компоненты коллекции схем XML, связанные со столбцом или переменной, импортируются в статический контекст. Дополнительные сведения см. [в разделе Сравнение типизированного XML с нетипизированным XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
+-   При выполнении запроса к типизированному **XML-** столбцу или переменной компоненты коллекции схем XML, связанные со столбцом или переменной, импортируются в статический контекст. Дополнительные сведения см. в статье [Сравнение типизированного и нетипизированного XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
 -   Функция приведения также становится доступной в статическом контексте для каждого атомарного типа в импортированных схемах. Это продемонстрировано в следующем примере. В этом примере запрос задается для типизированной переменной **XML** . Коллекция XML-схем, связанная с данной переменной, определяет атомный тип myType. В соответствии с этим типом, функция приведения типа **MyType ()** доступна во время статического анализа. Выражение запроса (`ns:myType(0)`) возвращает значение myType.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "85753638"
 ### <a name="implementation-restrictions"></a>Ограничения реализации  
  Далее приводятся ограничения, связанные с динамическим контекстом:  
   
--   Текущие функции контекста **даты и времени** , **fn: Current-Date**, **fn: Current-Time**и **fn: Current-DateTime**, не поддерживаются.  
+-   Текущие функции контекста **даты и времени** , **fn: Current-Date**, **fn: Current-Time** и **fn: Current-DateTime**, не поддерживаются.  
   
 -   **Неявный часовой пояс** фиксируется в формате UTC + 0 и не может быть изменен.  
   
@@ -191,7 +191,7 @@ ms.locfileid: "85753638"
   
 -   Функция **fn: Collection ()** не поддерживается.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основы XQuery](../xquery/xquery-basics.md)   
  [Сравнение типизированного и нетипизированного XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Коллекции XML-схем (SQL Server)](../relational-databases/xml/xml-schema-collections-sql-server.md)  

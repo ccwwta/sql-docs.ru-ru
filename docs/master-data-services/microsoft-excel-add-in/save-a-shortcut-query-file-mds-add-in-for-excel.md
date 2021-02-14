@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 98385f84-67cc-421a-b729-91847954e03e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b0ba147e5c784376f9bca1585bab99444c2d9378
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4014e6ad6306756c42022d5ac3db5fc4856e789e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "92257859"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340387"
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>Сохранение файла ярлыка запроса (надстройка MDS для Excel)
 
@@ -24,7 +24,7 @@ ms.locfileid: "92257859"
 
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]можно сохранить файл ярлыка запроса, если требуется часто обращаться к одному и тому же набору данных.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   Активный лист должен содержать данные, управляемые MDS, в необходимом формате. Например, столбцы должны быть подготовлены для просмотра в необходимом порядке, а также должны быть применены все необходимые фильтры. Дополнительные сведения см. в разделах [Фильтрация данных перед их экспортом (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md) и [Переупорядочение столбцов (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/reorder-columns-mds-add-in-for-excel.md).  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups_history_ex dynamic management view
 author: joesackmsft
 ms.author: josack
-ms.openlocfilehash: ac8bc675c5a059c211e6ecfbed063d54daf6ee92
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 75235f489b396c2269ae0d1dcf22ed24297ec4e9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99203305"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100342742"
 ---
 # <a name="sysdm_resource_governor_workload_groups_history_ex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex (база данных SQL Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "99203305"
 
 Для этого представления требуется разрешение VIEW SERVER STATE.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Remarks
 
 Пользователи могут получить доступ к этому динамическому административному представлению, чтобы отслеживать потребление ресурсов практически в реальном времени для пула рабочей нагрузки пользователей, а также системных внутренних пулов экземпляра базы данных SQL Azure.
 

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: de90c81c-9e7f-4997-bf96-e22b97b2862c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 332afe4eaca5e694fa0fa75aeede689a8a92fdde
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2dba27ae76c411f4ac095b9e8c38fa4987e32749
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "92257866"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340375"
 ---
 # <a name="view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel"></a>Просмотр всех заметок или транзакций для элемента (надстройка MDS для Excel)
 
@@ -24,7 +24,7 @@ ms.locfileid: "92257866"
 
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]можно просмотреть заметки (комментарии) и транзакции для строк данных (элементов), если необходимо узнать, как менялись данные с течением времени.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   Необходимо иметь активный лист, содержащий данные, управляемые MDS.  

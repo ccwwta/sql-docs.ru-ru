@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c27ed4fad982831288f1e115f6da94bc70114c61
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: c6ae0aedd4971d6345811e6ee0bfff5afa395c15
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037437"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344980"
 ---
 # <a name="functions-on-sequences---id"></a>Функции с последовательностями — id
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ fn:id($arg as xs:IDREF*) as element()*
  *$arg*  
  Одно или несколько значений xs:IDREF.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Результатом функции является последовательность элементов в экземпляре XML, в порядке документов, имеющих значение xs:ID, равное одному или нескольким значениям xs:IDREF в списке кандидатов xs:IDREF.  
   
  Если значение xs:IDREF не совпадает ни с одним элементом, функция возвращает пустую последовательность.  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7dee3c11-aea0-4d10-9126-d54db19448f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e7afd7743a7a158738b7b88cd20d33be3220ece0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 61e6b8b53e4519eb88f94f9521434b2e48aac40d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753647"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100335873"
 ---
 # <a name="error-handling-xquery"></a>Обработка ошибок (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -83,8 +83,8 @@ GO
 #### <a name="implementation-limitations"></a>Ограничения реализации  
  Функция **fn: Error ()** не поддерживается.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по языку XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
+## <a name="see-also"></a>См. также:  
+ [Справочник по языку XQuery (SQL Server)](../xquery/xquery-language-reference-sql-server.md)   
  [Основы языка XQuery](../xquery/xquery-basics.md)  
   
   

@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 12/11/2020
-ms.openlocfilehash: e1a70d9b69306e4394bc726fd58a48923bb2a937
-ms.sourcegitcommit: 5ceafd29b8f22edb800cec150f0ccddea43313e7
+ms.openlocfilehash: 942d0c84e697654e67d48ce708792eb8bcf770aa
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "98983677"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100081485"
 ---
 # <a name="sqlpackage-export-parameters-and-properties"></a>Параметры и свойства экспорта SqlPackage
 Действие экспорта SqlPackage.exe экспортирует подключенную базу данных в BACPAC-файл. По умолчанию данные для всех таблиц будут включены в BACPAC-файл. При необходимости можно указать только подмножество таблиц, для которых следует выполнить экспорт данных. Проверка для действия Export обеспечивает совместимость базы данных SQL Azure со всей целевой базой данных, даже если для экспорта указано подмножество таблиц. 

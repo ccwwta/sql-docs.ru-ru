@@ -15,12 +15,12 @@ ms.assetid: c6202dcc-b994-457b-9b2f-0cd89e79792d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: f7b9fa46fcd5b24b5427c4ba7a359ac37565f724
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e8f26a02082dad9533044617771c1525fffd467e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463186"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100080705"
 ---
 # <a name="working-with-the-sample-console-script-files-oracletosql"></a>Работа с образцами файлов сценария консоли (OracleToSQL)
 Несколько примеров файлов предоставлены вместе с продуктом для ссылки и использования пользователя. В этом разделе описывается, как с легкостью настроить эти сценарии в соответствии с потребностями конечного пользователя.  
@@ -123,7 +123,7 @@ ms.locfileid: "88463186"
   
     `object-name:` Указывает имя базы данных-источника или таблицы, которые необходимо перенести. Убедитесь, что соответствующие `object-type` изменения основаны на типе объекта, который указан в `object-name`  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Создание файлов переменных значений &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
 [Создание файлов подключения к серверу &#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
 [Создание отчетов &#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)  
