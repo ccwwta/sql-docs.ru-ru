@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3a3215b3-548c-4474-81ba-3a98dd3912bf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 17162c5cb862c496c70459818497e66d1342923a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 255a1007c7a1ebb270c19d92a3129ea444599d41
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80217079"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064629"
 ---
 # <a name="how-to-debug-custom-assemblies"></a>Руководство. Отладка пользовательских сборок
   В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] предусмотрен ряд средств отладки, помогающих проанализировать код пользовательской сборки и найти в нем ошибки. Выбор наиболее подходящего средства отладки зависит от того, какая цель должна быть достигнута. В этом примере используется [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)].  

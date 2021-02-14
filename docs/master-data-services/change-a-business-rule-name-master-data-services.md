@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c575f408d0682554eb3ead69e3915d226d4975b0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cada2e43ffb4d987c54a0e8b5079b32879a47bf2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500726"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100351951"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>Изменение имени бизнес-правила (службы Master Data Services)
 
@@ -51,11 +51,11 @@ ms.locfileid: "88500726"
   
 7.  Введите новое имя для бизнес-правила.  
   
-8.  Выберите команду **Сохранить**.  
+8.  Нажмите кнопку **Сохранить**.  
   
 9. Нажмите кнопку **Опубликовать все**.  
   
-10. В диалоговом окне подтверждения нажмите кнопку **ОК**. Значение в столбце **Состояние бизнес-правила**изменится на **Активно**.  
+10. В диалоговом окне подтверждения нажмите кнопку **ОК**. Значение в столбце **Состояние бизнес-правила** изменится на **Активно**.  
   
 ## <a name="see-also"></a>См. также:  
  [Бизнес-правила (службы Master Data Services)](../master-data-services/business-rules-master-data-services.md)  

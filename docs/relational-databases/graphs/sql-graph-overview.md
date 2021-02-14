@@ -16,15 +16,15 @@ author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 846f37923f8388e15663c56a4f724984a1a2588f
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8c7dfeaa67e0ede78b0a891409be3211e1fa8d2e
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97480175"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100351418"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Обработка графов в SQL Server и Базы данных SQL Azure
-[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет возможности баз данных Graph для моделирования связей "многие ко многим". Связи графов интегрированы в [!INCLUDE[tsql-md](../../includes/tsql-md.md)] и получают преимущества использования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве базовой системы управления базами данных.
 
@@ -43,12 +43,12 @@ ms.locfileid: "97480175"
 -    Приложение имеет сложные связи "многие ко многим". по мере развития приложения добавляются новые связи.
 -    Вам необходимо анализировать взаимосвязанные данные и связи.
 
-## <a name="graph-features-introduced-in-sssqlv14"></a>Функции Graph, появившиеся в [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
+## <a name="graph-features-introduced-in-sssql17"></a>Функции Graph, появившиеся в [!INCLUDE[sssql17](../../includes/sssql17-md.md)] 
 Мы начинаем добавлять расширения графа в SQL Server, чтобы упростить хранение и запрос данных графов. В первом выпуске представлены следующие функции. 
 
 
 ### <a name="create-graph-objects"></a>Создание объектов Graph
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)] расширения позволяют пользователям создавать таблицы node или ребра. С этими узлами и краями могут быть связаны свойства. Поскольку узлы и грани хранятся в виде таблиц, все операции, поддерживаемые реляционными таблицами, поддерживаются в таблице node или EDGE. Например:  
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)] расширения позволяют пользователям создавать таблицы node или ребра. С этими узлами и краями могут быть связаны свойства. Поскольку узлы и грани хранятся в виде таблиц, все операции, поддерживаемые реляционными таблицами, поддерживаются в таблице node или EDGE. Пример:  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;
@@ -89,7 +89,7 @@ AND Person1.Name = 'John';
 ## <a name="shortest-path"></a>Кратчайший путь
 Функция [SHORTEST_PATH](./sql-graph-shortest-path.md) находит кратчайший путь между любыми двумя узлами в графе или начиная с заданного узла и до всех остальных узлов графа. Кратчайший путь можно также использовать для поиска транзитивное замыкания или для произвольного обхода длины в графе. 
 
- ## <a name="next-steps"></a>Дальнейшие действия  
+ ## <a name="next-steps"></a>Следующие шаги  
 Ознакомьтесь с [архитектурой базы данных SQL Graph](./sql-graph-architecture.md)
    
 

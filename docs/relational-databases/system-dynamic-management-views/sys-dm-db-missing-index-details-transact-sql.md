@@ -22,12 +22,12 @@ ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2f0715cd859d86185e76da25d9da0ad47d128b2
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6327baee24be8526cb0756495fe425e4103f35c8
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99159588"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100343087"
 ---
 # <a name="sysdm_db_missing_index_details-transact-sql"></a>sys.dm_db_missing_index_details (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "99159588"
 |**included_columns**|**nvarchar(4000)**|Список столбцов с разделителями-запятыми, необходимых в качестве столбцов для запроса. Дополнительные сведения о охватывающих или включаемых столбцах см. в разделе [Создание индексов с включением столбцов](../../relational-databases/indexes/create-indexes-with-included-columns.md).<br /><br /> Для оптимизированных для памяти индексов (хэш-и оптимизированных для памяти некластеризованных) игнорируйте **included_columns**. Все столбцы таблицы включаются в каждый индекс с оптимизацией для памяти.|  
 |**инструкция**|**nvarchar(4000)**|Имя таблицы, в которой отсутствует индекс.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Сведения, возвращенные представлением **sys.dm_db_missing_index_details**, будут обновленными, если запрос оптимизирован оптимизатором запросов и не является сохраненным. Сведения об отсутствующих индексах хранятся только до перезапуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Администраторы базы данных должны периодически делать резервные копии сведений об отсутствующих индексах, чтобы сохранить их после перезагрузки сервера.  
   
  Чтобы определить, в какие группы входит отсутствующий индекс, можно выполнить запрос к динамическому административному представлению **sys.dm_db_missing_index_groups**, объединив его по эквивалентности с представлением **sys.dm_db_missing_index_details**, основанным на столбце **index_handle**.  
@@ -66,7 +66,7 @@ ms.locfileid: "99159588"
 ## <a name="permissions"></a>Разрешения
 
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-В базах данных SQL Basic, S0 и S1, а также для баз данных в эластичных пулах `Server admin` `Azure Active Directory admin` требуется учетная запись или. Для всех остальных целей службы базы данных SQL `VIEW DATABASE STATE` разрешение требуется в базе данных.   
+В базах данных SQL Basic, S0 и S1, а также для баз данных в эластичных пулах требуется учетная запись [администратора сервера](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) или учетная запись [администратора Azure Active Directory](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) . Для всех остальных целей службы базы данных SQL `VIEW DATABASE STATE` разрешение требуется в базе данных.   
 
 ## <a name="see-also"></a>См. также:  
  [sys.dm_db_missing_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   

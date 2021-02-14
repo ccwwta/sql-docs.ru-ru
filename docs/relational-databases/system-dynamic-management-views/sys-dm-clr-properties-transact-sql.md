@@ -21,12 +21,12 @@ ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c23c8d624a9670cdb309d43f645831b5e09fab5a
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: fbf92690e35a065afc9aab936e5a8e37ef59f6f6
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99212096"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100352691"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -69,13 +69,13 @@ ms.locfileid: "99212096"
   
  **Состояние CLR остановлено** , только если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] находится в процессе завершения работы.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Свойства и значения этого представления могут измениться в будущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из-за улучшений функций интеграции со средой CLR.  
   
 ## <a name="permissions"></a>Разрешения  
   
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-В базах данных SQL Basic, S0 и S1, а также для баз данных в эластичных пулах `Server admin` `Azure Active Directory admin` требуется учетная запись или. Для всех остальных целей службы базы данных SQL `VIEW DATABASE STATE` разрешение требуется в базе данных.   
+В базах данных SQL Basic, S0 и S1, а также для баз данных в эластичных пулах требуется учетная запись [администратора сервера](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) или учетная запись [администратора Azure Active Directory](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) . Для всех остальных целей службы базы данных SQL `VIEW DATABASE STATE` разрешение требуется в базе данных.   
 
 ## <a name="examples"></a>Примеры  
  В следующем примере происходит получение данных о внутрипроцессной среде CLR:  

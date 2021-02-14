@@ -1,8 +1,8 @@
 ---
 description: sys.dm_os_spinlock_stats (Transact-SQL)
-title: sys.dm_os_spinlock_stats (Transact-SQL) | Документация Майкрософт
+title: sys.dm_os_spinlock_stats (Transact-SQL)
 ms.custom: ''
-ms.date: 06/03/2019
+ms.date: 02/10/2021
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: ''
@@ -23,12 +23,12 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: wiassaf
 manager: amitban
-ms.openlocfilehash: 636a16d8656572e6fe2505f58bafc9eca9f6ce18
-ms.sourcegitcommit: 78b3096c2be89bcda92244f78663d8b38811bec5
+ms.openlocfilehash: 66b8a24e8b2b48aa43dd00cb37e8fc4c60fa0cd4
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2021
-ms.locfileid: "100009292"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100342835"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-SQL)
 
@@ -49,7 +49,7 @@ ms.locfileid: "100009292"
 
 ## <a name="permissions"></a>Разрешения  
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-В базах данных SQL Basic, S0 и S1, а также для баз данных в эластичных пулах `Server admin` `Azure Active Directory admin` требуется учетная запись или. Для всех остальных целей службы базы данных SQL `VIEW DATABASE STATE` разрешение требуется в базе данных.    
+В базах данных SQL Basic, S0 и S1, а также для баз данных в эластичных пулах требуется учетная запись [администратора сервера](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) или учетная запись [администратора Azure Active Directory](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) . Для всех остальных целей службы базы данных SQL `VIEW DATABASE STATE` разрешение требуется в базе данных.    
   
 ## <a name="remarks"></a>Remarks  
  
@@ -69,7 +69,10 @@ GO
   
 ## <a name="spinlocks"></a>Спин-блокировки  
  Спин-блокировка — это объект облегченной синхронизации, используемый для сериализации доступа к структурам данных, которые обычно удерживаются в течение короткого периода времени. Когда поток пытается получить доступ к ресурсу, защищенному с помощью спин-блокировки, которая удерживается другим потоком, поток выполняет цикл или "Spin" и пытается получить доступ к ресурсу еще раз, вместо того чтобы сразу же получать планировщик, как в случае кратковременной блокировки или другого времени ожидания ресурса. Поток будет продолжать вращаться до тех пор, пока ресурс не будет доступен, или завершится цикл, после чего поток выдаст планировщик и вернется в очередь готовности. Такой подход позволяет уменьшить чрезмерное переключение контекста потока, но если состязание происходит очень высоко, может наблюдаться значительная загрузка ЦП.
-   
+
+> [!NOTE]  
+>  Если вы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установили на процессоры Intel Skylake, ознакомьтесь с [этой статьей](https://support.microsoft.com/topic/kb4538688-fix-severe-spinlock-contention-occurs-in-sql-server-2019-43faea65-fdcb-6835-f7fe-93abdb235837) , чтобы применить требуемое обновление и включить флаг трассировки 8101.
+
  В следующей таблице содержатся краткие описания некоторых наиболее распространенных типов взаимоблокировок.  
   
 |Тип спин|Описание|  
@@ -230,6 +233,7 @@ GO
 |MEM_MGR|Только для внутреннего использования.|
 |MGR_CACHE|Только для внутреннего использования.|
 |MIGRATION_BUF_LIST|Только для внутреннего использования.|
+|ПРИНАДЛЕЖАЩ|Защищает записи кэша, связанные с маркерами безопасности и проверками доступа. Используется для версий ниже [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] . Если записи в хранилище кэша TokenAndPermUserStore постоянно увеличиваются, вы можете заметить большие обороты для этого взаимоблокировки. Оцените использование [флагов трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4610 и 4618 для ограничения записей. Дополнительные ссылки: [блог](https://techcommunity.microsoft.com/t5/sql-server-support/query-performance-issues-associated-with-a-large-sized-security/ba-p/315494), [статья](https://support.microsoft.com/topic/queries-take-a-longer-time-to-finish-running-when-the-size-of-the-tokenandpermuserstore-cache-grows-in-sql-server-2005-ad1622e7-3bb5-7902-19a0-5d0e6271033d) и [Документация](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md).|
 |NETCONN_ADDRESS|Только для внутреннего использования.|
 |ONDEMAND_TASK|Только для внутреннего использования.|
 |ONE_PROC_SIM_NODE_CONTEXT|Только для внутреннего использования.|
@@ -290,7 +294,7 @@ GO
 |SBS_TRANSPORT|Только для внутреннего использования.|
 |SBS_UCS_DISPATCH|Только для внутреннего использования.|
 |Безопасность|Только для внутреннего использования.|
-|SECURITY_CACHE|Только для внутреннего использования.|
+|SECURITY_CACHE|Защищает записи кэша, связанные с маркерами безопасности и проверками доступа. Используется для [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий. Если записи в хранилище кэша TokenAndPermUserStore постоянно увеличиваются, вы можете заметить большие обороты для этого взаимоблокировки. Оцените использование [флагов трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4610 и 4618 для ограничения записей. Дополнительные ссылки: [блог](https://techcommunity.microsoft.com/t5/sql-server-support/query-performance-issues-associated-with-a-large-sized-security/ba-p/315494), [статья](https://support.microsoft.com/topic/queries-take-a-longer-time-to-finish-running-when-the-size-of-the-tokenandpermuserstore-cache-grows-in-sql-server-2005-ad1622e7-3bb5-7902-19a0-5d0e6271033d) и [Документация](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md). Обратите внимание на изменение имени спина взаимоблокировок после применения [обновлений для sql 2017 и sql 2016](https://support.microsoft.com/topic/kb3195888-fix-high-cpu-usage-causes-performance-issues-in-sql-server-2016-and-2017-9514b80d-938f-e179-3131-74e6c757c4d5).|
 |SECURITY_FEDAUTH_AAD_BECWSCONNS|Только для внутреннего использования.|
 |SEMANTIC_TICACHE|Только для внутреннего использования.|
 |SEQUENCED_OBJECT|Только для внутреннего использования.|
@@ -416,5 +420,4 @@ GO
  [Диагностика и разрешение конфликтов спин/блокировок на SQL Server](../diagnose-resolve-spinlock-contention.md)
   
   
-
 

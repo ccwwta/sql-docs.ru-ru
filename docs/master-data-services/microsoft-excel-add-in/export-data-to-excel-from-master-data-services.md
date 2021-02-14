@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: dd29389b-928c-4e50-995c-c6af27f97805
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: af0b2a73189a52aa9725fef8672adb29993f1c2e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e8b7ab33b2d10ab09a8ab3fcf76532dd571936df
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "92257655"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100337111"
 ---
 # <a name="export-data-to-excel-from-master-data-services"></a>Export Data to Excel from Master Data Services
 
@@ -26,7 +26,7 @@ ms.locfileid: "92257655"
   
  Если перед загрузкой набора данных нужно отфильтровать его, см. раздел [Фильтрация данных перед их экспортом (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md).  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   Необходимо иметь разрешение на доступ к функциональной области **Обозреватель** .  
@@ -50,7 +50,7 @@ ms.locfileid: "92257655"
     >      Если количество значений для атрибута на основе домена превышает настройку свойства MaximumDbEntitySize, список значений не загружается.  
   
     > [!NOTE]  
-    >  Если при загрузке разделенных текстом данных с помощью надстройки для Microsoft Excel в 32-разрядную версию Excel свойствам **Число ячеек для загрузки** и **Число ячеек для публикации** присвоено максимальное значение 1000, возникнет ошибка нехватки памяти. Для использования максимальных значений свойств **Число ячеек для загрузки** и **Число ячеек для публикации**необходимо использовать 64-разрядную версию Excel.  
+    >  Если при загрузке разделенных текстом данных с помощью надстройки для Microsoft Excel в 32-разрядную версию Excel свойствам **Число ячеек для загрузки** и **Число ячеек для публикации** присвоено максимальное значение 1000, возникнет ошибка нехватки памяти. Для использования максимальных значений свойств **Число ячеек для загрузки** и **Число ячеек для публикации** необходимо использовать 64-разрядную версию Excel.  
   
 ## <a name="next-steps"></a>Next Steps  
  [Импорт данных из Excel в службы Master Data Services (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  

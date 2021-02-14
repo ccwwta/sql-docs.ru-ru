@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 332d3c86-4440-4f12-a6cb-ffbfbccde52c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f7d97352e7501a2c1d6f73d0536afb4bce79700f
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f7afc645a25bcedcadc925ae5bf20f3fa1b894ee
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813186"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100351887"
 ---
 # <a name="validation-stored-procedure-master-data-services"></a>Проверка хранимых процедур (службы Master Data Services)
 
@@ -61,7 +61,7 @@ EXECUTE mdm.udpValidateModel @User_ID, @Model_ID, @Version_ID, 1
 |Model_ID|Идентификатор модели.|  
 |Version_ID|Идентификатор версии.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обзор. Импорт данных из таблиц &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   
  [Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   

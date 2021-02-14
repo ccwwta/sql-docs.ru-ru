@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 577155b8b7c10ce56f71346d28889e4ae29954e9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f153a6b7bf2f4ceef65b06d02a825620ea7b3fb2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811612"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272625"
 ---
 # <a name="create-a-model-master-data-services"></a>Создание модели (службы Master Data Services)
 
@@ -56,7 +56,7 @@ ms.locfileid: "85811612"
   
  Для каждой созданной модели в сетке создается строка с восемью столбцами. Ниже перечислены эти восемь столбцов.  
   
--   **Состояние**: состояние модели. При нажатии кнопки **сохранить модель** отображается изображение ![обновления](../master-data-services/media/mds-model-status-updating.png "Обновление") , которое указывает на то, что модель обновляется. При возникновении ошибок при создании или изменении модели отображается изображение ![ошибки](../master-data-services/media/mds-model-status-error.png "Ошибка") . В противном случае отображается состояние "ОК" и появляется изображение ![ОК](../master-data-services/media/mds-model-status-ok.png "OK") .  
+-   **Состояние**: состояние модели. При нажатии кнопки **сохранить модель** отображается изображение ![обновления](../master-data-services/media/mds-model-status-updating.png "Обновление") , которое указывает на то, что модель обновляется. При возникновении ошибок при создании или изменении модели отображается изображение ![ошибки](../master-data-services/media/mds-model-status-error.png "Ошибка") . В противном случае отображается состояние "ОК" и появляется изображение ![ОК](../master-data-services/media/mds-model-status-ok.png "ОК") .  
   
 -   **Имя**: имя модели.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "85811612"
   
 -   [Создание сущности (службы Master Data Services)](../master-data-services/create-an-entity-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Модели &#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)   
  [Сущности &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
  [Удаление &#40;модели Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)   

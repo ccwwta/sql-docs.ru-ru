@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a7d959da-5005-4a50-aca7-2cef36aa9947
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2e28243c1cb41a8c7a85ddbe381302a18d161f2e
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 830ff0bf030ad81f02f915ff50078baef9d57600
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529130"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100060969"
 ---
 # <a name="debugging-delivery-extension-code"></a>Отладка кода модулей доставки
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] предоставляет несколько средств отладки, которые упрощают анализ кода в модуле доставки и поиск ошибок в коде. Какое средство будет наилучшим, зависит от того, что нужно выполнить. В этом примере используется [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)].  

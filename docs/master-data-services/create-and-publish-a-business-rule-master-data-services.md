@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 39fdd6cebd0c27ec4a27a4543129a659bcdb22a3
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: fbdb07d5a9bbff92b98fca913e2fcf142a1cbe6c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813050"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339090"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>Создание и публикация бизнес-правила (службы Master Data Services)
 
@@ -80,7 +80,7 @@ ms.locfileid: "85813050"
   
 19. Заполните необходимые поля.  
   
-20. Выберите команду **Сохранить**. В сетку **Then** будет добавлена новая строка.  
+20. Нажмите кнопку **Сохранить**. В сетку **Then** будет добавлена новая строка.  
   
 21. При необходимости выполните следующие шаги, чтобы добавить действие **Else** .  
   
@@ -92,9 +92,9 @@ ms.locfileid: "85813050"
   
     4.  Заполните необходимые поля.  
   
-    5.  Выберите команду **Сохранить**. В сетку **Else** будет добавлена новая строка.  
+    5.  Нажмите кнопку **Сохранить**. В сетку **Else** будет добавлена новая строка.  
   
-22. Выберите команду **Сохранить**. Новая строка будет добавлена в сетку бизнес-правил.  
+22. Нажмите кнопку **Сохранить**. Новая строка будет добавлена в сетку бизнес-правил.  
   
 23. Нажмите кнопку **Опубликовать все**.  
   
@@ -103,10 +103,10 @@ ms.locfileid: "85813050"
 ## <a name="grid-columns"></a>Столбцы сетки  
  Для каждого созданного бизнес-правила в сетке создается строка с шестью столбцами. Ниже приведены эти столбцы.  
   
-|name|Описание|  
+|Имя|Описание|  
 |----------|-----------------|  
 |Состояние|После нажатия кнопки **Сохранить** появится следующее изображение, которое указывает на то, что бизнес-правило обновляется.<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> При наличии ошибок во время создания или изменения бизнес-правила появляется следующее изображение.<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> Если ее состояние нормальное, появится следующее изображение.<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
-|name|Имя бизнес-правила.|  
+|Имя|Имя бизнес-правила.|  
 |Описание|Описание бизнес-правила.|  
 |Состояние бизнес-правила|Одно из следующих состояний бизнес-правила: правило не определено, активно, исключено, ожидающие изменения, ожидающие исключения и ожидается удаление.|  
 |Исключена.|Указывает, исключено ли бизнес-правило.|  
@@ -120,7 +120,7 @@ ms.locfileid: "85813050"
   
     -   [Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка бизнес-правил для отправки уведомлений &#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
  [Измените имя бизнес-правила &#40;Master Data Services&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
  [Добавление нескольких условий к бизнес-правилу (службы Master Data Services)](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  

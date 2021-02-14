@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: 84a94725df5f3d1d817ed9f6de1048b9a54d6c64
-ms.sourcegitcommit: a16b98d3bf3eeb58f5d2aeece2464f8a96e2b4a8
+ms.openlocfilehash: 4dc76c57f7194c1ee96bd091d674b793dad29faa
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "97665845"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100081882"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Новые возможности SSMA для Oracle (OracleToSQL)
 
@@ -176,7 +176,7 @@ ms.locfileid: "97665845"
 Кроме того, эта версия включает целевой набор исправлений, предназначенный для улучшения качества и метрики преобразования, а также исправления для:
 
 * Проблемы с отключенными некластеризованными индексами после переноса данных.
-* Обнаружение .NET Framework во время автоматической установки.
+* Обнаружение платформа .NET Framework во время автоматической установки.
 * Периодический сбой, возникающий при скачивании новой версии.
 
 > [!NOTE]

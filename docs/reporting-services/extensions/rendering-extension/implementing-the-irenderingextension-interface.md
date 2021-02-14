@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 74b2f2b7-6796-42da-ab7d-b05891ad4001
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8e53f229aff5a0093a38d4d785994514aeb1e971
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 984775286d4f32d0c1e844bc6ba0ca62bcf198ce
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529450"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100042184"
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>Реализация интерфейса IRenderingExtension
   Модуль подготовки отчетов извлекает результаты из определения отчета, объединенного с реальными данными, и преобразует результирующие данные в формат, готовый к применению. Преобразование объединенных данных и форматирование осуществляется при помощи класса среды CLR, который реализует интерфейс <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>. Модель объекта преобразуется в формат вывода, который предназначен для средства просмотра, принтера или другого приложения вывода.  

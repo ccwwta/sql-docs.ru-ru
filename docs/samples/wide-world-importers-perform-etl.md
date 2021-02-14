@@ -10,12 +10,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1dfba407449b9517af2ed899f49387732c48353b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ce9cd8ee5a4153cb1d744d505a26b400497b460b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718530"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100354057"
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>Рабочий процесс ETL WideWorldImportersDW
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -38,12 +38,12 @@ ms.locfileid: "85718530"
 ## <a name="prerequisites"></a>Предварительные требования
 
 - SQL Server 2016 (или более поздней версии) с базами данных WideWorldImporters и WideWorldImportersDW (в том же или в разных экземплярах SQL Server)
-- SQL Server Management Studio
+- SQL Server Management Studio.
 - Службы SQL Server 2016 Integration Services
   - Убедитесь, что создан каталог Integration Services. Чтобы создать каталог Integration Services, в SQL Server Management Studio обозревателе объектов щелкните правой кнопкой мыши **Integration Services**, а затем выберите **Добавить каталог**. Оставьте параметры по умолчанию. Вам будет предложено включить SQLCLR и указать пароль.
 
 
-## <a name="download"></a>Скачивание
+## <a name="download"></a>Скачать
 
 Последний выпуск примера см. в разделе широкие средства [импорта данных — выпуск](https://go.microsoft.com/fwlink/?LinkID=800630). Скачайте файл пакета *ETL. ISPAC ежедневно* Integration Services.
 
@@ -53,17 +53,17 @@ ms.locfileid: "85718530"
 
 1. Развертывание пакета Integration Services:
    1. В проводнике Windows откройте ежедневный пакет *ETL. ISPAC* . Запустится мастер развертывания SQL Server Integration Services.
-   2. В разделе **Выбор источника**выполните значения по умолчанию для развертывания проекта, указав путь к *ежедневному пакету ETL. ISPAC* .
-   3. В разделе **Выбор назначения**введите имя сервера, на котором размещен каталог Integration Services.
+   2. В разделе **Выбор источника** выполните значения по умолчанию для развертывания проекта, указав путь к *ежедневному пакету ETL. ISPAC* .
+   3. В разделе **Выбор назначения** введите имя сервера, на котором размещен каталог Integration Services.
    4. Выберите путь в каталоге Integration Services, например, в новой папке с именем *WideWorldImporters*.
    5. Нажмите кнопку **развернуть** , чтобы завершить работу мастера.
 
 2. Создайте агент SQL Server задание для процесса ETL:
-   1. В Management Studio щелкните правой кнопкой мыши **Агент SQL Server**и выберите **создать**  >  **Задание**.
+   1. В Management Studio щелкните правой кнопкой мыши **Агент SQL Server** и выберите **создать**  >  **Задание**.
    2. Введите имя, например *WIDEWORLDIMPORTERS ETL*.
    3. Добавьте **шаг задания** типа **SQL Server Integration Services пакета**.
    4. Выберите сервер, на котором находится каталог Integration Services, а затем выберите *ежедневный пакет ETL* .
-   5. В **Configuration**разделе  >  **Диспетчеры соединений**конфигурации убедитесь, что подключения к источнику и целевому объекту настроены правильно. По умолчанию устанавливается соединение с локальным экземпляром.
+   5. В разделе  >  **Диспетчеры соединений** конфигурации убедитесь, что подключения к источнику и целевому объекту настроены правильно. По умолчанию устанавливается соединение с локальным экземпляром.
    6. Нажмите кнопку **ОК** , чтобы создать задание.
 
 3. Выполните или Запланируйте задание.

@@ -8,15 +8,15 @@ ms.service: sql-database
 ms.prod_service: sql-database,sql
 ms.custom: security
 ms.topic: conceptual
-ms.date: 06/10/2020
+ms.date: 02/05/2021
 ms.author: datrigan
 author: DavidTrigano
-ms.openlocfilehash: 57ddcd78bd05cda262c9e4d041562dc5c2dfc4b7
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: 3b24c9accfd205057086a477a586b33218e532b6
+ms.sourcegitcommit: c52a6aeb6fa6d7c3a86b3e84449361f4a0949ad0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99236544"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "99623804"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Обнаружение и классификация данных SQL
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,14 +29,14 @@ ms.locfileid: "99236544"
 > [!NOTE]
 > Средство обнаружения и классификации данных **поддерживается в SQL Server 2012 и более поздних версий и может использоваться с [SSMS 17.5](../../ssms/download-sql-server-management-studio-ssms.md) и более поздних версий**. Сведения, касающиеся Базы данных SQL Azure, см. в статье [Обнаружение и классификация данных в Базе данных SQL Azure](/azure/sql-database/sql-database-data-discovery-and-classification/).
 
-## <a name="overview"></a><a id="subheading-1"></a>Обзор
+## <a name="overview"></a><a id="Overview"></a>Обзор
 Средство обнаружения и классификации данных включает в себя набор служб, которые образуют новую парадигму SQL Information Protection, направленную на защиту данных, а не только базы данных.
 
 * **Обнаружение и рекомендации**. Подсистема классификации проверяет базу данных и определяет столбцы, содержащие потенциально конфиденциальные данные. Затем вы можете легко просмотреть и применить рекомендации по классификации, а также классифицировать столбцы вручную.
 * **Метки**. Столбцам можно назначать постоянные метки классификации конфиденциальных данных.
 * **Видимость**. Состояние классификации базы данных можно просматривать в подробном отчете, который можно напечатать или экспортировать для использования в целях соблюдения требований или аудита, а также в других целях.
 
-## <a name="discovering-classifying--labeling-sensitive-columns"></a><a id="subheading-2"></a>Обнаружение, классификация конфиденциальных столбцов и назначение им меток
+## <a name="discovering-classifying--labeling-sensitive-columns"></a><a id="Discovering-classifying-labeling-sensitive-columns"></a>Обнаружение, классификация конфиденциальных столбцов и назначение им меток
 В следующем разделе описываются действия по обнаружению в базе данных столбцов, содержащих конфиденциальные данные, их классификации и назначению им меток, а также просмотру текущего состояния классификации базы данных и экспорту отчетов.
 
 Классификация включает в себя два типа атрибутов метаданных:
@@ -91,7 +91,7 @@ ms.locfileid: "99236544"
 
     ![Снимок экрана: отчет по классификации данных SQL.][10]
 
-## <a name="manage-information-protection-policy-with-ssms"></a><a id="subheading-3"></a>Управление политикой защиты информации с помощью SSMS
+## <a name="manage-information-protection-policy-with-ssms"></a><a id="Manage-information-protection-policy-with-SSMS"></a>Управление политикой защиты информации с помощью SSMS
 
 Управлять политикой защиты информации можно с помощью [SSMS 18.4](../../ssms/download-sql-server-management-studio-ssms.md) или более поздней версии.
 
@@ -111,12 +111,9 @@ ms.locfileid: "99236544"
 > Файл политики защиты информации не хранится в SQL Server.
 > SSMS использует политику защиты информации по умолчанию. В случае сбоя настраиваемой политики защиты информации SSMS не может использовать политику по умолчанию. Происходит сбой классификации данных. Чтобы устранить проблему, выберите пункт **Сброс политики защиты информации** для использования политики по умолчанию и повторного включения классификации данных.
 
-## <a name="accessing-the-classification-metadata"></a><a id="subheading-4"></a>Доступ к метаданным классификации
+## <a name="accessing-the-classification-metadata"></a><a id="sAccessing-the-classification-metadata"></a>Доступ к метаданным классификации
 
-В SQL Server 2019 появилось представление системного каталога [`sys.sensitivity_classifications`](../system-catalog-views/sys-sensitivity-classifications-transact-sql.md). Это представление возвращает типы информации и метки конфиденциальности. 
-
-> [!NOTE]
-> Оно требует разрешения **VIEW ANY SENSITIVITY CLASSIFICATION**. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](./metadata-visibility-configuration.md).
+В SQL Server 2019 появилось представление системного каталога [`sys.sensitivity_classifications`](../system-catalog-views/sys-sensitivity-classifications-transact-sql.md). Это представление возвращает типы информации и метки конфиденциальности.
 
 В экземплярах SQL Server 2019 выполните запрос к `sys.sensitivity_classifications`, чтобы просмотреть все классифицированные столбцы с соответствующими классификациями. Пример: 
 
@@ -140,8 +137,6 @@ FROM sys.sensitivity_classifications sc
 
 * `sys_information_type_name`
 * `sys_sensitivity_label_name`
-
-Доступ к метаданным осуществляется с помощью представления каталога расширенных свойств [`sys.extended_properties`](../system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md).
 
 Для экземпляров SQL Server 2017 и более ранних версий следующий пример возвращает все классифицированные столбцы с соответствующими классификациями:
 
@@ -185,6 +180,14 @@ FROM
     ON  EP.major_id = C.object_id AND EP.minor_id = C.column_id
 ```
 
+## <a name="permissions"></a><a id="Permissions"></a>Permissions
+
+В экземплярах SQL Server 2019 для просмотра классификации требуется разрешение **VIEW ANY SENSITIVITY CLASSIFICATION**. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](./metadata-visibility-configuration.md).
+
+В версиях, предшествующих SQL Server 2019, доступ к метаданным осуществляется с помощью представления каталога расширенных свойств [`sys.extended_properties`](../system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md).
+
+Для управления классификацией требуется разрешение ALTER ANY SENSITIVITY CLASSIFICATION. ALTER ANY SENSITIVITY CLASSIFICATION подразумевается в разрешении ALTER для базы данных или CONTROL SERVER для сервера.
+
 ## <a name="manage-classifications"></a><a id="subheading-5"></a>Управление классификациями
 
 # <a name="t-sql"></a>[T-SQL](#tab/t-sql)
@@ -201,7 +204,7 @@ FROM
 - [Set-SqlSensitivityClassification](/powershell/module/sqlserver/Set-SqlSensitivityClassification)
 - [Remove-SqlSensitivityClassification](/powershell/module/sqlserver/Remove-SqlSensitivityClassification)
 
-## <a name="next-steps"></a><a id="subheading-6"></a>Следующие шаги
+## <a name="next-steps"></a><a id="Next-steps"></a>Следующие шаги
 
 Сведения, касающиеся Базы данных SQL Azure, см. в статье [Обнаружение и классификация данных в Базе данных SQL Azure](/azure/azure-sql/database/data-discovery-and-classification-overview).
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 86bc7c0352e7bf2447628a143a5c1732b132a412
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: c6b42238a081adbd40f9756fb3d2fb8871e1d7cc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91891374"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100023339"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Включение и отключение компонентов служб Reporting Services
   Неиспользуемые функции сервера отчетов можно отключить в рамках блокирующей стратегии, позволяющей снизить риск атак на рабочий сервер отчетов. В большинстве случаев рекомендуется использовать функции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] параллельно; это позволит использовать все функциональные возможности, предоставляемые службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Однако в зависимости от используемой модели развертывания можно отключить неиспользуемые функции. Например, если вся обработка отчетов производится с использованием операций по расписанию, то можно разрешить только фоновую обработку. Подобным же образом можно ограничиться запуском веб-службы сервера отчетов, чтобы только получать отчеты по требованию в интерактивном режиме.  
@@ -56,11 +56,11 @@ ms.locfileid: "91891374"
   
 1.  Откройте среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и установите соединение с экземпляром служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , который следует настроить.  
   
-2.  В обозревателе объектов щелкните правой кнопкой узел служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , укажите пункт **Политики**и выберите **Аспекты**.  
+2.  В обозревателе объектов щелкните правой кнопкой узел служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , укажите пункт **Политики** и выберите **Аспекты**.  
   
 3.  В списке **Аспект** выберите **Настройка контактной зоны для служб Reporting Services**.  
   
-4.  В разделе **Свойства аспекта**можно выполнить следующие действия.  
+4.  В разделе **Свойства аспекта** можно выполнить следующие действия.  
   
     -   Для включения веб-службы сервера отчетов установите для свойства **WebServiceAndHTTPAccessEnabled** значение **True**.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "91891374"
   
 1.  Откройте файл RsReportServer.config в текстовом редакторе. Дополнительные сведения см. в статье [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
-2.  Чтобы включить запланированные операции по обработке и доставке отчетов, присвойте значение **IsSchedulingService**свойствам **IsNotificationService**, **IsEventService** и **true**:  
+2.  Чтобы включить запланированные операции по обработке и доставке отчетов, присвойте значение **IsSchedulingService** свойствам **IsNotificationService**, **IsEventService** и **true**:  
   
     ```  
     <IsSchedulingService>true</IsSchedulingService>  
@@ -82,7 +82,7 @@ ms.locfileid: "91891374"
     <IsEventService>true</IsEventService>  
     ```  
   
-3.  Чтобы отключить запланированные операции по обработке и доставке отчетов, присвойте значение **IsSchedulingService**свойствам **IsNotificationService**, **IsEventService** и **false**:  
+3.  Чтобы отключить запланированные операции по обработке и доставке отчетов, присвойте значение **IsSchedulingService** свойствам **IsNotificationService**, **IsEventService** и **false**:  
   
     ```  
     <IsSchedulingService>false</IsSchedulingService>  
