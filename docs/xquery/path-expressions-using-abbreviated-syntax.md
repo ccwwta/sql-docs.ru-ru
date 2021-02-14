@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: f83c2e41-5722-47c3-b5b8-bf0f8cbe05d3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4b8270babb8fe592c050a9352a7fd687660b178e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 959d5498011984fc1f400567517d3b5b07727fcc
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920100"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339928"
 ---
 # <a name="path-expressions---using-abbreviated-syntax"></a>Выражения пути — использование сокращенного синтаксиса
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   Во всех примерах, посвященных [выражениям пути в XQuery,](../xquery/path-expressions-xquery.md) для выражений пути используется несокращенный синтаксис. включающий в себя имя оси и элемент проверки узла, которые разделены двойным двоеточием, за которыми могут следовать квалификаторы шага.  
   
- Например.  
+ Пример:  
   
 ```  
 child::ProductDescription[attribute::ProductModelID=19]  

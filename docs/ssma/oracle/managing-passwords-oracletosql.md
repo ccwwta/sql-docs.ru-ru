@@ -14,12 +14,12 @@ ms.assetid: 8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 212d6792704ed2b52af91be3ea810a916a486bc8
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: d203442868c4ab9f899dfda5a02a0fea1f1f9874
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92038027"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100080735"
 ---
 # <a name="managing-passwords-oracletosql"></a>Управление паролями (OracleToSQL)
 В этом разделе описывается защита паролей базы данных и процедура импорта или экспорта на серверах.
@@ -71,7 +71,7 @@ SSMA позволяет защитить пароль базы данных.
   
         Выполните `SSMAforOracleConsole.exe` команду с параметром `-securepassword` и в `-remove` командной строке, передав идентификаторы серверов, чтобы удалить зашифрованные пароли из защищенного файла хранилища, присутствующего на локальном компьютере.  
         
-        Пример  
+        Пример:  
 
         ```console
         C:\SSMA\SSMAforOracleConsole.EXE -securepassword -remove all
@@ -82,7 +82,7 @@ SSMA позволяет защитить пароль базы данных.
   
         Выполните `SSMAforOracleConsole.exe` команду с параметром `-securepassword` и в `-list` командной строке, чтобы вывести список всех идентификаторов серверов, пароли которых были зашифрованы.  
   
-        Пример  
+        Пример:  
 
         ```console
         C:\SSMA\SSMAforOracleConsole.EXE -securepassword -list  

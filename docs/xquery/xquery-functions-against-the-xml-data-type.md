@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e92148b5a85ced147599eafe09156cf41c47021
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 82f3eae7098b3ac5e86355aed1e13bdd5c137015
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037017"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352809"
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>Функции XQuery для типа данных xml
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -54,12 +54,12 @@ ms.locfileid: "92037017"
 ||[distinct-values](../xquery/functions-on-sequences-distinct-values.md)|  
 ||[Функция id (XQuery)](../xquery/functions-on-sequences-id.md)|  
 |[Агрегатные функции &#40;&#41;XQuery ]()|[count](../xquery/aggregate-functions-count.md)|  
-||[avg](../xquery/aggregate-functions-avg.md)|  
+||[обращения](../xquery/aggregate-functions-avg.md)|  
 ||[min](../xquery/aggregate-functions-min.md)|  
 ||[max](../xquery/aggregate-functions-max.md)|  
 ||[sum](../xquery/aggregate-functions-sum.md)|  
 |[Функции конструктора &#40;XQuery&#41;](../xquery/constructor-functions-xquery.md)|[Функции-конструкторы](../xquery/constructor-functions-xquery.md)|  
-|[Функции метода доступа к данным](../xquery/data-accessor-functions.md)|[string](../xquery/data-accessor-functions-string-xquery.md)|  
+|[Функции метода доступа к данным](../xquery/data-accessor-functions.md)|[строка](../xquery/data-accessor-functions-string-xquery.md)|  
 ||[data](../xquery/data-accessor-functions-data-xquery.md)|  
 |[Логические функции конструктора &#40;XQuery&#41;]()|[true (XQuery)](../xquery/boolean-constructor-functions-true-xquery.md)|  
 ||[Функция false (XQuery)](../xquery/boolean-constructor-functions-false-xquery.md)|  

@@ -13,19 +13,19 @@ dev_langs:
 ms.assetid: 293cc233-8688-4823-9887-176ed772f53d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4f5fa49df257451a48f390a250a3cfa63dfb2225
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 95b9447aec67199055df3609fe9054acb67a474e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99196227"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344286"
 ---
 # <a name="always-on-availability-groups-functions-transact-sql"></a>Функции групп доступности Always On (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет следующие функции Always On групп доступности.  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  [sys.fn_hadr_is_primary_replica](../../relational-databases/system-functions/sys-fn-hadr-is-primary-replica-transact-sql.md)  
   
  [sys.fn_hadr_backup_is_preferred_replica](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md)  

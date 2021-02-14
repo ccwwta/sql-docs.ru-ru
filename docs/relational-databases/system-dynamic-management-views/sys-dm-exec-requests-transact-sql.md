@@ -21,12 +21,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 79fdfc18a80ebff0e6e737db4efcdc81e5ae265d
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: b3ff96f67611b41db3e1cf1e827ff2577305a24d
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99192977"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100342931"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -91,15 +91,15 @@ ms.locfileid: "99192977"
 |query_plan_hash|**Binary (8)**|Двоичное хэш-значение рассчитывается для плана выполнения запроса и используется для идентификации аналогичных планов выполнения запросов. Можно использовать хэш плана запроса для нахождения совокупной стоимости запросов со схожими планами выполнения.|  
 |statement_sql_handle|**varbinary (64)**|**Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.<br /><br /> Описатель SQL отдельного запроса.<br /><br />Этот столбец имеет значение NULL, если хранилище запросов не включено для базы данных. |  
 |statement_context_id|**bigint**|**Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.<br /><br /> Необязательный внешний ключ для sys.query_context_settings.<br /><br />Этот столбец имеет значение NULL, если хранилище запросов не включено для базы данных. |  
-|dop |**int** |**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и более поздних версий.<br /><br /> Степень параллелизма запроса. |  
-|parallel_worker_count |**int** |**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и более поздних версий.<br /><br /> Количество зарезервированных параллельных рабочих ролей, если это параллельный запрос.  |  
-|external_script_request_id |**uniqueidentifier** |**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и более поздних версий.<br /><br /> Идентификатор запроса внешнего скрипта, связанный с текущим запросом. |  
-|is_resumable |**bit** |**Область применения**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] и более поздних версий.<br /><br /> Указывает, является ли запрос возобновляемой операцией с индексом. |  
-|page_resource |**Binary (8)** |**Область применения**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 8-байтовое шестнадцатеричное представление ресурса страницы, если `wait_resource` столбец содержит страницу. Дополнительные сведения см. в разделе [sys.fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
+|dop |**int** |**Область применения**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] и более поздних версий.<br /><br /> Степень параллелизма запроса. |  
+|parallel_worker_count |**int** |**Область применения**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] и более поздних версий.<br /><br /> Количество зарезервированных параллельных рабочих ролей, если это параллельный запрос.  |  
+|external_script_request_id |**uniqueidentifier** |**Область применения**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] и более поздних версий.<br /><br /> Идентификатор запроса внешнего скрипта, связанный с текущим запросом. |  
+|is_resumable |**bit** |**Область применения**: [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] и более поздних версий.<br /><br /> Указывает, является ли запрос возобновляемой операцией с индексом. |  
+|page_resource |**Binary (8)** |**Область применения**: [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]<br /><br /> 8-байтовое шестнадцатеричное представление ресурса страницы, если `wait_resource` столбец содержит страницу. Дополнительные сведения см. в разделе [sys.fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md). |  
 |page_server_reads|**bigint**|Область **применения**: масштабирование базы данных SQL Azure<br /><br /> Число операций чтения сервера страниц, выполненных этим запросом. Не допускает значение NULL.|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>Замечания 
+## <a name="remarks"></a>Remarks 
 Чтобы выполнить код, внешний по отношению к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (например, расширенную хранимую процедуру или распределенный запрос), поток должен выйти из-под управления планировщика, работающего в режиме без вытеснения. Для этого исполнитель переходит в режим с вытеснением. Значения времени, возвращаемые этим динамическим административным представлением, не включают время, затраченное в режиме с вытеснением.
 
 При выполнении параллельных запросов в [режиме строки](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] назначает рабочий поток для координации рабочих потоков, ответственных за выполнение назначенных им задач. В этом динамическом административном отображении для запроса отображается только поток координатора. Столбцы **операций чтения**, **записи**, **logical_reads** и **row_count** **не обновляются** для потока координатора. Столбцы **wait_type**, **wait_time**, **last_wait_type**, **wait_resource** и **granted_query_memory** **обновляются только** для потока координатора. Дополнительные сведения см. в статье [Руководство по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md).

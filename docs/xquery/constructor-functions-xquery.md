@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 56dd5919565d1cbb7d0b95ae4476aef9140cecd0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0cc1fe3f4f36191a04973c759474f55a8356abda
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773714"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100349334"
 ---
 # <a name="constructor-functions-xquery"></a>Функции-конструкторы (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -44,8 +44,8 @@ TYP($atomicvalue as xdt:anyAtomicType?
  *Тип*  
  Любой встроенный тип XSD.  
   
-## <a name="remarks"></a>Примечания  
- Конструкторы поддерживаются и базовыми, и производными атомарными типами XSD. Однако подтипы **xs: Duration**, включающие **xdt: еармонсдуратион и xdt: dayTimeDuration**, и **xs: QName**, **xs: NMTOKEN**и **xs: Notation** , не поддерживаются. Пользовательские атомарные типы, доступные в ассоциированных коллекциях схем, также доступны, если они прямо или косвенно произведены от следующих типов.  
+## <a name="remarks"></a>Remarks  
+ Конструкторы поддерживаются и базовыми, и производными атомарными типами XSD. Однако подтипы **xs: Duration**, включающие **xdt: еармонсдуратион и xdt: dayTimeDuration**, и **xs: QName**, **xs: NMTOKEN** и **xs: Notation** , не поддерживаются. Пользовательские атомарные типы, доступные в ассоциированных коллекциях схем, также доступны, если они прямо или косвенно произведены от следующих типов.  
   
 #### <a name="supported-base-types"></a>Поддерживаемые базовые типы  
  Функции-конструкторы поддерживаются следующими базовыми типами:  
@@ -188,7 +188,7 @@ select @x.query('
    DateCreated="2000-01-01T00:00:00Z"/>  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)   
  [Функции XQuery для типа данных xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   

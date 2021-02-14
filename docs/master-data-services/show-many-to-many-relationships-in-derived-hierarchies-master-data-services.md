@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9a6c606cf05189d7845db6615add2365efb90c5c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f550a109d5271a216614d0566ed6f3a4d87be056
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88342430"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100336300"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Отображение связей "многие-ко-многим" в производных иерархиях (Master Data Services)
 
@@ -92,7 +92,7 @@ ms.locfileid: "88342430"
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
 ##  <a name="member-security"></a><a name="bkmk_member_security"></a> Безопасность элементов  
- Иерархию, допускающую дублирование элементов (элемент может иметь несколько родительских элементов), нельзя использовать для назначения элементам разрешений безопасности. Например:  
+ Иерархию, допускающую дублирование элементов (элемент может иметь несколько родительских элементов), нельзя использовать для назначения элементам разрешений безопасности. Пример:  
   
 -   Рекурсивная производная иерархия (RDH), которая не привязывает нулевые рекурсии (каждый элемент на рекурсивном уровне располагается под уровнем ROOT и его рекурсивным родительским элементом).  
   

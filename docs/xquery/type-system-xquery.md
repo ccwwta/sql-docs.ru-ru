@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cb0b853b83fc65d8faddc341f9f0249debc2d2c1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a92b26642f5759044233d5d63b5a432ee5fe426c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915280"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352841"
 ---
 # <a name="type-system-xquery"></a>Система типов (XQuery)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -69,7 +69,7 @@ WHERE ProductModelID=7
   
 -   Они не могут использоваться при создании коллекции XML-схем. Эти типы используются в системе типов XQuery и используются для [XQuery и статической типизации](../xquery/xquery-and-static-typing.md). Можно привести к атомарным типам, например **xdt: untypedAtomic**, в пространстве имен **xdt** .  
   
--   При запросе нетипизированного XML статический и динамический тип узлов элементов имеет тип **xdt: untypeed**, а тип значений атрибута — **xdt: untypedAtomic**. Результат выполнения метода **query ()** создает нетипизированный XML. Это означает, что узлы XML возвращаются как **xdt: untypeed** и **xdt: untypedAtomic**соответственно.  
+-   При запросе нетипизированного XML статический и динамический тип узлов элементов имеет тип **xdt: untypeed**, а тип значений атрибута — **xdt: untypedAtomic**. Результат выполнения метода **query ()** создает нетипизированный XML. Это означает, что узлы XML возвращаются как **xdt: untypeed** и **xdt: untypedAtomic** соответственно.  
   
 -   Типы **xdt: dayTimeDuration** и **xdt: еармонсдуратион** не поддерживаются.  
   
@@ -149,7 +149,7 @@ WHERE ProductModelID=7
 > [!NOTE]  
 >  В этом примере явное использование функции **Data ()** используется только для иллюстрации. Если он не указан, функция **Sum ()** неявно применяет функцию **Data ()** для извлечения типизированных значений узлов.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Шаблоны и разрешения приложения SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Основы языка XQuery](../xquery/xquery-basics.md)  
   

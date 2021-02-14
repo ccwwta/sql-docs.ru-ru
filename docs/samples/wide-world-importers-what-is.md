@@ -10,12 +10,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: adc2e7d74f8479384bd9f34b5442e796e4b74d66
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f844299a392f9521afe3af7d72bc72272304d3a5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718548"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100354038"
 ---
 # <a name="wide-world-importers-sample-databases-for-microsoft-sql"></a>Примеры баз данных для широкого мира импорта для Microsoft SQL
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -65,4 +65,4 @@ SQL Server Analysis Services используется для создания м
 
 Лицензия для образца базы данных и примера кода описана здесь: [license.txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
 
-Образец базы данных включает общедоступные данные, загруженные из data.gov и естественного Еарсдата. Условия использования:[https://www.naturalearthdata.com/about/terms-of-use/](https://www.naturalearthdata.com/about/terms-of-use/)
+Образец базы данных включает общедоступные данные, загруженные из data.gov и естественного Еарсдата. Условия использования: [https://www.naturalearthdata.com/about/terms-of-use/](https://www.naturalearthdata.com/about/terms-of-use/)

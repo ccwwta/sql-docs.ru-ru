@@ -14,12 +14,12 @@ ms.assetid: a1a03ef9-b6e8-4127-bad0-eae261251472
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: c0505913f29e473f4687454b8622becb01389519
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 65efad5247054ec308383074be71e7c75ef4694c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480466"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100080745"
 ---
 # <a name="managing-backups-oracletosql"></a>Управление резервными копиями (OracleToSQL)
 Управление резервным копированием Oracle позволяет выполнять резервное копирование и восстановление данных таблиц до или после выполнения теста. Вы также можете управлять содержимым резервной копии с помощью диалогового окна Управление содержимым резервной копии.  
@@ -95,6 +95,6 @@ SQL Server Управление резервным копированием по
   
 -   Нажмите кнопку **Закрыть** , чтобы закрыть диалоговое окно.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Тестирование перенесенных объектов базы данных &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

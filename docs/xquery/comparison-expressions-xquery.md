@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c0b96fbd075ed2b2f79ca8b92d09e2d2782d77dc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4824cd52001305a05c00e197e8c4140598267d4f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922328"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100349346"
 ---
 # <a name="comparison-expressions-xquery"></a>Выражения сравнения (XQuery)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -221,9 +221,9 @@ ProductModelID       Result
   
  На основе порядка документа выполняются следующие сравнения:  
   
--   `<<`: **Операнд 1** предшествует **операнду 2** в порядке документа.  
+-   `<<` : **Операнд 1** предшествует **операнду 2** в порядке документа.  
   
--   `>>`: **Операнд 1** следует за **операндом 2** в порядке документа.  
+-   `>>` : **Операнд 1** следует за **операндом 2** в порядке документа.  
   
  Следующий запрос возвращает значение true, если в описании каталога продукции имеется элемент, который \<Warranty> появляется перед \<Maintenance> элементом в порядке документа для определенного продукта.  
   
@@ -241,13 +241,13 @@ where ProductModelID=19
   
  Обратите внимание на следующие данные из предыдущего запроса:  
   
--   Метод **value ()** типа данных **XML**используется в запросе.  
+-   Метод **value ()** типа данных **XML** используется в запросе.  
   
 -   Результат запроса преобразуется в тип **nvarchar (10)** и возвращается.  
   
 -   Запрос возвращает значение True.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Введите System &#40;XQuery&#41;](../xquery/type-system-xquery.md)   
  [Выражения языка XQuery](../xquery/xquery-expressions.md)  
   

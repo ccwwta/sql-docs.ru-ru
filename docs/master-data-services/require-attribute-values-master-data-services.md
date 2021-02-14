@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 74893d2d64a6de182206313a3d227c3a7db2f1de
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8e863605632b82b18f0dbe824fd45adbeaf22274
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456763"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353771"
 ---
 # <a name="require-attribute-values-master-data-services"></a>Запрос значений атрибута (службы Master Data Services)
 
@@ -61,9 +61,9 @@ ms.locfileid: "88456763"
   
 11. Из раскрывающегося списка **Атрибут** выберите атрибут.  
   
-12. Выберите команду **Сохранить**. В сетку **Then** будет добавлена новая строка.  
+12. Нажмите кнопку **Сохранить**. В сетку **Then** будет добавлена новая строка.  
   
-13. Выберите команду **Сохранить**.  
+13. Нажмите кнопку **Сохранить**.  
   
 14. Нажмите кнопку **Опубликовать все**.  
   
