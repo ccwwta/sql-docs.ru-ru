@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f4c2bb53-2bec-4f1a-9c00-cf997fb7ae5b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 39b5db61e3709d8d9f1d9859f15d9e6c271b5e05
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b9a3561c25ca0c64e01c2603b64656320d499518
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917992"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341905"
 ---
 # <a name="functions-on-sequences---distinct-values"></a>Функции с последовательностями — distinct-values
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ fn:distinct-values($arg as xdt:anyAtomicType*) as xdt:anyAtomicType*
  *$arg*  
  Последовательность атомарных значений.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Все типы атомарных значений, которые передаются в **различные значения ()** , должны быть подтипами одного и того же базового типа. Допустимые базовые типы — это типы, поддерживающие операцию **EQ** . Эти типы включают в себя три встроенных базовых численных типа, базовые типы даты-времени, а также xs:string, xs:boolean, xdt:untypedAtomic. Значения типа xdt:untypedAtomic приводятся к типу xs:string. Если имеется смесь этих типов или передаются значения других типов, возникает статическая ошибка.  
   
  Результат **distinct-values ()** получает базовый тип переданных типов, например xs: String в случае xdt: untypedAtomic с исходной кратностью. Если вход статически пуст, подразумевается пустое значение, и формируется статическая ошибка.  
@@ -94,7 +94,7 @@ select @x.query('
   
 -   Синтаксический параметр для указания параметров сортировки не поддерживается.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функции XQuery для типа данных xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8618b0dfc4488f3862366ac873e8cd38e1086e51
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 8d47a78e4a7e706e91312ee2eb4686121c2b2532
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813399"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341436"
 ---
 # <a name="create-an-entity-master-data-services"></a>Создание сущности (службы Master Data Services)
 
@@ -65,15 +65,15 @@ ms.locfileid: "85813399"
   
 9. Необязательный элемент. Установите флажок **Включить сжатие данных** . Сжатие строк включено по умолчанию. Дополнительные сведения см. в статье [Data Compression](../relational-databases/data-compression/data-compression.md).  
   
-10. Выберите команду **Сохранить**.  
+10. Нажмите кнопку **Сохранить**.  
   
 ## <a name="grid-columns"></a>Столбцы сетки  
  Для каждой созданной сущности в сетке создается строка с тринадцатью столбцами. Ниже приведены эти столбцы.  
   
-|name|Описание|  
+|Имя|Описание|  
 |----------|-----------------|  
 |Состояние|Состояние сущности. После нажатия кнопки **Сохранить** появится следующее изображение, которое указывает на то, что сущность обновляется.<br /><br /> ![Значок обновления состояния](../master-data-services/media/mds-statusicon-updating.png "Значок обновления состояния")<br /><br /> При наличии ошибок во время создания или изменения сущности появляется следующее изображение.<br /><br /> ![Значок состояния ошибки](../master-data-services/media/mds-statusicon-error.png "Значок состояния ошибки")<br /><br /> Если ее состояние нормальное, появится следующее изображение.<br /><br /> ![Значок состояния "ОК"](../master-data-services/media/mds-statusicon-ok.png "Значок состояния "ОК"")|  
-|name|Имя сущности.|  
+|Имя|Имя сущности.|  
 |Описание|Описание сущности.|  
 |Промежуточная таблица|Имя префикса таблицы, которая используется для хранения данных.|  
 |Тип журнала транзакций|Тип журнала транзакций сущности.|  
@@ -94,7 +94,7 @@ ms.locfileid: "85813399"
   
 -   [Создание файлового атрибута (службы Master Data Services)](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сущности &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
  [Явные иерархии &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [Изменение &#40;сущности Master Data Services&#41;](../master-data-services/edit-an-entity-master-data-services.md)   

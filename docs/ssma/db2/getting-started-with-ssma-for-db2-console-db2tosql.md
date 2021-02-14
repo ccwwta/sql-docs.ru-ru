@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f245c017-023e-4880-8721-8908d339525e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 57cf454c5d13bf4a40325024e51bd19c4d56c446
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 59caa0bd32c0fe0838b4d2d8528a83b084d6cd81
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91985133"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100073558"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>Начало работы с SSMA для консоли DB2 (DB2ToSQL)
 В этом разделе описывается процедура запуска и начала работы с консольным приложением DB2. Здесь также перечислены соглашения, используемые в типичном окне вывода консоли SSMA.  
@@ -25,7 +25,7 @@ ms.locfileid: "91985133"
   
 1.  Последовательно выберите пункты **Пуск** и **все программы**.  
   
-2.  Щелкните ярлык ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] командной строки помощник по миграции для DB2** .  
+2.  Щелкните ярлык **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] командной строки помощник по миграции для DB2** .  
   
     В нем отображается меню использования консоли SSMA и `(/? Help)` , которое поможет приступить к работе с консольным приложением.  
   

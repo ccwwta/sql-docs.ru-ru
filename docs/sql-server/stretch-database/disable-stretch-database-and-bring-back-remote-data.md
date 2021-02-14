@@ -12,12 +12,12 @@ ms.assetid: c1bbb24e-47e3-46aa-b786-fcadf9fb65ce
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: ed34730c85a8d492bb40e3013ea5a9a05fc01d90
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 315cfed40b1ccdadf349d9b371d6baac5928d3af
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454384"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100081077"
 ---
 # <a name="disable-stretch-database-and-bring-back-remote-data"></a>Отключение Stretch Database и возвращение удаленных данных
 [!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
@@ -95,7 +95,7 @@ ms.locfileid: "88454384"
   
 1.  В среде SQL Server Management Studio в обозревателе объектов выберите базу данных, для которой необходимо отключить Stretch Database.  
   
-2.  Щелкните правой кнопкой **Задачи**, выберите **Stretch**и щелкните **Отключить**.  
+2.  Щелкните правой кнопкой **Задачи**, выберите **Stretch** и щелкните **Отключить**.  
   
 > [!NOTE]
 > Отключение Stretch Database для базы данных не приводит к удалению удаленной базы данных. Если вы хотите удалить расположенную удаленно базу данных, вам потребуется сделать это с помощью портала управления Azure. Пока расположенная удаленно база данных не будет удалена, ее хранение будет сопровождаться затратами в Azure. Дополнительные сведения о ценах на использование SQL Server Stretch Database см. на [этой странице](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/).  

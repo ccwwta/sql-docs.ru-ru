@@ -30,12 +30,12 @@ ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ccb8c1e7f26102aa960ab720283debaceff2dd2c
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: e9892fe80ff3f29dca2ac46c99249fa603ab5528
+ms.sourcegitcommit: 6f4fb9cfd0cad06127a6328adc745e2ba7c191d1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99203621"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "99570488"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -132,7 +132,7 @@ RAISERROR ( { msg_str | @local_variable }
  Переменная любого допустимого типа данных для символов, содержащая строку того же формата, что и строка *msg_str*. Аргумент *\@local_variable* должен иметь тип **char** или **varchar** либо должен неявно преобразовываться в эти типы данных.  
   
  *severity*  
- Определенная пользователем степень серьезности, связанный с этим сообщением. Если при помощи аргумента *msg_id* вызываются пользовательские сообщения, созданные процедурой sp_addmessage, уровень серьезности, указанный в инструкции RAISERROR, заменяет уровень серьезности, указанный в процедуре sp_addmessage.  
+ Определенный пользователем [уровень серьезности](../../relational-databases/errors-events/database-engine-error-severities.md), связанный с этим сообщением. Если при помощи аргумента *msg_id* вызываются пользовательские сообщения, созданные процедурой sp_addmessage, уровень серьезности, указанный в инструкции RAISERROR, заменяет уровень серьезности, указанный в процедуре sp_addmessage.  
   
  Степень серьезности от 0 до 18 может указать любой пользователь. Уровни серьезности от 19 до 25 могут быть указаны только членами предопределенной роли сервера sysadmin и пользователями с разрешениями ALTER TRACE. Для степеней серьезности от 19 до 25 требуется параметр WITH LOG. Степени серьезности меньше 0 интерпретируются как 0. Степени серьезности больше 25 интерпретируются как 25.  
   

@@ -21,12 +21,12 @@ author: WilliamDAssafMSFT
 ms.author: wiassaf
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current
-ms.openlocfilehash: 948a45e2f9d2dca95bca1c3afbaed419030f47df
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 9aaca2dee46593d637b11cde9b4e9e2a55664f6b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99210362"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350892"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (база данных SQL Azure)
 
@@ -34,10 +34,10 @@ ms.locfileid: "99210362"
 
   Содержит статистику для [!INCLUDE[ssSDS](../../includes/sssds-md.md)] событий **подключения к** базе данных, предоставляя обзор успешных и неудачных попыток подключения к базе данных. Дополнительные сведения о событиях подключения см. в разделе Типы событий в [sys.event_log &#40;базе данных SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
-|Статистика|Тип|Описание|  
+|Статистика|Type|Описание|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|Имя базы данных.|  
-|**start_time**|**datetime2**|Дата и время начала интервала статистической обработки в формате UTC. Время всегда кратно 5 минутам. Например:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
+|**start_time**|**datetime2**|Дата и время начала интервала статистической обработки в формате UTC. Время всегда кратно 5 минутам. Пример:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|Дата и время окончания интервала статистической обработки в формате UTC. **End_time** всегда находится в течение 5 минут позже, чем соответствующая **start_time** в той же строке.|  
 |**success_count**|**int**|Число успешных соединений.|  
 |**total_failure_count**|**int**|Общее число неудачных попыток соединения. Это сумма **connection_failure_count**, **terminated_connection_count** и **throttled_connection_count** и не включает события взаимоблокировки.|  
@@ -45,7 +45,7 @@ ms.locfileid: "99210362"
 |**terminated_connection_count**|**int**|**_Применимо только для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] версии 11._**<br /><br /> Число прерванных соединений.|  
 |**throttled_connection_count**|**int**|**_Применимо только для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] версии 11._**<br /><br /> Число регулируемых соединений.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 ### <a name="event-aggregation"></a>Статистическая обработка событий
 

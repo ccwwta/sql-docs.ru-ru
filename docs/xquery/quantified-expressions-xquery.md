@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: a3a75a6c-8f67-4923-8406-1ada546c817f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e815f72ffeaa851c2002bbb92687726e70024db
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e673895553b6a3207d0ef86337c47e2f6def2bfe
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765596"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339909"
 ---
 # <a name="quantified-expressions-xquery"></a>Выражения с квантором (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -107,7 +107,7 @@ ProductModelID SmallPicturesStored
   
 -   Утверждение типов не поддерживается как часть привязки переменной в выражениях с квантором.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выражения языка XQuery](../xquery/xquery-expressions.md)  
   
   

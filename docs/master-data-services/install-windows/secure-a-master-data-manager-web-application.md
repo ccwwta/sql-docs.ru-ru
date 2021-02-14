@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6740c3491ff9a10f611f3b1fe26cd5b3acc1788c
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 5e941ce4f06961f19e0d5f4a0dc96aff31039647
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279380"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344757"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>Обеспечение безопасности веб-приложения диспетчера основных данных
 
@@ -26,7 +26,7 @@ ms.locfileid: "86279380"
 > [!NOTE]  
 >  Веб-приложение [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] может использовать протокол HTTP или HTTPS, но не оба.  
   
-## <a name="prerequisites"></a>Обязательные условия  
+## <a name="prerequisites"></a>Предварительные требования  
  Выполнение процедуры  
   
 -   На веб-сервере, где установлен экземпляр служб [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] , нужно обладать правами администратора.  
@@ -41,17 +41,17 @@ ms.locfileid: "86279380"
   
 1.  После подтверждения того, что веб-приложение [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] имеет верные настройки протокола HTTP, создайте сертификат на сервере служб IIS. Дополнительные сведения см. в разделе [Настройка сертификатов сервера IIS 7](https://technet.microsoft.com/library/cc732230\(WS.10\).aspx).  
   
-2.  На панели **Соединения** на вкладке **Сайты**щелкните сайт, на котором размещено веб-приложение [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .  
+2.  На панели **Соединения** на вкладке **Сайты** щелкните сайт, на котором размещено веб-приложение [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .  
   
 3.  В области **Действия** щелкните элемент **Привязки**.  
   
-4.  Щелкните **Добавить**.  
+4.  Нажмите кнопку **Добавить**.  
   
-5.  Выберите **https**из списка.  
+5.  Выберите **https** из списка.  
   
 6.  Выберите сертификат TLS/SSL.  
   
-7.  Нажмите кнопку **OK**.  
+7.  Нажмите кнопку **ОК**.  
   
 8.  Необязательный элемент. Чтобы удалить из списка протокол HTTP, разрешив доступ к сайту только по протоколу HTTPS, щелкните строку **http**. Нажмите кнопку **Удалить** и в диалоговом окне подтверждения выберите **Да**.  
   
@@ -66,10 +66,10 @@ ms.locfileid: "86279380"
 
 12. Измените `<serviceMetadata httpGetEnable="true" httpsGetEnabled="false">` на `<serviceMetadata httpGetEnable="false" httpsGetEnabled="true">`, чтобы предотвратить проблемы, которые могут появиться в клиенте Silverlight.
 
-13. Сохраните и закройте файл. Если возникает ошибка, это происходит из-за включенного контроля учетных записей. Теперь пользователи могут использовать для доступа к сайту протокол HTTPS.  
+13. Сохраните файл и закройте его. Если возникает ошибка, это происходит из-за включенного контроля учетных записей. Теперь пользователи могут использовать для доступа к сайту протокол HTTPS.  
 
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание веб-приложения мастера основных данных (службы Master Data Services)](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   

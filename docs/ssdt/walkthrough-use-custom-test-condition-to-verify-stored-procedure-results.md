@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 738ff14a43dd473abeab0c02ef206417675a7fb9
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: d434df88cae0a5fb28add27cc9785e659f059ced
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987698"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100042494"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>Пошаговое руководство. использовать пользовательское условие теста для проверки результатов выполнения хранимой процедуры
 
@@ -351,7 +351,7 @@ namespace ColumnCountCondition
   
 Скопируйте файл сборки **ColumnCountCondition.dll** из выходного каталога в каталог %Program Files%\Microsoft Visual Studio <Version>\Common7\IDE\Extensions\Microsoft\SQLDB\TestConditions.  
   
-По умолчанию cкомпилированный файл библиотеки DLL помещается в папку *путь_к_решению*\\*путь_к_проекту*bin\Debug или *путь_к_решению*\\*путь_к_проекту*bin\Release.  
+По умолчанию cкомпилированный файл библиотеки DLL помещается в папку *путь_к_решению*\\*путь_к_проекту* bin\Debug или *путь_к_решению*\\*путь_к_проекту* bin\Release.  
   
 Затем запустите новый сеанс Visual Studio и создайте проект базы данных. Чтобы запустить новый сеанс работы Visual Studio и создать проект базы данных, сделайте следующее:  
   

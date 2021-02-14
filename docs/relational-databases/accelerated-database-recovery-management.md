@@ -1,7 +1,7 @@
 ---
 description: Управление ускоренным восстановлением баз данных
 title: Управление ускоренным восстановлением базы данных | Документация Майкрософт
-ms.date: 08/12/2019
+ms.date: 02/02/2021
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
@@ -13,12 +13,12 @@ author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15'
-ms.openlocfilehash: cfd5a901f38dacf9e17baff4d65363796ab3cd73
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: ca11bbae7f1bcc86c0891cc22d8a7a02b26fd46e
+ms.sourcegitcommit: fa63019cbde76dd981b0c5a97c8e4d57e8d5ca4e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99236104"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "99495782"
 ---
 # <a name="manage-accelerated-database-recovery"></a>Управление ускоренным восстановлением баз данных
 
@@ -118,7 +118,30 @@ PVS может потребоваться переместить в другую
 
    Активные транзакции препятствуют очистке PVS.
 
-1. Если база данных входит в группу доступности, проверьте значение `secondary_low_water_mark`. Оно аналогично значению `low_water_mark_for_ghosts`, сообщаемому `sys.dm_hadr_database_replica_states`. Выполните запрос к `sys.dm_hadr_database_replica_states`, чтобы определить, блокирует ли одна из реплик это значение, так как это также предотвратит очистку PVS.
-1. Проверьте значение `min_transaction_timestamp` (или `online_index_min_transaction_timestamp`, если блокировка производится активным хранилищем PVS) и в соответствии с результатом проверьте значение `sys.dm_tran_active_snapshot_database_transactions` для столбца `transaction_sequence_num`, чтобы определить сеанс, в котором содержится старая транзакция моментального снимка, блокирующая очистку PVS.
-1. Если ни одна из указанных выше проверок не дала результата, значит, очистка блокируется аварийно завершенными транзакциями. Проверьте последнее время `aborted_version_cleaner_last_start_time` и `aborted_version_cleaner_last_end_time`, чтобы узнать, завершилась ли очистка аварийно завершенных транзакций. После очистки аварийно завершенных транзакций значение `oldest_aborted_transaction_id` должно быть больше.
-1. Если аварийно завершенная транзакция не была успешно выполнена недавно, проверьте наличие сообщений о проблемах `VersionCleaner` в журнале ошибок.
+2. Если база данных входит в группу доступности, проверьте значение `secondary_low_water_mark`. Оно аналогично значению `low_water_mark_for_ghosts`, сообщаемому `sys.dm_hadr_database_replica_states`. Выполните запрос к `sys.dm_hadr_database_replica_states`, чтобы определить, блокирует ли одна из реплик это значение, так как это также предотвратит очистку PVS.
+3. Проверьте значение `min_transaction_timestamp` (или `online_index_min_transaction_timestamp`, если блокировка производится активным хранилищем PVS) и в соответствии с результатом проверьте значение `sys.dm_tran_active_snapshot_database_transactions` для столбца `transaction_sequence_num`, чтобы определить сеанс, в котором содержится старая транзакция моментального снимка, блокирующая очистку PVS.
+4. Если ни одна из указанных выше проверок не дала результата, значит, очистка блокируется аварийно завершенными транзакциями. Проверьте последнее время `aborted_version_cleaner_last_start_time` и `aborted_version_cleaner_last_end_time`, чтобы узнать, завершилась ли очистка аварийно завершенных транзакций. После очистки аварийно завершенных транзакций значение `oldest_aborted_transaction_id` должно быть больше.
+5. Если аварийно завершенная транзакция не была успешно выполнена недавно, проверьте наличие сообщений о проблемах `VersionCleaner` в журнале ошибок.
+
+Используйте следующий пример запроса в качестве средства устранения неполадок:
+
+```sql
+SELECT pvss.persistent_version_store_size_kb / 1024. / 1024 AS persistent_version_store_size_gb,
+       pvss.online_index_version_store_size_kb / 1024. / 1024 AS online_index_version_store_size_gb,
+       pvss.current_aborted_transaction_count,
+       pvss.aborted_version_cleaner_start_time,
+       pvss.aborted_version_cleaner_end_time,
+       dt.database_transaction_begin_time AS oldest_transaction_begin_time,
+       asdt.session_id AS active_transaction_session_id,
+       asdt.elapsed_time_seconds AS active_transaction_elapsed_time_seconds
+FROM sys.dm_tran_persistent_version_store_stats AS pvss
+LEFT JOIN sys.dm_tran_database_transactions AS dt
+ON pvss.oldest_active_transaction_id = dt.transaction_id
+   AND
+   pvss.database_id = dt.database_id
+LEFT JOIN sys.dm_tran_active_snapshot_database_transactions AS asdt
+ON pvss.min_transaction_timestamp = asdt.transaction_sequence_num
+   OR
+   pvss.online_index_min_transaction_timestamp = asdt.transaction_sequence_num
+WHERE pvss.database_id = DB_ID();
+```

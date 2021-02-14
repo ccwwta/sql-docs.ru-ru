@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e3d7cf2f-c6fb-43c2-8538-4470a6375af5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24840ac01f448270e43065887746fd7230be4d35
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e12ac51b38073363edf7774f4ac8046c1985b38c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914667"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340533"
 ---
 # <a name="atomization-xquery"></a>Атомизация (XQuery)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +77,7 @@ where ProductModelID=7
   
  Атомарность также возникает в параметрах выражений сравнения, передаваемых функциям, значения, возвращаемые функциями, выражениями **Cast ()** и выражениями сортировки, передаваемыми в предложении ORDER BY.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основы XQuery](../xquery/xquery-basics.md)   
  [Выражения сравнения &#40;XQuery&#41;](../xquery/comparison-expressions-xquery.md)   
  [Функции XQuery для типа данных xml](../xquery/xquery-functions-against-the-xml-data-type.md)  

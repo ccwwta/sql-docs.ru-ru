@@ -21,12 +21,12 @@ ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec5ad1373336d3cc3873e0a0b81c2ad6c27291fa
-ms.sourcegitcommit: 38e055eda82d293bf5fe9db14549666cf0d0f3c0
+ms.openlocfilehash: 00783bffefd33038d079280c50983b9dfe03393f
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99250423"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100340060"
 ---
 # <a name="sysdm_tran_locks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "99250423"
 |**request_session_id**|**int**|Идентификатор сеанса, которому в данный момент принадлежит этот запрос. Для распределенных и связанных транзакций идентификатор владеющего сеанса может меняться. Значение -2 показывает, что запрос относится к потерянной распределенной транзакции. Значение -3 показывает, что запрос принадлежит отложенной транзакции восстановления, например транзакции, для которой откат во время восстановления был отложен из-за невозможности успешно завершить операцию.|  
 |**request_exec_context_id**|**int**|Идентификатор контекста выполнения процесса, которому в данный момент принадлежит запрос.|  
 |**request_request_id**|**int**|Идентификатор запроса (идентификатор пакета) в процессе, которому в данный момент принадлежит запрос. Это значение меняется каждый раз при изменении в соединении режима MARS для транзакций.|  
-|**request_owner_type**|**nvarchar(60)**|Тип сущности, которой принадлежит запрос. Запрос диспетчера блокировок может принадлежать нескольким разным объектам. Доступны следующие значения:<br /><br /> TRANSACTION = Запрос принадлежит транзакции.<br /><br /> CURSOR = Запрос принадлежит курсору.<br /><br /> SESSION = Запрос принадлежит сеансу пользователя.<br /><br /> SHARED_TRANSACTION_WORKSPACE = Запрос принадлежит общей части рабочего пространства транзакции.<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = Запрос принадлежит монопольной части рабочей области транзакции.<br /><br /> NOTIFICATION_OBJECT = запрос принадлежит внутреннему компоненту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот компонент попросил диспетчера блокировок уведомлять его в случае, если другой компонент ожидает получения блокировки. Функция FileTable — это компонент, который использует это значение.<br /><br /> **Примечание.** Рабочие пространства используются внутренне для удержания блокировок для зачисленных сеансов.|  
+|**request_owner_type**|**nvarchar(60)**|Тип сущности, которой принадлежит запрос. Запрос диспетчера блокировок может принадлежать нескольким разным объектам. Возможны следующие значения:<br /><br /> TRANSACTION = Запрос принадлежит транзакции.<br /><br /> CURSOR = Запрос принадлежит курсору.<br /><br /> SESSION = Запрос принадлежит сеансу пользователя.<br /><br /> SHARED_TRANSACTION_WORKSPACE = Запрос принадлежит общей части рабочего пространства транзакции.<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = Запрос принадлежит монопольной части рабочей области транзакции.<br /><br /> NOTIFICATION_OBJECT = запрос принадлежит внутреннему компоненту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот компонент попросил диспетчера блокировок уведомлять его в случае, если другой компонент ожидает получения блокировки. Функция FileTable — это компонент, который использует это значение.<br /><br /> **Примечание.** Рабочие пространства используются внутренне для удержания блокировок для зачисленных сеансов.|  
 |**request_owner_id**|**bigint**|Идентификатор определенного владельца запроса.<br /><br /> Если владельцем запроса является транзакция, это значение содержит идентификатор транзакции.<br /><br /> Если владельцем запроса является таблица FileTable, **request_owner_id** имеет одно из следующих значений.<br /> <ul><li>**-4** : таблица FileTable заняла блокировку базы данных.<li> **-3** : таблица FileTable потратила блокировку таблицы.<li> **Другое значение** . значение представляет собой маркер файла. Это значение также отображается как **fcb_id** в динамическом административном представлении [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).</li></ul>|  
 |**request_owner_guid**|**uniqueidentifier**|Идентификатор GUID определенного владельца запроса. Это значение используется только распределенной транзакцией, для которой оно является идентификатором GUID координатора MS DTC.|  
 |**request_owner_lockspace_id**|**nvarchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Это значение представляет идентификатор заблокированного пространства запрашивающего объекта. Идентификатор заблокированного пространства определяет, совместимы ли друг с другом два запрашивающих объекта и можно ли им предоставить блокировки в режимах, которые в противном случае привели бы к конфликту.|  
@@ -63,7 +63,7 @@ ms.locfileid: "99250423"
   
 ## <a name="permissions"></a>Разрешения
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-В базах данных SQL Basic, S0 и S1, а также для баз данных в эластичных пулах `Server admin` `Azure Active Directory admin` требуется учетная запись или. Для всех остальных целей службы базы данных SQL `VIEW DATABASE STATE` разрешение требуется в базе данных.   
+В базах данных SQL Basic, S0 и S1, а также для баз данных в эластичных пулах требуется учетная запись [администратора сервера](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) или учетная запись [администратора Azure Active Directory](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) . Для всех остальных целей службы базы данных SQL `VIEW DATABASE STATE` разрешение требуется в базе данных.   
  
 ## <a name="remarks"></a>Remarks  
  Состояние предоставленного запроса показывает, что блокировка ресурса была предоставлена запрашивающему объекту. Ожидающий запрос обозначает, что запрос еще не был предоставлен. Следующий тип ожидающих запросов возвращается столбцом **request_status**.  

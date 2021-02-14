@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5e7ae12dd658b6b5affde321666d84b010771699
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ea654a45894791fa22ecfa843c44cdd6214a5181
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916130"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100351062"
 ---
 # <a name="sequence-expressions-xquery"></a>Выражения последовательности (XQuery)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -243,7 +243,7 @@ SELECT @x.query('
   
 -   Не поддерживается комбинирование последовательностей узлов операторами union, intersect и except.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выражения языка XQuery](../xquery/xquery-expressions.md)  
   
   

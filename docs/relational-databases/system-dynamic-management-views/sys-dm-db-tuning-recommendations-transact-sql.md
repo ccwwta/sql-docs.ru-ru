@@ -22,12 +22,12 @@ ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9037aaefe27cd50deb9b61af423a8074ab86f65
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 332e035a12de891bde8324a55f08a2baf59a9edc
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99204809"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100343043"
 ---
 # <a name="sysdm_db_tuning_recommendations-transact-sql"></a>\_рекомендации по настройке sys.DM DB \_ \_ (Transact-SQL)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "99204809"
 | **понять** | **int** | Предполагаемое значение и влияние на эту рекомендацию по шкале 0-100 (чем больше, тем выше) |
 | **Дополнительно** | **nvarchar(max)** | Документ JSON, содержащий дополнительные сведения о рекомендации. Доступны следующие поля:<br /><br />`planForceDetails`<br />-    `queryId` — \_ идентификатор запроса регрессионного запроса.<br />-    `regressedPlanId` — plan_id регрессионного плана.<br />-   `regressedPlanExecutionCount` — Число выполнений запроса с регрессионным планом до обнаружения регрессии.<br />-    `regressedPlanAbortedCount` — Число обнаруженных ошибок во время выполнения регрессивного плана.<br />-    `regressedPlanCpuTimeAverage` — Среднее время ЦП (в микросекундах), затраченное на регрессионный запрос до обнаружения регрессии.<br />-    `regressedPlanCpuTimeStddev` — Стандартное отклонение времени ЦП, потребляемого регрессионным запросом до обнаружения регрессии.<br />-    `recommendedPlanId` — plan_id плана, который должен быть принудительно вынужден.<br />-   `recommendedPlanExecutionCount`— Число выполнений запроса с планом, который должен быть принудительно завершен до обнаружения регрессии.<br />-    `recommendedPlanAbortedCount` — Число обнаруженных ошибок во время выполнения плана, который должен быть принудительно выполнен.<br />-    `recommendedPlanCpuTimeAverage` Среднее время ЦП (в микросекундах), затраченное на выполнение запроса с планом, который должен быть принудительно завершен (вычислено до обнаружения регрессии).<br />-    `recommendedPlanCpuTimeStddev` Стандартное отклонение времени ЦП, потребляемого регрессионным запросом до обнаружения регрессии.<br /><br />`implementationDetails`<br />-  `method` — Метод, который должен использоваться для исправления регрессии. Значение всегда равно `TSql` .<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql-md.md)] Скрипт, который должен быть выполнен для принудительного применения рекомендуемого плана. |
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Информация, возвращаемая, `sys.dm_db_tuning_recommendations` обновляется, когда ядро СУБД определяет потенциальную регрессию производительности запросов и не сохраняется. Рекомендации сохраняются только до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перезапуска. Администраторы баз данных должны периодически создавать резервные копии рекомендаций по настройке, если они хотят обеспечить их работу после повторного использования сервера. 
 
  `currentValue` поле в `state` столбце может иметь следующие значения:
@@ -85,6 +85,8 @@ ms.locfileid: "99204809"
 | `VerificationForcedQueryRecompile`| Запрос перекомпилируется, так как нет существенного улучшения производительности. |
 | `PlanForcedByUser`| Пользователь вручную принудительно затребовал план с помощью [sp_query_store_force_plan &#40;процедуры&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md) . Ядро СУБД не будет применять рекомендацию, если пользователь явно решил принудительно применить некоторый план. |
 | `PlanUnforcedByUser` | Пользователь вручную не принудительно вынудить план с помощью [sp_query_store_unforce_plan &#40;процедуры&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md) . Так как пользователь явно отменяет Рекомендуемый план, ядро СУБД продолжает использовать текущий план и создает новую рекомендацию, если в будущем происходит некоторое снижение плана. |
+| `UserForcedDifferentPlan` | Пользователь вручную принудительно затребовал другой план, используя [sp_query_store_force_plan &#40;процедуры&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md) . Ядро СУБД не будет применять рекомендацию, если пользователь явно решил принудительно применить некоторый план. |
+| `TempTableChanged` | Изменяется временная таблица, использованная в плане. |
 
  Статистика в столбце сведений не показывает статистику плана времени выполнения (например, текущее время ЦП). Сведения о рекомендациях выполняются во время обнаружения регрессии и описываются причины [!INCLUDE[ssde_md](../../includes/ssde_md.md)] снижения производительности. Используйте `regressedPlanId` и `recommendedPlanId` для запроса [представлений каталога хранилища запросов](../../relational-databases/performance/how-query-store-collects-data.md) , чтобы найти точную статистику плана времени выполнения.
 

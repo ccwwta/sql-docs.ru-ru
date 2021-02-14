@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5c6fb445-92ae-4933-b77d-80230931c024
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ded91465a2a9c7b5a0e8ddcdc219b2af5a84395e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 44ac691a0fe9cb4b513a2f9b435457c699c7e3e9
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935369"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100076095"
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>Сопоставление баз данных MySQL со схемами SQL Server (MySQLToSQL)
 По умолчанию SSMA для MySQL переносит все объекты в схеме MySQL в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных SQL Azure или с именем схемы. Однако вы можете настроить сопоставление между схемами MySQL и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базой данных SQL Azure.  

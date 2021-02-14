@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 616397e2032ca5855f9213073f495f1f7ec163db
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 549a1659bcbcf954a4039a152c5b372a758d0c74
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91933554"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100014835"
 ---
 # <a name="configure-the-unattended-execution-account-report-server-configuration-manager"></a>Настройка учетной записи автоматического выполнения (диспетчер конфигурации сервера отчетов)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предусматривает специальную учетную запись, предназначенную для автоматической обработки отчетов и отправки запросов на соединение по сети. Эти учетные записи используются для следующего.  
@@ -52,13 +52,13 @@ ms.locfileid: "91933554"
   
 1.  Создайте или выберите учетную запись домена, имеющую доступ к компьютерам и серверам, поставляющим данные или службы серверу отчетов. Следует использовать учетную запись с ограниченными разрешениями (например, только для чтения).  
   
-2.  Откройте командную строку: в меню **Пуск** выберите пункт **Выполнить**, введите **cmd**и нажмите кнопку **ОК**.  
+2.  Откройте командную строку: в меню **Пуск** выберите пункт **Выполнить**, введите **cmd** и нажмите кнопку **ОК**.  
   
 3.  Введите следующую команду для настройки учетной записи в локальном экземпляре сервера отчетов:  
   
      **rsconfig -e -u\<domain/username> -p\<password>**  
   
- Команда**rsconfig -e** поддерживает дополнительные аргументы. Дополнительные сведения о синтаксисе и примеры команд см. в статье [Программа rsconfig &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md).
+ Команда **rsconfig -e** поддерживает дополнительные аргументы. Дополнительные сведения о синтаксисе и примеры команд см. в статье [Программа rsconfig &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md).
  
 ### <a name="how-account-information-is-stored"></a>Хранение данных учетной записи  
  При настройке учетной записи следующие параметры в файле RSreportserver.config на локальном или удаленном экземпляре сервера отчетов сохраняются в виде зашифрованных значений:  

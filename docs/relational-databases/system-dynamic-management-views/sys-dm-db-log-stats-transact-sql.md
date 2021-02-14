@@ -20,12 +20,12 @@ ms.assetid: ''
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 88ac57a5ba41afacafe8565225ed9ce7bca55991
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: d9220bbd52a63f571287a76ccbfc7c88a064abd8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99191188"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100071698"
 ---
 # <a name="sysdm_db_log_stats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "99191188"
 
 *database_id* | NULL | **По умолчанию**
 
-Идентификатор базы данных. `database_id` имеет значение `int`. Допустимые входные данные — это ИДЕНТИФИКАЦИОНный номер базы данных, `NULL` или `DEFAULT` . Значение по умолчанию — `NULL`. `NULL` и `DEFAULT` являются эквивалентными значениями в контексте текущей базы данных.  
+Идентификатор базы данных. Параметр `database_id` равен `int`. Допустимые входные данные — это ИДЕНТИФИКАЦИОНный номер базы данных, `NULL` или `DEFAULT` . Значение по умолчанию — `NULL`. `NULL` и `DEFAULT` являются эквивалентными значениями в контексте текущей базы данных.  
 Может быть указана встроенная функция [DB_ID](../../t-sql/functions/db-id-transact-sql.md). При использовании `DB_ID` без указания имени базы данных уровень совместимости текущей базы данных должен быть 90 или выше.
 
   
@@ -73,7 +73,7 @@ ms.locfileid: "99191188"
 |recovery_vlf_count |**bigint** |   Общее число [файлов виртуального журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) для восстановления при отработке отказа или перезапуске сервера. |  
 
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Remarks
 При запуске `sys.dm_db_log_stats` базы данных, участвующей в группе доступности в качестве вторичной реплики, будет возвращено только подмножество полей, описанных выше.  В настоящее время `database_id` `recovery_model` `log_backup_time` при выполнении в базе данных-получателе будут возвращаться только, и.   
 
 ## <a name="permissions"></a>Разрешения  

@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 593c36c193b95d1484f3d478018992ea130d5417
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bddb9d2329c20203aca602e7aec37f235c4b6850
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418640"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077695"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Доступ к схемам инвентаризации (Акцесстоскл)
 В следующих разделах описываются таблицы, созданные с помощью SSMA при экспорте схем доступа в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -70,7 +70,7 @@ ms.locfileid: "88418640"
 |**Параметры сортировки**|**nvarchar(4000)**|Параметры сортировки базы данных Access. Параметры сортировки определяют, как база данных сортирует и сравнивает строки.|  
 |**жетверсион**|**nvarchar(4000)**|Версия ядра СУБД Jet. База данных Access использует базовое ядро СУБД Jet.|  
 |**Возможность обновления**|**bit**|Указывает, можно ли обновить базу данных. Если значение равно 1, то база данных может обновляться. Если значение равно 0, то база данных доступна только для чтения.|  
-|**QueryTimeout**|**int**|Заданное значение времени ожидания запроса ODBC для базы данных в секундах. Значение по умолчанию — 60 секунд.|  
+|**QueryTimeout**|**int**|Заданное значение времени ожидания запроса ODBC для базы данных в секундах. Значение по умолчанию ― 60 секунд.|  
   
 ## <a name="tables"></a>Таблицы  
 Метаданные таблицы экспортируются в таблицу **SSMA_Access_InventoryTables** . Эта таблица содержит следующие столбцы:  

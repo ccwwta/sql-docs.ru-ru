@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 79510fcf-4c83-4426-bdd4-15b4170ecfbd
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d7fab1a8f16c51d52e32c0147a85ab6ef08cd821
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1ef8ddfdf5444683ebef8ffd82042cd6e83951cf
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461950"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100272865"
 ---
 # <a name="change-an-attribute-group-name-master-data-services"></a>Изменение имени группы атрибутов (службы Master Data Services)
 
@@ -43,7 +43,7 @@ ms.locfileid: "88461950"
   
 4.  Щелкните **Группы атрибутов**.  
   
-5.  На странице **Управление группами атрибутов** выберите тип элемента в раскрывающемся списке **Типы элементов** , чтобы развернуть узел **Конечный**, **Консолидированный**или **Коллекция**в зависимости от типа обновляемой группы.  
+5.  На странице **Управление группами атрибутов** выберите тип элемента в раскрывающемся списке **Типы элементов** , чтобы развернуть узел **Конечный**, **Консолидированный** или **Коллекция** в зависимости от типа обновляемой группы.  
   
 6.  Щелкните имя группы атрибутов, которую вы хотите обновить, и нажмите кнопку **Изменить**.  
   
