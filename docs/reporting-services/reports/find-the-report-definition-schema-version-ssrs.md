@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fd43fb3dba83ab3821b1b670468e7849faac2044
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f3e656d797f876fdd40ab1904f153a332673f504
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79510145"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100069459"
 ---
 # <a name="find-the-report-definition-schema-version-ssrs"></a>Определение версии схемы определения отчета (SSRS)
 
@@ -44,7 +44,7 @@ ms.locfileid: "79510145"
   
 3.  На панели **Шаблоны** нажмите кнопку **Отчет**.  
   
-4.  В поле **Имя**введите имя отчета или примите имя по умолчанию.  
+4.  В поле **Имя** введите имя отчета или примите имя по умолчанию.  
   
 5.  Нажмите кнопку **Добавить**. Конструктор отчетов открывает новый пустой отчет в режиме конструктора.  
   

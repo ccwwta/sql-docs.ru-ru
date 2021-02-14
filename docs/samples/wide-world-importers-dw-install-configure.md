@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 5096ecd27f6ba9d5d06dd4efd322a42e3218a0bd
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 70128430c6ea0943605bd29f00597d51dee71d86
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97466605"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077755"
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>Установка и настройка WideWorldImportersDW
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "97466605"
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (или более поздней версии) или [базы данных SQL Azure](https://azure.microsoft.com/services/sql-database/). Чтобы использовать полную версию образца, используйте SQL Server Evaluation, Developer или Enterprise Edition.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Для получения наилучших результатов используйте выпуск Июнь 2016 или более поздней версии.
 
-## <a name="download"></a>Скачать
+## <a name="download"></a>Скачивание
 
 Последний выпуск примера:
 
@@ -63,7 +63,7 @@ ms.locfileid: "97466605"
 5. В разделе **Параметры базы данных** измените имя базы данных на *WideWorldImportersDW* и выберите целевой выпуск и цель службы для использования.
 6. Нажмите кнопку **Далее** и **Готово** , чтобы запустить развертывание. Этот процесс может занять несколько минут. При указании цели обслуживания ниже S2 может потребоваться больше времени.
 
-## <a name="configuration"></a>Конфигурация
+## <a name="configuration"></a>Параметр Configuration
 
 [Относится к SQL Server 2016 (и более поздней версии) для разработчиков, оценки и выпуска Enterprise Edition]
 

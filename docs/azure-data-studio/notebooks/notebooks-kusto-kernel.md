@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: a8379e10e8c3e3af64381e9a4536b253e203964e
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 1362e6a5ccd6152a1cb2597076d25c2da4149fd0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725128"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100048234"
 ---
 # <a name="create-and-run-a-kusto-kql-notebook-preview"></a>Создание и запуск записной книжки Kusto (KQL) (предварительная версия)
 
@@ -44,7 +44,7 @@ ms.locfileid: "91725128"
 
 3. В качестве **ядра** выберите *Kusto*. Убедитесь, что в меню **Подключиться к** задано имя кластера и база данных. В этой статье мы используем кластер help.kusto.windows.net с данными базы данных Samples.
 
-   :::image type="content" source="media/notebooks-kusto-kernel/set-kusto-kernel.png" alt-text="Открытие записной книжки":::
+   :::image type="content" source="media/notebooks-kusto-kernel/set-kusto-kernel.png" alt-text="Заполнение полей &quot;Ядро&quot; и &quot;Присоединить к&quot;":::
 
 Вы можете сохранить записную книжку с помощью команды **Сохранить** или **Сохранить как...** в меню **Файл**.
 
@@ -56,14 +56,14 @@ ms.locfileid: "91725128"
 
 1. Выберите меню **Присоединить к** на панели инструментов записной книжки, а затем выберите **Изменить подключение**.
 
-   :::image type="content" source="media/notebooks-kusto-kernel/kusto-select-attach-to-change-connections.png" alt-text="Открытие записной книжки":::
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-select-attach-to-change-connections.png" alt-text="Изменение подключений":::
 
    > [!Note]
    > Убедитесь, что поле базы данных заполнено. Для записных книжек Kusto требуется указать базу данных.
 
 2. Теперь можно выбрать последний сервер, использованный для подключения, или ввести сведения о новом подключении.
 
-   :::image type="content" source="media/notebooks-kusto-kernel/kusto-change-connection-cluster.png" alt-text="Открытие записной книжки":::
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-change-connection-cluster.png" alt-text="Выбор другого кластера":::
 
    > [!Note]
    > Укажите имя кластера без `https://`.
@@ -76,7 +76,7 @@ ms.locfileid: "91725128"
 
 1. Добавьте новую ячейку кода, выбрав команду **+Код** на панели инструментов.
 
-   :::image type="content" source="media/notebooks-kusto-kernel/kusto-kernel-code.png" alt-text="Открытие записной книжки":::
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-kernel-code.png" alt-text="Блок кода ядра Kusto":::
 
 2. Скопируйте приведенный ниже пример, вставьте его в ячейку и нажмите **Выполнить ячейку**. Этот пример запрашивает данные StormEvents для определенного типа события.
 
@@ -85,7 +85,7 @@ ms.locfileid: "91725128"
     | where EventType == "Waterspout"
    ```
 
-   :::image type="content" source="media/notebooks-kusto-kernel/run-kusto-notebook-cell.png" alt-text="Открытие записной книжки":::
+   :::image type="content" source="media/notebooks-kusto-kernel/run-kusto-notebook-cell.png" alt-text="Выполнение ячейки":::
 
 ## <a name="save-the-result-or-show-chart"></a>Сохранение результата или отображение диаграммы
 
@@ -102,7 +102,7 @@ ms.locfileid: "91725128"
     | limit 10
 ```
 
-:::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="Открытие записной книжки":::
+:::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="Сохранение результата":::
 
 ## <a name="known-issues"></a>Известные проблемы
 

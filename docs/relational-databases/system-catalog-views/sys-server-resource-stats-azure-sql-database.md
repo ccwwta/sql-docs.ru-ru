@@ -19,12 +19,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current
-ms.openlocfilehash: e1fe6592c4962499d5f02f1f076f49eb05402d54
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: f8e27f5f4a12c104efc4f770fd121566d4d3c938
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99206824"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100347651"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>sys.server_resource_stats (база данных SQL Azure)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "99206824"
 ## <a name="permissions"></a>Разрешения  
  Это представление доступно для всех ролей пользователей с разрешениями на подключение к базе данных **master** .  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Данные, возвращаемые **sys.server_resource_stats** , выражаются как общее значение, используемое в байтах или мегабайтах (в именах столбцов), отличном от avg_cpu, который выражается в процентах от максимально допустимого количества допустимых ограничений для уровня службы или производительности, который вы используете.  
  
 ## <a name="examples"></a>Примеры  

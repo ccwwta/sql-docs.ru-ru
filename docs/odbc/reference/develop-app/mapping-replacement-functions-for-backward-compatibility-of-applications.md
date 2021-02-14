@@ -19,25 +19,25 @@ helpviewer_keywords:
 ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7cba29b0dda2b0d4533444fd3fa8b83eaaeae7a9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e4c31d523a9fb50dd45bf8ab56c551d3830b0861
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88461416"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100082165"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Сопоставление замещающих функций для обеспечения обратной совместимости приложений
 Приложение ODBC *3. x* , работающее с диспетчером драйверов ODBC *3. x* , будет работать с драйвером ODBC *2. x* , если новые функции не используются. Однако дублирование функциональных возможностей и изменений поведения влияет на способ работы приложения ODBC *3. x* в драйвере ODBC *2. x* . При работе с драйвером ODBC *2. x* диспетчер драйверов сопоставляет следующие функции ODBC *3. x* , которые заменили одну или несколько функций ODBC *2. x* , в соответствующие функции ODBC *2. x* .  
   
 |ODBC *3. x,* функция|Функция ODBC *2. x*|  
 |-------------------------|-------------------------|  
-|**Функцию SQLAllocHandle**|**SQLAllocEnv**, **SQLAllocConnect**или **SQLAllocStmt**|  
+|**Функцию SQLAllocHandle**|**SQLAllocEnv**, **SQLAllocConnect** или **SQLAllocStmt**|  
 |**SQLBulkOperations**|**функция SQLSetPos;**|  
 |**SQLColAttribute**|**SQLColAttributes**|  
 |**SQLEndTran**|**SQLTransact**|  
 |**SQLFetch**|**SQLExtendedFetch**|  
 |**SQLFetchScroll**|**SQLExtendedFetch**|  
-|**SQLFreeHandle**|**SQLFreeEnv**, **SQLFreeConnect**или **SQLFreeStmt**|  
+|**SQLFreeHandle**|**SQLFreeEnv**, **SQLFreeConnect** или **SQLFreeStmt**|  
 |**SQLGetConnectAttr**|**SQLGetConnectOption**|  
 |**Функции SQLGetDiagRec**|**SQLError**|  
 |**SQLGetStmtAttr**|**SQLGetStmtOption**[1]|  
@@ -47,7 +47,7 @@ ms.locfileid: "88461416"
  [1] также могут быть предприняты другие действия в зависимости от запрашиваемого атрибута.  
   
 ## <a name="sqlallochandle"></a>Функцию SQLAllocHandle  
- Диспетчер драйверов сопоставляет это с **SQLAllocEnv**, **SQLAllocConnect**или **SQLAllocStmt**, как нужно. Следующий вызов **функцию SQLAllocHandle**:  
+ Диспетчер драйверов сопоставляет это с **SQLAllocEnv**, **SQLAllocConnect** или **SQLAllocStmt**, как нужно. Следующий вызов **функцию SQLAllocHandle**:  
   
 ```  
 SQLAllocHandle(HandleType, InputHandle, OutputHandlePtr);  
@@ -85,7 +85,7 @@ SQLBulkOperations(hstmt, Operation);
   
 4.  Если аргумент операции имеет SQL_ADD, приложение должно вызвать **SQLBindCol** для привязки вставляемых данных. Он не может вызвать **SQLSetDescField** или **SQLSetDescRec** для привязки вставляемых данных.  
   
-5.  Если аргумент операции имеет SQL_ADD и число вставляемых строк не совпадает с текущим размером набора строк, необходимо вызвать **SQLSetStmtAttr** , чтобы задать атрибуту SQL_ATTR_ROW_ARRAY_SIZE инструкции число строк, вставляемых перед вызовом **SQLBulkOperations**. Чтобы вернуться к предыдущему размеру набора строк, приложение должно задать атрибут SQL_ATTR_ROW_ARRAY_SIZE инструкции перед вызовом **SQLFetch**, **SQLFetchScroll**или **SQLSetPos** .  
+5.  Если аргумент операции имеет SQL_ADD и число вставляемых строк не совпадает с текущим размером набора строк, необходимо вызвать **SQLSetStmtAttr** , чтобы задать атрибуту SQL_ATTR_ROW_ARRAY_SIZE инструкции число строк, вставляемых перед вызовом **SQLBulkOperations**. Чтобы вернуться к предыдущему размеру набора строк, приложение должно задать атрибут SQL_ATTR_ROW_ARRAY_SIZE инструкции перед вызовом **SQLFetch**, **SQLFetchScroll** или **SQLSetPos** .  
   
 ## <a name="sqlcolattribute"></a>SQLColAttribute  
  Диспетчер драйверов сопоставляет это с **SQLColAttributes**. Следующий вызов **SQLColAttribute**:  
@@ -140,7 +140,7 @@ switch (HandleType) {
 SQLFetch (StatementHandle);  
 ```  
   
- приведет к вызову **SQLExtendedFetch**диспетчером драйверов, как показано ниже.  
+ приведет к вызову **SQLExtendedFetch** диспетчером драйверов, как показано ниже.  
   
 ```  
 rc = SQLExtendedFetch(StatementHandle, FetchOrientation, FetchOffset, &RowCount, RowStatusArray);  
@@ -174,13 +174,13 @@ SQLFetchScroll(StatementHandle, FetchOrientation, FetchOffset);
   
     -   В противном случае возвращается SQL_ERROR с SQLSTATE HY111 (недопустимое значение закладки). Дальнейшие правила этого раздела не применяются.  
   
-     Теперь диспетчер драйверов вызывает **SQLExtendedFetch**следующим образом:  
+     Теперь диспетчер драйверов вызывает **SQLExtendedFetch** следующим образом:  
   
     ```  
     rc = SQLExtendedFetch(StatementHandle, FetchOrientation, Bmk, pcRow, RowStatusArray);  
     ```  
   
--   В противном случае диспетчер драйверов вызывает **SQLExtendedFetch**следующим образом:  
+-   В противном случае диспетчер драйверов вызывает **SQLExtendedFetch** следующим образом:  
   
     ```  
     rc = SQLExtendedFetch(StatementHandle, FetchOrientation, FetchOffset, pcRow, RowStatusArray);  
@@ -193,7 +193,7 @@ SQLFetchScroll(StatementHandle, FetchOrientation, FetchOffset);
 -   Если значение *RC* равно SQL_SUCCESS или SQL_SUCCESS_WITH_INFO, а если *фетчориентатион* равно SQL_FETCH_BOOKMARK и *Фетчоффсет* не равно 0, диспетчер драйверов отправляет предупреждение, SQLSTATE 01S10 (попытка получить значение смещения закладки, игнорируется) и возвращает SQL_SUCCESS_WITH_INFO.  
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
- Диспетчер драйверов сопоставляет это с **SQLFreeEnv**, **SQLFreeConnect**или **SQLFreeStmt** соответствующим образом. Следующий вызов **SQLFreeHandle**:  
+ Диспетчер драйверов сопоставляет это с **SQLFreeEnv**, **SQLFreeConnect** или **SQLFreeStmt** соответствующим образом. Следующий вызов **SQLFreeHandle**:  
   
 ```  
 SQLFreeHandle(HandleType, Handle);  
@@ -293,7 +293,7 @@ SQLGetStmtAttr(StatementHandle, Attribute, ValuePtr, BufferLength, StringLengthP
     SQLGetStmtOption (hstmt, fOption, pvParam);  
     ```  
   
-     где *хстмт*, *параметром fOption*и *Пвпарам* будут установлены в значения *статеменсандле*, *Attribute*и *ValuePtr*соответственно. *BufferLength* и *стрингленгсптр* игнорируются.  
+     где *хстмт*, *параметром fOption* и *Пвпарам* будут установлены в значения *статеменсандле*, *Attribute* и *ValuePtr* соответственно. *BufferLength* и *стрингленгсптр* игнорируются.  
   
 ## <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
  Диспетчер драйверов сопоставляет это с **SQLSetConnectOption**. Следующий вызов **SQLSetConnectAttr**:  
@@ -316,7 +316,7 @@ SQLSetConnectAttr(ConnectionHandle, Attribute, ValuePtr, StringLength);
     SQLSetConnectOption (hdbc, fOption, vParam);  
     ```  
   
-     где *хдбк*, *параметром fOption*и *Впарам* будут установлены в значения *коннектионхандле*, *Attribute*и *ValuePtr*соответственно. *Стрингленгсптр* игнорируется.  
+     где *хдбк*, *параметром fOption* и *Впарам* будут установлены в значения *коннектионхандле*, *Attribute* и *ValuePtr* соответственно. *Стрингленгсптр* игнорируется.  
   
 > [!NOTE]  
 >  Возможность задавать атрибуты инструкций на уровне соединения не рекомендуется. Не следует задавать атрибуты инструкции на уровне соединения с помощью приложения ODBC *3. x* .  
@@ -380,7 +380,7 @@ SQLSetStmtAttr(StatementHandle, Attribute, ValuePtr, StringLength);
     SQLSetStmtOption (hstmt, fOption, vParam);  
     ```  
   
-     где *хстмт*, *параметром fOption*и *Впарам* будут установлены в значения *статеменсандле*, *Attribute*и *ValuePtr*соответственно. Аргумент *StringLength* игнорируется.  
+     где *хстмт*, *параметром fOption* и *Впарам* будут установлены в значения *статеменсандле*, *Attribute* и *ValuePtr* соответственно. Аргумент *StringLength* игнорируется.  
   
      Если драйвер ODBC *2. x* поддерживает параметры символьной строки, инструкции для конкретного драйвера, приложение ODBC *3. x* должно вызывать **SQLSetStmtOption** для установки этих параметров.  
   
@@ -402,7 +402,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
  Приложение ODBC *3. x* может вызывать **SQLGetStmtAttr** для получения значения SQL_ATTR_PARAMS_PROCESSED_PTR даже несмотря на то, что в APD не задано явно поле SQL_DESC_ARRAY_SIZE. Такая ситуация может возникнуть, например, если приложение имеет универсальную подпрограммы, которая проверяет текущую "строку" обрабатываемых параметров, когда **SQLExecute** возвращает SQL_NEED_DATA. Эта подпрограммы вызывается независимо от того, равен ли SQL_DESC_ARRAY_SIZE 1 или больше 1. Для этого диспетчеру драйверов необходимо определить эту внутреннюю переменную, если приложение вызывает **SQLSetStmtAttr** , чтобы задать поле SQL_DESC_ARRAY_SIZE в APD. Если SQL_DESC_ARRAY_SIZE не задан, диспетчер драйверов должен убедиться, что эта переменная содержит значение 1 перед возвратом из **SQLExecDirect** или **SQLExecute**.  
   
 ## <a name="error-handling"></a>Обработка ошибок  
- В ODBC *3. x*вызов **SQLFetch** или **SQLFetchScroll** заполняет SQL_DESC_ARRAY_STATUS_PTR в IRD, а поле SQL_DIAG_ROW_NUMBER заданной диагностической записи содержит номер строки в наборе строк, к которой относится эта запись. С помощью этого приложения можно сопоставить сообщение об ошибке с заданной позицией строки.  
+ В ODBC *3. x* вызов **SQLFetch** или **SQLFetchScroll** заполняет SQL_DESC_ARRAY_STATUS_PTR в IRD, а поле SQL_DIAG_ROW_NUMBER заданной диагностической записи содержит номер строки в наборе строк, к которой относится эта запись. С помощью этого приложения можно сопоставить сообщение об ошибке с заданной позицией строки.  
   
  Драйвер ODBC *2. x* не сможет предоставить эту функцию. Однако он будет предоставлять ошибку разделительной с SQLSTATE 01S01 (ошибка в строке). Приложение ODBC *3. x* , использующее **SQLFetch** или **SQLFetchScroll** при переходе к драйверу ODBC *2. x* , должно учитывать этот факт. Обратите внимание, что такое приложение не сможет вызвать **SQLGetDiagField** для фактического получения поля SQL_DIAG_ROW_NUMBER. Приложение ODBC *3. x* , работающее с драйвером ODBC *2. x* , может вызывать **SQLGetDiagField** только с аргументом *диагидентифиер* SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_RETURNCODE или SQL_DIAG_SQLSTATE. Диспетчер драйверов ODBC *3. x* сохраняет структуру диагностических данных при работе с драйвером ODBC *2. x* , но драйвер ODBC *2. x* возвращает только эти четыре поля.  
   
@@ -471,7 +471,7 @@ SQLGetData(StatementHandle, 0, SQL_C_VARBOOKMARK, TargetValuePtr, BufferLength, 
 SQLGetStmtOption(hstmt, SQL_GET_BOOKMARK, TargetValuePtr)  
 ```  
   
- где *хстмт* и *пвпарам* установлены в значениях *статеменсандле* и *таржетвалуептр*соответственно. Закладка возвращается в буфере, на который указывает аргумент *пвпарам* (*таржетвалуептр*). Значение в буфере, на которое указывает аргумент *StrLen_or_IndPtr* в вызове **SQLGetData** , устанавливается в значение 4.  
+ где *хстмт* и *пвпарам* установлены в значениях *статеменсандле* и *таржетвалуептр* соответственно. Закладка возвращается в буфере, на который указывает аргумент *пвпарам* (*таржетвалуептр*). Значение в буфере, на которое указывает аргумент *StrLen_or_IndPtr* в вызове **SQLGetData** , устанавливается в значение 4.  
   
  Это сопоставление необходимо для того, чтобы учитывать случаи, когда **SQLFetch** был вызван до вызова **SQLGetData** , а драйвер ODBC *2. x* не поддерживал **SQLExtendedFetch**. В этом случае **SQLFetch** будет передан драйверу ODBC *2. x* , в этом случае извлечение закладок не поддерживается.  
   

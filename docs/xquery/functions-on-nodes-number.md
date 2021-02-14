@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dff6d19b-765c-4df9-afff-9a0e7be9b91b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c1a4d3014286618639b045f5028935368321a3a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6aa035be000fbbda12a7205c33925daf656c3da0
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753586"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100345027"
 ---
 # <a name="functions-on-nodes---number"></a>Функции с узлами — number
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ fn:number($arg as node()?) as xs:double?
  *$arg*  
  Узел, значение которого будет возвращено в виде числа.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Если *$arg* не указан, возвращается числовое значение узла контекста, преобразованное в Double. В SQL Server **fn: Number ()** без аргумента может использоваться только в контексте контекстно-зависимого предиката. Точнее, она может использоваться только внутри квадратных скобок ([ ]). Например, следующее выражение возвращает `ROOT` элемент <>.  
   
 ```  
@@ -99,7 +99,7 @@ ProductModelID   Result
   
 -   Если значения не могут быть возвращены в виде числа, функция **Number ()** возвращает пустую последовательность вместо NaN.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функции XQuery для типа данных xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

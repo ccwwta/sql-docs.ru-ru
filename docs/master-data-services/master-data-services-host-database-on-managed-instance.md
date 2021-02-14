@@ -12,12 +12,12 @@ ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 author: v-redu
 ms.author: lle
 monikerRange: '>=sql-server-ver15'
-ms.openlocfilehash: ef24acb23a346b59b747d876d60d9a58374188bd
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 0ae7d5ad7bdb7874e4f6a99a1a99ea08c228fced
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97469975"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339480"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>Размещение базы данных MDS на управляемом экземпляре
 
@@ -163,7 +163,7 @@ ms.locfileid: "97469975"
 
 1. В области **веб-конфигурация** в окне **веб-приложение** выберите созданное приложение и нажмите кнопку **выбрать** в разделе **связать приложение с базой данных** .
 
-1. Выберите **подключить** и выберите [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] базу данных, которую необходимо связать с веб-приложением. Выберите **ОК**.
+1. Выберите **подключить** и выберите [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] базу данных, которую необходимо связать с веб-приложением. Нажмите кнопку **ОК**.
 
    Настройка веб-сайта завершена. Теперь на странице **веб-конфигурация** отображается выбранный веб-сайт, созданное веб-приложение и [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] база данных, связанная с приложением.
 

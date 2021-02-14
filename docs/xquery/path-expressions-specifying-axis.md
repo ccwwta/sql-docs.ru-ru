@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 96240f605762be382065268fa39198baeeaaa53f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2207dcce2787fb6f51668e777b01ce345d1f33ba
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717174"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100344661"
 ---
 # <a name="path-expressions---specifying-axis"></a>Выражения пути — указание оси
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "85717174"
 |----------|-----------------|  
 |**ребенок**|Возвращает дочерние элементы контекстного узла.|  
 |**descendant**|Возвращает всех потомков контекстного узла.|  
-|**источника**|Возвращает родительский элемент контекстного узла.|  
+|**parent**|Возвращает родительский элемент контекстного узла.|  
 |**версию**|Возвращает атрибуты контекстного узла.|  
 |**самообслуживания**|Возвращает сам контекстный узел.|  
 |**descendant-or-self**|Возвращает сам контекстный узел и всех его потомков.|  

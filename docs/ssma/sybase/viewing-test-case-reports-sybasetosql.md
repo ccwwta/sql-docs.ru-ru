@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cb75d281-43ef-4f4a-b754-2c4ee3b62ae7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: ef72ea67b28aae674a1ae4b51dc52d9875e3b0e0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 833b1e862aa5629a9a6cbea5854e3a8db5a5cab2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88319880"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100080715"
 ---
 # <a name="viewing-test-case-reports-sybasetosql"></a>Просмотр отчетов о тестовых случаях (SybaseToSQL)
 В отчете о тестовых случаях отображаются результаты проверки тестов и общие сведения о тестах. В случае сбоя теста также отображается информация о любых несовпадающих данных в проверенных объектах.  

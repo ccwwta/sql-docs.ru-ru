@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: XiaoyuMSFT
 ms.author: XiaoyuL
-ms.openlocfilehash: cbc1286bbbced3a546c1057433dba5bbc4289281
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 6b6610293bb78ef34ae5ca8b88f762c9ab4948e9
+ms.sourcegitcommit: 0b400bb99033f4b836549cb11124a1f1630850a1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99199385"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99978866"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -236,14 +236,14 @@ DEFAULT VALUES
 >[!NOTE]
 > В Azure Synapse Analytics команда MERGE (предварительная версия) отличается от команд SQL Server и базы данных SQL Azure следующим образом.  
 > - Обновление при использовании команды MERGE реализуется как пара операций удаления и вставки. Количество затронутых строк при таком обновлении включает удаленные и вставленные строки. 
-> - На стадии предварительной версии команда MERGE не работает с таблицами с ограничениями UNIQUE.  Это будет исправлено в будущем выпуске.
+> - Во период действия предварительной версии столбцы IDENTITY не поддерживают MERGE…WHEN NOT MATCHED INSERT.  
 > - В следующей таблице описываются поддерживаемые таблицы с разными типами распределения:
 
 >|MERGE CLAUSE в Azure Synapse Analytics|Поддерживаемая таблица распределения TARGET| Поддерживаемая таблица распределения SOURCE|Комментировать|  
 >|-----------------|---------------|-----------------|-----------|  
->|**WHEN MATCHED**| HASH, ROUND_ROBIN, REPLICATE |Все типы распределения||  
+>|**WHEN MATCHED**| Все типы распределения |Все типы распределения||  
 >|**NOT MATCHED BY TARGET**|HASH |Все типы распределения|Используйте UPDATE/DELETE FROM…JOIN для синхронизации двух таблиц. |
->|**NOT MATCHED BY SOURCE**|Все типы распределения|Все типы распределения|Используйте UPDATE/DELETE FROM…JOIN для синхронизации двух таблиц.||  
+>|**NOT MATCHED BY SOURCE**|Все типы распределения|Все типы распределения|||  
 
 Должно быть указано по крайней мере одно из трех предложений MATCHED, но они могут быть указаны в любом порядке. В одном предложении MATCHED переменная не может быть обновлена больше одного раза.  
   

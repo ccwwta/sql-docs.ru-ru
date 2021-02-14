@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a313ff3b-1fe9-421e-b94b-cea19c43b0e5
 author: WilliamDAssafMSFT
 ms.author: wiassaf
-ms.openlocfilehash: 7d52a5cf6a949656df60fd76ed678c2505566735
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: ce103d01327aac7250df993bfb9123439a5f5ca7
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99184892"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100338886"
 ---
 # <a name="sysdm_os_hosts-transact-sql"></a>sys.dm_os_hosts (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "99184892"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**host_address**|**varbinary(8)**|Внутренний адрес в памяти объекта узла.|  
-|**type**|**nvarchar(60)**|Тип размещенного компонента. Например, примененная к объекту директива<br /><br /> SOSHOST_CLIENTID_SERVERSNI = собственный интерфейс SQL Server;<br /><br /> SOSHOST_CLIENTID_SQLOLEDB = поставщик OLE DB для собственного клиента SQL Server;<br /><br /> SOSHOST_CLIENTID_MSDART = компоненты доступа к данным MDA.|  
+|**type**|**nvarchar(60)**|Тип размещенного компонента. Например,<br /><br /> SOSHOST_CLIENTID_SERVERSNI = собственный интерфейс SQL Server;<br /><br /> SOSHOST_CLIENTID_SQLOLEDB = поставщик OLE DB для собственного клиента SQL Server;<br /><br /> SOSHOST_CLIENTID_MSDART = компоненты доступа к данным MDA.|  
 |**name**|**nvarchar(32)**|Имя узла.|  
 |**enqueued_tasks_count**|**int**|Общее количество задач, которые данный узел поместил в очереди на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**active_tasks_count**|**int**|Количество выполняющихся в данный момент задач, помещенных этим узлом в очереди.|  
@@ -50,14 +50,14 @@ ms.locfileid: "99184892"
 ## <a name="permissions"></a>Разрешения
 
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
-В базах данных SQL Basic, S0 и S1, а также для баз данных в эластичных пулах `Server admin` `Azure Active Directory admin` требуется учетная запись или. Для всех остальных целей службы базы данных SQL `VIEW DATABASE STATE` разрешение требуется в базе данных.   
+В базах данных SQL Basic, S0 и S1, а также для баз данных в эластичных пулах требуется учетная запись [администратора сервера](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) или учетная запись [администратора Azure Active Directory](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) . Для всех остальных целей службы базы данных SQL `VIEW DATABASE STATE` разрешение требуется в базе данных.   
 
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разрешены компоненты, такие как поставщик OLE DB, которые не являются частью исполняемого файла [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], для выделения памяти и участия в планировании в режиме без вытеснения. Эти компоненты размещаются в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а все ресурсы, выделенные им, отслеживаются. Размещение позволяет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] лучше учитывать ресурсы, которые используются компонентами, внешними по отношению к исполняемому объекту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="relationship-cardinalities"></a>Количество элементов связей  
   
-|От|Кому|Связь|  
+|Исходный тип|Кому|Relationship|  
 |----------|--------|------------------|  
 |sys.dm_os_hosts. default_memory_clerk_address|sys.dm_os_memory_clerks. memory_clerk_address|один к одному|  
 |sys.dm_os_hosts. host_address|sys.dm_os_memory_clerks. host_address|один к одному|  

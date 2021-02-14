@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4f7bd6f5bb5e0adafd46ca887733195ae9960203
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 6857459a67d8441d42035080f31896c75c996905
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988620"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100077573"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>Образец скрипта программы rs.exe служб Reporting Services для копирования содержимого между серверами отчетов
 
@@ -103,7 +103,7 @@ ms.locfileid: "91988620"
   
  **Простой пример, из сервера отчетов в собственном режиме на сервер отчетов в собственном режиме.**  
   
- В следующем примере выполняется миграция содержимого с **Sourceserver** в собственном режиме на **Targetserver**в собственном режиме.  
+ В следующем примере выполняется миграция содержимого с **Sourceserver** в собственном режиме на **Targetserver** в собственном режиме.  
   
  `rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p password -v ts="https://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password"`  
   
@@ -215,7 +215,7 @@ ms.locfileid: "91988620"
 ##  <a name="more-examples"></a><a name="bkmk_more_examples"></a> Дополнительные примеры  
   
 ###  <a name="native-mode-report-server-to-native-mode-report-server"></a><a name="bkmk_native_2_native"></a> С сервера отчетов в собственном режиме на сервер отчетов в собственном режиме  
- В следующем примере выполняется миграция содержимого с **Sourceserver** в собственном режиме на **Targetserver**в собственном режиме.  
+ В следующем примере выполняется миграция содержимого с **Sourceserver** в собственном режиме на **Targetserver** в собственном режиме.  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\User -p password -v ts="https://TargetServer/reportserver" -v tu="Domain\Userser" -v tp="password"  
@@ -257,7 +257,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/_vti_bin/report
 ###  <a name="native-mode-to-native-mode---azure-virtual-machine"></a><a name="bkmk_native_to_native_Azure_vm"></a> С сервера в собственном режиме на сервер в собственном режиме — виртуальная машина Azure  
  В следующем примере выполняется миграция содержимого:  
   
--   С сервера отчетов **SourceServer**в собственном режиме.  
+-   С сервера отчетов **SourceServer** в собственном режиме.  
   
 -   На сервер отчетов **TargetServer** в собственном режиме, работающий под управлением виртуальной машины Azure. Сервер **TargetServer** не входит в домен **SourceServer**, при этом **User2** является администратором на виртуальной машине Azure, где работает **TargetServer**.  
   
