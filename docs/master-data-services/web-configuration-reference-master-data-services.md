@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7f4baf9f3ef626f5e2dcdc62092afaf1e586df33
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: f277ecb0d3f0cc3a2e4cc62d3feff954e7c22327
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92196098"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100348886"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Раздел «Веб-конфигурация» (службы Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "92196098"
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] хранит в файле Web.config параметры конфигурации, которые позволяют службам IIS разместить веб-приложение [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] и веб-службу. Этот файл Web.config находится в папке WebApplication пути установки [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Дополнительные сведения о пути и разрешениях см. в разделе [Разрешения для папок и файлов (службы Master Data Services)](../master-data-services/folder-and-file-permissions-master-data-services.md).  
   
 ## <a name="webconfig-elements"></a>Элементы файла Web.Config  
- Файл Web.config содержит пользовательский [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] элемент, **\<masterDataServices>** в дополнение к стандартным ЭЛЕМЕНТАМ конфигурации IIS, .NET Framework, ASP.NET и Windows Communication Foundation (WCF). В следующей таблице описываются элементы, включенные в файл Web.config.  
+ Файл Web.config содержит пользовательский [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] элемент, **\<masterDataServices>** в дополнение к стандартным ЭЛЕМЕНТАМ конфигурации IIS, платформа .NET Framework, ASP.NET и Windows Communication Foundation (WCF). В следующей таблице описываются элементы, включенные в файл Web.config.  
   
 |Элемент настройки|Описание|  
 |---------------------------|-----------------|  

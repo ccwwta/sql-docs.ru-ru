@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ac00462e-c0f7-4b8d-86f2-d9eda2598a15
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7fba50da832a2c09ac576862804ef96bd57a3943
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 93d59286f93f890540f39a6e974dee4a2b5ecf31
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "92258106"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100355354"
 ---
 # <a name="reorder-columns-mds-add-in-for-excel"></a>Переупорядочение порядка столбцов (надстройка MDS для Excel)
 
@@ -26,7 +26,7 @@ ms.locfileid: "92258106"
   
  При переупорядочивании атрибутов в диалоговом окне **Фильтр** данные загружаются в Excel в новом порядке. Однако при следующей фильтрации данных атрибутов будет использоваться порядок, заданный первоначально. Чтобы изменить порядок окончательно, администратор должен сделать это в области **Администрирование системы** диспетчера основных данных. Дополнительные сведения см. в статье [Change the Order of Attributes](../../master-data-services/change-the-order-of-attributes.md).  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   Необходимо иметь разрешение на доступ к функциональной области **Обозреватель** .  

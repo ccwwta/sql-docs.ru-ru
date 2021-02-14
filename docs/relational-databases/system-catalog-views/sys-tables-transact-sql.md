@@ -21,12 +21,12 @@ ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b93b6ddc2d3343bd1d34fc97cff4c5d95e2634f8
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: df49c9e0c270629fdf00a9ac4ab19804e6a3d9c0
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99199855"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100352919"
 ---
 # <a name="systables-transact-sql"></a>sys.tables (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -55,11 +55,11 @@ ms.locfileid: "99199855"
 |устойчивость|**tinyint**|**Применимо к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше, а также [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Возможные следующие значения.<br /><br /> 0 = SCHEMA_AND_DATA<br /><br /> 1 = SCHEMA_ONLY<br /><br /> Значением по умолчанию является значение 0.|  
 |durability_desc|**nvarchar(60)**|**Применимо к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше, а также [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Допустимы следующие значения:<br /><br /> SCHEMA_ONLY<br /><br /> SCHEMA_AND_DATA<br /><br /> Значение SCHEMA_AND_DATA указывает, что таблица является надежной и оптимизированной для памяти. SCHEMA_AND_DATA — это значение по умолчанию для таблиц, оптимизированных для памяти. Значение SCHEMA_ONLY указывает, что табличные данные не будут сохранены после перезапуска базы данных с объектами, оптимизированными для памяти.|  
 |is_memory_optimized|**bit**|**Применимо к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше, а также [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Допустимы следующие значения:<br /><br /> 0 = не оптимизировано для памяти.<br /><br /> 1 = оптимизировано для памяти<br /><br /> Значение по умолчанию — 0.<br /><br /> Оптимизированные для памяти таблицы — это хранящиеся в памяти пользовательские таблицы, схемы которых сохраняются на диске аналогично другим пользовательским таблицам. Доступ к оптимизированным для памяти таблицам можно осуществлять из скомпилированных в собственном коде хранимых процедур.|  
-|temporal_type|**tinyint**|**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и выше, а также [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Числовое значение, представляющее тип таблицы:<br /><br /> 0 = NON_TEMPORAL_TABLE<br /><br /> 1 = HISTORY_TABLE<br /><br /> 2 = SYSTEM_VERSIONED_TEMPORAL_TABLE|  
-|temporal_type_desc|**nvarchar(60)**|**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и выше, а также [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Текстовое описание типа таблицы:<br /><br /> NON_TEMPORAL_TABLE<br /><br /> HISTORY_TABLE<br /><br /> SYSTEM_VERSIONED_TEMPORAL_TABLE|  
-|history_table_id|**int**|**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и выше, а также [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Если temporal_type в (2, 4) возвращает object_id таблицы, которая поддерживает исторические данные, в противном случае возвращает значение NULL.|  
-|is_remote_data_archive_enabled|**bit**|**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и более поздним версиям и [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> Указывает, включена ли таблица с растяжением.<br /><br /> 0 = таблица не поддерживает растяжение.<br /><br /> 1 = таблица поддерживает растяжение.<br /><br /> Дополнительные сведения см. в разделе [Stretch Database](../../sql-server/stretch-database/stretch-database.md).|  
-|is_external|**bit**|**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и более поздним, [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] .<br /><br /> Указывает, что таблица является внешней таблицей.<br /><br /> 0 = таблица не является внешней таблицей.<br /><br /> 1 = таблица является внешней таблицей.| 
+|temporal_type|**tinyint**|**Применимо к**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] и выше, а также [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Числовое значение, представляющее тип таблицы:<br /><br /> 0 = NON_TEMPORAL_TABLE<br /><br /> 1 = HISTORY_TABLE<br /><br /> 2 = SYSTEM_VERSIONED_TEMPORAL_TABLE|  
+|temporal_type_desc|**nvarchar(60)**|**Применимо к**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] и выше, а также [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Текстовое описание типа таблицы:<br /><br /> NON_TEMPORAL_TABLE<br /><br /> HISTORY_TABLE<br /><br /> SYSTEM_VERSIONED_TEMPORAL_TABLE|  
+|history_table_id|**int**|**Применимо к**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] и выше, а также [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].<br /><br /> Если temporal_type в (2, 4) возвращает object_id таблицы, которая поддерживает исторические данные, в противном случае возвращает значение NULL.|  
+|is_remote_data_archive_enabled|**bit**|**Применимо к**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] и более поздним версиям и [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> Указывает, включена ли таблица с растяжением.<br /><br /> 0 = таблица не поддерживает растяжение.<br /><br /> 1 = таблица поддерживает растяжение.<br /><br /> Дополнительные сведения см. в разделе [Stretch Database](../../sql-server/stretch-database/stretch-database.md).|  
+|is_external|**bit**|**Применимо к**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] и более поздним, [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] .<br /><br /> Указывает, что таблица является внешней таблицей.<br /><br /> 0 = таблица не является внешней таблицей.<br /><br /> 1 = таблица является внешней таблицей.| 
 |history_retention_period|**int**|**Применимо к**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Числовое значение, представляющее продолжительность временного периода хранения журнала в единицах, указанных с помощью history_retention_period_unit. |  
 |history_retention_period_unit|**int**|**Применимо к**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Числовое значение, представляющее тип временной единицы хранения истории. <br /><br />-1: БЕСКОНЕЧНОСТЬ <br /><br />3: ДЕНЬ <br /><br />4: НЕДЕЛЯ <br /><br />5: МЕСЯЦ <br /><br />6: ГОД |  
 |history_retention_period_unit_desc|**nvarchar (10)**|**Применимо к**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Текстовое описание типа временной единицы срока хранения истории. <br /><br />INFINITE <br /><br />DAY <br /><br />WEEK <br /><br />MONTH <br /><br />YEAR |  
@@ -84,7 +84,7 @@ GO
   
 В следующем примере показано, как можно предоставить доступ к связанным временным данным.  
    
-**Применимо к**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и выше, а также [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].
+**Применимо к**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] и выше, а также [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)].
   
 ```  
 SELECT T1.object_id, T1.name as TemporalTableName, SCHEMA_NAME(T1.schema_id) AS TemporalTableSchema,  

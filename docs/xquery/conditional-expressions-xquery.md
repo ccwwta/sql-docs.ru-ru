@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 81fe55de0119fc2b9327d623155ed610de4ef06b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5fdc8703482f570d0ecb749b471af170b62770ba
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916283"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100349375"
 ---
 # <a name="conditional-expressions-xquery"></a>Выражения условий (XQuery)
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ else
   <expression3>  
 ```  
   
- В зависимости от действительного логического значения вычисляется выражение `expression1`, `expression2` или `expression3`. Например.  
+ В зависимости от действительного логического значения вычисляется выражение `expression1`, `expression2` или `expression3`. Пример:  
   
 -   Если выражение условия `expression1` соответствует пустой последовательности, результат имеет значение False.  
   
@@ -165,7 +165,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выражения языка XQuery](../xquery/xquery-expressions.md)  
   
   

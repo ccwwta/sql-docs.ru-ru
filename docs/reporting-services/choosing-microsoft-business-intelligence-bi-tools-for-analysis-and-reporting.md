@@ -10,12 +10,12 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 07/22/2020
-ms.openlocfilehash: fa6dab95ec14a40c553f3f47dcde1dee480eb1cc
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: bd23d6a1e586a317503374f15e7ecc90381b1563
+ms.sourcegitcommit: 0b400bb99033f4b836549cb11124a1f1630850a1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97642339"
+ms.lasthandoff: 02/09/2021
+ms.locfileid: "99978436"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Средства Microsoft Business Intelligence (BI) для анализа и отчетности
 
@@ -36,7 +36,7 @@ ms.locfileid: "97642339"
 |Самостоятельное выполнение прогнозной аналитики||||||[Надстройки интеллектуального анализа данных для Excel](/previous-versions/sql/2014/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins?view=sql-server-2014&preserve-view=true) |  
 |Визуализация и анализ данных||[Power View](https://support.office.com/article/Power-View-Explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e)<br /><br /> [Трехмерные карты](https://support.office.com/article/Visualize-your-data-in-3D-Maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||[Power BI Desktop](/power-bi/fundamentals/desktop-get-the-desktop)||  
 |Формирование вопросов с помощью запросов на естественном языке|||||[ВОПРОСЫ И ОТВЕТЫ](/power-bi/consumer/end-user-q-and-a)|
-|Доступ к отчетам с помощью мобильных устройств||||[HTML 5 (поддерживает просмотр файлов размером до 10 МБ)](create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> | [HTML 5 (поддерживает просмотр файлов размером до 250 МБ)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Мобильное приложение Power BI на устройствах с iOS](/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Мобильное приложение Power BI на устройствах с Android](/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br /> [Мобильное приложение Power BI для Windows](/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)|  
+|Доступ к отчетам с помощью мобильных устройств||||[HTML 5 (поддерживает просмотр файлов размером до 10 МБ)](create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> | [HTML 5 (поддерживает просмотр файлов размером до 250 МБ)](https://www.microsoft.com/en-us/microsoft-365/blog/2013/07/08/what-powers-power-bi-in-office-365/)<br /><br /> [Мобильное приложение Power BI на устройствах с iOS](/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Мобильное приложение Power BI на устройствах с Android](/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br /> [Мобильное приложение Power BI для Windows](/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)|  
 |Совместная работа и общий доступ|||[Веб-сайты SharePoint](/sharepoint/getting-started)|[Сайтов групп SharePoint](https://go.microsoft.com/fwlink/?LinkId=391850)|[Веб-сайты Power BI](/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
 |**Корпоративная бизнес-аналитика**|ИТ-специалист||||||  
 |Создавайте многомерные или табличные корпоративные модели||||||[Службы Analysis Services](/analysis-services/analysis-services-overview)|  

@@ -23,25 +23,27 @@ helpviewer_keywords:
 ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aad29b6722f748051f085f10a25a38b59e6ae424
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: c5481a80e57a60180112145e87c64c9f383ed473
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99201286"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100342755"
 ---
 # <a name="sp_db_vardecimal_storage_format-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает текущее состояние формата хранения vardecimal для базы данных либо включает этот формат в базе данных.  Начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], пользовательские базы данных всегда включены. Включение формата хранения vardecimal для баз данных необходимо только в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
+> [!NOTE]  
+> [!INCLUDE[sssql19-md](../../includes/sssql19-md.md)] поддерживает формат хранения vardecimal, однако сжатие на уровне строк достигает тех же целей, поэтому данный формат является устаревшим. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]
+  
 > [!IMPORTANT]  
->  Изменение состояния формата хранения vardecimal для базы данных может повлиять на резервное копирование и восстановление, зеркальное отображение базы данных, sp_attach_db, доставку журналов и репликацию.  
+> Изменение состояния формата хранения vardecimal для базы данных может повлиять на резервное копирование и восстановление, зеркальное отображение базы данных, sp_attach_db, доставку журналов и репликацию.  
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
-  
+```syntaxsql  
 sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']   
     [ , [ @vardecimal_storage_format = ] { 'ON' | 'OFF' } ]   
 [;]  
@@ -52,7 +54,10 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
  Имя базы данных, формат хранения которой нужно изменить. Аргумент *database_name* имеет тип **sysname** и не имеет значения по умолчанию. Если имя базы данных пропущено, то возвращаются состояния формата хранения vardecimal для всех баз данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [ @vardecimal_storage_format =] {' На ' | ' OFF "}  
- Указывает, включен ли формат хранения vardecimal. Аргумент @vardecimal_storage_format может иметь значение ON или OFF. Параметр имеет тип **varchar (3)** и не имеет значения по умолчанию. Если имя базы данных указано, но аргумент @vardecimal_storage_format пропущен, то возвращается текущий параметр указанной базы данных. Этот аргумент не действует в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздних версиях.  
+ Указывает, включен ли формат хранения vardecimal. Аргумент @vardecimal_storage_format может иметь значение ON или OFF. Параметр имеет тип **varchar (3)** и не имеет значения по умолчанию. Если имя базы данных указано, но аргумент @vardecimal_storage_format пропущен, то возвращается текущий параметр указанной базы данных. 
+ 
+ > [!IMPORTANT]
+ > Этот аргумент не действует в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздних версиях.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
@@ -62,7 +67,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
   
  Если @vardecimal_storage_format аргумент не указан, возвращает имя базы данных Columns и состояние vardecimal.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Процедура sp_db_vardecimal_storage_format возвращает состояние vardecimal, но не может изменить его.  
   
  Хранимая процедура sp_db_vardecimal_storage_format завершается неуспешно в следующих случаях:  
@@ -77,7 +82,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
   
  Переключение в состояние OFF не будет выполнено, если в таблицах используется сжатие баз данных vardecimal. Чтобы изменить формат хранения таблицы, используйте [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Определить, в каких таблицах базы данных используется формат хранения vardecimal, можно с помощью функции `OBJECTPROPERTY` и поиском свойства `TableHasVarDecimalStorageFormat`, как показано в приведенном ниже примере.  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 SELECT name, object_id, type_desc  
@@ -90,7 +95,7 @@ GO
 ## <a name="examples"></a>Примеры  
  В следующем коде включается сжатие в базе данных `AdventureWorks2012`, подтверждается состояние, а затем сжимаются десятичные и числовые столбцы в таблице `Sales.SalesOrderDetail`.  
   
-```  
+```sql  
 USE master ;  
 GO  
   

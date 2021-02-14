@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b2460a37-7663-42de-9c72-fdfbe2f1504d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d4d0568988fc1652005b036cefebe507b9a47f82
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 085d95d7e65c8c55335a7dc28fbf1e9cb6a215d5
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775444"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352831"
 ---
 # <a name="xquery-basics"></a>Основы языка XQuery
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "85775444"
  [XQuery и статическая типизация](../xquery/xquery-and-static-typing.md)  
  В этом подразделе язык XQuery СУБД [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] описывается как статически типизированный язык.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по языку XQuery (SQL Server)](../xquery/xquery-language-reference-sql-server.md)  
   
   

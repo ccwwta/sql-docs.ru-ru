@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2660ceca-b8b4-4a1f-98a0-719ad5f89f81
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a0945ffa8845c901662acb29c3ed04826870d0ae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ef2625be70c2af44f4a45ba00302b3d26afc101d
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722597"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339947"
 ---
 # <a name="path-expressions---specifying-predicates"></a>Выражения пути — указание предикатов
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "85722597"
   
 -   Тест узла. Дополнительные сведения см. [в разделе Указание проверки узла в шаге выражения пути](../xquery/path-expressions-specifying-node-test.md).  
   
--   Ноль или более предикатов. Водить описание не обязательно.  
+-   Ноль или более предикатов. Это необязательно.  
   
  Необязательный предикат является третьим компонентом шага оси в выражении пути.  
   

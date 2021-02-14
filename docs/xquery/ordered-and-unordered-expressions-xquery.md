@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6e7b3631-38d5-4375-b565-21d2e3f36ae0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a337cc615a8566040a654829c4a2853117efcf9c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e72819f6f2cb74aff2e169233aac8eec9d8ee8a3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85643514"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100355130"
 ---
 # <a name="ordered-and-unordered-expressions-xquery"></a>Упорядоченные и неупорядоченные выражения (XQuery)
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "85643514"
   
  Дополнительный **упорядоченный** и **неупорядоченный** синтаксис, описанный в спецификации XQuery, не поддерживается.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выражения XQuery](../xquery/xquery-expressions.md)   
  [Инструкция FLWOR и итерация &#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)   
  [Выражения пути &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)  

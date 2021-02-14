@@ -21,12 +21,12 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4777dea76c24aaeab7f64a761c4d13b49c644af0
-ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
+ms.openlocfilehash: ac678e88eaa21a8bb0f074e1bd899108b390bd49
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2021
-ms.locfileid: "99235872"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100342966"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "99235872"
 
 ## <a name="permissions"></a>Разрешения  
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] и управляемый экземпляр Azure SQL необходимо `VIEW DATABASE STATE` разрешение и членство в `db_owner` роли базы данных.   
-На [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. В [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] отношении баз данных SQL Basic, S0 и S1, а также для баз данных в эластичных пулах `Server admin` `Azure Active Directory admin` требуется учетная запись или. Для всех остальных целей службы базы данных SQL `VIEW DATABASE STATE` разрешение требуется в базе данных.   
+На [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. В [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] отношении баз данных SQL Basic, S0 и S1, а также для баз данных в эластичных пулах требуется учетная запись [администратора сервера](https://docs.microsoft.com/azure/azure-sql/database/logins-create-manage#existing-logins-and-user-accounts-after-creating-a-new-database) или учетная запись [администратора Azure Active Directory](https://docs.microsoft.com/azure/azure-sql/database/authentication-aad-overview#administrator-structure) . Для всех остальных целей службы базы данных SQL `VIEW DATABASE STATE` разрешение требуется в базе данных.   
    
 ## <a name="examples"></a>Примеры  
  Шаг 1. Войдите в сеанс, в котором планируется выполнить запрос, который будет анализироваться с помощью `sys.dm_exec_query_profiles` . Настройка запроса для использования профилирования `SET STATISTICS PROFILE ON` . Выполните ваш запрос в данном сеансе.  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5187c97b-6866-474d-8bdb-a082634039cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4756d86070e933f4c281922d54d80974832e9f5a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 62fa5c7bba9133c9a8b0098142d97fdd422c47ba
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775507"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341912"
 ---
 # <a name="general-xquery-use-cases"></a>Общие способы применения запросов XQuery
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -339,14 +339,14 @@ AND     CatalogDescription.exist('declare namespace p1="https://schemas.microsof
   
 -   Так как все описания продуктов включают `Picture` элемент> <, результирующий набор в этом случае пуст.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запросы XQuery использующие, включающая иерархию](../xquery/xqueries-involving-hierarchy.md)   
  [Запросы XQuery использующие, включающий порядок](../xquery/xqueries-involving-order.md)   
  [Запросы XQuery использующие обработка реляционных данных](../xquery/xqueries-handling-relational-data.md)   
  [Поиск строки в XQuery](../xquery/string-search-in-xquery.md)   
  [Обработка пространств имен в XQuery](../xquery/handling-namespaces-in-xquery.md)   
  [Добавление пространств имен в запросы с WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
- [SQL Server &#40;XML-данных&#41;](../relational-databases/xml/xml-data-sql-server.md)   
+ [Данные XML (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)   
  [Справочник по языку XQuery (SQL Server)](../xquery/xquery-language-reference-sql-server.md)  
   
   
