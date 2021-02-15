@@ -7,12 +7,12 @@ ms.reviewer: mikeray
 ms.date: 12/08/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 372f4bec9acc4d4e170ddbc1a1fa6d66be1541e7
-ms.sourcegitcommit: d8cdbb719916805037a9167ac4e964abb89c3909
+ms.openlocfilehash: f53731685f5ba1723ebdd8d20064342808205566
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/20/2021
-ms.locfileid: "98596547"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100070309"
 ---
 # <a name="release-notes---azure-arc-enabled-sql-server-preview"></a>Заметки о выпуске — SQL Server с поддержкой Azure Arc (предварительная версия)
 
@@ -42,7 +42,7 @@ ms.locfileid: "98596547"
 
 > [!NOTE]
 > - Чтобы вставить команды в оболочку, используйте клавиши `Ctrl-Shift-V` в Windows или `Cmd-v` в MacOS.
-> - Скрипт будет отправлен непосредственно в домашнюю папку, связанную с вашим сеансом Cloud Shell.
+> - Команда `curl` скопирует скрипт непосредственно в домашнюю папку, связанную с вашим сеансом Cloud Shell.
 > - Скрипт запрашивает имя группы ресурсов и выводит соответствующее сообщение после завершения миграции.
 
 ### <a name="other-changes"></a>Другие изменения

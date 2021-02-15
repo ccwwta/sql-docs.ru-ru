@@ -10,12 +10,12 @@ author: dzsquared
 ms.author: drskwier
 ms.reviewer: maghan; sstein
 ms.date: 12/4/2020
-ms.openlocfilehash: cffeb28f69fe93bb69cfdafd0afa98ef663e6ef8
-ms.sourcegitcommit: 866554663ca3191748b6e4eb4d8d82fa58c4e426
+ms.openlocfilehash: ffd92afe2a5e57b4c039ead2dd5fee6e2a23be0a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/16/2020
-ms.locfileid: "97577908"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100060929"
 ---
 # <a name="sqlpackage-script-parameters-and-properties"></a>Параметры и свойства скрипта SqlPackage
 Действие скрипта SqlPackage.exe создает скрипт добавочного обновления на языке Transact-SQL для обновления схемы целевой базы данных до соответствия схеме базы данных-источника. 
@@ -77,7 +77,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|Указывает, пытаться ли выполнить это действие, несмотря на несовместимость платформ SQL Server.
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|Если свойство имеет значение true, блокировка перемещения данных в таблице с безопасностью на уровне строк отключается. Значение по умолчанию — false.
 |**/p:**|BackupDatabaseBeforeChanges=(BOOLEAN)|Создает резервную копию базы данных перед развертыванием любых изменений.
-|**/p:**|BlockOnPossibleDataLoss=(BOOLEAN 'True')|Указывает, что следует завершать эпизод публикации, если есть возможность потери данных в результате операции публикации.
+|**/p:**|BlockOnPossibleDataLoss=(BOOLEAN 'True')| Указывает, что операция будет прервана на этапе проверки схемы, если изменения схемы могут привести в итоге к потере данных, в том числе из-за снижения точности данных или изменения типа данных, требующего операции приведения. Значение по умолчанию (`True`) приводит к завершению операции независимо от того, содержит ли данные целевая база данных.  Выполнение со значением `False` для BlockOnPossibleDataLoss также может завершиться ошибкой во время выполнения плана развертывания, если в целевом объекте есть данные, которые невозможно преобразовать в новый тип столбца. |
 |**/p:**|BlockWhenDriftDetected=(BOOLEAN 'True')|Указывает, следует ли блокировать обновление базы данных, схема которой больше не соответствует регистрации или регистрация которой удалена.
 |**/p:**|CommandTimeout=(INT32 '60')|Задает время ожидания команды в секундах при выполнении запросов к SQL Server.
 |**/p:**|CommentOutSetVarDeclarations=(BOOLEAN)|Указывает, будет ли объявление переменных SETVAR закомментировано в созданном скрипте публикации. Эту возможность можно выбрать, если планируется задавать значения в командной строке во время публикации с помощью такого средства, как SQLCMD.EXE.

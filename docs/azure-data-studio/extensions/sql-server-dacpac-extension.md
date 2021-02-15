@@ -9,16 +9,16 @@ ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: ''
 ms.date: 11/04/2019
-ms.openlocfilehash: f14aee08f889511af005c4451e4e1431397171a2
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: e0cfe057767488eb0a7ddb741934a10410898ffa
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91123235"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100040264"
 ---
 # <a name="sql-server-dacpac-extension"></a>Расширение DACPAC-файлов SQL Server
 
-**Мастер приложений уровня данных** предоставляет мастер с удобным интерфейсом для развертывания и извлечения DACPAC-файлов, а также импорта и экспорта BACPAC-файлов.
+**Мастер приложений уровня данных** предоставляет мастер с удобным интерфейсом для развертывания и извлечения DACPAC-файлов, а также импорта и экспорта BACPAC-файлов.
 
 ## <a name="features"></a>Компоненты
 
