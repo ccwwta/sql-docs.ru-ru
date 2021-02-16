@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a9897a33c986a78061d18b06ba76db7685e5fb3a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 45612ea0bfdbda2b27e6cac8b4deb1e302eb9298
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487697"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346554"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Cобытия, зарегистрированные службами Integration Services
 
@@ -62,7 +62,7 @@ ms.locfileid: "88487697"
 ## <a name="view-events"></a>Просмотр событий
   Для просмотра событий в службе [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предусмотрены два средства.  
   
--   Диалоговое окно **Средство просмотра журнала** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Диалоговое окно **Средство просмотра журнала** имеет возможности экспорта, фильтрации, а также поиска по журналу. Дополнительные сведения о параметрах в окне **Средство просмотра журнала**см. в разделе [Справка средства просмотра журнала F1](../../relational-databases/logs/log-file-viewer-f1-help.md).  
+-   Диалоговое окно **Средство просмотра журнала** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Диалоговое окно **Средство просмотра журнала** имеет возможности экспорта, фильтрации, а также поиска по журналу. Дополнительные сведения о параметрах в окне **Средство просмотра журнала** см. в разделе [Справка средства просмотра журнала F1](../../relational-databases/logs/log-file-viewer-f1-help.md).  
   
 -   Средство просмотра событий Windows.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "88487697"
   
 ### <a name="to-view-service-events-for-integration-services-in-windows-event-viewer"></a>Просмотр событий службы, относящихся к службам Integration Services, в программе просмотра событий  
   
-1.  При использовании классического вида **панели управления**щелкните **Администрирование**; если используется вид по категориям, щелкните **Производительность и обслуживание** , а затем **Администрирование**.  
+1.  При использовании классического вида **панели управления** щелкните **Администрирование**; если используется вид по категориям, щелкните **Производительность и обслуживание** , а затем **Администрирование**.  
   
 2.  Щелкните **Просмотр событий**.  
   

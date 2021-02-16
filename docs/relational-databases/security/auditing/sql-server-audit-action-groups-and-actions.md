@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: DavidTrigano
 ms.author: datrigan
-ms.openlocfilehash: e435d8c94dfdfc8f989875d48440554e04405376
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 0ab7abaaa4473bdc1d4a309ce3ccf0103a33a54a
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172496"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100344423"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Действия и группы действий подсистемы аудита SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -126,7 +126,7 @@ ms.locfileid: "98172496"
  Действия уровня сервера не позволяют проводить подробную фильтрацию действий уровня базы данных. Для точной фильтрации действий необходим аудит уровня базы данных, например аудит действий SELECT в таблице Customers, производимых от лица имен входа в группе Employee. Не включайте объекты области сервера, такие как системные представления, в пользовательскую спецификацию аудита базы данных.  
 
  > [!NOTE]
- > Из-за дополнительной нагрузки, связанной с включением аудита уровня транзакций, начиная с [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] SP2 CU3 и [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4, аудит на уровне транзакций отключен по умолчанию, если у вас не включено соответствие стандарту Common Criteria.  При отключении соответствия стандарту Common Criteria вы по-прежнему сможете добавить действие из TRANSACTION_GROUP в спецификацию аудита, но оно фактически не будет собирать какие-либо действия транзакции.  Если вы собираетесь настроить какие-либо действия аудита из TRANSACTION_GROUP, убедитесь, что инфраструктура аудита уровня транзакций включена, включив соответствие стандарту Common Criteria начиная с [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] SP2 CU3 и [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4 и в более поздних версиях.  Обратите внимание, что в [!INCLUDE[ssSQL15](../../../includes/sssql16-md.md)] аудит на уровне транзакций может также быть отключен с помощью флага трассировки 3427, начиная с SP1 CU2.
+ > Из-за дополнительной нагрузки, связанной с включением аудита уровня транзакций, начиная с [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] SP2 CU3 и [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4, аудит на уровне транзакций отключен по умолчанию, если у вас не включено соответствие стандарту Common Criteria.  При отключении соответствия стандарту Common Criteria вы по-прежнему сможете добавить действие из TRANSACTION_GROUP в спецификацию аудита, но оно фактически не будет собирать какие-либо действия транзакции.  Если вы собираетесь настроить какие-либо действия аудита из TRANSACTION_GROUP, убедитесь, что инфраструктура аудита уровня транзакций включена, включив соответствие стандарту Common Criteria начиная с [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] SP2 CU3 и [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)] CU4 и в более поздних версиях.  Обратите внимание, что в [!INCLUDE[sssql16-md](../../../includes/sssql16-md.md)] аудит на уровне транзакций может также быть отключен с помощью флага трассировки 3427, начиная с SP1 CU2.
   
 ## <a name="database-level-audit-action-groups"></a>Группы действий аудита уровня базы данных  
  Группы действий аудита уровня базы данных — это действия, похожие на классы событий аудита безопасности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения о классах событий см. в разделе [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md).  

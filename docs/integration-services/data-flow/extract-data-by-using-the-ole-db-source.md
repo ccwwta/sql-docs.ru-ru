@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 15e55ec942331ef14458aad461c5b7c9432b0d6e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 864463e65b5857c3d24710f286f17817d2f48a46
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430846"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100339774"
 ---
 # <a name="extract-data-by-using-the-ole-db-source"></a>Извлечение данных с помощью источника OLE DB
 
@@ -35,7 +35,7 @@ ms.locfileid: "88430846"
   
 2.  Чтобы открыть пакет, дважды щелкните его в обозревателе решений.  
   
-3.  Щелкните вкладку **Поток данных** и перетащите источник OLE DB из **области элементов**в область конструктора.  
+3.  Щелкните вкладку **Поток данных** и перетащите источник OLE DB из **области элементов** в область конструктора.  
   
 4.  Дважды щелкните источник OLE DB.  
   

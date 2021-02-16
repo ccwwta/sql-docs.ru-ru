@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - DATABASEPROPERTYEX
 - DATABASEPROPERTYEX_TSQL
@@ -21,12 +21,12 @@ ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 096d215aa0962b3a580cdd43a337075aab638964
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: ec28104c0d178c50bc468a9e9012e71c89cc21db
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171146"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100346609"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -86,9 +86,9 @@ DATABASEPROPERTYEX ( database , property )
 |IsSubscribed|База данных подписана на публикацию.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные<br /><br /> Базовый тип данных: **int**|  
 |IsSyncWithBackup|База данных является опубликованной либо базой данных распространителя и поддерживает восстановление без нарушения репликации транзакций.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные<br /><br /> Базовый тип данных: **int**|  
 |IsTornPageDetectionEnabled|Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] выявляет незавершенные операции ввода-вывода, вызванные сбоями питания или другими перерывами в работе системы.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные<br /><br /> Базовый тип данных: **int**| 
-|IsVerifiedClone|База данных представляет собой копию только схемы и статистики пользовательской базы данных, созданной с помощью параметра WITH VERIFY_CLONEDB функции DBCC CLONEDATABASE. Дополнительные сведения см. в этой [статье службы поддержки Майкрософт](https://support.microsoft.com/help/3177838).|**Область применения**: начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 2 (SP2).<br /><br /> <br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные<br /><br /> Базовый тип данных: **int**| 
-|IsXTPSupported|Указывает, поддерживает ли база данных выполняющуюся в памяти OLTP, то есть создание и использование таблиц, оптимизированных для памяти, и модулей, скомпилированных в собственном коде.<br /><br /> Относится к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> IsXTPSupported не зависит от наличия файловой группы MEMORY_OPTIMIZED_DATA, которая требуется для создания объектов выполняющейся в памяти OLTP.|**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] и выше) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные, ошибка или неприменимо<br /><br /> Базовый тип данных: **int**|  
-|LastGoodCheckDbTime|Дата и время последней успешной команды DBCC CHECKDB, выполненной в указанной базе данных. <sup>1</sup> Если команда DBCC CHECKDB не была выполнена в базе данных, возвращается 1900-01-01 00:00:00.000.|**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] начиная с SP2.</br>[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] начиная с накопительного пакета обновления 9 (CU9).</br>[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] или более поздняя версия.</br>База данных SQL Azure.<br/><br/>Значение datetime<br /><br /> NULL: недопустимые входные данные<br /><br /> Базовый тип данных: **datetime**| 
+|IsVerifiedClone|База данных представляет собой копию только схемы и статистики пользовательской базы данных, созданной с помощью параметра WITH VERIFY_CLONEDB функции DBCC CLONEDATABASE. Дополнительные сведения см. в этой [статье службы поддержки Майкрософт](https://support.microsoft.com/help/3177838).|**Область применения**: начиная с версии [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] с пакетом обновления 2 (SP2).<br /><br /> <br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные<br /><br /> Базовый тип данных: **int**| 
+|IsXTPSupported|Указывает, поддерживает ли база данных выполняющуюся в памяти OLTP, то есть создание и использование таблиц, оптимизированных для памяти, и модулей, скомпилированных в собственном коде.<br /><br /> Относится к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> IsXTPSupported не зависит от наличия файловой группы MEMORY_OPTIMIZED_DATA, которая требуется для создания объектов выполняющейся в памяти OLTP.|**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] и выше) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные, ошибка или неприменимо<br /><br /> Базовый тип данных: **int**|  
+|LastGoodCheckDbTime|Дата и время последней успешной команды DBCC CHECKDB, выполненной в указанной базе данных. <sup>1</sup> Если команда DBCC CHECKDB не была выполнена в базе данных, возвращается 1900-01-01 00:00:00.000.|**Область применения**: [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] начиная с SP2.</br>[!INCLUDE[sssql17](../../includes/sssql17-md.md)] начиная с накопительного пакета обновления 9 (CU9).</br>[!INCLUDE[sssql19](../../includes/sssql19-md.md)] или более поздняя версия.</br>База данных SQL Azure.<br/><br/>Значение datetime<br /><br /> NULL: недопустимые входные данные<br /><br /> Базовый тип данных: **datetime**| 
 |LCID|Код языка Windows для параметров сортировки.|Значение кода языка (в десятичном формате).<br /><br /> Базовый тип данных: **int**|  
 |MaxSizeInBytes|Максимальный размер базы данных в байтах.|**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br />[База данных SQL Azure и Azure Synapse Analytics](/azure/sql-database/sql-database-single-database-scale#dtu-based-purchasing-model) — значение зависит от целевого показателя обслуживания, если не куплено дополнительное хранилище.<br /><br />[Виртуальное ядро](/azure/sql-database/sql-database-single-database-scale#vcore-based-purchasing-model) — значение увеличивается на 1 ГБ до максимального размера.<br /><br />NULL: база данных не запущена<br /><br /> Базовый тип данных: **bigint**|  
 |Восстановление|Модель восстановления базы данных|FULL: Модель полного восстановления<br /><br /> BULK_LOGGED: модель с неполным протоколированием<br /><br /> SIMPLE: Простая модель восстановления<br /><br /> Базовый тип данных: **nvarchar(128)**|  

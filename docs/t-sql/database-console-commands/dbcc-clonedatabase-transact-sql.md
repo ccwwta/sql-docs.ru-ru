@@ -38,12 +38,12 @@ ms.assetid: ''
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: 2de4f0e84b39d1384e342eab3b7b3d0bfd101611
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: e0ddfa333535c48d3338eb26a078a67bbf7079d8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172586"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340650"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -73,23 +73,23 @@ DBCC CLONEDATABASE
 Имя базы данных, в которую будет скопирована исходная база данных. Эта база данных будет создана инструкцией DBCC CLONEDATABASE, и не должна существовать на момент ее выполнения. 
   
 NO_STATISTICS  
-Указывает, необходимо ли исключить статистику по таблицам или индексу из клона. Если этот параметр не задан, статистика по таблицам или индексу включается автоматически. Этот параметр доступен начиная с версии [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 (SP2) и накопительным пакетом обновления 3 и [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1).
+Указывает, необходимо ли исключить статистику по таблицам или индексу из клона. Если этот параметр не задан, статистика по таблицам или индексу включается автоматически. Этот параметр доступен начиная с версии [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 (SP2) и накопительным пакетом обновления 3 и [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1).
 
 NO_QUERYSTORE<br>
-Указывает, нужно ли исключить данные хранилища запросов из клона. Если этот параметр не задан, а в базе данных-источнике включено хранилище запросов, его данные копируются в клон. Этот параметр доступен начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1).
+Указывает, нужно ли исключить данные хранилища запросов из клона. Если этот параметр не задан, а в базе данных-источнике включено хранилище запросов, его данные копируются в клон. Этот параметр доступен начиная с версии [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1).
 
 VERIFY_CLONEDB  
-Проверяет согласованность новой базы данных.  Этот параметр обязателен, если клонируемая база данных предназначена для использования в рабочей среде.  Включение параметра VERIFY_CLONEDB также отключает сбор статистики и данных хранилища запросов, то есть эквивалентно выполнению инструкции с параметрами WITH VERIFY_CLONEDB, NO_STATISTICS, NO_QUERYSTORE.  Этот параметр доступен начиная с версии [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 3 (SP3), [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления 8 (CU8).
+Проверяет согласованность новой базы данных.  Этот параметр обязателен, если клонируемая база данных предназначена для использования в рабочей среде.  Включение параметра VERIFY_CLONEDB также отключает сбор статистики и данных хранилища запросов, то есть эквивалентно выполнению инструкции с параметрами WITH VERIFY_CLONEDB, NO_STATISTICS, NO_QUERYSTORE.  Этот параметр доступен начиная с версии [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 3 (SP3), [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] с пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления 8 (CU8).
 
 > [!NOTE]  
 > С помощью следующей команды можно проверить, готова ли клонированная база данных к использованию в рабочей среде: <br/>`SELECT DATABASEPROPERTYEX('clone_database_name', 'IsVerifiedClone')`
 
 
 SERVICEBROKER<br>
-Указывает, следует ли включать в клон связанные системные каталоги Service Broker.  Параметр SERVICEBROKER недопустимо использовать с VERIFY_CLONEDB.  Этот параметр доступен начиная с версии [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 3 (SP3), [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления 8 (CU8).
+Указывает, следует ли включать в клон связанные системные каталоги Service Broker.  Параметр SERVICEBROKER недопустимо использовать с VERIFY_CLONEDB.  Этот параметр доступен начиная с версии [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 3 (SP3), [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] с пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления 8 (CU8).
 
 BACKUP_CLONEDB  
-Создает и проверяет резервную копию клонированной базы данных.  При использовании в сочетании с параметром VERIFY_CLONEDB клонированная база данных проверяется перед созданием резервной копии.  Этот параметр доступен начиная с версии [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 3 (SP3), [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления 8 (CU8).
+Создает и проверяет резервную копию клонированной базы данных.  При использовании в сочетании с параметром VERIFY_CLONEDB клонированная база данных проверяется перед созданием резервной копии.  Этот параметр доступен начиная с версии [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 3 (SP3), [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] с пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] с накопительным пакетом обновления 8 (CU8).
   
 ## <a name="remarks"></a>Комментарии
 Инструкция DBCC CLONEDATABASE выполняет указанные ниже проверки. Если хотя бы одна из них не пройдена, команда завершается сбоем.
@@ -124,7 +124,7 @@ Cannot insert duplicate key row in object <system table> with unique index 'inde
 
 ## <a name="stats-blob-for-columnstore-indexes"></a>BLOB-объект статистики для индексов columnstore
 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], `DBCC CLONEDATABASE` автоматически собирает большие двоичные объекты статистики индексов columnstore, что позволяет не выполнять дополнительные действия вручную.`DBCC CLONEDATABASE` позволяет создать копию только схемы базы данных, содержащую все элементы, необходимые для устранения проблем с производительностью запросов без копирования данных. В предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] эта команда не копировала данные статистики, необходимые для точного устранения неполадок с запросами индекса columnstore, и для получения этих сведений требовалось выполнять некоторые действия вручную.
+[!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], `DBCC CLONEDATABASE` автоматически собирает большие двоичные объекты статистики индексов columnstore, что позволяет не выполнять дополнительные действия вручную.`DBCC CLONEDATABASE` позволяет создать копию только схемы базы данных, содержащую все элементы, необходимые для устранения проблем с производительностью запросов без копирования данных. В предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] эта команда не копировала данные статистики, необходимые для точного устранения неполадок с запросами индекса columnstore, и для получения этих сведений требовалось выполнять некоторые действия вручную.
 
 Сведения о безопасности данных в клонированных базах данных см. в записи блога [Сведения о безопасности данных в клонированных базах данных](https://techcommunity.microsoft.com/t5/SQL-Server/Understanding-data-security-in-cloned-databases-created-using/ba-p/385287).
 
@@ -149,11 +149,11 @@ Cannot insert duplicate key row in object <system table> with unique index 'inde
 - COLUMNSTORE INDEX
 - CDB
 - CDC
-- CLR (начиная с версии [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 (SP2) и накопительным пакетом обновления 3 и [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1))
+- CLR (начиная с версии [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 (SP2) и накопительным пакетом обновления 3 и [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1))
 - Свойства базы данных
 - DEFAULT
 - Файлы и файловые группы
-- Полный текст (начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1) и накопительным пакетом обновления 2)
+- Полный текст (начиная с версии [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1) и накопительным пакетом обновления 2)
 - FUNCTION
 - INDEX
 - Имя_для_входа
@@ -161,9 +161,9 @@ Cannot insert duplicate key row in object <system table> with unique index 'inde
 - PARTITION SCHEME
 - PROCEDURE   
 > [!NOTE]   
-> Процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)] поддерживаются во всех выпусках начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 (SP2). Процедуры CLR поддерживаются начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 (SP2) и накопительным пакетом обновления 3. Скомпилированные в собственном коде процедуры поддерживаются начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1).  
+> Процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)] поддерживаются во всех выпусках начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 (SP2). Процедуры CLR поддерживаются начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 (SP2) и накопительным пакетом обновления 3. Скомпилированные в собственном коде процедуры поддерживаются начиная с [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1).  
 
-- QUERY STORE (начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1))   
+- QUERY STORE (начиная с версии [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1))   
 > [!NOTE]   
 > Данные хранилища запросов копируются, только если их сбор включен в базе данных-источнике. Чтобы скопировать последнюю статистику времени выполнения из хранилища запросов, перед выполнением команды DBCC CLONEDATABASE выполните процедуру sp_query_store_flush_db, чтобы сбросить статистику времени выполнения в хранилище запросов.  
 
@@ -175,8 +175,8 @@ Cannot insert duplicate key row in object <system table> with unique index 'inde
 - STATISTICS
 - SYNONYM
 - TABLE
-- Оптимизированные для памяти таблицы (только в [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1) и более поздних версиях).
-- Объекты FileStream и FileTable (начиная с версии [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 (SP2) и накопительным пакетом обновления 3 и [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1)) 
+- Оптимизированные для памяти таблицы (только в [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1) и более поздних версиях).
+- Объекты FileStream и FileTable (начиная с версии [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 (SP2) и накопительным пакетом обновления 3 и [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1)) 
 - TRIGGER
 - TYPE
 - Обновленная база данных
@@ -215,7 +215,7 @@ Cannot insert duplicate key row in object <system table> with unique index 'inde
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-creating-a-clone-of-a-database-that-includes-schema-statistics-and-query-store"></a>A. Создание клона базы данных, включающего схему, статистику и хранилище запросов 
-В приведенном ниже примере создается клон базы данных AdventureWorks, включающий схему, статистику и данные хранилища запросов (в [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1) и более поздних версиях).
+В приведенном ниже примере создается клон базы данных AdventureWorks, включающий схему, статистику и данные хранилища запросов (в [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1) и более поздних версиях).
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone);    
@@ -231,7 +231,7 @@ GO
 ```  
 
 ### <a name="c-creating-a-schema-only-clone-of-a-database-without-statistics-and-query-store"></a>В. Создание клона базы данных, включающего только схему без статистики и хранилища запросов 
-В приведенном ниже примере создается клон базы данных AdventureWorks, не включающий статистику и данные хранилища запросов (в [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1) и более поздних версиях).
+В приведенном ниже примере создается клон базы данных AdventureWorks, не включающий статистику и данные хранилища запросов (в [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1) и более поздних версиях).
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH NO_STATISTICS, NO_QUERYSTORE;    
@@ -239,7 +239,7 @@ GO
 ```  
 
 ### <a name="d-creating-a-clone-of-a-database-that-is-verified-for-production-use"></a>Г. Создание клона базы данных с проверкой готовности к использованию в рабочей среде
-В приведенном ниже примере создается клон базы данных AdventureWorks, включающий только схему без статистики и данных хранилища запросов и проверенный на готовность к использованию в рабочей среде (в [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 2 (SP2) и более поздних версиях).
+В приведенном ниже примере создается клон базы данных AdventureWorks, включающий только схему без статистики и данных хранилища запросов и проверенный на готовность к использованию в рабочей среде (в [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] с пакетом обновления 2 (SP2) и более поздних версиях).
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH VERIFY_CLONEDB;    
@@ -247,7 +247,7 @@ GO
 ```  
   
 ### <a name="e-creating-a-clone-of-a-database-that-is-verified-for-production-use-that-includes-a-backup-of-the-cloned-database"></a>Д. Создание клона базы данных, включающего резервную копию клонируемой базы данных, с проверкой готовности к использованию в рабочей среде
-В приведенном ниже примере создается клон базы данных AdventureWorks, включающий только схему без статистики и данных хранилища запросов и проверенный на готовность к использованию в рабочей среде.  Кроме того, создается проверенная резервная копия клонируемой базы данных (в [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 2 (SP2) и более поздних версиях).
+В приведенном ниже примере создается клон базы данных AdventureWorks, включающий только схему без статистики и данных хранилища запросов и проверенный на готовность к использованию в рабочей среде.  Кроме того, создается проверенная резервная копия клонируемой базы данных (в [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] с пакетом обновления 2 (SP2) и более поздних версиях).
 
 ```sql  
 DBCC CLONEDATABASE (AdventureWorks, AdventureWorks_Clone) WITH VERIFY_CLONEDB, BACKUP_CLONEDB;    

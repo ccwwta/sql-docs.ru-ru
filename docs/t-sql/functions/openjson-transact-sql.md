@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 06/03/2020
 ms.prod: sql
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - OPENJSON
 - OPENJSON_TSQL
@@ -18,12 +18,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 ms.reviewer: chadam
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017
-ms.openlocfilehash: 1c7b948b1f883d1de6c6bb6556aee25c0e859695
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: b29315567520dff0d4700aeb476279bf6cfe24b7
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98085994"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100340647"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
 
@@ -109,7 +109,7 @@ SELECT * FROM OpenJson(@json);
 
 Необязательное выражение пути JSON, которое ссылается на объект или массив в *jsonExpression*. **OPENJSON** обращается к тексту JSON в указанной позиции и анализирует только заданный фрагмент текста. Дополнительные сведения см. в статье [Выражения пути JSON (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md).
 
-В [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] можно указать переменную в качестве значения *пути*.
+В [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] и [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] можно указать переменную в качестве значения *пути*.
   
 В следующем примере возвращается вложенный объект по указанному *пути*:  
 
@@ -231,7 +231,7 @@ WITH (
         |------------------------------|--------------------|  
         |0|null|  
         |1|строка|  
-        |2|number|  
+        |2|число|  
         |3|true/false|  
         |4|массиве|  
         |5|объект|  

@@ -15,12 +15,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: e61f723ddbc3010cc705c076675b731482fdee6b
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: c8a836f1a8daf2b4b6a9d5b76156191799013484
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171846"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100341714"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Мониторинг производительности с использованием хранилища запросов
 
@@ -31,7 +31,7 @@ ms.locfileid: "98171846"
 Сведения о работе с хранилищем запросов в Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] см. в разделе [Работа с хранилищем запросов в Базе данных SQL Azure](best-practice-with-the-query-store.md#Insight).
 
 > [!IMPORTANT]
-> Если вы используете хранилище запросов для JIT-анализа рабочих нагрузок в [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], запланируйте установку исправлений масштабируемости производительности (см. [статью базы знаний 4340759](https://support.microsoft.com/help/4340759)) как можно скорее.
+> Если вы используете хранилище запросов для JIT-анализа рабочих нагрузок в [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], запланируйте установку исправлений масштабируемости производительности (см. [статью базы знаний 4340759](https://support.microsoft.com/help/4340759)) как можно скорее.
 
 ## <a name="enabling-the-query-store"></a><a name="Enabling"></a> Включение хранилища запросов
 
@@ -645,7 +645,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 
 #### <a name="a-namectp23-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23"><a/> План форсирует поддержку для перемотки вперед и статических курсоров
 
-Начиная с версии [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и базы данных SQL Azure (все модели развертывания), хранилище запросов поддерживает возможность принудительного применения планов выполнения запросов с перемоткой вперед и статическими курсорами в [!INCLUDE[tsql](../../includes/tsql-md.md)] и API. Принудительное применение поддерживается посредством `sp_query_store_force_plan` или с помощью отчетов по хранилищу запросов в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+Начиная с версии [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] и базы данных SQL Azure (все модели развертывания), хранилище запросов поддерживает возможность принудительного применения планов выполнения запросов с перемоткой вперед и статическими курсорами в [!INCLUDE[tsql](../../includes/tsql-md.md)] и API. Принудительное применение поддерживается посредством `sp_query_store_force_plan` или с помощью отчетов по хранилищу запросов в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
 ### <a name="remove-plan-forcing-for-a-query"></a>Отмена принудительного применения плана для запроса
 

@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: f5171195bb3d275eb170330565cd9f90531dc0c6
-ms.sourcegitcommit: 2f3f5920e0b7a84135c6553db6388faf8e0abe67
+ms.openlocfilehash: 82671e390d67faf6a7059a0d4c267dd744b5a936
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2021
-ms.locfileid: "98783410"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100352577"
 ---
 # <a name="specify-availability-group-options-page-for-an-always-on-availability-group"></a>Страница "Указание параметров группы доступности" группы доступности Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -36,11 +36,11 @@ ms.locfileid: "98783410"
 
    * **EXTERNAL**
       
-      Используйте, если группа доступности размещается на экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] под управлением технологии внешних кластеров, для обеспечения высокой доступности и аварийного восстановления, например Pacemaker в Linux. Применяется к [!INCLUDE[sssqlv14](../../../includes/sssqlv14-md.md)] и более поздним версиям.
+      Используйте, если группа доступности размещается на экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] под управлением технологии внешних кластеров, для обеспечения высокой доступности и аварийного восстановления, например Pacemaker в Linux. Применяется к [!INCLUDE[sssql14](../../../includes/sssql17-md.md)] и более поздним версиям.
 
    * **NONE**
       
-      Используйте, если группа доступности размещается на экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], который не управляется технологией кластера для масштабирования при чтении и балансировке нагрузки. Применяется к [!INCLUDE[sssqlv14](../../../includes/sssqlv14-md.md)] и более поздним версиям. 
+      Используйте, если группа доступности размещается на экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], который не управляется технологией кластера для масштабирования при чтении и балансировке нагрузки. Применяется к [!INCLUDE[sssql14](../../../includes/sssql17-md.md)] и более поздним версиям. 
  
    **Определение уровня работоспособности уровня базы данных**. Установите этот флажок, чтобы включить параметр определения уровня работоспособности базы данных (DB_FAILOVER) для группы доступности. Функция определения работоспособности баз данных замечает, когда база данных выходит из сетевого режима, в случае если возникают какие-либо неполадки, и инициирует автоматический переход группы доступности на другой ресурс. См. статью [SQL Server Always On Database Health Detection Failover Option](sql-server-always-on-database-health-detection-failover-option.md) (Параметр определения уровня работоспособности базы данных группы доступности).
 
