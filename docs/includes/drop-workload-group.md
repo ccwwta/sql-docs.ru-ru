@@ -11,7 +11,7 @@ DROP WORKLOAD GROUP group_name
 
 ## <a name="arguments"></a>Аргументы
 
-*group_name*  — имя существующей определяемой пользователем группы рабочей нагрузки.
+*group_name* — имя существующей определяемой пользователем группы рабочей нагрузки.
 
 ## <a name="remarks"></a>Remarks
 

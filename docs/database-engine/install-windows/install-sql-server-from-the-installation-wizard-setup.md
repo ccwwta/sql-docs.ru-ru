@@ -15,18 +15,18 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: cawrites
 ms.author: chadam
 monikerRange: '>=sql-server-2016'
-ms.openlocfilehash: d2c5f2fc245c981cf0c6d045333528aeff32536c
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 8bb4b3b0e70850702c34ff1c69b9c2fcd5f3c85b
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170196"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100342325"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Установка SQL Server с помощью мастера установки (программа установки)
 
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
-Эта статья описывает установку SQL Server с помощью мастера установки. Она применима к [!INCLUDE[SQLServer2016](../../includes/sssql16-md.md)] и [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)].
+Эта статья описывает установку SQL Server с помощью мастера установки. Она применима к [!INCLUDE[SQLServer2016](../../includes/sssql16-md.md)] и [!INCLUDE[SQLServer2017](../../includes/sssql17-md.md)].
 
 В этой статье приведена пошаговая процедура установки нового экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В мастере установки доступно единое дерево для установки всех компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поэтому их не требуется устанавливать по отдельности. Сведения об установке отдельных компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Установка отдельных компонентов](../../database-engine/install-windows/install-sql-server.md#individual-component-installation).  
 
@@ -55,7 +55,7 @@ ms.locfileid: "98170196"
 
 Корпорация Майкрософт выявила проблему с двоичными файлами среды выполнения Microsoft Visual C++ 2013, которые SQL Server 2016 и 2017 устанавливают в качестве необходимого компонента. Для исправления этой проблемы выпущено обновление. Если это обновление двоичных файлов среды выполнения Visual C++ не установлено, в SQL Server могут возникать проблемы с надежностью в определенных сценариях. Перед установкой SQL Server выполните инструкции, приведенные в [заметках о выпуске SQL Server](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch), чтобы узнать, требуется ли на вашем компьютере исправление для двоичных файлов среды выполнения Visual C++. 
 
-Это не касается [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)].
+Это не касается [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)].
 
 ## <a name="to-install-sql-server-2016-and-2017"></a>Установка SQL Server 2016 и 2017  
 
@@ -131,7 +131,7 @@ ms.locfileid: "98170196"
     > [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
 
     > [!NOTE]
-    > Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], вы можете установить флажок **Предоставить право на выполнение задач обслуживания тома службе ядра СУБД SQL Server**, чтобы разрешить учетной записи службы [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] использовать [мгновенную инициализацию файлов](../../relational-databases/databases/database-instant-file-initialization.md).
+    > Начиная с [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], вы можете установить флажок **Предоставить право на выполнение задач обслуживания тома службе ядра СУБД SQL Server**, чтобы разрешить учетной записи службы [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] использовать [мгновенную инициализацию файлов](../../relational-databases/databases/database-instant-file-initialization.md).
   
 1. На странице **Настройка сервера — параметры сортировки** можно для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] задать параметры сортировки, отличные от заданных по умолчанию.    
 
@@ -286,9 +286,9 @@ ms.locfileid: "98170196"
   
      Дальнейший ход установки зависит от выбранных для установки компонентов. В зависимости от выбранных параметров могут отображаться не все страницы. 
 
-1. Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] перед установкой Polybase на компьютере больше не требуется предварительно устанавливать Oracle JRE 7 с обновлением 51 (или более поздней версии). Выбор установки компонента Polybase приведет к добавлению страницы **Расположение установки Java** в программу установки SQL Server. Она отображается после страницы **Конфигурация экземпляра**. На странице "Расположение установки Java" можно установить среду Azul Zulu Open JRE, добавленную в пакет установки [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], или указать расположение других JRE или JDK, уже установленных на этом компьютере.
+1. Начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] перед установкой Polybase на компьютере больше не требуется предварительно устанавливать Oracle JRE 7 с обновлением 51 (или более поздней версии). Выбор установки компонента Polybase приведет к добавлению страницы **Расположение установки Java** в программу установки SQL Server. Она отображается после страницы **Конфигурация экземпляра**. На странице "Расположение установки Java" можно установить среду Azul Zulu Open JRE, добавленную в пакет установки [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], или указать расположение других JRE или JDK, уже установленных на этом компьютере.
 
-1. Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] Java входит в состав расширений языка. Выбор установки компонента Java приведет к добавлению страницы **Расположение установки Java** в диалоговое окно установки SQL Server, отображаемое после страницы **Конфигурация экземпляра**. На странице **Расположение установки Java** можно установить среду Zulu Open JRE, добавленную в пакет установки [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], или указать расположение других JRE или JDK, уже установленных на этом компьютере.
+1. Начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] Java входит в состав расширений языка. Выбор установки компонента Java приведет к добавлению страницы **Расположение установки Java** в диалоговое окно установки SQL Server, отображаемое после страницы **Конфигурация экземпляра**. На странице **Расположение установки Java** можно установить среду Zulu Open JRE, добавленную в пакет установки [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], или указать расположение других JRE или JDK, уже установленных на этом компьютере.
 
 1. На странице **Настройка сервера — учетные записи службы** укажите учетные записи входа для служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Набор служб, которые вы настроите на этой странице, зависит от выбранных при установке компонентов. Дополнительные сведения о параметрах конфигурации см. в разделе [справки по мастеру установки](../../sql-server/install/instance-configuration.md#serverconfig).
   
@@ -300,7 +300,7 @@ ms.locfileid: "98170196"
     > [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
 
     > [!NOTE]
-    > Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], вы можете установить флажок **Предоставить право на выполнение задач обслуживания тома службе ядра СУБД SQL Server**, чтобы разрешить учетной записи службы [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] использовать [мгновенную инициализацию файлов](../../relational-databases/databases/database-instant-file-initialization.md).
+    > Начиная с [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)], вы можете установить флажок **Предоставить право на выполнение задач обслуживания тома службе ядра СУБД SQL Server**, чтобы разрешить учетной записи службы [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] использовать [мгновенную инициализацию файлов](../../relational-databases/databases/database-instant-file-initialization.md).
   
      На странице **Настройка сервера — параметры сортировки** можно для [!INCLUDE[ssDE](../../includes/ssde-md.md)] и [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] задать параметры сортировки, отличные от заданных по умолчанию. Дополнительные сведения см. в статье [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md).  
   
@@ -324,14 +324,14 @@ ms.locfileid: "98170196"
      Для указания максимальной степени параллелизма используйте страницу **[!INCLUDE[ssDE](../../includes/ssde-md.md)]конфигурации MaxDOP**. Этот параметр определяет, сколько процессоров может использовать одна инструкция во время выполнения. Рекомендуемое значение вычисляется автоматически во время установки. 
      
     > [!NOTE]  
-    > Эта страница доступна только в программе установки начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. 
+    > Эта страница доступна только в программе установки начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]. 
     
     Дополнительные сведения см. в разделе [Конфигурация ядра СУБД — страница MaxDOP](../../sql-server/install/instance-configuration.md?view=sql-server-ver15&preserve-view=true#maxdop). 
 
      Используйте страницу **Конфигурация ядра СУБД — ресурсы памяти**, чтобы указать значения параметров **Min Server Memory** и **Max Server Memory**, которые будет использовать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] после запуска. Вы можете сохранить здесь значения по умолчанию, выбрать вычисляемые рекомендуемые значения или вручную изменить их после выбора варианта **Рекомендуется**.
      
     > [!NOTE]  
-    > Эта страница доступна только в программе установки начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. 
+    > Эта страница доступна только в программе установки начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]. 
     
     Дополнительные сведения см. в разделе о странице [ресурсов памяти при конфигурации ядра СУБД](../../sql-server/install/instance-configuration.md?view=sql-server-ver15&preserve-view=true#memory). 
 

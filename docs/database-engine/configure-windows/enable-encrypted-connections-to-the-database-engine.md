@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1b5726aad103012b0ed7619749c1f6f669baa234
-ms.sourcegitcommit: 23649428528346930d7d5b8be7da3dcf1a2b3190
+ms.openlocfilehash: 87ac1c0759264b00567d5edc2cd9f22727fdd0fa
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "98241848"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100353867"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Включение зашифрованных соединений для ядра СУБД
 
@@ -40,7 +40,7 @@ ms.locfileid: "98241848"
  Для компьютера сервера должен быть подготовлен сертификат. Чтобы подготовить сертификат на сервере, его необходимо [импортировать в Windows](#single-server). Для клиентского компьютера необходимо настроить [доверие корневому центру сертификата](#about).  
   
 > [!IMPORTANT]
-> Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] протокол SSL больше не поддерживается. Используйте вместо него протокол TLS.
+> Начиная с [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] протокол SSL больше не поддерживается. Используйте вместо него протокол TLS.
 
 ## <a name="transport-layer-security-tls"></a>Протокол TLS
 
@@ -100,9 +100,9 @@ ms.locfileid: "98241848"
 
 ## <a name="install-on-single-server"></a><a name="single-server"></a>Установка на одном сервере.
 
-В [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] управление сертификатами интегрировано в диспетчер конфигурации SQL Server. Диспетчер конфигурации SQL Server для [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] можно использовать с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о добавлении сертификата в одном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в статье [Управление сертификатами (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/manage-certificates.md).
+В [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] управление сертификатами интегрировано в диспетчер конфигурации SQL Server. Диспетчер конфигурации SQL Server для [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] можно использовать с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о добавлении сертификата в одном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в статье [Управление сертификатами (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/manage-certificates.md).
 
-Если вы используете версию от [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] и диспетчер конфигурации SQL Server для [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] недоступен, выполните указанные ниже действия.
+Если вы используете версию от [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] и диспетчер конфигурации SQL Server для [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] недоступен, выполните указанные ниже действия.
 
 1. В меню **Пуск** выберите команду **Выполнить**, в окне **Открыть** введите **MMC** и нажмите кнопку **ОК**.  
   
@@ -130,9 +130,9 @@ ms.locfileid: "98241848"
   
 ## <a name="install-across-multiple-servers"></a>Установка на нескольких серверах
 
-В [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] управление сертификатами интегрировано в диспетчер конфигурации SQL Server. Диспетчер конфигурации SQL Server для [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] можно использовать с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о добавлении сертификата в конфигурации отказоустойчивого кластера или группы доступности см. в статье [Управление сертификатами (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/manage-certificates.md).
+В [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] управление сертификатами интегрировано в диспетчер конфигурации SQL Server. Диспетчер конфигурации SQL Server для [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] можно использовать с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о добавлении сертификата в конфигурации отказоустойчивого кластера или группы доступности см. в статье [Управление сертификатами (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/manage-certificates.md).
 
-Если вы используете версию от [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] и диспетчер конфигурации SQL Server для [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] недоступен, выполните действия, описанные в разделе [Подготовка (установка) сертификата на одном сервере](#single-server), для каждого сервера.
+Если вы используете версию от [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] и диспетчер конфигурации SQL Server для [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] недоступен, выполните действия, описанные в разделе [Подготовка (установка) сертификата на одном сервере](#single-server), для каждого сервера.
 
 ## <a name="export-server-certificate"></a>Экспорт сертификата сервера  
   

@@ -17,18 +17,18 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017'
-ms.openlocfilehash: 5d9f07f96f83767a84f7ee0128d674f4ab955eed
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: e14f354812c99b9ed3e8be86734e3cb8e07db751
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170856"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489478"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Нерекомендуемые функции ядра СУБД в SQL Server 2017
 
 [!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 
-  В этом разделе описаны устаревшие функции компонента [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] , которые по-прежнему доступны в [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]. Не следует использовать устаревшие функции в новых приложениях.  
+  В этом разделе описаны устаревшие функции компонента [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] , которые по-прежнему доступны в [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. Не следует использовать устаревшие функции в новых приложениях.  
   
 Если функция помечена как нерекомендуемая, это означает следующее:
 
@@ -46,7 +46,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 ```
 
 > [!NOTE]
-> Этот список идентичен списку [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]. Для [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)] не объявлено о новых нерекомендуемых или неподдерживаемых функциях ядра СУБД.
+> Этот список идентичен списку [!INCLUDE[sssql15-md](../includes/sssql16-md.md)]. Для [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] не объявлено о новых нерекомендуемых или неподдерживаемых функциях ядра СУБД.
 
 ## <a name="features-deprecated-in-the-next-version-of-sql-server"></a>Функции, не рекомендуемые в следующей версии SQL Server
 

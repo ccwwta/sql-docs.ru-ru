@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bea31577692752b028bdbddbf0ed440dfee7e493
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 53fc539f46751cf6073aee0d5cd3aefae1971283
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421968"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338403"
 ---
 # <a name="debugging-control-flow"></a>Отладка потока управления
 
@@ -109,7 +109,7 @@ ms.locfileid: "88421968"
 ## <a name="debug-windows"></a>Окна отладки  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] содержит много окон, которые можно использовать для работы с точками останова и для отладки пакетов, содержащих точки останова. Чтобы получить больше информации по каждому из окон, откройте окно и нажмите клавишу F1 для получения справки.  
   
- Для открытия этих окон в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], выберите меню **Отладка** , выберите пункт **Окна**и выберите пункт **Точки останова**, **Вывод**или **Немедленно**.  
+ Для открытия этих окон в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], выберите меню **Отладка** , выберите пункт **Окна** и выберите пункт **Точки останова**, **Вывод** или **Немедленно**.  
   
  В следующей таблице приводятся описания этих окон.  
   

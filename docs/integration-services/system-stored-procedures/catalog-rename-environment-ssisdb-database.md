@@ -11,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: c73d7452-31c5-4f4e-afcc-e9eca760c826
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6641ff60f49534a303d3f60110dbdd63aab2ed29
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5cff0cdf01fbfbb0af768a18ab54614c2a46f5bb
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477156"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346508"
 ---
 # <a name="catalogrename_environment-ssisdb-database"></a>catalog.rename_environment (база данных SSISDB)
 
@@ -67,7 +67,7 @@ catalog.rename_environment [ @folder_name = ] folder_name
   
 -   Новое имя уже использовано в существующей среде  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Ссылки из проектов на среду не обновляются автоматически при переименовании среды. Ссылки на среду должны обновляться соответствующим образом. Хранимая процедура будет выполнена успешно, даже если вследствие изменения имени среды ссылки на нее оказались недействительными. Ссылки на среду должны обновляться после завершения этой хранимой процедуры.  
   
 > [!NOTE]  

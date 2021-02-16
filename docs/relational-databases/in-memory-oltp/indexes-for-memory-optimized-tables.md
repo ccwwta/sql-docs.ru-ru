@@ -12,12 +12,12 @@ ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4721f3ae9add5e62aa95820b0b40f0ddd20a6d81
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 15cabb6877e249a6f0be9d38449c85c13bbda78b
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98172556"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100351247"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>Индексы для оптимизированных для памяти таблиц
 
@@ -62,7 +62,7 @@ ms.locfileid: "98172556"
     ```
 
 > [!NOTE]  
-> В [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] действует ограничение в 8 индексов на таблицу, оптимизированную для памяти, или тип таблицы. Начиная с версии [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] и в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] больше не применяются ограничения числа индексов для таблиц, оптимизированных для памяти, и типов таблиц.
+> В [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] действует ограничение в 8 индексов на таблицу, оптимизированную для памяти, или тип таблицы. Начиная с версии [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] и в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] больше не применяются ограничения числа индексов для таблиц, оптимизированных для памяти, и типов таблиц.
   
 ### <a name="code-sample-for-syntax"></a>Пример кода для синтаксиса  
   

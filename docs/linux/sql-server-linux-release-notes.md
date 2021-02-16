@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 369c52eeb66a3d8ca5042f54d71ea9001d30b194
-ms.sourcegitcommit: af64e2b8d498af26b973e86db5c00f8d72991295
+ms.openlocfilehash: fe088ed697e4150b2272f3a390b4002714ab4dc4
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2021
-ms.locfileid: "98193041"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338278"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Заметки о выпуске для SQL Server 2017 на Linux
 
@@ -22,7 +22,7 @@ ms.locfileid: "98193041"
 Следующие заметки о выпуске применимы к [!INCLUDE[ssSQL17](../includes/sssql17-md.md)], работающему в Linux. Эта статья разбита на разделы для каждого выпуска. В общедоступном (GA) выпуске содержатся подробные сведения о поддержке и известных проблемах. Каждый накопительный пакет обновления (CU) или выпуск для общего распространения (GDR) содержит ссылку на статью поддержки, где описаны изменения накопительного пакета обновления, а также ссылки на скачиваемые файлы пакета Linux.
 
 > [!TIP]
-> Эти заметки о выпуске предназначены специально для выпусков [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Дополнительные сведения о новом [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] см. в статье [Заметки о выпуске для предварительной версии SQL Server 2019 в Linux](sql-server-linux-release-notes-2019.md?view=sql-server-ver15&preserve-view=true).
+> Эти заметки о выпуске предназначены специально для выпусков [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Дополнительные сведения о новом [!INCLUDE[sql-server-2019](../includes/sssql19-md.md)] см. в статье [Заметки о выпуске для предварительной версии SQL Server 2019 в Linux](sql-server-linux-release-notes-2019.md?view=sql-server-ver15&preserve-view=true).
 
 ## <a name="supported-platforms"></a>Поддерживаемые платформы
 
@@ -604,7 +604,7 @@ sudo systemctl start mssql-server
          sudo systemctl restart mssql-server
          ```
 
-- Базы данных [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] в Windows, использующие встроенный OLTP, не могут быть восстановлены в [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] на Linux. Чтобы восстановить базу данных [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], использующую выполняющуюся в памяти OLTP, сначала обновите базы до [!INCLUDE[ssSQL15](../includes/sssql16-md.md)] или [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] в Windows, прежде чем перемещать их в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на базе Linux с помощью операции резервного копирования/восстановления или подключения/отключения.
+- Базы данных [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] в Windows, использующие встроенный OLTP, не могут быть восстановлены в [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] на Linux. Чтобы восстановить базу данных [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], использующую выполняющуюся в памяти OLTP, сначала обновите базы до [!INCLUDE[sssql15-md](../includes/sssql16-md.md)] или [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] в Windows, прежде чем перемещать их в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на базе Linux с помощью операции резервного копирования/восстановления или подключения/отключения.
 
 - Сейчас разрешение пользователя **ADMINISTER BULK OPERATIONS** в Linux не поддерживается.
 
