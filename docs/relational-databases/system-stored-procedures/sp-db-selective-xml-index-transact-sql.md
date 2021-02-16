@@ -17,20 +17,20 @@ helpviewer_keywords:
 - sp_db_selective_xml_index procedure
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5df370a674026b4c6ebc7eb59985505821e3b028
-ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
+ms.openlocfilehash: ed30d2b8df6141b308d32dee8f2fdcec0c2eceb1
+ms.sourcegitcommit: c83c17e44b5e1e3e2a3b5933c2a1c4afb98eb772
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "100489448"
+ms.lasthandoff: 02/15/2021
+ms.locfileid: "100525180"
 ---
 # <a name="sp_db_selective_xml_index-transact-sql"></a>sp_db_selective_xml_index (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Включает и выключает функциональность селективного XML-индекса в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При вызове без параметров хранимая процедура возвращает 1, если селективный XML-индекс включен в определенной базе данных.  
-  
+
 > [!NOTE]  
->  Чтобы отключить селективный XML-индекс с помощью этой хранимой процедуры, необходимо перевести базу данных в простой режим восстановления с помощью [параметров ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) .  
+> Начиная с [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)] , функциональность селективного XML-индекса не может быть отключена. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] В [!INCLUDE[sssql11-md](../../includes/sssql11-md.md)] для отключения функции селективного XML-индекса с помощью этой хранимой процедуры база данных должна быть размещена в простой модели восстановления с помощью [параметров ALTER database Set &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) .  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
