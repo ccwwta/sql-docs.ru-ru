@@ -1,8 +1,8 @@
 ---
 description: sys.dm_db_missing_index_group_stats (Transact-SQL)
-title: sys.dm_db_missing_index_group_stats (Transact-SQL) | Документация Майкрософт
+title: sys.dm_db_missing_index_group_stats (Transact-SQL)
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 02/09/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_missing_index_group_stats dynamic management view
 - missing indexes feature [SQL Server], sys.dm_db_missing_index_group_stats dynamic management view
-ms.assetid: c2886986-9e07-44ea-a350-feeac05ee4f4
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cb6680d80df5b54c5ea4d74b07256442ccf3e28
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 52ad665528cf331c2244c7c0fadbfebc3b78c285
+ms.sourcegitcommit: c6cc0b669b175ae290cf5b08952010661ebd03c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99209415"
+ms.lasthandoff: 02/16/2021
+ms.locfileid: "100530850"
 ---
 # <a name="sysdm_db_missing_index_group_stats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "99209415"
     
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**group_handle**|**int**|Идентифицирует группу отсутствующих индексов. Этот идентификатор уникален в пределах сервера.<br /><br /> Другие столбцы содержат сведения обо всех запросах, для которых индекс в группе считается отсутствующим.<br /><br /> Группа индексов содержит только один индекс.|  
+|**group_handle**|**int**|Идентифицирует группу отсутствующих индексов. Этот идентификатор уникален в пределах сервера.<br /><br /> Другие столбцы содержат сведения обо всех запросах, для которых индекс в группе считается отсутствующим.<br /><br /> Группа индексов содержит только один индекс.<BR><BR>Может быть присоединен к **index_group_handle** в [sys.dm_db_missing_index_groups](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md).|  
 |**unique_compiles**|**bigint**|Число компиляций и повторных компиляций, которые получают преимущества от этой группы отсутствующих индексов. Компиляции и повторные компиляции многих различных запросов могут влиять на значение этого столбца.|  
 |**user_seeks**|**bigint**|Количество операций поиска по запросам пользователя, для которых мог бы использоваться рекомендованный индекс в группе.|  
 |**user_scans**|**bigint**|Количество операций просмотра по запросам пользователя, для которых мог бы использоваться рекомендованный индекс в группе.|  
@@ -53,11 +52,13 @@ ms.locfileid: "99209415"
 |**avg_total_system_cost**|**float**|Средняя стоимость системных запросов, которая могла быть уменьшена с помощью индекса в группе.|  
 |**avg_system_impact**|**float**|Средний процент выигрыша, который могли получить запросы системы, если создать эту группу отсутствующих индексов. Значение показывает, что стоимость запроса в среднем уменьшится на этот процент, если создать эту группу отсутствующих индексов.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Сведения, возвращаемые представлением **sys.dm_db_missing_index_group_stats**, обновляются при каждом выполнении запроса, а не при каждой компиляции или повторной компиляции запроса. Статистика использования не сохраняется и хранится только до перезапуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Администраторы базы данных должны периодически делать резервные копии сведений об отсутствующих индексах, если необходимо сохранить статистику использования после перезагрузки сервера.  
 
   >[!NOTE]
   >Результирующий набор для этого динамического административного представления ограничен 600 строк. Каждая строка содержит один отсутствующий индекс. Если у вас больше 600 отсутствующих индексов, следует устранить существующие отсутствующие индексы, чтобы можно было просмотреть новые.
+
+ Одна группа отсутствующих индексов может содержать несколько запросов, для которых необходим один и тот же индекс. Дополнительные сведения об отдельных запросах, требующих определенного индекса в этом динамическом административном отображении, см. в разделе [sys.dm_db_missing_index_group_stats_query](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-query-transact-sql.md).
   
 ## <a name="permissions"></a>Разрешения  
  Для выполнения запроса к этому динамическому административному представлению пользователям должно быть предоставлено разрешение VIEW SERVER STATE или любое другое, подразумевающее разрешение VIEW SERVER STATE.  
@@ -68,7 +69,7 @@ ms.locfileid: "99209415"
 ### <a name="a-find-the-10-missing-indexes-with-the-highest-anticipated-improvement-for-user-queries"></a>A. Поиск 10 отсутствующих индексов с самым высоким ожидаемым улучшением производительности пользовательских запросов  
  Следующий запрос определяет, какие 10 отсутствующих индексов окажут самое высокое ожидаемое совокупное улучшение производительности запросов пользователя в порядке убывания.  
   
-```  
+```sql
 SELECT TOP 10 *  
 FROM sys.dm_db_missing_index_group_stats  
 ORDER BY avg_total_user_cost * avg_user_impact * (user_seeks + user_scans)DESC;  
@@ -77,7 +78,7 @@ ORDER BY avg_total_user_cost * avg_user_impact * (user_seeks + user_scans)DESC;
 ### <a name="b-find-the-individual-missing-indexes-and-their-column-details-for-a-particular-missing-index-group"></a>Б. Поиск отдельных отсутствующих индексов и подробных сведений об их столбцах для определенной группы отсутствующих индексов  
  Следующий запрос определяет, какие отсутствующие индексы составляют отдельную группу отсутствующих индексов, и отображает подробные сведения об их столбцах. Для данного примера дескриптор группы отсутствующих индексов равен 24.  
   
-```  
+```sql
 SELECT migs.group_handle, mid.*  
 FROM sys.dm_db_missing_index_group_stats AS migs  
 INNER JOIN sys.dm_db_missing_index_groups AS mig  
@@ -93,6 +94,7 @@ WHERE migs.group_handle = 24;
  [sys.dm_db_missing_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   
  [sys.dm_db_missing_index_details &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
  [sys.dm_db_missing_index_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
+ [sys.dm_db_missing_index_group_stats_query &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-query-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
   
