@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ea62ec35accc4f808fdbd1b2ff4319c0b44cdcc5
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: 5091c3437d0e74f3c108e13efb3789997cadb2d3
+ms.sourcegitcommit: e8c0c04eb7009a50cbd3e649c9e1b4365e8994eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92195748"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "100489468"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Извлечение приложения уровня данных из базы данных
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "92195748"
 ##  <a name="using-the-extract-data-tier-application-wizard"></a><a name="UsingDACExtractWizard"></a> Использование мастера извлечения приложения уровня данных  
  **Извлечение приложения уровня данных с помощью мастера**  
   
-1.  В **обозревателе объектов**разверните узел, относящийся к экземпляру, содержащему базу данных, из которой должно быть извлечено приложение уровня данных.  
+1.  В **обозревателе объектов** разверните узел, относящийся к экземпляру, содержащему базу данных, из которой должно быть извлечено приложение уровня данных.  
   
 2.  Разверните узел **Базы данных** .  
   
@@ -162,5 +162,5 @@ $extractionunit.Extract($dacpacPath)
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Приложения уровня данных](../../relational-databases/data-tier-applications/data-tier-applications.md)  
-  
+ - [Приложения уровня данных](../../relational-databases/data-tier-applications/data-tier-applications.md) 
+ - [SqlPackage в конвейерах разработки](../../tools/sqlpackage/sqlpackage-pipelines.md)

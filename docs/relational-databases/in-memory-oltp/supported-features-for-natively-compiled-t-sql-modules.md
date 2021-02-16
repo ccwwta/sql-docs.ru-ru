@@ -12,12 +12,12 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42d638afd9fc98fb68eb024c0a712bea5f278a26
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 011a7d3fa710699f75afd4ca835ba1f082a956b5
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170226"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100353611"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Поддерживаемые функции для модулей, скомпилированных в собственном коде T-SQL
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,8 +34,8 @@ ms.locfileid: "98170226"
 Здесь приведены поддерживаемые конструкции запросов.  
 
 CASE, выражение: Выражение CASE может использоваться в любой инструкции или предложении, которые допускают допустимые выражения.
-   - **Область применения**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
-    Начиная с версии [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], для модулей, скомпилированных в собственном коде T-SQL, поддерживаются выражения CASE.
+   - **Область применения**: [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)].  
+    Начиная с версии [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], для модулей, скомпилированных в собственном коде T-SQL, поддерживаются выражения CASE.
 
 Предложение SELECT:  
 
@@ -176,8 +176,8 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 -   Битовые операторы ~, &, |, и ^  
 
 -   APPLY, оператор
-    - **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
-      Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], оператор APPLY поддерживается в модулях, скомпилированных в машинном коде.
+    - **Область применения:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].  
+      Начиная с версии [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], оператор APPLY поддерживается в модулях, скомпилированных в машинном коде.
 
 ##  <a name="built-in-functions-in-natively-compiled-modules"></a><a name="bfncsp"></a> Встроенные функции в модулях, скомпилированных в собственном коде  
  В ограничениях таблиц, оптимизированных для памяти, и в модулях, скомпилированных в собственном коде T-SQL, поддерживаются следующие функции.  
@@ -187,8 +187,8 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 -   Функции для работы с датами: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME и YEAR.  
 
 -   Строковые функции: LEN, LTRIM, RTRIM и SUBSTRING.  
-    - **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
-      Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] также поддерживаются следующие встроенные функции: TRIM, TRANSLATE и CONCAT_WS.  
+    - **Область применения:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].  
+      Начиная с версии [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)] также поддерживаются следующие встроенные функции: TRIM, TRANSLATE и CONCAT_WS.  
 
 -   Функции идентификации: SCOPE_IDENTITY  
 
@@ -197,8 +197,8 @@ SELECT TOP (@v) ... FROM ... ORDER BY ...
 -   Функции уникальных идентификаторов: NEWID и NEWSEQUENTIALID  
 
 -   Функции JSON  
-    - **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
-      Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], функции JSON поддерживаются в модулях, скомпилированных в машинном коде.
+    - **Область применения:** [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].  
+      Начиная с версии [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)], функции JSON поддерживаются в модулях, скомпилированных в машинном коде.
 
 -   Функции ошибок: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY и ERROR_STATE  
 

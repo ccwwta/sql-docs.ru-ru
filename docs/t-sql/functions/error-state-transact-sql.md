@@ -24,12 +24,12 @@ ms.assetid: 6059af00-83fe-409f-ab7c-daad111bc671
 author: cawrites
 ms.author: chadam
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9cef172dff8e103a8ece7a8d704cdd7b009c08d4
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 87e5a26589fb7c6bdc3af5fc1698526396dbe7b7
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99158744"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100336851"
 ---
 # <a name="error_state-transact-sql"></a>ERROR_STATE (Transact-SQL)
 
@@ -55,7 +55,7 @@ ERROR_STATE ( )
   
  Возвращает значение NULL в случае вызова вне блока CATCH.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  Некоторые сообщения об ошибках могут возникнуть в нескольких точках кода компонента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Например, в нескольких различных ситуациях может возникнуть ошибка «1105». Каждому определенному условию, вызывающему ошибку, назначен уникальный код состояния.  
   
  При просмотре баз данных известных проблем, например базы знаний [!INCLUDE[msCoName](../../includes/msconame-md.md)], можно по номеру состояния выяснить, соответствует ли запись о проблеме той ошибке, которая возникла. Например, если в статье базы знаний рассматривается сообщение об ошибке 1105 с состоянием 2, а полученное сообщение об ошибке 1105 имеет состояние 3, то в этом случае ошибка произошла по иной причине, чем ошибка, описанная в статье.  

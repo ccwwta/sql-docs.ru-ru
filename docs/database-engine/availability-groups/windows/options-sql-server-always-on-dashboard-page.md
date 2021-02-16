@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: b465e35420035a9c6c10bd8db53a680baf57a4da
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 6a7cfa4984ede1f6f6963006b5a5d5675a78dac8
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643589"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100349249"
 ---
 # <a name="options-sql-server-always-on-dashboard-page"></a>Параметры (страница панели мониторинга SQL Server AlwaysOn)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

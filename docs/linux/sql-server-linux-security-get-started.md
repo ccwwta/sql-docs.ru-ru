@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.openlocfilehash: 4a9137ad71947d222d246df046c6ab573fb4500d
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: f4201aa6c07d4ae96d44d8aa443b23e275e1f9f2
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115817"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346417"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Пошаговое руководство по функциям обеспечения безопасности в SQL Server на Linux
 
@@ -82,12 +82,12 @@ ALTER ROLE db_datareader ADD MEMBER Jerry;
 
 Например, следующие инструкции создают роль базы данных `Sales`, предоставляют группе `Sales` возможность видеть, обновлять и удалять строки из таблицы `Orders`, а затем добавляют пользователя `Jerry` в роль `Sales`.   
    
-```   
-CREATE ROLE Sales;   
-GRANT SELECT ON Object::Sales TO Orders;   
-GRANT UPDATE ON Object::Sales TO Orders;   
-GRANT DELETE ON Object::Sales TO Orders;   
-ALTER ROLE Sales ADD MEMBER Jerry;   
+```   
+CREATE ROLE Sales;   
+GRANT SELECT ON Object::Sales TO Orders;   
+GRANT UPDATE ON Object::Sales TO Orders;   
+GRANT DELETE ON Object::Sales TO Orders;   
+ALTER ROLE Sales ADD MEMBER Jerry;   
 ```
 
 Дополнительные сведения о системе разрешений см. в статье [Приступая к работе с разрешениями ядра СУБД](../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
@@ -99,27 +99,27 @@ ALTER ROLE Sales ADD MEMBER Jerry;  
 
 Ниже описано, как настроить двух пользователей с разным доступом на уровне строк к таблице `Sales.SalesOrderHeader`. 
 
-Создайте две учетные записи пользователей для тестирования безопасности на уровне строк.    
+Создайте две учетные записи пользователей для тестирования безопасности на уровне строк.    
    
-```   
-USE AdventureWorks2014;   
-GO   
+```   
+USE AdventureWorks2014;   
+GO   
    
-CREATE USER Manager WITHOUT LOGIN;     
+CREATE USER Manager WITHOUT LOGIN;     
    
-CREATE USER SalesPerson280 WITHOUT LOGIN;    
+CREATE USER SalesPerson280 WITHOUT LOGIN;    
 ```
 
-Предоставьте обоим пользователям доступ на чтение к таблице `Sales.SalesOrderHeader`.    
+Предоставьте обоим пользователям доступ на чтение к таблице `Sales.SalesOrderHeader`.    
    
-```   
-GRANT SELECT ON Sales.SalesOrderHeader TO Manager;      
+```   
+GRANT SELECT ON Sales.SalesOrderHeader TO Manager;      
 GRANT SELECT ON Sales.SalesOrderHeader TO SalesPerson280;
 ```
    
 Создайте новую схему и встроенную функцию с табличным значением. Функция возвращает 1, если строка в столбце `SalesPersonID` соответствует идентификатору имени входа `SalesPerson` или если пользователь, выполняющий запрос, является пользователем Manager.   
    
-```     
+```     
 CREATE SCHEMA Security;   
 GO   
    
@@ -129,7 +129,7 @@ WITH SCHEMABINDING
 AS     
    RETURN SELECT 1 AS fn_securitypredicate_result    
 WHERE ('SalesPerson' + CAST(@SalesPersonId as VARCHAR(16)) = USER_NAME())     
-    OR (USER_NAME() = 'Manager');    
+    OR (USER_NAME() = 'Manager');    
 ```
 
 Создайте политику безопасности, добавив функцию в качестве фильтра и предиката блокировки для таблицы.  
@@ -172,7 +172,7 @@ WITH (STATE = OFF);
 ```
 USE AdventureWorks2014;
 GO
-ALTER TABLE Person.EmailAddress    
+ALTER TABLE Person.EmailAddress    
 ALTER COLUMN EmailAddress    
 ADD MASKED WITH (FUNCTION = 'email()');
 ``` 
@@ -231,7 +231,7 @@ GO
 CREATE CERTIFICATE MyServerCert WITH SUBJECT = 'My Database Encryption Key Certificate';  
 GO  
 
-USE AdventureWorks2014;  
+USE AdventureWorks2014;  
 GO
   
 CREATE DATABASE ENCRYPTION KEY  
@@ -254,7 +254,7 @@ SET ENCRYPTION ON;
 
 
 ## <a name="configure-backup-encryption"></a>Настройка шифрования резервных копий
-SQL Server может шифровать данные при создании резервной копии. Указав алгоритм шифрования и шифратор (сертификат или асимметричный ключ) при создании резервной копии, можно создать зашифрованный файл резервной копии.    
+SQL Server может шифровать данные при создании резервной копии. Указав алгоритм шифрования и шифратор (сертификат или асимметричный ключ) при создании резервной копии, можно создать зашифрованный файл резервной копии.    
   
 > [!WARNING]
 > Очень важно создать резервную копию сертификата или асимметричного ключа и предпочтительно в ином местоположении, чем зашифрованный ими файл резервной копии. Без сертификата или асимметричного ключа резервную копию нельзя будет восстановить, т. е. файл резервной копии будет непригоден для использования. 
@@ -263,12 +263,12 @@ SQL Server может шифровать данные при создании р
 Следующий пример создает сертификат, а затем создает резервную копию, защищенную этим сертификатом.
 
 ```
-USE master;  
-GO  
-CREATE CERTIFICATE BackupEncryptCert   
-   WITH SUBJECT = 'Database backups';  
+USE master;  
+GO  
+CREATE CERTIFICATE BackupEncryptCert   
+   WITH SUBJECT = 'Database backups';  
 GO 
-BACKUP DATABASE [AdventureWorks2014]  
+BACKUP DATABASE [AdventureWorks2014]  
 TO DISK = N'/var/opt/mssql/backups/AdventureWorks2014.bak'  
 WITH  
   COMPRESSION,  

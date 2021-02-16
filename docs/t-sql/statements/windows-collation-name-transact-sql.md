@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -19,12 +19,12 @@ ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e89cac604654a1793a65bdd43dcd38cf77484b06
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 2fa047e5ef018109352972f3ae139c6eff2c1b93
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98099392"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100349956"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Имя параметров сортировки Windows (Transact-SQL)
 
@@ -75,12 +75,12 @@ ms.locfileid: "98099392"
 Пропуск этого параметра означает, что ширина символов не учитывается, **WS** означает, что ширина символов учитывается.
 
 *VariationSelectorSensitivity*  
-- **Область применения**: Начиная с [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+- **Область применения**: Начиная с [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] 
 
 - Пропуск этого параметра означает, что знаки выбора варианта не учитываются, **VSS** означает, что знаки выбора варианта учитываются.
 
 **UTF8**  
-- **Область применения**: Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
+- **Область применения**: Начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]   
 
 - Указывает кодировку UTF-8, используемую для допустимых типов данных. Дополнительные сведения см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).
 
@@ -134,7 +134,7 @@ SELECT LOWER(NCHAR(504) COLLATE Latin1_General_CI_AS) AS [Version80Collation],
 SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 ```
 
-В следующей таблице приведены все параметры сортировки Windows, поддерживаемые в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+В следующей таблице приведены все параметры сортировки Windows, поддерживаемые в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].
 
 |Локаль Windows|Версия параметров сортировки 100|Версия параметров сортировки 90|
 |--------------------|---------------------------|--------------------------|
