@@ -20,12 +20,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 815ad066f97a80d250dcd1c3b1a961e4a86b05a6
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 47545adc6e3e620cd74585d477bdd028f1e8625f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97416952"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100352490"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Руководство по блокировке и управлению версиями строк транзакций
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -912,7 +912,7 @@ GO
 #### <a name="deadlock-extended-event"></a><a name="deadlock_xevent"></a> Расширенное событие взаимоблокировки
 Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], в трассировке SQL или профилировщике SQL Profiler следует использовать расширенное событие `xml_deadlock_report` (xEvent) вместо класса событий графа взаимоблокировки.
 
-Кроме того, начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] при возникновении взаимоблокировки сеанс **_system\_health_* _ захватывает все события xEvent `xml_deadlock_report`, содержащие граф взаимоблокировки. Та как сеанс _system\_health* включен по умолчанию, не требуется настраивать отдельный сеанс xEvent на сбор сведений о взаимоблокировках. 
+Кроме того, начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] при возникновении взаимоблокировки сеанс ***system\_health** _ захватывает все события xEvent `xml_deadlock_report`, содержащие граф взаимоблокировки. Та как сеанс _system\_health* включен по умолчанию, не требуется настраивать отдельный сеанс xEvent на сбор сведений о взаимоблокировках. 
 
 Зафиксированный граф взаимоблокировки обычно имеет три узла:
 -   **victim-list**. Идентификатор процесса жертвы взаимоблокировки.

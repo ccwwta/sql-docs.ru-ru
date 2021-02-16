@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 03c9c90f1c9382c85141853ff19cc5d76b40f093
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 7313fbc789b37cf326d55566c1f087f80b4929df
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115942"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100351946"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Настройка группы доступности Always On SQL Server для обеспечения высокой доступности в Linux
 
@@ -178,8 +178,8 @@ ms.locfileid: "92115942"
          FAILOVER_MODE = EXTERNAL,
          SEEDING_MODE = AUTOMATIC
       ),
-      N'node2' WITH ( 
-         ENDPOINT_URL = N'tcp://node2:5022', 
+      N'node2' WITH ( 
+         ENDPOINT_URL = N'tcp://node2:5022', 
          AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,
          FAILOVER_MODE = EXTERNAL,
          SEEDING_MODE = AUTOMATIC
@@ -211,7 +211,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 [!INCLUDE [Create Post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
 >[!IMPORTANT]
->После создания группы доступности необходимо настроить интеграцию с кластерной технологией, такой как Pacemaker, для обеспечения высокой доступности. Начиная с [!INCLUDE [SQL Server version](../includes/sssqlv14-md.md)] в конфигурации для чтения и масштабирования настраивать кластер не требуется.
+>После создания группы доступности необходимо настроить интеграцию с кластерной технологией, такой как Pacemaker, для обеспечения высокой доступности. Начиная с [!INCLUDE [SQL Server version](../includes/sssql17-md.md)] в конфигурации для чтения и масштабирования настраивать кластер не требуется.
 
 Если вы выполнили действия, описанные в этом документе, то в вашем распоряжении находится еще не кластеризованная группа доступности. Далее следует добавить кластер. Такая конфигурация допустима для сценариев чтения и масштабирования или балансировки нагрузки, но она является неполной для обеспечения высокой доступности. Для обеспечения высокой доступности необходимо добавить группу доступности в качестве ресурса кластера. Инструкции см. в разделе [Следующие шаги](#next-steps). 
 

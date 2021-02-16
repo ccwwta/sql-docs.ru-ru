@@ -19,18 +19,18 @@ ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 942e69f127b37fa6caf4ba83605fabdf4a31da38
-ms.sourcegitcommit: 1a544cf4dd2720b124c3697d1e62ae7741db757c
+ms.openlocfilehash: 8872cf6e593279a282c34868a2f019ac82e5bf01
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2020
-ms.locfileid: "97408280"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100339490"
 ---
 # <a name="write-international-transact-sql-statements"></a>Написание инструкций Transact-SQL, адаптированных к международному использованию
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   В базах данных и использующих их приложениях, в которых применяются инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)] , можно обеспечить большую степень языковой переносимости или поддержку нескольких языков при условии соблюдения следующих требований.  
 
--   Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] следует использовать:
+-   Начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] и в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] следует использовать:
     -   типы данных **char**, **varchar** и **varchar(max)** с параметрами сортировки с поддержкой [символов UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf8); данные кодируются с помощью UTF-8;
     -   типы данных **nchar**, **nvarchar** и **nvarchar(max)** с параметрами сортировки с поддержкой [дополнительных символов](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters); данные кодируются с помощью UTF-16. Использование параметров сортировки, не поддерживающих дополнительные символы, приводит к кодированию данных с использованием UCS-2.      
 

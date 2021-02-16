@@ -7,7 +7,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
-ms.topic: language-reference
+ms.topic: reference
 f1_keywords:
 - CREATE EXTERNAL DATA SOURCE
 - CREATE_EXTERNAL_DATA_SOURCE
@@ -20,12 +20,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74a6b4985ab31d69813e305c92ee80ae8bca75d2
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 807994f4a6e1f3c7b426c3a7c47ecdf7c152ea3b
+ms.sourcegitcommit: b1cec968b919cfd6f4a438024bfdad00cf8e7080
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98171646"
+ms.lasthandoff: 02/01/2021
+ms.locfileid: "100070695"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -63,7 +63,7 @@ ms.locfileid: "98171646"
 - Виртуализация и загрузка данных с помощью [PolyBase][intro_pb]
 - Операции массовой загрузки с помощью `BULK INSERT` или `OPENROWSET`
 
-**Область применения**: Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]
+**Область применения**: Начиная с [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -91,13 +91,13 @@ WITH
 
 | Внешний источник данных    | Префикс расположения | Путь к расположению                                         | Поддерживаемые расположения по продукту или службе |
 | ----------------------- | --------------- | ----------------------------------------------------- | ---------------------------------------- |
-| Cloudera или Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   | Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]                       |
-| Учетная запись хранения Azure (v2) | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | Начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] иерархическое пространство имен **не поддерживается** |
-| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]              | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]                       |
-| Oracle;                  | `oracle`        | `<server_name>[:port]`                                | Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]                       |
-| Teradata                | `teradata`      | `<server_name>[:port]`                                | Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]                       |
-| MongoDB или CosmosDB     | `mongodb`       | `<server_name>[:port]`                                | Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]                       |
-| ODBC                    | `odbc`          | `<server_name>[:port]`                                | Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] — только Windows        |
+| Cloudera или Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   | Начиная с [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)]                       |
+| Учетная запись хранения Azure (v2) | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | Начиная с [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] иерархическое пространство имен **не поддерживается** |
+| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]              | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | Начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]                       |
+| Oracle;                  | `oracle`        | `<server_name>[:port]`                                | Начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]                       |
+| Teradata                | `teradata`      | `<server_name>[:port]`                                | Начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]                       |
+| MongoDB или CosmosDB     | `mongodb`       | `<server_name>[:port]`                                | Начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]                       |
+| ODBC                    | `odbc`          | `<server_name>[:port]`                                | Начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] — только Windows        |
 | массовые операции         | `https`         | `<storage_account>.blob.core.windows.net/<container>` | Начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]                        |
 | Центр Edge         | `edgehub`         | Неприменимо | EdgeHub всегда является локальным для экземпляра [SQL Azure для пограничных вычислений](/azure/azure-sql-edge/overview/). Поэтому нет необходимости указывать путь или значение порта. Доступно только в SQL Azure для пограничных вычислений.                      |
 | Kafka        | `kafka`         | `<Kafka IP Address>[:port]` | Доступно только в SQL Azure для пограничных вычислений.                      |
@@ -115,7 +115,7 @@ WITH
 
 - [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] не проверяет существование внешнего источника данных, когда создает объект. Для проверки при создании внешней таблицы используйте внешний источник данных.
 - Используйте один и тот же внешний источник данных для всех таблиц при запросе Hadoop, чтобы обеспечить согласованность семантики запросов.
-- Префикс расположения `sqlserver` можно использовать для подключения [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] к другому [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] или к Azure Synapse Analytics.
+- Префикс расположения `sqlserver` можно использовать для подключения [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] к другому [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] или к Azure Synapse Analytics.
 - Укажите `Driver={<Name of Driver>}` при подключении через `ODBC`.
 - `wasbs` необязателен, но рекомендуется к использованию при доступе к учетным записям службы хранилища Azure, так как тогда данные будут передаваться по защищенному каналу TLS/SSL.
 - API `abfs` или `abfss` не поддерживаются при доступе к учетным записям хранения Azure.
@@ -160,7 +160,7 @@ WITH
 Указывает тип настраиваемого внешнего источника данных. Этот параметр требуется не всегда.
 
 - Используйте HADOOP, если внешний источник данных — Cloudera, Hortonworks или учетная запись службы хранилища Azure.
-- Используйте BLOB_STORAGE при выполнении пакетных операций из учетной записи службы хранилища Azure с использованием инструкций [BULK INSERT][bulk_insert] или [OPENROWSET][openrowset] с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
+- Используйте BLOB_STORAGE при выполнении пакетных операций из учетной записи службы хранилища Azure с использованием инструкций [BULK INSERT][bulk_insert] или [OPENROWSET][openrowset] с [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].
 
 > [!IMPORTANT]
 > Не устанавливайте `TYPE` при использовании любого другого источника внешних данных.
@@ -212,7 +212,7 @@ PolyBase поддерживает проверку подлинности на �
 
 `Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
 
-## <a name="examples-starting-with-sssql15"></a>Примеры (начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)])
+## <a name="examples-starting-with-sssql16-md"></a>Примеры (начиная с [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)])
 
 > [!IMPORTANT]
 > Сведения о том, как установить и включить PolyBase, см. в разделе [Установка PolyBase в Windows](../../relational-databases/polybase/polybase-installation.md).
@@ -314,7 +314,7 @@ WITH
   ) ;
 ```
 
-### <a name="f-create-external-data-source-to-reference-a-sql-server-named-instance-via-polybase-connectivity-sql-server-2019"></a>Е. Создание внешнего источника данных для ссылки на именованный экземпляр SQL Server через соединение Polybase ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+### <a name="f-create-external-data-source-to-reference-a-sql-server-named-instance-via-polybase-connectivity-sql-server-2019"></a>Е. Создание внешнего источника данных для ссылки на именованный экземпляр SQL Server через соединение Polybase ([!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)])
 
 Чтобы создать внешний источник данных, ссылающийся на именованный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], можно использовать CONNECTION_OPTIONS для указания имени экземпляра. В приведенном ниже примере `WINSQL2019` — это имя узла, а `SQL2019` — имя экземпляра.
 
@@ -368,7 +368,7 @@ go
 
 ### <a name="i-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-storage"></a>И. Создание внешнего источника данных для массовых операций, извлекающих данные из службы хранилища Azure
 
-**Область применения**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
+**Область применения**: [!INCLUDE [sssql17-md](../../includes/sssql17-md.md)].
 Используйте следующий источник данных для массовых операций, выполняемых с использованием инструкций [BULK INSERT][bulk_insert] или [OPENROWSET][openrowset]. Используемые учетные данные должны задавать `SHARED ACCESS SIGNATURE` в качестве идентификатора, не должны иметь `?` в начале маркера SAS, должны иметь по крайней мере разрешение на чтение загружаемого файла (например, `srt=o&sp=r`), и иметь допустимый срок действия (все даты должны быть указаны в формате UTC). Дополнительные сведения о подписанных URL-адресах см. в статье [Использование подписанных URL-адресов][sas_token].
 
 ```sql

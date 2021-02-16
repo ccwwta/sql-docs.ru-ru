@@ -13,12 +13,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74e4df5fc33b90ae9e455d566b41e6eae71408ac
-ms.sourcegitcommit: 33f0f190f962059826e002be165a2bef4f9e350c
+ms.openlocfilehash: 45540a538982f75033f35ad759782317983dc958
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2021
-ms.locfileid: "99187787"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100071818"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>Недетерминированное преобразование строк дат литералов в значения DATE
 
@@ -60,7 +60,7 @@ SL_Polish
 
 SL_Croatian
 2018-10-28
-**_/
+***/
 ```
 
 
@@ -69,7 +69,7 @@ SL_Croatian
 
 - `SET DATEFORMAT dmy;`
 
-Предыдущий формат _ *ДМГ** указывает, что пример строки даты "01-03-2018" будет интерпретироваться как _первый день марта 2018 года_.
+Предыдущий формат **ДМГ** указывает, что пример строки даты "01-03-2018" будет интерпретироваться как _первый день марта 2018 года_.
 
 Если указан формат **МДГ**, то "01-03-2018" означает _третий день января 2018 года_.
 
@@ -115,10 +115,10 @@ MDY-Interpretation-of-input-format
 
 YMD-Interpretation--?--NotGuaranteed
 2018-12-09
-**_/
+***/
 ```
 
-В предыдущем примере кода в последнем примере есть несоответствие между форматом _ *ГМД** и входной строкой. Третий узел входной строки представляет числовое значение, слишком большое для дня. Корпорация Майкрософт не гарантирует выходное значение в таких случаях.
+В предыдущем примере кода в последнем примере есть несоответствие между форматом **ГМД** и входной строкой. Третий узел входной строки представляет числовое значение, слишком большое для дня. Корпорация Майкрософт не гарантирует выходное значение в таких случаях.
 
 #### <a name="convert-offers-explicit-codes-for-_deterministic_-control-of-date-formats"></a>CONVERT предлагает явные коды для _детерминированного_ управления форматами даты
 

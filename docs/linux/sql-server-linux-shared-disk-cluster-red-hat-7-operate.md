@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
-ms.openlocfilehash: 639e88a96ac639d20a6190bffeed75d46495aa51
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 272bc33012e37c58f6a3f8ea0ed51f1c216d716f
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785070"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100346274"
 ---
 # <a name="operate-rhel-failover-cluster-instance-fci-for-sql-server"></a>Работа экземпляра отказоустойчивого кластера RHEL для SQL Server
 
@@ -41,10 +41,10 @@ ms.locfileid: "91785070"
 
 ## <a name="failover-cluster-manually"></a><a name = "failManual"></a>Ручная отработка отказа кластера
 
-Команда `resource move` создает ограничение, принудительно запуская ресурс на целевом узле.  После выполнения команды `move` ресурс `clear` удалит ограничение, чтобы можно было снова переместить ресурс или автоматически выполнить отработку отказа ресурса. 
+Команда `resource move` создает ограничение, принудительно запуская ресурс на целевом узле.    После выполнения команды `move` ресурс `clear` удалит ограничение, чтобы можно было снова переместить ресурс или автоматически выполнить отработку отказа ресурса. 
 
 ```bash
-sudo pcs resource move <sqlResourceName> <targetNodeName>  
+sudo pcs resource move <sqlResourceName> <targetNodeName>  
 sudo pcs resource clear <sqlResourceName> 
 ```
 
@@ -60,7 +60,7 @@ sudo pcs resource clear mssqlha
 Просмотр текущего состояния кластера:
 
 ```bash
-sudo pcs status  
+sudo pcs status  
 ```
 
 Просмотр динамического состояния кластера и ресурсов:
@@ -183,7 +183,7 @@ sudo crm_mon
     В следующем примере в кластер добавляется узел с именем **vm3**.
 
     ```bash
-    sudo pcs    cluster auth  
+    sudo pcs    cluster auth  
     sudo pcs    cluster start 
     ```
 
@@ -192,7 +192,7 @@ sudo crm_mon
 Чтобы удалить узел из кластера, выполните следующую команду:
 
 ```bash
-sudo pcs    cluster node remove <nodeName>  
+sudo pcs    cluster node remove <nodeName>  
 ```
 
 ## <a name="change-the-frequency-of-sqlservr-resource-monitoring-interval"></a>Изменение частоты интервала мониторинга ресурсов sqlservr
@@ -226,7 +226,7 @@ sudo pcs    resource op monitor interval=2s mssqlha
 
 ```
 Cluster name: MyAppSQL 
-Last updated: Wed Oct 31 12:00:00 2016  Last change: Wed Oct 31 11:00:00 2016 by root via crm_resource on sqlvmnode1 
+Last updated: Wed Oct 31 12:00:00 2016  Last change: Wed Oct 31 11:00:00 2016 by root via crm_resource on sqlvmnode1 
 Stack: corosync 
 Current DC: sqlvmnode1  (version 1.1.13-10.el7_2.4-44eb2dd) - partition with quorum 
 3 nodes and 1 resource configured 
