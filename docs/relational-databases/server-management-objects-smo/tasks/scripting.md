@@ -1,5 +1,5 @@
 ---
-description: Скрипты
+description: Написание сценариев
 title: Написание скриптов | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/06/2017
@@ -22,7 +22,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 02/10/2021
 ms.locfileid: "100352700"
 ---
-# <a name="scripting"></a>Скрипты
+# <a name="scripting"></a>Написание сценариев
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Скрипты в объектах SMO управляются <xref:Microsoft.SqlServer.Management.Smo.Scripter> объектом и его дочерними объектами или методом **скрипта** для отдельных объектов. <xref:Microsoft.SqlServer.Management.Smo.Scripter>Объект управляет сопоставлением из отношений зависимости для объектов в экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  

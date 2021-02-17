@@ -26,7 +26,7 @@ ms.locfileid: "100354078"
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (или более поздней версии) или [базы данных SQL Azure](https://azure.microsoft.com/services/sql-database/). Для полной версии примера используйте SQL Server Evaluation, Developer или Enterprise Edition.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Для получения наилучших результатов используйте выпуск Июнь 2016 или более поздней версии.
 
-## <a name="download"></a>Скачать
+## <a name="download"></a>Скачивание
 
 Последний выпуск примера:
 

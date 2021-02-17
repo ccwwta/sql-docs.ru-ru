@@ -110,7 +110,7 @@ ms.locfileid: "100344211"
 - `xp_ora2ms_exec2_ex`
 - `xp_ora2ms_versioninfo2`
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 - [Установка SSMA для клиента Oracle](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)
 - [Миграция баз данных Oracle в SQL Server](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)

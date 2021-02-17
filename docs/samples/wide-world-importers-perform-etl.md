@@ -38,12 +38,12 @@ ms.locfileid: "100354057"
 ## <a name="prerequisites"></a>Предварительные требования
 
 - SQL Server 2016 (или более поздней версии) с базами данных WideWorldImporters и WideWorldImportersDW (в том же или в разных экземплярах SQL Server)
-- SQL Server Management Studio.
+- SQL Server Management Studio
 - Службы SQL Server 2016 Integration Services
   - Убедитесь, что создан каталог Integration Services. Чтобы создать каталог Integration Services, в SQL Server Management Studio обозревателе объектов щелкните правой кнопкой мыши **Integration Services**, а затем выберите **Добавить каталог**. Оставьте параметры по умолчанию. Вам будет предложено включить SQLCLR и указать пароль.
 
 
-## <a name="download"></a>Скачать
+## <a name="download"></a>Скачивание
 
 Последний выпуск примера см. в разделе широкие средства [импорта данных — выпуск](https://go.microsoft.com/fwlink/?LinkID=800630). Скачайте файл пакета *ETL. ISPAC ежедневно* Integration Services.
 

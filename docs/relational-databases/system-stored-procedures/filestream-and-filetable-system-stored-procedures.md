@@ -37,7 +37,7 @@ ms.locfileid: "100346701"
   Закрывает нетранзакционные дескрипторы файлов для данных FileTable.
 
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 [Файловый поток](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Таблицы FileTable](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Динамические административные представления Filestream и FileTable (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)

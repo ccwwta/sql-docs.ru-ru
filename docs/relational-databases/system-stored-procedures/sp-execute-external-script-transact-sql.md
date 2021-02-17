@@ -322,7 +322,7 @@ GO
 
 Для оценки можно также применять собственную функцию [PREDICT](../../t-sql/queries/predict-transact-sql.md), которая обычно выполняется быстрее, так как не вызывает среду выполнения Python или R.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 + [Машинное обучение SQL](../../machine-learning/index.yml)
 + [Расширения языка SQL Server](../../language-extensions/language-extensions-overview.md). 

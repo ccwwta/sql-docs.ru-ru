@@ -180,7 +180,7 @@ INNER JOIN sys.query_store_query_text AS qsqt ON qsqt.query_text_id = qsq.query_
 Требуется `VIEW SERVER STATE` разрешение в [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] .   
 Требуется `VIEW DATABASE STATE` разрешение для базы данных в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .   
 
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
  [Автоматическая настройка](../../relational-databases/automatic-tuning/automatic-tuning.md)   
  [sys.database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)   
  [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   

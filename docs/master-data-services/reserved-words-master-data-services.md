@@ -59,7 +59,7 @@ ms.locfileid: "100340227"
   
 -   **LastChgUserName**  
   
--   **Имя**  
+-   **имя**;  
   
 -   **EnterDTM**  
   
