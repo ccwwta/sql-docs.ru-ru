@@ -122,6 +122,8 @@
           href: notebooks/notebooks-kusto-kernel.md
         - name: Использование Kqlmagic
           href: notebooks/notebooks-kqlmagic.md
+        - name: Использование параметризации
+          href: notebooks/notebooks-parameterization.md
     - name: Развертывание
       items:
         - name: Развертывание Базы данных SQL Azure

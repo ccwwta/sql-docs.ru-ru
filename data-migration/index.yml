@@ -1,0 +1,159 @@
+### YamlMime:Hub
+title: Руководства по переносу баз данных Azure
+summary: 'Пошаговое руководство по модернизации ресурсов данных. '
+brand: sql
+metadata:
+  title: Руководства по переносу баз данных Azure | Документация Майкрософт
+  description: Пошаговое руководство по модернизации ресурсов данных.
+  ms.topic: hub-page
+  ms.openlocfilehash: 86398df9a3f1c2deeec590589d31fc183bd2970e
+  ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 02/13/2021
+  ms.locfileid: "100336495"
+conceptualContent:
+  items:
+  - title: SQL Server —
+    links:
+    - text: SQL Server (более новой версии)
+      url: azure-data-studio/quickstart-sql-server.md
+      itemType: architecture
+    - text: База данных SQL Azure
+      url: ssms/tutorials/connect-query-sql-server.md
+      itemType: concept
+    - text: Управляемый экземпляр SQL Azure
+      url: t-sql/tutorial-writing-transact-sql-statements.md
+      itemType: deploy
+    - text: SQL Server на виртуальных машинах Azure
+      url: linux/quickstart-install-connect-docker.md
+      itemType: download
+  - title: Oracle —
+    links:
+    - text: SQL Server
+      url: azure-data-studio/quickstart-sql-server.md
+      itemType: get-started
+    - text: База данных SQL Azure
+      url: ssms/tutorials/connect-query-sql-server.md
+      itemType: how-to-guide
+    - text: Управляемый экземпляр SQL Azure
+      url: t-sql/tutorial-writing-transact-sql-statements.md
+      itemType: video
+    - text: SQL Server на виртуальных машинах Azure
+      url: linux/quickstart-install-connect-docker.md
+      itemType: whats-new
+  - title: DB2 —
+    links:
+    - text: SQL Server
+      url: azure-data-studio/quickstart-sql-server.md
+      itemType: quickstart
+    - text: База данных SQL Azure
+      url: ssms/tutorials/connect-query-sql-server.md
+      itemType: quickstart
+    - text: Управляемый экземпляр SQL Azure
+      url: t-sql/tutorial-writing-transact-sql-statements.md
+      itemType: quickstart
+    - text: SQL Server на виртуальных машинах Azure
+      url: linux/quickstart-install-connect-docker.md
+      itemType: quickstart
+  - title: MySQL —
+    links:
+    - text: SQL Server
+      url: azure-data-studio/quickstart-sql-server.md
+      itemType: quickstart
+    - text: База данных SQL Azure
+      url: ssms/tutorials/connect-query-sql-server.md
+      itemType: quickstart
+    - text: Управляемый экземпляр SQL Azure
+      url: t-sql/tutorial-writing-transact-sql-statements.md
+      itemType: quickstart
+    - text: SQL Server на виртуальных машинах Azure
+      url: linux/quickstart-install-connect-docker.md
+      itemType: quickstart
+  - title: PostgreSQL —
+    links:
+    - text: База данных Azure для PostgreSQL
+      url: azure-data-studio/quickstart-sql-server.md
+      itemType: quickstart
+  - title: MongoDB —
+    links:
+    - text: Azure CosmosDB
+      url: azure-data-studio/quickstart-sql-server.md
+      itemType: quickstart
+  - title: Cassandra —
+    links:
+    - text: Azure CosmosDB
+      url: azure-data-studio/quickstart-sql-server.md
+      itemType: quickstart
+  - title: MariaDB —
+    links:
+    - text: База данных Azure для MariaDB
+      url: azure-data-studio/quickstart-sql-server.md
+      itemType: quickstart
+  - title: Access —
+    links:
+    - text: SQL Server
+      url: azure-data-studio/quickstart-sql-server.md
+      itemType: quickstart
+    - text: База данных SQL Azure
+      url: ssms/tutorials/connect-query-sql-server.md
+      itemType: quickstart
+    - text: Управляемый экземпляр SQL Azure
+      url: t-sql/tutorial-writing-transact-sql-statements.md
+      itemType: quickstart
+    - text: SQL Server на виртуальных машинах Azure
+      url: linux/quickstart-install-connect-docker.md
+      itemType: quickstart
+  - title: SAP ASE —
+    links:
+    - text: SQL Server (более новой версии)
+      url: azure-data-studio/quickstart-sql-server.md
+      itemType: quickstart
+    - text: База данных SQL Azure
+      url: ssms/tutorials/connect-query-sql-server.md
+      itemType: quickstart
+    - text: Управляемый экземпляр SQL Azure
+      url: t-sql/tutorial-writing-transact-sql-statements.md
+      itemType: quickstart
+    - text: SQL Server на виртуальных машинах Azure
+      url: linux/quickstart-install-connect-docker.md
+      itemType: quickstart
+  - title: Хранилище таблиц Microsoft Azure —
+    links:
+    - text: Azure CosmosDB
+      url: azure-data-studio/quickstart-sql-server.md
+      itemType: quickstart
+tools:
+  title: Языки и инструменты
+  items:
+  - title: Служба "Миграция Azure"
+    imageSrc: https://docs.microsoft.com/media/logos/logo_python.svg
+    url: /azure/developer/python/
+  - title: Azure Database Migration Service
+    imageSrc: ./media/index/net-logo.svg
+    url: /dotnet/azure/
+  - title: Помощник по переносу баз данных (DMA)
+    imageSrc: https://docs.microsoft.com/media/logos/logo_js.svg
+    url: /azure/developer/javascript/
+  - title: Помощник по миграции SQL Server
+    imageSrc: https://docs.microsoft.com/media/logos/logo_java.svg
+    url: /azure/developer/java/
+additionalContent:
+  sections:
+  - title: Конкретные случаи
+    items:
+    - title: Capita
+      summary: Выделенное облако для правительственных учреждений США и их партнеров.
+      url: azure-government/index.yml
+    - title: Willis Towers Watson
+      summary: Выделенное облако, которое соответствует правилам обработки данных в Германии.
+      url: germany/index.yml
+    - title: Innovative Systems
+      summary: Выделенное облако, расположенное в Китае и управляемое 21Vianet.
+      url: /azure/china/
+    - title: Geekwire
+      summary: Выделенное облако, расположенное в Китае и управляемое 21Vianet.
+      url: /azure/china/
+    - title: Vipps
+      summary: Выделенное облако, расположенное в Китае и управляемое 21Vianet.
+      url: /azure/china/

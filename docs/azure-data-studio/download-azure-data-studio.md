@@ -8,13 +8,13 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 1/22/2021
-ms.openlocfilehash: 1832c528f302d45a4f098a6e8fe2aa6300ca10ec
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.date: 2/10/2021
+ms.openlocfilehash: bb7bd4db8a8241e184b41170fe46664955612ec1
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100054438"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100342512"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Скачивание и установка Azure Data Studio
 
@@ -26,9 +26,9 @@ Azure Data Studio предлагает современный редактор �
 
 | Платформа | Скачивание | Дата выпуска | Версия |
 |----------|----------|--------------|---------|
-| Windows | [Пользовательский установщик (рекомендуется)](https://go.microsoft.com/fwlink/?linkid=2150927)<br>[Системный установщик](https://go.microsoft.com/fwlink/?linkid=2150928)<br>[ZIP](https://go.microsoft.com/fwlink/?linkid=2151312) | 22 января 2021 г. | 1.25.2 |
-| macOS | [ZIP](https://go.microsoft.com/fwlink/?linkid=2151311) | 22 января 2021 г. | 1.25.2 |
-| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2151506)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2151407)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2151508) | 22 января 2021 г. | 1.25.2 |
+| Windows | [Пользовательский установщик (рекомендуется)](https://go.microsoft.com/fwlink/?linkid=2150927)<br>[Системный установщик](https://go.microsoft.com/fwlink/?linkid=2150928)<br>[ZIP](https://go.microsoft.com/fwlink/?linkid=2151312) | 10 февраля 2021 г. | 1.25.3 |
+| macOS | [ZIP](https://go.microsoft.com/fwlink/?linkid=2151311) | 10 февраля 2021 г. | 1.25.3 |
+| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2151506)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2151407)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2151508) | 10 февраля 2021 г. | 1.25.3 |
 
 **Подробнее см. в [заметках о выпуске](./release-notes-azure-data-studio.md).**
 

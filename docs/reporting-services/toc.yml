@@ -347,11 +347,11 @@
         - name: Наблюдение за производительностью сервера отчетов
           href: ../reporting-services/report-server/monitoring-report-server-performance.md
           items:
-            - name: Счетчики производительности для объектов производительности веб-службы MSRS 2011 и службы Windows MSRS 2011 (собственный режим)
+            - name: "Счетчики производительности, объекты производительности веб-службы MSRS\_2016 и службы Windows для MSRS\_2016 (собственный режим)"
               href: ../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md
-            - name: Счетчики производительности для объектов производительности веб-службы MSRS 2011 и службы Windows MSRS 2011 в режиме интеграции с SharePoint (режим SharePoint)
+            - name: "Счетчики производительности, объекты производительности веб-службы MSRS\_2016 в режиме интеграции с SharePoint и службы Windows для MSRS\_2016 в режиме интеграции с SharePoint"
               href: ../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md
-            - name: 'Счетчики производительности для объектов производительности ReportServer:Service и ReportServerSharePoint:Service'
+            - name: 'Счетчики производительности, объекты производительности ReportServer:Service и ReportServerSharePoint:Service'
               href: ../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md
         - name: Установка свойств обработки отчетов
           href: ../reporting-services/report-server/set-report-processing-properties.md
