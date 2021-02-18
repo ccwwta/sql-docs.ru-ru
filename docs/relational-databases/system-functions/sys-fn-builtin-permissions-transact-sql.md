@@ -322,7 +322,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |XA|EXTERNAL ACCESS ASSEMBLY|SERVER|  
 |XU|UNSAFE ASSEMBLY|SERVER|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Функция с табличным значением `sys.fn_builtin_permissions` выдает копию стандартной иерархии разрешений. Такая иерархия включает в себя покрытие разрешений. `DEFAULT`Результирующий набор описывает направленную ациклический диаграмму иерархии разрешений, для которой корневой каталог имеет значение (класс = сервер, разрешение = сервер управления).  
   
  Функция `sys.fn_builtin_permissions` не принимает связанные параметры.  
