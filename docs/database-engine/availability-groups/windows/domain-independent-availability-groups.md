@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 6c809abd5c333013b197dd48ca2fb4832bf6b615
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 060e9e635aa7be4dd3c00e11b0f3a36073cdaa54
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97643620"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100349284"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>Создание группы доступности, независимой от домена
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -150,10 +150,10 @@ ms.locfileid: "97643620"
          )
    ```
 
-13. Назначьте каждому пользователю, созданному в этом экземпляре при выполнении шага 9, права, необходимые для подключения к конечной точке. 
+13. Назначьте каждому имени входа, созданному в этом экземпляре при выполнении шага 8, права, необходимые для подключения к конечной точке. 
 
    ```sql
-   GRANT CONNECT ON ENDPOINT::DIAG_EP TO [InstanceX_User];
+   GRANT CONNECT ON ENDPOINT::DIAG_EP TO [InstanceX_Login];
    GO
    ```
 

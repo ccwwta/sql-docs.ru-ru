@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: 4038ba678af8635f3ac2bd12f68c818a61e2c87f
-ms.sourcegitcommit: f30b5f61c514437ea58acc5769359c33255b85b5
+ms.openlocfilehash: 86f23acdc6dd82210c5747915d78aafc2344fc6b
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2021
-ms.locfileid: "99075637"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100348099"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Восстановление базы данных SQL Server до определенного момента времени (модель полного восстановления)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -156,7 +156,7 @@ ms.locfileid: "99075637"
   
 3.  Восстановите последнюю разностную резервную копию, если таковая имеется, без восстановления базы данных (RESTORE DATABASE *имя_базы_данных* FROM *устройство_резервного_копирования* WITH NORECOVERY).  
   
-4.  Восстановите каждую резервную копию журнала транзакций в той же последовательности, в которой они были созданы, указывая время, с которого необходимо остановить восстановление журнала (RESTORE DATABASE *имя_базы_данных* FROM <устройство_резервного_копирования> WITH STOPAT **=**_time_**,** RECOVERY).  
+4.  Восстановите каждую резервную копию журнала транзакций в той же последовательности, в которой они были созданы, указывая время, с которого необходимо остановить восстановление журнала (RESTORE DATABASE *имя_базы_данных* FROM <устройство_резервного_копирования> WITH STOPAT **=** _время_ **,** RECOVERY).  
   
     > [!NOTE]  
     >  Параметры RECOVERY и STOPAT. Если в резервной копии журнала транзакций не содержится требуемое время (например, если указанное время выходит за рамки времени, отраженного в журнале транзакций), создается предупреждение и база данных остается невосстановленной.  

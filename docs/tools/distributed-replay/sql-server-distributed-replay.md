@@ -11,12 +11,12 @@ ms.author: maghan
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 2083c38c426b9a684badf664dfbdad5de53b7c14
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cbd95e11c4d85ec3fed28559cec0d2eb98048247
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732193"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100336017"
 ---
 # <a name="sql-server-distributed-replay"></a>Распределенное воспроизведение SQL Server
 
@@ -44,7 +44,7 @@ ms.locfileid: "85732193"
 
 |Инструмент|Применение|
 |----------|---------------|
-| Приложение SQL Server Profiler | Нужно использовать обычный механизм воспроизведения на одном компьютере. В частности, если необходимы возможности построчной отладки, такие как команды **По шагам**, **Выполнить до текущей позиции**и **Точка останова** .<br /><br /> Необходимо воспроизвести трассировку служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . |
+| Приложение SQL Server Profiler | Нужно использовать обычный механизм воспроизведения на одном компьютере. В частности, если необходимы возможности построчной отладки, такие как команды **По шагам**, **Выполнить до текущей позиции** и **Точка останова** .<br /><br /> Необходимо воспроизвести трассировку служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . |
 | Распределенное воспроизведение |Необходимо оценить совместимость приложений. Например, нужно протестировать варианты обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и операционной системы, модернизацию оборудования или настройку индекса.<br /><br /> Уровень параллелизма в записанной трассировке настолько высок, что один клиент воспроизведения не сможет ее смоделировать.|  
 
 ## <a name="distributed-replay-concepts"></a>Основные понятия распределенного воспроизведения

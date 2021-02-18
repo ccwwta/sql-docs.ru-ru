@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 6b68cb2b2ff3712502ef4e0862fe71ad78705d7c
-ms.sourcegitcommit: c52a6aeb6fa6d7c3a86b3e84449361f4a0949ad0
+ms.openlocfilehash: e1e14db6e55ca4af4f76220c0e3f377c38e41165
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "99623764"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100351874"
 ---
 # <a name="tutorial-configure-active-directory-authentication-with-sql-server-on-linux-using-adutil"></a>Руководство по Настройка проверки подлинности Active Directory в SQL Server на Linux с помощью adutil
 
@@ -70,9 +70,10 @@ ms.locfileid: "99623764"
 
 ### <a name="ubuntu"></a>Ubuntu
 
-1. Зарегистрируйте репозиторий Ubuntu для Майкрософт.
+1. Импортируйте ключи GPG в общедоступном репозитории, а затем зарегистрируйте репозиторий Microsoft Ubuntu.
 
     ```bash
+    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
     sudo curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
     ```
 

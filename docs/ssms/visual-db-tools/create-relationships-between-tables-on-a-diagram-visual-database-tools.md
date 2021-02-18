@@ -13,12 +13,12 @@ ms.assetid: 28e9630c-dff4-46cc-bb0e-fe77998b6ac2
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 0b758a04f81dffc31844af91933a544960f6ba2d
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 5dd6604f4fb82a502402d74cb15c0a0744f82e0e
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037535"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350460"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>Создание связи между таблицами на диаграмме (визуальные инструменты для баз данных)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "92037535"
   
 3.  Отображаются два диалоговых окна: **Связь по внешнему ключу** и **Таблицы и столбцы**, второе отображается на переднем плане.  
   
-4.  **Имя связи** устанавливается системой в формате FK_*локальная_таблица*\_*таблица_внешнего_ключа*. Можно изменить это значение.  
+4.  **Имя связи** устанавливается системой в формате FK_ *локальная_таблица*\_*таблица_внешнего_ключа*. Можно изменить это значение.  
   
 5.  Убедитесь, что **Таблица первичного ключа** правильно задает таблицу.  
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 789178113f1e22df2d2cf028d2f6e5f93e9b5b0e
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 253c398e0f010e164d1efa5c39fc958e86047ed6
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646824"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100064059"
 ---
 # <a name="new-to-linux-resources-for-sql-users"></a>Ресурсы для пользователей SQL, не знакомых с Linux
 
@@ -63,6 +63,6 @@ ms.locfileid: "88646824"
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Узнав больше о среде Linux, ознакомьтесь с  [выпусками и компонентами](sql-server-linux-editions-and-components-2019.md) SQL Server на Linux, а также  [поддерживаемых платформ Linux](sql-server-linux-release-notes-2019.md). 
+После ознакомления со средой Linux, просмотрите выпуски [ и компоненты ](sql-server-linux-editions-and-components-2019.md) для SQL Server на Linux, а также [поддерживаемые платформы Linux](sql-server-linux-release-notes-2019.md). 
 
 Дополнительные сведения см. в [других учебниках по Linux](https://www.linux.org/forums/linux-beginner-tutorials.123/), а также [часто задаваемых вопросах](sql-server-linux-faq.md).

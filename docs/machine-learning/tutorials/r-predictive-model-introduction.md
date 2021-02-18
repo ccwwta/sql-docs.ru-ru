@@ -11,12 +11,12 @@ ms.reviewer: garye, davidph
 ms.date: 05/26/2020
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current'
-ms.openlocfilehash: 12441de331661e5edbf40ca678963b80a70764a2
-ms.sourcegitcommit: a9e982e30e458866fcd64374e3458516182d604c
+ms.openlocfilehash: 5376d2b7876914c28d656574a57f5fc80294c63c
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2021
-ms.locfileid: "98101865"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100348042"
 ---
 # <a name="tutorial-develop-a-predictive-model-in-r-with-sql-machine-learning"></a>Руководство по Разработка прогнозной модели в R с помощью машинного обучения SQL
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "98101865"
 * SQL Server 2016 R Services. Сведения об установке служб R Services см. в [руководстве по установке для Windows](../install/sql-r-services-windows-install.md). 
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
-* Службы машинного обучения в управляемом экземпляре SQL Azure. Дополнительные сведения см. в статье [Общие сведения о службах машинного обучения в управляемом экземпляре SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+* Службы машинного обучения в Управляемом экземпляре SQL Azure. Дополнительные сведения см. в статье [Общие сведения о службах машинного обучения в управляемом экземпляре SQL Azure](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 
 * [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) для восстановления образца базы данных в Управляемый экземпляр SQL Azure.
 ::: moniker-end

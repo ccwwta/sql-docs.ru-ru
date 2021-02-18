@@ -14,12 +14,12 @@ ms.assetid: 34130ac1-0106-4766-b324-acb0b7bb6f6e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: e71f0ffc06314678becda493f6e45c98060d3a32
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2b50489a7a063f81e68de788ed829a0ff728c6e3
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88312550"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100350415"
 ---
 # <a name="summarize-or-aggregate-values-using-custom-expressions-visual-database-tools"></a>Суммирование значения или выполнение статистической обработки с помощью пользовательских выражений (визуальные инструменты для баз данных)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

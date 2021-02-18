@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 521904030d97213770d4a2310b51eaadc37d4e5d
-ms.sourcegitcommit: 05fc736e6b6b3a08f503ab124c3151f615e6faab
+ms.openlocfilehash: 996ae78401e57e538ef2835ec107a2cc5400741a
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/02/2021
-ms.locfileid: "99478589"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100352473"
 ---
 # <a name="statistics"></a>Статистика
 
@@ -128,10 +128,9 @@ ORDER BY s.name;
   |Временные таблицы|*n* < 6|6|
   |Временные таблицы|6 <= *n* <= 500|500|
   |Постоянно|*n* <= 500|500|
-  |Временная или постоянная|500 <= *n* <= 25 000|500 + (0,20 * *n*)|
-  |Временная или постоянная|*n* > 25 000|SQRT(1000 * *n*)|
+  |Временная или постоянная|*n* >= 500|MIN (500 + (0,20 * *n*), SQRT (1000 * *n*)) |
 
-  Например, если таблица содержит 2 млн строк, расчет выполняется так: `SQRT(1,000 * 2,000,000) = 44,721`. В таком случае статистика обновляется через каждую 44 721 модификацию.
+  Например, если таблица содержит 2 миллиона строк, значение вычисляется как минимальное значение `500 + (0.20 * 2,000,000) = 400,500` и `SQRT(1,000 * 2,000,000) = 44,721`. Это означает, что статистика будет обновляться каждые 44 721 изменений.
 
 > [!IMPORTANT]
 > В [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или в [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] и более поздних версий в категории [уровень совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 120 и ниже включите [флаг трассировки 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), чтобы служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использовала пороговое значение динамического обновления статистики, которое понижается.

@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: af272f50f281a8c3a564913cfb91be8abcab2898
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 453989e908808e0444807bcfb9dd817b3f79c436
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774870"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100349361"
 ---
 # <a name="create-a-trace-template-sql-server-profiler"></a>создать шаблон трассировки (приложение SQL Server Profiler)
 
@@ -40,7 +40,7 @@ ms.locfileid: "85774870"
   
 6.  На вкладке **Выбор событий** добавьте, удалите или измените события, столбцы данных или фильтры.  
   
-7.  В меню **Выбор событий**используйте сетку для добавления или удаления событий и столбцов данных в файле трассировки следующим образом:  
+7.  В меню **Выбор событий** используйте сетку для добавления или удаления событий и столбцов данных в файле трассировки следующим образом:  
   
     -   Чтобы добавить событие, разверните соответствующую категорию событий в столбце **События** и выберите имя события.  
   

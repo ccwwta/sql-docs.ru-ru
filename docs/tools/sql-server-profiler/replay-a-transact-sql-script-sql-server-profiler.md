@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 96a5cedb061cc2d862c21a766694b8bede2e502b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 20252994f90032293730335dda1f6dd689133497
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789943"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100353428"
 ---
 # <a name="replay-a-transact-sql-script-sql-server-profiler"></a>воспроизвести скрипт на языке Transact-SQL (приложение SQL Server Profiler)
 
@@ -27,11 +27,11 @@ ms.locfileid: "85789943"
   
 ### <a name="to-replay-a-transact-sql-script"></a>Воспроизведение скрипта на языке Transact-SQL  
   
-1.  В меню **Файл** выберите **Открыть**и щелкните **Файл скрипта**.  
+1.  В меню **Файл** выберите **Открыть** и щелкните **Файл скрипта**.  
   
 2.  Выберите файл скрипта на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] , который нужно открыть. Убедитесь, что скрипт на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] содержит события, необходимые для воспроизведения. Дополнительные сведения см. в разделе [Replay Requirements](../../tools/sql-server-profiler/replay-requirements.md).  
   
-3.  В меню **Воспроизведение** выберите **Пуск**и подключитесь к серверу, на котором нужно воспроизвести скрипт.  
+3.  В меню **Воспроизведение** выберите **Пуск** и подключитесь к серверу, на котором нужно воспроизвести скрипт.  
   
 4.  В диалоговом окне **Конфигурация воспроизведения** проверьте настройки и нажмите кнопку **ОК**.  
   

@@ -94,7 +94,7 @@ ms.locfileid: "100341436"
   
 -   [Создание файлового атрибута (службы Master Data Services)](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сущности &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
  [Явные иерархии &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [Изменение &#40;сущности Master Data Services&#41;](../master-data-services/edit-an-entity-master-data-services.md)   

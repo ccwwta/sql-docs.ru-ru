@@ -40,7 +40,7 @@ ms.locfileid: "100340517"
   
 -   [Поддержка пространств имен в XQuery](../xquery/handling-namespaces-in-xquery.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции XQuery для типа данных XML](../xquery/xquery-functions-against-the-xml-data-type.md)   
  [Сравнение операторов XQuery с XML-данными](../xquery/xquery-operators-against-the-xml-data-type.md)  
   

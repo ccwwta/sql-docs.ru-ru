@@ -3,7 +3,7 @@ title: ALTER DATABASE SCOPED CONFIGURATION
 description: Включает несколько параметров конфигурации базы данных на уровне отдельной базы данных.
 titleSuffix: SQL Server (Transact-SQL)
 ms.custom: seo-lt-2019
-ms.date: 09/15/2020
+ms.date: 02/08/2021
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: WilliamDAssafMSFT
 ms.author: wiassaf
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest
-ms.openlocfilehash: 8d314e90bbe869dec9ccdc31c45996c4834fc829
-ms.sourcegitcommit: f29f74e04ba9c4d72b9bcc292490f3c076227f7c
+ms.openlocfilehash: 647e68fa167b24bc713266fd45527337bdd6b9e6
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "98170426"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100348541"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -37,7 +37,7 @@ ms.locfileid: "98170426"
 
 Эта команда включает несколько параметров конфигурации базы данных на уровне **отдельной базы данных**. 
 
-Следующие параметры поддерживаются в [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] и в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], как указано в строке **APPLIES TO** для каждого параметра в разделе [Аргументы](#arguments). 
+Следующие параметры поддерживаются в [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] и в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], как указано в строке **APPLIES TO** для каждого параметра в разделе [Аргументы](#arguments): 
 
 - очистить кэш процедур;
 - задать для параметра MAXDOP произвольное значение (1, 2,...) для базы данных-источника в зависимости от того, что лучше всего подходит для конкретной базы данных, и указать другое значение (например, 0) для всех используемых баз данных-получателей (например, для запросов отчетов);
@@ -46,7 +46,7 @@ ms.locfileid: "98170426"
 - включить или выключить исправления оптимизации запросов на уровне базы данных.
 - включить или выключить кэширование идентификации на уровне базы данных;
 - включить или выключить заглушку компилированного плана для сохранения в кэше при первом компилировании пакета.
-- включить или выключить сбор статистики выполнения для скомпилированных в собственном коде модулей T-SQL.
+- Включить или выключить сбор статистики выполнения для скомпилированных в собственном коде модулей [!INCLUDE[tsql](../../includes/tsql-md.md)].
 - включить или отключить параметры подключения по умолчанию для инструкций DDL, поддерживающих синтаксис `ONLINE =`;
 - включить или отключить параметры возобновления по умолчанию для инструкций DDL, поддерживающих синтаксис `RESUMABLE =`;
 - Включение или отключение функции [интеллектуальной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md).
@@ -55,10 +55,10 @@ ms.locfileid: "98170426"
 - Включение или отключение [упрощенной инфраструктуры профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md).
 - включить или отключить новое сообщение об ошибке `String or binary data would be truncated`.
 - Включает или отключает запись последнего действительного плана выполнения в [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
-- Укажите время в минутах, в течение которого операция возобновляемого индекса остается приостановленной, прежде чем она будет автоматически прервана подсистемой SQL Server.
-- Включение или отключение ожидание блокировок с низким приоритетом для асинхронного обновления статистики
+- Укажите время в минутах, в течение которого операция возобновляемого индекса остается приостановленной, прежде чем она будет автоматически прервана подсистемой [!INCLUDE[ssde_md](../../includes/ssde_md.md)].
+- Включение или отключение ожидания блокировок с низким приоритетом для асинхронного обновления статистики.
 
-Этот параметр доступен только в Azure Synapse Analytics.
+Этот параметр доступен только в [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)].
 - Задание уровня совместимости для пользовательской базы данных
 
 ![Значок ссылки](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
@@ -66,7 +66,7 @@ ms.locfileid: "98170426"
 ## <a name="syntax"></a>Синтаксис
 
 ```syntaxsql
--- Syntax for SQL Server and Azure SQL Database
+-- Syntax for SQL Server, Azure SQL Database and Azure SQL Managed Instance
 
 ALTER DATABASE SCOPED CONFIGURATION
 {
@@ -102,17 +102,18 @@ ALTER DATABASE SCOPED CONFIGURATION
     | LAST_QUERY_PLAN_STATS = { ON | OFF }
     | PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = <time>
     | ISOLATE_SECURITY_POLICY_CARDINALITY  = { ON | OFF }
+    | EXEC_QUERY_STATS_FOR_SCALAR_FUNCTIONS = { ON | OFF }
     | ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY = { ON | OFF }
 }
 ```
 
 > [!IMPORTANT]
-> Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] изменились некоторые имена параметров:      
+> Начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] изменились некоторые имена параметров:      
 > -  `DISABLE_INTERLEAVED_EXECUTION_TVF` изменено на `INTERLEAVED_EXECUTION_TVF`
 > -  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` изменено на `BATCH_MODE_MEMORY_GRANT_FEEDBACK`
 > -  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` изменено на `BATCH_MODE_ADAPTIVE_JOINS`
 
-```SQL
+```syntaxsql
 -- Syntax for Azure Synapse Analytics
 
 ALTER DATABASE SCOPED CONFIGURATION
@@ -139,16 +140,16 @@ CLEAR PROCEDURE_CACHE [plan_handle]
 
 Укажите дескриптор плана запроса, чтобы удалить отдельный план запроса из кэша планов.
 
-**Область применения**: Указать дескриптор плана запроса можно в Базе данных SQL Azure и SQL Server 2019 или более поздней версии.
+**Область применения**: Указание дескриптора плана запроса доступно в начале работы с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
 
 MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 
 Задает параметр максимальной степени параллелизма, **max degree of parallelism (MAXDOP)** , по умолчанию для использования в инструкциях. 0 — это значение по умолчанию, указывающее, что вместо этого будет использоваться конфигурация сервера. MAXDOP на уровне базы данных переопределяет (если имеет значение, отличное от 0) **максимальную степень параллелизма**, заданную на уровне сервера процедурой sp_configure. Указания запросов все равно могут переопределять MAXDOP в области базы данных для настройки конкретных запросов, требующих особых параметров. Все эти параметры ограничены параметром MAXDOP, заданным для [группы рабочей нагрузки](create-workload-group-transact-sql.md).
 
-Параметр MAXDOP можно использовать для ограничения числа процессоров, применяемых при параллельном выполнении планов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учитывает планы параллельного выполнения для запросов, операций с индексами на языке описания данных (DDL), параллельной вставки, изменения столбцов в оперативном режиме, параллельного сбора статистики и для заполнения курсоров (статических и управляемых набором ключей).
+Параметр MAXDOP можно использовать для ограничения числа процессоров, применяемых при параллельном выполнении планов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учитывает планы параллельного выполнения для запросов, операций с индексами на языке DDL, параллельной вставки, изменения столбца в режиме "в сети", параллельного сбора статистики и заполнения статических курсоров и курсоров, управляемых набором ключей.
 
 > [!NOTE]
-> Ограничение параметра **max degree of parallelism (MAXDOP)** задается для каждой [задачи](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Оно не задается для каждого [запроса](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md). Это означает, что во время параллельного выполнения один запрос может порождать множество задач, назначаемых [планировщику](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Дополнительные сведения см. в статье [Руководство по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md). 
+> Ограничение параметра **max degree of parallelism (MAXDOP)** задается для каждой [задачи](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Оно не задается для каждого [запроса](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md). Это означает, что во время параллельного выполнения один запрос может порождать множество задач, назначаемых [планировщику](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Дополнительные сведения см. в статье [Руководство по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md).
 
 Сведения о настройке этого параметра на уровне экземпляра см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
@@ -170,19 +171,19 @@ LEGACY_CARDINALITY_ESTIMATION **=** { ON | **OFF** | PRIMARY }
 
 > [!TIP]
 > Для выполнения этого на уровне запросов добавьте [указание запроса](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) **QUERYTRACEON**.
-> Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1), для выполнения этой задачи на уровне запроса добавьте [указание запроса](../../t-sql/queries/hints-transact-sql-query.md#use_hint) **USE HINT**, вместо того чтобы использовать флаг трассировки.
+> Начиная с версии [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1), для выполнения этой задачи на уровне запроса добавьте [указание запроса](../../t-sql/queries/hints-transact-sql-query.md#use_hint) **USE HINT**, вместо того чтобы использовать флаг трассировки.
 
 PRIMARY
 
 Это значение допустимо только для баз данных-получателей, пока база данных находится на сервере-источнике; оно указывает, что в качестве настройки модели оценки кратности оптимизатора запросов для всех баз данных-получателей будет использоваться значение, заданное для сервера-источника. При изменении конфигурации модели оценки кратности оптимизатора запросов на сервере-источнике значение в базах данных-получателях изменится соответственно. **PRIMARY** — это параметр по умолчанию для баз данных-получателей.
 
-PARAMETER_SNIFFING **=** { **ON** | OFF | PRIMARY}
+PARAMETER_SNIFFING **=** { **ON** | OFF | PRIMARY }
 
 Включает или отключает [сканирование параметров](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing). Значение по умолчанию — ON. Присвоение параметру PARAMETER_SNIFFING значения OFF эквивалентно включению [флага трассировки 4136](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 > [!TIP]
 > Для выполнения этой задачи на уровне запроса добавьте **указание запроса** [OPTIMIZE FOR UNKNOWN](../../t-sql/queries/hints-transact-sql-query.md).
-> Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1), для выполнения этой задачи на уровне запроса также доступно [указание запроса](../../t-sql/queries/hints-transact-sql-query.md#use_hint) **USE HINT**.
+> Начиная с версии [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1), для выполнения этой задачи на уровне запроса также доступно [указание запроса](../../t-sql/queries/hints-transact-sql-query.md#use_hint) **USE HINT**.
 
 PRIMARY
 
@@ -192,11 +193,11 @@ PRIMARY
 
 Включает или отключает исправления оптимизации запросов независимо от уровня совместимости базы данных. Значение по умолчанию — **OFF**, которое отключает исправления оптимизации запросов, выпущенные после появления наивысшего доступного уровня совместимости для определенной версии (после RTM). Присвоение этому параметру значения **ON** эквивалентно включению [флага трассировки 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Начиная с [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 > [!TIP]
 > Для выполнения этого на уровне запросов добавьте [указание запроса](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) **QUERYTRACEON**.
-> Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1) для выполнения этой задачи на уровне запроса добавьте [указание запроса](../../t-sql/queries/hints-transact-sql-query.md#use_hint) USE HINT, вместо того чтобы использовать флаг трассировки.
+> Начиная с версии [!INCLUDE[sssql16-md](../../includes/sssql16-md.md)] с пакетом обновления 1 (SP1) для выполнения этой задачи на уровне запроса добавьте [указание запроса](../../t-sql/queries/hints-transact-sql-query.md#use_hint) USE HINT, вместо того чтобы использовать флаг трассировки.
 
 PRIMARY
 
@@ -204,7 +205,7 @@ PRIMARY
 
 IDENTITY_CACHE **=** { **ON** | OFF }
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Включает и выключает кэширование идентификации на уровне базы данных. Значение по умолчанию — **ON**. Кэширование идентификаторов используется для повышения производительности инструкции INSERT в таблицах со столбцами идентификаторов. Во избежание пропусков значений столбца идентификаторов в случаях, когда сервер неожиданно перезапускается или выполняет обработку отказа на сервер-получатель, отключите параметр IDENTITY_CACHE. Этот параметр похож на существующий [флаг трассировки 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) с той разницей, что его можно задать на уровне базы данных, а не только на уровне сервера.
 
@@ -213,7 +214,7 @@ IDENTITY_CACHE **=** { **ON** | OFF }
 
 INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Позволяет включить или отключить выполнение с чередованием для функций с табличным значением и множеством инструкций в области базы данных или инструкции, сохранив уровень совместимости базы данных 140 или выше. Выполнение с чередованием — одна из возможностей адаптивной обработки запросов в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Дополнительные сведения см. в статье [Интеллектуальная обработка запросов](../../relational-databases/performance/intelligent-query-processing.md).
 
@@ -222,18 +223,18 @@ INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
 >
 > Только в SQL Server 2017 (14.x) параметр INTERLEAVED_EXECUTION_TVF имеет старое имя **DISABLE** _INTERLEAVED_EXECUTION_TVF.
 
-BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
+BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF }
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Позволяет включить или отключить обратную связь по временно предоставляемому буферу памяти в пакетном режиме в области базы данных, сохранив уровень совместимости базы данных 140 или выше. Обратная связь по временно предоставляемому буферу памяти в пакетном режиме — одна из возможностей [интеллектуальной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md), представленная в [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 
 > [!NOTE]
 > Для уровня совместимости базы данных 130 или более низкого эта конфигурация области баз данных не оказывает влияния.
 
-BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}
+BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF }
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Позволяет включить или отключить адаптивные соединения в пакетном режиме в области базы данных, сохранив уровень совместимости базы данных 140 или выше. Адаптивные соединения в пакетном режиме — одна из возможностей [интеллектуальной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md), представленная в [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 
@@ -242,7 +243,7 @@ BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}
 
 TSQL_SCALAR_UDF_INLINING **=** { **ON** | OFF }
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (функция на этапе общедоступной предварительной версии)
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (функция на этапе общедоступной предварительной версии)
 
 Позволяет включить или отключить встраивание скалярных определяемых пользователем функций для T-SQL в области базы данных, сохранив уровень совместимости базы данных 150 или выше. Встраивание скалярных определяемых пользователем функций для T-SQL — одна из возможностей семейства функций [интеллектуальной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md).
 
@@ -251,7 +252,7 @@ TSQL_SCALAR_UDF_INLINING **=** { **ON** | OFF }
 
 ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
-**ПРИМЕНИМО К**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (компонент в общедоступной предварительной версии)
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Позволяет выбирать параметры, предписывающие ядру автоматически переводить поддерживаемые операции в режим "в сети". Значение по умолчанию — OFF. Оно означает, что операции не будут переводиться в режим "в сети", если это явно не указано в инструкции. В представлении [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) указывается текущее значение ELEVATE_ONLINE. Эти параметры применяются только к операциям, которые поддерживают режим "в сети".
 
@@ -268,7 +269,7 @@ WHEN_SUPPORTED
 
 ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (функция на этапе общедоступной предварительной версии)
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Позволяет выбирать параметры, предписывающие ядру автоматически переводить поддерживаемые операции в возобновляемый режим. Значение по умолчанию — OFF. Оно означает, что операции не будут переводиться в возобновляемый режим, если это явно не указано в инструкции. В представлении [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) указывается текущее значение ELEVATE_RESUMABLE. Эти параметры применяются только к операциям, которые поддерживают возобновление.
 
@@ -285,13 +286,13 @@ WHEN_SUPPORTED
 
 OPTIMIZE_FOR_AD_HOC_WORKLOADS **=** { ON | **OFF** }
 
-**ПРИМЕНИМО К**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Включает или отключает заглушку скомпилированного плана для сохранения в кэше при первой компиляции пакета. Значение по умолчанию — OFF. После включения конфигурации уровня базы данных OPTIMIZE_FOR_AD_HOC_WORKLOADS для базы данных заглушка скомпилированного плана будет сохранена в кэше при первой компиляции пакета. Заглушки плана расходуют меньше памяти по сравнению с полным скомпилированным планом. Если пакет компилируется или выполняется повторно, заглушка скомпилированного плана будет удалена и заменена полным скомпилированным планом.
 
 XTP_PROCEDURE_EXECUTION_STATISTICS **=** { ON | **OFF** }
 
-**ПРИМЕНИМО К**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
+**Область применения**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Включает или отключает сбор статистики выполнения на уровне модуля для скомпилированных в собственном коде модулей T-SQL в текущей базе данных. Значение по умолчанию — OFF. Статистика выполнения отражается в [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md).
 
@@ -299,7 +300,7 @@ XTP_PROCEDURE_EXECUTION_STATISTICS **=** { ON | **OFF** }
 
 XTP_QUERY_EXECUTION_STATISTICS **=** { ON | **OFF** }
 
-**ПРИМЕНИМО К**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]
+**Область применения**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Включает или отключает сбор статистики выполнения на уровне инструкций для скомпилированных в собственном коде модулей T-SQL в текущей базе данных. Значение по умолчанию — OFF. Статистика выполнения отражается в [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) и в [хранилище запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).
 
@@ -307,27 +308,27 @@ XTP_QUERY_EXECUTION_STATISTICS **=** { ON | **OFF** }
 
 Дополнительные сведения о мониторинге производительности скомпилированных в собственном коде модулей [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в статье [Отслеживание производительности скомпилированных в собственном коде хранимых процедур](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md).
 
-ROW_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
+ROW_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF }
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (функция на этапе общедоступной предварительной версии)
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
-Позволяет включить или отключить обратную связь по временно предоставляемому буферу памяти в построчном режиме в области базы данных, сохранив уровень совместимости базы данных 150 или выше. Обратная связь по временно предоставляемому буферу памяти в режиме строк — одна из возможностей [интеллектуальной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md), представленная в [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] (режим строк поддерживается в [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).
+Позволяет включить или отключить обратную связь по временно предоставляемому буферу памяти в построчном режиме в области базы данных, сохранив уровень совместимости базы данных 150 или выше. Обратная связь по временно предоставляемому буферу памяти в режиме строк — одна из возможностей [интеллектуальной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md), представленная в [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] (режим строк поддерживается в [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).
 
 > [!NOTE]
 > Для уровня совместимости базы данных 140 или более низкого эта конфигурация области баз данных не оказывает влияния.
 
-BATCH_MODE_ON_ROWSTORE **=** { **ON** | OFF}
+BATCH_MODE_ON_ROWSTORE **=** { **ON** | OFF }
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (функция на этапе общедоступной предварительной версии)
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Позволяет включить или отключить пакетный режим для данных rowstore в области базы данных, сохранив уровень совместимости базы данных 150 или выше. Пакетный режим для данных rowstore — одна из возможностей семейства функций [адаптивной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md).
 
 > [!NOTE]
 > Для уровня совместимости базы данных 140 или более низкого эта конфигурация области баз данных не оказывает влияния.
 
-DEFERRED_COMPILATION_TV **=** { **ON** | OFF}
+DEFERRED_COMPILATION_TV **=** { **ON** | OFF }
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (функция на этапе общедоступной предварительной версии)
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Позволяет включить или отключить отложенную компиляцию табличных переменных в области базы данных, сохранив уровень совместимости базы данных 150 или выше. Отложенная компиляция табличных переменных — одна из возможностей семейства функций [адаптивной обработки запросов](../../relational-databases/performance/intelligent-query-processing.md).
 
@@ -336,7 +337,7 @@ DEFERRED_COMPILATION_TV **=** { **ON** | OFF}
 
 ACCELERATED_PLAN_FORCING **=** { **ON** | OFF }
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Включает оптимизированный механизм для принудительного применения плана запроса, допустимый для всех форм применения планов, таких как [Принудительно использовать план хранилища запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed), [Автоматическая настройка](../../relational-databases/automatic-tuning/automatic-tuning.md#automatic-plan-correction) или подсказка запроса [USE PLAN](../../t-sql/queries/hints-transact-sql-query.md#use-plan). Значение по умолчанию — ON.
 
@@ -345,7 +346,7 @@ ACCELERATED_PLAN_FORCING **=** { **ON** | OFF }
 
 GLOBAL_TEMPORARY_TABLE_AUTO_DROP **=** { **ON** | OFF }
 
-**ПРИМЕНИМО К**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (компонент в общедоступной предварительной версии)
+**Область применения**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Настройка функции автоматического удаления [глобальных временных таблиц](../../t-sql/statements/create-table-transact-sql.md#temporary-tables). По умолчанию имеет значение ON, то есть глобальные временные таблицы автоматически удаляются, когда не используются ни одним сеансом. Если задано значение OFF, глобальные временные таблицы следует удалять явным образом с помощью инструкции DROP TABLE, или они будут автоматически удалены при перезапуске сервера.
 
@@ -354,19 +355,19 @@ GLOBAL_TEMPORARY_TABLE_AUTO_DROP **=** { **ON** | OFF }
 
 <a name="lqp"></a>
 
-LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
+LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF }
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Делает возможным включение или отключение [упрощенной инфраструктуры профилирования запросов](../../relational-databases/performance/query-profiling-infrastructure.md). Упрощенная инфраструктура профилирования запросов (LWP) предоставляет более эффективные данные производительности запросов по сравнению со стандартными механизмами профилирования. По умолчанию она включена.
 
 <a name="verbose-truncation"></a>
 
-VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF}
+VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF }
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
-Позволяет включить или отключить новое сообщение об ошибке `String or binary data would be truncated`. В [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] добавлено новое, более конкретное сообщение об ошибке (2628) для подобного сценария:
+Позволяет включить или отключить новое сообщение об ошибке `String or binary data would be truncated`. В [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)] добавлено новое, более конкретное сообщение об ошибке (2628) для подобного сценария:
 
 `String or binary data would be truncated in table '%.*ls', column '%.*ls'. Truncated value: '%.*ls'.`
 
@@ -376,15 +377,15 @@ VERBOSE_TRUNCATION_WARNINGS **=** { **ON** | OFF}
 
 Для уровня совместимости базы данных 140 или более низкого сообщение об ошибке 2628 активируется явным образом и требует включения [флага трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 460, поэтому эта конфигурация области баз данных не оказывает влияния.
 
-LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
+LAST_QUERY_PLAN_STATS **=** { ON | **OFF** }
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) (функция на этапе общедоступной предварительной версии)
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Позволяет включать и отключать сбор статистики последнего плана запроса (эквивалент фактического плана выполнения) в [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
 
 PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES
 
-**Область применения**: Только База данных SQL Azure
+**Область применения**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Параметр `PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES` определяет время (в минутах), в течение которого возобновляемый индекс приостанавливается перед автоматическим прерыванием обработчиком.
 
@@ -397,15 +398,15 @@ PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES
 
 ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 Позволяет контролировать, влияет ли предикат [безопасности на уровне строк (RLS)](../../relational-databases/security/row-level-security.md) на кратность плана выполнения пользовательского запроса в целом. Если ISOLATE_SECURITY_POLICY_CARDINALITY имеет значение ON, то предикат RLS не влияет на кратность плана выполнения. Например, рассмотрим таблицу, содержащую 1 000 000 строк и предикат RLS, который ограничивает результат 10 строками для конкретного пользователя, выполняющего запрос. Если этот параметр в области базы данных имеет значение OFF, то оценка количества элементов этого предиката будет равна 10. Если этот параметр базы данных имеет значение ON, оптимизация запросов будет оценивать 1 000 000 строк. Рекомендуется использовать значение по умолчанию для большинства рабочих нагрузок.
 
 DW_COMPATIBILITY_LEVEL **=** {**AUTO** | 10 | 20 }
 
-**Область применения**: только Azure Synapse Analytics
+**Область применения**: только [!INCLUDE[ssazuresynapse_md](../../includes/ssazuresynapse_md.md)]
 
-Обеспечивает для обработки запросов и Transact-SQL совместимость с указанной версией ядра СУБД.  После установки значения, когда в этой базе данных выполняется запрос, будут применяться только совместимые функции.  При первичном создании базы данных по умолчанию устанавливается уровень совместимости AUTO.  Уровень совместимости сохраняется даже после приостановки и возобновления работы базы данных, операций резервного копирования и восстановления. 
+Определяет поведение обработки запросов и [!INCLUDE[tsql](../../includes/tsql-md.md)] для обеспечения совместимости с указанной версией ядра СУБД. После установки значения, когда в этой базе данных выполняется запрос, будут применяться только совместимые функции.  При первичном создании базы данных по умолчанию устанавливается уровень совместимости AUTO. Уровень совместимости сохраняется даже после приостановки и возобновления работы базы данных, операций резервного копирования и восстановления. 
 
 |Уровень совместимости    |   Комментарии|  
 |-----------------------|--------------|
@@ -413,15 +414,21 @@ DW_COMPATIBILITY_LEVEL **=** {**AUTO** | 10 | 20 }
 |**10**| Применяет для Transact-SQL и обработки запросов поведение, действовавшее до появления поддержки уровня совместимости.|
 |**20**| Первый уровень совместимости, включающий условное поведение Transact-SQL и обработки запросов. |
 
-ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY **=** { ON | **OFF**}
+EXEC_QUERY_STATS_FOR_SCALAR_FUNCTIONS **=** { **ON** | OFF }
 
-**Область применения**: Только база данных SQL Azure (функция доступна в общедоступной предварительной версии)
+**Область применения**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
+
+Позволяет контролировать, отображается ли статистика выполнения для скалярных определяемых пользователем функций (UDF) в системном представлении [sys.dm_exec_function_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-function-stats-transact-sql.md). Для некоторых ресурсоемких рабочих нагрузок, которые являются скалярными UDF тяжелыми, сбор статистики выполнения функций может привести к заметному снижению производительности. Это можно избежать, задав для `EXEC_QUERY_STATS_FOR_SCALAR_FUNCTIONS` конфигурации уровня базы данных значение `OFF`.
+
+ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY **=** { ON | **OFF** }
+
+**ПРИМЕНИМО К**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] (компонент в общедоступной предварительной версии)
 
 Если включено асинхронное обновление статистики, включение этой конфигурации приведет к тому, что обновление статистики запросов в фоновом режиме будет ждать блокировки Sch-M в очереди с низким приоритетом, чтобы предотвратить блокировку других сеансов в сценариях с высоким уровнем параллелизма. Дополнительные сведения см. в разделе [AUTO_UPDATE_STATISTICS_ASYNC](../../relational-databases/statistics/statistics.md#auto_update_statistics_async).
 
 ## <a name="permissions"></a><a name="Permissions"></a> Permissions
 
-Необходимо разрешение `ALTER ANY DATABASE SCOPED CONFIGURATION` для базы данных. Это разрешение может быть предоставлено пользователем, имеющим разрешение CONTROL для базы данных.
+Необходимо разрешение `ALTER ANY DATABASE SCOPED CONFIGURATION` для базы данных. Это разрешение может быть предоставлено пользователем, имеющим разрешение `CONTROL` для базы данных.
 
 ## <a name="general-remarks"></a>Общие замечания
 
@@ -435,7 +442,7 @@ ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY **=** { ON | **OFF**}
 
 Параметры конфигурации уровня базы данных будут перенесены вместе с базой данных, то есть при восстановлении или подключении любой базы данных сохранятся ее текущие параметры конфигурации.
 
-Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] изменились некоторые имена параметров:      
+Начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)], в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] изменились некоторые имена параметров:      
 -  `DISABLE_INTERLEAVED_EXECUTION_TVF` изменено на `INTERLEAVED_EXECUTION_TVF`
 -  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` изменено на `BATCH_MODE_MEMORY_GRANT_FEEDBACK`
 -  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` изменено на `BATCH_MODE_ADAPTIVE_JOINS`
@@ -462,11 +469,11 @@ ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY **=** { ON | **OFF**}
 
 ### <a name="geo-dr"></a>Аварийное восстановление посредством георепликации
 
-Доступные для чтения базы данных-получатели (группы доступности Always On и геореплицируемые базы данных в службе [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]) используют значение базы данных-получателя, проверяя состояние базы данных. Несмотря на то что при отработке отказа не происходит компиляция и технически на новом сервере-источнике существуют запросы, использующие параметры базы данных-получателя, суть в том, что параметр между источником и получателем меняется только в том случае, если рабочая нагрузка различается. Следовательно, кэшированные запросы используют оптимальные параметры, а новые запросы выбирают подходящие для них новые параметры.
+Доступные для чтения базы данных-получатели (группы доступности Always On, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и геореплицируемые базы данных в службе [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]) используют значение базы данных-получателя, проверяя состояние базы данных. Несмотря на то что при отработке отказа не происходит компиляция и технически на новом сервере-источнике существуют запросы, использующие параметры базы данных-получателя, суть в том, что параметр между источником и получателем меняется только в том случае, если рабочая нагрузка различается. Следовательно, кэшированные запросы используют оптимальные параметры, а новые запросы выбирают подходящие для них новые параметры.
 
 ### <a name="dacfx"></a>DacFx
 
-Так как инструкция `ALTER DATABASE SCOPED CONFIGURATION` — это новая функция в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)]), которая влияет на схему базы данных, экспорт схемы (с данными или без них) невозможно импортировать в более старую версию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Например, экспорт в [DACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) или [BACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md#bacpac) из базы данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] или [!INCLUDE[ssSQL15](../../includes/sssql16-md.md)], использовавшей эту новую функцию, невозможно будет импортировать на сервер нижнего уровня.
+Так как инструкция `ALTER DATABASE SCOPED CONFIGURATION` — это новая функция в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]), которая влияет на схему базы данных, экспорт схемы (с данными или без них) невозможно импортировать в более старую версию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Например, экспорт в [DACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) или [BACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md#bacpac) из базы данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)] или [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)], использовавшей эту новую функцию, невозможно будет импортировать на сервер нижнего уровня.
 
 ### <a name="elevate_online"></a>ELEVATE_ONLINE
 
@@ -559,7 +566,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 
 ### <a name="g-set-identity_cache"></a>Ж. Задание параметра IDENTITY_CACHE
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (функция на этапе общедоступной предварительной версии)
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 В этом примере отключается кэш идентификаторов.
 
@@ -569,7 +576,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE = OFF ;
 
 ### <a name="h-set-optimize_for_ad_hoc_workloads"></a>З. Задание параметра OPTIMIZE_FOR_AD_HOC_WORKLOADS
 
-**ПРИМЕНИМО К**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 В этом примере включается заглушка скомпилированного плана для сохранения в кэше при первой компиляции пакета.
 
@@ -579,7 +586,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 
 ### <a name="i-set-elevate_online"></a>И. Задание ELEVATE_ONLINE
 
-**ПРИМЕНИМО К**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (компонент в общедоступной предварительной версии)
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 В этом примере параметру ELEVATE_ONLINE присваивается значение FAIL_UNSUPPORTED.
 
@@ -589,7 +596,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = FAIL_UNSUPPORTED ;
 
 ### <a name="j-set-elevate_resumable"></a>К. Задание ELEVATE_RESUMABLE
 
-**ПРИМЕНИМО К**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (компонент в общедоступной предварительной версии)
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Начиная с [!INCLUDE[sql-server-2019](../../includes/sssql19-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 В этом примере параметру ELEVEATE_RESUMABLE присваивается значение WHEN_SUPPORTED.
 
@@ -599,7 +606,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED ;
 
 ### <a name="k-clear-a-query-plan-from-the-plan-cache"></a>Л. Очистка плана запроса из кэша планов
 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 В этом примере конкретный план удаляется из кэша процедур
 
@@ -609,7 +616,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B
 
 ### <a name="l-set-paused-duration"></a>М. Задать длительность паузы
 
-**Область применения**: Только База данных SQL Azure
+**Область применения**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]
 
 В этом примере задается длительность паузы возобновляемого индекса 60 минут.
 

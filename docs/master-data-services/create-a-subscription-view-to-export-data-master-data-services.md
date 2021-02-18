@@ -89,7 +89,7 @@ ms.locfileid: "100272605"
   
 -   **Когда обновлено**— дата и время последнего обновления представления.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обзор: экспорт &#40;данных Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
  [Удаление представления подписки &#40;Master Data Services&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
  [Создание флага версии (службы Master Data Services)](../master-data-services/create-a-version-flag-master-data-services.md)  

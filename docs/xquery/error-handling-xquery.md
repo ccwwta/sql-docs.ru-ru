@@ -83,7 +83,7 @@ GO
 #### <a name="implementation-limitations"></a>Ограничения реализации  
  Функция **fn: Error ()** не поддерживается.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по языку XQuery (SQL Server)](../xquery/xquery-language-reference-sql-server.md)   
  [Основы языка XQuery](../xquery/xquery-basics.md)  
   

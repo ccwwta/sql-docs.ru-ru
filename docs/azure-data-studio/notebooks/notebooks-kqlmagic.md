@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 10/29/2020
-ms.openlocfilehash: 7f21215f0f241373db532feeac00143e03753bf7
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.openlocfilehash: e78a8b6bd70724b8dda3d542e9c088e706cbe5ee
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100042654"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100343527"
 ---
 # <a name="kqlmagic-in-azure-data-studio"></a>Kqlmagic в Azure Data Studio
 
@@ -35,20 +35,22 @@ ms.locfileid: "100042654"
 
    ![Новая записная книжка](media/notebooks-kqlmagic/install-new-notebook.png)
 
-2. При появлении запроса выберите **Да**, чтобы обновить пакеты Python.
+2. Вам может быть предложено обновить пакеты Python, когда пакеты нуждаются в обновлении.
 
    ![Да](media/notebooks-kqlmagic/install-python-yes.png)
 
 3. Установите библиотеку Kqlmagic.
 
    ```python
-   !pip install Kqlmagic --no-cache-dir --upgrade
+   import sys
+   !{sys.executable} -m pip install Kqlmagic --no-cache-dir --upgrade
    ```
 
    Убедитесь, что она установлена:
 
    ```python
-   !pip list
+   import sys
+   !{sys.executable} -m pip list
    ```
 
    ![Список](media/notebooks-kqlmagic/install-list.png)

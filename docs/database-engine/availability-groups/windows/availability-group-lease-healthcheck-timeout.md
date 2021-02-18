@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.assetid: ''
 author: cawrites
 ms.author: chadam
-ms.openlocfilehash: a616e9b8fb1ebce6edd15c6af101765963d862f8
-ms.sourcegitcommit: 370cab80fba17c15fb0bceed9f80cb099017e000
+ms.openlocfilehash: 787a683eb0fc666eff8f3c72519bbba149dafe96
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2020
-ms.locfileid: "97640320"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100340816"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Механика и рекомендации для аренды, кластера, а также времени ожидания проверки работоспособности для групп доступности Always On 
 
@@ -98,7 +98,7 @@ ms.locfileid: "97640320"
 Чтобы перечислить все текущие параметры кластера, на любом узле в целевом кластере откройте консоль PowerShell с повышенными привилегиями. Выполните следующую команду:
 
 ```PowerShell
- Get-Cluster | fl \
+ Get-Cluster | fl *
 ``` 
 
 Чтобы изменить любой из этих параметров, выполните следующую команду в консоли PowerShell с повышенными привилегиями:
@@ -125,6 +125,8 @@ ms.locfileid: "97640320"
 
    В зависимости от конфигурации группы доступности могут быть указаны дополнительные ресурсы для прослушивателей, общих дисков, общих папок и т. д. Эти ресурсы не требуют дополнительной настройки. 
 
+> [!NOTE]  
+>  Новое значение свойства "LeaseTimeout" вступит в силу после перевода ресурса в автономный режим и его повторного подключения.
    
 ### <a name="health-check-values"></a>Параметры проверки работоспособности 
 

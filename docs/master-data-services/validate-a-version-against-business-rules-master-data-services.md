@@ -64,7 +64,7 @@ ms.locfileid: "100272385"
   
 -   [Блокировка версии (службы Master Data Services)](../master-data-services/lock-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Состояния проверки &#40;Master Data Services&#41;](../master-data-services/validation-statuses-master-data-services.md)   
  [Master Data Services &#40;хранимой процедуры проверки&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)   
  [Версии &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   

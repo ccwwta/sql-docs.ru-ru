@@ -15,12 +15,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: da9833c29c081d4b81e4ac680f284d1be2771347
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3df910d06d065f84dfd214aacf9a92b81e58ac96
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775037"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100338707"
 ---
 # <a name="name-element-for-schema-dta"></a>Элемент Name описания схемы (DTA)
 
@@ -42,7 +42,7 @@ ms.locfileid: "85775037"
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
-|**Тип данных и длина**|**string**от 1 до 255 символов|  
+|**Тип данных и длина**|**string** от 1 до 255 символов|  
 |**Значение по умолчанию**|Нет.|  
 |**Наличие**|Обязательно одно вхождение на каждый элемент **Schema**|  
   

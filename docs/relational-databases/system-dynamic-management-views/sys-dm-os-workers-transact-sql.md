@@ -77,7 +77,7 @@ ms.locfileid: "100347625"
 |processor_group|**smallint**|Сохраняет идентификатор группы процессоров, назначенный данному потоку.|  
 |pdw_node_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Если значением состояния исполнителя является RUNNING, и исполнитель выполняется в режиме без приоритетного прерывания, адрес исполнителя совпадает со значением active_worker_address в sys.dm_os_schedulers.  
   
  Когда исполнитель, ожидающий события, получает сигнал, он помещается в начало очереди готовых к работе исполнителей. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разрешает делать это тысячу раз подряд, после чего исполнитель помещается в конец очереди. Перемещение исполнителя в конец очереди имеет некоторые последствия для производительности.  
@@ -136,7 +136,7 @@ SELECT
 
  На выходе, если переменные `w_runnable` и `w_suspended` равны, они представляют время, которое исполнитель находится в состоянии SUSPENDED. Иначе переменная `w_runnable` представляет время, проведенное исполнителем в состоянии RUNNABLE. На выходе, сеанс `52` находится в состоянии `SUSPENDED` в течение `35,094` миллисекунд.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
 [Руководство по архитектуре обработки запросов](../../relational-databases/query-processing-architecture-guide.md#DOP)       
 [Руководство по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md)    

@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 697674390fe11ff569451dcb0153482f7b8aefd8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: edc3ed219b019a81f3093db88a19526e5e9dee0a
+ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789981"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "100340559"
 ---
 # <a name="find-a-value-or-data-column-while-tracing-sql-server-profiler"></a>найти значение или столбец данных во время трассировки (приложение SQL Server Profiler)
 
@@ -31,7 +31,7 @@ ms.locfileid: "85789981"
   
 2.  В меню **Правка** выберите команду **Найти**.  
   
-3.  В диалоговом окне**Найти** введите искомое значение в текстовом поле **Найти what** и укажите столбец данных (необязательно).  
+3.  В диалоговом окне **Найти** введите искомое значение в текстовом поле **Найти what** и укажите столбец данных (необязательно).  
   
 4.  Чтобы найти следующее вхождение значения, нажмите кнопку **Найти следующее**.  
   

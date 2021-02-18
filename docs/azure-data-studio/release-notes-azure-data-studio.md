@@ -8,25 +8,26 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 1/22/2021
-ms.openlocfilehash: d249e36c9b15cabe9556701c8aafc3cb5ab66fac
-ms.sourcegitcommit: 917df4ffd22e4a229af7dc481dcce3ebba0aa4d7
+ms.date: 2/10/2021
+ms.openlocfilehash: 17cc8ef3252ad39c344de7a7c51a9af80c1f6030
+ms.sourcegitcommit: 8dc7e0ececf15f3438c05ef2c9daccaac1bbff78
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "100040014"
+ms.lasthandoff: 02/13/2021
+ms.locfileid: "100343407"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Заметки о выпуске для Azure Data Studio
 
 **[Скачайте и установите последний выпуск.](./download-azure-data-studio.md)**
 
-## <a name="january-2021-hotfix"></a>Январь 2021 г. (исправление)
+## <a name="december-2020-hotfix"></a>Декабрь 2020 г. (исправление)
 
-22 января 2021 г. &nbsp; / &nbsp;, версия: 1.25.2
+10 февраля 2021 г. &nbsp; / &nbsp;, версия: 1.25.3
 
 | Изменение | Сведения |
 | ------ | ------- |
-| Исправление ошибки [#13899](https://github.com/microsoft/azuredatastudio/issues/13899)| Прокрутка к соответствующим перекрестным ссылкам в Записных книжках |
+| Исправление ошибки [#13899](https://github.com/microsoft/azuredatastudio/issues/13899) | Прокрутка к соответствующим перекрестным ссылкам в Записных книжках |
+| Обновление Electron для включения важных исправлений ошибок| Н/Д |
 
 ## <a name="december-2020"></a>Декабрь 2020 г.
 

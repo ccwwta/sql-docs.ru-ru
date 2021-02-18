@@ -39,7 +39,7 @@ fn:data ($arg as item()*) as xdt:untypedAtomic*
  *$arg*  
  Последовательность элементов, типизированные значения которых будут возвращены.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Следующее применимо к типизированным значениям:  
   
 -   Типизированное значение атомного значения является атомным значением.  
@@ -167,7 +167,7 @@ FROM  Production.ProductModel
 WHERE ProductModelID = 23  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции XQuery для типа данных xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   
