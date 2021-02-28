@@ -199,7 +199,7 @@ ms.locfileid: "87243245"
                         SqlCommand cmd = new SqlCommand("SELECT PurchaseOrderID, PurchaseOrderDetailID, OrderQty, ProductID, ReceivedQty, RejectedQty, StockedQty FROM Purchasing.PurchaseOrderDetail where ProductID = @ProductID", sqlconn);  
                   
                         // Sets the productid parameter.  
-                        cmd.Parameters.Add((new SqlParameter("@ProductID", SqlDbType.Int)).Value = productid);  
+                        cmd.Parameters.Add((new SqlParameter("@ProductID", SqlDbType.Int))).Value = productid;  
   
                         SqlDataAdapter adap = new SqlDataAdapter(cmd);  
                         //Executing the QUERY and fill the dataset with the PurchaseOrderDetail table data.  
